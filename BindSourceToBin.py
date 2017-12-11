@@ -62,21 +62,22 @@ def bindCode(class_file, source):
     return codeByLines
 
 def main():
-    parser = argparse.ArgumentParser(description="Script for binding java source code "+
-                                                "to its bytecode representation using javap.")
+    parser = argparse.ArgumentParser(description="Script for binding java bytecode to defined "+
+                                                "classes for machine learning processing.")
     #group = parser.add_mutually_exclusive_group()
     #group.add_argument("-v", "--verbose", action="store_true")
     #group.add_argument("-q", "--quiet", action="store_true")
     parser.add_argument("-cp", "--classpath",nargs='?',default=sys.path[0], 
-                        help="Classpath for compiling java code")
+                        help="Classpath for compiling java code.")
     parser.add_argument("-f", "--files", nargs='*',
                         help="Java classes for which to generate output, "+
                         "by default generates for all classes in classpath")
     parser.add_argument("-d", "--directory", nargs='?', default=sys.path[0]+'/.class_files', 
-                        help="Directory for compiled class files, use -r to auto remove.")
+                        help="Directory for compiled class files, use -r to auto remove. "+
+                        "By default its generated in .class_files under current directory.")
     parser.add_argument("-r", "--remove", action="store_true")
     parser.add_argument("-o", "--output", nargs='?', default=sys.path[0]+'/output', 
-                        help="Output directory")
+                        help="Path to output directory. By default in output in current directory.")
     args = parser.parse_args()
 
     class_path = args.classpath
