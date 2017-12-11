@@ -1,6 +1,5 @@
 import argparse
 import subprocess
-import re
 import sys
 from glob import glob
 import os,errno
@@ -114,6 +113,8 @@ def main():
                      ' '.join(java_files) 
     process = subprocess.Popen(compileCommand.split(), stdout=subprocess.PIPE)
     output, error = process.communicate()
+    if process.returncode != 0: 
+        print("javac failed %d %s %s" % (process.returncode, output, error))
     output = output.decode('utf-8')
 
     class_files=glob(save_class_directory+"/**",recursive=True)

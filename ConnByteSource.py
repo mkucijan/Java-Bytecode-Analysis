@@ -10,6 +10,8 @@ def getLineTable(jf_name):
     linesCommand = "javap -l "+jf_name
     process = subprocess.Popen(linesCommand.split(), stdout=subprocess.PIPE)
     output, error = process.communicate()
+    if process.returncode != 0: 
+        print("javac failed %d %s %s" % (process.returncode, output, error))
     output = output.decode('utf-8')
     return output
 
@@ -17,6 +19,8 @@ def getMethodsLines(jf_name):
     disassembleCommand = "javap -c "+jf_name
     process = subprocess.Popen(disassembleCommand.split(), stdout=subprocess.PIPE)
     output, error = process.communicate()
+    if process.returncode != 0: 
+        print("javac failed %d %s %s" % (process.returncode, output, error))
     output = output.decode('utf-8')
     return output
 
