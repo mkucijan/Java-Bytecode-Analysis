@@ -1,7 +1,7 @@
 from JavaClassParser.Parser import Parser
 
 if __name__ == '__main__':
-    parser = Parser('/home/yolkin/Documents/Project/Test.class')
+    parser = Parser('/home/yolkin/Documents/Project/Java-Bytecode-Analysis/examples/Test.class')
     parser.parse()
     #print(parser.magic)
     #print(parser.version)
@@ -20,3 +20,6 @@ if __name__ == '__main__':
     instructions = parser.methods[-1].code.instructions
     for instruction in instructions:
         print(instruction.bytecode)
+
+    for const in parser.constants:
+        print(str(const))
