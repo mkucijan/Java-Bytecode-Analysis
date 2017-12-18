@@ -23,7 +23,7 @@ class Attribute(object):
 
     @staticmethod
     def getParser(attrName):
-        attrName=attrName.decode('utf-8')
+        attrName=attrName
         parserDict = {
             CODE_NAME: CodeAttribute.parse,
             LINE_NUMBER_TABLE_NAME: LineNumberTableAttribute.parse,
@@ -336,7 +336,7 @@ class CodeAttribute(Attribute):
     def addInstructions(self):
         self.instructions = []
         byteIndex = 0
-        while byteIndex < len(self.code):
+        while byteIndex+2 <= len(self.code):
             byteCode = bc.codeMap[int(self.code[byteIndex:byteIndex+2], 16)]
 
             if byteCode:

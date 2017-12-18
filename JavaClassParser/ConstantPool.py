@@ -52,6 +52,9 @@ class ConstantClassInfo(ConstantInfo):
     def __str__(self):
         return "%s: #%d" % (self.getTypeName(), self.getNameIndex())
 
+    def getValue(self, pool=[]):
+        return pool[self.nameIndex-1].getValue(pool)
+
     @staticmethod
     def parse(fh): # fh stands for file handler
         """
@@ -72,7 +75,7 @@ class ConstantUTF8Info(ConstantInfo):
     def __init__(self, length, utf8):
         super(ConstantUTF8Info, self).__init__(CONSTANT_UTF8_INFO)
         self.length = length
-        self.utf8 = utf8
+        self.utf8 = str(utf8, "utf-8")
 
     def getTypeName(self):
         return TYPE_UTF8
@@ -81,6 +84,9 @@ class ConstantUTF8Info(ConstantInfo):
         return "%s: %s (%d chars)" % (self.getTypeName(), self.utf8, self.length)
 
     def getUtf8(self):
+        return self.utf8
+
+    def getValue(self, pool=[]):
         return self.utf8
 
     @staticmethod
@@ -108,6 +114,9 @@ class ConstantIntegerInfo(ConstantInfo):
 
         return self.integer
 
+    def getValue(self, pool=[]):
+        return self.integer
+
     def __str__(self):
 
         return "Integer: %d" % self.integer
@@ -127,6 +136,9 @@ class ConstantPlaceHolder(ConstantInfo):
     def __str__(self):
         return "PlaceHolder"
 
+    def getValue(self, pool=[]):
+        return "PlaceHolder"
+
 class ConstantLongInfo(ConstantInfo):
 
     def __init__(self, long):
@@ -137,6 +149,10 @@ class ConstantLongInfo(ConstantInfo):
 
     def getLong(self):
 
+        return self.long
+
+    def getValue(self, pool=[]):
+        
         return self.long
 
     def __str__(self):
@@ -162,6 +178,9 @@ class ConstantFloatInfo(ConstantInfo):
 
         return self.floatNum
 
+    def getValue(self, pool=[]):
+        return self.floatNum
+
     def __str__(self):
 
         return "Float: %s" % ByteTo32BitFloat(self.floatNum)
@@ -183,6 +202,9 @@ class ConstantDoubleInfo(ConstantInfo):
 
     def getDouble(self):
 
+        return self.doubleNum
+
+    def getValue(self, pool=[]):
         return self.doubleNum
 
     def __str__(self):
@@ -207,6 +229,9 @@ class ConstantStringInfo(ConstantInfo):
     def getStringIndex(self):
 
         return self.stringIndex
+
+    def getValue(self, pool=[]):
+        return pool[self.stringIndex-1].getValue(pool)
 
     def __str__(self):
 
@@ -235,6 +260,11 @@ class ConstantFieldrefInfo(ConstantInfo):
     def getNameAndTypeIndex(self):
 
         return self.nameAndTypeIndex
+
+    def getValue(self, pool=[]):
+        return pool[self.hostClassIndex-1].getValue(pool) + \
+               "." + \
+               pool[self.nameAndTypeIndex-1].getValue(pool)
 
     def __str__(self):
 
@@ -267,6 +297,11 @@ class ConstantMethodrefInfo(ConstantInfo):
 
         return self.nameAndTypeIndex
 
+    def getValue(self, pool=[]):
+        return pool[self.hostClassIndex-1].getValue(pool) + \
+               "." + \
+               pool[self.nameAndTypeIndex-1].getValue(pool)
+
     def __str__(self):
 
         return 'Methodref: #%d (#%d)' % (self.hostClassIndex, self.nameAndTypeIndex)
@@ -297,6 +332,11 @@ class ConstantInterfacerefInfo(ConstantInfo):
     def getNameAndTypeIndex(self):
 
         return self.nameAndTypeIndex
+
+    def getValue(self, pool=[]):
+        return pool[self.hostClassIndex-1].getValue(pool) + \
+               "." + \
+               pool[self.nameAndTypeIndex].getValue(pool)
 
     def __str__(self):
 
@@ -329,6 +369,11 @@ class ConstantNameAndTypeInfo(ConstantInfo):
     def getDescriptorIndex(self):
 
         return self.descriptorIndex
+
+    def getValue(self, pool=[]):
+        return pool[self.nameIndex-1].getValue(pool) + \
+               ":" + \
+               pool[self.descriptorIndex-1].getValue(pool)
 
     def __str__(self):
 

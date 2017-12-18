@@ -2,20 +2,25 @@ __author__ = 'yli'
 
 from copy import copy
 import struct
+        
 
 class ByteCode(object):
 
-    def __init__(self, byteCode, mnemonic, opCodeCount=0,args=None):
+    def __init__(self, byteCode, mnemonic, opCodeCount=0,args=''):
         self.byteCode = byteCode
         self.mnemonic = mnemonic
         self.opCodeCount = opCodeCount
         self.parsedString = None
         self.argsCount=[]
         self.argsFormat=''
+        self.args = args
         if args:
             for arg in args.split(','):
+                if '0' in arg:
+                    break
                 if '#' in arg:
                     arg = arg.replace('#','')
+                    arg = arg.replace('c','')
                     self.argsFormat += '#{:d} '
                     self.argsCount.append(int(arg))
                 else:
@@ -40,16 +45,21 @@ class ByteCode(object):
         result = '\t\t%d: %s ' % (byteIndex / 2, self.getMnemonic())
         values = []
         byteIndex += 2
-        for argSize, frm in zip(self.argsCount,self.argsFormat.split(',')):
+        self.constArg = []
+        for argSize, frm in zip(self.argsCount,self.args.split(',')):
+            self.constArg.append(False)
             if argSize:
                 if '#' in frm:
                     values.append(ByteCode.getBigEndianInt(code[byteIndex:byteIndex+argSize*2]))
+                    if 'c' in frm:
+                        self.constArg[-1] = True
                 else:
                     values.append(ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+argSize*2]))
                 byteIndex += argSize*2
             byteIndex += 2
         if self.argsCount:
             result += self.argsFormat.format(*values)
+        self.argValues = values
         result += '\n'
         self.parsedString = result
         return result
@@ -99,16 +109,17 @@ class LookupSwitchBytecode(ByteCode):
         result = '\t\t%d: %s  {\n' % (byteIndex / 2, self.getMnemonic())
         startByteIndex = byteIndex
         padding = int( byteIndex / 2 + 1 ) % 4
+        padding = (4-padding) % 4
         byteIndex += (1+padding)*2
-        default_offset = ByteCode.getBigEndianInt(code[byteIndex:byteIndex+8]) + \
+        default_offset = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8]) + \
                          startByteIndex/2
         byteIndex += 8
-        npairs = ByteCode.getBigEndianInt(code[byteIndex:byteIndex+8])
+        npairs = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8])
         byteIndex += 8
         for i in range(npairs):
-            value = ByteCode.getBigEndianInt(code[byteIndex:byteIndex+8]) 
+            value = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8]) 
             byteIndex += 8
-            offset = ByteCode.getBigEndianInt(code[byteIndex:byteIndex+8]) + \
+            offset = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8]) + \
                      startByteIndex/2
             byteIndex += 8
             result += "\t\t\t%7d: %d\n" % (value,offset)
@@ -129,17 +140,18 @@ class TableSwitchBytecode(ByteCode):
         result = '\t\t%d: %s  {\n' % (byteIndex / 2, self.getMnemonic())
         startByteIndex = byteIndex
         padding = int( byteIndex / 2 + 1 ) % 4
+        padding = (4-padding) % 4
         byteIndex += (1+padding)*2
-        default_offset = ByteCode.getBigEndianInt(code[byteIndex:byteIndex+8]) + \
+        default_offset = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8]) + \
                          startByteIndex/2
         byteIndex += 8
-        lowbyte = ByteCode.getBigEndianInt(code[byteIndex:byteIndex+8])
+        lowbyte = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8])
         byteIndex += 8
-        highbyte = ByteCode.getBigEndianInt(code[byteIndex:byteIndex+8])
+        highbyte = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8])
         byteIndex += 8
         N = highbyte - lowbyte + 1 
         for i in range(N):
-            offset = ByteCode.getBigEndianInt(code[byteIndex:byteIndex+8]) + \
+            offset = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8]) + \
                      startByteIndex/2
             byteIndex += 8
             result += "\t\t\t%7d: %d\n" % (lowbyte+i,offset)
@@ -188,8 +200,8 @@ allByteCodes = [
     ByteCode(0x2a, 'aload_0'),
     ByteCode(0x2b, 'aload_1'),
     ByteCode(0x2c, 'aload_2'),
-    ByteCode(0x3d, 'aload_3'),
-    ByteCode(0xdb, 'anewarray', 2,args='#2'),
+    ByteCode(0x2d, 'aload_3'),
+    ByteCode(0xdb, 'anewarray', 2,args='c#2'),
     ByteCode(0xb0, 'areturn'),
     ByteCode(0xbe, 'arraylength'),
     ByteCode(0x3a, 'astore', 1,args='#1'),
@@ -205,7 +217,7 @@ allByteCodes = [
 
     ByteCode(0x34, 'caload'),
     ByteCode(0x55, 'castore'),
-    ByteCode(0xc0, 'checkcast', 2,args='#2'),
+    ByteCode(0xc0, 'checkcast', 2,args='c#2'),
 
     ByteCode(0x90, 'd2f'),
     ByteCode(0x8e, 'd2i'),
@@ -268,8 +280,8 @@ allByteCodes = [
     ByteCode(0x46, 'fstore_3'),
     ByteCode(0x66, 'fsub'),
 
-    ByteCode(0xb4, 'getfield', 2,args='#2'),
-    ByteCode(0xb2, 'getstatic', 2,args='#2'),
+    ByteCode(0xb4, 'getfield', 2,args='c#2'),
+    ByteCode(0xb2, 'getstatic', 2,args='c#2'),
     ByteCode(0xa7, 'goto', 2,args='2'),
     ByteCode(0xc8, 'goto_w', 4,args='4'),
 
@@ -315,12 +327,12 @@ allByteCodes = [
     ByteCode(0x1d, 'iload_3'),
     ByteCode(0x68, 'imul'),
     ByteCode(0x74, 'ineg'),
-    ByteCode(0xc1, 'instanceof', 2,args='#2'),
-    ByteCode(0xba, 'invokedynamic', 4,args='#2,0,0'),
-    ByteCode(0xb9, 'invokeinterface', 4,args='#2,1,0'),
-    ByteCode(0xb7, 'invokespecial', 2,args='#2'),
-    ByteCode(0xb8, 'invokestatic', 2,args='#2'),
-    ByteCode(0xb6, 'invokevirtual', 2,args='#2'),
+    ByteCode(0xc1, 'instanceof', 2,args='c#2'),
+    ByteCode(0xba, 'invokedynamic', 4,args='c#2,0,0'),
+    ByteCode(0xb9, 'invokeinterface', 4,args='c#2,1,0'),
+    ByteCode(0xb7, 'invokespecial', 2,args='c#2'),
+    ByteCode(0xb8, 'invokestatic', 2,args='c#2'),
+    ByteCode(0xb6, 'invokevirtual', 2,args='c#2'),
     ByteCode(0x80, 'ior'),
     ByteCode(0x70, 'irem'),
     ByteCode(0xac, 'ireturn'),
@@ -348,9 +360,9 @@ allByteCodes = [
     ByteCode(0x94, 'lcmp'),
     ByteCode(0x9,  'lconst_0'),
     ByteCode(0xa,  'lconst_1'),
-    ByteCode(0x12, 'ldc', 1,args='1'),
-    ByteCode(0x13, 'ldc_w', 2,args='2'),
-    ByteCode(0x14, 'ldc2_w', 2,args='2'),
+    ByteCode(0x12, 'ldc', 1,args='c#1'),
+    ByteCode(0x13, 'ldc_w', 2,args='c#2'),
+    ByteCode(0x14, 'ldc2_w', 2,args='c#2'),
     ByteCode(0x6d, 'ldiv'),
     ByteCode(0x16, 'lload', 1,args='#1'),
     ByteCode(0x1e, 'lload_0'),
@@ -378,16 +390,19 @@ allByteCodes = [
 
     ByteCode(0xc2, 'monitorenter'),
     ByteCode(0xc3, 'monitorexit'),
-    ByteCode(0xc5, 'multianewarray', 3,args='#2,1'),
+    ByteCode(0xc5, 'multianewarray', 3,args='c#2,1'),
 
-    ByteCode(0xbb, 'new', 2,args='#2'),
+    ByteCode(0xbb, 'new', 2,args='c#2'),
     ByteCode(0xbc, 'newarray', 1,args='1'),
+    ByteCode(0xbd, 'anewarray',2,args='c#2'),
+    ByteCode(0xca, 'breakpoint'),
+
     ByteCode(0x00, 'nop'),
 
     ByteCode(0x57, 'pop'),
     ByteCode(0x58, 'pop2'),
-    ByteCode(0xb5, 'putfield', 2,args='#2'),
-    ByteCode(0xb3, 'putstatic', 2,args='#2'),
+    ByteCode(0xb5, 'putfield', 2,args='c#2'),
+    ByteCode(0xb3, 'putstatic', 2,args='c#2'),
 
     ByteCode(0xa9, 'ret', 1,args='#1'),
     ByteCode(0xb1, 'return'),

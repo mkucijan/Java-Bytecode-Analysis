@@ -3,7 +3,7 @@ public class Test {
 	private static int parametar;
 
 	public static void makeSwitch() {
-		switch(parametar) {
+		switch(parametar) { //line 6
 			case 1 : System.out.println("1");
 					 break;
 			case 2 : System.out.println("2");

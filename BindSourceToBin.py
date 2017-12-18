@@ -19,9 +19,16 @@ def bindCode(class_file, source):
     parser = Parser(class_file)
     parser.parse()
     codeByLines = dict()
-    source = open(source).readlines()
+    file = open(source)
+    source = file.readlines()
 
     for method in parser.methods:
+        try:
+            getattr(method,'code')
+        except AttributeError:
+            if 'abstract' not in str(method):
+                print(method)
+            continue
         methodLines = dict()
         instructions = method.code.instructions
         lineNumberTable = method.code.lineNumberTable.code2Line
@@ -32,32 +39,63 @@ def bindCode(class_file, source):
         numEmbending = 0
         lastIndex = lineNumberTable[instructions[0].startIndex] -1  # instructions[0].startIndex = 0 always
                                                                     # -1 because indexing starts with 1
-        embedingType = [0,0]
+        embedingType = [0]
         for instruction in instructions:
             byteIndex = instruction.startIndex
             if byteIndex in lineNumberTable:
                 lineNumber = lineNumberTable[byteIndex]
                 for i in range(lastIndex,lineNumber):
-                    currentLine = source[i]
-                    
-                    openBrackets = currentLine.count('{')
-                    closedBrackets = currentLine.count('}')
-                    for i in range(closedBrackets):
-                        embedingType.pop()
-                    numEmbending +=  openBrackets - closedBrackets
+                    #print(i)
+                    #print(len(source))
+                    try:
+                        currentLine = source[i]
+                    except Exception as e:
+                        #print(source)
+                        return codeByLines
+                    added = False
                     for i in range(len(keywords)):
                         if keywords[i] in currentLine:
                             embedingType.append(i+1)
+                            added = True
                             break
+                    if len(embedingType)>1:
+                        openBrackets = currentLine.count('{')
+                        closedBrackets = currentLine.count('}')
+                        diff = openBrackets - closedBrackets
+                        numEmbending +=  diff
+                        for i in range(-diff):
+                            embedingType.pop()
                 lastIndex = lineNumber
-            bytecode = instruction.bytecode
-            methodLines[str(byteIndex) + " " + bytecode] = (numEmbending,embedingType[-1])
+            #if numEmbending < 0:
+            #   numEmbending = 0
+            #   embedingType = [0]
+            bytecode = instruction.mnemonic
+            try : 
+                methodLines[str(byteIndex) + " " + bytecode] = (numEmbending,embedingType[-1])
+            except IndexError as e:
+                #print(byteIndex)
+                #print(numEmbending)
+                #print(embedingType)
+                first = lineNumberTable[instructions[0].startIndex] -1 
+                #print(source[first:lastIndex])
+            offset = 1
+            if instruction.args:
+                for arg, fromPool, frm, size in zip(instruction.argValues,instruction.constArg,
+                                    instruction.argsFormat.split(' ')[:-1],instruction.argsCount):
+                    if fromPool:
+                        arg = parser.constValue[arg-1]
+                    else:
+                        arg = frm.format(arg)
+                    methodLines[str(byteIndex+offset) + " " + arg] = (numEmbending,embedingType[-1])
+                    offset += size
+                
             #print(methodLines[str(byteIndex) + " " + bytecode])
         
         methodLines[str(byteIndex) + " " + bytecode] = (max(0,numEmbending), embedingType[-1]) # implicit return is usually pointed
                                                                            # to function closing bracket
         codeByLines[method.name] = methodLines
 
+    file.close()
     return codeByLines
 
 def main():
@@ -76,7 +114,7 @@ def main():
                         "By default its generated in .class_files under current directory.")
     parser.add_argument("-r", "--remove", action="store_true")
     parser.add_argument("-o", "--output", nargs='?', default=sys.path[0]+'/output', 
-                        help="Path to output directory. By default in output in current directory.")
+                        help="Path to output directory. By default in output in current directory of the script.")
     args = parser.parse_args()
 
     class_path = args.classpath
@@ -120,7 +158,8 @@ def main():
     class_files=glob(save_class_directory+"/**",recursive=True)
     for class_file in class_files:
         if class_file.endswith(".class"):
-            jf_name =class_file[:-6].split(save_class_directory)[1][1:]
+            jf_class_name = class_file[:-6].split(save_class_directory)[1][1:]
+            jf_name = jf_class_name.split('$')[0]
             for java_file in java_files:
                 if jf_name in java_file:
                     source = java_file
@@ -128,7 +167,7 @@ def main():
             
             code_by_lines = bindCode(class_file, source)
 
-            filename = output_folder+'/'+jf_name+".txt"
+            filename = output_folder+'/'+jf_class_name+".txt"
             
             if not os.path.exists(os.path.dirname(filename)):
                 try:

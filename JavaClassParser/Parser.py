@@ -72,6 +72,12 @@ class Parser:
         self.result.setConstants(constants)
         return constants
 
+    def __retriveConstValue(self, constants):
+        values = []
+        for constant in constants:
+            values.append(constant.getValue(constants))
+        return values
+
 
     def __parseAccessFlag(self):
         """
@@ -229,6 +235,7 @@ class Parser:
             self.magic=self.__parseMagicNum()
             self.version=self.__parseVersion()
             self.constants=self.__parseConstantPool()
+            self.constValue = self.__retriveConstValue(self.constants)
             self.flags=self.__parseAccessFlag()
             self.this=self.__parseThis()
             self.super=self.__parseSuper()

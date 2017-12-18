@@ -7,8 +7,8 @@ from JavaClassParser import Attribute
 class Method(object):
 
     def __init__(self, name, descriptor, access):
-        self.name = name.decode('utf-8')
-        self.descriptor = descriptor.decode('utf-8')
+        self.name = name
+        self.descriptor = descriptor
         self.access = access
         self.attrCount = 0
         self.attributes = []
