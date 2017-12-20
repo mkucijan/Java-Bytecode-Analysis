@@ -3,28 +3,38 @@ Method: <init>
 	1 aload_1 (0, 0)
 	2 iload_2 (0, 0)
 	3 ldc2_w (0, 0)
+	4 1e-10 (0, 0)
 	6 invokespecial (0, 0)
+	7 org/apache/commons/math3/geometry/euclidean/oned/OrientedPoint.<init>:(Lorg/apache/commons/math3/geometry/euclidean/oned/Vector1D;ZD)V (0, 0)
 	9 return (0, 0)
 
 Method: copySelf
 	0 aload_0 (0, 0)
 	1 invokevirtual (0, 0)
+	2 org/apache/commons/math3/geometry/euclidean/oned/OrientedPoint.copySelf:()Lorg/apache/commons/math3/geometry/euclidean/oned/OrientedPoint; (0, 0)
 	4 areturn (0, 0)
 
 Method: getOffset
 	0 aload_1 (0, 0)
 	1 checkcast (0, 0)
+	2 org/apache/commons/math3/geometry/euclidean/oned/Vector1D (0, 0)
 	4 invokevirtual (0, 0)
+	5 org/apache/commons/math3/geometry/euclidean/oned/Vector1D.getX:()D (0, 0)
 	7 aload_0 (0, 0)
 	8 getfield (0, 0)
+	9 org/apache/commons/math3/geometry/euclidean/oned/OrientedPoint.location:Lorg/apache/commons/math3/geometry/euclidean/oned/Vector1D; (0, 0)
 	11 invokevirtual (0, 0)
+	12 org/apache/commons/math3/geometry/euclidean/oned/Vector1D.getX:()D (0, 0)
 	14 dsub (0, 0)
 	15 dstore_2 (0, 0)
 	16 aload_0 (0, 0)
 	17 getfield (0, 0)
+	18 org/apache/commons/math3/geometry/euclidean/oned/OrientedPoint.direct:Z (0, 0)
 	20 ifeq (0, 0)
+	21 7 (0, 0)
 	23 dload_2 (0, 0)
 	24 goto (0, 0)
+	25 5 (0, 0)
 	27 dload_2 (0, 0)
 	28 dneg (0, 0)
 	29 dreturn (0, 0)
@@ -32,54 +42,69 @@ Method: getOffset
 Method: wholeHyperplane
 	0 aload_0 (0, 0)
 	1 invokevirtual (0, 0)
+	2 org/apache/commons/math3/geometry/euclidean/oned/OrientedPoint.wholeHyperplane:()Lorg/apache/commons/math3/geometry/euclidean/oned/SubOrientedPoint; (0, 0)
 	4 areturn (0, 0)
 
 Method: wholeSpace
 	0 aload_0 (0, 0)
 	1 invokevirtual (0, 0)
+	2 org/apache/commons/math3/geometry/euclidean/oned/OrientedPoint.wholeSpace:()Lorg/apache/commons/math3/geometry/euclidean/oned/IntervalsSet; (0, 0)
 	4 areturn (0, 0)
 
 Method: sameOrientationAs
 	0 aload_0 (0, 0)
 	1 getfield (0, 0)
+	2 org/apache/commons/math3/geometry/euclidean/oned/OrientedPoint.direct:Z (0, 0)
 	4 aload_1 (0, 0)
 	5 checkcast (0, 0)
+	6 org/apache/commons/math3/geometry/euclidean/oned/OrientedPoint (0, 0)
 	8 getfield (0, 0)
+	9 org/apache/commons/math3/geometry/euclidean/oned/OrientedPoint.direct:Z (0, 0)
 	11 ixor (0, 0)
 	12 ifne (0, 0)
+	13 7 (0, 0)
 	15 iconst_1 (0, 0)
 	16 goto (0, 0)
+	17 4 (0, 0)
 	19 iconst_0 (0, 0)
 	20 ireturn (0, 0)
 
 Method: project
 	0 aload_0 (0, 0)
 	1 getfield (0, 0)
+	2 org/apache/commons/math3/geometry/euclidean/oned/OrientedPoint.location:Lorg/apache/commons/math3/geometry/euclidean/oned/Vector1D; (0, 0)
 	4 areturn (0, 0)
 
 Method: getTolerance
 	0 aload_0 (0, 0)
 	1 getfield (0, 0)
+	2 org/apache/commons/math3/geometry/euclidean/oned/OrientedPoint.tolerance:D (0, 0)
 	4 dreturn (0, 0)
 
 Method: getLocation
 	0 aload_0 (0, 0)
 	1 getfield (0, 0)
+	2 org/apache/commons/math3/geometry/euclidean/oned/OrientedPoint.location:Lorg/apache/commons/math3/geometry/euclidean/oned/Vector1D; (0, 0)
 	4 areturn (0, 0)
 
 Method: isDirect
 	0 aload_0 (0, 0)
 	1 getfield (0, 0)
+	2 org/apache/commons/math3/geometry/euclidean/oned/OrientedPoint.direct:Z (0, 0)
 	4 ireturn (0, 0)
 
 Method: revertSelf
 	0 aload_0 (0, 0)
 	1 aload_0 (0, 0)
 	2 getfield (0, 0)
+	3 org/apache/commons/math3/geometry/euclidean/oned/OrientedPoint.direct:Z (0, 0)
 	5 ifne (0, 0)
+	6 7 (0, 0)
 	8 iconst_1 (0, 0)
 	9 goto (0, 0)
+	10 4 (0, 0)
 	12 iconst_0 (0, 0)
 	13 putfield (0, 0)
+	14 org/apache/commons/math3/geometry/euclidean/oned/OrientedPoint.direct:Z (0, 0)
 	16 return (0, 0)
 

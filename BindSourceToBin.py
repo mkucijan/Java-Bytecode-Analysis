@@ -39,59 +39,62 @@ def bindCode(class_file, source):
         numEmbending = 0
         lastIndex = lineNumberTable[instructions[0].startIndex] -1  # instructions[0].startIndex = 0 always
                                                                     # -1 because indexing starts with 1
-        embedingType = [0]
+        embendingType = [0]
+        embendingLayer = [0]
         for instruction in instructions:
             byteIndex = instruction.startIndex
             if byteIndex in lineNumberTable:
                 lineNumber = lineNumberTable[byteIndex]
                 for i in range(lastIndex,lineNumber):
-                    #print(i)
-                    #print(len(source))
+
                     try:
                         currentLine = source[i]
                     except Exception as e:
-                        #print(source)
                         return codeByLines
+                    openBrackets = currentLine.count('{')
+                    closedBrackets = currentLine.count('}')
+                    diff = openBrackets - closedBrackets
+                    numEmbending +=  diff
+                    numEmbending = max(0,numEmbending)
                     added = False
                     for i in range(len(keywords)):
                         if keywords[i] in currentLine:
-                            embedingType.append(i+1)
+                            embendingType.append(i+1)
                             added = True
+                            embendingLayer.append(numEmbending)
                             break
-                    if len(embedingType)>1:
-                        openBrackets = currentLine.count('{')
-                        closedBrackets = currentLine.count('}')
-                        diff = openBrackets - closedBrackets
-                        numEmbending +=  diff
-                        for i in range(-diff):
-                            embedingType.pop()
+                    i=len(embendingLayer)-1
+                    while(i>=0):
+                        if embendingLayer[i]>numEmbending:
+                            embendingLayer.pop()
+                            embendingType.pop()
+                            i -= 1
+                        else:
+                            break
                 lastIndex = lineNumber
-            #if numEmbending < 0:
-            #   numEmbending = 0
-            #   embedingType = [0]
             bytecode = instruction.mnemonic
-            try : 
-                methodLines[str(byteIndex) + " " + bytecode] = (numEmbending,embedingType[-1])
-            except IndexError as e:
-                #print(byteIndex)
-                #print(numEmbending)
-                #print(embedingType)
-                first = lineNumberTable[instructions[0].startIndex] -1 
-                #print(source[first:lastIndex])
+            methodLines[str(byteIndex) + " " + bytecode] = (embendingLayer[-1],embendingType[-1])
             offset = 1
+            if 'wide' in instruction.mnemonic:
+                methodLines[str(byteIndex+offset) + " " + instruction.opcode.getMnemonic()] = (numEmbending,embendingType[-1])
+                offset += 1
             if instruction.args:
                 for arg, fromPool, frm, size in zip(instruction.argValues,instruction.constArg,
-                                    instruction.argsFormat.split(' ')[:-1],instruction.argsCount):
+                                    instruction.argsFormat.split(','),instruction.argsCount):
+
                     if fromPool:
-                        arg = parser.constValue[arg-1]
+                        arg = str(parser.constValue[arg-1])
                     else:
-                        arg = frm.format(arg)
-                    methodLines[str(byteIndex+offset) + " " + arg] = (numEmbending,embedingType[-1])
+                        if 'switch' in instruction.mnemonic:
+                            arg = frm.format(*arg)
+                        else:
+                            arg = frm.format(arg)
+                    methodLines[str(byteIndex+offset) + " " + arg] = (embendingLayer[-1],embendingType[-1])
                     offset += size
                 
             #print(methodLines[str(byteIndex) + " " + bytecode])
         
-        methodLines[str(byteIndex) + " " + bytecode] = (max(0,numEmbending), embedingType[-1]) # implicit return is usually pointed
+        methodLines[str(byteIndex) + " " + bytecode] = (embendingLayer[-1], embendingType[-1]) # implicit return is usually pointed
                                                                            # to function closing bracket
         codeByLines[method.name] = methodLines
 

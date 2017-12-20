@@ -2,63 +2,84 @@ Method: <init>
 	0 aload_0 (0, 0)
 	1 aload_1 (0, 0)
 	2 invokespecial (0, 0)
+	3 org/apache/commons/math3/distribution/AbstractRealDistribution.<init>:(Lorg/apache/commons/math3/random/RandomGenerator;)V (0, 0)
 	5 aload_0 (0, 0)
 	6 new (0, 0)
+	7 org/apache/commons/math3/distribution/GammaDistribution (0, 0)
 	9 dup (0, 0)
 	10 dload_2 (0, 0)
 	11 ldc2_w (0, 0)
+	12 2.0 (0, 0)
 	14 ddiv (0, 0)
 	15 ldc2_w (0, 0)
+	16 2.0 (0, 0)
 	18 invokespecial (0, 0)
+	19 org/apache/commons/math3/distribution/GammaDistribution.<init>:(DD)V (0, 0)
 	21 putfield (0, 0)
+	22 org/apache/commons/math3/distribution/ChiSquaredDistribution.gamma:Lorg/apache/commons/math3/distribution/GammaDistribution; (0, 0)
 	24 aload_0 (0, 0)
 	25 dload (0, 0)
+	26 #4 (0, 0)
 	27 putfield (0, 0)
+	28 org/apache/commons/math3/distribution/ChiSquaredDistribution.solverAbsoluteAccuracy:D (0, 0)
 	30 return (0, 0)
 
 Method: getDegreesOfFreedom
 	0 aload_0 (0, 0)
 	1 getfield (0, 0)
+	2 org/apache/commons/math3/distribution/ChiSquaredDistribution.gamma:Lorg/apache/commons/math3/distribution/GammaDistribution; (0, 0)
 	4 invokevirtual (0, 0)
+	5 org/apache/commons/math3/distribution/GammaDistribution.getShape:()D (0, 0)
 	7 ldc2_w (0, 0)
+	8 2.0 (0, 0)
 	10 dmul (0, 0)
 	11 dreturn (0, 0)
 
 Method: density
 	0 aload_0 (0, 0)
 	1 getfield (0, 0)
+	2 org/apache/commons/math3/distribution/ChiSquaredDistribution.gamma:Lorg/apache/commons/math3/distribution/GammaDistribution; (0, 0)
 	4 dload_1 (0, 0)
 	5 invokevirtual (0, 0)
+	6 org/apache/commons/math3/distribution/GammaDistribution.density:(D)D (0, 0)
 	8 dreturn (0, 0)
 
 Method: logDensity
 	0 aload_0 (0, 0)
 	1 getfield (0, 0)
+	2 org/apache/commons/math3/distribution/ChiSquaredDistribution.gamma:Lorg/apache/commons/math3/distribution/GammaDistribution; (0, 0)
 	4 dload_1 (0, 0)
 	5 invokevirtual (0, 0)
+	6 org/apache/commons/math3/distribution/GammaDistribution.logDensity:(D)D (0, 0)
 	8 dreturn (0, 0)
 
 Method: cumulativeProbability
 	0 aload_0 (0, 0)
 	1 getfield (0, 0)
+	2 org/apache/commons/math3/distribution/ChiSquaredDistribution.gamma:Lorg/apache/commons/math3/distribution/GammaDistribution; (0, 0)
 	4 dload_1 (0, 0)
 	5 invokevirtual (0, 0)
+	6 org/apache/commons/math3/distribution/GammaDistribution.cumulativeProbability:(D)D (0, 0)
 	8 dreturn (0, 0)
 
 Method: getSolverAbsoluteAccuracy
 	0 aload_0 (0, 0)
 	1 getfield (0, 0)
+	2 org/apache/commons/math3/distribution/ChiSquaredDistribution.solverAbsoluteAccuracy:D (0, 0)
 	4 dreturn (0, 0)
 
 Method: getNumericalMean
 	0 aload_0 (0, 0)
 	1 invokevirtual (0, 0)
+	2 org/apache/commons/math3/distribution/ChiSquaredDistribution.getDegreesOfFreedom:()D (0, 0)
 	4 dreturn (0, 0)
 
 Method: getNumericalVariance
 	0 ldc2_w (0, 0)
+	1 2.0 (0, 0)
 	3 aload_0 (0, 0)
 	4 invokevirtual (0, 0)
+	5 org/apache/commons/math3/distribution/ChiSquaredDistribution.getDegreesOfFreedom:()D (0, 0)
 	7 dmul (0, 0)
 	8 dreturn (0, 0)
 
@@ -68,6 +89,7 @@ Method: getSupportLowerBound
 
 Method: getSupportUpperBound
 	0 ldc2_w (0, 0)
+	1 inf (0, 0)
 	3 dreturn (0, 0)
 
 Method: isSupportLowerBoundInclusive

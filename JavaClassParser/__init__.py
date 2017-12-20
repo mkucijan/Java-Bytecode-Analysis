@@ -52,10 +52,10 @@ def ByteToDec(byteStr):
     return int(ByteToHex(byteStr), 16)
 
 def ByteTo32BitFloat(_4bytes):
-    return struct.unpack('>f', _4bytes)
+    return struct.unpack('>f', _4bytes)[0]
 
 def ByteTo64BitFloat(_8bytes):
-    return struct.unpack('>d', _8bytes)
+    return struct.unpack('>d', _8bytes)[0]
 
 def doFlagToStr(flag, aDict):
     """

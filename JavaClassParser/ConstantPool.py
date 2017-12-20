@@ -179,7 +179,7 @@ class ConstantFloatInfo(ConstantInfo):
         return self.floatNum
 
     def getValue(self, pool=[]):
-        return self.floatNum
+        return ByteTo32BitFloat(self.floatNum)
 
     def __str__(self):
 
@@ -205,7 +205,7 @@ class ConstantDoubleInfo(ConstantInfo):
         return self.doubleNum
 
     def getValue(self, pool=[]):
-        return self.doubleNum
+        return ByteTo64BitFloat(self.doubleNum)
 
     def __str__(self):
 

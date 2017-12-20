@@ -1,6 +1,6 @@
 __author__ = 'yli'
 
-from copy import copy
+from copy import deepcopy
 import struct
         
 
@@ -68,7 +68,7 @@ class ByteCode(object):
         self.startIndex = byteIndex//2
         self.parse(code,byteIndex)
         self.bytecode = code[byteIndex:byteIndex+2+self.opCodeCount*2]
-        return copy(self)
+        return deepcopy(self)
 
     def __hash__(self):
         return self.bytecode.__hash__
@@ -112,18 +112,33 @@ class LookupSwitchBytecode(ByteCode):
         padding = (4-padding) % 4
         byteIndex += (1+padding)*2
         default_offset = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8]) + \
-                         startByteIndex/2
+                         int(startByteIndex/2)
         byteIndex += 8
         npairs = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8])
         byteIndex += 8
+        self.args=''
+        self.argsCount=[]
+        self.argsFormat=''
+        self.argValues=[]
+        self.constArg=[]
         for i in range(npairs):
             value = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8]) 
             byteIndex += 8
             offset = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8]) + \
-                     startByteIndex/2
+                     int(startByteIndex/2)
             byteIndex += 8
-            result += "\t\t\t%7d: %d\n" % (value,offset)
+            case = "\t\t\t%7d: %d\n" % (value,offset)
+            result += case
+
+            self.args += '4,'
+            self.argsCount.append(4)
+            self.argsFormat += '{:d}: {:d},'
+            self.argValues.append((value,offset))
+            self.constArg.append(False)
         
+        self.args = self.args[:-1]
+        self.argsFormat = self.argsFormat[:-1]
+
         result += "\t\t\tdefault: %d\n\t\t}\n" % (default_offset)
         self.opCodeCount = int((byteIndex-startByteIndex)/2 - 1)
         self.parsedString = result
@@ -143,19 +158,36 @@ class TableSwitchBytecode(ByteCode):
         padding = (4-padding) % 4
         byteIndex += (1+padding)*2
         default_offset = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8]) + \
-                         startByteIndex/2
+                         int(startByteIndex/2)
         byteIndex += 8
         lowbyte = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8])
         byteIndex += 8
         highbyte = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8])
         byteIndex += 8
         N = highbyte - lowbyte + 1 
+        
+        self.args=''
+        self.argsCount=[]
+        self.argsFormat=''
+        self.argValues=[]
+        self.constArg=[]
+        
         for i in range(N):
             offset = ByteCode.getBigEndianSinged(code[byteIndex:byteIndex+8]) + \
-                     startByteIndex/2
+                     int(startByteIndex/2)
             byteIndex += 8
-            result += "\t\t\t%7d: %d\n" % (lowbyte+i,offset)
+            case = "\t\t\t%7d: %d\n" % (lowbyte+i,offset)
+            result += case
+
+            self.args += '4,'
+            self.argsCount.append(4)
+            self.argsFormat += '{:d} {:d},'
+            self.argValues.append((lowbyte+i, offset))
+            self.constArg.append(False)
         
+        self.args = self.args[:-1]
+        self.argsFormat = self.argsFormat[:-1]
+
         result += "\t\t\tdefault: %d\n\t\t}\n" % (default_offset)
         self.opCodeCount = int((byteIndex-startByteIndex)/2 - 1)
         self.parsedString = result
@@ -173,18 +205,31 @@ class WideByteCode(ByteCode):
         startByteIndex = byteIndex
         byteIndex += 2
         
-        opcode = codeMap[ByteCode.getBigEndianInt(code[byteIndex:byteIndex+2])]
-        if opcode is 'iinc':
-            step = 4
-        else:
-            step = 2
-        
-        
+        self.opcode = codeMap[ByteCode.getBigEndianInt(code[byteIndex:byteIndex+2])]
+  
+        result += '%s ' % (self.opcode.getMnemonic())
+
         index = ByteCode.getBigEndianInt(code[byteIndex:byteIndex+step])
-        byteIndex += step
-        count = ByteCode.getBigEndianInt(code[byteIndex:byteIndex+step])
-        byteIndex += step
-        
+        byteIndex += 2
+
+        result += '#%d ' % (index)
+
+
+        self.args='#2'
+        self.argsCount=[2]
+        self.argsFormat='{:d}'
+        self.argValues=[index]
+        self.constArg=[False]
+
+        if opcode is 'iinc':
+            count = ByteCode.getBigEndianInt(code[byteIndex:byteIndex+step])
+            byteIndex += 2
+            result += ',%d' % (count)
+            self.args += ',2'
+            self.argsCount.append(2)
+            self.argsFormat += ',{:d}'
+            self.argValues.append(count)
+            self.constArg.append(False)
 
         result += '\n'        
         self.opCodeCount = int((byteIndex-startByteIndex)/2 - 1)
