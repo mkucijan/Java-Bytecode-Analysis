@@ -73,10 +73,10 @@ def bindCode(class_file, source):
                             break
                 lastIndex = lineNumber
             bytecode = instruction.mnemonic
-            methodLines[str(byteIndex) + " " + bytecode] = (embendingLayer[-1],embendingType[-1])
+            methodLines[str(byteIndex) + " " + bytecode] = (len(embendingType)-1,embendingType[-1])
             offset = 1
             if 'wide' in instruction.mnemonic:
-                methodLines[str(byteIndex+offset) + " " + instruction.opcode.getMnemonic()] = (numEmbending,embendingType[-1])
+                methodLines[str(byteIndex+offset) + " " + instruction.opcode.getMnemonic()] = (len(embendingType)-1,embendingType[-1])
                 offset += 1
             if instruction.args:
                 for arg, fromPool, frm, size in zip(instruction.argValues,instruction.constArg,
@@ -89,7 +89,7 @@ def bindCode(class_file, source):
                             arg = frm.format(*arg)
                         else:
                             arg = frm.format(arg)
-                    methodLines[str(byteIndex+offset) + " " + arg] = (embendingLayer[-1],embendingType[-1])
+                    methodLines[str(byteIndex+offset) + " " + arg] = (len(embendingType)-1,embendingType[-1])
                     offset += size
                 
             #print(methodLines[str(byteIndex) + " " + bytecode])

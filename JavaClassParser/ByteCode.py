@@ -481,4 +481,4 @@ def getMnemonicMap():
     
     return mnemonicMap
 
-mnemonicMap = getMnemonicMap
+mnemonicMap = getMnemonicMap()
