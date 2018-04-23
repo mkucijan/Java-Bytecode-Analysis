@@ -1,0 +1,1800 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/optim/BaseMultivariateOptimizer.getConvergenceChecker:()Lorg/apache/commons/math3/optim/ConvergenceChecker;",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/optim/BaseMultivariateOptimizer.<init>:(Lorg/apache/commons/math3/optim/ConvergenceChecker;)V",
+      0,
+      0
+    ],
+    "8": [
+      "aload_0",
+      0,
+      0
+    ],
+    "9": [
+      "iconst_m1",
+      0,
+      0
+    ],
+    "10": [
+      "putfield",
+      0,
+      0
+    ],
+    "11": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.maxEvalIndex:I",
+      0,
+      0
+    ],
+    "13": [
+      "aload_0",
+      0,
+      0
+    ],
+    "14": [
+      "iconst_m1",
+      0,
+      0
+    ],
+    "15": [
+      "putfield",
+      0,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.initialGuessIndex:I",
+      0,
+      0
+    ],
+    "18": [
+      "iload_2",
+      2,
+      1
+    ],
+    "19": [
+      "iconst_1",
+      2,
+      1
+    ],
+    "20": [
+      "if_icmpge",
+      2,
+      1
+    ],
+    "21": [
+      "15",
+      2,
+      1
+    ],
+    "23": [
+      "new",
+      2,
+      0
+    ],
+    "24": [
+      "org/apache/commons/math3/exception/NotStrictlyPositiveException",
+      2,
+      0
+    ],
+    "26": [
+      "dup",
+      2,
+      0
+    ],
+    "27": [
+      "iload_2",
+      2,
+      0
+    ],
+    "28": [
+      "invokestatic",
+      2,
+      0
+    ],
+    "29": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      2,
+      0
+    ],
+    "31": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "32": [
+      "org/apache/commons/math3/exception/NotStrictlyPositiveException.<init>:(Ljava/lang/Number;)V",
+      2,
+      0
+    ],
+    "34": [
+      "athrow",
+      2,
+      0
+    ],
+    "35": [
+      "aload_0",
+      0,
+      0
+    ],
+    "36": [
+      "aload_1",
+      0,
+      0
+    ],
+    "37": [
+      "putfield",
+      0,
+      0
+    ],
+    "38": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.optimizer:Lorg/apache/commons/math3/optim/BaseMultivariateOptimizer;",
+      0,
+      0
+    ],
+    "40": [
+      "aload_0",
+      0,
+      0
+    ],
+    "41": [
+      "iload_2",
+      0,
+      0
+    ],
+    "42": [
+      "putfield",
+      0,
+      0
+    ],
+    "43": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.starts:I",
+      0,
+      0
+    ],
+    "45": [
+      "aload_0",
+      0,
+      0
+    ],
+    "46": [
+      "aload_3",
+      0,
+      0
+    ],
+    "47": [
+      "putfield",
+      0,
+      0
+    ],
+    "48": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.generator:Lorg/apache/commons/math3/random/RandomVectorGenerator;",
+      0,
+      0
+    ],
+    "50": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getEvaluations": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.totalEvaluations:I",
+      0,
+      0
+    ],
+    "4": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "optimize": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "putfield",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.optimData:[Lorg/apache/commons/math3/optim/OptimizationData;",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "aload_1",
+      0,
+      0
+    ],
+    "7": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/optim/BaseMultivariateOptimizer.optimize:([Lorg/apache/commons/math3/optim/OptimizationData;)Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "10": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "doOptimize": {
+    "0": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "1": [
+      "istore_1",
+      1,
+      4
+    ],
+    "2": [
+      "iload_1",
+      1,
+      4
+    ],
+    "3": [
+      "aload_0",
+      1,
+      4
+    ],
+    "4": [
+      "getfield",
+      1,
+      4
+    ],
+    "5": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.optimData:[Lorg/apache/commons/math3/optim/OptimizationData;",
+      1,
+      4
+    ],
+    "7": [
+      "arraylength",
+      1,
+      4
+    ],
+    "8": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "9": [
+      "57",
+      1,
+      4
+    ],
+    "11": [
+      "aload_0",
+      2,
+      1
+    ],
+    "12": [
+      "getfield",
+      2,
+      1
+    ],
+    "13": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.optimData:[Lorg/apache/commons/math3/optim/OptimizationData;",
+      2,
+      1
+    ],
+    "15": [
+      "iload_1",
+      2,
+      1
+    ],
+    "16": [
+      "aaload",
+      2,
+      1
+    ],
+    "17": [
+      "instanceof",
+      2,
+      1
+    ],
+    "18": [
+      "org/apache/commons/math3/optim/MaxEval",
+      2,
+      1
+    ],
+    "20": [
+      "ifeq",
+      2,
+      1
+    ],
+    "21": [
+      "15",
+      2,
+      1
+    ],
+    "23": [
+      "aload_0",
+      2,
+      0
+    ],
+    "24": [
+      "getfield",
+      2,
+      0
+    ],
+    "25": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.optimData:[Lorg/apache/commons/math3/optim/OptimizationData;",
+      2,
+      0
+    ],
+    "27": [
+      "iload_1",
+      2,
+      0
+    ],
+    "28": [
+      "aconst_null",
+      2,
+      0
+    ],
+    "29": [
+      "aastore",
+      2,
+      0
+    ],
+    "30": [
+      "aload_0",
+      2,
+      0
+    ],
+    "31": [
+      "iload_1",
+      2,
+      0
+    ],
+    "32": [
+      "putfield",
+      2,
+      0
+    ],
+    "33": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.maxEvalIndex:I",
+      2,
+      0
+    ],
+    "35": [
+      "aload_0",
+      2,
+      1
+    ],
+    "36": [
+      "getfield",
+      2,
+      1
+    ],
+    "37": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.optimData:[Lorg/apache/commons/math3/optim/OptimizationData;",
+      2,
+      1
+    ],
+    "39": [
+      "iload_1",
+      2,
+      1
+    ],
+    "40": [
+      "aaload",
+      2,
+      1
+    ],
+    "41": [
+      "instanceof",
+      2,
+      1
+    ],
+    "42": [
+      "org/apache/commons/math3/optim/InitialGuess",
+      2,
+      1
+    ],
+    "44": [
+      "ifeq",
+      2,
+      1
+    ],
+    "45": [
+      "15",
+      2,
+      1
+    ],
+    "47": [
+      "aload_0",
+      2,
+      0
+    ],
+    "48": [
+      "getfield",
+      2,
+      0
+    ],
+    "49": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.optimData:[Lorg/apache/commons/math3/optim/OptimizationData;",
+      2,
+      0
+    ],
+    "51": [
+      "iload_1",
+      2,
+      0
+    ],
+    "52": [
+      "aconst_null",
+      2,
+      0
+    ],
+    "53": [
+      "aastore",
+      2,
+      0
+    ],
+    "54": [
+      "aload_0",
+      2,
+      0
+    ],
+    "55": [
+      "iload_1",
+      2,
+      0
+    ],
+    "56": [
+      "putfield",
+      2,
+      0
+    ],
+    "57": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.initialGuessIndex:I",
+      2,
+      0
+    ],
+    "59": [
+      "iinc",
+      2,
+      0
+    ],
+    "60": [
+      "#1",
+      2,
+      0
+    ],
+    "61": [
+      "-89",
+      2,
+      0
+    ],
+    "62": [
+      "goto",
+      2,
+      4
+    ],
+    "63": [
+      "-60",
+      2,
+      4
+    ],
+    "65": [
+      "aload_0",
+      2,
+      1
+    ],
+    "66": [
+      "getfield",
+      2,
+      1
+    ],
+    "67": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.maxEvalIndex:I",
+      2,
+      1
+    ],
+    "69": [
+      "iconst_m1",
+      2,
+      1
+    ],
+    "70": [
+      "if_icmpne",
+      2,
+      1
+    ],
+    "71": [
+      "11",
+      2,
+      1
+    ],
+    "73": [
+      "new",
+      2,
+      0
+    ],
+    "74": [
+      "org/apache/commons/math3/exception/MathIllegalStateException",
+      2,
+      0
+    ],
+    "76": [
+      "dup",
+      2,
+      0
+    ],
+    "77": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "78": [
+      "org/apache/commons/math3/exception/MathIllegalStateException.<init>:()V",
+      2,
+      0
+    ],
+    "80": [
+      "athrow",
+      2,
+      0
+    ],
+    "81": [
+      "aload_0",
+      2,
+      1
+    ],
+    "82": [
+      "getfield",
+      2,
+      1
+    ],
+    "83": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.initialGuessIndex:I",
+      2,
+      1
+    ],
+    "85": [
+      "iconst_m1",
+      2,
+      1
+    ],
+    "86": [
+      "if_icmpne",
+      2,
+      1
+    ],
+    "87": [
+      "11",
+      2,
+      1
+    ],
+    "89": [
+      "new",
+      2,
+      0
+    ],
+    "90": [
+      "org/apache/commons/math3/exception/MathIllegalStateException",
+      2,
+      0
+    ],
+    "92": [
+      "dup",
+      2,
+      0
+    ],
+    "93": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "94": [
+      "org/apache/commons/math3/exception/MathIllegalStateException.<init>:()V",
+      2,
+      0
+    ],
+    "96": [
+      "athrow",
+      2,
+      0
+    ],
+    "97": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "98": [
+      "astore_1",
+      1,
+      0
+    ],
+    "99": [
+      "aload_0",
+      1,
+      0
+    ],
+    "100": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "101": [
+      "putfield",
+      1,
+      0
+    ],
+    "102": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.totalEvaluations:I",
+      1,
+      0
+    ],
+    "104": [
+      "aload_0",
+      1,
+      0
+    ],
+    "105": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "106": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.clear:()V",
+      1,
+      0
+    ],
+    "108": [
+      "aload_0",
+      1,
+      0
+    ],
+    "109": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "110": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.getMaxEvaluations:()I",
+      1,
+      0
+    ],
+    "112": [
+      "istore_2",
+      1,
+      0
+    ],
+    "113": [
+      "aload_0",
+      1,
+      0
+    ],
+    "114": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "115": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.getLowerBound:()[D",
+      1,
+      0
+    ],
+    "117": [
+      "astore_3",
+      1,
+      0
+    ],
+    "118": [
+      "aload_0",
+      1,
+      0
+    ],
+    "119": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "120": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.getUpperBound:()[D",
+      1,
+      0
+    ],
+    "122": [
+      "astore",
+      1,
+      0
+    ],
+    "123": [
+      "#4",
+      1,
+      0
+    ],
+    "124": [
+      "aload_0",
+      1,
+      0
+    ],
+    "125": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "126": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.getStartPoint:()[D",
+      1,
+      0
+    ],
+    "128": [
+      "astore",
+      1,
+      0
+    ],
+    "129": [
+      "#5",
+      1,
+      0
+    ],
+    "130": [
+      "iconst_0",
+      2,
+      4
+    ],
+    "131": [
+      "istore",
+      2,
+      4
+    ],
+    "132": [
+      "#6",
+      2,
+      4
+    ],
+    "133": [
+      "iload",
+      2,
+      4
+    ],
+    "134": [
+      "#6",
+      2,
+      4
+    ],
+    "135": [
+      "aload_0",
+      2,
+      4
+    ],
+    "136": [
+      "getfield",
+      2,
+      4
+    ],
+    "137": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.starts:I",
+      2,
+      4
+    ],
+    "139": [
+      "if_icmpge",
+      2,
+      4
+    ],
+    "140": [
+      "217",
+      2,
+      4
+    ],
+    "142": [
+      "aload_0",
+      2,
+      0
+    ],
+    "143": [
+      "getfield",
+      2,
+      0
+    ],
+    "144": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.optimData:[Lorg/apache/commons/math3/optim/OptimizationData;",
+      2,
+      0
+    ],
+    "146": [
+      "aload_0",
+      2,
+      0
+    ],
+    "147": [
+      "getfield",
+      2,
+      0
+    ],
+    "148": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.maxEvalIndex:I",
+      2,
+      0
+    ],
+    "150": [
+      "new",
+      2,
+      0
+    ],
+    "151": [
+      "org/apache/commons/math3/optim/MaxEval",
+      2,
+      0
+    ],
+    "153": [
+      "dup",
+      2,
+      0
+    ],
+    "154": [
+      "iload_2",
+      2,
+      0
+    ],
+    "155": [
+      "aload_0",
+      2,
+      0
+    ],
+    "156": [
+      "getfield",
+      2,
+      0
+    ],
+    "157": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.totalEvaluations:I",
+      2,
+      0
+    ],
+    "159": [
+      "isub",
+      2,
+      0
+    ],
+    "160": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "161": [
+      "org/apache/commons/math3/optim/MaxEval.<init>:(I)V",
+      2,
+      0
+    ],
+    "163": [
+      "aastore",
+      2,
+      0
+    ],
+    "164": [
+      "aconst_null",
+      2,
+      0
+    ],
+    "165": [
+      "astore",
+      2,
+      0
+    ],
+    "166": [
+      "#7",
+      2,
+      0
+    ],
+    "167": [
+      "iload",
+      4,
+      1
+    ],
+    "168": [
+      "#6",
+      4,
+      1
+    ],
+    "169": [
+      "ifne",
+      4,
+      1
+    ],
+    "170": [
+      "10",
+      4,
+      1
+    ],
+    "172": [
+      "aload",
+      4,
+      0
+    ],
+    "173": [
+      "#5",
+      4,
+      0
+    ],
+    "174": [
+      "astore",
+      4,
+      0
+    ],
+    "175": [
+      "#7",
+      4,
+      0
+    ],
+    "176": [
+      "goto",
+      4,
+      0
+    ],
+    "177": [
+      "113",
+      4,
+      0
+    ],
+    "179": [
+      "iconst_0",
+      4,
+      0
+    ],
+    "180": [
+      "istore",
+      4,
+      0
+    ],
+    "181": [
+      "#8",
+      4,
+      0
+    ],
+    "182": [
+      "aload",
+      5,
+      3
+    ],
+    "183": [
+      "#7",
+      5,
+      3
+    ],
+    "184": [
+      "ifnonnull",
+      5,
+      3
+    ],
+    "185": [
+      "105",
+      5,
+      3
+    ],
+    "187": [
+      "iload",
+      6,
+      1
+    ],
+    "188": [
+      "#8",
+      6,
+      1
+    ],
+    "189": [
+      "iinc",
+      6,
+      1
+    ],
+    "190": [
+      "#8",
+      6,
+      1
+    ],
+    "191": [
+      "42",
+      6,
+      1
+    ],
+    "192": [
+      "aload_0",
+      6,
+      1
+    ],
+    "193": [
+      "invokevirtual",
+      6,
+      1
+    ],
+    "194": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.getMaxEvaluations:()I",
+      6,
+      1
+    ],
+    "196": [
+      "if_icmplt",
+      6,
+      1
+    ],
+    "197": [
+      "18",
+      6,
+      1
+    ],
+    "199": [
+      "new",
+      6,
+      0
+    ],
+    "200": [
+      "org/apache/commons/math3/exception/TooManyEvaluationsException",
+      6,
+      0
+    ],
+    "202": [
+      "dup",
+      6,
+      0
+    ],
+    "203": [
+      "aload_0",
+      6,
+      0
+    ],
+    "204": [
+      "invokevirtual",
+      6,
+      0
+    ],
+    "205": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.getMaxEvaluations:()I",
+      6,
+      0
+    ],
+    "207": [
+      "invokestatic",
+      6,
+      0
+    ],
+    "208": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      6,
+      0
+    ],
+    "210": [
+      "invokespecial",
+      6,
+      0
+    ],
+    "211": [
+      "org/apache/commons/math3/exception/TooManyEvaluationsException.<init>:(Ljava/lang/Number;)V",
+      6,
+      0
+    ],
+    "213": [
+      "athrow",
+      6,
+      0
+    ],
+    "214": [
+      "aload_0",
+      5,
+      0
+    ],
+    "215": [
+      "getfield",
+      5,
+      0
+    ],
+    "216": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.generator:Lorg/apache/commons/math3/random/RandomVectorGenerator;",
+      5,
+      0
+    ],
+    "218": [
+      "invokeinterface",
+      5,
+      0
+    ],
+    "219": [
+      "org/apache/commons/math3/random/RandomVectorGenerator.<init>:([D)V",
+      5,
+      0
+    ],
+    "221": [
+      "0",
+      5,
+      0
+    ],
+    "223": [
+      "astore",
+      5,
+      0
+    ],
+    "224": [
+      "#7",
+      5,
+      0
+    ],
+    "225": [
+      "iconst_0",
+      6,
+      4
+    ],
+    "226": [
+      "istore",
+      6,
+      4
+    ],
+    "227": [
+      "#9",
+      6,
+      4
+    ],
+    "228": [
+      "aload",
+      6,
+      4
+    ],
+    "229": [
+      "#7",
+      6,
+      4
+    ],
+    "230": [
+      "ifnull",
+      6,
+      4
+    ],
+    "231": [
+      "56",
+      6,
+      4
+    ],
+    "233": [
+      "iload",
+      6,
+      4
+    ],
+    "234": [
+      "#9",
+      6,
+      4
+    ],
+    "235": [
+      "aload",
+      6,
+      4
+    ],
+    "236": [
+      "#7",
+      6,
+      4
+    ],
+    "237": [
+      "arraylength",
+      6,
+      4
+    ],
+    "238": [
+      "if_icmpge",
+      6,
+      4
+    ],
+    "239": [
+      "48",
+      6,
+      4
+    ],
+    "241": [
+      "aload_3",
+      7,
+      1
+    ],
+    "242": [
+      "ifnull",
+      7,
+      1
+    ],
+    "243": [
+      "16",
+      7,
+      1
+    ],
+    "245": [
+      "aload",
+      7,
+      1
+    ],
+    "246": [
+      "#7",
+      7,
+      1
+    ],
+    "247": [
+      "iload",
+      7,
+      1
+    ],
+    "248": [
+      "#9",
+      7,
+      1
+    ],
+    "249": [
+      "daload",
+      7,
+      1
+    ],
+    "250": [
+      "aload_3",
+      7,
+      1
+    ],
+    "251": [
+      "iload",
+      7,
+      1
+    ],
+    "252": [
+      "#9",
+      7,
+      1
+    ],
+    "253": [
+      "daload",
+      7,
+      1
+    ],
+    "254": [
+      "dcmpg",
+      7,
+      1
+    ],
+    "255": [
+      "iflt",
+      7,
+      1
+    ],
+    "256": [
+      "22",
+      7,
+      1
+    ],
+    "258": [
+      "aload",
+      7,
+      1
+    ],
+    "259": [
+      "#4",
+      7,
+      1
+    ],
+    "260": [
+      "ifnull",
+      7,
+      1
+    ],
+    "261": [
+      "20",
+      7,
+      1
+    ],
+    "263": [
+      "aload",
+      7,
+      1
+    ],
+    "264": [
+      "#7",
+      7,
+      1
+    ],
+    "265": [
+      "iload",
+      7,
+      1
+    ],
+    "266": [
+      "#9",
+      7,
+      1
+    ],
+    "267": [
+      "daload",
+      7,
+      1
+    ],
+    "268": [
+      "aload",
+      7,
+      1
+    ],
+    "269": [
+      "#4",
+      7,
+      1
+    ],
+    "270": [
+      "iload",
+      7,
+      1
+    ],
+    "271": [
+      "#9",
+      7,
+      1
+    ],
+    "272": [
+      "daload",
+      7,
+      1
+    ],
+    "273": [
+      "dcmpl",
+      7,
+      1
+    ],
+    "274": [
+      "ifle",
+      7,
+      1
+    ],
+    "275": [
+      "6",
+      7,
+      1
+    ],
+    "277": [
+      "aconst_null",
+      7,
+      0
+    ],
+    "278": [
+      "astore",
+      7,
+      0
+    ],
+    "279": [
+      "#7",
+      7,
+      0
+    ],
+    "280": [
+      "iinc",
+      7,
+      0
+    ],
+    "281": [
+      "#9",
+      7,
+      0
+    ],
+    "282": [
+      "-89",
+      7,
+      0
+    ],
+    "283": [
+      "goto",
+      7,
+      4
+    ],
+    "284": [
+      "-55",
+      7,
+      4
+    ],
+    "286": [
+      "goto",
+      7,
+      3
+    ],
+    "287": [
+      "-104",
+      7,
+      3
+    ],
+    "289": [
+      "aload_0",
+      4,
+      0
+    ],
+    "290": [
+      "getfield",
+      4,
+      0
+    ],
+    "291": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.optimData:[Lorg/apache/commons/math3/optim/OptimizationData;",
+      4,
+      0
+    ],
+    "293": [
+      "aload_0",
+      4,
+      0
+    ],
+    "294": [
+      "getfield",
+      4,
+      0
+    ],
+    "295": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.initialGuessIndex:I",
+      4,
+      0
+    ],
+    "297": [
+      "new",
+      4,
+      0
+    ],
+    "298": [
+      "org/apache/commons/math3/optim/InitialGuess",
+      4,
+      0
+    ],
+    "300": [
+      "dup",
+      4,
+      0
+    ],
+    "301": [
+      "aload",
+      4,
+      0
+    ],
+    "302": [
+      "#7",
+      4,
+      0
+    ],
+    "303": [
+      "invokespecial",
+      4,
+      0
+    ],
+    "304": [
+      "org/apache/commons/math3/optim/InitialGuess.<init>:([D)V",
+      4,
+      0
+    ],
+    "306": [
+      "aastore",
+      4,
+      0
+    ],
+    "307": [
+      "aload_0",
+      4,
+      0
+    ],
+    "308": [
+      "getfield",
+      4,
+      0
+    ],
+    "309": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.optimizer:Lorg/apache/commons/math3/optim/BaseMultivariateOptimizer;",
+      4,
+      0
+    ],
+    "311": [
+      "aload_0",
+      4,
+      0
+    ],
+    "312": [
+      "getfield",
+      4,
+      0
+    ],
+    "313": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.optimData:[Lorg/apache/commons/math3/optim/OptimizationData;",
+      4,
+      0
+    ],
+    "315": [
+      "invokevirtual",
+      4,
+      0
+    ],
+    "316": [
+      "org/apache/commons/math3/optim/BaseMultivariateOptimizer.optimize:([Lorg/apache/commons/math3/optim/OptimizationData;)Ljava/lang/Object;",
+      4,
+      0
+    ],
+    "318": [
+      "astore",
+      4,
+      0
+    ],
+    "319": [
+      "#8",
+      4,
+      0
+    ],
+    "320": [
+      "aload_0",
+      4,
+      0
+    ],
+    "321": [
+      "aload",
+      4,
+      0
+    ],
+    "322": [
+      "#8",
+      4,
+      0
+    ],
+    "323": [
+      "invokevirtual",
+      4,
+      0
+    ],
+    "324": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.store:(Ljava/lang/Object;)V",
+      4,
+      0
+    ],
+    "326": [
+      "goto",
+      2,
+      0
+    ],
+    "327": [
+      "8",
+      2,
+      0
+    ],
+    "329": [
+      "astore",
+      2,
+      0
+    ],
+    "330": [
+      "#7",
+      2,
+      0
+    ],
+    "331": [
+      "aload",
+      2,
+      0
+    ],
+    "332": [
+      "#7",
+      2,
+      0
+    ],
+    "333": [
+      "astore_1",
+      2,
+      0
+    ],
+    "334": [
+      "aload_0",
+      2,
+      0
+    ],
+    "335": [
+      "dup",
+      2,
+      0
+    ],
+    "336": [
+      "getfield",
+      2,
+      0
+    ],
+    "337": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.totalEvaluations:I",
+      2,
+      0
+    ],
+    "339": [
+      "aload_0",
+      2,
+      0
+    ],
+    "340": [
+      "getfield",
+      2,
+      0
+    ],
+    "341": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.optimizer:Lorg/apache/commons/math3/optim/BaseMultivariateOptimizer;",
+      2,
+      0
+    ],
+    "343": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "344": [
+      "org/apache/commons/math3/optim/BaseMultivariateOptimizer.getEvaluations:()I",
+      2,
+      0
+    ],
+    "346": [
+      "iadd",
+      2,
+      0
+    ],
+    "347": [
+      "putfield",
+      2,
+      0
+    ],
+    "348": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.totalEvaluations:I",
+      2,
+      0
+    ],
+    "350": [
+      "iinc",
+      2,
+      0
+    ],
+    "351": [
+      "#6",
+      2,
+      0
+    ],
+    "352": [
+      "-89",
+      2,
+      0
+    ],
+    "353": [
+      "goto",
+      2,
+      4
+    ],
+    "354": [
+      "-220",
+      2,
+      4
+    ],
+    "356": [
+      "aload_0",
+      1,
+      0
+    ],
+    "357": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "358": [
+      "org/apache/commons/math3/optim/BaseMultiStartMultivariateOptimizer.getOptima:()[Ljava/lang/Object;",
+      1,
+      0
+    ],
+    "360": [
+      "astore",
+      1,
+      0
+    ],
+    "361": [
+      "#6",
+      1,
+      0
+    ],
+    "362": [
+      "aload",
+      2,
+      1
+    ],
+    "363": [
+      "#6",
+      2,
+      1
+    ],
+    "364": [
+      "arraylength",
+      2,
+      1
+    ],
+    "365": [
+      "ifne",
+      2,
+      1
+    ],
+    "366": [
+      "5",
+      2,
+      1
+    ],
+    "368": [
+      "aload_1",
+      2,
+      0
+    ],
+    "369": [
+      "athrow",
+      2,
+      0
+    ],
+    "370": [
+      "aload",
+      1,
+      0
+    ],
+    "371": [
+      "#6",
+      1,
+      0
+    ],
+    "372": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "373": [
+      "aaload",
+      1,
+      0
+    ],
+    "374": [
+      "areturn",
+      1,
+      0
+    ]
+  }
+}

@@ -1,0 +1,3182 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "6": [
+      "putfield",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.noIntercept:Z",
+      0,
+      0
+    ],
+    "9": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getX": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.xMatrix:Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getY": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.yVector:Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "isNoIntercept": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.noIntercept:Z",
+      0,
+      0
+    ],
+    "4": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "setNoIntercept": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "iload_1",
+      0,
+      0
+    ],
+    "2": [
+      "putfield",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.noIntercept:Z",
+      0,
+      0
+    ],
+    "5": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "newSampleData": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "11",
+      1,
+      1
+    ],
+    "4": [
+      "new",
+      1,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/exception/NullArgumentException",
+      1,
+      0
+    ],
+    "7": [
+      "dup",
+      1,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/exception/NullArgumentException.<init>:()V",
+      1,
+      0
+    ],
+    "11": [
+      "athrow",
+      1,
+      0
+    ],
+    "12": [
+      "aload_1",
+      1,
+      1
+    ],
+    "13": [
+      "arraylength",
+      1,
+      1
+    ],
+    "14": [
+      "iload_2",
+      1,
+      1
+    ],
+    "15": [
+      "iload_3",
+      1,
+      1
+    ],
+    "16": [
+      "iconst_1",
+      1,
+      1
+    ],
+    "17": [
+      "iadd",
+      1,
+      1
+    ],
+    "18": [
+      "imul",
+      1,
+      1
+    ],
+    "19": [
+      "if_icmpeq",
+      1,
+      1
+    ],
+    "20": [
+      "18",
+      1,
+      1
+    ],
+    "22": [
+      "new",
+      1,
+      0
+    ],
+    "23": [
+      "org/apache/commons/math3/exception/DimensionMismatchException",
+      1,
+      0
+    ],
+    "25": [
+      "dup",
+      1,
+      0
+    ],
+    "26": [
+      "aload_1",
+      1,
+      0
+    ],
+    "27": [
+      "arraylength",
+      1,
+      0
+    ],
+    "28": [
+      "iload_2",
+      1,
+      0
+    ],
+    "29": [
+      "iload_3",
+      1,
+      0
+    ],
+    "30": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "31": [
+      "iadd",
+      1,
+      0
+    ],
+    "32": [
+      "imul",
+      1,
+      0
+    ],
+    "33": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "34": [
+      "org/apache/commons/math3/exception/DimensionMismatchException.<init>:(II)V",
+      1,
+      0
+    ],
+    "36": [
+      "athrow",
+      1,
+      0
+    ],
+    "37": [
+      "iload_2",
+      1,
+      1
+    ],
+    "38": [
+      "iload_3",
+      1,
+      1
+    ],
+    "39": [
+      "if_icmpgt",
+      1,
+      1
+    ],
+    "40": [
+      "34",
+      1,
+      1
+    ],
+    "42": [
+      "new",
+      1,
+      0
+    ],
+    "43": [
+      "org/apache/commons/math3/exception/InsufficientDataException",
+      1,
+      0
+    ],
+    "45": [
+      "dup",
+      1,
+      0
+    ],
+    "46": [
+      "getstatic",
+      1,
+      0
+    ],
+    "47": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.INSUFFICIENT_OBSERVED_POINTS_IN_SAMPLE:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "49": [
+      "iconst_2",
+      1,
+      0
+    ],
+    "50": [
+      "anewarray",
+      1,
+      0
+    ],
+    "51": [
+      "java/lang/Object",
+      1,
+      0
+    ],
+    "53": [
+      "dup",
+      1,
+      0
+    ],
+    "54": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "55": [
+      "iload_2",
+      1,
+      0
+    ],
+    "56": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "57": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "59": [
+      "aastore",
+      1,
+      0
+    ],
+    "60": [
+      "dup",
+      1,
+      0
+    ],
+    "61": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "62": [
+      "iload_3",
+      1,
+      0
+    ],
+    "63": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "64": [
+      "iadd",
+      1,
+      0
+    ],
+    "65": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "66": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "68": [
+      "aastore",
+      1,
+      0
+    ],
+    "69": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "70": [
+      "org/apache/commons/math3/exception/InsufficientDataException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;[Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "72": [
+      "athrow",
+      1,
+      0
+    ],
+    "73": [
+      "iload_2",
+      0,
+      0
+    ],
+    "74": [
+      "newarray",
+      0,
+      0
+    ],
+    "75": [
+      "7",
+      0,
+      0
+    ],
+    "76": [
+      "astore",
+      0,
+      0
+    ],
+    "77": [
+      "#4",
+      0,
+      0
+    ],
+    "78": [
+      "aload_0",
+      0,
+      0
+    ],
+    "79": [
+      "getfield",
+      0,
+      0
+    ],
+    "80": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.noIntercept:Z",
+      0,
+      0
+    ],
+    "82": [
+      "ifeq",
+      0,
+      0
+    ],
+    "83": [
+      "7",
+      0,
+      0
+    ],
+    "85": [
+      "iload_3",
+      0,
+      0
+    ],
+    "86": [
+      "goto",
+      0,
+      0
+    ],
+    "87": [
+      "6",
+      0,
+      0
+    ],
+    "89": [
+      "iload_3",
+      0,
+      0
+    ],
+    "90": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "91": [
+      "iadd",
+      0,
+      0
+    ],
+    "92": [
+      "istore",
+      0,
+      0
+    ],
+    "93": [
+      "#5",
+      0,
+      0
+    ],
+    "94": [
+      "iload_2",
+      0,
+      0
+    ],
+    "95": [
+      "iload",
+      0,
+      0
+    ],
+    "96": [
+      "#5",
+      0,
+      0
+    ],
+    "97": [
+      "multianewarray",
+      0,
+      0
+    ],
+    "98": [
+      "[[D",
+      0,
+      0
+    ],
+    "100": [
+      "58",
+      0,
+      0
+    ],
+    "101": [
+      "astore",
+      0,
+      0
+    ],
+    "102": [
+      "#6",
+      0,
+      0
+    ],
+    "103": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "104": [
+      "istore",
+      0,
+      0
+    ],
+    "105": [
+      "#7",
+      0,
+      0
+    ],
+    "106": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "107": [
+      "istore",
+      1,
+      4
+    ],
+    "108": [
+      "#8",
+      1,
+      4
+    ],
+    "109": [
+      "iload",
+      1,
+      4
+    ],
+    "110": [
+      "#8",
+      1,
+      4
+    ],
+    "111": [
+      "iload_2",
+      1,
+      4
+    ],
+    "112": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "113": [
+      "78",
+      1,
+      4
+    ],
+    "115": [
+      "aload",
+      1,
+      0
+    ],
+    "116": [
+      "#4",
+      1,
+      0
+    ],
+    "117": [
+      "iload",
+      1,
+      0
+    ],
+    "118": [
+      "#8",
+      1,
+      0
+    ],
+    "119": [
+      "aload_1",
+      1,
+      0
+    ],
+    "120": [
+      "iload",
+      1,
+      0
+    ],
+    "121": [
+      "#7",
+      1,
+      0
+    ],
+    "122": [
+      "iinc",
+      1,
+      0
+    ],
+    "123": [
+      "#7",
+      1,
+      0
+    ],
+    "124": [
+      "49",
+      1,
+      0
+    ],
+    "125": [
+      "daload",
+      1,
+      0
+    ],
+    "126": [
+      "dastore",
+      1,
+      0
+    ],
+    "127": [
+      "aload_0",
+      2,
+      1
+    ],
+    "128": [
+      "getfield",
+      2,
+      1
+    ],
+    "129": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.noIntercept:Z",
+      2,
+      1
+    ],
+    "131": [
+      "ifne",
+      2,
+      1
+    ],
+    "132": [
+      "11",
+      2,
+      1
+    ],
+    "134": [
+      "aload",
+      2,
+      0
+    ],
+    "135": [
+      "#6",
+      2,
+      0
+    ],
+    "136": [
+      "iload",
+      2,
+      0
+    ],
+    "137": [
+      "#8",
+      2,
+      0
+    ],
+    "138": [
+      "aaload",
+      2,
+      0
+    ],
+    "139": [
+      "iconst_0",
+      2,
+      0
+    ],
+    "140": [
+      "dconst_1",
+      2,
+      0
+    ],
+    "141": [
+      "dastore",
+      2,
+      0
+    ],
+    "142": [
+      "aload_0",
+      2,
+      4
+    ],
+    "143": [
+      "getfield",
+      2,
+      4
+    ],
+    "144": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.noIntercept:Z",
+      2,
+      4
+    ],
+    "146": [
+      "ifeq",
+      2,
+      4
+    ],
+    "147": [
+      "7",
+      2,
+      4
+    ],
+    "149": [
+      "iconst_0",
+      2,
+      4
+    ],
+    "150": [
+      "goto",
+      2,
+      4
+    ],
+    "151": [
+      "4",
+      2,
+      4
+    ],
+    "153": [
+      "iconst_1",
+      2,
+      4
+    ],
+    "154": [
+      "istore",
+      2,
+      4
+    ],
+    "155": [
+      "#9",
+      2,
+      4
+    ],
+    "156": [
+      "iload",
+      2,
+      4
+    ],
+    "157": [
+      "#9",
+      2,
+      4
+    ],
+    "158": [
+      "iload",
+      2,
+      4
+    ],
+    "159": [
+      "#5",
+      2,
+      4
+    ],
+    "160": [
+      "if_icmpge",
+      2,
+      4
+    ],
+    "161": [
+      "24",
+      2,
+      4
+    ],
+    "163": [
+      "aload",
+      2,
+      0
+    ],
+    "164": [
+      "#6",
+      2,
+      0
+    ],
+    "165": [
+      "iload",
+      2,
+      0
+    ],
+    "166": [
+      "#8",
+      2,
+      0
+    ],
+    "167": [
+      "aaload",
+      2,
+      0
+    ],
+    "168": [
+      "iload",
+      2,
+      0
+    ],
+    "169": [
+      "#9",
+      2,
+      0
+    ],
+    "170": [
+      "aload_1",
+      2,
+      0
+    ],
+    "171": [
+      "iload",
+      2,
+      0
+    ],
+    "172": [
+      "#7",
+      2,
+      0
+    ],
+    "173": [
+      "iinc",
+      2,
+      0
+    ],
+    "174": [
+      "#7",
+      2,
+      0
+    ],
+    "175": [
+      "49",
+      2,
+      0
+    ],
+    "176": [
+      "daload",
+      2,
+      0
+    ],
+    "177": [
+      "dastore",
+      2,
+      0
+    ],
+    "178": [
+      "iinc",
+      2,
+      0
+    ],
+    "179": [
+      "#9",
+      2,
+      0
+    ],
+    "180": [
+      "-89",
+      2,
+      0
+    ],
+    "181": [
+      "goto",
+      2,
+      4
+    ],
+    "182": [
+      "-25",
+      2,
+      4
+    ],
+    "184": [
+      "iinc",
+      2,
+      0
+    ],
+    "185": [
+      "#8",
+      2,
+      0
+    ],
+    "186": [
+      "-89",
+      2,
+      0
+    ],
+    "187": [
+      "goto",
+      2,
+      4
+    ],
+    "188": [
+      "-78",
+      2,
+      4
+    ],
+    "190": [
+      "aload_0",
+      1,
+      0
+    ],
+    "191": [
+      "new",
+      1,
+      0
+    ],
+    "192": [
+      "org/apache/commons/math3/linear/Array2DRowRealMatrix",
+      1,
+      0
+    ],
+    "194": [
+      "dup",
+      1,
+      0
+    ],
+    "195": [
+      "aload",
+      1,
+      0
+    ],
+    "196": [
+      "#6",
+      1,
+      0
+    ],
+    "197": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "198": [
+      "org/apache/commons/math3/linear/Array2DRowRealMatrix.<init>:([[D)V",
+      1,
+      0
+    ],
+    "200": [
+      "putfield",
+      1,
+      0
+    ],
+    "201": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.xMatrix:Lorg/apache/commons/math3/linear/RealMatrix;",
+      1,
+      0
+    ],
+    "203": [
+      "aload_0",
+      1,
+      0
+    ],
+    "204": [
+      "new",
+      1,
+      0
+    ],
+    "205": [
+      "org/apache/commons/math3/linear/ArrayRealVector",
+      1,
+      0
+    ],
+    "207": [
+      "dup",
+      1,
+      0
+    ],
+    "208": [
+      "aload",
+      1,
+      0
+    ],
+    "209": [
+      "#4",
+      1,
+      0
+    ],
+    "210": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "211": [
+      "org/apache/commons/math3/linear/ArrayRealVector.<init>:([D)V",
+      1,
+      0
+    ],
+    "213": [
+      "putfield",
+      1,
+      0
+    ],
+    "214": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.yVector:Lorg/apache/commons/math3/linear/RealVector;",
+      1,
+      0
+    ],
+    "216": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "newYSampleData": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "11",
+      1,
+      1
+    ],
+    "4": [
+      "new",
+      1,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/exception/NullArgumentException",
+      1,
+      0
+    ],
+    "7": [
+      "dup",
+      1,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/exception/NullArgumentException.<init>:()V",
+      1,
+      0
+    ],
+    "11": [
+      "athrow",
+      1,
+      0
+    ],
+    "12": [
+      "aload_1",
+      1,
+      1
+    ],
+    "13": [
+      "arraylength",
+      1,
+      1
+    ],
+    "14": [
+      "ifne",
+      1,
+      1
+    ],
+    "15": [
+      "11",
+      1,
+      1
+    ],
+    "17": [
+      "new",
+      1,
+      0
+    ],
+    "18": [
+      "org/apache/commons/math3/exception/NoDataException",
+      1,
+      0
+    ],
+    "20": [
+      "dup",
+      1,
+      0
+    ],
+    "21": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "22": [
+      "org/apache/commons/math3/exception/NoDataException.<init>:()V",
+      1,
+      0
+    ],
+    "24": [
+      "athrow",
+      1,
+      0
+    ],
+    "25": [
+      "aload_0",
+      0,
+      0
+    ],
+    "26": [
+      "new",
+      0,
+      0
+    ],
+    "27": [
+      "org/apache/commons/math3/linear/ArrayRealVector",
+      0,
+      0
+    ],
+    "29": [
+      "dup",
+      0,
+      0
+    ],
+    "30": [
+      "aload_1",
+      0,
+      0
+    ],
+    "31": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "32": [
+      "org/apache/commons/math3/linear/ArrayRealVector.<init>:([D)V",
+      0,
+      0
+    ],
+    "34": [
+      "putfield",
+      0,
+      0
+    ],
+    "35": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.yVector:Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "37": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "newXSampleData": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "11",
+      1,
+      1
+    ],
+    "4": [
+      "new",
+      1,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/exception/NullArgumentException",
+      1,
+      0
+    ],
+    "7": [
+      "dup",
+      1,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/exception/NullArgumentException.<init>:()V",
+      1,
+      0
+    ],
+    "11": [
+      "athrow",
+      1,
+      0
+    ],
+    "12": [
+      "aload_1",
+      1,
+      1
+    ],
+    "13": [
+      "arraylength",
+      1,
+      1
+    ],
+    "14": [
+      "ifne",
+      1,
+      1
+    ],
+    "15": [
+      "11",
+      1,
+      1
+    ],
+    "17": [
+      "new",
+      1,
+      0
+    ],
+    "18": [
+      "org/apache/commons/math3/exception/NoDataException",
+      1,
+      0
+    ],
+    "20": [
+      "dup",
+      1,
+      0
+    ],
+    "21": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "22": [
+      "org/apache/commons/math3/exception/NoDataException.<init>:()V",
+      1,
+      0
+    ],
+    "24": [
+      "athrow",
+      1,
+      0
+    ],
+    "25": [
+      "aload_0",
+      1,
+      1
+    ],
+    "26": [
+      "getfield",
+      1,
+      1
+    ],
+    "27": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.noIntercept:Z",
+      1,
+      1
+    ],
+    "29": [
+      "ifeq",
+      1,
+      1
+    ],
+    "30": [
+      "19",
+      1,
+      1
+    ],
+    "32": [
+      "aload_0",
+      1,
+      0
+    ],
+    "33": [
+      "new",
+      1,
+      0
+    ],
+    "34": [
+      "org/apache/commons/math3/linear/Array2DRowRealMatrix",
+      1,
+      0
+    ],
+    "36": [
+      "dup",
+      1,
+      0
+    ],
+    "37": [
+      "aload_1",
+      1,
+      0
+    ],
+    "38": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "39": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "40": [
+      "org/apache/commons/math3/linear/Array2DRowRealMatrix.<init>:([[DZ)V",
+      1,
+      0
+    ],
+    "42": [
+      "putfield",
+      1,
+      0
+    ],
+    "43": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.xMatrix:Lorg/apache/commons/math3/linear/RealMatrix;",
+      1,
+      0
+    ],
+    "45": [
+      "goto",
+      1,
+      0
+    ],
+    "46": [
+      "91",
+      1,
+      0
+    ],
+    "48": [
+      "aload_1",
+      1,
+      0
+    ],
+    "49": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "50": [
+      "aaload",
+      1,
+      0
+    ],
+    "51": [
+      "arraylength",
+      1,
+      0
+    ],
+    "52": [
+      "istore_2",
+      1,
+      0
+    ],
+    "53": [
+      "aload_1",
+      1,
+      0
+    ],
+    "54": [
+      "arraylength",
+      1,
+      0
+    ],
+    "55": [
+      "iload_2",
+      1,
+      0
+    ],
+    "56": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "57": [
+      "iadd",
+      1,
+      0
+    ],
+    "58": [
+      "multianewarray",
+      1,
+      0
+    ],
+    "59": [
+      "[[D",
+      1,
+      0
+    ],
+    "61": [
+      "78",
+      1,
+      0
+    ],
+    "62": [
+      "astore_3",
+      1,
+      0
+    ],
+    "63": [
+      "iconst_0",
+      2,
+      4
+    ],
+    "64": [
+      "istore",
+      2,
+      4
+    ],
+    "65": [
+      "#4",
+      2,
+      4
+    ],
+    "66": [
+      "iload",
+      2,
+      4
+    ],
+    "67": [
+      "#4",
+      2,
+      4
+    ],
+    "68": [
+      "aload_1",
+      2,
+      4
+    ],
+    "69": [
+      "arraylength",
+      2,
+      4
+    ],
+    "70": [
+      "if_icmpge",
+      2,
+      4
+    ],
+    "71": [
+      "53",
+      2,
+      4
+    ],
+    "73": [
+      "aload_1",
+      3,
+      1
+    ],
+    "74": [
+      "iload",
+      3,
+      1
+    ],
+    "75": [
+      "#4",
+      3,
+      1
+    ],
+    "76": [
+      "aaload",
+      3,
+      1
+    ],
+    "77": [
+      "arraylength",
+      3,
+      1
+    ],
+    "78": [
+      "iload_2",
+      3,
+      1
+    ],
+    "79": [
+      "if_icmpeq",
+      3,
+      1
+    ],
+    "80": [
+      "17",
+      3,
+      1
+    ],
+    "82": [
+      "new",
+      3,
+      0
+    ],
+    "83": [
+      "org/apache/commons/math3/exception/DimensionMismatchException",
+      3,
+      0
+    ],
+    "85": [
+      "dup",
+      3,
+      0
+    ],
+    "86": [
+      "aload_1",
+      3,
+      0
+    ],
+    "87": [
+      "iload",
+      3,
+      0
+    ],
+    "88": [
+      "#4",
+      3,
+      0
+    ],
+    "89": [
+      "aaload",
+      3,
+      0
+    ],
+    "90": [
+      "arraylength",
+      3,
+      0
+    ],
+    "91": [
+      "iload_2",
+      3,
+      0
+    ],
+    "92": [
+      "invokespecial",
+      3,
+      0
+    ],
+    "93": [
+      "org/apache/commons/math3/exception/DimensionMismatchException.<init>:(II)V",
+      3,
+      0
+    ],
+    "95": [
+      "athrow",
+      3,
+      0
+    ],
+    "96": [
+      "aload_3",
+      2,
+      0
+    ],
+    "97": [
+      "iload",
+      2,
+      0
+    ],
+    "98": [
+      "#4",
+      2,
+      0
+    ],
+    "99": [
+      "aaload",
+      2,
+      0
+    ],
+    "100": [
+      "iconst_0",
+      2,
+      0
+    ],
+    "101": [
+      "dconst_1",
+      2,
+      0
+    ],
+    "102": [
+      "dastore",
+      2,
+      0
+    ],
+    "103": [
+      "aload_1",
+      2,
+      0
+    ],
+    "104": [
+      "iload",
+      2,
+      0
+    ],
+    "105": [
+      "#4",
+      2,
+      0
+    ],
+    "106": [
+      "aaload",
+      2,
+      0
+    ],
+    "107": [
+      "iconst_0",
+      2,
+      0
+    ],
+    "108": [
+      "aload_3",
+      2,
+      0
+    ],
+    "109": [
+      "iload",
+      2,
+      0
+    ],
+    "110": [
+      "#4",
+      2,
+      0
+    ],
+    "111": [
+      "aaload",
+      2,
+      0
+    ],
+    "112": [
+      "iconst_1",
+      2,
+      0
+    ],
+    "113": [
+      "iload_2",
+      2,
+      0
+    ],
+    "114": [
+      "invokestatic",
+      2,
+      0
+    ],
+    "115": [
+      "java/lang/System.arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V",
+      2,
+      0
+    ],
+    "117": [
+      "iinc",
+      2,
+      0
+    ],
+    "118": [
+      "#4",
+      2,
+      0
+    ],
+    "119": [
+      "-89",
+      2,
+      0
+    ],
+    "120": [
+      "goto",
+      2,
+      4
+    ],
+    "121": [
+      "-54",
+      2,
+      4
+    ],
+    "123": [
+      "aload_0",
+      1,
+      0
+    ],
+    "124": [
+      "new",
+      1,
+      0
+    ],
+    "125": [
+      "org/apache/commons/math3/linear/Array2DRowRealMatrix",
+      1,
+      0
+    ],
+    "127": [
+      "dup",
+      1,
+      0
+    ],
+    "128": [
+      "aload_3",
+      1,
+      0
+    ],
+    "129": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "130": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "131": [
+      "org/apache/commons/math3/linear/Array2DRowRealMatrix.<init>:([[DZ)V",
+      1,
+      0
+    ],
+    "133": [
+      "putfield",
+      1,
+      0
+    ],
+    "134": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.xMatrix:Lorg/apache/commons/math3/linear/RealMatrix;",
+      1,
+      0
+    ],
+    "136": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "validateSampleData": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnull",
+      1,
+      1
+    ],
+    "2": [
+      "7",
+      1,
+      1
+    ],
+    "4": [
+      "aload_2",
+      1,
+      1
+    ],
+    "5": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "6": [
+      "11",
+      1,
+      1
+    ],
+    "8": [
+      "new",
+      1,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/exception/NullArgumentException",
+      1,
+      0
+    ],
+    "11": [
+      "dup",
+      1,
+      0
+    ],
+    "12": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "13": [
+      "org/apache/commons/math3/exception/NullArgumentException.<init>:()V",
+      1,
+      0
+    ],
+    "15": [
+      "athrow",
+      1,
+      0
+    ],
+    "16": [
+      "aload_1",
+      1,
+      1
+    ],
+    "17": [
+      "arraylength",
+      1,
+      1
+    ],
+    "18": [
+      "aload_2",
+      1,
+      1
+    ],
+    "19": [
+      "arraylength",
+      1,
+      1
+    ],
+    "20": [
+      "if_icmpeq",
+      1,
+      1
+    ],
+    "21": [
+      "15",
+      1,
+      1
+    ],
+    "23": [
+      "new",
+      1,
+      0
+    ],
+    "24": [
+      "org/apache/commons/math3/exception/DimensionMismatchException",
+      1,
+      0
+    ],
+    "26": [
+      "dup",
+      1,
+      0
+    ],
+    "27": [
+      "aload_2",
+      1,
+      0
+    ],
+    "28": [
+      "arraylength",
+      1,
+      0
+    ],
+    "29": [
+      "aload_1",
+      1,
+      0
+    ],
+    "30": [
+      "arraylength",
+      1,
+      0
+    ],
+    "31": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "32": [
+      "org/apache/commons/math3/exception/DimensionMismatchException.<init>:(II)V",
+      1,
+      0
+    ],
+    "34": [
+      "athrow",
+      1,
+      0
+    ],
+    "35": [
+      "aload_1",
+      1,
+      1
+    ],
+    "36": [
+      "arraylength",
+      1,
+      1
+    ],
+    "37": [
+      "ifne",
+      1,
+      1
+    ],
+    "38": [
+      "11",
+      1,
+      1
+    ],
+    "40": [
+      "new",
+      1,
+      0
+    ],
+    "41": [
+      "org/apache/commons/math3/exception/NoDataException",
+      1,
+      0
+    ],
+    "43": [
+      "dup",
+      1,
+      0
+    ],
+    "44": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "45": [
+      "org/apache/commons/math3/exception/NoDataException.<init>:()V",
+      1,
+      0
+    ],
+    "47": [
+      "athrow",
+      1,
+      0
+    ],
+    "48": [
+      "aload_1",
+      1,
+      1
+    ],
+    "49": [
+      "iconst_0",
+      1,
+      1
+    ],
+    "50": [
+      "aaload",
+      1,
+      1
+    ],
+    "51": [
+      "arraylength",
+      1,
+      1
+    ],
+    "52": [
+      "iconst_1",
+      1,
+      1
+    ],
+    "53": [
+      "iadd",
+      1,
+      1
+    ],
+    "54": [
+      "aload_1",
+      1,
+      1
+    ],
+    "55": [
+      "arraylength",
+      1,
+      1
+    ],
+    "56": [
+      "if_icmple",
+      1,
+      1
+    ],
+    "57": [
+      "36",
+      1,
+      1
+    ],
+    "59": [
+      "new",
+      1,
+      0
+    ],
+    "60": [
+      "org/apache/commons/math3/exception/MathIllegalArgumentException",
+      1,
+      0
+    ],
+    "62": [
+      "dup",
+      1,
+      0
+    ],
+    "63": [
+      "getstatic",
+      1,
+      0
+    ],
+    "64": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.NOT_ENOUGH_DATA_FOR_NUMBER_OF_PREDICTORS:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "66": [
+      "iconst_2",
+      1,
+      0
+    ],
+    "67": [
+      "anewarray",
+      1,
+      0
+    ],
+    "68": [
+      "java/lang/Object",
+      1,
+      0
+    ],
+    "70": [
+      "dup",
+      1,
+      0
+    ],
+    "71": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "72": [
+      "aload_1",
+      1,
+      0
+    ],
+    "73": [
+      "arraylength",
+      1,
+      0
+    ],
+    "74": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "75": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "77": [
+      "aastore",
+      1,
+      0
+    ],
+    "78": [
+      "dup",
+      1,
+      0
+    ],
+    "79": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "80": [
+      "aload_1",
+      1,
+      0
+    ],
+    "81": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "82": [
+      "aaload",
+      1,
+      0
+    ],
+    "83": [
+      "arraylength",
+      1,
+      0
+    ],
+    "84": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "85": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "87": [
+      "aastore",
+      1,
+      0
+    ],
+    "88": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "89": [
+      "org/apache/commons/math3/exception/MathIllegalArgumentException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;[Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "91": [
+      "athrow",
+      1,
+      0
+    ],
+    "92": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "validateCovarianceData": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "arraylength",
+      1,
+      1
+    ],
+    "2": [
+      "aload_2",
+      1,
+      1
+    ],
+    "3": [
+      "arraylength",
+      1,
+      1
+    ],
+    "4": [
+      "if_icmpeq",
+      1,
+      1
+    ],
+    "5": [
+      "15",
+      1,
+      1
+    ],
+    "7": [
+      "new",
+      1,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/exception/DimensionMismatchException",
+      1,
+      0
+    ],
+    "10": [
+      "dup",
+      1,
+      0
+    ],
+    "11": [
+      "aload_1",
+      1,
+      0
+    ],
+    "12": [
+      "arraylength",
+      1,
+      0
+    ],
+    "13": [
+      "aload_2",
+      1,
+      0
+    ],
+    "14": [
+      "arraylength",
+      1,
+      0
+    ],
+    "15": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/exception/DimensionMismatchException.<init>:(II)V",
+      1,
+      0
+    ],
+    "18": [
+      "athrow",
+      1,
+      0
+    ],
+    "19": [
+      "aload_2",
+      1,
+      1
+    ],
+    "20": [
+      "arraylength",
+      1,
+      1
+    ],
+    "21": [
+      "ifle",
+      1,
+      1
+    ],
+    "22": [
+      "26",
+      1,
+      1
+    ],
+    "24": [
+      "aload_2",
+      1,
+      1
+    ],
+    "25": [
+      "arraylength",
+      1,
+      1
+    ],
+    "26": [
+      "aload_2",
+      1,
+      1
+    ],
+    "27": [
+      "iconst_0",
+      1,
+      1
+    ],
+    "28": [
+      "aaload",
+      1,
+      1
+    ],
+    "29": [
+      "arraylength",
+      1,
+      1
+    ],
+    "30": [
+      "if_icmpeq",
+      1,
+      1
+    ],
+    "31": [
+      "17",
+      1,
+      1
+    ],
+    "33": [
+      "new",
+      1,
+      0
+    ],
+    "34": [
+      "org/apache/commons/math3/linear/NonSquareMatrixException",
+      1,
+      0
+    ],
+    "36": [
+      "dup",
+      1,
+      0
+    ],
+    "37": [
+      "aload_2",
+      1,
+      0
+    ],
+    "38": [
+      "arraylength",
+      1,
+      0
+    ],
+    "39": [
+      "aload_2",
+      1,
+      0
+    ],
+    "40": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "41": [
+      "aaload",
+      1,
+      0
+    ],
+    "42": [
+      "arraylength",
+      1,
+      0
+    ],
+    "43": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "44": [
+      "org/apache/commons/math3/linear/NonSquareMatrixException.<init>:(II)V",
+      1,
+      0
+    ],
+    "46": [
+      "athrow",
+      1,
+      0
+    ],
+    "47": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "estimateRegressionParameters": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.calculateBeta:()Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "4": [
+      "astore_1",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/linear/RealVector.toArray:()[D",
+      0,
+      0
+    ],
+    "9": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "estimateResiduals": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.calculateBeta:()Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "4": [
+      "astore_1",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "getfield",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.yVector:Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "9": [
+      "aload_0",
+      0,
+      0
+    ],
+    "10": [
+      "getfield",
+      0,
+      0
+    ],
+    "11": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.xMatrix:Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "13": [
+      "aload_1",
+      0,
+      0
+    ],
+    "14": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "15": [
+      "org/apache/commons/math3/linear/RealMatrix.subtract:(Lorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "17": [
+      "0",
+      0,
+      0
+    ],
+    "19": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "20": [
+      "org/apache/commons/math3/linear/RealVector.subtract:(Lorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "22": [
+      "astore_2",
+      0,
+      0
+    ],
+    "23": [
+      "aload_2",
+      0,
+      0
+    ],
+    "24": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "25": [
+      "org/apache/commons/math3/linear/RealVector.toArray:()[D",
+      0,
+      0
+    ],
+    "27": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "estimateRegressionParametersVariance": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.calculateBetaVariance:()Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "4": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/linear/RealMatrix.estimateRegressionParametersVariance:()[[D",
+      0,
+      0
+    ],
+    "7": [
+      "0",
+      0,
+      0
+    ],
+    "9": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "estimateRegressionParametersStandardErrors": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.estimateRegressionParametersVariance:()[[D",
+      0,
+      0
+    ],
+    "4": [
+      "astore_1",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.calculateErrorVariance:()D",
+      0,
+      0
+    ],
+    "9": [
+      "dstore_2",
+      0,
+      0
+    ],
+    "10": [
+      "aload_1",
+      0,
+      0
+    ],
+    "11": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "12": [
+      "aaload",
+      0,
+      0
+    ],
+    "13": [
+      "arraylength",
+      0,
+      0
+    ],
+    "14": [
+      "istore",
+      0,
+      0
+    ],
+    "15": [
+      "#4",
+      0,
+      0
+    ],
+    "16": [
+      "iload",
+      0,
+      0
+    ],
+    "17": [
+      "#4",
+      0,
+      0
+    ],
+    "18": [
+      "newarray",
+      0,
+      0
+    ],
+    "19": [
+      "7",
+      0,
+      0
+    ],
+    "20": [
+      "astore",
+      0,
+      0
+    ],
+    "21": [
+      "#5",
+      0,
+      0
+    ],
+    "22": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "23": [
+      "istore",
+      1,
+      4
+    ],
+    "24": [
+      "#6",
+      1,
+      4
+    ],
+    "25": [
+      "iload",
+      1,
+      4
+    ],
+    "26": [
+      "#6",
+      1,
+      4
+    ],
+    "27": [
+      "iload",
+      1,
+      4
+    ],
+    "28": [
+      "#4",
+      1,
+      4
+    ],
+    "29": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "30": [
+      "26",
+      1,
+      4
+    ],
+    "32": [
+      "aload",
+      1,
+      0
+    ],
+    "33": [
+      "#5",
+      1,
+      0
+    ],
+    "34": [
+      "iload",
+      1,
+      0
+    ],
+    "35": [
+      "#6",
+      1,
+      0
+    ],
+    "36": [
+      "dload_2",
+      1,
+      0
+    ],
+    "37": [
+      "aload_1",
+      1,
+      0
+    ],
+    "38": [
+      "iload",
+      1,
+      0
+    ],
+    "39": [
+      "#6",
+      1,
+      0
+    ],
+    "40": [
+      "aaload",
+      1,
+      0
+    ],
+    "41": [
+      "iload",
+      1,
+      0
+    ],
+    "42": [
+      "#6",
+      1,
+      0
+    ],
+    "43": [
+      "daload",
+      1,
+      0
+    ],
+    "44": [
+      "dmul",
+      1,
+      0
+    ],
+    "45": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "46": [
+      "org/apache/commons/math3/util/FastMath.sqrt:(D)D",
+      1,
+      0
+    ],
+    "48": [
+      "dastore",
+      1,
+      0
+    ],
+    "49": [
+      "iinc",
+      1,
+      0
+    ],
+    "50": [
+      "#6",
+      1,
+      0
+    ],
+    "51": [
+      "-89",
+      1,
+      0
+    ],
+    "52": [
+      "goto",
+      1,
+      4
+    ],
+    "53": [
+      "-27",
+      1,
+      4
+    ],
+    "55": [
+      "aload",
+      0,
+      0
+    ],
+    "56": [
+      "#5",
+      0,
+      0
+    ],
+    "57": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "estimateRegressandVariance": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.calculateYVariance:()D",
+      0,
+      0
+    ],
+    "4": [
+      "dreturn",
+      0,
+      0
+    ]
+  },
+  "estimateErrorVariance": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.calculateErrorVariance:()D",
+      0,
+      0
+    ],
+    "4": [
+      "dreturn",
+      0,
+      0
+    ]
+  },
+  "estimateRegressionStandardError": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.estimateErrorVariance:()D",
+      0,
+      0
+    ],
+    "4": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/util/FastMath.sqrt:(D)D",
+      0,
+      0
+    ],
+    "7": [
+      "dreturn",
+      0,
+      0
+    ]
+  },
+  "calculateYVariance": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/math3/stat/descriptive/moment/Variance",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/stat/descriptive/moment/Variance.<init>:()V",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "getfield",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.yVector:Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "11": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/linear/RealVector.toArray:()[D",
+      0,
+      0
+    ],
+    "14": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "15": [
+      "org/apache/commons/math3/stat/descriptive/moment/Variance.evaluate:([D)D",
+      0,
+      0
+    ],
+    "17": [
+      "dreturn",
+      0,
+      0
+    ]
+  },
+  "calculateErrorVariance": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.calculateResiduals:()Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "4": [
+      "astore_1",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "aload_1",
+      0,
+      0
+    ],
+    "7": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/linear/RealVector.dotProduct:(Lorg/apache/commons/math3/linear/RealVector;)D",
+      0,
+      0
+    ],
+    "10": [
+      "aload_0",
+      0,
+      0
+    ],
+    "11": [
+      "getfield",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.xMatrix:Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "14": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "15": [
+      "org/apache/commons/math3/linear/RealMatrix.getColumnDimension:()I",
+      0,
+      0
+    ],
+    "17": [
+      "0",
+      0,
+      0
+    ],
+    "19": [
+      "aload_0",
+      0,
+      0
+    ],
+    "20": [
+      "getfield",
+      0,
+      0
+    ],
+    "21": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.xMatrix:Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "23": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "24": [
+      "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression",
+      0,
+      0
+    ],
+    "26": [
+      "0",
+      0,
+      0
+    ],
+    "28": [
+      "isub",
+      0,
+      0
+    ],
+    "29": [
+      "i2d",
+      0,
+      0
+    ],
+    "30": [
+      "ddiv",
+      0,
+      0
+    ],
+    "31": [
+      "dreturn",
+      0,
+      0
+    ]
+  },
+  "calculateResiduals": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.calculateBeta:()Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "4": [
+      "astore_1",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "getfield",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.yVector:Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "9": [
+      "aload_0",
+      0,
+      0
+    ],
+    "10": [
+      "getfield",
+      0,
+      0
+    ],
+    "11": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.xMatrix:Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "13": [
+      "aload_1",
+      0,
+      0
+    ],
+    "14": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "15": [
+      "org/apache/commons/math3/linear/RealMatrix.subtract:(Lorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "17": [
+      "0",
+      0,
+      0
+    ],
+    "19": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "20": [
+      "org/apache/commons/math3/linear/RealVector.subtract:(Lorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "22": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

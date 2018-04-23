@@ -1,0 +1,419 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "ldc2_w",
+      0,
+      0
+    ],
+    "6": [
+      "-inf",
+      0,
+      0
+    ],
+    "8": [
+      "putfield",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/genetics/Chromosome.fitness:D",
+      0,
+      0
+    ],
+    "11": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getFitness": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/math3/genetics/Chromosome.fitness:D",
+      1,
+      1
+    ],
+    "4": [
+      "ldc2_w",
+      1,
+      1
+    ],
+    "5": [
+      "-inf",
+      1,
+      1
+    ],
+    "7": [
+      "dcmpl",
+      1,
+      1
+    ],
+    "8": [
+      "ifne",
+      1,
+      1
+    ],
+    "9": [
+      "11",
+      1,
+      1
+    ],
+    "11": [
+      "aload_0",
+      1,
+      0
+    ],
+    "12": [
+      "aload_0",
+      1,
+      0
+    ],
+    "13": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "14": [
+      "org/apache/commons/math3/genetics/Chromosome.fitness:()D",
+      1,
+      0
+    ],
+    "16": [
+      "putfield",
+      1,
+      0
+    ],
+    "17": [
+      "org/apache/commons/math3/genetics/Chromosome.fitness:D",
+      1,
+      0
+    ],
+    "19": [
+      "aload_0",
+      0,
+      0
+    ],
+    "20": [
+      "getfield",
+      0,
+      0
+    ],
+    "21": [
+      "org/apache/commons/math3/genetics/Chromosome.fitness:D",
+      0,
+      0
+    ],
+    "23": [
+      "dreturn",
+      0,
+      0
+    ]
+  },
+  "compareTo": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "checkcast",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/genetics/Chromosome",
+      0,
+      0
+    ],
+    "5": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/genetics/Chromosome.compareTo:(Lorg/apache/commons/math3/genetics/Chromosome;)I",
+      0,
+      0
+    ],
+    "8": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "isSame": {
+    "0": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "1": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "findSameChromosome": {
+    "0": [
+      "aload_1",
+      1,
+      4
+    ],
+    "1": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "2": [
+      "org/apache/commons/math3/genetics/Population.java/util/Iterator",
+      1,
+      4
+    ],
+    "4": [
+      "0",
+      1,
+      4
+    ],
+    "6": [
+      "astore_2",
+      1,
+      4
+    ],
+    "7": [
+      "aload_2",
+      1,
+      4
+    ],
+    "8": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "9": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "11": [
+      "0",
+      1,
+      4
+    ],
+    "13": [
+      "ifeq",
+      1,
+      4
+    ],
+    "14": [
+      "26",
+      1,
+      4
+    ],
+    "16": [
+      "aload_2",
+      1,
+      4
+    ],
+    "17": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "18": [
+      "java/util/Iterator.isSame:(Lorg/apache/commons/math3/genetics/Chromosome;)Z",
+      1,
+      4
+    ],
+    "20": [
+      "0",
+      1,
+      4
+    ],
+    "22": [
+      "checkcast",
+      1,
+      4
+    ],
+    "23": [
+      "org/apache/commons/math3/genetics/Chromosome",
+      1,
+      4
+    ],
+    "25": [
+      "astore_3",
+      1,
+      4
+    ],
+    "26": [
+      "aload_0",
+      2,
+      1
+    ],
+    "27": [
+      "aload_3",
+      2,
+      1
+    ],
+    "28": [
+      "invokevirtual",
+      2,
+      1
+    ],
+    "29": [
+      "org/apache/commons/math3/genetics/Chromosome.isSame:(Lorg/apache/commons/math3/genetics/Chromosome;)Z",
+      2,
+      1
+    ],
+    "31": [
+      "ifeq",
+      2,
+      1
+    ],
+    "32": [
+      "5",
+      2,
+      1
+    ],
+    "34": [
+      "aload_3",
+      2,
+      0
+    ],
+    "35": [
+      "areturn",
+      2,
+      0
+    ],
+    "36": [
+      "goto",
+      0,
+      4
+    ],
+    "37": [
+      "-29",
+      0,
+      4
+    ],
+    "39": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "40": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "searchForFitnessUpdate": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/genetics/Chromosome.findSameChromosome:(Lorg/apache/commons/math3/genetics/Population;)Lorg/apache/commons/math3/genetics/Chromosome;",
+      0,
+      0
+    ],
+    "5": [
+      "astore_2",
+      0,
+      0
+    ],
+    "6": [
+      "aload_2",
+      1,
+      1
+    ],
+    "7": [
+      "ifnull",
+      1,
+      1
+    ],
+    "8": [
+      "11",
+      1,
+      1
+    ],
+    "10": [
+      "aload_0",
+      1,
+      0
+    ],
+    "11": [
+      "aload_2",
+      1,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "13": [
+      "org/apache/commons/math3/genetics/Chromosome.getFitness:()D",
+      1,
+      0
+    ],
+    "15": [
+      "putfield",
+      1,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/genetics/Chromosome.fitness:D",
+      1,
+      0
+    ],
+    "18": [
+      "return",
+      0,
+      0
+    ]
+  }
+}

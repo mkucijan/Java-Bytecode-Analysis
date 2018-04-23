@@ -1,0 +1,477 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "bipush",
+      0,
+      0
+    ],
+    "6": [
+      "100",
+      0,
+      0
+    ],
+    "7": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.setMaxIterations:(I)V",
+      0,
+      0
+    ],
+    "10": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "restrictToNonNegative": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.nonNegative:Z",
+      0,
+      0
+    ],
+    "4": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "getGoalType": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.goal:Lorg/apache/commons/math3/optimization/GoalType;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getFunction": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.function:Lorg/apache/commons/math3/optimization/linear/LinearObjectiveFunction;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getConstraints": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.linearConstraints:Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "4": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "5": [
+      "java/util/Collections.unmodifiableCollection:(Ljava/util/Collection;)Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "7": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "setMaxIterations": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "iload_1",
+      0,
+      0
+    ],
+    "2": [
+      "putfield",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.maxIterations:I",
+      0,
+      0
+    ],
+    "5": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getMaxIterations": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.maxIterations:I",
+      0,
+      0
+    ],
+    "4": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "getIterations": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.iterations:I",
+      0,
+      0
+    ],
+    "4": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "incrementIterationsCounter": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "dup",
+      1,
+      1
+    ],
+    "2": [
+      "getfield",
+      1,
+      1
+    ],
+    "3": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.iterations:I",
+      1,
+      1
+    ],
+    "5": [
+      "iconst_1",
+      1,
+      1
+    ],
+    "6": [
+      "iadd",
+      1,
+      1
+    ],
+    "7": [
+      "dup_x1",
+      1,
+      1
+    ],
+    "8": [
+      "putfield",
+      1,
+      1
+    ],
+    "9": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.iterations:I",
+      1,
+      1
+    ],
+    "11": [
+      "aload_0",
+      1,
+      1
+    ],
+    "12": [
+      "getfield",
+      1,
+      1
+    ],
+    "13": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.maxIterations:I",
+      1,
+      1
+    ],
+    "15": [
+      "if_icmple",
+      1,
+      1
+    ],
+    "16": [
+      "18",
+      1,
+      1
+    ],
+    "18": [
+      "new",
+      1,
+      0
+    ],
+    "19": [
+      "org/apache/commons/math3/exception/MaxCountExceededException",
+      1,
+      0
+    ],
+    "21": [
+      "dup",
+      1,
+      0
+    ],
+    "22": [
+      "aload_0",
+      1,
+      0
+    ],
+    "23": [
+      "getfield",
+      1,
+      0
+    ],
+    "24": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.maxIterations:I",
+      1,
+      0
+    ],
+    "26": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "27": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "29": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "30": [
+      "org/apache/commons/math3/exception/MaxCountExceededException.<init>:(Ljava/lang/Number;)V",
+      1,
+      0
+    ],
+    "32": [
+      "athrow",
+      1,
+      0
+    ],
+    "33": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "optimize": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "putfield",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.function:Lorg/apache/commons/math3/optimization/linear/LinearObjectiveFunction;",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "aload_2",
+      0,
+      0
+    ],
+    "7": [
+      "putfield",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.linearConstraints:Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "10": [
+      "aload_0",
+      0,
+      0
+    ],
+    "11": [
+      "aload_3",
+      0,
+      0
+    ],
+    "12": [
+      "putfield",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.goal:Lorg/apache/commons/math3/optimization/GoalType;",
+      0,
+      0
+    ],
+    "15": [
+      "aload_0",
+      0,
+      0
+    ],
+    "16": [
+      "iload",
+      0,
+      0
+    ],
+    "17": [
+      "#4",
+      0,
+      0
+    ],
+    "18": [
+      "putfield",
+      0,
+      0
+    ],
+    "19": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.nonNegative:Z",
+      0,
+      0
+    ],
+    "21": [
+      "aload_0",
+      0,
+      0
+    ],
+    "22": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "23": [
+      "putfield",
+      0,
+      0
+    ],
+    "24": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.iterations:I",
+      0,
+      0
+    ],
+    "26": [
+      "aload_0",
+      0,
+      0
+    ],
+    "27": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "28": [
+      "org/apache/commons/math3/optimization/linear/AbstractLinearOptimizer.doOptimize:()Lorg/apache/commons/math3/optimization/PointValuePair;",
+      0,
+      0
+    ],
+    "30": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

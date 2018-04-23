@@ -1,0 +1,707 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_2",
+      0,
+      0
+    ],
+    "2": [
+      "aload_3",
+      0,
+      0
+    ],
+    "3": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "4": [
+      "org/apache/commons/math3/fraction/BigFractionFormat.<init>:(Ljava/text/NumberFormat;Ljava/text/NumberFormat;)V",
+      0,
+      0
+    ],
+    "6": [
+      "aload_0",
+      0,
+      0
+    ],
+    "7": [
+      "aload_1",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/fraction/ProperBigFractionFormat.setWholeFormat:(Ljava/text/NumberFormat;)V",
+      0,
+      0
+    ],
+    "11": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "format": {
+    "0": [
+      "aload_3",
+      0,
+      0
+    ],
+    "1": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "java/text/FieldPosition.setBeginIndex:(I)V",
+      0,
+      0
+    ],
+    "5": [
+      "aload_3",
+      0,
+      0
+    ],
+    "6": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "7": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "8": [
+      "java/text/FieldPosition.setEndIndex:(I)V",
+      0,
+      0
+    ],
+    "10": [
+      "aload_1",
+      0,
+      0
+    ],
+    "11": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/fraction/BigFraction.getNumerator:()Ljava/math/BigInteger;",
+      0,
+      0
+    ],
+    "14": [
+      "astore",
+      0,
+      0
+    ],
+    "15": [
+      "#4",
+      0,
+      0
+    ],
+    "16": [
+      "aload_1",
+      0,
+      0
+    ],
+    "17": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "18": [
+      "org/apache/commons/math3/fraction/BigFraction.getDenominator:()Ljava/math/BigInteger;",
+      0,
+      0
+    ],
+    "20": [
+      "astore",
+      0,
+      0
+    ],
+    "21": [
+      "#5",
+      0,
+      0
+    ],
+    "22": [
+      "aload",
+      0,
+      0
+    ],
+    "23": [
+      "#4",
+      0,
+      0
+    ],
+    "24": [
+      "aload",
+      0,
+      0
+    ],
+    "25": [
+      "#5",
+      0,
+      0
+    ],
+    "26": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "27": [
+      "java/math/BigInteger.divide:(Ljava/math/BigInteger;)Ljava/math/BigInteger;",
+      0,
+      0
+    ],
+    "29": [
+      "astore",
+      0,
+      0
+    ],
+    "30": [
+      "#6",
+      0,
+      0
+    ],
+    "31": [
+      "aload",
+      0,
+      0
+    ],
+    "32": [
+      "#4",
+      0,
+      0
+    ],
+    "33": [
+      "aload",
+      0,
+      0
+    ],
+    "34": [
+      "#5",
+      0,
+      0
+    ],
+    "35": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "36": [
+      "java/math/BigInteger.remainder:(Ljava/math/BigInteger;)Ljava/math/BigInteger;",
+      0,
+      0
+    ],
+    "38": [
+      "astore",
+      0,
+      0
+    ],
+    "39": [
+      "#4",
+      0,
+      0
+    ],
+    "40": [
+      "getstatic",
+      1,
+      1
+    ],
+    "41": [
+      "java/math/BigInteger.ZERO:Ljava/math/BigInteger;",
+      1,
+      1
+    ],
+    "43": [
+      "aload",
+      1,
+      1
+    ],
+    "44": [
+      "#6",
+      1,
+      1
+    ],
+    "45": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "46": [
+      "java/math/BigInteger.equals:(Ljava/lang/Object;)Z",
+      1,
+      1
+    ],
+    "48": [
+      "ifne",
+      1,
+      1
+    ],
+    "49": [
+      "40",
+      1,
+      1
+    ],
+    "51": [
+      "aload_0",
+      1,
+      0
+    ],
+    "52": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "53": [
+      "org/apache/commons/math3/fraction/ProperBigFractionFormat.getWholeFormat:()Ljava/text/NumberFormat;",
+      1,
+      0
+    ],
+    "55": [
+      "aload",
+      1,
+      0
+    ],
+    "56": [
+      "#6",
+      1,
+      0
+    ],
+    "57": [
+      "aload_2",
+      1,
+      0
+    ],
+    "58": [
+      "aload_3",
+      1,
+      0
+    ],
+    "59": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "60": [
+      "java/text/NumberFormat.format:(Ljava/lang/Object;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;",
+      1,
+      0
+    ],
+    "62": [
+      "pop",
+      1,
+      0
+    ],
+    "63": [
+      "aload_2",
+      1,
+      0
+    ],
+    "64": [
+      "bipush",
+      1,
+      0
+    ],
+    "65": [
+      "32",
+      1,
+      0
+    ],
+    "66": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "67": [
+      "java/lang/StringBuffer.append:(C)Ljava/lang/StringBuffer;",
+      1,
+      0
+    ],
+    "69": [
+      "pop",
+      1,
+      0
+    ],
+    "70": [
+      "aload",
+      2,
+      1
+    ],
+    "71": [
+      "#4",
+      2,
+      1
+    ],
+    "72": [
+      "getstatic",
+      2,
+      1
+    ],
+    "73": [
+      "java/math/BigInteger.ZERO:Ljava/math/BigInteger;",
+      2,
+      1
+    ],
+    "75": [
+      "invokevirtual",
+      2,
+      1
+    ],
+    "76": [
+      "java/math/BigInteger.compareTo:(Ljava/math/BigInteger;)I",
+      2,
+      1
+    ],
+    "78": [
+      "ifge",
+      2,
+      1
+    ],
+    "79": [
+      "10",
+      2,
+      1
+    ],
+    "81": [
+      "aload",
+      2,
+      0
+    ],
+    "82": [
+      "#4",
+      2,
+      0
+    ],
+    "83": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "84": [
+      "java/math/BigInteger.negate:()Ljava/math/BigInteger;",
+      2,
+      0
+    ],
+    "86": [
+      "astore",
+      2,
+      0
+    ],
+    "87": [
+      "#4",
+      2,
+      0
+    ],
+    "88": [
+      "aload_0",
+      0,
+      0
+    ],
+    "89": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "90": [
+      "org/apache/commons/math3/fraction/ProperBigFractionFormat.getNumeratorFormat:()Ljava/text/NumberFormat;",
+      0,
+      0
+    ],
+    "92": [
+      "aload",
+      0,
+      0
+    ],
+    "93": [
+      "#4",
+      0,
+      0
+    ],
+    "94": [
+      "aload_2",
+      0,
+      0
+    ],
+    "95": [
+      "aload_3",
+      0,
+      0
+    ],
+    "96": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "97": [
+      "java/text/NumberFormat.format:(Ljava/lang/Object;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;",
+      0,
+      0
+    ],
+    "99": [
+      "pop",
+      0,
+      0
+    ],
+    "100": [
+      "aload_2",
+      0,
+      0
+    ],
+    "101": [
+      "ldc",
+      0,
+      0
+    ],
+    "102": [
+      " / ",
+      0,
+      0
+    ],
+    "103": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "104": [
+      "java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;",
+      0,
+      0
+    ],
+    "106": [
+      "pop",
+      0,
+      0
+    ],
+    "107": [
+      "aload_0",
+      0,
+      0
+    ],
+    "108": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "109": [
+      "org/apache/commons/math3/fraction/ProperBigFractionFormat.getDenominatorFormat:()Ljava/text/NumberFormat;",
+      0,
+      0
+    ],
+    "111": [
+      "aload",
+      0,
+      0
+    ],
+    "112": [
+      "#5",
+      0,
+      0
+    ],
+    "113": [
+      "aload_2",
+      0,
+      0
+    ],
+    "114": [
+      "aload_3",
+      0,
+      0
+    ],
+    "115": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "116": [
+      "java/text/NumberFormat.format:(Ljava/lang/Object;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;",
+      0,
+      0
+    ],
+    "118": [
+      "pop",
+      0,
+      0
+    ],
+    "119": [
+      "aload_2",
+      0,
+      0
+    ],
+    "120": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getWholeFormat": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/fraction/ProperBigFractionFormat.wholeFormat:Ljava/text/NumberFormat;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "parse": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "aload_2",
+      0,
+      0
+    ],
+    "3": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "4": [
+      "org/apache/commons/math3/fraction/ProperBigFractionFormat.parse:(Ljava/lang/String;Ljava/text/ParsePosition;)Lorg/apache/commons/math3/fraction/BigFraction;",
+      0,
+      0
+    ],
+    "6": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "setWholeFormat": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "18",
+      1,
+      1
+    ],
+    "4": [
+      "new",
+      1,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/exception/NullArgumentException",
+      1,
+      0
+    ],
+    "7": [
+      "dup",
+      1,
+      0
+    ],
+    "8": [
+      "getstatic",
+      1,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.WHOLE_FORMAT:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "11": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "12": [
+      "anewarray",
+      1,
+      0
+    ],
+    "13": [
+      "java/lang/Object",
+      1,
+      0
+    ],
+    "15": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/exception/NullArgumentException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;[Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "18": [
+      "athrow",
+      1,
+      0
+    ],
+    "19": [
+      "aload_0",
+      0,
+      0
+    ],
+    "20": [
+      "aload_1",
+      0,
+      0
+    ],
+    "21": [
+      "putfield",
+      0,
+      0
+    ],
+    "22": [
+      "org/apache/commons/math3/fraction/ProperBigFractionFormat.wholeFormat:Ljava/text/NumberFormat;",
+      0,
+      0
+    ],
+    "24": [
+      "return",
+      0,
+      0
+    ]
+  }
+}

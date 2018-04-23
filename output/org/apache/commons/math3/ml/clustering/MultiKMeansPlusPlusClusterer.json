@@ -1,0 +1,442 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.getDistanceMeasure:()Lorg/apache/commons/math3/ml/distance/DistanceMeasure;",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/ml/clustering/Clusterer.<init>:(Lorg/apache/commons/math3/ml/distance/DistanceMeasure;)V",
+      0,
+      0
+    ],
+    "8": [
+      "aload_0",
+      0,
+      0
+    ],
+    "9": [
+      "aload_1",
+      0,
+      0
+    ],
+    "10": [
+      "putfield",
+      0,
+      0
+    ],
+    "11": [
+      "org/apache/commons/math3/ml/clustering/MultiKMeansPlusPlusClusterer.clusterer:Lorg/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer;",
+      0,
+      0
+    ],
+    "13": [
+      "aload_0",
+      0,
+      0
+    ],
+    "14": [
+      "iload_2",
+      0,
+      0
+    ],
+    "15": [
+      "putfield",
+      0,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/ml/clustering/MultiKMeansPlusPlusClusterer.numTrials:I",
+      0,
+      0
+    ],
+    "18": [
+      "aload_0",
+      0,
+      0
+    ],
+    "19": [
+      "aload_3",
+      0,
+      0
+    ],
+    "20": [
+      "putfield",
+      0,
+      0
+    ],
+    "21": [
+      "org/apache/commons/math3/ml/clustering/MultiKMeansPlusPlusClusterer.evaluator:Lorg/apache/commons/math3/ml/clustering/evaluation/ClusterEvaluator;",
+      0,
+      0
+    ],
+    "23": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getClusterer": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/ml/clustering/MultiKMeansPlusPlusClusterer.clusterer:Lorg/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getNumTrials": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/ml/clustering/MultiKMeansPlusPlusClusterer.numTrials:I",
+      0,
+      0
+    ],
+    "4": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "getClusterEvaluator": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/ml/clustering/MultiKMeansPlusPlusClusterer.evaluator:Lorg/apache/commons/math3/ml/clustering/evaluation/ClusterEvaluator;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "cluster": {
+    "0": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "1": [
+      "astore_2",
+      0,
+      0
+    ],
+    "2": [
+      "ldc2_w",
+      0,
+      0
+    ],
+    "3": [
+      "inf",
+      0,
+      0
+    ],
+    "5": [
+      "dstore_3",
+      0,
+      0
+    ],
+    "6": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "7": [
+      "istore",
+      1,
+      4
+    ],
+    "8": [
+      "#5",
+      1,
+      4
+    ],
+    "9": [
+      "iload",
+      1,
+      4
+    ],
+    "10": [
+      "#5",
+      1,
+      4
+    ],
+    "11": [
+      "aload_0",
+      1,
+      4
+    ],
+    "12": [
+      "getfield",
+      1,
+      4
+    ],
+    "13": [
+      "org/apache/commons/math3/ml/clustering/MultiKMeansPlusPlusClusterer.numTrials:I",
+      1,
+      4
+    ],
+    "15": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "16": [
+      "49",
+      1,
+      4
+    ],
+    "18": [
+      "aload_0",
+      1,
+      0
+    ],
+    "19": [
+      "getfield",
+      1,
+      0
+    ],
+    "20": [
+      "org/apache/commons/math3/ml/clustering/MultiKMeansPlusPlusClusterer.clusterer:Lorg/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer;",
+      1,
+      0
+    ],
+    "22": [
+      "aload_1",
+      1,
+      0
+    ],
+    "23": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "24": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.cluster:(Ljava/util/Collection;)Ljava/util/List;",
+      1,
+      0
+    ],
+    "26": [
+      "astore",
+      1,
+      0
+    ],
+    "27": [
+      "#6",
+      1,
+      0
+    ],
+    "28": [
+      "aload_0",
+      1,
+      0
+    ],
+    "29": [
+      "getfield",
+      1,
+      0
+    ],
+    "30": [
+      "org/apache/commons/math3/ml/clustering/MultiKMeansPlusPlusClusterer.evaluator:Lorg/apache/commons/math3/ml/clustering/evaluation/ClusterEvaluator;",
+      1,
+      0
+    ],
+    "32": [
+      "aload",
+      1,
+      0
+    ],
+    "33": [
+      "#6",
+      1,
+      0
+    ],
+    "34": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "35": [
+      "org/apache/commons/math3/ml/clustering/evaluation/ClusterEvaluator.score:(Ljava/util/List;)D",
+      1,
+      0
+    ],
+    "37": [
+      "dstore",
+      1,
+      0
+    ],
+    "38": [
+      "#7",
+      1,
+      0
+    ],
+    "39": [
+      "aload_0",
+      2,
+      1
+    ],
+    "40": [
+      "getfield",
+      2,
+      1
+    ],
+    "41": [
+      "org/apache/commons/math3/ml/clustering/MultiKMeansPlusPlusClusterer.evaluator:Lorg/apache/commons/math3/ml/clustering/evaluation/ClusterEvaluator;",
+      2,
+      1
+    ],
+    "43": [
+      "dload",
+      2,
+      1
+    ],
+    "44": [
+      "#7",
+      2,
+      1
+    ],
+    "45": [
+      "dload_3",
+      2,
+      1
+    ],
+    "46": [
+      "invokevirtual",
+      2,
+      1
+    ],
+    "47": [
+      "org/apache/commons/math3/ml/clustering/evaluation/ClusterEvaluator.isBetterScore:(DD)Z",
+      2,
+      1
+    ],
+    "49": [
+      "ifeq",
+      2,
+      1
+    ],
+    "50": [
+      "9",
+      2,
+      1
+    ],
+    "52": [
+      "aload",
+      2,
+      0
+    ],
+    "53": [
+      "#6",
+      2,
+      0
+    ],
+    "54": [
+      "astore_2",
+      2,
+      0
+    ],
+    "55": [
+      "dload",
+      2,
+      0
+    ],
+    "56": [
+      "#7",
+      2,
+      0
+    ],
+    "57": [
+      "dstore_3",
+      2,
+      0
+    ],
+    "58": [
+      "iinc",
+      2,
+      0
+    ],
+    "59": [
+      "#5",
+      2,
+      0
+    ],
+    "60": [
+      "-89",
+      2,
+      0
+    ],
+    "61": [
+      "goto",
+      2,
+      4
+    ],
+    "62": [
+      "-52",
+      2,
+      4
+    ],
+    "64": [
+      "aload_2",
+      1,
+      0
+    ],
+    "65": [
+      "areturn",
+      1,
+      0
+    ]
+  }
+}

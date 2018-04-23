@@ -36,6 +36,8 @@ public class Test {
 			System.out.println(".." + mylocal);
 			mylocal = mylocal + 1;
 		}
-		sayHello();
+		for(int i=0; i<2; i++) {
+			sayHello();
+		}
     }
 }

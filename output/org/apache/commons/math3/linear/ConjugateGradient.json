@@ -1,0 +1,2068 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/linear/PreconditionedIterativeLinearSolver.<init>:(Lorg/apache/commons/math3/util/IterationManager;)V",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "dload_2",
+      0,
+      0
+    ],
+    "7": [
+      "putfield",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/linear/ConjugateGradient.delta:D",
+      0,
+      0
+    ],
+    "10": [
+      "aload_0",
+      0,
+      0
+    ],
+    "11": [
+      "iload",
+      0,
+      0
+    ],
+    "12": [
+      "#4",
+      0,
+      0
+    ],
+    "13": [
+      "putfield",
+      0,
+      0
+    ],
+    "14": [
+      "org/apache/commons/math3/linear/ConjugateGradient.check:Z",
+      0,
+      0
+    ],
+    "16": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getCheck": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/linear/ConjugateGradient.check:Z",
+      0,
+      0
+    ],
+    "4": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "solveInPlace": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "aload_2",
+      0,
+      0
+    ],
+    "2": [
+      "aload_3",
+      0,
+      0
+    ],
+    "3": [
+      "aload",
+      0,
+      0
+    ],
+    "4": [
+      "#4",
+      0,
+      0
+    ],
+    "5": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/linear/ConjugateGradient.checkParameters:(Lorg/apache/commons/math3/linear/RealLinearOperator;Lorg/apache/commons/math3/linear/RealLinearOperator;Lorg/apache/commons/math3/linear/RealVector;Lorg/apache/commons/math3/linear/RealVector;)V",
+      0,
+      0
+    ],
+    "8": [
+      "aload_0",
+      0,
+      0
+    ],
+    "9": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "10": [
+      "org/apache/commons/math3/linear/ConjugateGradient.getIterationManager:()Lorg/apache/commons/math3/util/IterationManager;",
+      0,
+      0
+    ],
+    "12": [
+      "astore",
+      0,
+      0
+    ],
+    "13": [
+      "#5",
+      0,
+      0
+    ],
+    "14": [
+      "aload",
+      0,
+      0
+    ],
+    "15": [
+      "#5",
+      0,
+      0
+    ],
+    "16": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "17": [
+      "org/apache/commons/math3/util/IterationManager.resetIterationCount:()V",
+      0,
+      0
+    ],
+    "19": [
+      "aload_0",
+      0,
+      0
+    ],
+    "20": [
+      "getfield",
+      0,
+      0
+    ],
+    "21": [
+      "org/apache/commons/math3/linear/ConjugateGradient.delta:D",
+      0,
+      0
+    ],
+    "23": [
+      "aload_3",
+      0,
+      0
+    ],
+    "24": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "25": [
+      "org/apache/commons/math3/linear/RealVector.getNorm:()D",
+      0,
+      0
+    ],
+    "27": [
+      "dmul",
+      0,
+      0
+    ],
+    "28": [
+      "dstore",
+      0,
+      0
+    ],
+    "29": [
+      "#6",
+      0,
+      0
+    ],
+    "30": [
+      "aload_3",
+      0,
+      0
+    ],
+    "31": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "32": [
+      "org/apache/commons/math3/linear/RealVector.unmodifiableRealVector:(Lorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "34": [
+      "astore",
+      0,
+      0
+    ],
+    "35": [
+      "#8",
+      0,
+      0
+    ],
+    "36": [
+      "aload",
+      0,
+      0
+    ],
+    "37": [
+      "#5",
+      0,
+      0
+    ],
+    "38": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "39": [
+      "org/apache/commons/math3/util/IterationManager.incrementIterationCount:()V",
+      0,
+      0
+    ],
+    "41": [
+      "aload",
+      0,
+      0
+    ],
+    "42": [
+      "#4",
+      0,
+      0
+    ],
+    "43": [
+      "astore",
+      0,
+      0
+    ],
+    "44": [
+      "#9",
+      0,
+      0
+    ],
+    "45": [
+      "aload",
+      0,
+      0
+    ],
+    "46": [
+      "#9",
+      0,
+      0
+    ],
+    "47": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "48": [
+      "org/apache/commons/math3/linear/RealVector.unmodifiableRealVector:(Lorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "50": [
+      "astore",
+      0,
+      0
+    ],
+    "51": [
+      "#10",
+      0,
+      0
+    ],
+    "52": [
+      "aload",
+      0,
+      0
+    ],
+    "53": [
+      "#9",
+      0,
+      0
+    ],
+    "54": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "55": [
+      "org/apache/commons/math3/linear/RealVector.copy:()Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "57": [
+      "astore",
+      0,
+      0
+    ],
+    "58": [
+      "#11",
+      0,
+      0
+    ],
+    "59": [
+      "aload_1",
+      0,
+      0
+    ],
+    "60": [
+      "aload",
+      0,
+      0
+    ],
+    "61": [
+      "#11",
+      0,
+      0
+    ],
+    "62": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "63": [
+      "org/apache/commons/math3/linear/RealLinearOperator.operate:(Lorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "65": [
+      "astore",
+      0,
+      0
+    ],
+    "66": [
+      "#12",
+      0,
+      0
+    ],
+    "67": [
+      "aload_3",
+      0,
+      0
+    ],
+    "68": [
+      "dconst_1",
+      0,
+      0
+    ],
+    "69": [
+      "ldc2_w",
+      0,
+      0
+    ],
+    "70": [
+      "-1.0",
+      0,
+      0
+    ],
+    "72": [
+      "aload",
+      0,
+      0
+    ],
+    "73": [
+      "#12",
+      0,
+      0
+    ],
+    "74": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "75": [
+      "org/apache/commons/math3/linear/RealVector.combine:(DDLorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "77": [
+      "astore",
+      0,
+      0
+    ],
+    "78": [
+      "#13",
+      0,
+      0
+    ],
+    "79": [
+      "aload",
+      0,
+      0
+    ],
+    "80": [
+      "#13",
+      0,
+      0
+    ],
+    "81": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "82": [
+      "org/apache/commons/math3/linear/RealVector.unmodifiableRealVector:(Lorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "84": [
+      "astore",
+      0,
+      0
+    ],
+    "85": [
+      "#14",
+      0,
+      0
+    ],
+    "86": [
+      "aload",
+      0,
+      0
+    ],
+    "87": [
+      "#13",
+      0,
+      0
+    ],
+    "88": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "89": [
+      "org/apache/commons/math3/linear/RealVector.getNorm:()D",
+      0,
+      0
+    ],
+    "91": [
+      "dstore",
+      0,
+      0
+    ],
+    "92": [
+      "#15",
+      0,
+      0
+    ],
+    "93": [
+      "aload_2",
+      1,
+      1
+    ],
+    "94": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "95": [
+      "10",
+      1,
+      1
+    ],
+    "97": [
+      "aload",
+      1,
+      0
+    ],
+    "98": [
+      "#13",
+      1,
+      0
+    ],
+    "99": [
+      "astore",
+      1,
+      0
+    ],
+    "100": [
+      "#17",
+      1,
+      0
+    ],
+    "101": [
+      "goto",
+      1,
+      0
+    ],
+    "102": [
+      "6",
+      1,
+      0
+    ],
+    "104": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "105": [
+      "astore",
+      1,
+      0
+    ],
+    "106": [
+      "#17",
+      1,
+      0
+    ],
+    "107": [
+      "new",
+      0,
+      0
+    ],
+    "108": [
+      "org/apache/commons/math3/linear/DefaultIterativeLinearSolverEvent",
+      0,
+      0
+    ],
+    "110": [
+      "dup",
+      0,
+      0
+    ],
+    "111": [
+      "aload_0",
+      0,
+      0
+    ],
+    "112": [
+      "aload",
+      0,
+      0
+    ],
+    "113": [
+      "#5",
+      0,
+      0
+    ],
+    "114": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "115": [
+      "org/apache/commons/math3/util/IterationManager.getIterations:()I",
+      0,
+      0
+    ],
+    "117": [
+      "aload",
+      0,
+      0
+    ],
+    "118": [
+      "#10",
+      0,
+      0
+    ],
+    "119": [
+      "aload",
+      0,
+      0
+    ],
+    "120": [
+      "#8",
+      0,
+      0
+    ],
+    "121": [
+      "aload",
+      0,
+      0
+    ],
+    "122": [
+      "#14",
+      0,
+      0
+    ],
+    "123": [
+      "dload",
+      0,
+      0
+    ],
+    "124": [
+      "#15",
+      0,
+      0
+    ],
+    "125": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "126": [
+      "org/apache/commons/math3/linear/DefaultIterativeLinearSolverEvent.<init>:(Ljava/lang/Object;ILorg/apache/commons/math3/linear/RealVector;Lorg/apache/commons/math3/linear/RealVector;Lorg/apache/commons/math3/linear/RealVector;D)V",
+      0,
+      0
+    ],
+    "128": [
+      "astore",
+      0,
+      0
+    ],
+    "129": [
+      "#18",
+      0,
+      0
+    ],
+    "130": [
+      "aload",
+      0,
+      0
+    ],
+    "131": [
+      "#5",
+      0,
+      0
+    ],
+    "132": [
+      "aload",
+      0,
+      0
+    ],
+    "133": [
+      "#18",
+      0,
+      0
+    ],
+    "134": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "135": [
+      "org/apache/commons/math3/util/IterationManager.fireInitializationEvent:(Lorg/apache/commons/math3/util/IterationEvent;)V",
+      0,
+      0
+    ],
+    "137": [
+      "dload",
+      1,
+      1
+    ],
+    "138": [
+      "#15",
+      1,
+      1
+    ],
+    "139": [
+      "dload",
+      1,
+      1
+    ],
+    "140": [
+      "#6",
+      1,
+      1
+    ],
+    "141": [
+      "dcmpg",
+      1,
+      1
+    ],
+    "142": [
+      "ifgt",
+      1,
+      1
+    ],
+    "143": [
+      "13",
+      1,
+      1
+    ],
+    "145": [
+      "aload",
+      1,
+      0
+    ],
+    "146": [
+      "#5",
+      1,
+      0
+    ],
+    "147": [
+      "aload",
+      1,
+      0
+    ],
+    "148": [
+      "#18",
+      1,
+      0
+    ],
+    "149": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "150": [
+      "org/apache/commons/math3/util/IterationManager.fireTerminationEvent:(Lorg/apache/commons/math3/util/IterationEvent;)V",
+      1,
+      0
+    ],
+    "152": [
+      "aload",
+      1,
+      0
+    ],
+    "153": [
+      "#9",
+      1,
+      0
+    ],
+    "154": [
+      "areturn",
+      1,
+      0
+    ],
+    "155": [
+      "dconst_0",
+      0,
+      0
+    ],
+    "156": [
+      "dstore",
+      0,
+      0
+    ],
+    "157": [
+      "#19",
+      0,
+      0
+    ],
+    "158": [
+      "aload",
+      1,
+      0
+    ],
+    "159": [
+      "#5",
+      1,
+      0
+    ],
+    "160": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "161": [
+      "org/apache/commons/math3/util/IterationManager.incrementIterationCount:()V",
+      1,
+      0
+    ],
+    "163": [
+      "new",
+      1,
+      0
+    ],
+    "164": [
+      "org/apache/commons/math3/linear/DefaultIterativeLinearSolverEvent",
+      1,
+      0
+    ],
+    "166": [
+      "dup",
+      1,
+      0
+    ],
+    "167": [
+      "aload_0",
+      1,
+      0
+    ],
+    "168": [
+      "aload",
+      1,
+      0
+    ],
+    "169": [
+      "#5",
+      1,
+      0
+    ],
+    "170": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "171": [
+      "org/apache/commons/math3/util/IterationManager.getIterations:()I",
+      1,
+      0
+    ],
+    "173": [
+      "aload",
+      1,
+      0
+    ],
+    "174": [
+      "#10",
+      1,
+      0
+    ],
+    "175": [
+      "aload",
+      1,
+      0
+    ],
+    "176": [
+      "#8",
+      1,
+      0
+    ],
+    "177": [
+      "aload",
+      1,
+      0
+    ],
+    "178": [
+      "#14",
+      1,
+      0
+    ],
+    "179": [
+      "dload",
+      1,
+      0
+    ],
+    "180": [
+      "#15",
+      1,
+      0
+    ],
+    "181": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "182": [
+      "org/apache/commons/math3/linear/DefaultIterativeLinearSolverEvent.<init>:(Ljava/lang/Object;ILorg/apache/commons/math3/linear/RealVector;Lorg/apache/commons/math3/linear/RealVector;Lorg/apache/commons/math3/linear/RealVector;D)V",
+      1,
+      0
+    ],
+    "184": [
+      "astore",
+      1,
+      0
+    ],
+    "185": [
+      "#18",
+      1,
+      0
+    ],
+    "186": [
+      "aload",
+      1,
+      0
+    ],
+    "187": [
+      "#5",
+      1,
+      0
+    ],
+    "188": [
+      "aload",
+      1,
+      0
+    ],
+    "189": [
+      "#18",
+      1,
+      0
+    ],
+    "190": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "191": [
+      "org/apache/commons/math3/util/IterationManager.fireIterationStartedEvent:(Lorg/apache/commons/math3/util/IterationEvent;)V",
+      1,
+      0
+    ],
+    "193": [
+      "aload_2",
+      2,
+      1
+    ],
+    "194": [
+      "ifnull",
+      2,
+      1
+    ],
+    "195": [
+      "11",
+      2,
+      1
+    ],
+    "197": [
+      "aload_2",
+      2,
+      0
+    ],
+    "198": [
+      "aload",
+      2,
+      0
+    ],
+    "199": [
+      "#13",
+      2,
+      0
+    ],
+    "200": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "201": [
+      "org/apache/commons/math3/linear/RealLinearOperator.operate:(Lorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;",
+      2,
+      0
+    ],
+    "203": [
+      "astore",
+      2,
+      0
+    ],
+    "204": [
+      "#17",
+      2,
+      0
+    ],
+    "205": [
+      "aload",
+      1,
+      0
+    ],
+    "206": [
+      "#13",
+      1,
+      0
+    ],
+    "207": [
+      "aload",
+      1,
+      0
+    ],
+    "208": [
+      "#17",
+      1,
+      0
+    ],
+    "209": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "210": [
+      "org/apache/commons/math3/linear/RealVector.dotProduct:(Lorg/apache/commons/math3/linear/RealVector;)D",
+      1,
+      0
+    ],
+    "212": [
+      "dstore",
+      1,
+      0
+    ],
+    "213": [
+      "#21",
+      1,
+      0
+    ],
+    "214": [
+      "aload_0",
+      2,
+      1
+    ],
+    "215": [
+      "getfield",
+      2,
+      1
+    ],
+    "216": [
+      "org/apache/commons/math3/linear/ConjugateGradient.check:Z",
+      2,
+      1
+    ],
+    "218": [
+      "ifeq",
+      2,
+      1
+    ],
+    "219": [
+      "46",
+      2,
+      1
+    ],
+    "221": [
+      "dload",
+      2,
+      1
+    ],
+    "222": [
+      "#21",
+      2,
+      1
+    ],
+    "223": [
+      "dconst_0",
+      2,
+      1
+    ],
+    "224": [
+      "dcmpg",
+      2,
+      1
+    ],
+    "225": [
+      "ifgt",
+      2,
+      1
+    ],
+    "226": [
+      "39",
+      2,
+      1
+    ],
+    "228": [
+      "new",
+      2,
+      0
+    ],
+    "229": [
+      "org/apache/commons/math3/linear/NonPositiveDefiniteOperatorException",
+      2,
+      0
+    ],
+    "231": [
+      "dup",
+      2,
+      0
+    ],
+    "232": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "233": [
+      "org/apache/commons/math3/linear/NonPositiveDefiniteOperatorException.<init>:()V",
+      2,
+      0
+    ],
+    "235": [
+      "astore",
+      2,
+      0
+    ],
+    "236": [
+      "#23",
+      2,
+      0
+    ],
+    "237": [
+      "aload",
+      2,
+      0
+    ],
+    "238": [
+      "#23",
+      2,
+      0
+    ],
+    "239": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "240": [
+      "org/apache/commons/math3/linear/NonPositiveDefiniteOperatorException.getContext:()Lorg/apache/commons/math3/exception/util/ExceptionContext;",
+      2,
+      0
+    ],
+    "242": [
+      "astore",
+      2,
+      0
+    ],
+    "243": [
+      "#24",
+      2,
+      0
+    ],
+    "244": [
+      "aload",
+      2,
+      0
+    ],
+    "245": [
+      "#24",
+      2,
+      0
+    ],
+    "246": [
+      "ldc",
+      2,
+      0
+    ],
+    "247": [
+      "operator",
+      2,
+      0
+    ],
+    "248": [
+      "aload_2",
+      2,
+      0
+    ],
+    "249": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "250": [
+      "org/apache/commons/math3/exception/util/ExceptionContext.setValue:(Ljava/lang/String;Ljava/lang/Object;)V",
+      2,
+      0
+    ],
+    "252": [
+      "aload",
+      2,
+      0
+    ],
+    "253": [
+      "#24",
+      2,
+      0
+    ],
+    "254": [
+      "ldc",
+      2,
+      0
+    ],
+    "255": [
+      "vector",
+      2,
+      0
+    ],
+    "256": [
+      "aload",
+      2,
+      0
+    ],
+    "257": [
+      "#13",
+      2,
+      0
+    ],
+    "258": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "259": [
+      "org/apache/commons/math3/exception/util/ExceptionContext.setValue:(Ljava/lang/String;Ljava/lang/Object;)V",
+      2,
+      0
+    ],
+    "261": [
+      "aload",
+      2,
+      0
+    ],
+    "262": [
+      "#23",
+      2,
+      0
+    ],
+    "263": [
+      "athrow",
+      2,
+      0
+    ],
+    "264": [
+      "aload",
+      2,
+      1
+    ],
+    "265": [
+      "#5",
+      2,
+      1
+    ],
+    "266": [
+      "invokevirtual",
+      2,
+      1
+    ],
+    "267": [
+      "org/apache/commons/math3/util/IterationManager.getIterations:()I",
+      2,
+      1
+    ],
+    "269": [
+      "iconst_2",
+      2,
+      1
+    ],
+    "270": [
+      "if_icmpne",
+      2,
+      1
+    ],
+    "271": [
+      "14",
+      2,
+      1
+    ],
+    "273": [
+      "aload",
+      2,
+      0
+    ],
+    "274": [
+      "#11",
+      2,
+      0
+    ],
+    "275": [
+      "iconst_0",
+      2,
+      0
+    ],
+    "276": [
+      "aload",
+      2,
+      0
+    ],
+    "277": [
+      "#17",
+      2,
+      0
+    ],
+    "278": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "279": [
+      "org/apache/commons/math3/linear/RealVector.setSubVector:(ILorg/apache/commons/math3/linear/RealVector;)V",
+      2,
+      0
+    ],
+    "281": [
+      "goto",
+      2,
+      0
+    ],
+    "282": [
+      "17",
+      2,
+      0
+    ],
+    "284": [
+      "aload",
+      2,
+      0
+    ],
+    "285": [
+      "#11",
+      2,
+      0
+    ],
+    "286": [
+      "dload",
+      2,
+      0
+    ],
+    "287": [
+      "#21",
+      2,
+      0
+    ],
+    "288": [
+      "dload",
+      2,
+      0
+    ],
+    "289": [
+      "#19",
+      2,
+      0
+    ],
+    "290": [
+      "ddiv",
+      2,
+      0
+    ],
+    "291": [
+      "dconst_1",
+      2,
+      0
+    ],
+    "292": [
+      "aload",
+      2,
+      0
+    ],
+    "293": [
+      "#17",
+      2,
+      0
+    ],
+    "294": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "295": [
+      "org/apache/commons/math3/linear/RealVector.combineToSelf:(DDLorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;",
+      2,
+      0
+    ],
+    "297": [
+      "pop",
+      2,
+      0
+    ],
+    "298": [
+      "aload_1",
+      1,
+      0
+    ],
+    "299": [
+      "aload",
+      1,
+      0
+    ],
+    "300": [
+      "#11",
+      1,
+      0
+    ],
+    "301": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "302": [
+      "org/apache/commons/math3/linear/RealLinearOperator.operate:(Lorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;",
+      1,
+      0
+    ],
+    "304": [
+      "astore",
+      1,
+      0
+    ],
+    "305": [
+      "#12",
+      1,
+      0
+    ],
+    "306": [
+      "aload",
+      1,
+      0
+    ],
+    "307": [
+      "#11",
+      1,
+      0
+    ],
+    "308": [
+      "aload",
+      1,
+      0
+    ],
+    "309": [
+      "#12",
+      1,
+      0
+    ],
+    "310": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "311": [
+      "org/apache/commons/math3/linear/RealVector.dotProduct:(Lorg/apache/commons/math3/linear/RealVector;)D",
+      1,
+      0
+    ],
+    "313": [
+      "dstore",
+      1,
+      0
+    ],
+    "314": [
+      "#23",
+      1,
+      0
+    ],
+    "315": [
+      "aload_0",
+      2,
+      1
+    ],
+    "316": [
+      "getfield",
+      2,
+      1
+    ],
+    "317": [
+      "org/apache/commons/math3/linear/ConjugateGradient.check:Z",
+      2,
+      1
+    ],
+    "319": [
+      "ifeq",
+      2,
+      1
+    ],
+    "320": [
+      "46",
+      2,
+      1
+    ],
+    "322": [
+      "dload",
+      2,
+      1
+    ],
+    "323": [
+      "#23",
+      2,
+      1
+    ],
+    "324": [
+      "dconst_0",
+      2,
+      1
+    ],
+    "325": [
+      "dcmpg",
+      2,
+      1
+    ],
+    "326": [
+      "ifgt",
+      2,
+      1
+    ],
+    "327": [
+      "39",
+      2,
+      1
+    ],
+    "329": [
+      "new",
+      2,
+      0
+    ],
+    "330": [
+      "org/apache/commons/math3/linear/NonPositiveDefiniteOperatorException",
+      2,
+      0
+    ],
+    "332": [
+      "dup",
+      2,
+      0
+    ],
+    "333": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "334": [
+      "org/apache/commons/math3/linear/NonPositiveDefiniteOperatorException.<init>:()V",
+      2,
+      0
+    ],
+    "336": [
+      "astore",
+      2,
+      0
+    ],
+    "337": [
+      "#25",
+      2,
+      0
+    ],
+    "338": [
+      "aload",
+      2,
+      0
+    ],
+    "339": [
+      "#25",
+      2,
+      0
+    ],
+    "340": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "341": [
+      "org/apache/commons/math3/linear/NonPositiveDefiniteOperatorException.getContext:()Lorg/apache/commons/math3/exception/util/ExceptionContext;",
+      2,
+      0
+    ],
+    "343": [
+      "astore",
+      2,
+      0
+    ],
+    "344": [
+      "#26",
+      2,
+      0
+    ],
+    "345": [
+      "aload",
+      2,
+      0
+    ],
+    "346": [
+      "#26",
+      2,
+      0
+    ],
+    "347": [
+      "ldc",
+      2,
+      0
+    ],
+    "348": [
+      "operator",
+      2,
+      0
+    ],
+    "349": [
+      "aload_1",
+      2,
+      0
+    ],
+    "350": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "351": [
+      "org/apache/commons/math3/exception/util/ExceptionContext.setValue:(Ljava/lang/String;Ljava/lang/Object;)V",
+      2,
+      0
+    ],
+    "353": [
+      "aload",
+      2,
+      0
+    ],
+    "354": [
+      "#26",
+      2,
+      0
+    ],
+    "355": [
+      "ldc",
+      2,
+      0
+    ],
+    "356": [
+      "vector",
+      2,
+      0
+    ],
+    "357": [
+      "aload",
+      2,
+      0
+    ],
+    "358": [
+      "#11",
+      2,
+      0
+    ],
+    "359": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "360": [
+      "org/apache/commons/math3/exception/util/ExceptionContext.setValue:(Ljava/lang/String;Ljava/lang/Object;)V",
+      2,
+      0
+    ],
+    "362": [
+      "aload",
+      2,
+      0
+    ],
+    "363": [
+      "#25",
+      2,
+      0
+    ],
+    "364": [
+      "athrow",
+      2,
+      0
+    ],
+    "365": [
+      "dload",
+      1,
+      0
+    ],
+    "366": [
+      "#21",
+      1,
+      0
+    ],
+    "367": [
+      "dload",
+      1,
+      0
+    ],
+    "368": [
+      "#23",
+      1,
+      0
+    ],
+    "369": [
+      "ddiv",
+      1,
+      0
+    ],
+    "370": [
+      "dstore",
+      1,
+      0
+    ],
+    "371": [
+      "#25",
+      1,
+      0
+    ],
+    "372": [
+      "aload",
+      1,
+      0
+    ],
+    "373": [
+      "#9",
+      1,
+      0
+    ],
+    "374": [
+      "dconst_1",
+      1,
+      0
+    ],
+    "375": [
+      "dload",
+      1,
+      0
+    ],
+    "376": [
+      "#25",
+      1,
+      0
+    ],
+    "377": [
+      "aload",
+      1,
+      0
+    ],
+    "378": [
+      "#11",
+      1,
+      0
+    ],
+    "379": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "380": [
+      "org/apache/commons/math3/linear/RealVector.combineToSelf:(DDLorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;",
+      1,
+      0
+    ],
+    "382": [
+      "pop",
+      1,
+      0
+    ],
+    "383": [
+      "aload",
+      1,
+      0
+    ],
+    "384": [
+      "#13",
+      1,
+      0
+    ],
+    "385": [
+      "dconst_1",
+      1,
+      0
+    ],
+    "386": [
+      "dload",
+      1,
+      0
+    ],
+    "387": [
+      "#25",
+      1,
+      0
+    ],
+    "388": [
+      "dneg",
+      1,
+      0
+    ],
+    "389": [
+      "aload",
+      1,
+      0
+    ],
+    "390": [
+      "#12",
+      1,
+      0
+    ],
+    "391": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "392": [
+      "org/apache/commons/math3/linear/RealVector.combineToSelf:(DDLorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;",
+      1,
+      0
+    ],
+    "394": [
+      "pop",
+      1,
+      0
+    ],
+    "395": [
+      "dload",
+      1,
+      0
+    ],
+    "396": [
+      "#21",
+      1,
+      0
+    ],
+    "397": [
+      "dstore",
+      1,
+      0
+    ],
+    "398": [
+      "#19",
+      1,
+      0
+    ],
+    "399": [
+      "aload",
+      1,
+      0
+    ],
+    "400": [
+      "#13",
+      1,
+      0
+    ],
+    "401": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "402": [
+      "org/apache/commons/math3/linear/RealVector.getNorm:()D",
+      1,
+      0
+    ],
+    "404": [
+      "dstore",
+      1,
+      0
+    ],
+    "405": [
+      "#15",
+      1,
+      0
+    ],
+    "406": [
+      "new",
+      1,
+      0
+    ],
+    "407": [
+      "org/apache/commons/math3/linear/DefaultIterativeLinearSolverEvent",
+      1,
+      0
+    ],
+    "409": [
+      "dup",
+      1,
+      0
+    ],
+    "410": [
+      "aload_0",
+      1,
+      0
+    ],
+    "411": [
+      "aload",
+      1,
+      0
+    ],
+    "412": [
+      "#5",
+      1,
+      0
+    ],
+    "413": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "414": [
+      "org/apache/commons/math3/util/IterationManager.getIterations:()I",
+      1,
+      0
+    ],
+    "416": [
+      "aload",
+      1,
+      0
+    ],
+    "417": [
+      "#10",
+      1,
+      0
+    ],
+    "418": [
+      "aload",
+      1,
+      0
+    ],
+    "419": [
+      "#8",
+      1,
+      0
+    ],
+    "420": [
+      "aload",
+      1,
+      0
+    ],
+    "421": [
+      "#14",
+      1,
+      0
+    ],
+    "422": [
+      "dload",
+      1,
+      0
+    ],
+    "423": [
+      "#15",
+      1,
+      0
+    ],
+    "424": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "425": [
+      "org/apache/commons/math3/linear/DefaultIterativeLinearSolverEvent.<init>:(Ljava/lang/Object;ILorg/apache/commons/math3/linear/RealVector;Lorg/apache/commons/math3/linear/RealVector;Lorg/apache/commons/math3/linear/RealVector;D)V",
+      1,
+      0
+    ],
+    "427": [
+      "astore",
+      1,
+      0
+    ],
+    "428": [
+      "#18",
+      1,
+      0
+    ],
+    "429": [
+      "aload",
+      1,
+      0
+    ],
+    "430": [
+      "#5",
+      1,
+      0
+    ],
+    "431": [
+      "aload",
+      1,
+      0
+    ],
+    "432": [
+      "#18",
+      1,
+      0
+    ],
+    "433": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "434": [
+      "org/apache/commons/math3/util/IterationManager.fireIterationPerformedEvent:(Lorg/apache/commons/math3/util/IterationEvent;)V",
+      1,
+      0
+    ],
+    "436": [
+      "dload",
+      2,
+      1
+    ],
+    "437": [
+      "#15",
+      2,
+      1
+    ],
+    "438": [
+      "dload",
+      2,
+      1
+    ],
+    "439": [
+      "#6",
+      2,
+      1
+    ],
+    "440": [
+      "dcmpg",
+      2,
+      1
+    ],
+    "441": [
+      "ifgt",
+      2,
+      1
+    ],
+    "442": [
+      "13",
+      2,
+      1
+    ],
+    "444": [
+      "aload",
+      2,
+      0
+    ],
+    "445": [
+      "#5",
+      2,
+      0
+    ],
+    "446": [
+      "aload",
+      2,
+      0
+    ],
+    "447": [
+      "#18",
+      2,
+      0
+    ],
+    "448": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "449": [
+      "org/apache/commons/math3/util/IterationManager.fireTerminationEvent:(Lorg/apache/commons/math3/util/IterationEvent;)V",
+      2,
+      0
+    ],
+    "451": [
+      "aload",
+      2,
+      0
+    ],
+    "452": [
+      "#9",
+      2,
+      0
+    ],
+    "453": [
+      "areturn",
+      2,
+      0
+    ],
+    "454": [
+      "goto",
+      0,
+      0
+    ],
+    "455": [
+      "-296",
+      0,
+      0
+    ]
+  }
+}

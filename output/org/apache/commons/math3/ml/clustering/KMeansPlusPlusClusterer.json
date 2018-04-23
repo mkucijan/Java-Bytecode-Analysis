@@ -1,0 +1,6078 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_3",
+      0,
+      0
+    ],
+    "2": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/ml/clustering/Clusterer.<init>:(Lorg/apache/commons/math3/ml/distance/DistanceMeasure;)V",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "iload_1",
+      0,
+      0
+    ],
+    "7": [
+      "putfield",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.k:I",
+      0,
+      0
+    ],
+    "10": [
+      "aload_0",
+      0,
+      0
+    ],
+    "11": [
+      "iload_2",
+      0,
+      0
+    ],
+    "12": [
+      "putfield",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.maxIterations:I",
+      0,
+      0
+    ],
+    "15": [
+      "aload_0",
+      0,
+      0
+    ],
+    "16": [
+      "aload",
+      0,
+      0
+    ],
+    "17": [
+      "#4",
+      0,
+      0
+    ],
+    "18": [
+      "putfield",
+      0,
+      0
+    ],
+    "19": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.random:Lorg/apache/commons/math3/random/RandomGenerator;",
+      0,
+      0
+    ],
+    "21": [
+      "aload_0",
+      0,
+      0
+    ],
+    "22": [
+      "aload",
+      0,
+      0
+    ],
+    "23": [
+      "#5",
+      0,
+      0
+    ],
+    "24": [
+      "putfield",
+      0,
+      0
+    ],
+    "25": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.emptyStrategy:Lorg/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer$EmptyClusterStrategy;",
+      0,
+      0
+    ],
+    "27": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getK": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.k:I",
+      0,
+      0
+    ],
+    "4": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "getMaxIterations": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.maxIterations:I",
+      0,
+      0
+    ],
+    "4": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "getRandomGenerator": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.random:Lorg/apache/commons/math3/random/RandomGenerator;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getEmptyClusterStrategy": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.emptyStrategy:Lorg/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer$EmptyClusterStrategy;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "cluster": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_1",
+      1,
+      1
+    ],
+    "5": [
+      "invokeinterface",
+      1,
+      1
+    ],
+    "6": [
+      "java/util/Collection.org/apache/commons/math3/exception/NumberIsTooSmallException",
+      1,
+      1
+    ],
+    "8": [
+      "0",
+      1,
+      1
+    ],
+    "10": [
+      "aload_0",
+      1,
+      1
+    ],
+    "11": [
+      "getfield",
+      1,
+      1
+    ],
+    "12": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.k:I",
+      1,
+      1
+    ],
+    "14": [
+      "if_icmpge",
+      1,
+      1
+    ],
+    "15": [
+      "28",
+      1,
+      1
+    ],
+    "17": [
+      "new",
+      1,
+      0
+    ],
+    "18": [
+      "org/apache/commons/math3/exception/NumberIsTooSmallException",
+      1,
+      0
+    ],
+    "20": [
+      "dup",
+      1,
+      0
+    ],
+    "21": [
+      "aload_1",
+      1,
+      0
+    ],
+    "22": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "23": [
+      "java/util/Collection.org/apache/commons/math3/exception/NumberIsTooSmallException",
+      1,
+      0
+    ],
+    "25": [
+      "0",
+      1,
+      0
+    ],
+    "27": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "28": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "30": [
+      "aload_0",
+      1,
+      0
+    ],
+    "31": [
+      "getfield",
+      1,
+      0
+    ],
+    "32": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.k:I",
+      1,
+      0
+    ],
+    "34": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "35": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "37": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "38": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "39": [
+      "org/apache/commons/math3/exception/NumberIsTooSmallException.<init>:(Ljava/lang/Number;Ljava/lang/Number;Z)V",
+      1,
+      0
+    ],
+    "41": [
+      "athrow",
+      1,
+      0
+    ],
+    "42": [
+      "aload_0",
+      0,
+      0
+    ],
+    "43": [
+      "aload_1",
+      0,
+      0
+    ],
+    "44": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "45": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.chooseInitialCenters:(Ljava/util/Collection;)Ljava/util/List;",
+      0,
+      0
+    ],
+    "47": [
+      "astore_2",
+      0,
+      0
+    ],
+    "48": [
+      "aload_1",
+      0,
+      0
+    ],
+    "49": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "50": [
+      "java/util/Collection.org/apache/commons/math3/exception/NumberIsTooSmallException",
+      0,
+      0
+    ],
+    "52": [
+      "0",
+      0,
+      0
+    ],
+    "54": [
+      "newarray",
+      0,
+      0
+    ],
+    "55": [
+      "10",
+      0,
+      0
+    ],
+    "56": [
+      "astore_3",
+      0,
+      0
+    ],
+    "57": [
+      "aload_0",
+      0,
+      0
+    ],
+    "58": [
+      "aload_2",
+      0,
+      0
+    ],
+    "59": [
+      "aload_1",
+      0,
+      0
+    ],
+    "60": [
+      "aload_3",
+      0,
+      0
+    ],
+    "61": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "62": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.assignPointsToClusters:(Ljava/util/List;Ljava/util/Collection;[I)I",
+      0,
+      0
+    ],
+    "64": [
+      "pop",
+      0,
+      0
+    ],
+    "65": [
+      "aload_0",
+      0,
+      0
+    ],
+    "66": [
+      "getfield",
+      0,
+      0
+    ],
+    "67": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.maxIterations:I",
+      0,
+      0
+    ],
+    "69": [
+      "ifge",
+      0,
+      0
+    ],
+    "70": [
+      "8",
+      0,
+      0
+    ],
+    "72": [
+      "ldc",
+      0,
+      0
+    ],
+    "73": [
+      "2147483647",
+      0,
+      0
+    ],
+    "74": [
+      "goto",
+      0,
+      0
+    ],
+    "75": [
+      "7",
+      0,
+      0
+    ],
+    "77": [
+      "aload_0",
+      0,
+      0
+    ],
+    "78": [
+      "getfield",
+      0,
+      0
+    ],
+    "79": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.maxIterations:I",
+      0,
+      0
+    ],
+    "81": [
+      "istore",
+      0,
+      0
+    ],
+    "82": [
+      "#4",
+      0,
+      0
+    ],
+    "83": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "84": [
+      "istore",
+      1,
+      4
+    ],
+    "85": [
+      "#5",
+      1,
+      4
+    ],
+    "86": [
+      "iload",
+      1,
+      4
+    ],
+    "87": [
+      "#5",
+      1,
+      4
+    ],
+    "88": [
+      "iload",
+      1,
+      4
+    ],
+    "89": [
+      "#4",
+      1,
+      4
+    ],
+    "90": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "91": [
+      "218",
+      1,
+      4
+    ],
+    "93": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "94": [
+      "istore",
+      1,
+      0
+    ],
+    "95": [
+      "#6",
+      1,
+      0
+    ],
+    "96": [
+      "new",
+      1,
+      0
+    ],
+    "97": [
+      "java/util/ArrayList",
+      1,
+      0
+    ],
+    "99": [
+      "dup",
+      1,
+      0
+    ],
+    "100": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "101": [
+      "java/util/ArrayList.<init>:()V",
+      1,
+      0
+    ],
+    "103": [
+      "astore",
+      1,
+      0
+    ],
+    "104": [
+      "#7",
+      1,
+      0
+    ],
+    "105": [
+      "aload_2",
+      2,
+      4
+    ],
+    "106": [
+      "invokeinterface",
+      2,
+      4
+    ],
+    "107": [
+      "java/util/List.java/util/Iterator",
+      2,
+      4
+    ],
+    "109": [
+      "0",
+      2,
+      4
+    ],
+    "111": [
+      "astore",
+      2,
+      4
+    ],
+    "112": [
+      "#8",
+      2,
+      4
+    ],
+    "113": [
+      "aload",
+      2,
+      4
+    ],
+    "114": [
+      "#8",
+      2,
+      4
+    ],
+    "115": [
+      "invokeinterface",
+      2,
+      4
+    ],
+    "116": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      2,
+      4
+    ],
+    "118": [
+      "0",
+      2,
+      4
+    ],
+    "120": [
+      "ifeq",
+      2,
+      4
+    ],
+    "121": [
+      "157",
+      2,
+      4
+    ],
+    "123": [
+      "aload",
+      2,
+      4
+    ],
+    "124": [
+      "#8",
+      2,
+      4
+    ],
+    "125": [
+      "invokeinterface",
+      2,
+      4
+    ],
+    "126": [
+      "java/util/Iterator.org/apache/commons/math3/ml/clustering/CentroidCluster",
+      2,
+      4
+    ],
+    "128": [
+      "0",
+      2,
+      4
+    ],
+    "130": [
+      "checkcast",
+      2,
+      4
+    ],
+    "131": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster",
+      2,
+      4
+    ],
+    "133": [
+      "astore",
+      2,
+      4
+    ],
+    "134": [
+      "#9",
+      2,
+      4
+    ],
+    "135": [
+      "aload",
+      3,
+      1
+    ],
+    "136": [
+      "#9",
+      3,
+      1
+    ],
+    "137": [
+      "invokevirtual",
+      3,
+      1
+    ],
+    "138": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster.getPoints:()Ljava/util/List;",
+      3,
+      1
+    ],
+    "140": [
+      "invokeinterface",
+      3,
+      1
+    ],
+    "141": [
+      "java/util/List.$SwitchMap$org$apache$commons$math3$ml$clustering$KMeansPlusPlusClusterer$EmptyClusterStrategy:[I",
+      3,
+      1
+    ],
+    "143": [
+      "0",
+      3,
+      1
+    ],
+    "145": [
+      "ifeq",
+      3,
+      1
+    ],
+    "146": [
+      "90",
+      3,
+      1
+    ],
+    "148": [
+      "getstatic",
+      4,
+      5
+    ],
+    "149": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer$1.$SwitchMap$org$apache$commons$math3$ml$clustering$KMeansPlusPlusClusterer$EmptyClusterStrategy:[I",
+      4,
+      5
+    ],
+    "151": [
+      "aload_0",
+      4,
+      5
+    ],
+    "152": [
+      "getfield",
+      4,
+      5
+    ],
+    "153": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.emptyStrategy:Lorg/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer$EmptyClusterStrategy;",
+      4,
+      5
+    ],
+    "155": [
+      "invokevirtual",
+      4,
+      5
+    ],
+    "156": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer$EmptyClusterStrategy.ordinal:()I",
+      4,
+      5
+    ],
+    "158": [
+      "iaload",
+      4,
+      5
+    ],
+    "159": [
+      "tableswitch",
+      4,
+      5
+    ],
+    "160": [
+      "1 184",
+      4,
+      5
+    ],
+    "164": [
+      "2 194",
+      4,
+      5
+    ],
+    "168": [
+      "3 204",
+      4,
+      5
+    ],
+    "184": [
+      "aload_0",
+      4,
+      0
+    ],
+    "185": [
+      "aload_2",
+      4,
+      0
+    ],
+    "186": [
+      "invokespecial",
+      4,
+      0
+    ],
+    "187": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.getPointFromLargestVarianceCluster:(Ljava/util/Collection;)Lorg/apache/commons/math3/ml/clustering/Clusterable;",
+      4,
+      0
+    ],
+    "189": [
+      "astore",
+      4,
+      0
+    ],
+    "190": [
+      "#10",
+      4,
+      0
+    ],
+    "191": [
+      "goto",
+      4,
+      0
+    ],
+    "192": [
+      "38",
+      4,
+      0
+    ],
+    "194": [
+      "aload_0",
+      4,
+      0
+    ],
+    "195": [
+      "aload_2",
+      4,
+      0
+    ],
+    "196": [
+      "invokespecial",
+      4,
+      0
+    ],
+    "197": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.getPointFromLargestNumberCluster:(Ljava/util/Collection;)Lorg/apache/commons/math3/ml/clustering/Clusterable;",
+      4,
+      0
+    ],
+    "199": [
+      "astore",
+      4,
+      0
+    ],
+    "200": [
+      "#10",
+      4,
+      0
+    ],
+    "201": [
+      "goto",
+      4,
+      0
+    ],
+    "202": [
+      "28",
+      4,
+      0
+    ],
+    "204": [
+      "aload_0",
+      4,
+      0
+    ],
+    "205": [
+      "aload_2",
+      4,
+      0
+    ],
+    "206": [
+      "invokespecial",
+      4,
+      0
+    ],
+    "207": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.getFarthestPoint:(Ljava/util/Collection;)Lorg/apache/commons/math3/ml/clustering/Clusterable;",
+      4,
+      0
+    ],
+    "209": [
+      "astore",
+      4,
+      0
+    ],
+    "210": [
+      "#10",
+      4,
+      0
+    ],
+    "211": [
+      "goto",
+      4,
+      0
+    ],
+    "212": [
+      "18",
+      4,
+      0
+    ],
+    "214": [
+      "new",
+      4,
+      0
+    ],
+    "215": [
+      "org/apache/commons/math3/exception/ConvergenceException",
+      4,
+      0
+    ],
+    "217": [
+      "dup",
+      4,
+      0
+    ],
+    "218": [
+      "getstatic",
+      4,
+      0
+    ],
+    "219": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.EMPTY_CLUSTER_IN_K_MEANS:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      4,
+      0
+    ],
+    "221": [
+      "iconst_0",
+      4,
+      0
+    ],
+    "222": [
+      "anewarray",
+      4,
+      0
+    ],
+    "223": [
+      "java/lang/Object",
+      4,
+      0
+    ],
+    "225": [
+      "invokespecial",
+      4,
+      0
+    ],
+    "226": [
+      "org/apache/commons/math3/exception/ConvergenceException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;[Ljava/lang/Object;)V",
+      4,
+      0
+    ],
+    "228": [
+      "athrow",
+      4,
+      0
+    ],
+    "229": [
+      "iconst_1",
+      3,
+      0
+    ],
+    "230": [
+      "istore",
+      3,
+      0
+    ],
+    "231": [
+      "#6",
+      3,
+      0
+    ],
+    "232": [
+      "goto",
+      3,
+      0
+    ],
+    "233": [
+      "25",
+      3,
+      0
+    ],
+    "235": [
+      "aload_0",
+      3,
+      0
+    ],
+    "236": [
+      "aload",
+      3,
+      0
+    ],
+    "237": [
+      "#9",
+      3,
+      0
+    ],
+    "238": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "239": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster.getPoints:()Ljava/util/List;",
+      3,
+      0
+    ],
+    "241": [
+      "aload",
+      3,
+      0
+    ],
+    "242": [
+      "#9",
+      3,
+      0
+    ],
+    "243": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "244": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster.getCenter:()Lorg/apache/commons/math3/ml/clustering/Clusterable;",
+      3,
+      0
+    ],
+    "246": [
+      "invokeinterface",
+      3,
+      0
+    ],
+    "247": [
+      "org/apache/commons/math3/ml/clustering/Clusterable.centroidOf:(Ljava/util/Collection;I)Lorg/apache/commons/math3/ml/clustering/Clusterable;",
+      3,
+      0
+    ],
+    "249": [
+      "0",
+      3,
+      0
+    ],
+    "251": [
+      "arraylength",
+      3,
+      0
+    ],
+    "252": [
+      "invokespecial",
+      3,
+      0
+    ],
+    "253": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.centroidOf:(Ljava/util/Collection;I)Lorg/apache/commons/math3/ml/clustering/Clusterable;",
+      3,
+      0
+    ],
+    "255": [
+      "astore",
+      3,
+      0
+    ],
+    "256": [
+      "#10",
+      3,
+      0
+    ],
+    "257": [
+      "aload",
+      2,
+      0
+    ],
+    "258": [
+      "#7",
+      2,
+      0
+    ],
+    "259": [
+      "new",
+      2,
+      0
+    ],
+    "260": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster",
+      2,
+      0
+    ],
+    "262": [
+      "dup",
+      2,
+      0
+    ],
+    "263": [
+      "aload",
+      2,
+      0
+    ],
+    "264": [
+      "#10",
+      2,
+      0
+    ],
+    "265": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "266": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster.<init>:(Lorg/apache/commons/math3/ml/clustering/Clusterable;)V",
+      2,
+      0
+    ],
+    "268": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "269": [
+      "java/util/List.org/apache/commons/math3/ml/clustering/Clusterable",
+      2,
+      0
+    ],
+    "271": [
+      "0",
+      2,
+      0
+    ],
+    "273": [
+      "pop",
+      2,
+      0
+    ],
+    "274": [
+      "goto",
+      1,
+      4
+    ],
+    "275": [
+      "-161",
+      1,
+      4
+    ],
+    "277": [
+      "aload_0",
+      1,
+      0
+    ],
+    "278": [
+      "aload",
+      1,
+      0
+    ],
+    "279": [
+      "#7",
+      1,
+      0
+    ],
+    "280": [
+      "aload_1",
+      1,
+      0
+    ],
+    "281": [
+      "aload_3",
+      1,
+      0
+    ],
+    "282": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "283": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.assignPointsToClusters:(Ljava/util/List;Ljava/util/Collection;[I)I",
+      1,
+      0
+    ],
+    "285": [
+      "istore",
+      1,
+      0
+    ],
+    "286": [
+      "#8",
+      1,
+      0
+    ],
+    "287": [
+      "aload",
+      1,
+      0
+    ],
+    "288": [
+      "#7",
+      1,
+      0
+    ],
+    "289": [
+      "astore_2",
+      1,
+      0
+    ],
+    "290": [
+      "iload",
+      2,
+      1
+    ],
+    "291": [
+      "#8",
+      2,
+      1
+    ],
+    "292": [
+      "ifne",
+      2,
+      1
+    ],
+    "293": [
+      "10",
+      2,
+      1
+    ],
+    "295": [
+      "iload",
+      2,
+      1
+    ],
+    "296": [
+      "#6",
+      2,
+      1
+    ],
+    "297": [
+      "ifne",
+      2,
+      1
+    ],
+    "298": [
+      "5",
+      2,
+      1
+    ],
+    "300": [
+      "aload_2",
+      2,
+      0
+    ],
+    "301": [
+      "areturn",
+      2,
+      0
+    ],
+    "302": [
+      "iinc",
+      2,
+      0
+    ],
+    "303": [
+      "#5",
+      2,
+      0
+    ],
+    "304": [
+      "-89",
+      2,
+      0
+    ],
+    "305": [
+      "goto",
+      2,
+      4
+    ],
+    "306": [
+      "-219",
+      2,
+      4
+    ],
+    "308": [
+      "aload_2",
+      1,
+      0
+    ],
+    "309": [
+      "areturn",
+      1,
+      0
+    ]
+  },
+  "assignPointsToClusters": {
+    "0": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "1": [
+      "istore",
+      0,
+      0
+    ],
+    "2": [
+      "#4",
+      0,
+      0
+    ],
+    "3": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "4": [
+      "istore",
+      0,
+      0
+    ],
+    "5": [
+      "#5",
+      0,
+      0
+    ],
+    "6": [
+      "aload_2",
+      1,
+      4
+    ],
+    "7": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "8": [
+      "java/util/Collection.java/util/Iterator",
+      1,
+      4
+    ],
+    "10": [
+      "0",
+      1,
+      4
+    ],
+    "12": [
+      "astore",
+      1,
+      4
+    ],
+    "13": [
+      "#6",
+      1,
+      4
+    ],
+    "14": [
+      "aload",
+      1,
+      4
+    ],
+    "15": [
+      "#6",
+      1,
+      4
+    ],
+    "16": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "17": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "19": [
+      "0",
+      1,
+      4
+    ],
+    "21": [
+      "ifeq",
+      1,
+      4
+    ],
+    "22": [
+      "68",
+      1,
+      4
+    ],
+    "24": [
+      "aload",
+      1,
+      4
+    ],
+    "25": [
+      "#6",
+      1,
+      4
+    ],
+    "26": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "27": [
+      "java/util/Iterator.org/apache/commons/math3/ml/clustering/CentroidCluster",
+      1,
+      4
+    ],
+    "29": [
+      "0",
+      1,
+      4
+    ],
+    "31": [
+      "checkcast",
+      1,
+      4
+    ],
+    "32": [
+      "org/apache/commons/math3/ml/clustering/Clusterable",
+      1,
+      4
+    ],
+    "34": [
+      "astore",
+      1,
+      4
+    ],
+    "35": [
+      "#7",
+      1,
+      4
+    ],
+    "36": [
+      "aload_0",
+      1,
+      0
+    ],
+    "37": [
+      "aload_1",
+      1,
+      0
+    ],
+    "38": [
+      "aload",
+      1,
+      0
+    ],
+    "39": [
+      "#7",
+      1,
+      0
+    ],
+    "40": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "41": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.getNearestCluster:(Ljava/util/Collection;Lorg/apache/commons/math3/ml/clustering/Clusterable;)I",
+      1,
+      0
+    ],
+    "43": [
+      "istore",
+      1,
+      0
+    ],
+    "44": [
+      "#8",
+      1,
+      0
+    ],
+    "45": [
+      "iload",
+      2,
+      1
+    ],
+    "46": [
+      "#8",
+      2,
+      1
+    ],
+    "47": [
+      "aload_3",
+      2,
+      1
+    ],
+    "48": [
+      "iload",
+      2,
+      1
+    ],
+    "49": [
+      "#5",
+      2,
+      1
+    ],
+    "50": [
+      "iaload",
+      2,
+      1
+    ],
+    "51": [
+      "if_icmpeq",
+      2,
+      1
+    ],
+    "52": [
+      "6",
+      2,
+      1
+    ],
+    "54": [
+      "iinc",
+      2,
+      0
+    ],
+    "55": [
+      "#4",
+      2,
+      0
+    ],
+    "56": [
+      "43",
+      2,
+      0
+    ],
+    "57": [
+      "aload_1",
+      1,
+      0
+    ],
+    "58": [
+      "iload",
+      1,
+      0
+    ],
+    "59": [
+      "#8",
+      1,
+      0
+    ],
+    "60": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "61": [
+      "java/util/List.addPoint:(Lorg/apache/commons/math3/ml/clustering/Clusterable;)V",
+      1,
+      0
+    ],
+    "63": [
+      "0",
+      1,
+      0
+    ],
+    "65": [
+      "checkcast",
+      1,
+      0
+    ],
+    "66": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster",
+      1,
+      0
+    ],
+    "68": [
+      "astore",
+      1,
+      0
+    ],
+    "69": [
+      "#9",
+      1,
+      0
+    ],
+    "70": [
+      "aload",
+      1,
+      0
+    ],
+    "71": [
+      "#9",
+      1,
+      0
+    ],
+    "72": [
+      "aload",
+      1,
+      0
+    ],
+    "73": [
+      "#7",
+      1,
+      0
+    ],
+    "74": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "75": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster.addPoint:(Lorg/apache/commons/math3/ml/clustering/Clusterable;)V",
+      1,
+      0
+    ],
+    "77": [
+      "aload_3",
+      1,
+      0
+    ],
+    "78": [
+      "iload",
+      1,
+      0
+    ],
+    "79": [
+      "#5",
+      1,
+      0
+    ],
+    "80": [
+      "iinc",
+      1,
+      0
+    ],
+    "81": [
+      "#5",
+      1,
+      0
+    ],
+    "82": [
+      "21",
+      1,
+      0
+    ],
+    "83": [
+      "iload",
+      1,
+      0
+    ],
+    "84": [
+      "#8",
+      1,
+      0
+    ],
+    "85": [
+      "iastore",
+      1,
+      0
+    ],
+    "86": [
+      "goto",
+      0,
+      4
+    ],
+    "87": [
+      "-72",
+      0,
+      4
+    ],
+    "89": [
+      "iload",
+      0,
+      0
+    ],
+    "90": [
+      "#4",
+      0,
+      0
+    ],
+    "91": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "chooseInitialCenters": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "java/util/ArrayList",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_1",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "java/util/ArrayList.<init>:(Ljava/util/Collection;)V",
+      0,
+      0
+    ],
+    "8": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "9": [
+      "java/util/Collections.unmodifiableList:(Ljava/util/List;)Ljava/util/List;",
+      0,
+      0
+    ],
+    "11": [
+      "astore_2",
+      0,
+      0
+    ],
+    "12": [
+      "aload_2",
+      0,
+      0
+    ],
+    "13": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "14": [
+      "java/util/List.org/apache/commons/math3/exception/NumberIsTooSmallException",
+      0,
+      0
+    ],
+    "16": [
+      "0",
+      0,
+      0
+    ],
+    "18": [
+      "istore_3",
+      0,
+      0
+    ],
+    "19": [
+      "iload_3",
+      0,
+      0
+    ],
+    "20": [
+      "newarray",
+      0,
+      0
+    ],
+    "21": [
+      "4",
+      0,
+      0
+    ],
+    "22": [
+      "astore",
+      0,
+      0
+    ],
+    "23": [
+      "#4",
+      0,
+      0
+    ],
+    "24": [
+      "new",
+      0,
+      0
+    ],
+    "25": [
+      "java/util/ArrayList",
+      0,
+      0
+    ],
+    "27": [
+      "dup",
+      0,
+      0
+    ],
+    "28": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "29": [
+      "java/util/ArrayList.<init>:()V",
+      0,
+      0
+    ],
+    "31": [
+      "astore",
+      0,
+      0
+    ],
+    "32": [
+      "#5",
+      0,
+      0
+    ],
+    "33": [
+      "aload_0",
+      0,
+      0
+    ],
+    "34": [
+      "getfield",
+      0,
+      0
+    ],
+    "35": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.random:Lorg/apache/commons/math3/random/RandomGenerator;",
+      0,
+      0
+    ],
+    "37": [
+      "iload_3",
+      0,
+      0
+    ],
+    "38": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "39": [
+      "org/apache/commons/math3/random/RandomGenerator.distance:(Lorg/apache/commons/math3/ml/clustering/Clusterable;Lorg/apache/commons/math3/ml/clustering/Clusterable;)D",
+      0,
+      0
+    ],
+    "41": [
+      "0",
+      0,
+      0
+    ],
+    "43": [
+      "istore",
+      0,
+      0
+    ],
+    "44": [
+      "#6",
+      0,
+      0
+    ],
+    "45": [
+      "aload_2",
+      0,
+      0
+    ],
+    "46": [
+      "iload",
+      0,
+      0
+    ],
+    "47": [
+      "#6",
+      0,
+      0
+    ],
+    "48": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "49": [
+      "java/util/List.addPoint:(Lorg/apache/commons/math3/ml/clustering/Clusterable;)V",
+      0,
+      0
+    ],
+    "51": [
+      "0",
+      0,
+      0
+    ],
+    "53": [
+      "checkcast",
+      0,
+      0
+    ],
+    "54": [
+      "org/apache/commons/math3/ml/clustering/Clusterable",
+      0,
+      0
+    ],
+    "56": [
+      "astore",
+      0,
+      0
+    ],
+    "57": [
+      "#7",
+      0,
+      0
+    ],
+    "58": [
+      "aload",
+      0,
+      0
+    ],
+    "59": [
+      "#5",
+      0,
+      0
+    ],
+    "60": [
+      "new",
+      0,
+      0
+    ],
+    "61": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster",
+      0,
+      0
+    ],
+    "63": [
+      "dup",
+      0,
+      0
+    ],
+    "64": [
+      "aload",
+      0,
+      0
+    ],
+    "65": [
+      "#7",
+      0,
+      0
+    ],
+    "66": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "67": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster.<init>:(Lorg/apache/commons/math3/ml/clustering/Clusterable;)V",
+      0,
+      0
+    ],
+    "69": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "70": [
+      "java/util/List.org/apache/commons/math3/ml/clustering/Clusterable",
+      0,
+      0
+    ],
+    "72": [
+      "0",
+      0,
+      0
+    ],
+    "74": [
+      "pop",
+      0,
+      0
+    ],
+    "75": [
+      "aload",
+      0,
+      0
+    ],
+    "76": [
+      "#4",
+      0,
+      0
+    ],
+    "77": [
+      "iload",
+      0,
+      0
+    ],
+    "78": [
+      "#6",
+      0,
+      0
+    ],
+    "79": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "80": [
+      "bastore",
+      0,
+      0
+    ],
+    "81": [
+      "iload_3",
+      0,
+      0
+    ],
+    "82": [
+      "newarray",
+      0,
+      0
+    ],
+    "83": [
+      "7",
+      0,
+      0
+    ],
+    "84": [
+      "astore",
+      0,
+      0
+    ],
+    "85": [
+      "#8",
+      0,
+      0
+    ],
+    "86": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "87": [
+      "istore",
+      1,
+      4
+    ],
+    "88": [
+      "#9",
+      1,
+      4
+    ],
+    "89": [
+      "iload",
+      1,
+      4
+    ],
+    "90": [
+      "#9",
+      1,
+      4
+    ],
+    "91": [
+      "iload_3",
+      1,
+      4
+    ],
+    "92": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "93": [
+      "45",
+      1,
+      4
+    ],
+    "95": [
+      "iload",
+      2,
+      1
+    ],
+    "96": [
+      "#9",
+      2,
+      1
+    ],
+    "97": [
+      "iload",
+      2,
+      1
+    ],
+    "98": [
+      "#6",
+      2,
+      1
+    ],
+    "99": [
+      "if_icmpeq",
+      2,
+      1
+    ],
+    "100": [
+      "32",
+      2,
+      1
+    ],
+    "102": [
+      "aload_0",
+      2,
+      0
+    ],
+    "103": [
+      "aload",
+      2,
+      0
+    ],
+    "104": [
+      "#7",
+      2,
+      0
+    ],
+    "105": [
+      "aload_2",
+      2,
+      0
+    ],
+    "106": [
+      "iload",
+      2,
+      0
+    ],
+    "107": [
+      "#9",
+      2,
+      0
+    ],
+    "108": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "109": [
+      "java/util/List.addPoint:(Lorg/apache/commons/math3/ml/clustering/Clusterable;)V",
+      2,
+      0
+    ],
+    "111": [
+      "0",
+      2,
+      0
+    ],
+    "113": [
+      "checkcast",
+      2,
+      0
+    ],
+    "114": [
+      "org/apache/commons/math3/ml/clustering/Clusterable",
+      2,
+      0
+    ],
+    "116": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "117": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.distance:(Lorg/apache/commons/math3/ml/clustering/Clusterable;Lorg/apache/commons/math3/ml/clustering/Clusterable;)D",
+      2,
+      0
+    ],
+    "119": [
+      "dstore",
+      2,
+      0
+    ],
+    "120": [
+      "#10",
+      2,
+      0
+    ],
+    "121": [
+      "aload",
+      2,
+      0
+    ],
+    "122": [
+      "#8",
+      2,
+      0
+    ],
+    "123": [
+      "iload",
+      2,
+      0
+    ],
+    "124": [
+      "#9",
+      2,
+      0
+    ],
+    "125": [
+      "dload",
+      2,
+      0
+    ],
+    "126": [
+      "#10",
+      2,
+      0
+    ],
+    "127": [
+      "dload",
+      2,
+      0
+    ],
+    "128": [
+      "#10",
+      2,
+      0
+    ],
+    "129": [
+      "dmul",
+      2,
+      0
+    ],
+    "130": [
+      "dastore",
+      2,
+      0
+    ],
+    "131": [
+      "iinc",
+      2,
+      0
+    ],
+    "132": [
+      "#9",
+      2,
+      0
+    ],
+    "133": [
+      "-89",
+      2,
+      0
+    ],
+    "134": [
+      "goto",
+      2,
+      4
+    ],
+    "135": [
+      "-45",
+      2,
+      4
+    ],
+    "137": [
+      "aload",
+      2,
+      3
+    ],
+    "138": [
+      "#5",
+      2,
+      3
+    ],
+    "139": [
+      "invokeinterface",
+      2,
+      3
+    ],
+    "140": [
+      "java/util/List.org/apache/commons/math3/exception/NumberIsTooSmallException",
+      2,
+      3
+    ],
+    "142": [
+      "0",
+      2,
+      3
+    ],
+    "144": [
+      "aload_0",
+      2,
+      3
+    ],
+    "145": [
+      "getfield",
+      2,
+      3
+    ],
+    "146": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.k:I",
+      2,
+      3
+    ],
+    "148": [
+      "if_icmpge",
+      2,
+      3
+    ],
+    "149": [
+      "269",
+      2,
+      3
+    ],
+    "151": [
+      "dconst_0",
+      2,
+      0
+    ],
+    "152": [
+      "dstore",
+      2,
+      0
+    ],
+    "153": [
+      "#9",
+      2,
+      0
+    ],
+    "154": [
+      "iconst_0",
+      3,
+      4
+    ],
+    "155": [
+      "istore",
+      3,
+      4
+    ],
+    "156": [
+      "#11",
+      3,
+      4
+    ],
+    "157": [
+      "iload",
+      3,
+      4
+    ],
+    "158": [
+      "#11",
+      3,
+      4
+    ],
+    "159": [
+      "iload_3",
+      3,
+      4
+    ],
+    "160": [
+      "if_icmpge",
+      3,
+      4
+    ],
+    "161": [
+      "27",
+      3,
+      4
+    ],
+    "163": [
+      "aload",
+      4,
+      1
+    ],
+    "164": [
+      "#4",
+      4,
+      1
+    ],
+    "165": [
+      "iload",
+      4,
+      1
+    ],
+    "166": [
+      "#11",
+      4,
+      1
+    ],
+    "167": [
+      "baload",
+      4,
+      1
+    ],
+    "168": [
+      "ifne",
+      4,
+      1
+    ],
+    "169": [
+      "13",
+      4,
+      1
+    ],
+    "171": [
+      "dload",
+      4,
+      0
+    ],
+    "172": [
+      "#9",
+      4,
+      0
+    ],
+    "173": [
+      "aload",
+      4,
+      0
+    ],
+    "174": [
+      "#8",
+      4,
+      0
+    ],
+    "175": [
+      "iload",
+      4,
+      0
+    ],
+    "176": [
+      "#11",
+      4,
+      0
+    ],
+    "177": [
+      "daload",
+      4,
+      0
+    ],
+    "178": [
+      "dadd",
+      4,
+      0
+    ],
+    "179": [
+      "dstore",
+      4,
+      0
+    ],
+    "180": [
+      "#9",
+      4,
+      0
+    ],
+    "181": [
+      "iinc",
+      4,
+      0
+    ],
+    "182": [
+      "#11",
+      4,
+      0
+    ],
+    "183": [
+      "-89",
+      4,
+      0
+    ],
+    "184": [
+      "goto",
+      4,
+      4
+    ],
+    "185": [
+      "-27",
+      4,
+      4
+    ],
+    "187": [
+      "aload_0",
+      3,
+      0
+    ],
+    "188": [
+      "getfield",
+      3,
+      0
+    ],
+    "189": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.random:Lorg/apache/commons/math3/random/RandomGenerator;",
+      3,
+      0
+    ],
+    "191": [
+      "invokeinterface",
+      3,
+      0
+    ],
+    "192": [
+      "org/apache/commons/math3/random/RandomGenerator.java/lang/Double",
+      3,
+      0
+    ],
+    "194": [
+      "0",
+      3,
+      0
+    ],
+    "196": [
+      "dload",
+      3,
+      0
+    ],
+    "197": [
+      "#9",
+      3,
+      0
+    ],
+    "198": [
+      "dmul",
+      3,
+      0
+    ],
+    "199": [
+      "dstore",
+      3,
+      0
+    ],
+    "200": [
+      "#11",
+      3,
+      0
+    ],
+    "201": [
+      "iconst_m1",
+      3,
+      0
+    ],
+    "202": [
+      "istore",
+      3,
+      0
+    ],
+    "203": [
+      "#13",
+      3,
+      0
+    ],
+    "204": [
+      "dconst_0",
+      3,
+      0
+    ],
+    "205": [
+      "dstore",
+      3,
+      0
+    ],
+    "206": [
+      "#14",
+      3,
+      0
+    ],
+    "207": [
+      "iconst_0",
+      4,
+      4
+    ],
+    "208": [
+      "istore",
+      4,
+      4
+    ],
+    "209": [
+      "#16",
+      4,
+      4
+    ],
+    "210": [
+      "iload",
+      4,
+      4
+    ],
+    "211": [
+      "#16",
+      4,
+      4
+    ],
+    "212": [
+      "iload_3",
+      4,
+      4
+    ],
+    "213": [
+      "if_icmpge",
+      4,
+      4
+    ],
+    "214": [
+      "42",
+      4,
+      4
+    ],
+    "216": [
+      "aload",
+      5,
+      1
+    ],
+    "217": [
+      "#4",
+      5,
+      1
+    ],
+    "218": [
+      "iload",
+      5,
+      1
+    ],
+    "219": [
+      "#16",
+      5,
+      1
+    ],
+    "220": [
+      "baload",
+      5,
+      1
+    ],
+    "221": [
+      "ifne",
+      5,
+      1
+    ],
+    "222": [
+      "28",
+      5,
+      1
+    ],
+    "224": [
+      "dload",
+      5,
+      0
+    ],
+    "225": [
+      "#14",
+      5,
+      0
+    ],
+    "226": [
+      "aload",
+      5,
+      0
+    ],
+    "227": [
+      "#8",
+      5,
+      0
+    ],
+    "228": [
+      "iload",
+      5,
+      0
+    ],
+    "229": [
+      "#16",
+      5,
+      0
+    ],
+    "230": [
+      "daload",
+      5,
+      0
+    ],
+    "231": [
+      "dadd",
+      5,
+      0
+    ],
+    "232": [
+      "dstore",
+      5,
+      0
+    ],
+    "233": [
+      "#14",
+      5,
+      0
+    ],
+    "234": [
+      "dload",
+      6,
+      1
+    ],
+    "235": [
+      "#14",
+      6,
+      1
+    ],
+    "236": [
+      "dload",
+      6,
+      1
+    ],
+    "237": [
+      "#11",
+      6,
+      1
+    ],
+    "238": [
+      "dcmpl",
+      6,
+      1
+    ],
+    "239": [
+      "iflt",
+      6,
+      1
+    ],
+    "240": [
+      "10",
+      6,
+      1
+    ],
+    "242": [
+      "iload",
+      6,
+      0
+    ],
+    "243": [
+      "#16",
+      6,
+      0
+    ],
+    "244": [
+      "istore",
+      6,
+      0
+    ],
+    "245": [
+      "#13",
+      6,
+      0
+    ],
+    "246": [
+      "goto",
+      6,
+      0
+    ],
+    "247": [
+      "9",
+      6,
+      0
+    ],
+    "249": [
+      "iinc",
+      6,
+      0
+    ],
+    "250": [
+      "#16",
+      6,
+      0
+    ],
+    "251": [
+      "-89",
+      6,
+      0
+    ],
+    "252": [
+      "goto",
+      6,
+      4
+    ],
+    "253": [
+      "-42",
+      6,
+      4
+    ],
+    "255": [
+      "iload",
+      6,
+      1
+    ],
+    "256": [
+      "#13",
+      6,
+      1
+    ],
+    "257": [
+      "iconst_m1",
+      6,
+      1
+    ],
+    "258": [
+      "if_icmpne",
+      6,
+      1
+    ],
+    "259": [
+      "34",
+      6,
+      1
+    ],
+    "261": [
+      "iload_3",
+      7,
+      4
+    ],
+    "262": [
+      "iconst_1",
+      7,
+      4
+    ],
+    "263": [
+      "isub",
+      7,
+      4
+    ],
+    "264": [
+      "istore",
+      7,
+      4
+    ],
+    "265": [
+      "#16",
+      7,
+      4
+    ],
+    "266": [
+      "iload",
+      7,
+      4
+    ],
+    "267": [
+      "#16",
+      7,
+      4
+    ],
+    "268": [
+      "iflt",
+      7,
+      4
+    ],
+    "269": [
+      "24",
+      7,
+      4
+    ],
+    "271": [
+      "aload",
+      8,
+      1
+    ],
+    "272": [
+      "#4",
+      8,
+      1
+    ],
+    "273": [
+      "iload",
+      8,
+      1
+    ],
+    "274": [
+      "#16",
+      8,
+      1
+    ],
+    "275": [
+      "baload",
+      8,
+      1
+    ],
+    "276": [
+      "ifne",
+      8,
+      1
+    ],
+    "277": [
+      "10",
+      8,
+      1
+    ],
+    "279": [
+      "iload",
+      8,
+      0
+    ],
+    "280": [
+      "#16",
+      8,
+      0
+    ],
+    "281": [
+      "istore",
+      8,
+      0
+    ],
+    "282": [
+      "#13",
+      8,
+      0
+    ],
+    "283": [
+      "goto",
+      8,
+      0
+    ],
+    "284": [
+      "9",
+      8,
+      0
+    ],
+    "286": [
+      "iinc",
+      8,
+      0
+    ],
+    "287": [
+      "#16",
+      8,
+      0
+    ],
+    "288": [
+      "-89",
+      8,
+      0
+    ],
+    "289": [
+      "goto",
+      8,
+      4
+    ],
+    "290": [
+      "-23",
+      8,
+      4
+    ],
+    "292": [
+      "iload",
+      7,
+      1
+    ],
+    "293": [
+      "#13",
+      7,
+      1
+    ],
+    "294": [
+      "iflt",
+      7,
+      1
+    ],
+    "295": [
+      "123",
+      7,
+      1
+    ],
+    "297": [
+      "aload_2",
+      7,
+      0
+    ],
+    "298": [
+      "iload",
+      7,
+      0
+    ],
+    "299": [
+      "#13",
+      7,
+      0
+    ],
+    "300": [
+      "invokeinterface",
+      7,
+      0
+    ],
+    "301": [
+      "java/util/List.addPoint:(Lorg/apache/commons/math3/ml/clustering/Clusterable;)V",
+      7,
+      0
+    ],
+    "303": [
+      "0",
+      7,
+      0
+    ],
+    "305": [
+      "checkcast",
+      7,
+      0
+    ],
+    "306": [
+      "org/apache/commons/math3/ml/clustering/Clusterable",
+      7,
+      0
+    ],
+    "308": [
+      "astore",
+      7,
+      0
+    ],
+    "309": [
+      "#16",
+      7,
+      0
+    ],
+    "310": [
+      "aload",
+      7,
+      0
+    ],
+    "311": [
+      "#5",
+      7,
+      0
+    ],
+    "312": [
+      "new",
+      7,
+      0
+    ],
+    "313": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster",
+      7,
+      0
+    ],
+    "315": [
+      "dup",
+      7,
+      0
+    ],
+    "316": [
+      "aload",
+      7,
+      0
+    ],
+    "317": [
+      "#16",
+      7,
+      0
+    ],
+    "318": [
+      "invokespecial",
+      7,
+      0
+    ],
+    "319": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster.<init>:(Lorg/apache/commons/math3/ml/clustering/Clusterable;)V",
+      7,
+      0
+    ],
+    "321": [
+      "invokeinterface",
+      7,
+      0
+    ],
+    "322": [
+      "java/util/List.org/apache/commons/math3/ml/clustering/Clusterable",
+      7,
+      0
+    ],
+    "324": [
+      "0",
+      7,
+      0
+    ],
+    "326": [
+      "pop",
+      7,
+      0
+    ],
+    "327": [
+      "aload",
+      7,
+      0
+    ],
+    "328": [
+      "#4",
+      7,
+      0
+    ],
+    "329": [
+      "iload",
+      7,
+      0
+    ],
+    "330": [
+      "#13",
+      7,
+      0
+    ],
+    "331": [
+      "iconst_1",
+      7,
+      0
+    ],
+    "332": [
+      "bastore",
+      7,
+      0
+    ],
+    "333": [
+      "aload",
+      8,
+      1
+    ],
+    "334": [
+      "#5",
+      8,
+      1
+    ],
+    "335": [
+      "invokeinterface",
+      8,
+      1
+    ],
+    "336": [
+      "java/util/List.org/apache/commons/math3/exception/NumberIsTooSmallException",
+      8,
+      1
+    ],
+    "338": [
+      "0",
+      8,
+      1
+    ],
+    "340": [
+      "aload_0",
+      8,
+      1
+    ],
+    "341": [
+      "getfield",
+      8,
+      1
+    ],
+    "342": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.k:I",
+      8,
+      1
+    ],
+    "344": [
+      "if_icmpge",
+      8,
+      1
+    ],
+    "345": [
+      "70",
+      8,
+      1
+    ],
+    "347": [
+      "iconst_0",
+      9,
+      4
+    ],
+    "348": [
+      "istore",
+      9,
+      4
+    ],
+    "349": [
+      "#17",
+      9,
+      4
+    ],
+    "350": [
+      "iload",
+      9,
+      4
+    ],
+    "351": [
+      "#17",
+      9,
+      4
+    ],
+    "352": [
+      "iload_3",
+      9,
+      4
+    ],
+    "353": [
+      "if_icmpge",
+      9,
+      4
+    ],
+    "354": [
+      "61",
+      9,
+      4
+    ],
+    "356": [
+      "aload",
+      10,
+      1
+    ],
+    "357": [
+      "#4",
+      10,
+      1
+    ],
+    "358": [
+      "iload",
+      10,
+      1
+    ],
+    "359": [
+      "#17",
+      10,
+      1
+    ],
+    "360": [
+      "baload",
+      10,
+      1
+    ],
+    "361": [
+      "ifne",
+      10,
+      1
+    ],
+    "362": [
+      "47",
+      10,
+      1
+    ],
+    "364": [
+      "aload_0",
+      10,
+      0
+    ],
+    "365": [
+      "aload",
+      10,
+      0
+    ],
+    "366": [
+      "#16",
+      10,
+      0
+    ],
+    "367": [
+      "aload_2",
+      10,
+      0
+    ],
+    "368": [
+      "iload",
+      10,
+      0
+    ],
+    "369": [
+      "#17",
+      10,
+      0
+    ],
+    "370": [
+      "invokeinterface",
+      10,
+      0
+    ],
+    "371": [
+      "java/util/List.addPoint:(Lorg/apache/commons/math3/ml/clustering/Clusterable;)V",
+      10,
+      0
+    ],
+    "373": [
+      "0",
+      10,
+      0
+    ],
+    "375": [
+      "checkcast",
+      10,
+      0
+    ],
+    "376": [
+      "org/apache/commons/math3/ml/clustering/Clusterable",
+      10,
+      0
+    ],
+    "378": [
+      "invokevirtual",
+      10,
+      0
+    ],
+    "379": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.distance:(Lorg/apache/commons/math3/ml/clustering/Clusterable;Lorg/apache/commons/math3/ml/clustering/Clusterable;)D",
+      10,
+      0
+    ],
+    "381": [
+      "dstore",
+      10,
+      0
+    ],
+    "382": [
+      "#18",
+      10,
+      0
+    ],
+    "383": [
+      "dload",
+      10,
+      0
+    ],
+    "384": [
+      "#18",
+      10,
+      0
+    ],
+    "385": [
+      "dload",
+      10,
+      0
+    ],
+    "386": [
+      "#18",
+      10,
+      0
+    ],
+    "387": [
+      "dmul",
+      10,
+      0
+    ],
+    "388": [
+      "dstore",
+      10,
+      0
+    ],
+    "389": [
+      "#20",
+      10,
+      0
+    ],
+    "390": [
+      "dload",
+      11,
+      1
+    ],
+    "391": [
+      "#20",
+      11,
+      1
+    ],
+    "392": [
+      "aload",
+      11,
+      1
+    ],
+    "393": [
+      "#8",
+      11,
+      1
+    ],
+    "394": [
+      "iload",
+      11,
+      1
+    ],
+    "395": [
+      "#17",
+      11,
+      1
+    ],
+    "396": [
+      "daload",
+      11,
+      1
+    ],
+    "397": [
+      "dcmpg",
+      11,
+      1
+    ],
+    "398": [
+      "ifge",
+      11,
+      1
+    ],
+    "399": [
+      "10",
+      11,
+      1
+    ],
+    "401": [
+      "aload",
+      11,
+      0
+    ],
+    "402": [
+      "#8",
+      11,
+      0
+    ],
+    "403": [
+      "iload",
+      11,
+      0
+    ],
+    "404": [
+      "#17",
+      11,
+      0
+    ],
+    "405": [
+      "dload",
+      11,
+      0
+    ],
+    "406": [
+      "#20",
+      11,
+      0
+    ],
+    "407": [
+      "dastore",
+      11,
+      0
+    ],
+    "408": [
+      "iinc",
+      11,
+      0
+    ],
+    "409": [
+      "#17",
+      11,
+      0
+    ],
+    "410": [
+      "-89",
+      11,
+      0
+    ],
+    "411": [
+      "goto",
+      11,
+      4
+    ],
+    "412": [
+      "-61",
+      11,
+      4
+    ],
+    "414": [
+      "goto",
+      7,
+      3
+    ],
+    "415": [
+      "-277",
+      7,
+      3
+    ],
+    "417": [
+      "aload",
+      7,
+      0
+    ],
+    "418": [
+      "#5",
+      7,
+      0
+    ],
+    "419": [
+      "areturn",
+      7,
+      0
+    ]
+  },
+  "getPointFromLargestVarianceCluster": {
+    "0": [
+      "ldc2_w",
+      0,
+      0
+    ],
+    "1": [
+      "-inf",
+      0,
+      0
+    ],
+    "3": [
+      "dstore_2",
+      0,
+      0
+    ],
+    "4": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "5": [
+      "astore",
+      0,
+      0
+    ],
+    "6": [
+      "#4",
+      0,
+      0
+    ],
+    "7": [
+      "aload_1",
+      1,
+      4
+    ],
+    "8": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "9": [
+      "java/util/Collection.java/util/Iterator",
+      1,
+      4
+    ],
+    "11": [
+      "0",
+      1,
+      4
+    ],
+    "13": [
+      "astore",
+      1,
+      4
+    ],
+    "14": [
+      "#5",
+      1,
+      4
+    ],
+    "15": [
+      "aload",
+      1,
+      4
+    ],
+    "16": [
+      "#5",
+      1,
+      4
+    ],
+    "17": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "18": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "20": [
+      "0",
+      1,
+      4
+    ],
+    "22": [
+      "ifeq",
+      1,
+      4
+    ],
+    "23": [
+      "118",
+      1,
+      4
+    ],
+    "25": [
+      "aload",
+      1,
+      4
+    ],
+    "26": [
+      "#5",
+      1,
+      4
+    ],
+    "27": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "28": [
+      "java/util/Iterator.org/apache/commons/math3/ml/clustering/CentroidCluster",
+      1,
+      4
+    ],
+    "30": [
+      "0",
+      1,
+      4
+    ],
+    "32": [
+      "checkcast",
+      1,
+      4
+    ],
+    "33": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster",
+      1,
+      4
+    ],
+    "35": [
+      "astore",
+      1,
+      4
+    ],
+    "36": [
+      "#6",
+      1,
+      4
+    ],
+    "37": [
+      "aload",
+      2,
+      1
+    ],
+    "38": [
+      "#6",
+      2,
+      1
+    ],
+    "39": [
+      "invokevirtual",
+      2,
+      1
+    ],
+    "40": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster.getPoints:()Ljava/util/List;",
+      2,
+      1
+    ],
+    "42": [
+      "invokeinterface",
+      2,
+      1
+    ],
+    "43": [
+      "java/util/List.$SwitchMap$org$apache$commons$math3$ml$clustering$KMeansPlusPlusClusterer$EmptyClusterStrategy:[I",
+      2,
+      1
+    ],
+    "45": [
+      "0",
+      2,
+      1
+    ],
+    "47": [
+      "ifne",
+      2,
+      1
+    ],
+    "48": [
+      "90",
+      2,
+      1
+    ],
+    "50": [
+      "aload",
+      2,
+      0
+    ],
+    "51": [
+      "#6",
+      2,
+      0
+    ],
+    "52": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "53": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster.getCenter:()Lorg/apache/commons/math3/ml/clustering/Clusterable;",
+      2,
+      0
+    ],
+    "55": [
+      "astore",
+      2,
+      0
+    ],
+    "56": [
+      "#7",
+      2,
+      0
+    ],
+    "57": [
+      "new",
+      2,
+      0
+    ],
+    "58": [
+      "org/apache/commons/math3/stat/descriptive/moment/Variance",
+      2,
+      0
+    ],
+    "60": [
+      "dup",
+      2,
+      0
+    ],
+    "61": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "62": [
+      "org/apache/commons/math3/stat/descriptive/moment/Variance.<init>:()V",
+      2,
+      0
+    ],
+    "64": [
+      "astore",
+      2,
+      0
+    ],
+    "65": [
+      "#8",
+      2,
+      0
+    ],
+    "66": [
+      "aload",
+      3,
+      4
+    ],
+    "67": [
+      "#6",
+      3,
+      4
+    ],
+    "68": [
+      "invokevirtual",
+      3,
+      4
+    ],
+    "69": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster.getPoints:()Ljava/util/List;",
+      3,
+      4
+    ],
+    "71": [
+      "invokeinterface",
+      3,
+      4
+    ],
+    "72": [
+      "java/util/List.java/util/Iterator",
+      3,
+      4
+    ],
+    "74": [
+      "0",
+      3,
+      4
+    ],
+    "76": [
+      "astore",
+      3,
+      4
+    ],
+    "77": [
+      "#9",
+      3,
+      4
+    ],
+    "78": [
+      "aload",
+      3,
+      4
+    ],
+    "79": [
+      "#9",
+      3,
+      4
+    ],
+    "80": [
+      "invokeinterface",
+      3,
+      4
+    ],
+    "81": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      3,
+      4
+    ],
+    "83": [
+      "0",
+      3,
+      4
+    ],
+    "85": [
+      "ifeq",
+      3,
+      4
+    ],
+    "86": [
+      "31",
+      3,
+      4
+    ],
+    "88": [
+      "aload",
+      3,
+      4
+    ],
+    "89": [
+      "#9",
+      3,
+      4
+    ],
+    "90": [
+      "invokeinterface",
+      3,
+      4
+    ],
+    "91": [
+      "java/util/Iterator.org/apache/commons/math3/ml/clustering/CentroidCluster",
+      3,
+      4
+    ],
+    "93": [
+      "0",
+      3,
+      4
+    ],
+    "95": [
+      "checkcast",
+      3,
+      4
+    ],
+    "96": [
+      "org/apache/commons/math3/ml/clustering/Clusterable",
+      3,
+      4
+    ],
+    "98": [
+      "astore",
+      3,
+      4
+    ],
+    "99": [
+      "#10",
+      3,
+      4
+    ],
+    "100": [
+      "aload",
+      3,
+      0
+    ],
+    "101": [
+      "#8",
+      3,
+      0
+    ],
+    "102": [
+      "aload_0",
+      3,
+      0
+    ],
+    "103": [
+      "aload",
+      3,
+      0
+    ],
+    "104": [
+      "#10",
+      3,
+      0
+    ],
+    "105": [
+      "aload",
+      3,
+      0
+    ],
+    "106": [
+      "#7",
+      3,
+      0
+    ],
+    "107": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "108": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.distance:(Lorg/apache/commons/math3/ml/clustering/Clusterable;Lorg/apache/commons/math3/ml/clustering/Clusterable;)D",
+      3,
+      0
+    ],
+    "110": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "111": [
+      "org/apache/commons/math3/stat/descriptive/moment/Variance.increment:(D)V",
+      3,
+      0
+    ],
+    "113": [
+      "goto",
+      2,
+      4
+    ],
+    "114": [
+      "-35",
+      2,
+      4
+    ],
+    "116": [
+      "aload",
+      2,
+      0
+    ],
+    "117": [
+      "#8",
+      2,
+      0
+    ],
+    "118": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "119": [
+      "org/apache/commons/math3/stat/descriptive/moment/Variance.getResult:()D",
+      2,
+      0
+    ],
+    "121": [
+      "dstore",
+      2,
+      0
+    ],
+    "122": [
+      "#9",
+      2,
+      0
+    ],
+    "123": [
+      "dload",
+      3,
+      1
+    ],
+    "124": [
+      "#9",
+      3,
+      1
+    ],
+    "125": [
+      "dload_2",
+      3,
+      1
+    ],
+    "126": [
+      "dcmpl",
+      3,
+      1
+    ],
+    "127": [
+      "ifle",
+      3,
+      1
+    ],
+    "128": [
+      "10",
+      3,
+      1
+    ],
+    "130": [
+      "dload",
+      3,
+      0
+    ],
+    "131": [
+      "#9",
+      3,
+      0
+    ],
+    "132": [
+      "dstore_2",
+      3,
+      0
+    ],
+    "133": [
+      "aload",
+      3,
+      0
+    ],
+    "134": [
+      "#6",
+      3,
+      0
+    ],
+    "135": [
+      "astore",
+      3,
+      0
+    ],
+    "136": [
+      "#4",
+      3,
+      0
+    ],
+    "137": [
+      "goto",
+      0,
+      4
+    ],
+    "138": [
+      "-122",
+      0,
+      4
+    ],
+    "140": [
+      "aload",
+      1,
+      1
+    ],
+    "141": [
+      "#4",
+      1,
+      1
+    ],
+    "142": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "143": [
+      "18",
+      1,
+      1
+    ],
+    "145": [
+      "new",
+      1,
+      0
+    ],
+    "146": [
+      "org/apache/commons/math3/exception/ConvergenceException",
+      1,
+      0
+    ],
+    "148": [
+      "dup",
+      1,
+      0
+    ],
+    "149": [
+      "getstatic",
+      1,
+      0
+    ],
+    "150": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.EMPTY_CLUSTER_IN_K_MEANS:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "152": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "153": [
+      "anewarray",
+      1,
+      0
+    ],
+    "154": [
+      "java/lang/Object",
+      1,
+      0
+    ],
+    "156": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "157": [
+      "org/apache/commons/math3/exception/ConvergenceException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;[Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "159": [
+      "athrow",
+      1,
+      0
+    ],
+    "160": [
+      "aload",
+      0,
+      0
+    ],
+    "161": [
+      "#4",
+      0,
+      0
+    ],
+    "162": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "163": [
+      "org/apache/commons/math3/ml/clustering/Cluster.getPoints:()Ljava/util/List;",
+      0,
+      0
+    ],
+    "165": [
+      "astore",
+      0,
+      0
+    ],
+    "166": [
+      "#5",
+      0,
+      0
+    ],
+    "167": [
+      "aload",
+      0,
+      0
+    ],
+    "168": [
+      "#5",
+      0,
+      0
+    ],
+    "169": [
+      "aload_0",
+      0,
+      0
+    ],
+    "170": [
+      "getfield",
+      0,
+      0
+    ],
+    "171": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.random:Lorg/apache/commons/math3/random/RandomGenerator;",
+      0,
+      0
+    ],
+    "173": [
+      "aload",
+      0,
+      0
+    ],
+    "174": [
+      "#5",
+      0,
+      0
+    ],
+    "175": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "176": [
+      "java/util/List.org/apache/commons/math3/exception/NumberIsTooSmallException",
+      0,
+      0
+    ],
+    "178": [
+      "0",
+      0,
+      0
+    ],
+    "180": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "181": [
+      "org/apache/commons/math3/random/RandomGenerator.distance:(Lorg/apache/commons/math3/ml/clustering/Clusterable;Lorg/apache/commons/math3/ml/clustering/Clusterable;)D",
+      0,
+      0
+    ],
+    "183": [
+      "0",
+      0,
+      0
+    ],
+    "185": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "186": [
+      "java/util/List.org/apache/commons/math3/ml/clustering/Cluster",
+      0,
+      0
+    ],
+    "188": [
+      "0",
+      0,
+      0
+    ],
+    "190": [
+      "checkcast",
+      0,
+      0
+    ],
+    "191": [
+      "org/apache/commons/math3/ml/clustering/Clusterable",
+      0,
+      0
+    ],
+    "193": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getPointFromLargestNumberCluster": {
+    "0": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "1": [
+      "istore_2",
+      0,
+      0
+    ],
+    "2": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "3": [
+      "astore_3",
+      0,
+      0
+    ],
+    "4": [
+      "aload_1",
+      1,
+      4
+    ],
+    "5": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "6": [
+      "java/util/Collection.java/util/Iterator",
+      1,
+      4
+    ],
+    "8": [
+      "0",
+      1,
+      4
+    ],
+    "10": [
+      "astore",
+      1,
+      4
+    ],
+    "11": [
+      "#4",
+      1,
+      4
+    ],
+    "12": [
+      "aload",
+      1,
+      4
+    ],
+    "13": [
+      "#4",
+      1,
+      4
+    ],
+    "14": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "15": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "17": [
+      "0",
+      1,
+      4
+    ],
+    "19": [
+      "ifeq",
+      1,
+      4
+    ],
+    "20": [
+      "42",
+      1,
+      4
+    ],
+    "22": [
+      "aload",
+      1,
+      4
+    ],
+    "23": [
+      "#4",
+      1,
+      4
+    ],
+    "24": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "25": [
+      "java/util/Iterator.org/apache/commons/math3/ml/clustering/CentroidCluster",
+      1,
+      4
+    ],
+    "27": [
+      "0",
+      1,
+      4
+    ],
+    "29": [
+      "checkcast",
+      1,
+      4
+    ],
+    "30": [
+      "org/apache/commons/math3/ml/clustering/Cluster",
+      1,
+      4
+    ],
+    "32": [
+      "astore",
+      1,
+      4
+    ],
+    "33": [
+      "#5",
+      1,
+      4
+    ],
+    "34": [
+      "aload",
+      1,
+      0
+    ],
+    "35": [
+      "#5",
+      1,
+      0
+    ],
+    "36": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "37": [
+      "org/apache/commons/math3/ml/clustering/Cluster.getPoints:()Ljava/util/List;",
+      1,
+      0
+    ],
+    "39": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "40": [
+      "java/util/List.org/apache/commons/math3/exception/NumberIsTooSmallException",
+      1,
+      0
+    ],
+    "42": [
+      "0",
+      1,
+      0
+    ],
+    "44": [
+      "istore",
+      1,
+      0
+    ],
+    "45": [
+      "#6",
+      1,
+      0
+    ],
+    "46": [
+      "iload",
+      2,
+      1
+    ],
+    "47": [
+      "#6",
+      2,
+      1
+    ],
+    "48": [
+      "iload_2",
+      2,
+      1
+    ],
+    "49": [
+      "if_icmple",
+      2,
+      1
+    ],
+    "50": [
+      "9",
+      2,
+      1
+    ],
+    "52": [
+      "iload",
+      2,
+      0
+    ],
+    "53": [
+      "#6",
+      2,
+      0
+    ],
+    "54": [
+      "istore_2",
+      2,
+      0
+    ],
+    "55": [
+      "aload",
+      2,
+      0
+    ],
+    "56": [
+      "#5",
+      2,
+      0
+    ],
+    "57": [
+      "astore_3",
+      2,
+      0
+    ],
+    "58": [
+      "goto",
+      0,
+      4
+    ],
+    "59": [
+      "-46",
+      0,
+      4
+    ],
+    "61": [
+      "aload_3",
+      1,
+      1
+    ],
+    "62": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "63": [
+      "18",
+      1,
+      1
+    ],
+    "65": [
+      "new",
+      1,
+      0
+    ],
+    "66": [
+      "org/apache/commons/math3/exception/ConvergenceException",
+      1,
+      0
+    ],
+    "68": [
+      "dup",
+      1,
+      0
+    ],
+    "69": [
+      "getstatic",
+      1,
+      0
+    ],
+    "70": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.EMPTY_CLUSTER_IN_K_MEANS:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "72": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "73": [
+      "anewarray",
+      1,
+      0
+    ],
+    "74": [
+      "java/lang/Object",
+      1,
+      0
+    ],
+    "76": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "77": [
+      "org/apache/commons/math3/exception/ConvergenceException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;[Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "79": [
+      "athrow",
+      1,
+      0
+    ],
+    "80": [
+      "aload_3",
+      0,
+      0
+    ],
+    "81": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "82": [
+      "org/apache/commons/math3/ml/clustering/Cluster.getPoints:()Ljava/util/List;",
+      0,
+      0
+    ],
+    "84": [
+      "astore",
+      0,
+      0
+    ],
+    "85": [
+      "#4",
+      0,
+      0
+    ],
+    "86": [
+      "aload",
+      0,
+      0
+    ],
+    "87": [
+      "#4",
+      0,
+      0
+    ],
+    "88": [
+      "aload_0",
+      0,
+      0
+    ],
+    "89": [
+      "getfield",
+      0,
+      0
+    ],
+    "90": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.random:Lorg/apache/commons/math3/random/RandomGenerator;",
+      0,
+      0
+    ],
+    "92": [
+      "aload",
+      0,
+      0
+    ],
+    "93": [
+      "#4",
+      0,
+      0
+    ],
+    "94": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "95": [
+      "java/util/List.org/apache/commons/math3/exception/NumberIsTooSmallException",
+      0,
+      0
+    ],
+    "97": [
+      "0",
+      0,
+      0
+    ],
+    "99": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "100": [
+      "org/apache/commons/math3/random/RandomGenerator.distance:(Lorg/apache/commons/math3/ml/clustering/Clusterable;Lorg/apache/commons/math3/ml/clustering/Clusterable;)D",
+      0,
+      0
+    ],
+    "102": [
+      "0",
+      0,
+      0
+    ],
+    "104": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "105": [
+      "java/util/List.org/apache/commons/math3/ml/clustering/Cluster",
+      0,
+      0
+    ],
+    "107": [
+      "0",
+      0,
+      0
+    ],
+    "109": [
+      "checkcast",
+      0,
+      0
+    ],
+    "110": [
+      "org/apache/commons/math3/ml/clustering/Clusterable",
+      0,
+      0
+    ],
+    "112": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getFarthestPoint": {
+    "0": [
+      "ldc2_w",
+      0,
+      0
+    ],
+    "1": [
+      "-inf",
+      0,
+      0
+    ],
+    "3": [
+      "dstore_2",
+      0,
+      0
+    ],
+    "4": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "5": [
+      "astore",
+      0,
+      0
+    ],
+    "6": [
+      "#4",
+      0,
+      0
+    ],
+    "7": [
+      "iconst_m1",
+      0,
+      0
+    ],
+    "8": [
+      "istore",
+      0,
+      0
+    ],
+    "9": [
+      "#5",
+      0,
+      0
+    ],
+    "10": [
+      "aload_1",
+      1,
+      4
+    ],
+    "11": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "12": [
+      "java/util/Collection.java/util/Iterator",
+      1,
+      4
+    ],
+    "14": [
+      "0",
+      1,
+      4
+    ],
+    "16": [
+      "astore",
+      1,
+      4
+    ],
+    "17": [
+      "#6",
+      1,
+      4
+    ],
+    "18": [
+      "aload",
+      1,
+      4
+    ],
+    "19": [
+      "#6",
+      1,
+      4
+    ],
+    "20": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "21": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "23": [
+      "0",
+      1,
+      4
+    ],
+    "25": [
+      "ifeq",
+      1,
+      4
+    ],
+    "26": [
+      "91",
+      1,
+      4
+    ],
+    "28": [
+      "aload",
+      1,
+      4
+    ],
+    "29": [
+      "#6",
+      1,
+      4
+    ],
+    "30": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "31": [
+      "java/util/Iterator.org/apache/commons/math3/ml/clustering/CentroidCluster",
+      1,
+      4
+    ],
+    "33": [
+      "0",
+      1,
+      4
+    ],
+    "35": [
+      "checkcast",
+      1,
+      4
+    ],
+    "36": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster",
+      1,
+      4
+    ],
+    "38": [
+      "astore",
+      1,
+      4
+    ],
+    "39": [
+      "#7",
+      1,
+      4
+    ],
+    "40": [
+      "aload",
+      1,
+      0
+    ],
+    "41": [
+      "#7",
+      1,
+      0
+    ],
+    "42": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "43": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster.getCenter:()Lorg/apache/commons/math3/ml/clustering/Clusterable;",
+      1,
+      0
+    ],
+    "45": [
+      "astore",
+      1,
+      0
+    ],
+    "46": [
+      "#8",
+      1,
+      0
+    ],
+    "47": [
+      "aload",
+      1,
+      0
+    ],
+    "48": [
+      "#7",
+      1,
+      0
+    ],
+    "49": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "50": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster.getPoints:()Ljava/util/List;",
+      1,
+      0
+    ],
+    "52": [
+      "astore",
+      1,
+      0
+    ],
+    "53": [
+      "#9",
+      1,
+      0
+    ],
+    "54": [
+      "iconst_0",
+      2,
+      4
+    ],
+    "55": [
+      "istore",
+      2,
+      4
+    ],
+    "56": [
+      "#10",
+      2,
+      4
+    ],
+    "57": [
+      "iload",
+      2,
+      4
+    ],
+    "58": [
+      "#10",
+      2,
+      4
+    ],
+    "59": [
+      "aload",
+      2,
+      4
+    ],
+    "60": [
+      "#9",
+      2,
+      4
+    ],
+    "61": [
+      "invokeinterface",
+      2,
+      4
+    ],
+    "62": [
+      "java/util/List.org/apache/commons/math3/exception/NumberIsTooSmallException",
+      2,
+      4
+    ],
+    "64": [
+      "0",
+      2,
+      4
+    ],
+    "66": [
+      "if_icmpge",
+      2,
+      4
+    ],
+    "67": [
+      "47",
+      2,
+      4
+    ],
+    "69": [
+      "aload_0",
+      2,
+      0
+    ],
+    "70": [
+      "aload",
+      2,
+      0
+    ],
+    "71": [
+      "#9",
+      2,
+      0
+    ],
+    "72": [
+      "iload",
+      2,
+      0
+    ],
+    "73": [
+      "#10",
+      2,
+      0
+    ],
+    "74": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "75": [
+      "java/util/List.addPoint:(Lorg/apache/commons/math3/ml/clustering/Clusterable;)V",
+      2,
+      0
+    ],
+    "77": [
+      "0",
+      2,
+      0
+    ],
+    "79": [
+      "checkcast",
+      2,
+      0
+    ],
+    "80": [
+      "org/apache/commons/math3/ml/clustering/Clusterable",
+      2,
+      0
+    ],
+    "82": [
+      "aload",
+      2,
+      0
+    ],
+    "83": [
+      "#8",
+      2,
+      0
+    ],
+    "84": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "85": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.distance:(Lorg/apache/commons/math3/ml/clustering/Clusterable;Lorg/apache/commons/math3/ml/clustering/Clusterable;)D",
+      2,
+      0
+    ],
+    "87": [
+      "dstore",
+      2,
+      0
+    ],
+    "88": [
+      "#11",
+      2,
+      0
+    ],
+    "89": [
+      "dload",
+      3,
+      1
+    ],
+    "90": [
+      "#11",
+      3,
+      1
+    ],
+    "91": [
+      "dload_2",
+      3,
+      1
+    ],
+    "92": [
+      "dcmpl",
+      3,
+      1
+    ],
+    "93": [
+      "ifle",
+      3,
+      1
+    ],
+    "94": [
+      "14",
+      3,
+      1
+    ],
+    "96": [
+      "dload",
+      3,
+      0
+    ],
+    "97": [
+      "#11",
+      3,
+      0
+    ],
+    "98": [
+      "dstore_2",
+      3,
+      0
+    ],
+    "99": [
+      "aload",
+      3,
+      0
+    ],
+    "100": [
+      "#7",
+      3,
+      0
+    ],
+    "101": [
+      "astore",
+      3,
+      0
+    ],
+    "102": [
+      "#4",
+      3,
+      0
+    ],
+    "103": [
+      "iload",
+      3,
+      0
+    ],
+    "104": [
+      "#10",
+      3,
+      0
+    ],
+    "105": [
+      "istore",
+      3,
+      0
+    ],
+    "106": [
+      "#5",
+      3,
+      0
+    ],
+    "107": [
+      "iinc",
+      3,
+      0
+    ],
+    "108": [
+      "#10",
+      3,
+      0
+    ],
+    "109": [
+      "-89",
+      3,
+      0
+    ],
+    "110": [
+      "goto",
+      3,
+      4
+    ],
+    "111": [
+      "-53",
+      3,
+      4
+    ],
+    "113": [
+      "goto",
+      1,
+      4
+    ],
+    "114": [
+      "-95",
+      1,
+      4
+    ],
+    "116": [
+      "aload",
+      2,
+      1
+    ],
+    "117": [
+      "#4",
+      2,
+      1
+    ],
+    "118": [
+      "ifnonnull",
+      2,
+      1
+    ],
+    "119": [
+      "18",
+      2,
+      1
+    ],
+    "121": [
+      "new",
+      2,
+      0
+    ],
+    "122": [
+      "org/apache/commons/math3/exception/ConvergenceException",
+      2,
+      0
+    ],
+    "124": [
+      "dup",
+      2,
+      0
+    ],
+    "125": [
+      "getstatic",
+      2,
+      0
+    ],
+    "126": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.EMPTY_CLUSTER_IN_K_MEANS:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      2,
+      0
+    ],
+    "128": [
+      "iconst_0",
+      2,
+      0
+    ],
+    "129": [
+      "anewarray",
+      2,
+      0
+    ],
+    "130": [
+      "java/lang/Object",
+      2,
+      0
+    ],
+    "132": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "133": [
+      "org/apache/commons/math3/exception/ConvergenceException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;[Ljava/lang/Object;)V",
+      2,
+      0
+    ],
+    "135": [
+      "athrow",
+      2,
+      0
+    ],
+    "136": [
+      "aload",
+      1,
+      0
+    ],
+    "137": [
+      "#4",
+      1,
+      0
+    ],
+    "138": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "139": [
+      "org/apache/commons/math3/ml/clustering/Cluster.getPoints:()Ljava/util/List;",
+      1,
+      0
+    ],
+    "141": [
+      "iload",
+      1,
+      0
+    ],
+    "142": [
+      "#5",
+      1,
+      0
+    ],
+    "143": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "144": [
+      "java/util/List.org/apache/commons/math3/ml/clustering/Cluster",
+      1,
+      0
+    ],
+    "146": [
+      "0",
+      1,
+      0
+    ],
+    "148": [
+      "checkcast",
+      1,
+      0
+    ],
+    "149": [
+      "org/apache/commons/math3/ml/clustering/Clusterable",
+      1,
+      0
+    ],
+    "151": [
+      "areturn",
+      1,
+      0
+    ]
+  },
+  "getNearestCluster": {
+    "0": [
+      "ldc2_w",
+      0,
+      0
+    ],
+    "1": [
+      "1.7976931348623157e+308",
+      0,
+      0
+    ],
+    "3": [
+      "dstore_3",
+      0,
+      0
+    ],
+    "4": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "5": [
+      "istore",
+      0,
+      0
+    ],
+    "6": [
+      "#5",
+      0,
+      0
+    ],
+    "7": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "8": [
+      "istore",
+      0,
+      0
+    ],
+    "9": [
+      "#6",
+      0,
+      0
+    ],
+    "10": [
+      "aload_1",
+      1,
+      4
+    ],
+    "11": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "12": [
+      "java/util/Collection.java/util/Iterator",
+      1,
+      4
+    ],
+    "14": [
+      "0",
+      1,
+      4
+    ],
+    "16": [
+      "astore",
+      1,
+      4
+    ],
+    "17": [
+      "#7",
+      1,
+      4
+    ],
+    "18": [
+      "aload",
+      1,
+      4
+    ],
+    "19": [
+      "#7",
+      1,
+      4
+    ],
+    "20": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "21": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "23": [
+      "0",
+      1,
+      4
+    ],
+    "25": [
+      "ifeq",
+      1,
+      4
+    ],
+    "26": [
+      "47",
+      1,
+      4
+    ],
+    "28": [
+      "aload",
+      1,
+      4
+    ],
+    "29": [
+      "#7",
+      1,
+      4
+    ],
+    "30": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "31": [
+      "java/util/Iterator.org/apache/commons/math3/ml/clustering/CentroidCluster",
+      1,
+      4
+    ],
+    "33": [
+      "0",
+      1,
+      4
+    ],
+    "35": [
+      "checkcast",
+      1,
+      4
+    ],
+    "36": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster",
+      1,
+      4
+    ],
+    "38": [
+      "astore",
+      1,
+      4
+    ],
+    "39": [
+      "#8",
+      1,
+      4
+    ],
+    "40": [
+      "aload_0",
+      1,
+      0
+    ],
+    "41": [
+      "aload_2",
+      1,
+      0
+    ],
+    "42": [
+      "aload",
+      1,
+      0
+    ],
+    "43": [
+      "#8",
+      1,
+      0
+    ],
+    "44": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "45": [
+      "org/apache/commons/math3/ml/clustering/CentroidCluster.getCenter:()Lorg/apache/commons/math3/ml/clustering/Clusterable;",
+      1,
+      0
+    ],
+    "47": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "48": [
+      "org/apache/commons/math3/ml/clustering/KMeansPlusPlusClusterer.distance:(Lorg/apache/commons/math3/ml/clustering/Clusterable;Lorg/apache/commons/math3/ml/clustering/Clusterable;)D",
+      1,
+      0
+    ],
+    "50": [
+      "dstore",
+      1,
+      0
+    ],
+    "51": [
+      "#9",
+      1,
+      0
+    ],
+    "52": [
+      "dload",
+      2,
+      1
+    ],
+    "53": [
+      "#9",
+      2,
+      1
+    ],
+    "54": [
+      "dload_3",
+      2,
+      1
+    ],
+    "55": [
+      "dcmpg",
+      2,
+      1
+    ],
+    "56": [
+      "ifge",
+      2,
+      1
+    ],
+    "57": [
+      "10",
+      2,
+      1
+    ],
+    "59": [
+      "dload",
+      2,
+      0
+    ],
+    "60": [
+      "#9",
+      2,
+      0
+    ],
+    "61": [
+      "dstore_3",
+      2,
+      0
+    ],
+    "62": [
+      "iload",
+      2,
+      0
+    ],
+    "63": [
+      "#5",
+      2,
+      0
+    ],
+    "64": [
+      "istore",
+      2,
+      0
+    ],
+    "65": [
+      "#6",
+      2,
+      0
+    ],
+    "66": [
+      "iinc",
+      1,
+      0
+    ],
+    "67": [
+      "#5",
+      1,
+      0
+    ],
+    "68": [
+      "-89",
+      1,
+      0
+    ],
+    "69": [
+      "goto",
+      0,
+      4
+    ],
+    "70": [
+      "-51",
+      0,
+      4
+    ],
+    "72": [
+      "iload",
+      0,
+      0
+    ],
+    "73": [
+      "#6",
+      0,
+      0
+    ],
+    "74": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "centroidOf": {
+    "0": [
+      "iload_2",
+      0,
+      0
+    ],
+    "1": [
+      "newarray",
+      0,
+      0
+    ],
+    "2": [
+      "7",
+      0,
+      0
+    ],
+    "3": [
+      "astore_3",
+      0,
+      0
+    ],
+    "4": [
+      "aload_1",
+      1,
+      4
+    ],
+    "5": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "6": [
+      "java/util/Collection.java/util/Iterator",
+      1,
+      4
+    ],
+    "8": [
+      "0",
+      1,
+      4
+    ],
+    "10": [
+      "astore",
+      1,
+      4
+    ],
+    "11": [
+      "#4",
+      1,
+      4
+    ],
+    "12": [
+      "aload",
+      1,
+      4
+    ],
+    "13": [
+      "#4",
+      1,
+      4
+    ],
+    "14": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "15": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "17": [
+      "0",
+      1,
+      4
+    ],
+    "19": [
+      "ifeq",
+      1,
+      4
+    ],
+    "20": [
+      "55",
+      1,
+      4
+    ],
+    "22": [
+      "aload",
+      1,
+      4
+    ],
+    "23": [
+      "#4",
+      1,
+      4
+    ],
+    "24": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "25": [
+      "java/util/Iterator.org/apache/commons/math3/ml/clustering/CentroidCluster",
+      1,
+      4
+    ],
+    "27": [
+      "0",
+      1,
+      4
+    ],
+    "29": [
+      "checkcast",
+      1,
+      4
+    ],
+    "30": [
+      "org/apache/commons/math3/ml/clustering/Clusterable",
+      1,
+      4
+    ],
+    "32": [
+      "astore",
+      1,
+      4
+    ],
+    "33": [
+      "#5",
+      1,
+      4
+    ],
+    "34": [
+      "aload",
+      1,
+      0
+    ],
+    "35": [
+      "#5",
+      1,
+      0
+    ],
+    "36": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "37": [
+      "org/apache/commons/math3/ml/clustering/Clusterable.centroidOf:(Ljava/util/Collection;I)Lorg/apache/commons/math3/ml/clustering/Clusterable;",
+      1,
+      0
+    ],
+    "39": [
+      "0",
+      1,
+      0
+    ],
+    "41": [
+      "astore",
+      1,
+      0
+    ],
+    "42": [
+      "#6",
+      1,
+      0
+    ],
+    "43": [
+      "iconst_0",
+      2,
+      4
+    ],
+    "44": [
+      "istore",
+      2,
+      4
+    ],
+    "45": [
+      "#7",
+      2,
+      4
+    ],
+    "46": [
+      "iload",
+      2,
+      4
+    ],
+    "47": [
+      "#7",
+      2,
+      4
+    ],
+    "48": [
+      "aload_3",
+      2,
+      4
+    ],
+    "49": [
+      "arraylength",
+      2,
+      4
+    ],
+    "50": [
+      "if_icmpge",
+      2,
+      4
+    ],
+    "51": [
+      "21",
+      2,
+      4
+    ],
+    "53": [
+      "aload_3",
+      2,
+      0
+    ],
+    "54": [
+      "iload",
+      2,
+      0
+    ],
+    "55": [
+      "#7",
+      2,
+      0
+    ],
+    "56": [
+      "dup2",
+      2,
+      0
+    ],
+    "57": [
+      "daload",
+      2,
+      0
+    ],
+    "58": [
+      "aload",
+      2,
+      0
+    ],
+    "59": [
+      "#6",
+      2,
+      0
+    ],
+    "60": [
+      "iload",
+      2,
+      0
+    ],
+    "61": [
+      "#7",
+      2,
+      0
+    ],
+    "62": [
+      "daload",
+      2,
+      0
+    ],
+    "63": [
+      "dadd",
+      2,
+      0
+    ],
+    "64": [
+      "dastore",
+      2,
+      0
+    ],
+    "65": [
+      "iinc",
+      2,
+      0
+    ],
+    "66": [
+      "#7",
+      2,
+      0
+    ],
+    "67": [
+      "-89",
+      2,
+      0
+    ],
+    "68": [
+      "goto",
+      2,
+      4
+    ],
+    "69": [
+      "-22",
+      2,
+      4
+    ],
+    "71": [
+      "goto",
+      0,
+      4
+    ],
+    "72": [
+      "-59",
+      0,
+      4
+    ],
+    "74": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "75": [
+      "istore",
+      1,
+      4
+    ],
+    "76": [
+      "#4",
+      1,
+      4
+    ],
+    "77": [
+      "iload",
+      1,
+      4
+    ],
+    "78": [
+      "#4",
+      1,
+      4
+    ],
+    "79": [
+      "aload_3",
+      1,
+      4
+    ],
+    "80": [
+      "arraylength",
+      1,
+      4
+    ],
+    "81": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "82": [
+      "23",
+      1,
+      4
+    ],
+    "84": [
+      "aload_3",
+      1,
+      0
+    ],
+    "85": [
+      "iload",
+      1,
+      0
+    ],
+    "86": [
+      "#4",
+      1,
+      0
+    ],
+    "87": [
+      "dup2",
+      1,
+      0
+    ],
+    "88": [
+      "daload",
+      1,
+      0
+    ],
+    "89": [
+      "aload_1",
+      1,
+      0
+    ],
+    "90": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "91": [
+      "java/util/Collection.org/apache/commons/math3/exception/NumberIsTooSmallException",
+      1,
+      0
+    ],
+    "93": [
+      "0",
+      1,
+      0
+    ],
+    "95": [
+      "i2d",
+      1,
+      0
+    ],
+    "96": [
+      "ddiv",
+      1,
+      0
+    ],
+    "97": [
+      "dastore",
+      1,
+      0
+    ],
+    "98": [
+      "iinc",
+      1,
+      0
+    ],
+    "99": [
+      "#4",
+      1,
+      0
+    ],
+    "100": [
+      "-89",
+      1,
+      0
+    ],
+    "101": [
+      "goto",
+      1,
+      4
+    ],
+    "102": [
+      "-24",
+      1,
+      4
+    ],
+    "104": [
+      "new",
+      0,
+      0
+    ],
+    "105": [
+      "org/apache/commons/math3/ml/clustering/DoublePoint",
+      0,
+      0
+    ],
+    "107": [
+      "dup",
+      0,
+      0
+    ],
+    "108": [
+      "aload_3",
+      0,
+      0
+    ],
+    "109": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "110": [
+      "org/apache/commons/math3/ml/clustering/DoublePoint.<init>:([D)V",
+      0,
+      0
+    ],
+    "112": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,528 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "aload_2",
+      0,
+      0
+    ],
+    "3": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "4": [
+      "org/apache/commons/math3/fraction/AbstractFormat.<init>:(Ljava/text/NumberFormat;Ljava/text/NumberFormat;)V",
+      0,
+      0
+    ],
+    "6": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getAvailableLocales": {
+    "0": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "1": [
+      "java/text/NumberFormat.getAvailableLocales:()[Ljava/util/Locale;",
+      0,
+      0
+    ],
+    "3": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "formatFraction": {
+    "0": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/math3/fraction/FractionFormat.getImproperInstance:()Lorg/apache/commons/math3/fraction/FractionFormat;",
+      0,
+      0
+    ],
+    "3": [
+      "aload_0",
+      0,
+      0
+    ],
+    "4": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/fraction/FractionFormat.format:(Ljava/lang/Object;)Ljava/lang/String;",
+      0,
+      0
+    ],
+    "7": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getImproperInstance": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/math3/fraction/FractionFormat",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/fraction/FractionFormat.getDefaultNumberFormat:(Ljava/util/Locale;)Ljava/text/NumberFormat;",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/fraction/FractionFormat.<init>:(Ljava/text/NumberFormat;)V",
+      0,
+      0
+    ],
+    "11": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getProperInstance": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/math3/fraction/ProperFractionFormat",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/fraction/FractionFormat.getDefaultNumberFormat:(Ljava/util/Locale;)Ljava/text/NumberFormat;",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/fraction/ProperFractionFormat.<init>:(Ljava/text/NumberFormat;)V",
+      0,
+      0
+    ],
+    "11": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getDefaultNumberFormat": {
+    "0": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "1": [
+      "java/util/Locale.getDefault:()Ljava/util/Locale;",
+      0,
+      0
+    ],
+    "3": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "4": [
+      "org/apache/commons/math3/fraction/FractionFormat.getDefaultNumberFormat:(Ljava/util/Locale;)Ljava/text/NumberFormat;",
+      0,
+      0
+    ],
+    "6": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "format": {
+    "0": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "1": [
+      "astore",
+      0,
+      0
+    ],
+    "2": [
+      "#4",
+      0,
+      0
+    ],
+    "3": [
+      "aload_1",
+      1,
+      1
+    ],
+    "4": [
+      "instanceof",
+      1,
+      1
+    ],
+    "5": [
+      "org/apache/commons/math3/fraction/Fraction",
+      1,
+      1
+    ],
+    "7": [
+      "ifeq",
+      1,
+      1
+    ],
+    "8": [
+      "18",
+      1,
+      1
+    ],
+    "10": [
+      "aload_0",
+      1,
+      0
+    ],
+    "11": [
+      "aload_1",
+      1,
+      0
+    ],
+    "12": [
+      "checkcast",
+      1,
+      0
+    ],
+    "13": [
+      "org/apache/commons/math3/fraction/Fraction",
+      1,
+      0
+    ],
+    "15": [
+      "aload_2",
+      1,
+      0
+    ],
+    "16": [
+      "aload_3",
+      1,
+      0
+    ],
+    "17": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "18": [
+      "org/apache/commons/math3/fraction/FractionFormat.format:(Lorg/apache/commons/math3/fraction/Fraction;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;",
+      1,
+      0
+    ],
+    "20": [
+      "astore",
+      1,
+      0
+    ],
+    "21": [
+      "#4",
+      1,
+      0
+    ],
+    "22": [
+      "goto",
+      1,
+      0
+    ],
+    "23": [
+      "50",
+      1,
+      0
+    ],
+    "25": [
+      "aload_1",
+      1,
+      0
+    ],
+    "26": [
+      "instanceof",
+      1,
+      0
+    ],
+    "27": [
+      "java/lang/Number",
+      1,
+      0
+    ],
+    "29": [
+      "ifeq",
+      1,
+      0
+    ],
+    "30": [
+      "28",
+      1,
+      0
+    ],
+    "32": [
+      "aload_0",
+      1,
+      0
+    ],
+    "33": [
+      "new",
+      1,
+      0
+    ],
+    "34": [
+      "org/apache/commons/math3/fraction/Fraction",
+      1,
+      0
+    ],
+    "36": [
+      "dup",
+      1,
+      0
+    ],
+    "37": [
+      "aload_1",
+      1,
+      0
+    ],
+    "38": [
+      "checkcast",
+      1,
+      0
+    ],
+    "39": [
+      "java/lang/Number",
+      1,
+      0
+    ],
+    "41": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "42": [
+      "java/lang/Number.doubleValue:()D",
+      1,
+      0
+    ],
+    "44": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "45": [
+      "org/apache/commons/math3/fraction/Fraction.<init>:(D)V",
+      1,
+      0
+    ],
+    "47": [
+      "aload_2",
+      1,
+      0
+    ],
+    "48": [
+      "aload_3",
+      1,
+      0
+    ],
+    "49": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "50": [
+      "org/apache/commons/math3/fraction/FractionFormat.format:(Lorg/apache/commons/math3/fraction/Fraction;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;",
+      1,
+      0
+    ],
+    "52": [
+      "astore",
+      1,
+      0
+    ],
+    "53": [
+      "#4",
+      1,
+      0
+    ],
+    "54": [
+      "goto",
+      1,
+      0
+    ],
+    "55": [
+      "18",
+      1,
+      0
+    ],
+    "57": [
+      "new",
+      1,
+      0
+    ],
+    "58": [
+      "org/apache/commons/math3/exception/MathIllegalArgumentException",
+      1,
+      0
+    ],
+    "60": [
+      "dup",
+      1,
+      0
+    ],
+    "61": [
+      "getstatic",
+      1,
+      0
+    ],
+    "62": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.CANNOT_FORMAT_OBJECT_TO_FRACTION:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "64": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "65": [
+      "anewarray",
+      1,
+      0
+    ],
+    "66": [
+      "java/lang/Object",
+      1,
+      0
+    ],
+    "68": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "69": [
+      "org/apache/commons/math3/exception/MathIllegalArgumentException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;[Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "71": [
+      "athrow",
+      1,
+      0
+    ],
+    "72": [
+      "aload",
+      0,
+      0
+    ],
+    "73": [
+      "#4",
+      0,
+      0
+    ],
+    "74": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "parse": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "aload_2",
+      0,
+      0
+    ],
+    "3": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "4": [
+      "org/apache/commons/math3/fraction/FractionFormat.parse:(Ljava/lang/String;Ljava/text/ParsePosition;)Lorg/apache/commons/math3/fraction/Fraction;",
+      0,
+      0
+    ],
+    "6": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

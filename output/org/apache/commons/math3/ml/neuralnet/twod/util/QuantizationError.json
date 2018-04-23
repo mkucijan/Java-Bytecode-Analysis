@@ -1,0 +1,946 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "putfield",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/ml/neuralnet/twod/util/QuantizationError.distance:Lorg/apache/commons/math3/ml/distance/DistanceMeasure;",
+      0,
+      0
+    ],
+    "9": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "computeImage": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/ml/neuralnet/twod/NeuronSquareMesh2D.getNumberOfRows:()I",
+      0,
+      0
+    ],
+    "4": [
+      "istore_3",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/ml/neuralnet/twod/NeuronSquareMesh2D.getNumberOfColumns:()I",
+      0,
+      0
+    ],
+    "9": [
+      "istore",
+      0,
+      0
+    ],
+    "10": [
+      "#4",
+      0,
+      0
+    ],
+    "11": [
+      "new",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/ml/neuralnet/twod/util/LocationFinder",
+      0,
+      0
+    ],
+    "14": [
+      "dup",
+      0,
+      0
+    ],
+    "15": [
+      "aload_1",
+      0,
+      0
+    ],
+    "16": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "17": [
+      "org/apache/commons/math3/ml/neuralnet/twod/util/LocationFinder.<init>:(Lorg/apache/commons/math3/ml/neuralnet/twod/NeuronSquareMesh2D;)V",
+      0,
+      0
+    ],
+    "19": [
+      "astore",
+      0,
+      0
+    ],
+    "20": [
+      "#5",
+      0,
+      0
+    ],
+    "21": [
+      "iload_3",
+      0,
+      0
+    ],
+    "22": [
+      "iload",
+      0,
+      0
+    ],
+    "23": [
+      "#4",
+      0,
+      0
+    ],
+    "24": [
+      "multianewarray",
+      0,
+      0
+    ],
+    "25": [
+      "[[I",
+      0,
+      0
+    ],
+    "27": [
+      "58",
+      0,
+      0
+    ],
+    "28": [
+      "astore",
+      0,
+      0
+    ],
+    "29": [
+      "#6",
+      0,
+      0
+    ],
+    "30": [
+      "iload_3",
+      0,
+      0
+    ],
+    "31": [
+      "iload",
+      0,
+      0
+    ],
+    "32": [
+      "#4",
+      0,
+      0
+    ],
+    "33": [
+      "multianewarray",
+      0,
+      0
+    ],
+    "34": [
+      "[[D",
+      0,
+      0
+    ],
+    "36": [
+      "58",
+      0,
+      0
+    ],
+    "37": [
+      "astore",
+      0,
+      0
+    ],
+    "38": [
+      "#7",
+      0,
+      0
+    ],
+    "39": [
+      "aload_2",
+      1,
+      4
+    ],
+    "40": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "41": [
+      "java/lang/Iterable.java/util/Iterator",
+      1,
+      4
+    ],
+    "43": [
+      "0",
+      1,
+      4
+    ],
+    "45": [
+      "astore",
+      1,
+      4
+    ],
+    "46": [
+      "#8",
+      1,
+      4
+    ],
+    "47": [
+      "aload",
+      1,
+      4
+    ],
+    "48": [
+      "#8",
+      1,
+      4
+    ],
+    "49": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "50": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "52": [
+      "0",
+      1,
+      4
+    ],
+    "54": [
+      "ifeq",
+      1,
+      4
+    ],
+    "55": [
+      "92",
+      1,
+      4
+    ],
+    "57": [
+      "aload",
+      1,
+      4
+    ],
+    "58": [
+      "#8",
+      1,
+      4
+    ],
+    "59": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "60": [
+      "java/util/Iterator.org/apache/commons/math3/ml/neuralnet/MapUtils",
+      1,
+      4
+    ],
+    "62": [
+      "0",
+      1,
+      4
+    ],
+    "64": [
+      "checkcast",
+      1,
+      4
+    ],
+    "65": [
+      "[D",
+      1,
+      4
+    ],
+    "67": [
+      "astore",
+      1,
+      4
+    ],
+    "68": [
+      "#9",
+      1,
+      4
+    ],
+    "69": [
+      "aload",
+      1,
+      0
+    ],
+    "70": [
+      "#9",
+      1,
+      0
+    ],
+    "71": [
+      "aload_1",
+      1,
+      0
+    ],
+    "72": [
+      "aload_0",
+      1,
+      0
+    ],
+    "73": [
+      "getfield",
+      1,
+      0
+    ],
+    "74": [
+      "org/apache/commons/math3/ml/neuralnet/twod/util/QuantizationError.distance:Lorg/apache/commons/math3/ml/distance/DistanceMeasure;",
+      1,
+      0
+    ],
+    "76": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "77": [
+      "org/apache/commons/math3/ml/neuralnet/MapUtils.findBest:([DLjava/lang/Iterable;Lorg/apache/commons/math3/ml/distance/DistanceMeasure;)Lorg/apache/commons/math3/ml/neuralnet/Neuron;",
+      1,
+      0
+    ],
+    "79": [
+      "astore",
+      1,
+      0
+    ],
+    "80": [
+      "#10",
+      1,
+      0
+    ],
+    "81": [
+      "aload",
+      1,
+      0
+    ],
+    "82": [
+      "#5",
+      1,
+      0
+    ],
+    "83": [
+      "aload",
+      1,
+      0
+    ],
+    "84": [
+      "#10",
+      1,
+      0
+    ],
+    "85": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "86": [
+      "org/apache/commons/math3/ml/neuralnet/twod/util/LocationFinder.getLocation:(Lorg/apache/commons/math3/ml/neuralnet/Neuron;)Lorg/apache/commons/math3/ml/neuralnet/twod/util/LocationFinder$Location;",
+      1,
+      0
+    ],
+    "88": [
+      "astore",
+      1,
+      0
+    ],
+    "89": [
+      "#11",
+      1,
+      0
+    ],
+    "90": [
+      "aload",
+      1,
+      0
+    ],
+    "91": [
+      "#11",
+      1,
+      0
+    ],
+    "92": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "93": [
+      "org/apache/commons/math3/ml/neuralnet/twod/util/LocationFinder$Location.getRow:()I",
+      1,
+      0
+    ],
+    "95": [
+      "istore",
+      1,
+      0
+    ],
+    "96": [
+      "#12",
+      1,
+      0
+    ],
+    "97": [
+      "aload",
+      1,
+      0
+    ],
+    "98": [
+      "#11",
+      1,
+      0
+    ],
+    "99": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "100": [
+      "org/apache/commons/math3/ml/neuralnet/twod/util/LocationFinder$Location.getColumn:()I",
+      1,
+      0
+    ],
+    "102": [
+      "istore",
+      1,
+      0
+    ],
+    "103": [
+      "#13",
+      1,
+      0
+    ],
+    "104": [
+      "aload",
+      1,
+      0
+    ],
+    "105": [
+      "#6",
+      1,
+      0
+    ],
+    "106": [
+      "iload",
+      1,
+      0
+    ],
+    "107": [
+      "#12",
+      1,
+      0
+    ],
+    "108": [
+      "aaload",
+      1,
+      0
+    ],
+    "109": [
+      "iload",
+      1,
+      0
+    ],
+    "110": [
+      "#13",
+      1,
+      0
+    ],
+    "111": [
+      "dup2",
+      1,
+      0
+    ],
+    "112": [
+      "iaload",
+      1,
+      0
+    ],
+    "113": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "114": [
+      "iadd",
+      1,
+      0
+    ],
+    "115": [
+      "iastore",
+      1,
+      0
+    ],
+    "116": [
+      "aload",
+      1,
+      0
+    ],
+    "117": [
+      "#7",
+      1,
+      0
+    ],
+    "118": [
+      "iload",
+      1,
+      0
+    ],
+    "119": [
+      "#12",
+      1,
+      0
+    ],
+    "120": [
+      "aaload",
+      1,
+      0
+    ],
+    "121": [
+      "iload",
+      1,
+      0
+    ],
+    "122": [
+      "#13",
+      1,
+      0
+    ],
+    "123": [
+      "dup2",
+      1,
+      0
+    ],
+    "124": [
+      "daload",
+      1,
+      0
+    ],
+    "125": [
+      "aload_0",
+      1,
+      0
+    ],
+    "126": [
+      "getfield",
+      1,
+      0
+    ],
+    "127": [
+      "org/apache/commons/math3/ml/neuralnet/twod/util/QuantizationError.distance:Lorg/apache/commons/math3/ml/distance/DistanceMeasure;",
+      1,
+      0
+    ],
+    "129": [
+      "aload",
+      1,
+      0
+    ],
+    "130": [
+      "#9",
+      1,
+      0
+    ],
+    "131": [
+      "aload",
+      1,
+      0
+    ],
+    "132": [
+      "#10",
+      1,
+      0
+    ],
+    "133": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "134": [
+      "org/apache/commons/math3/ml/neuralnet/Neuron.getFeatures:()[D",
+      1,
+      0
+    ],
+    "136": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "137": [
+      "org/apache/commons/math3/ml/distance/DistanceMeasure.org/apache/commons/math3/ml/neuralnet/twod/util/QuantizationError",
+      1,
+      0
+    ],
+    "139": [
+      "0",
+      1,
+      0
+    ],
+    "141": [
+      "dadd",
+      1,
+      0
+    ],
+    "142": [
+      "dastore",
+      1,
+      0
+    ],
+    "143": [
+      "goto",
+      0,
+      4
+    ],
+    "144": [
+      "-96",
+      0,
+      4
+    ],
+    "146": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "147": [
+      "istore",
+      1,
+      4
+    ],
+    "148": [
+      "#8",
+      1,
+      4
+    ],
+    "149": [
+      "iload",
+      1,
+      4
+    ],
+    "150": [
+      "#8",
+      1,
+      4
+    ],
+    "151": [
+      "iload_3",
+      1,
+      4
+    ],
+    "152": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "153": [
+      "54",
+      1,
+      4
+    ],
+    "155": [
+      "iconst_0",
+      2,
+      4
+    ],
+    "156": [
+      "istore",
+      2,
+      4
+    ],
+    "157": [
+      "#9",
+      2,
+      4
+    ],
+    "158": [
+      "iload",
+      2,
+      4
+    ],
+    "159": [
+      "#9",
+      2,
+      4
+    ],
+    "160": [
+      "iload",
+      2,
+      4
+    ],
+    "161": [
+      "#4",
+      2,
+      4
+    ],
+    "162": [
+      "if_icmpge",
+      2,
+      4
+    ],
+    "163": [
+      "38",
+      2,
+      4
+    ],
+    "165": [
+      "aload",
+      2,
+      0
+    ],
+    "166": [
+      "#6",
+      2,
+      0
+    ],
+    "167": [
+      "iload",
+      2,
+      0
+    ],
+    "168": [
+      "#8",
+      2,
+      0
+    ],
+    "169": [
+      "aaload",
+      2,
+      0
+    ],
+    "170": [
+      "iload",
+      2,
+      0
+    ],
+    "171": [
+      "#9",
+      2,
+      0
+    ],
+    "172": [
+      "iaload",
+      2,
+      0
+    ],
+    "173": [
+      "istore",
+      2,
+      0
+    ],
+    "174": [
+      "#10",
+      2,
+      0
+    ],
+    "175": [
+      "iload",
+      3,
+      1
+    ],
+    "176": [
+      "#10",
+      3,
+      1
+    ],
+    "177": [
+      "ifeq",
+      3,
+      1
+    ],
+    "178": [
+      "17",
+      3,
+      1
+    ],
+    "180": [
+      "aload",
+      3,
+      0
+    ],
+    "181": [
+      "#7",
+      3,
+      0
+    ],
+    "182": [
+      "iload",
+      3,
+      0
+    ],
+    "183": [
+      "#8",
+      3,
+      0
+    ],
+    "184": [
+      "aaload",
+      3,
+      0
+    ],
+    "185": [
+      "iload",
+      3,
+      0
+    ],
+    "186": [
+      "#9",
+      3,
+      0
+    ],
+    "187": [
+      "dup2",
+      3,
+      0
+    ],
+    "188": [
+      "daload",
+      3,
+      0
+    ],
+    "189": [
+      "iload",
+      3,
+      0
+    ],
+    "190": [
+      "#10",
+      3,
+      0
+    ],
+    "191": [
+      "i2d",
+      3,
+      0
+    ],
+    "192": [
+      "ddiv",
+      3,
+      0
+    ],
+    "193": [
+      "dastore",
+      3,
+      0
+    ],
+    "194": [
+      "iinc",
+      3,
+      0
+    ],
+    "195": [
+      "#9",
+      3,
+      0
+    ],
+    "196": [
+      "-89",
+      3,
+      0
+    ],
+    "197": [
+      "goto",
+      3,
+      4
+    ],
+    "198": [
+      "-39",
+      3,
+      4
+    ],
+    "200": [
+      "iinc",
+      3,
+      0
+    ],
+    "201": [
+      "#8",
+      3,
+      0
+    ],
+    "202": [
+      "-89",
+      3,
+      0
+    ],
+    "203": [
+      "goto",
+      3,
+      4
+    ],
+    "204": [
+      "-54",
+      3,
+      4
+    ],
+    "206": [
+      "aload",
+      2,
+      0
+    ],
+    "207": [
+      "#7",
+      2,
+      0
+    ],
+    "208": [
+      "areturn",
+      2,
+      0
+    ]
+  }
+}

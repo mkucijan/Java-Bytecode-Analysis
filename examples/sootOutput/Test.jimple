@@ -1,0 +1,137 @@
+public class Test extends java.lang.Object
+{
+    private static int parametar;
+
+    public void <init>()
+    {
+        Test r0;
+
+        r0 := @this: Test;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void makeSwitch()
+    {
+        int $i1;
+        java.io.PrintStream $r0, $r1, $r2;
+
+        $i1 = <Test: int parametar>;
+
+        lookupswitch($i1)
+        {
+            case 1: goto label1;
+            case 2: goto label2;
+            default: goto label3;
+        };
+
+     label1:
+        $r1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>("1");
+
+        goto label4;
+
+     label2:
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r0.<java.io.PrintStream: void println(java.lang.String)>("2");
+
+        goto label4;
+
+     label3:
+        $r2 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r2.<java.io.PrintStream: void println(java.lang.String)>("default");
+
+     label4:
+        tableswitch(1)
+        {
+            case 1: goto label5;
+            case 2: goto label6;
+            case 3: goto label7;
+            default: goto label8;
+        };
+
+     label5:
+        goto label8;
+
+     label6:
+        goto label8;
+
+     label7:
+        goto label8;
+
+     label8:
+        return;
+    }
+
+    public static void sayHello()
+    {
+        java.io.PrintStream $r0;
+
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r0.<java.io.PrintStream: void println(java.lang.String)>("Hello.");
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] r0;
+        java.lang.StringBuilder $r1, $r3, $r4, $r6, $r8, $r9;
+        java.io.PrintStream $r2, $r7;
+        java.lang.String $r5, $r10;
+        int i1;
+
+        r0 := @parameter0: java.lang.String[];
+
+        $r2 = <java.lang.System: java.io.PrintStream out>;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $r4 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>(1);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r2.<java.io.PrintStream: void println(java.lang.String)>($r5);
+
+        goto label1;
+
+     label1:
+        i1 = 0;
+
+     label2:
+        if i1 >= 10 goto label3;
+
+        $r7 = <java.lang.System: java.io.PrintStream out>;
+
+        $r6 = new java.lang.StringBuilder;
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("..");
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>(i1);
+
+        $r10 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r7.<java.io.PrintStream: void println(java.lang.String)>($r10);
+
+        i1 = i1 + 1;
+
+        goto label2;
+
+     label3:
+        staticinvoke <Test: void sayHello()>();
+
+        return;
+    }
+}

@@ -1,33 +1,27 @@
 from glob import glob
-import shutil
+import json
 import os,sys
 import pickle
 
 
 dir_path = os.getcwd()
 sys.path.append(dir_path)
-data_path = os.path.join(dir_path,'database','output')
-all_data_files = glob(os.path.join(data_path,'**','*.txt'),recursive=True)
+data_path = os.path.join(dir_path,'output')
+all_data_files = glob(os.path.join(data_path,'**','*.json'),recursive=True)
 
 classes={}
 for f in all_data_files:
-    name = os.path.split(f)[-1][:-4]
+    name = os.path.split(f)[-1][:-5]
     f = open(f,'r')
     methods = {}
-    for line in f.readlines():
-        if 'Method' in line:
-            method = line
-            methods[method] = {'x':[], 'y':[], 'index':[]}
-            continue
-        line = line.split()
-        if len(line)==4:
-            byteIndex = int(line[0])
-            instruction = line[1]
-            embendingLayer = int(line[2][1:-1])
-            embendingType = int(line[3][:-1])
-            methods[method]['x'].append(instruction)
-            methods[method]['y'].append((embendingLayer,embendingType))
-            methods[method]['index'].append(byteIndex)
+    jsonFile = json.load(f)
+    for method in jsonFile:
+        methods[method] = {'x':[], 'y':[], 'index':[]}
+        for byteIndex in jsonFile[method]:
+            methods[method]['x'].append(jsonFile[method][byteIndex][0])
+            methods[method]['y'].append( (jsonFile[method][byteIndex][1],
+                                          jsonFile[method][byteIndex][2]) )
+            methods[method]['index'].append(int(byteIndex))
     
     if methods:
         classes[name] = methods

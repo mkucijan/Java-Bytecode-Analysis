@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.insert(0, os.getcwd())
+print(sys.path)
 from JavaClassParser.Parser import Parser
 
 if __name__ == '__main__':

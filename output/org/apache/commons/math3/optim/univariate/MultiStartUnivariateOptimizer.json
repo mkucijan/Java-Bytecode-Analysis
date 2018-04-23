@@ -1,0 +1,464 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/optim/univariate/UnivariateOptimizer.getConvergenceChecker:()Lorg/apache/commons/math3/optim/ConvergenceChecker;",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/optim/univariate/UnivariateOptimizer.<init>:(Lorg/apache/commons/math3/optim/ConvergenceChecker;)V",
+      0,
+      0
+    ],
+    "8": [
+      "aload_0",
+      0,
+      0
+    ],
+    "9": [
+      "iconst_m1",
+      0,
+      0
+    ],
+    "10": [
+      "putfield",
+      0,
+      0
+    ],
+    "11": [
+      "org/apache/commons/math3/optim/univariate/MultiStartUnivariateOptimizer.maxEvalIndex:I",
+      0,
+      0
+    ],
+    "13": [
+      "aload_0",
+      0,
+      0
+    ],
+    "14": [
+      "iconst_m1",
+      0,
+      0
+    ],
+    "15": [
+      "putfield",
+      0,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/optim/univariate/MultiStartUnivariateOptimizer.searchIntervalIndex:I",
+      0,
+      0
+    ],
+    "18": [
+      "iload_2",
+      2,
+      1
+    ],
+    "19": [
+      "iconst_1",
+      2,
+      1
+    ],
+    "20": [
+      "if_icmpge",
+      2,
+      1
+    ],
+    "21": [
+      "15",
+      2,
+      1
+    ],
+    "23": [
+      "new",
+      2,
+      0
+    ],
+    "24": [
+      "org/apache/commons/math3/exception/NotStrictlyPositiveException",
+      2,
+      0
+    ],
+    "26": [
+      "dup",
+      2,
+      0
+    ],
+    "27": [
+      "iload_2",
+      2,
+      0
+    ],
+    "28": [
+      "invokestatic",
+      2,
+      0
+    ],
+    "29": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      2,
+      0
+    ],
+    "31": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "32": [
+      "org/apache/commons/math3/exception/NotStrictlyPositiveException.<init>:(Ljava/lang/Number;)V",
+      2,
+      0
+    ],
+    "34": [
+      "athrow",
+      2,
+      0
+    ],
+    "35": [
+      "aload_0",
+      0,
+      0
+    ],
+    "36": [
+      "aload_1",
+      0,
+      0
+    ],
+    "37": [
+      "putfield",
+      0,
+      0
+    ],
+    "38": [
+      "org/apache/commons/math3/optim/univariate/MultiStartUnivariateOptimizer.optimizer:Lorg/apache/commons/math3/optim/univariate/UnivariateOptimizer;",
+      0,
+      0
+    ],
+    "40": [
+      "aload_0",
+      0,
+      0
+    ],
+    "41": [
+      "iload_2",
+      0,
+      0
+    ],
+    "42": [
+      "putfield",
+      0,
+      0
+    ],
+    "43": [
+      "org/apache/commons/math3/optim/univariate/MultiStartUnivariateOptimizer.starts:I",
+      0,
+      0
+    ],
+    "45": [
+      "aload_0",
+      0,
+      0
+    ],
+    "46": [
+      "aload_3",
+      0,
+      0
+    ],
+    "47": [
+      "putfield",
+      0,
+      0
+    ],
+    "48": [
+      "org/apache/commons/math3/optim/univariate/MultiStartUnivariateOptimizer.generator:Lorg/apache/commons/math3/random/RandomGenerator;",
+      0,
+      0
+    ],
+    "50": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getEvaluations": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/optim/univariate/MultiStartUnivariateOptimizer.totalEvaluations:I",
+      0,
+      0
+    ],
+    "4": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "getOptima": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/math3/optim/univariate/MultiStartUnivariateOptimizer.optima:[Lorg/apache/commons/math3/optim/univariate/UnivariatePointValuePair;",
+      1,
+      1
+    ],
+    "4": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "5": [
+      "18",
+      1,
+      1
+    ],
+    "7": [
+      "new",
+      1,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/exception/MathIllegalStateException",
+      1,
+      0
+    ],
+    "10": [
+      "dup",
+      1,
+      0
+    ],
+    "11": [
+      "getstatic",
+      1,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.NO_OPTIMUM_COMPUTED_YET:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "14": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "15": [
+      "anewarray",
+      1,
+      0
+    ],
+    "16": [
+      "java/lang/Object",
+      1,
+      0
+    ],
+    "18": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "19": [
+      "org/apache/commons/math3/exception/MathIllegalStateException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;[Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "21": [
+      "athrow",
+      1,
+      0
+    ],
+    "22": [
+      "aload_0",
+      0,
+      0
+    ],
+    "23": [
+      "getfield",
+      0,
+      0
+    ],
+    "24": [
+      "org/apache/commons/math3/optim/univariate/MultiStartUnivariateOptimizer.optima:[Lorg/apache/commons/math3/optim/univariate/UnivariatePointValuePair;",
+      0,
+      0
+    ],
+    "26": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "27": [
+      "[Lorg/apache/commons/math3/optim/univariate/UnivariatePointValuePair;.clone:()Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "29": [
+      "checkcast",
+      0,
+      0
+    ],
+    "30": [
+      "[Lorg/apache/commons/math3/optim/univariate/UnivariatePointValuePair;",
+      0,
+      0
+    ],
+    "32": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "optimize": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/optim/univariate/MultiStartUnivariateOptimizer.optimize:([Lorg/apache/commons/math3/optim/OptimizationData;)Lorg/apache/commons/math3/optim/univariate/UnivariatePointValuePair;",
+      0,
+      0
+    ],
+    "5": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "doOptimize": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/optim/univariate/MultiStartUnivariateOptimizer.doOptimize:()Lorg/apache/commons/math3/optim/univariate/UnivariatePointValuePair;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "sortPairs": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/optim/univariate/MultiStartUnivariateOptimizer.optima:[Lorg/apache/commons/math3/optim/univariate/UnivariatePointValuePair;",
+      0,
+      0
+    ],
+    "4": [
+      "new",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/optim/univariate/MultiStartUnivariateOptimizer$1",
+      0,
+      0
+    ],
+    "7": [
+      "dup",
+      0,
+      0
+    ],
+    "8": [
+      "aload_0",
+      0,
+      0
+    ],
+    "9": [
+      "aload_1",
+      0,
+      0
+    ],
+    "10": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "11": [
+      "org/apache/commons/math3/optim/univariate/MultiStartUnivariateOptimizer$1.<init>:(Lorg/apache/commons/math3/optim/univariate/MultiStartUnivariateOptimizer;Lorg/apache/commons/math3/optim/nonlinear/scalar/GoalType;)V",
+      0,
+      0
+    ],
+    "13": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "14": [
+      "java/util/Arrays.sort:([Ljava/lang/Object;Ljava/util/Comparator;)V",
+      0,
+      0
+    ],
+    "16": [
+      "return",
+      0,
+      0
+    ]
+  }
+}

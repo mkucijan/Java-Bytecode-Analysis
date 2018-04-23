@@ -1,0 +1,2132 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "putfield",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.realEigenvalues:[D",
+      0,
+      0
+    ],
+    "9": [
+      "aload_0",
+      0,
+      0
+    ],
+    "10": [
+      "aload_2",
+      0,
+      0
+    ],
+    "11": [
+      "putfield",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.imagEigenvalues:[D",
+      0,
+      0
+    ],
+    "14": [
+      "aload_0",
+      0,
+      0
+    ],
+    "15": [
+      "aload_3",
+      0,
+      0
+    ],
+    "16": [
+      "putfield",
+      0,
+      0
+    ],
+    "17": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.eigenvectors:[Lorg/apache/commons/math3/linear/ArrayRealVector;",
+      0,
+      0
+    ],
+    "19": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "solve": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.isNonSingular:()Z",
+      1,
+      1
+    ],
+    "4": [
+      "ifne",
+      1,
+      1
+    ],
+    "5": [
+      "11",
+      1,
+      1
+    ],
+    "7": [
+      "new",
+      1,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/linear/SingularMatrixException",
+      1,
+      0
+    ],
+    "10": [
+      "dup",
+      1,
+      0
+    ],
+    "11": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/linear/SingularMatrixException.<init>:()V",
+      1,
+      0
+    ],
+    "14": [
+      "athrow",
+      1,
+      0
+    ],
+    "15": [
+      "aload_0",
+      0,
+      0
+    ],
+    "16": [
+      "getfield",
+      0,
+      0
+    ],
+    "17": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.realEigenvalues:[D",
+      0,
+      0
+    ],
+    "19": [
+      "arraylength",
+      0,
+      0
+    ],
+    "20": [
+      "istore_2",
+      0,
+      0
+    ],
+    "21": [
+      "aload_1",
+      1,
+      1
+    ],
+    "22": [
+      "invokeinterface",
+      1,
+      1
+    ],
+    "23": [
+      "org/apache/commons/math3/linear/RealMatrix.getColumnDimension:()I",
+      1,
+      1
+    ],
+    "25": [
+      "0",
+      1,
+      1
+    ],
+    "27": [
+      "iload_2",
+      1,
+      1
+    ],
+    "28": [
+      "if_icmpeq",
+      1,
+      1
+    ],
+    "29": [
+      "18",
+      1,
+      1
+    ],
+    "31": [
+      "new",
+      1,
+      0
+    ],
+    "32": [
+      "org/apache/commons/math3/exception/DimensionMismatchException",
+      1,
+      0
+    ],
+    "34": [
+      "dup",
+      1,
+      0
+    ],
+    "35": [
+      "aload_1",
+      1,
+      0
+    ],
+    "36": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "37": [
+      "org/apache/commons/math3/linear/RealMatrix.getColumnDimension:()I",
+      1,
+      0
+    ],
+    "39": [
+      "0",
+      1,
+      0
+    ],
+    "41": [
+      "iload_2",
+      1,
+      0
+    ],
+    "42": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "43": [
+      "org/apache/commons/math3/exception/DimensionMismatchException.<init>:(II)V",
+      1,
+      0
+    ],
+    "45": [
+      "athrow",
+      1,
+      0
+    ],
+    "46": [
+      "aload_1",
+      0,
+      0
+    ],
+    "47": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "48": [
+      "org/apache/commons/math3/linear/RealMatrix.getEntry:(II)D",
+      0,
+      0
+    ],
+    "50": [
+      "0",
+      0,
+      0
+    ],
+    "52": [
+      "istore_3",
+      0,
+      0
+    ],
+    "53": [
+      "iload_2",
+      0,
+      0
+    ],
+    "54": [
+      "iload_3",
+      0,
+      0
+    ],
+    "55": [
+      "multianewarray",
+      0,
+      0
+    ],
+    "56": [
+      "[[D",
+      0,
+      0
+    ],
+    "58": [
+      "58",
+      0,
+      0
+    ],
+    "59": [
+      "astore",
+      0,
+      0
+    ],
+    "60": [
+      "#4",
+      0,
+      0
+    ],
+    "61": [
+      "iload_2",
+      0,
+      0
+    ],
+    "62": [
+      "newarray",
+      0,
+      0
+    ],
+    "63": [
+      "7",
+      0,
+      0
+    ],
+    "64": [
+      "astore",
+      0,
+      0
+    ],
+    "65": [
+      "#5",
+      0,
+      0
+    ],
+    "66": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "67": [
+      "istore",
+      1,
+      4
+    ],
+    "68": [
+      "#6",
+      1,
+      4
+    ],
+    "69": [
+      "iload",
+      1,
+      4
+    ],
+    "70": [
+      "#6",
+      1,
+      4
+    ],
+    "71": [
+      "iload_3",
+      1,
+      4
+    ],
+    "72": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "73": [
+      "161",
+      1,
+      4
+    ],
+    "75": [
+      "iconst_0",
+      2,
+      4
+    ],
+    "76": [
+      "istore",
+      2,
+      4
+    ],
+    "77": [
+      "#7",
+      2,
+      4
+    ],
+    "78": [
+      "iload",
+      2,
+      4
+    ],
+    "79": [
+      "#7",
+      2,
+      4
+    ],
+    "80": [
+      "iload_2",
+      2,
+      4
+    ],
+    "81": [
+      "if_icmpge",
+      2,
+      4
+    ],
+    "82": [
+      "33",
+      2,
+      4
+    ],
+    "84": [
+      "aload",
+      2,
+      0
+    ],
+    "85": [
+      "#5",
+      2,
+      0
+    ],
+    "86": [
+      "iload",
+      2,
+      0
+    ],
+    "87": [
+      "#7",
+      2,
+      0
+    ],
+    "88": [
+      "aload_1",
+      2,
+      0
+    ],
+    "89": [
+      "iload",
+      2,
+      0
+    ],
+    "90": [
+      "#7",
+      2,
+      0
+    ],
+    "91": [
+      "iload",
+      2,
+      0
+    ],
+    "92": [
+      "#6",
+      2,
+      0
+    ],
+    "93": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "94": [
+      "org/apache/commons/math3/linear/RealMatrix.getEntry:(I)D",
+      2,
+      0
+    ],
+    "96": [
+      "0",
+      2,
+      0
+    ],
+    "98": [
+      "dastore",
+      2,
+      0
+    ],
+    "99": [
+      "aload",
+      2,
+      0
+    ],
+    "100": [
+      "#4",
+      2,
+      0
+    ],
+    "101": [
+      "iload",
+      2,
+      0
+    ],
+    "102": [
+      "#7",
+      2,
+      0
+    ],
+    "103": [
+      "aaload",
+      2,
+      0
+    ],
+    "104": [
+      "iload",
+      2,
+      0
+    ],
+    "105": [
+      "#6",
+      2,
+      0
+    ],
+    "106": [
+      "dconst_0",
+      2,
+      0
+    ],
+    "107": [
+      "dastore",
+      2,
+      0
+    ],
+    "108": [
+      "iinc",
+      2,
+      0
+    ],
+    "109": [
+      "#7",
+      2,
+      0
+    ],
+    "110": [
+      "-89",
+      2,
+      0
+    ],
+    "111": [
+      "goto",
+      2,
+      4
+    ],
+    "112": [
+      "-33",
+      2,
+      4
+    ],
+    "114": [
+      "iconst_0",
+      2,
+      4
+    ],
+    "115": [
+      "istore",
+      2,
+      4
+    ],
+    "116": [
+      "#7",
+      2,
+      4
+    ],
+    "117": [
+      "iload",
+      2,
+      4
+    ],
+    "118": [
+      "#7",
+      2,
+      4
+    ],
+    "119": [
+      "iload_2",
+      2,
+      4
+    ],
+    "120": [
+      "if_icmpge",
+      2,
+      4
+    ],
+    "121": [
+      "107",
+      2,
+      4
+    ],
+    "123": [
+      "aload_0",
+      2,
+      0
+    ],
+    "124": [
+      "getfield",
+      2,
+      0
+    ],
+    "125": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.eigenvectors:[Lorg/apache/commons/math3/linear/ArrayRealVector;",
+      2,
+      0
+    ],
+    "127": [
+      "iload",
+      2,
+      0
+    ],
+    "128": [
+      "#7",
+      2,
+      0
+    ],
+    "129": [
+      "aaload",
+      2,
+      0
+    ],
+    "130": [
+      "astore",
+      2,
+      0
+    ],
+    "131": [
+      "#8",
+      2,
+      0
+    ],
+    "132": [
+      "aload",
+      2,
+      0
+    ],
+    "133": [
+      "#8",
+      2,
+      0
+    ],
+    "134": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "135": [
+      "org/apache/commons/math3/linear/ArrayRealVector.getDataRef:()[D",
+      2,
+      0
+    ],
+    "137": [
+      "astore",
+      2,
+      0
+    ],
+    "138": [
+      "#9",
+      2,
+      0
+    ],
+    "139": [
+      "dconst_0",
+      2,
+      0
+    ],
+    "140": [
+      "dstore",
+      2,
+      0
+    ],
+    "141": [
+      "#10",
+      2,
+      0
+    ],
+    "142": [
+      "iconst_0",
+      3,
+      4
+    ],
+    "143": [
+      "istore",
+      3,
+      4
+    ],
+    "144": [
+      "#12",
+      3,
+      4
+    ],
+    "145": [
+      "iload",
+      3,
+      4
+    ],
+    "146": [
+      "#12",
+      3,
+      4
+    ],
+    "147": [
+      "iload_2",
+      3,
+      4
+    ],
+    "148": [
+      "if_icmpge",
+      3,
+      4
+    ],
+    "149": [
+      "27",
+      3,
+      4
+    ],
+    "151": [
+      "dload",
+      3,
+      0
+    ],
+    "152": [
+      "#10",
+      3,
+      0
+    ],
+    "153": [
+      "aload",
+      3,
+      0
+    ],
+    "154": [
+      "#8",
+      3,
+      0
+    ],
+    "155": [
+      "iload",
+      3,
+      0
+    ],
+    "156": [
+      "#12",
+      3,
+      0
+    ],
+    "157": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "158": [
+      "org/apache/commons/math3/linear/ArrayRealVector.getEntry:(I)D",
+      3,
+      0
+    ],
+    "160": [
+      "aload",
+      3,
+      0
+    ],
+    "161": [
+      "#5",
+      3,
+      0
+    ],
+    "162": [
+      "iload",
+      3,
+      0
+    ],
+    "163": [
+      "#12",
+      3,
+      0
+    ],
+    "164": [
+      "daload",
+      3,
+      0
+    ],
+    "165": [
+      "dmul",
+      3,
+      0
+    ],
+    "166": [
+      "dadd",
+      3,
+      0
+    ],
+    "167": [
+      "dstore",
+      3,
+      0
+    ],
+    "168": [
+      "#10",
+      3,
+      0
+    ],
+    "169": [
+      "iinc",
+      3,
+      0
+    ],
+    "170": [
+      "#12",
+      3,
+      0
+    ],
+    "171": [
+      "-89",
+      3,
+      0
+    ],
+    "172": [
+      "goto",
+      3,
+      4
+    ],
+    "173": [
+      "-27",
+      3,
+      4
+    ],
+    "175": [
+      "dload",
+      2,
+      0
+    ],
+    "176": [
+      "#10",
+      2,
+      0
+    ],
+    "177": [
+      "aload_0",
+      2,
+      0
+    ],
+    "178": [
+      "getfield",
+      2,
+      0
+    ],
+    "179": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.realEigenvalues:[D",
+      2,
+      0
+    ],
+    "181": [
+      "iload",
+      2,
+      0
+    ],
+    "182": [
+      "#7",
+      2,
+      0
+    ],
+    "183": [
+      "daload",
+      2,
+      0
+    ],
+    "184": [
+      "ddiv",
+      2,
+      0
+    ],
+    "185": [
+      "dstore",
+      2,
+      0
+    ],
+    "186": [
+      "#10",
+      2,
+      0
+    ],
+    "187": [
+      "iconst_0",
+      3,
+      4
+    ],
+    "188": [
+      "istore",
+      3,
+      4
+    ],
+    "189": [
+      "#12",
+      3,
+      4
+    ],
+    "190": [
+      "iload",
+      3,
+      4
+    ],
+    "191": [
+      "#12",
+      3,
+      4
+    ],
+    "192": [
+      "iload_2",
+      3,
+      4
+    ],
+    "193": [
+      "if_icmpge",
+      3,
+      4
+    ],
+    "194": [
+      "28",
+      3,
+      4
+    ],
+    "196": [
+      "aload",
+      3,
+      0
+    ],
+    "197": [
+      "#4",
+      3,
+      0
+    ],
+    "198": [
+      "iload",
+      3,
+      0
+    ],
+    "199": [
+      "#12",
+      3,
+      0
+    ],
+    "200": [
+      "aaload",
+      3,
+      0
+    ],
+    "201": [
+      "iload",
+      3,
+      0
+    ],
+    "202": [
+      "#6",
+      3,
+      0
+    ],
+    "203": [
+      "dup2",
+      3,
+      0
+    ],
+    "204": [
+      "daload",
+      3,
+      0
+    ],
+    "205": [
+      "dload",
+      3,
+      0
+    ],
+    "206": [
+      "#10",
+      3,
+      0
+    ],
+    "207": [
+      "aload",
+      3,
+      0
+    ],
+    "208": [
+      "#9",
+      3,
+      0
+    ],
+    "209": [
+      "iload",
+      3,
+      0
+    ],
+    "210": [
+      "#12",
+      3,
+      0
+    ],
+    "211": [
+      "daload",
+      3,
+      0
+    ],
+    "212": [
+      "dmul",
+      3,
+      0
+    ],
+    "213": [
+      "dadd",
+      3,
+      0
+    ],
+    "214": [
+      "dastore",
+      3,
+      0
+    ],
+    "215": [
+      "iinc",
+      3,
+      0
+    ],
+    "216": [
+      "#12",
+      3,
+      0
+    ],
+    "217": [
+      "-89",
+      3,
+      0
+    ],
+    "218": [
+      "goto",
+      3,
+      4
+    ],
+    "219": [
+      "-28",
+      3,
+      4
+    ],
+    "221": [
+      "iinc",
+      3,
+      0
+    ],
+    "222": [
+      "#7",
+      3,
+      0
+    ],
+    "223": [
+      "-89",
+      3,
+      0
+    ],
+    "224": [
+      "goto",
+      3,
+      4
+    ],
+    "225": [
+      "-107",
+      3,
+      4
+    ],
+    "227": [
+      "iinc",
+      3,
+      0
+    ],
+    "228": [
+      "#6",
+      3,
+      0
+    ],
+    "229": [
+      "-89",
+      3,
+      0
+    ],
+    "230": [
+      "goto",
+      3,
+      4
+    ],
+    "231": [
+      "-161",
+      3,
+      4
+    ],
+    "233": [
+      "new",
+      2,
+      0
+    ],
+    "234": [
+      "org/apache/commons/math3/linear/Array2DRowRealMatrix",
+      2,
+      0
+    ],
+    "236": [
+      "dup",
+      2,
+      0
+    ],
+    "237": [
+      "aload",
+      2,
+      0
+    ],
+    "238": [
+      "#4",
+      2,
+      0
+    ],
+    "239": [
+      "iconst_0",
+      2,
+      0
+    ],
+    "240": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "241": [
+      "org/apache/commons/math3/linear/Array2DRowRealMatrix.<init>:([[DZ)V",
+      2,
+      0
+    ],
+    "243": [
+      "areturn",
+      2,
+      0
+    ]
+  },
+  "isNonSingular": {
+    "0": [
+      "dconst_0",
+      0,
+      0
+    ],
+    "1": [
+      "dstore_1",
+      0,
+      0
+    ],
+    "2": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "3": [
+      "istore_3",
+      1,
+      4
+    ],
+    "4": [
+      "iload_3",
+      1,
+      4
+    ],
+    "5": [
+      "aload_0",
+      1,
+      4
+    ],
+    "6": [
+      "getfield",
+      1,
+      4
+    ],
+    "7": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.realEigenvalues:[D",
+      1,
+      4
+    ],
+    "9": [
+      "arraylength",
+      1,
+      4
+    ],
+    "10": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "11": [
+      "19",
+      1,
+      4
+    ],
+    "13": [
+      "dload_1",
+      1,
+      0
+    ],
+    "14": [
+      "aload_0",
+      1,
+      0
+    ],
+    "15": [
+      "iload_3",
+      1,
+      0
+    ],
+    "16": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "17": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.eigenvalueNorm:(I)D",
+      1,
+      0
+    ],
+    "19": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "20": [
+      "org/apache/commons/math3/util/FastMath.max:(DD)D",
+      1,
+      0
+    ],
+    "22": [
+      "dstore_1",
+      1,
+      0
+    ],
+    "23": [
+      "iinc",
+      1,
+      0
+    ],
+    "24": [
+      "#3",
+      1,
+      0
+    ],
+    "25": [
+      "-89",
+      1,
+      0
+    ],
+    "26": [
+      "goto",
+      1,
+      4
+    ],
+    "27": [
+      "-22",
+      1,
+      4
+    ],
+    "29": [
+      "dload_1",
+      1,
+      1
+    ],
+    "30": [
+      "dconst_0",
+      1,
+      1
+    ],
+    "31": [
+      "dcmpl",
+      1,
+      1
+    ],
+    "32": [
+      "ifne",
+      1,
+      1
+    ],
+    "33": [
+      "5",
+      1,
+      1
+    ],
+    "35": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "36": [
+      "ireturn",
+      1,
+      0
+    ],
+    "37": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "38": [
+      "istore_3",
+      1,
+      4
+    ],
+    "39": [
+      "iload_3",
+      1,
+      4
+    ],
+    "40": [
+      "aload_0",
+      1,
+      4
+    ],
+    "41": [
+      "getfield",
+      1,
+      4
+    ],
+    "42": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.realEigenvalues:[D",
+      1,
+      4
+    ],
+    "44": [
+      "arraylength",
+      1,
+      4
+    ],
+    "45": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "46": [
+      "28",
+      1,
+      4
+    ],
+    "48": [
+      "aload_0",
+      2,
+      1
+    ],
+    "49": [
+      "iload_3",
+      2,
+      1
+    ],
+    "50": [
+      "invokespecial",
+      2,
+      1
+    ],
+    "51": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.eigenvalueNorm:(I)D",
+      2,
+      1
+    ],
+    "53": [
+      "dload_1",
+      2,
+      1
+    ],
+    "54": [
+      "ddiv",
+      2,
+      1
+    ],
+    "55": [
+      "dconst_0",
+      2,
+      1
+    ],
+    "56": [
+      "ldc2_w",
+      2,
+      1
+    ],
+    "57": [
+      "1e-12",
+      2,
+      1
+    ],
+    "59": [
+      "invokestatic",
+      2,
+      1
+    ],
+    "60": [
+      "org/apache/commons/math3/util/Precision.equals:(DDD)Z",
+      2,
+      1
+    ],
+    "62": [
+      "ifeq",
+      2,
+      1
+    ],
+    "63": [
+      "5",
+      2,
+      1
+    ],
+    "65": [
+      "iconst_0",
+      2,
+      0
+    ],
+    "66": [
+      "ireturn",
+      2,
+      0
+    ],
+    "67": [
+      "iinc",
+      2,
+      0
+    ],
+    "68": [
+      "#3",
+      2,
+      0
+    ],
+    "69": [
+      "-89",
+      2,
+      0
+    ],
+    "70": [
+      "goto",
+      2,
+      4
+    ],
+    "71": [
+      "-31",
+      2,
+      4
+    ],
+    "73": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "74": [
+      "ireturn",
+      1,
+      0
+    ]
+  },
+  "eigenvalueNorm": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.realEigenvalues:[D",
+      0,
+      0
+    ],
+    "4": [
+      "iload_1",
+      0,
+      0
+    ],
+    "5": [
+      "daload",
+      0,
+      0
+    ],
+    "6": [
+      "dstore_2",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "getfield",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.imagEigenvalues:[D",
+      0,
+      0
+    ],
+    "11": [
+      "iload_1",
+      0,
+      0
+    ],
+    "12": [
+      "daload",
+      0,
+      0
+    ],
+    "13": [
+      "dstore",
+      0,
+      0
+    ],
+    "14": [
+      "#4",
+      0,
+      0
+    ],
+    "15": [
+      "dload_2",
+      0,
+      0
+    ],
+    "16": [
+      "dload_2",
+      0,
+      0
+    ],
+    "17": [
+      "dmul",
+      0,
+      0
+    ],
+    "18": [
+      "dload",
+      0,
+      0
+    ],
+    "19": [
+      "#4",
+      0,
+      0
+    ],
+    "20": [
+      "dload",
+      0,
+      0
+    ],
+    "21": [
+      "#4",
+      0,
+      0
+    ],
+    "22": [
+      "dmul",
+      0,
+      0
+    ],
+    "23": [
+      "dadd",
+      0,
+      0
+    ],
+    "24": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "25": [
+      "org/apache/commons/math3/util/FastMath.sqrt:(D)D",
+      0,
+      0
+    ],
+    "27": [
+      "dreturn",
+      0,
+      0
+    ]
+  },
+  "getInverse": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.isNonSingular:()Z",
+      1,
+      1
+    ],
+    "4": [
+      "ifne",
+      1,
+      1
+    ],
+    "5": [
+      "11",
+      1,
+      1
+    ],
+    "7": [
+      "new",
+      1,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/linear/SingularMatrixException",
+      1,
+      0
+    ],
+    "10": [
+      "dup",
+      1,
+      0
+    ],
+    "11": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/linear/SingularMatrixException.<init>:()V",
+      1,
+      0
+    ],
+    "14": [
+      "athrow",
+      1,
+      0
+    ],
+    "15": [
+      "aload_0",
+      0,
+      0
+    ],
+    "16": [
+      "getfield",
+      0,
+      0
+    ],
+    "17": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.realEigenvalues:[D",
+      0,
+      0
+    ],
+    "19": [
+      "arraylength",
+      0,
+      0
+    ],
+    "20": [
+      "istore_1",
+      0,
+      0
+    ],
+    "21": [
+      "iload_1",
+      0,
+      0
+    ],
+    "22": [
+      "iload_1",
+      0,
+      0
+    ],
+    "23": [
+      "multianewarray",
+      0,
+      0
+    ],
+    "24": [
+      "[[D",
+      0,
+      0
+    ],
+    "26": [
+      "77",
+      0,
+      0
+    ],
+    "27": [
+      "astore_2",
+      0,
+      0
+    ],
+    "28": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "29": [
+      "istore_3",
+      1,
+      4
+    ],
+    "30": [
+      "iload_3",
+      1,
+      4
+    ],
+    "31": [
+      "iload_1",
+      1,
+      4
+    ],
+    "32": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "33": [
+      "89",
+      1,
+      4
+    ],
+    "35": [
+      "aload_2",
+      1,
+      0
+    ],
+    "36": [
+      "iload_3",
+      1,
+      0
+    ],
+    "37": [
+      "aaload",
+      1,
+      0
+    ],
+    "38": [
+      "astore",
+      1,
+      0
+    ],
+    "39": [
+      "#4",
+      1,
+      0
+    ],
+    "40": [
+      "iconst_0",
+      2,
+      4
+    ],
+    "41": [
+      "istore",
+      2,
+      4
+    ],
+    "42": [
+      "#5",
+      2,
+      4
+    ],
+    "43": [
+      "iload",
+      2,
+      4
+    ],
+    "44": [
+      "#5",
+      2,
+      4
+    ],
+    "45": [
+      "iload_1",
+      2,
+      4
+    ],
+    "46": [
+      "if_icmpge",
+      2,
+      4
+    ],
+    "47": [
+      "69",
+      2,
+      4
+    ],
+    "49": [
+      "dconst_0",
+      2,
+      0
+    ],
+    "50": [
+      "dstore",
+      2,
+      0
+    ],
+    "51": [
+      "#6",
+      2,
+      0
+    ],
+    "52": [
+      "iconst_0",
+      3,
+      4
+    ],
+    "53": [
+      "istore",
+      3,
+      4
+    ],
+    "54": [
+      "#8",
+      3,
+      4
+    ],
+    "55": [
+      "iload",
+      3,
+      4
+    ],
+    "56": [
+      "#8",
+      3,
+      4
+    ],
+    "57": [
+      "iload_1",
+      3,
+      4
+    ],
+    "58": [
+      "if_icmpge",
+      3,
+      4
+    ],
+    "59": [
+      "44",
+      3,
+      4
+    ],
+    "61": [
+      "aload_0",
+      3,
+      0
+    ],
+    "62": [
+      "getfield",
+      3,
+      0
+    ],
+    "63": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.eigenvectors:[Lorg/apache/commons/math3/linear/ArrayRealVector;",
+      3,
+      0
+    ],
+    "65": [
+      "iload",
+      3,
+      0
+    ],
+    "66": [
+      "#8",
+      3,
+      0
+    ],
+    "67": [
+      "aaload",
+      3,
+      0
+    ],
+    "68": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "69": [
+      "org/apache/commons/math3/linear/ArrayRealVector.getDataRef:()[D",
+      3,
+      0
+    ],
+    "71": [
+      "astore",
+      3,
+      0
+    ],
+    "72": [
+      "#9",
+      3,
+      0
+    ],
+    "73": [
+      "dload",
+      3,
+      0
+    ],
+    "74": [
+      "#6",
+      3,
+      0
+    ],
+    "75": [
+      "aload",
+      3,
+      0
+    ],
+    "76": [
+      "#9",
+      3,
+      0
+    ],
+    "77": [
+      "iload_3",
+      3,
+      0
+    ],
+    "78": [
+      "daload",
+      3,
+      0
+    ],
+    "79": [
+      "aload",
+      3,
+      0
+    ],
+    "80": [
+      "#9",
+      3,
+      0
+    ],
+    "81": [
+      "iload",
+      3,
+      0
+    ],
+    "82": [
+      "#5",
+      3,
+      0
+    ],
+    "83": [
+      "daload",
+      3,
+      0
+    ],
+    "84": [
+      "dmul",
+      3,
+      0
+    ],
+    "85": [
+      "aload_0",
+      3,
+      0
+    ],
+    "86": [
+      "getfield",
+      3,
+      0
+    ],
+    "87": [
+      "org/apache/commons/math3/linear/EigenDecomposition$Solver.realEigenvalues:[D",
+      3,
+      0
+    ],
+    "89": [
+      "iload",
+      3,
+      0
+    ],
+    "90": [
+      "#8",
+      3,
+      0
+    ],
+    "91": [
+      "daload",
+      3,
+      0
+    ],
+    "92": [
+      "ddiv",
+      3,
+      0
+    ],
+    "93": [
+      "dadd",
+      3,
+      0
+    ],
+    "94": [
+      "dstore",
+      3,
+      0
+    ],
+    "95": [
+      "#6",
+      3,
+      0
+    ],
+    "96": [
+      "iinc",
+      3,
+      0
+    ],
+    "97": [
+      "#8",
+      3,
+      0
+    ],
+    "98": [
+      "-89",
+      3,
+      0
+    ],
+    "99": [
+      "goto",
+      3,
+      4
+    ],
+    "100": [
+      "-44",
+      3,
+      4
+    ],
+    "102": [
+      "aload",
+      2,
+      0
+    ],
+    "103": [
+      "#4",
+      2,
+      0
+    ],
+    "104": [
+      "iload",
+      2,
+      0
+    ],
+    "105": [
+      "#5",
+      2,
+      0
+    ],
+    "106": [
+      "dload",
+      2,
+      0
+    ],
+    "107": [
+      "#6",
+      2,
+      0
+    ],
+    "108": [
+      "dastore",
+      2,
+      0
+    ],
+    "109": [
+      "iinc",
+      2,
+      0
+    ],
+    "110": [
+      "#5",
+      2,
+      0
+    ],
+    "111": [
+      "-89",
+      2,
+      0
+    ],
+    "112": [
+      "goto",
+      2,
+      4
+    ],
+    "113": [
+      "-69",
+      2,
+      4
+    ],
+    "115": [
+      "iinc",
+      2,
+      0
+    ],
+    "116": [
+      "#3",
+      2,
+      0
+    ],
+    "117": [
+      "-89",
+      2,
+      0
+    ],
+    "118": [
+      "goto",
+      2,
+      4
+    ],
+    "119": [
+      "-88",
+      2,
+      4
+    ],
+    "121": [
+      "aload_2",
+      1,
+      0
+    ],
+    "122": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "123": [
+      "org/apache/commons/math3/linear/MatrixUtils.createRealMatrix:([[D)Lorg/apache/commons/math3/linear/RealMatrix;",
+      1,
+      0
+    ],
+    "125": [
+      "areturn",
+      1,
+      0
+    ]
+  }
+}

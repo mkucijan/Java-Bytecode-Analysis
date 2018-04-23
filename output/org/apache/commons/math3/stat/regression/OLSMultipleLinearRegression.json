@@ -1,0 +1,1607 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "6": [
+      "putfield",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.qr:Lorg/apache/commons/math3/linear/QRDecomposition;",
+      0,
+      0
+    ],
+    "9": [
+      "aload_0",
+      0,
+      0
+    ],
+    "10": [
+      "dload_1",
+      0,
+      0
+    ],
+    "11": [
+      "putfield",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.threshold:D",
+      0,
+      0
+    ],
+    "14": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "newSampleData": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "iload_2",
+      0,
+      0
+    ],
+    "3": [
+      "iload_3",
+      0,
+      0
+    ],
+    "4": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.newSampleData:([DII)V",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "new",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/linear/QRDecomposition",
+      0,
+      0
+    ],
+    "11": [
+      "dup",
+      0,
+      0
+    ],
+    "12": [
+      "aload_0",
+      0,
+      0
+    ],
+    "13": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "14": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.getX:()Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "16": [
+      "aload_0",
+      0,
+      0
+    ],
+    "17": [
+      "getfield",
+      0,
+      0
+    ],
+    "18": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.threshold:D",
+      0,
+      0
+    ],
+    "20": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "21": [
+      "org/apache/commons/math3/linear/QRDecomposition.<init>:(Lorg/apache/commons/math3/linear/RealMatrix;D)V",
+      0,
+      0
+    ],
+    "23": [
+      "putfield",
+      0,
+      0
+    ],
+    "24": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.qr:Lorg/apache/commons/math3/linear/QRDecomposition;",
+      0,
+      0
+    ],
+    "26": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "calculateHat": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.qr:Lorg/apache/commons/math3/linear/QRDecomposition;",
+      0,
+      0
+    ],
+    "4": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/linear/QRDecomposition.getQ:()Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "7": [
+      "astore_1",
+      0,
+      0
+    ],
+    "8": [
+      "aload_0",
+      0,
+      0
+    ],
+    "9": [
+      "getfield",
+      0,
+      0
+    ],
+    "10": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.qr:Lorg/apache/commons/math3/linear/QRDecomposition;",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/math3/linear/QRDecomposition.getR:()Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "15": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/linear/Array2DRowRealMatrix",
+      0,
+      0
+    ],
+    "18": [
+      "0",
+      0,
+      0
+    ],
+    "20": [
+      "istore_2",
+      0,
+      0
+    ],
+    "21": [
+      "aload_1",
+      0,
+      0
+    ],
+    "22": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "23": [
+      "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/linear/Array2DRowRealMatrix",
+      0,
+      0
+    ],
+    "25": [
+      "0",
+      0,
+      0
+    ],
+    "27": [
+      "istore_3",
+      0,
+      0
+    ],
+    "28": [
+      "new",
+      0,
+      0
+    ],
+    "29": [
+      "org/apache/commons/math3/linear/Array2DRowRealMatrix",
+      0,
+      0
+    ],
+    "31": [
+      "dup",
+      0,
+      0
+    ],
+    "32": [
+      "iload_3",
+      0,
+      0
+    ],
+    "33": [
+      "iload_3",
+      0,
+      0
+    ],
+    "34": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "35": [
+      "org/apache/commons/math3/linear/Array2DRowRealMatrix.<init>:(II)V",
+      0,
+      0
+    ],
+    "37": [
+      "astore",
+      0,
+      0
+    ],
+    "38": [
+      "#4",
+      0,
+      0
+    ],
+    "39": [
+      "aload",
+      0,
+      0
+    ],
+    "40": [
+      "#4",
+      0,
+      0
+    ],
+    "41": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "42": [
+      "org/apache/commons/math3/linear/Array2DRowRealMatrix.getDataRef:()[[D",
+      0,
+      0
+    ],
+    "44": [
+      "astore",
+      0,
+      0
+    ],
+    "45": [
+      "#5",
+      0,
+      0
+    ],
+    "46": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "47": [
+      "istore",
+      1,
+      4
+    ],
+    "48": [
+      "#6",
+      1,
+      4
+    ],
+    "49": [
+      "iload",
+      1,
+      4
+    ],
+    "50": [
+      "#6",
+      1,
+      4
+    ],
+    "51": [
+      "iload_3",
+      1,
+      4
+    ],
+    "52": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "53": [
+      "58",
+      1,
+      4
+    ],
+    "55": [
+      "iconst_0",
+      2,
+      4
+    ],
+    "56": [
+      "istore",
+      2,
+      4
+    ],
+    "57": [
+      "#7",
+      2,
+      4
+    ],
+    "58": [
+      "iload",
+      2,
+      4
+    ],
+    "59": [
+      "#7",
+      2,
+      4
+    ],
+    "60": [
+      "iload_3",
+      2,
+      4
+    ],
+    "61": [
+      "if_icmpge",
+      2,
+      4
+    ],
+    "62": [
+      "43",
+      2,
+      4
+    ],
+    "64": [
+      "iload",
+      3,
+      1
+    ],
+    "65": [
+      "#6",
+      3,
+      1
+    ],
+    "66": [
+      "iload",
+      3,
+      1
+    ],
+    "67": [
+      "#7",
+      3,
+      1
+    ],
+    "68": [
+      "if_icmpne",
+      3,
+      1
+    ],
+    "69": [
+      "21",
+      3,
+      1
+    ],
+    "71": [
+      "iload",
+      3,
+      1
+    ],
+    "72": [
+      "#6",
+      3,
+      1
+    ],
+    "73": [
+      "iload_2",
+      3,
+      1
+    ],
+    "74": [
+      "if_icmpge",
+      3,
+      1
+    ],
+    "75": [
+      "15",
+      3,
+      1
+    ],
+    "77": [
+      "aload",
+      3,
+      0
+    ],
+    "78": [
+      "#5",
+      3,
+      0
+    ],
+    "79": [
+      "iload",
+      3,
+      0
+    ],
+    "80": [
+      "#6",
+      3,
+      0
+    ],
+    "81": [
+      "aaload",
+      3,
+      0
+    ],
+    "82": [
+      "iload",
+      3,
+      0
+    ],
+    "83": [
+      "#7",
+      3,
+      0
+    ],
+    "84": [
+      "dconst_1",
+      3,
+      0
+    ],
+    "85": [
+      "dastore",
+      3,
+      0
+    ],
+    "86": [
+      "goto",
+      3,
+      0
+    ],
+    "87": [
+      "12",
+      3,
+      0
+    ],
+    "89": [
+      "aload",
+      3,
+      0
+    ],
+    "90": [
+      "#5",
+      3,
+      0
+    ],
+    "91": [
+      "iload",
+      3,
+      0
+    ],
+    "92": [
+      "#6",
+      3,
+      0
+    ],
+    "93": [
+      "aaload",
+      3,
+      0
+    ],
+    "94": [
+      "iload",
+      3,
+      0
+    ],
+    "95": [
+      "#7",
+      3,
+      0
+    ],
+    "96": [
+      "dconst_0",
+      3,
+      0
+    ],
+    "97": [
+      "dastore",
+      3,
+      0
+    ],
+    "98": [
+      "iinc",
+      3,
+      0
+    ],
+    "99": [
+      "#7",
+      3,
+      0
+    ],
+    "100": [
+      "-89",
+      3,
+      0
+    ],
+    "101": [
+      "goto",
+      3,
+      4
+    ],
+    "102": [
+      "-43",
+      3,
+      4
+    ],
+    "104": [
+      "iinc",
+      3,
+      0
+    ],
+    "105": [
+      "#6",
+      3,
+      0
+    ],
+    "106": [
+      "-89",
+      3,
+      0
+    ],
+    "107": [
+      "goto",
+      3,
+      4
+    ],
+    "108": [
+      "-58",
+      3,
+      4
+    ],
+    "110": [
+      "aload_1",
+      2,
+      0
+    ],
+    "111": [
+      "aload",
+      2,
+      0
+    ],
+    "112": [
+      "#4",
+      2,
+      0
+    ],
+    "113": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "114": [
+      "org/apache/commons/math3/linear/RealMatrix.transpose:()Lorg/apache/commons/math3/linear/RealMatrix;",
+      2,
+      0
+    ],
+    "116": [
+      "0",
+      2,
+      0
+    ],
+    "118": [
+      "aload_1",
+      2,
+      0
+    ],
+    "119": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "120": [
+      "org/apache/commons/math3/linear/RealMatrix.isNoIntercept:()Z",
+      2,
+      0
+    ],
+    "122": [
+      "0",
+      2,
+      0
+    ],
+    "124": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "125": [
+      "org/apache/commons/math3/linear/RealMatrix.transpose:()Lorg/apache/commons/math3/linear/RealMatrix;",
+      2,
+      0
+    ],
+    "127": [
+      "0",
+      2,
+      0
+    ],
+    "129": [
+      "areturn",
+      2,
+      0
+    ]
+  },
+  "calculateTotalSumOfSquares": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.isNoIntercept:()Z",
+      1,
+      1
+    ],
+    "4": [
+      "ifeq",
+      1,
+      1
+    ],
+    "5": [
+      "14",
+      1,
+      1
+    ],
+    "7": [
+      "aload_0",
+      1,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.getY:()Lorg/apache/commons/math3/linear/RealVector;",
+      1,
+      0
+    ],
+    "11": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/linear/RealVector.toArray:()[D",
+      1,
+      0
+    ],
+    "14": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "15": [
+      "org/apache/commons/math3/stat/StatUtils.sumSq:([D)D",
+      1,
+      0
+    ],
+    "17": [
+      "dreturn",
+      1,
+      0
+    ],
+    "18": [
+      "new",
+      1,
+      0
+    ],
+    "19": [
+      "org/apache/commons/math3/stat/descriptive/moment/SecondMoment",
+      1,
+      0
+    ],
+    "21": [
+      "dup",
+      1,
+      0
+    ],
+    "22": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "23": [
+      "org/apache/commons/math3/stat/descriptive/moment/SecondMoment.<init>:()V",
+      1,
+      0
+    ],
+    "25": [
+      "aload_0",
+      1,
+      0
+    ],
+    "26": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "27": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.getY:()Lorg/apache/commons/math3/linear/RealVector;",
+      1,
+      0
+    ],
+    "29": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "30": [
+      "org/apache/commons/math3/linear/RealVector.toArray:()[D",
+      1,
+      0
+    ],
+    "32": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "33": [
+      "org/apache/commons/math3/stat/descriptive/moment/SecondMoment.evaluate:([D)D",
+      1,
+      0
+    ],
+    "35": [
+      "dreturn",
+      1,
+      0
+    ]
+  },
+  "calculateResidualSumOfSquares": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.calculateResiduals:()Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "4": [
+      "astore_1",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "aload_1",
+      0,
+      0
+    ],
+    "7": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/linear/RealVector.dotProduct:(Lorg/apache/commons/math3/linear/RealVector;)D",
+      0,
+      0
+    ],
+    "10": [
+      "dreturn",
+      0,
+      0
+    ]
+  },
+  "calculateRSquared": {
+    "0": [
+      "dconst_1",
+      0,
+      0
+    ],
+    "1": [
+      "aload_0",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.calculateResidualSumOfSquares:()D",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.calculateTotalSumOfSquares:()D",
+      0,
+      0
+    ],
+    "9": [
+      "ddiv",
+      0,
+      0
+    ],
+    "10": [
+      "dsub",
+      0,
+      0
+    ],
+    "11": [
+      "dreturn",
+      0,
+      0
+    ]
+  },
+  "calculateAdjustedRSquared": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.getX:()Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "4": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/linear/RealMatrix.calculateRSquared:()D",
+      0,
+      0
+    ],
+    "7": [
+      "0",
+      0,
+      0
+    ],
+    "9": [
+      "i2d",
+      0,
+      0
+    ],
+    "10": [
+      "dstore_1",
+      0,
+      0
+    ],
+    "11": [
+      "aload_0",
+      1,
+      1
+    ],
+    "12": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "13": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.isNoIntercept:()Z",
+      1,
+      1
+    ],
+    "15": [
+      "ifeq",
+      1,
+      1
+    ],
+    "16": [
+      "27",
+      1,
+      1
+    ],
+    "18": [
+      "dconst_1",
+      1,
+      0
+    ],
+    "19": [
+      "dconst_1",
+      1,
+      0
+    ],
+    "20": [
+      "aload_0",
+      1,
+      0
+    ],
+    "21": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "22": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.calculateRSquared:()D",
+      1,
+      0
+    ],
+    "24": [
+      "dsub",
+      1,
+      0
+    ],
+    "25": [
+      "dload_1",
+      1,
+      0
+    ],
+    "26": [
+      "dload_1",
+      1,
+      0
+    ],
+    "27": [
+      "aload_0",
+      1,
+      0
+    ],
+    "28": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "29": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.getX:()Lorg/apache/commons/math3/linear/RealMatrix;",
+      1,
+      0
+    ],
+    "31": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "32": [
+      "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/linear/Array2DRowRealMatrix",
+      1,
+      0
+    ],
+    "34": [
+      "0",
+      1,
+      0
+    ],
+    "36": [
+      "i2d",
+      1,
+      0
+    ],
+    "37": [
+      "dsub",
+      1,
+      0
+    ],
+    "38": [
+      "ddiv",
+      1,
+      0
+    ],
+    "39": [
+      "dmul",
+      1,
+      0
+    ],
+    "40": [
+      "dsub",
+      1,
+      0
+    ],
+    "41": [
+      "dreturn",
+      1,
+      0
+    ],
+    "42": [
+      "dconst_1",
+      1,
+      0
+    ],
+    "43": [
+      "aload_0",
+      1,
+      0
+    ],
+    "44": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "45": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.calculateResidualSumOfSquares:()D",
+      1,
+      0
+    ],
+    "47": [
+      "dload_1",
+      1,
+      0
+    ],
+    "48": [
+      "dconst_1",
+      1,
+      0
+    ],
+    "49": [
+      "dsub",
+      1,
+      0
+    ],
+    "50": [
+      "dmul",
+      1,
+      0
+    ],
+    "51": [
+      "aload_0",
+      1,
+      0
+    ],
+    "52": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "53": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.calculateTotalSumOfSquares:()D",
+      1,
+      0
+    ],
+    "55": [
+      "dload_1",
+      1,
+      0
+    ],
+    "56": [
+      "aload_0",
+      1,
+      0
+    ],
+    "57": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "58": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.getX:()Lorg/apache/commons/math3/linear/RealMatrix;",
+      1,
+      0
+    ],
+    "60": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "61": [
+      "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/linear/Array2DRowRealMatrix",
+      1,
+      0
+    ],
+    "63": [
+      "0",
+      1,
+      0
+    ],
+    "65": [
+      "i2d",
+      1,
+      0
+    ],
+    "66": [
+      "dsub",
+      1,
+      0
+    ],
+    "67": [
+      "dmul",
+      1,
+      0
+    ],
+    "68": [
+      "ddiv",
+      1,
+      0
+    ],
+    "69": [
+      "dsub",
+      1,
+      0
+    ],
+    "70": [
+      "dreturn",
+      1,
+      0
+    ]
+  },
+  "newXSampleData": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/stat/regression/AbstractMultipleLinearRegression.newXSampleData:([[D)V",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "new",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/linear/QRDecomposition",
+      0,
+      0
+    ],
+    "9": [
+      "dup",
+      0,
+      0
+    ],
+    "10": [
+      "aload_0",
+      0,
+      0
+    ],
+    "11": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.getX:()Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "14": [
+      "aload_0",
+      0,
+      0
+    ],
+    "15": [
+      "getfield",
+      0,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.threshold:D",
+      0,
+      0
+    ],
+    "18": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "19": [
+      "org/apache/commons/math3/linear/QRDecomposition.<init>:(Lorg/apache/commons/math3/linear/RealMatrix;D)V",
+      0,
+      0
+    ],
+    "21": [
+      "putfield",
+      0,
+      0
+    ],
+    "22": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.qr:Lorg/apache/commons/math3/linear/QRDecomposition;",
+      0,
+      0
+    ],
+    "24": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "calculateBeta": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.qr:Lorg/apache/commons/math3/linear/QRDecomposition;",
+      0,
+      0
+    ],
+    "4": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/linear/QRDecomposition.getSolver:()Lorg/apache/commons/math3/linear/DecompositionSolver;",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.getY:()Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "11": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/linear/DecompositionSolver.getSubMatrix:(IIII)Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "14": [
+      "0",
+      0,
+      0
+    ],
+    "16": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "calculateBetaVariance": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.getX:()Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "4": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/linear/Array2DRowRealMatrix",
+      0,
+      0
+    ],
+    "7": [
+      "0",
+      0,
+      0
+    ],
+    "9": [
+      "istore_1",
+      0,
+      0
+    ],
+    "10": [
+      "aload_0",
+      0,
+      0
+    ],
+    "11": [
+      "getfield",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression.qr:Lorg/apache/commons/math3/linear/QRDecomposition;",
+      0,
+      0
+    ],
+    "14": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "15": [
+      "org/apache/commons/math3/linear/QRDecomposition.getR:()Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "17": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "18": [
+      "iload_1",
+      0,
+      0
+    ],
+    "19": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "20": [
+      "isub",
+      0,
+      0
+    ],
+    "21": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "22": [
+      "iload_1",
+      0,
+      0
+    ],
+    "23": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "24": [
+      "isub",
+      0,
+      0
+    ],
+    "25": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "26": [
+      "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/linear/LUDecomposition",
+      0,
+      0
+    ],
+    "28": [
+      "0",
+      0,
+      0
+    ],
+    "30": [
+      "astore_2",
+      0,
+      0
+    ],
+    "31": [
+      "new",
+      0,
+      0
+    ],
+    "32": [
+      "org/apache/commons/math3/linear/LUDecomposition",
+      0,
+      0
+    ],
+    "34": [
+      "dup",
+      0,
+      0
+    ],
+    "35": [
+      "aload_2",
+      0,
+      0
+    ],
+    "36": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "37": [
+      "org/apache/commons/math3/linear/LUDecomposition.<init>:(Lorg/apache/commons/math3/linear/RealMatrix;)V",
+      0,
+      0
+    ],
+    "39": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "40": [
+      "org/apache/commons/math3/linear/LUDecomposition.getSolver:()Lorg/apache/commons/math3/linear/DecompositionSolver;",
+      0,
+      0
+    ],
+    "42": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "43": [
+      "org/apache/commons/math3/linear/DecompositionSolver.org/apache/commons/math3/stat/regression/OLSMultipleLinearRegression",
+      0,
+      0
+    ],
+    "45": [
+      "0",
+      0,
+      0
+    ],
+    "47": [
+      "astore_3",
+      0,
+      0
+    ],
+    "48": [
+      "aload_3",
+      0,
+      0
+    ],
+    "49": [
+      "aload_3",
+      0,
+      0
+    ],
+    "50": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "51": [
+      "org/apache/commons/math3/linear/RealMatrix.isNoIntercept:()Z",
+      0,
+      0
+    ],
+    "53": [
+      "0",
+      0,
+      0
+    ],
+    "55": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "56": [
+      "org/apache/commons/math3/linear/RealMatrix.transpose:()Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "58": [
+      "0",
+      0,
+      0
+    ],
+    "60": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

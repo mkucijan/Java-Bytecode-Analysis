@@ -1,0 +1,101 @@
+.source Test.java
+.class public Test
+.super java/lang/Object
+
+.field private static "parametar" I
+
+
+.method public <init>()V
+    .limit stack 1
+    .limit locals 1
+    aload_0
+    invokespecial java/lang/Object/<init>()V
+    return
+.end method
+
+.method public static makeSwitch()V
+    .limit stack 2
+    .limit locals 0
+    getstatic Test/parametar I
+    lookupswitch
+      1 : label0
+      2 : label1
+      default : label2
+label0:
+    getstatic java/lang/System/out Ljava/io/PrintStream;
+    ldc "1"
+    invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+    goto label3
+label1:
+    getstatic java/lang/System/out Ljava/io/PrintStream;
+    ldc "2"
+    invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+    goto label3
+label2:
+    getstatic java/lang/System/out Ljava/io/PrintStream;
+    ldc "default"
+    invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+label3:
+    iconst_1
+    tableswitch 1 ; high = 3
+      label4
+      label5
+      label6
+    default : label7
+label4:
+    goto label7
+label5:
+    goto label7
+label6:
+    goto label7
+label7:
+    return
+.end method
+
+.method public static sayHello()V
+    .limit stack 2
+    .limit locals 0
+    getstatic java/lang/System/out Ljava/io/PrintStream;
+    ldc "Hello."
+    invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+    return
+.end method
+
+.method public static main([Ljava/lang/String;)V
+    .limit stack 3
+    .limit locals 1
+    getstatic java/lang/System/out Ljava/io/PrintStream;
+    new java/lang/StringBuilder
+    dup
+    invokespecial java/lang/StringBuilder/<init>()V
+    ldc ""
+    invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iconst_1
+    invokevirtual java/lang/StringBuilder/append(I)Ljava/lang/StringBuilder;
+    invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+    invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+    goto label0
+label0:
+    iconst_0
+    istore_0
+label2:
+    iload_0
+    bipush 10
+    if_icmpge label1
+    getstatic java/lang/System/out Ljava/io/PrintStream;
+    new java/lang/StringBuilder
+    dup
+    invokespecial java/lang/StringBuilder/<init>()V
+    ldc ".."
+    invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iload_0
+    invokevirtual java/lang/StringBuilder/append(I)Ljava/lang/StringBuilder;
+    invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+    invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+    iinc 0 1
+    goto label2
+label1:
+    invokestatic Test/sayHello()V
+    return
+.end method
+

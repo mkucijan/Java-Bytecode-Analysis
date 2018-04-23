@@ -1,0 +1,1546 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "dload_1",
+      0,
+      0
+    ],
+    "6": [
+      "putfield",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$SegmentsBuilder.tolerance:D",
+      0,
+      0
+    ],
+    "9": [
+      "aload_0",
+      0,
+      0
+    ],
+    "10": [
+      "new",
+      0,
+      0
+    ],
+    "11": [
+      "java/util/ArrayList",
+      0,
+      0
+    ],
+    "13": [
+      "dup",
+      0,
+      0
+    ],
+    "14": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "15": [
+      "java/util/ArrayList.<init>:()V",
+      0,
+      0
+    ],
+    "17": [
+      "putfield",
+      0,
+      0
+    ],
+    "18": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$SegmentsBuilder.segments:Ljava/util/List;",
+      0,
+      0
+    ],
+    "20": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "visitOrder": {
+    "0": [
+      "getstatic",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTreeVisitor$Order.MINUS_SUB_PLUS:Lorg/apache/commons/math3/geometry/partitioning/BSPTreeVisitor$Order;",
+      0,
+      0
+    ],
+    "3": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "visitInternalNode": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getAttribute:()Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "4": [
+      "checkcast",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/geometry/partitioning/BoundaryAttribute",
+      0,
+      0
+    ],
+    "7": [
+      "astore_2",
+      0,
+      0
+    ],
+    "8": [
+      "aload_2",
+      0,
+      0
+    ],
+    "9": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "10": [
+      "org/apache/commons/math3/geometry/partitioning/BoundaryAttribute.getSplitters:()Lorg/apache/commons/math3/geometry/partitioning/NodesSet;",
+      0,
+      0
+    ],
+    "12": [
+      "astore_3",
+      0,
+      0
+    ],
+    "13": [
+      "aload_2",
+      1,
+      1
+    ],
+    "14": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "15": [
+      "org/apache/commons/math3/geometry/partitioning/BoundaryAttribute.getPlusOutside:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      1
+    ],
+    "17": [
+      "ifnull",
+      1,
+      1
+    ],
+    "18": [
+      "14",
+      1,
+      1
+    ],
+    "20": [
+      "aload_0",
+      1,
+      0
+    ],
+    "21": [
+      "aload_2",
+      1,
+      0
+    ],
+    "22": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "23": [
+      "org/apache/commons/math3/geometry/partitioning/BoundaryAttribute.getPlusOutside:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      0
+    ],
+    "25": [
+      "aload_1",
+      1,
+      0
+    ],
+    "26": [
+      "aload_3",
+      1,
+      0
+    ],
+    "27": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "28": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "29": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$SegmentsBuilder.addContribution:(Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Ljava/lang/Iterable;Z)V",
+      1,
+      0
+    ],
+    "31": [
+      "aload_2",
+      1,
+      1
+    ],
+    "32": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "33": [
+      "org/apache/commons/math3/geometry/partitioning/BoundaryAttribute.getPlusInside:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      1
+    ],
+    "35": [
+      "ifnull",
+      1,
+      1
+    ],
+    "36": [
+      "14",
+      1,
+      1
+    ],
+    "38": [
+      "aload_0",
+      1,
+      0
+    ],
+    "39": [
+      "aload_2",
+      1,
+      0
+    ],
+    "40": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "41": [
+      "org/apache/commons/math3/geometry/partitioning/BoundaryAttribute.getPlusInside:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      0
+    ],
+    "43": [
+      "aload_1",
+      1,
+      0
+    ],
+    "44": [
+      "aload_3",
+      1,
+      0
+    ],
+    "45": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "46": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "47": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$SegmentsBuilder.addContribution:(Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Ljava/lang/Iterable;Z)V",
+      1,
+      0
+    ],
+    "49": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "visitLeafNode": {
+    "0": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "addContribution": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "checkcast",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/geometry/partitioning/AbstractSubHyperplane",
+      0,
+      0
+    ],
+    "4": [
+      "astore",
+      0,
+      0
+    ],
+    "5": [
+      "#5",
+      0,
+      0
+    ],
+    "6": [
+      "aload_1",
+      0,
+      0
+    ],
+    "7": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane.org/apache/commons/math3/geometry/euclidean/twod/Line",
+      0,
+      0
+    ],
+    "10": [
+      "0",
+      0,
+      0
+    ],
+    "12": [
+      "checkcast",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/math3/geometry/euclidean/twod/Line",
+      0,
+      0
+    ],
+    "15": [
+      "astore",
+      0,
+      0
+    ],
+    "16": [
+      "#6",
+      0,
+      0
+    ],
+    "17": [
+      "aload",
+      0,
+      0
+    ],
+    "18": [
+      "#5",
+      0,
+      0
+    ],
+    "19": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "20": [
+      "org/apache/commons/math3/geometry/partitioning/AbstractSubHyperplane.getRemainingRegion:()Lorg/apache/commons/math3/geometry/partitioning/Region;",
+      0,
+      0
+    ],
+    "22": [
+      "checkcast",
+      0,
+      0
+    ],
+    "23": [
+      "org/apache/commons/math3/geometry/euclidean/oned/IntervalsSet",
+      0,
+      0
+    ],
+    "25": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "26": [
+      "org/apache/commons/math3/geometry/euclidean/oned/IntervalsSet.asList:()Ljava/util/List;",
+      0,
+      0
+    ],
+    "28": [
+      "astore",
+      0,
+      0
+    ],
+    "29": [
+      "#7",
+      0,
+      0
+    ],
+    "30": [
+      "aload",
+      1,
+      4
+    ],
+    "31": [
+      "#7",
+      1,
+      4
+    ],
+    "32": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "33": [
+      "java/util/List.java/util/Iterator",
+      1,
+      4
+    ],
+    "35": [
+      "0",
+      1,
+      4
+    ],
+    "37": [
+      "astore",
+      1,
+      4
+    ],
+    "38": [
+      "#8",
+      1,
+      4
+    ],
+    "39": [
+      "aload",
+      1,
+      4
+    ],
+    "40": [
+      "#8",
+      1,
+      4
+    ],
+    "41": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "42": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "44": [
+      "0",
+      1,
+      4
+    ],
+    "46": [
+      "ifeq",
+      1,
+      4
+    ],
+    "47": [
+      "171",
+      1,
+      4
+    ],
+    "49": [
+      "aload",
+      1,
+      4
+    ],
+    "50": [
+      "#8",
+      1,
+      4
+    ],
+    "51": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "52": [
+      "java/util/Iterator.org/apache/commons/math3/geometry/euclidean/oned/Interval",
+      1,
+      4
+    ],
+    "54": [
+      "0",
+      1,
+      4
+    ],
+    "56": [
+      "checkcast",
+      1,
+      4
+    ],
+    "57": [
+      "org/apache/commons/math3/geometry/euclidean/oned/Interval",
+      1,
+      4
+    ],
+    "59": [
+      "astore",
+      1,
+      4
+    ],
+    "60": [
+      "#9",
+      1,
+      4
+    ],
+    "61": [
+      "aload",
+      1,
+      0
+    ],
+    "62": [
+      "#9",
+      1,
+      0
+    ],
+    "63": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "64": [
+      "org/apache/commons/math3/geometry/euclidean/oned/Interval.getInf:()D",
+      1,
+      0
+    ],
+    "66": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "67": [
+      "java/lang/Double.isInfinite:(D)Z",
+      1,
+      0
+    ],
+    "69": [
+      "ifeq",
+      1,
+      0
+    ],
+    "70": [
+      "7",
+      1,
+      0
+    ],
+    "72": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "73": [
+      "goto",
+      1,
+      0
+    ],
+    "74": [
+      "20",
+      1,
+      0
+    ],
+    "76": [
+      "aload",
+      1,
+      0
+    ],
+    "77": [
+      "#6",
+      1,
+      0
+    ],
+    "78": [
+      "new",
+      1,
+      0
+    ],
+    "79": [
+      "org/apache/commons/math3/geometry/euclidean/oned/Vector1D",
+      1,
+      0
+    ],
+    "81": [
+      "dup",
+      1,
+      0
+    ],
+    "82": [
+      "aload",
+      1,
+      0
+    ],
+    "83": [
+      "#9",
+      1,
+      0
+    ],
+    "84": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "85": [
+      "org/apache/commons/math3/geometry/euclidean/oned/Interval.getInf:()D",
+      1,
+      0
+    ],
+    "87": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "88": [
+      "org/apache/commons/math3/geometry/euclidean/oned/Vector1D.<init>:(D)V",
+      1,
+      0
+    ],
+    "90": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "91": [
+      "org/apache/commons/math3/geometry/euclidean/twod/Line.toSpace:(Lorg/apache/commons/math3/geometry/Point;)Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;",
+      1,
+      0
+    ],
+    "93": [
+      "astore",
+      1,
+      0
+    ],
+    "94": [
+      "#10",
+      1,
+      0
+    ],
+    "95": [
+      "aload",
+      1,
+      0
+    ],
+    "96": [
+      "#9",
+      1,
+      0
+    ],
+    "97": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "98": [
+      "org/apache/commons/math3/geometry/euclidean/oned/Interval.getSup:()D",
+      1,
+      0
+    ],
+    "100": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "101": [
+      "java/lang/Double.isInfinite:(D)Z",
+      1,
+      0
+    ],
+    "103": [
+      "ifeq",
+      1,
+      0
+    ],
+    "104": [
+      "7",
+      1,
+      0
+    ],
+    "106": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "107": [
+      "goto",
+      1,
+      0
+    ],
+    "108": [
+      "20",
+      1,
+      0
+    ],
+    "110": [
+      "aload",
+      1,
+      0
+    ],
+    "111": [
+      "#6",
+      1,
+      0
+    ],
+    "112": [
+      "new",
+      1,
+      0
+    ],
+    "113": [
+      "org/apache/commons/math3/geometry/euclidean/oned/Vector1D",
+      1,
+      0
+    ],
+    "115": [
+      "dup",
+      1,
+      0
+    ],
+    "116": [
+      "aload",
+      1,
+      0
+    ],
+    "117": [
+      "#9",
+      1,
+      0
+    ],
+    "118": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "119": [
+      "org/apache/commons/math3/geometry/euclidean/oned/Interval.getSup:()D",
+      1,
+      0
+    ],
+    "121": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "122": [
+      "org/apache/commons/math3/geometry/euclidean/oned/Vector1D.<init>:(D)V",
+      1,
+      0
+    ],
+    "124": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "125": [
+      "org/apache/commons/math3/geometry/euclidean/twod/Line.toSpace:(Lorg/apache/commons/math3/geometry/Point;)Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;",
+      1,
+      0
+    ],
+    "127": [
+      "astore",
+      1,
+      0
+    ],
+    "128": [
+      "#11",
+      1,
+      0
+    ],
+    "129": [
+      "aload_0",
+      1,
+      0
+    ],
+    "130": [
+      "aload",
+      1,
+      0
+    ],
+    "131": [
+      "#10",
+      1,
+      0
+    ],
+    "132": [
+      "aload_3",
+      1,
+      0
+    ],
+    "133": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "134": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$SegmentsBuilder.selectClosest:(Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;Ljava/lang/Iterable;)Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      1,
+      0
+    ],
+    "136": [
+      "astore",
+      1,
+      0
+    ],
+    "137": [
+      "#12",
+      1,
+      0
+    ],
+    "138": [
+      "aload_0",
+      1,
+      0
+    ],
+    "139": [
+      "aload",
+      1,
+      0
+    ],
+    "140": [
+      "#11",
+      1,
+      0
+    ],
+    "141": [
+      "aload_3",
+      1,
+      0
+    ],
+    "142": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "143": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$SegmentsBuilder.selectClosest:(Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;Ljava/lang/Iterable;)Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      1,
+      0
+    ],
+    "145": [
+      "astore",
+      1,
+      0
+    ],
+    "146": [
+      "#13",
+      1,
+      0
+    ],
+    "147": [
+      "iload",
+      2,
+      1
+    ],
+    "148": [
+      "#4",
+      2,
+      1
+    ],
+    "149": [
+      "ifeq",
+      2,
+      1
+    ],
+    "150": [
+      "37",
+      2,
+      1
+    ],
+    "152": [
+      "aload_0",
+      2,
+      0
+    ],
+    "153": [
+      "getfield",
+      2,
+      0
+    ],
+    "154": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$SegmentsBuilder.segments:Ljava/util/List;",
+      2,
+      0
+    ],
+    "156": [
+      "new",
+      2,
+      0
+    ],
+    "157": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$ConnectableSegment",
+      2,
+      0
+    ],
+    "159": [
+      "dup",
+      2,
+      0
+    ],
+    "160": [
+      "aload",
+      2,
+      0
+    ],
+    "161": [
+      "#11",
+      2,
+      0
+    ],
+    "162": [
+      "aload",
+      2,
+      0
+    ],
+    "163": [
+      "#10",
+      2,
+      0
+    ],
+    "164": [
+      "aload",
+      2,
+      0
+    ],
+    "165": [
+      "#6",
+      2,
+      0
+    ],
+    "166": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "167": [
+      "org/apache/commons/math3/geometry/euclidean/twod/Line.getReverse:()Lorg/apache/commons/math3/geometry/euclidean/twod/Line;",
+      2,
+      0
+    ],
+    "169": [
+      "aload_2",
+      2,
+      0
+    ],
+    "170": [
+      "aload",
+      2,
+      0
+    ],
+    "171": [
+      "#13",
+      2,
+      0
+    ],
+    "172": [
+      "aload",
+      2,
+      0
+    ],
+    "173": [
+      "#12",
+      2,
+      0
+    ],
+    "174": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "175": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$ConnectableSegment.<init>:(Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;Lorg/apache/commons/math3/geometry/euclidean/twod/Line;Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/BSPTree;)V",
+      2,
+      0
+    ],
+    "177": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "178": [
+      "java/util/List.java/lang/Double",
+      2,
+      0
+    ],
+    "180": [
+      "0",
+      2,
+      0
+    ],
+    "182": [
+      "pop",
+      2,
+      0
+    ],
+    "183": [
+      "goto",
+      2,
+      0
+    ],
+    "184": [
+      "31",
+      2,
+      0
+    ],
+    "186": [
+      "aload_0",
+      2,
+      0
+    ],
+    "187": [
+      "getfield",
+      2,
+      0
+    ],
+    "188": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$SegmentsBuilder.segments:Ljava/util/List;",
+      2,
+      0
+    ],
+    "190": [
+      "new",
+      2,
+      0
+    ],
+    "191": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$ConnectableSegment",
+      2,
+      0
+    ],
+    "193": [
+      "dup",
+      2,
+      0
+    ],
+    "194": [
+      "aload",
+      2,
+      0
+    ],
+    "195": [
+      "#10",
+      2,
+      0
+    ],
+    "196": [
+      "aload",
+      2,
+      0
+    ],
+    "197": [
+      "#11",
+      2,
+      0
+    ],
+    "198": [
+      "aload",
+      2,
+      0
+    ],
+    "199": [
+      "#6",
+      2,
+      0
+    ],
+    "200": [
+      "aload_2",
+      2,
+      0
+    ],
+    "201": [
+      "aload",
+      2,
+      0
+    ],
+    "202": [
+      "#12",
+      2,
+      0
+    ],
+    "203": [
+      "aload",
+      2,
+      0
+    ],
+    "204": [
+      "#13",
+      2,
+      0
+    ],
+    "205": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "206": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$ConnectableSegment.<init>:(Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;Lorg/apache/commons/math3/geometry/euclidean/twod/Line;Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/BSPTree;)V",
+      2,
+      0
+    ],
+    "208": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "209": [
+      "java/util/List.java/lang/Double",
+      2,
+      0
+    ],
+    "211": [
+      "0",
+      2,
+      0
+    ],
+    "213": [
+      "pop",
+      2,
+      0
+    ],
+    "214": [
+      "goto",
+      0,
+      4
+    ],
+    "215": [
+      "-175",
+      0,
+      4
+    ],
+    "217": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "selectClosest": {
+    "0": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "1": [
+      "astore_3",
+      0,
+      0
+    ],
+    "2": [
+      "ldc2_w",
+      0,
+      0
+    ],
+    "3": [
+      "inf",
+      0,
+      0
+    ],
+    "5": [
+      "dstore",
+      0,
+      0
+    ],
+    "6": [
+      "#4",
+      0,
+      0
+    ],
+    "7": [
+      "aload_2",
+      1,
+      4
+    ],
+    "8": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "9": [
+      "java/lang/Iterable.java/util/Iterator",
+      1,
+      4
+    ],
+    "11": [
+      "0",
+      1,
+      4
+    ],
+    "13": [
+      "astore",
+      1,
+      4
+    ],
+    "14": [
+      "#6",
+      1,
+      4
+    ],
+    "15": [
+      "aload",
+      1,
+      4
+    ],
+    "16": [
+      "#6",
+      1,
+      4
+    ],
+    "17": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "18": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "20": [
+      "0",
+      1,
+      4
+    ],
+    "22": [
+      "ifeq",
+      1,
+      4
+    ],
+    "23": [
+      "54",
+      1,
+      4
+    ],
+    "25": [
+      "aload",
+      1,
+      4
+    ],
+    "26": [
+      "#6",
+      1,
+      4
+    ],
+    "27": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "28": [
+      "java/util/Iterator.org/apache/commons/math3/geometry/euclidean/oned/Interval",
+      1,
+      4
+    ],
+    "30": [
+      "0",
+      1,
+      4
+    ],
+    "32": [
+      "checkcast",
+      1,
+      4
+    ],
+    "33": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree",
+      1,
+      4
+    ],
+    "35": [
+      "astore",
+      1,
+      4
+    ],
+    "36": [
+      "#7",
+      1,
+      4
+    ],
+    "37": [
+      "aload",
+      1,
+      0
+    ],
+    "38": [
+      "#7",
+      1,
+      0
+    ],
+    "39": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "40": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getCut:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      0
+    ],
+    "42": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "43": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane.org/apache/commons/math3/geometry/euclidean/twod/Line",
+      1,
+      0
+    ],
+    "45": [
+      "0",
+      1,
+      0
+    ],
+    "47": [
+      "aload_1",
+      1,
+      0
+    ],
+    "48": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "49": [
+      "org/apache/commons/math3/geometry/partitioning/Hyperplane.org/apache/commons/math3/util/FastMath",
+      1,
+      0
+    ],
+    "51": [
+      "0",
+      1,
+      0
+    ],
+    "53": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "54": [
+      "org/apache/commons/math3/util/FastMath.abs:(D)D",
+      1,
+      0
+    ],
+    "56": [
+      "dstore",
+      1,
+      0
+    ],
+    "57": [
+      "#8",
+      1,
+      0
+    ],
+    "58": [
+      "dload",
+      2,
+      1
+    ],
+    "59": [
+      "#8",
+      2,
+      1
+    ],
+    "60": [
+      "dload",
+      2,
+      1
+    ],
+    "61": [
+      "#4",
+      2,
+      1
+    ],
+    "62": [
+      "dcmpg",
+      2,
+      1
+    ],
+    "63": [
+      "ifge",
+      2,
+      1
+    ],
+    "64": [
+      "10",
+      2,
+      1
+    ],
+    "66": [
+      "aload",
+      2,
+      0
+    ],
+    "67": [
+      "#7",
+      2,
+      0
+    ],
+    "68": [
+      "astore_3",
+      2,
+      0
+    ],
+    "69": [
+      "dload",
+      2,
+      0
+    ],
+    "70": [
+      "#8",
+      2,
+      0
+    ],
+    "71": [
+      "dstore",
+      2,
+      0
+    ],
+    "72": [
+      "#4",
+      2,
+      0
+    ],
+    "73": [
+      "goto",
+      0,
+      4
+    ],
+    "74": [
+      "-58",
+      0,
+      4
+    ],
+    "76": [
+      "dload",
+      0,
+      0
+    ],
+    "77": [
+      "#4",
+      0,
+      0
+    ],
+    "78": [
+      "aload_0",
+      0,
+      0
+    ],
+    "79": [
+      "getfield",
+      0,
+      0
+    ],
+    "80": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$SegmentsBuilder.tolerance:D",
+      0,
+      0
+    ],
+    "82": [
+      "dcmpg",
+      0,
+      0
+    ],
+    "83": [
+      "ifgt",
+      0,
+      0
+    ],
+    "84": [
+      "7",
+      0,
+      0
+    ],
+    "86": [
+      "aload_3",
+      0,
+      0
+    ],
+    "87": [
+      "goto",
+      0,
+      0
+    ],
+    "88": [
+      "4",
+      0,
+      0
+    ],
+    "90": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "91": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getSegments": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$SegmentsBuilder.segments:Ljava/util/List;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

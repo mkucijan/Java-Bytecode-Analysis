@@ -1,0 +1,948 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "aload_2",
+      0,
+      0
+    ],
+    "3": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "4": [
+      "org/apache/commons/math3/fraction/AbstractFormat.<init>:(Ljava/text/NumberFormat;Ljava/text/NumberFormat;)V",
+      0,
+      0
+    ],
+    "6": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getAvailableLocales": {
+    "0": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "1": [
+      "java/text/NumberFormat.getAvailableLocales:()[Ljava/util/Locale;",
+      0,
+      0
+    ],
+    "3": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "formatBigFraction": {
+    "0": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/math3/fraction/BigFractionFormat.getImproperInstance:()Lorg/apache/commons/math3/fraction/BigFractionFormat;",
+      0,
+      0
+    ],
+    "3": [
+      "aload_0",
+      0,
+      0
+    ],
+    "4": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/fraction/BigFractionFormat.format:(Ljava/lang/Object;)Ljava/lang/String;",
+      0,
+      0
+    ],
+    "7": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getImproperInstance": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/math3/fraction/BigFractionFormat",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/fraction/BigFractionFormat.getDefaultNumberFormat:(Ljava/util/Locale;)Ljava/text/NumberFormat;",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/fraction/BigFractionFormat.<init>:(Ljava/text/NumberFormat;)V",
+      0,
+      0
+    ],
+    "11": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getProperInstance": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/math3/fraction/ProperBigFractionFormat",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/fraction/BigFractionFormat.getDefaultNumberFormat:(Ljava/util/Locale;)Ljava/text/NumberFormat;",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/fraction/ProperBigFractionFormat.<init>:(Ljava/text/NumberFormat;)V",
+      0,
+      0
+    ],
+    "11": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "format": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "instanceof",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/math3/fraction/BigFraction",
+      1,
+      1
+    ],
+    "4": [
+      "ifeq",
+      1,
+      1
+    ],
+    "5": [
+      "18",
+      1,
+      1
+    ],
+    "7": [
+      "aload_0",
+      1,
+      0
+    ],
+    "8": [
+      "aload_1",
+      1,
+      0
+    ],
+    "9": [
+      "checkcast",
+      1,
+      0
+    ],
+    "10": [
+      "org/apache/commons/math3/fraction/BigFraction",
+      1,
+      0
+    ],
+    "12": [
+      "aload_2",
+      1,
+      0
+    ],
+    "13": [
+      "aload_3",
+      1,
+      0
+    ],
+    "14": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "15": [
+      "org/apache/commons/math3/fraction/BigFractionFormat.format:(Lorg/apache/commons/math3/fraction/BigFraction;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;",
+      1,
+      0
+    ],
+    "17": [
+      "astore",
+      1,
+      0
+    ],
+    "18": [
+      "#4",
+      1,
+      0
+    ],
+    "19": [
+      "goto",
+      1,
+      0
+    ],
+    "20": [
+      "79",
+      1,
+      0
+    ],
+    "22": [
+      "aload_1",
+      1,
+      0
+    ],
+    "23": [
+      "instanceof",
+      1,
+      0
+    ],
+    "24": [
+      "java/math/BigInteger",
+      1,
+      0
+    ],
+    "26": [
+      "ifeq",
+      1,
+      0
+    ],
+    "27": [
+      "25",
+      1,
+      0
+    ],
+    "29": [
+      "aload_0",
+      1,
+      0
+    ],
+    "30": [
+      "new",
+      1,
+      0
+    ],
+    "31": [
+      "org/apache/commons/math3/fraction/BigFraction",
+      1,
+      0
+    ],
+    "33": [
+      "dup",
+      1,
+      0
+    ],
+    "34": [
+      "aload_1",
+      1,
+      0
+    ],
+    "35": [
+      "checkcast",
+      1,
+      0
+    ],
+    "36": [
+      "java/math/BigInteger",
+      1,
+      0
+    ],
+    "38": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "39": [
+      "org/apache/commons/math3/fraction/BigFraction.<init>:(Ljava/math/BigInteger;)V",
+      1,
+      0
+    ],
+    "41": [
+      "aload_2",
+      1,
+      0
+    ],
+    "42": [
+      "aload_3",
+      1,
+      0
+    ],
+    "43": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "44": [
+      "org/apache/commons/math3/fraction/BigFractionFormat.format:(Lorg/apache/commons/math3/fraction/BigFraction;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;",
+      1,
+      0
+    ],
+    "46": [
+      "astore",
+      1,
+      0
+    ],
+    "47": [
+      "#4",
+      1,
+      0
+    ],
+    "48": [
+      "goto",
+      1,
+      0
+    ],
+    "49": [
+      "50",
+      1,
+      0
+    ],
+    "51": [
+      "aload_1",
+      1,
+      0
+    ],
+    "52": [
+      "instanceof",
+      1,
+      0
+    ],
+    "53": [
+      "java/lang/Number",
+      1,
+      0
+    ],
+    "55": [
+      "ifeq",
+      1,
+      0
+    ],
+    "56": [
+      "28",
+      1,
+      0
+    ],
+    "58": [
+      "aload_0",
+      1,
+      0
+    ],
+    "59": [
+      "new",
+      1,
+      0
+    ],
+    "60": [
+      "org/apache/commons/math3/fraction/BigFraction",
+      1,
+      0
+    ],
+    "62": [
+      "dup",
+      1,
+      0
+    ],
+    "63": [
+      "aload_1",
+      1,
+      0
+    ],
+    "64": [
+      "checkcast",
+      1,
+      0
+    ],
+    "65": [
+      "java/lang/Number",
+      1,
+      0
+    ],
+    "67": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "68": [
+      "java/lang/Number.doubleValue:()D",
+      1,
+      0
+    ],
+    "70": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "71": [
+      "org/apache/commons/math3/fraction/BigFraction.<init>:(D)V",
+      1,
+      0
+    ],
+    "73": [
+      "aload_2",
+      1,
+      0
+    ],
+    "74": [
+      "aload_3",
+      1,
+      0
+    ],
+    "75": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "76": [
+      "org/apache/commons/math3/fraction/BigFractionFormat.format:(Lorg/apache/commons/math3/fraction/BigFraction;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;",
+      1,
+      0
+    ],
+    "78": [
+      "astore",
+      1,
+      0
+    ],
+    "79": [
+      "#4",
+      1,
+      0
+    ],
+    "80": [
+      "goto",
+      1,
+      0
+    ],
+    "81": [
+      "18",
+      1,
+      0
+    ],
+    "83": [
+      "new",
+      1,
+      0
+    ],
+    "84": [
+      "org/apache/commons/math3/exception/MathIllegalArgumentException",
+      1,
+      0
+    ],
+    "86": [
+      "dup",
+      1,
+      0
+    ],
+    "87": [
+      "getstatic",
+      1,
+      0
+    ],
+    "88": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.CANNOT_FORMAT_OBJECT_TO_FRACTION:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "90": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "91": [
+      "anewarray",
+      1,
+      0
+    ],
+    "92": [
+      "java/lang/Object",
+      1,
+      0
+    ],
+    "94": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "95": [
+      "org/apache/commons/math3/exception/MathIllegalArgumentException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;[Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "97": [
+      "athrow",
+      1,
+      0
+    ],
+    "98": [
+      "aload",
+      0,
+      0
+    ],
+    "99": [
+      "#4",
+      0,
+      0
+    ],
+    "100": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "parse": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "aload_2",
+      0,
+      0
+    ],
+    "3": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "4": [
+      "org/apache/commons/math3/fraction/BigFractionFormat.parse:(Ljava/lang/String;Ljava/text/ParsePosition;)Lorg/apache/commons/math3/fraction/BigFraction;",
+      0,
+      0
+    ],
+    "6": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "parseNextBigInteger": {
+    "0": [
+      "aload_2",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "java/text/ParsePosition.getIndex:()I",
+      0,
+      0
+    ],
+    "4": [
+      "istore_3",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "iload_3",
+      0,
+      0
+    ],
+    "7": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "8": [
+      "java/lang/String.charAt:(I)C",
+      0,
+      0
+    ],
+    "10": [
+      "bipush",
+      0,
+      0
+    ],
+    "11": [
+      "45",
+      0,
+      0
+    ],
+    "12": [
+      "if_icmpne",
+      0,
+      0
+    ],
+    "13": [
+      "9",
+      0,
+      0
+    ],
+    "15": [
+      "iload_3",
+      0,
+      0
+    ],
+    "16": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "17": [
+      "iadd",
+      0,
+      0
+    ],
+    "18": [
+      "goto",
+      0,
+      0
+    ],
+    "19": [
+      "4",
+      0,
+      0
+    ],
+    "21": [
+      "iload_3",
+      0,
+      0
+    ],
+    "22": [
+      "istore",
+      0,
+      0
+    ],
+    "23": [
+      "#4",
+      0,
+      0
+    ],
+    "24": [
+      "iload",
+      0,
+      3
+    ],
+    "25": [
+      "#4",
+      0,
+      3
+    ],
+    "26": [
+      "aload_1",
+      0,
+      3
+    ],
+    "27": [
+      "invokevirtual",
+      0,
+      3
+    ],
+    "28": [
+      "java/lang/String.length:()I",
+      0,
+      3
+    ],
+    "30": [
+      "if_icmpge",
+      0,
+      3
+    ],
+    "31": [
+      "21",
+      0,
+      3
+    ],
+    "33": [
+      "aload_1",
+      0,
+      3
+    ],
+    "34": [
+      "iload",
+      0,
+      3
+    ],
+    "35": [
+      "#4",
+      0,
+      3
+    ],
+    "36": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "37": [
+      "java/lang/String.charAt:(I)C",
+      0,
+      0
+    ],
+    "39": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "40": [
+      "java/lang/Character.isDigit:(C)Z",
+      0,
+      0
+    ],
+    "42": [
+      "ifeq",
+      0,
+      0
+    ],
+    "43": [
+      "9",
+      0,
+      0
+    ],
+    "45": [
+      "iinc",
+      0,
+      0
+    ],
+    "46": [
+      "#4",
+      0,
+      0
+    ],
+    "47": [
+      "-89",
+      0,
+      0
+    ],
+    "48": [
+      "goto",
+      0,
+      3
+    ],
+    "49": [
+      "-24",
+      0,
+      3
+    ],
+    "51": [
+      "new",
+      0,
+      0
+    ],
+    "52": [
+      "java/math/BigInteger",
+      0,
+      0
+    ],
+    "54": [
+      "dup",
+      0,
+      0
+    ],
+    "55": [
+      "aload_1",
+      0,
+      0
+    ],
+    "56": [
+      "iload_3",
+      0,
+      0
+    ],
+    "57": [
+      "iload",
+      0,
+      0
+    ],
+    "58": [
+      "#4",
+      0,
+      0
+    ],
+    "59": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "60": [
+      "java/lang/String.substring:(II)Ljava/lang/String;",
+      0,
+      0
+    ],
+    "62": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "63": [
+      "java/math/BigInteger.<init>:(Ljava/lang/String;)V",
+      0,
+      0
+    ],
+    "65": [
+      "astore",
+      0,
+      0
+    ],
+    "66": [
+      "#5",
+      0,
+      0
+    ],
+    "67": [
+      "aload_2",
+      0,
+      0
+    ],
+    "68": [
+      "iload",
+      0,
+      0
+    ],
+    "69": [
+      "#4",
+      0,
+      0
+    ],
+    "70": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "71": [
+      "java/text/ParsePosition.setIndex:(I)V",
+      0,
+      0
+    ],
+    "73": [
+      "aload",
+      0,
+      0
+    ],
+    "74": [
+      "#5",
+      0,
+      0
+    ],
+    "75": [
+      "areturn",
+      0,
+      0
+    ],
+    "76": [
+      "astore",
+      0,
+      0
+    ],
+    "77": [
+      "#5",
+      0,
+      0
+    ],
+    "78": [
+      "aload_2",
+      0,
+      0
+    ],
+    "79": [
+      "iload_3",
+      0,
+      0
+    ],
+    "80": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "81": [
+      "java/text/ParsePosition.setErrorIndex:(I)V",
+      0,
+      0
+    ],
+    "83": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "84": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

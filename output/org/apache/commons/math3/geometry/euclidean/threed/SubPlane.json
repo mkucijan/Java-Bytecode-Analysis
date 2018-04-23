@@ -1,0 +1,1543 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "aload_2",
+      0,
+      0
+    ],
+    "3": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "4": [
+      "org/apache/commons/math3/geometry/partitioning/AbstractSubHyperplane.<init>:(Lorg/apache/commons/math3/geometry/partitioning/Hyperplane;Lorg/apache/commons/math3/geometry/partitioning/Region;)V",
+      0,
+      0
+    ],
+    "6": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "buildNew": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/math3/geometry/euclidean/threed/SubPlane",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_1",
+      0,
+      0
+    ],
+    "5": [
+      "aload_2",
+      0,
+      0
+    ],
+    "6": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/geometry/euclidean/threed/SubPlane.<init>:(Lorg/apache/commons/math3/geometry/partitioning/Hyperplane;Lorg/apache/commons/math3/geometry/partitioning/Region;)V",
+      0,
+      0
+    ],
+    "9": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "split": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "checkcast",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Plane",
+      0,
+      0
+    ],
+    "4": [
+      "astore_2",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/geometry/euclidean/threed/SubPlane.getHyperplane:()Lorg/apache/commons/math3/geometry/partitioning/Hyperplane;",
+      0,
+      0
+    ],
+    "9": [
+      "checkcast",
+      0,
+      0
+    ],
+    "10": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Plane",
+      0,
+      0
+    ],
+    "12": [
+      "astore_3",
+      0,
+      0
+    ],
+    "13": [
+      "aload_2",
+      0,
+      0
+    ],
+    "14": [
+      "aload_3",
+      0,
+      0
+    ],
+    "15": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Plane.intersection:(Lorg/apache/commons/math3/geometry/euclidean/threed/Plane;)Lorg/apache/commons/math3/geometry/euclidean/threed/Line;",
+      0,
+      0
+    ],
+    "18": [
+      "astore",
+      0,
+      0
+    ],
+    "19": [
+      "#4",
+      0,
+      0
+    ],
+    "20": [
+      "aload_3",
+      0,
+      0
+    ],
+    "21": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "22": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Plane.getTolerance:()D",
+      0,
+      0
+    ],
+    "24": [
+      "dstore",
+      0,
+      0
+    ],
+    "25": [
+      "#5",
+      0,
+      0
+    ],
+    "26": [
+      "aload",
+      1,
+      1
+    ],
+    "27": [
+      "#4",
+      1,
+      1
+    ],
+    "28": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "29": [
+      "57",
+      1,
+      1
+    ],
+    "31": [
+      "aload_2",
+      1,
+      0
+    ],
+    "32": [
+      "aload_3",
+      1,
+      0
+    ],
+    "33": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "34": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Plane.getOffset:(Lorg/apache/commons/math3/geometry/euclidean/threed/Plane;)D",
+      1,
+      0
+    ],
+    "36": [
+      "dstore",
+      1,
+      0
+    ],
+    "37": [
+      "#7",
+      1,
+      0
+    ],
+    "38": [
+      "dload",
+      2,
+      1
+    ],
+    "39": [
+      "#7",
+      2,
+      1
+    ],
+    "40": [
+      "dload",
+      2,
+      1
+    ],
+    "41": [
+      "#5",
+      2,
+      1
+    ],
+    "42": [
+      "dneg",
+      2,
+      1
+    ],
+    "43": [
+      "dcmpg",
+      2,
+      1
+    ],
+    "44": [
+      "ifge",
+      2,
+      1
+    ],
+    "45": [
+      "13",
+      2,
+      1
+    ],
+    "47": [
+      "new",
+      2,
+      0
+    ],
+    "48": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane$SplitSubHyperplane",
+      2,
+      0
+    ],
+    "50": [
+      "dup",
+      2,
+      0
+    ],
+    "51": [
+      "aconst_null",
+      2,
+      0
+    ],
+    "52": [
+      "aload_0",
+      2,
+      0
+    ],
+    "53": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "54": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane$SplitSubHyperplane.<init>:(Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;)V",
+      2,
+      0
+    ],
+    "56": [
+      "areturn",
+      2,
+      0
+    ],
+    "57": [
+      "dload",
+      2,
+      0
+    ],
+    "58": [
+      "#7",
+      2,
+      0
+    ],
+    "59": [
+      "dload",
+      2,
+      0
+    ],
+    "60": [
+      "#5",
+      2,
+      0
+    ],
+    "61": [
+      "dcmpl",
+      2,
+      0
+    ],
+    "62": [
+      "ifle",
+      2,
+      0
+    ],
+    "63": [
+      "13",
+      2,
+      0
+    ],
+    "65": [
+      "new",
+      2,
+      0
+    ],
+    "66": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane$SplitSubHyperplane",
+      2,
+      0
+    ],
+    "68": [
+      "dup",
+      2,
+      0
+    ],
+    "69": [
+      "aload_0",
+      2,
+      0
+    ],
+    "70": [
+      "aconst_null",
+      2,
+      0
+    ],
+    "71": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "72": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane$SplitSubHyperplane.<init>:(Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;)V",
+      2,
+      0
+    ],
+    "74": [
+      "areturn",
+      2,
+      0
+    ],
+    "75": [
+      "new",
+      2,
+      0
+    ],
+    "76": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane$SplitSubHyperplane",
+      2,
+      0
+    ],
+    "78": [
+      "dup",
+      2,
+      0
+    ],
+    "79": [
+      "aconst_null",
+      2,
+      0
+    ],
+    "80": [
+      "aconst_null",
+      2,
+      0
+    ],
+    "81": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "82": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane$SplitSubHyperplane.<init>:(Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;)V",
+      2,
+      0
+    ],
+    "84": [
+      "areturn",
+      2,
+      0
+    ],
+    "85": [
+      "aload_3",
+      0,
+      0
+    ],
+    "86": [
+      "aload",
+      0,
+      0
+    ],
+    "87": [
+      "#4",
+      0,
+      0
+    ],
+    "88": [
+      "getstatic",
+      0,
+      0
+    ],
+    "89": [
+      "org/apache/commons/math3/geometry/euclidean/oned/Vector1D.ZERO:Lorg/apache/commons/math3/geometry/euclidean/oned/Vector1D;",
+      0,
+      0
+    ],
+    "91": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "92": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Line.toSpace:(Lorg/apache/commons/math3/geometry/Point;)Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      0,
+      0
+    ],
+    "94": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "95": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Plane.toSubSpace:(Lorg/apache/commons/math3/geometry/Point;)Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;",
+      0,
+      0
+    ],
+    "97": [
+      "astore",
+      0,
+      0
+    ],
+    "98": [
+      "#7",
+      0,
+      0
+    ],
+    "99": [
+      "aload_3",
+      0,
+      0
+    ],
+    "100": [
+      "aload",
+      0,
+      0
+    ],
+    "101": [
+      "#4",
+      0,
+      0
+    ],
+    "102": [
+      "getstatic",
+      0,
+      0
+    ],
+    "103": [
+      "org/apache/commons/math3/geometry/euclidean/oned/Vector1D.ONE:Lorg/apache/commons/math3/geometry/euclidean/oned/Vector1D;",
+      0,
+      0
+    ],
+    "105": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "106": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Line.toSpace:(Lorg/apache/commons/math3/geometry/Point;)Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      0,
+      0
+    ],
+    "108": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "109": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Plane.toSubSpace:(Lorg/apache/commons/math3/geometry/Point;)Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;",
+      0,
+      0
+    ],
+    "111": [
+      "astore",
+      0,
+      0
+    ],
+    "112": [
+      "#8",
+      0,
+      0
+    ],
+    "113": [
+      "aload",
+      0,
+      0
+    ],
+    "114": [
+      "#4",
+      0,
+      0
+    ],
+    "115": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "116": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Line.getDirection:()Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      0,
+      0
+    ],
+    "118": [
+      "aload_3",
+      0,
+      0
+    ],
+    "119": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "120": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Plane.getNormal:()Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      0,
+      0
+    ],
+    "122": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "123": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Vector3D.crossProduct:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;)Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      0,
+      0
+    ],
+    "125": [
+      "astore",
+      0,
+      0
+    ],
+    "126": [
+      "#9",
+      0,
+      0
+    ],
+    "127": [
+      "aload",
+      1,
+      1
+    ],
+    "128": [
+      "#9",
+      1,
+      1
+    ],
+    "129": [
+      "aload_2",
+      1,
+      1
+    ],
+    "130": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "131": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Plane.getNormal:()Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      1,
+      1
+    ],
+    "133": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "134": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Vector3D.dotProduct:(Lorg/apache/commons/math3/geometry/Vector;)D",
+      1,
+      1
+    ],
+    "136": [
+      "dconst_0",
+      1,
+      1
+    ],
+    "137": [
+      "dcmpg",
+      1,
+      1
+    ],
+    "138": [
+      "ifge",
+      1,
+      1
+    ],
+    "139": [
+      "15",
+      1,
+      1
+    ],
+    "141": [
+      "aload",
+      1,
+      0
+    ],
+    "142": [
+      "#7",
+      1,
+      0
+    ],
+    "143": [
+      "astore",
+      1,
+      0
+    ],
+    "144": [
+      "#10",
+      1,
+      0
+    ],
+    "145": [
+      "aload",
+      1,
+      0
+    ],
+    "146": [
+      "#8",
+      1,
+      0
+    ],
+    "147": [
+      "astore",
+      1,
+      0
+    ],
+    "148": [
+      "#7",
+      1,
+      0
+    ],
+    "149": [
+      "aload",
+      1,
+      0
+    ],
+    "150": [
+      "#10",
+      1,
+      0
+    ],
+    "151": [
+      "astore",
+      1,
+      0
+    ],
+    "152": [
+      "#8",
+      1,
+      0
+    ],
+    "153": [
+      "new",
+      0,
+      0
+    ],
+    "154": [
+      "org/apache/commons/math3/geometry/euclidean/twod/Line",
+      0,
+      0
+    ],
+    "156": [
+      "dup",
+      0,
+      0
+    ],
+    "157": [
+      "aload",
+      0,
+      0
+    ],
+    "158": [
+      "#7",
+      0,
+      0
+    ],
+    "159": [
+      "aload",
+      0,
+      0
+    ],
+    "160": [
+      "#8",
+      0,
+      0
+    ],
+    "161": [
+      "dload",
+      0,
+      0
+    ],
+    "162": [
+      "#5",
+      0,
+      0
+    ],
+    "163": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "164": [
+      "org/apache/commons/math3/geometry/euclidean/twod/Line.<init>:(Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;D)V",
+      0,
+      0
+    ],
+    "166": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "167": [
+      "org/apache/commons/math3/geometry/euclidean/twod/Line.wholeHyperplane:()Lorg/apache/commons/math3/geometry/euclidean/twod/SubLine;",
+      0,
+      0
+    ],
+    "169": [
+      "astore",
+      0,
+      0
+    ],
+    "170": [
+      "#10",
+      0,
+      0
+    ],
+    "171": [
+      "new",
+      0,
+      0
+    ],
+    "172": [
+      "org/apache/commons/math3/geometry/euclidean/twod/Line",
+      0,
+      0
+    ],
+    "174": [
+      "dup",
+      0,
+      0
+    ],
+    "175": [
+      "aload",
+      0,
+      0
+    ],
+    "176": [
+      "#8",
+      0,
+      0
+    ],
+    "177": [
+      "aload",
+      0,
+      0
+    ],
+    "178": [
+      "#7",
+      0,
+      0
+    ],
+    "179": [
+      "dload",
+      0,
+      0
+    ],
+    "180": [
+      "#5",
+      0,
+      0
+    ],
+    "181": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "182": [
+      "org/apache/commons/math3/geometry/euclidean/twod/Line.<init>:(Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;D)V",
+      0,
+      0
+    ],
+    "184": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "185": [
+      "org/apache/commons/math3/geometry/euclidean/twod/Line.wholeHyperplane:()Lorg/apache/commons/math3/geometry/euclidean/twod/SubLine;",
+      0,
+      0
+    ],
+    "187": [
+      "astore",
+      0,
+      0
+    ],
+    "188": [
+      "#11",
+      0,
+      0
+    ],
+    "189": [
+      "aload_0",
+      0,
+      0
+    ],
+    "190": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "191": [
+      "org/apache/commons/math3/geometry/euclidean/threed/SubPlane.getRemainingRegion:()Lorg/apache/commons/math3/geometry/partitioning/Region;",
+      0,
+      0
+    ],
+    "193": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "194": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "195": [
+      "org/apache/commons/math3/geometry/partitioning/Region.split:(Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;)Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      0,
+      0
+    ],
+    "197": [
+      "0",
+      0,
+      0
+    ],
+    "199": [
+      "aload",
+      0,
+      0
+    ],
+    "200": [
+      "#10",
+      0,
+      0
+    ],
+    "201": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "202": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.split:(Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;)Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      0,
+      0
+    ],
+    "204": [
+      "astore",
+      0,
+      0
+    ],
+    "205": [
+      "#12",
+      0,
+      0
+    ],
+    "206": [
+      "aload_0",
+      0,
+      0
+    ],
+    "207": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "208": [
+      "org/apache/commons/math3/geometry/euclidean/threed/SubPlane.getRemainingRegion:()Lorg/apache/commons/math3/geometry/partitioning/Region;",
+      0,
+      0
+    ],
+    "210": [
+      "aload",
+      0,
+      0
+    ],
+    "211": [
+      "#12",
+      0,
+      0
+    ],
+    "212": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "213": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getPlus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      0,
+      0
+    ],
+    "215": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "216": [
+      "org/apache/commons/math3/geometry/partitioning/Region.org/apache/commons/math3/geometry/partitioning/BSPTree",
+      0,
+      0
+    ],
+    "218": [
+      "0",
+      0,
+      0
+    ],
+    "220": [
+      "ifeq",
+      0,
+      0
+    ],
+    "221": [
+      "16",
+      0,
+      0
+    ],
+    "223": [
+      "new",
+      0,
+      0
+    ],
+    "224": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree",
+      0,
+      0
+    ],
+    "226": [
+      "dup",
+      0,
+      0
+    ],
+    "227": [
+      "getstatic",
+      0,
+      0
+    ],
+    "228": [
+      "java/lang/Boolean.FALSE:Ljava/lang/Boolean;",
+      0,
+      0
+    ],
+    "230": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "231": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.<init>:(Ljava/lang/Object;)V",
+      0,
+      0
+    ],
+    "233": [
+      "goto",
+      0,
+      0
+    ],
+    "234": [
+      "28",
+      0,
+      0
+    ],
+    "236": [
+      "new",
+      0,
+      0
+    ],
+    "237": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree",
+      0,
+      0
+    ],
+    "239": [
+      "dup",
+      0,
+      0
+    ],
+    "240": [
+      "aload",
+      0,
+      0
+    ],
+    "241": [
+      "#11",
+      0,
+      0
+    ],
+    "242": [
+      "new",
+      0,
+      0
+    ],
+    "243": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree",
+      0,
+      0
+    ],
+    "245": [
+      "dup",
+      0,
+      0
+    ],
+    "246": [
+      "getstatic",
+      0,
+      0
+    ],
+    "247": [
+      "java/lang/Boolean.FALSE:Ljava/lang/Boolean;",
+      0,
+      0
+    ],
+    "249": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "250": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.<init>:(Ljava/lang/Object;)V",
+      0,
+      0
+    ],
+    "252": [
+      "aload",
+      0,
+      0
+    ],
+    "253": [
+      "#12",
+      0,
+      0
+    ],
+    "254": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "255": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getPlus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      0,
+      0
+    ],
+    "257": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "258": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "259": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.<init>:(Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Ljava/lang/Object;)V",
+      0,
+      0
+    ],
+    "261": [
+      "astore",
+      0,
+      0
+    ],
+    "262": [
+      "#13",
+      0,
+      0
+    ],
+    "263": [
+      "aload_0",
+      0,
+      0
+    ],
+    "264": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "265": [
+      "org/apache/commons/math3/geometry/euclidean/threed/SubPlane.getRemainingRegion:()Lorg/apache/commons/math3/geometry/partitioning/Region;",
+      0,
+      0
+    ],
+    "267": [
+      "aload",
+      0,
+      0
+    ],
+    "268": [
+      "#12",
+      0,
+      0
+    ],
+    "269": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "270": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getMinus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      0,
+      0
+    ],
+    "272": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "273": [
+      "org/apache/commons/math3/geometry/partitioning/Region.org/apache/commons/math3/geometry/partitioning/BSPTree",
+      0,
+      0
+    ],
+    "275": [
+      "0",
+      0,
+      0
+    ],
+    "277": [
+      "ifeq",
+      0,
+      0
+    ],
+    "278": [
+      "16",
+      0,
+      0
+    ],
+    "280": [
+      "new",
+      0,
+      0
+    ],
+    "281": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree",
+      0,
+      0
+    ],
+    "283": [
+      "dup",
+      0,
+      0
+    ],
+    "284": [
+      "getstatic",
+      0,
+      0
+    ],
+    "285": [
+      "java/lang/Boolean.FALSE:Ljava/lang/Boolean;",
+      0,
+      0
+    ],
+    "287": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "288": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.<init>:(Ljava/lang/Object;)V",
+      0,
+      0
+    ],
+    "290": [
+      "goto",
+      0,
+      0
+    ],
+    "291": [
+      "28",
+      0,
+      0
+    ],
+    "293": [
+      "new",
+      0,
+      0
+    ],
+    "294": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree",
+      0,
+      0
+    ],
+    "296": [
+      "dup",
+      0,
+      0
+    ],
+    "297": [
+      "aload",
+      0,
+      0
+    ],
+    "298": [
+      "#10",
+      0,
+      0
+    ],
+    "299": [
+      "new",
+      0,
+      0
+    ],
+    "300": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree",
+      0,
+      0
+    ],
+    "302": [
+      "dup",
+      0,
+      0
+    ],
+    "303": [
+      "getstatic",
+      0,
+      0
+    ],
+    "304": [
+      "java/lang/Boolean.FALSE:Ljava/lang/Boolean;",
+      0,
+      0
+    ],
+    "306": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "307": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.<init>:(Ljava/lang/Object;)V",
+      0,
+      0
+    ],
+    "309": [
+      "aload",
+      0,
+      0
+    ],
+    "310": [
+      "#12",
+      0,
+      0
+    ],
+    "311": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "312": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getMinus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      0,
+      0
+    ],
+    "314": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "315": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "316": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.<init>:(Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Ljava/lang/Object;)V",
+      0,
+      0
+    ],
+    "318": [
+      "astore",
+      0,
+      0
+    ],
+    "319": [
+      "#14",
+      0,
+      0
+    ],
+    "320": [
+      "new",
+      0,
+      0
+    ],
+    "321": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane$SplitSubHyperplane",
+      0,
+      0
+    ],
+    "323": [
+      "dup",
+      0,
+      0
+    ],
+    "324": [
+      "new",
+      0,
+      0
+    ],
+    "325": [
+      "org/apache/commons/math3/geometry/euclidean/threed/SubPlane",
+      0,
+      0
+    ],
+    "327": [
+      "dup",
+      0,
+      0
+    ],
+    "328": [
+      "aload_3",
+      0,
+      0
+    ],
+    "329": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "330": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Plane.copySelf:()Lorg/apache/commons/math3/geometry/euclidean/threed/Plane;",
+      0,
+      0
+    ],
+    "332": [
+      "new",
+      0,
+      0
+    ],
+    "333": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet",
+      0,
+      0
+    ],
+    "335": [
+      "dup",
+      0,
+      0
+    ],
+    "336": [
+      "aload",
+      0,
+      0
+    ],
+    "337": [
+      "#13",
+      0,
+      0
+    ],
+    "338": [
+      "dload",
+      0,
+      0
+    ],
+    "339": [
+      "#5",
+      0,
+      0
+    ],
+    "340": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "341": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet.<init>:(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;D)V",
+      0,
+      0
+    ],
+    "343": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "344": [
+      "org/apache/commons/math3/geometry/euclidean/threed/SubPlane.<init>:(Lorg/apache/commons/math3/geometry/partitioning/Hyperplane;Lorg/apache/commons/math3/geometry/partitioning/Region;)V",
+      0,
+      0
+    ],
+    "346": [
+      "new",
+      0,
+      0
+    ],
+    "347": [
+      "org/apache/commons/math3/geometry/euclidean/threed/SubPlane",
+      0,
+      0
+    ],
+    "349": [
+      "dup",
+      0,
+      0
+    ],
+    "350": [
+      "aload_3",
+      0,
+      0
+    ],
+    "351": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "352": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Plane.copySelf:()Lorg/apache/commons/math3/geometry/euclidean/threed/Plane;",
+      0,
+      0
+    ],
+    "354": [
+      "new",
+      0,
+      0
+    ],
+    "355": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet",
+      0,
+      0
+    ],
+    "357": [
+      "dup",
+      0,
+      0
+    ],
+    "358": [
+      "aload",
+      0,
+      0
+    ],
+    "359": [
+      "#14",
+      0,
+      0
+    ],
+    "360": [
+      "dload",
+      0,
+      0
+    ],
+    "361": [
+      "#5",
+      0,
+      0
+    ],
+    "362": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "363": [
+      "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet.<init>:(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;D)V",
+      0,
+      0
+    ],
+    "365": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "366": [
+      "org/apache/commons/math3/geometry/euclidean/threed/SubPlane.<init>:(Lorg/apache/commons/math3/geometry/partitioning/Hyperplane;Lorg/apache/commons/math3/geometry/partitioning/Region;)V",
+      0,
+      0
+    ],
+    "368": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "369": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane$SplitSubHyperplane.<init>:(Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;)V",
+      0,
+      0
+    ],
+    "371": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

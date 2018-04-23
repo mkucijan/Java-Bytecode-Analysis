@@ -1,0 +1,6122 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "dload_1",
+      0,
+      0
+    ],
+    "2": [
+      "aload_3",
+      0,
+      0
+    ],
+    "3": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "4": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.verticesToTree:(D[Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;)Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      0,
+      0
+    ],
+    "6": [
+      "dload_1",
+      0,
+      0
+    ],
+    "7": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/geometry/partitioning/AbstractRegion.<init>:(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;D)V",
+      0,
+      0
+    ],
+    "10": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "createRegularPolygonVertices": {
+    "0": [
+      "iload",
+      0,
+      0
+    ],
+    "1": [
+      "#4",
+      0,
+      0
+    ],
+    "2": [
+      "anewarray",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      0,
+      0
+    ],
+    "5": [
+      "astore",
+      0,
+      0
+    ],
+    "6": [
+      "#5",
+      0,
+      0
+    ],
+    "7": [
+      "new",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Rotation",
+      0,
+      0
+    ],
+    "10": [
+      "dup",
+      0,
+      0
+    ],
+    "11": [
+      "aload_0",
+      0,
+      0
+    ],
+    "12": [
+      "aload_1",
+      0,
+      0
+    ],
+    "13": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "14": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Vector3D.crossProduct:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;)Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      0,
+      0
+    ],
+    "16": [
+      "dload_2",
+      0,
+      0
+    ],
+    "17": [
+      "getstatic",
+      0,
+      0
+    ],
+    "18": [
+      "org/apache/commons/math3/geometry/euclidean/threed/RotationConvention.VECTOR_OPERATOR:Lorg/apache/commons/math3/geometry/euclidean/threed/RotationConvention;",
+      0,
+      0
+    ],
+    "20": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "21": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Rotation.<init>:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;DLorg/apache/commons/math3/geometry/euclidean/threed/RotationConvention;)V",
+      0,
+      0
+    ],
+    "23": [
+      "astore",
+      0,
+      0
+    ],
+    "24": [
+      "#6",
+      0,
+      0
+    ],
+    "25": [
+      "aload",
+      0,
+      0
+    ],
+    "26": [
+      "#5",
+      0,
+      0
+    ],
+    "27": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "28": [
+      "new",
+      0,
+      0
+    ],
+    "29": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      0,
+      0
+    ],
+    "31": [
+      "dup",
+      0,
+      0
+    ],
+    "32": [
+      "aload",
+      0,
+      0
+    ],
+    "33": [
+      "#6",
+      0,
+      0
+    ],
+    "34": [
+      "aload_0",
+      0,
+      0
+    ],
+    "35": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "36": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Rotation.applyTo:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;)Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      0,
+      0
+    ],
+    "38": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "39": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.<init>:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;)V",
+      0,
+      0
+    ],
+    "41": [
+      "aastore",
+      0,
+      0
+    ],
+    "42": [
+      "new",
+      0,
+      0
+    ],
+    "43": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Rotation",
+      0,
+      0
+    ],
+    "45": [
+      "dup",
+      0,
+      0
+    ],
+    "46": [
+      "aload_0",
+      0,
+      0
+    ],
+    "47": [
+      "ldc2_w",
+      0,
+      0
+    ],
+    "48": [
+      "6.283185307179586",
+      0,
+      0
+    ],
+    "50": [
+      "iload",
+      0,
+      0
+    ],
+    "51": [
+      "#4",
+      0,
+      0
+    ],
+    "52": [
+      "i2d",
+      0,
+      0
+    ],
+    "53": [
+      "ddiv",
+      0,
+      0
+    ],
+    "54": [
+      "getstatic",
+      0,
+      0
+    ],
+    "55": [
+      "org/apache/commons/math3/geometry/euclidean/threed/RotationConvention.VECTOR_OPERATOR:Lorg/apache/commons/math3/geometry/euclidean/threed/RotationConvention;",
+      0,
+      0
+    ],
+    "57": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "58": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Rotation.<init>:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;DLorg/apache/commons/math3/geometry/euclidean/threed/RotationConvention;)V",
+      0,
+      0
+    ],
+    "60": [
+      "astore",
+      0,
+      0
+    ],
+    "61": [
+      "#7",
+      0,
+      0
+    ],
+    "62": [
+      "iconst_1",
+      1,
+      4
+    ],
+    "63": [
+      "istore",
+      1,
+      4
+    ],
+    "64": [
+      "#8",
+      1,
+      4
+    ],
+    "65": [
+      "iload",
+      1,
+      4
+    ],
+    "66": [
+      "#8",
+      1,
+      4
+    ],
+    "67": [
+      "iload",
+      1,
+      4
+    ],
+    "68": [
+      "#4",
+      1,
+      4
+    ],
+    "69": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "70": [
+      "36",
+      1,
+      4
+    ],
+    "72": [
+      "aload",
+      1,
+      0
+    ],
+    "73": [
+      "#5",
+      1,
+      0
+    ],
+    "74": [
+      "iload",
+      1,
+      0
+    ],
+    "75": [
+      "#8",
+      1,
+      0
+    ],
+    "76": [
+      "new",
+      1,
+      0
+    ],
+    "77": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      1,
+      0
+    ],
+    "79": [
+      "dup",
+      1,
+      0
+    ],
+    "80": [
+      "aload",
+      1,
+      0
+    ],
+    "81": [
+      "#7",
+      1,
+      0
+    ],
+    "82": [
+      "aload",
+      1,
+      0
+    ],
+    "83": [
+      "#5",
+      1,
+      0
+    ],
+    "84": [
+      "iload",
+      1,
+      0
+    ],
+    "85": [
+      "#8",
+      1,
+      0
+    ],
+    "86": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "87": [
+      "isub",
+      1,
+      0
+    ],
+    "88": [
+      "aaload",
+      1,
+      0
+    ],
+    "89": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "90": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.getVector:()Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      1,
+      0
+    ],
+    "92": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "93": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Rotation.applyTo:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;)Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      1,
+      0
+    ],
+    "95": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "96": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.<init>:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;)V",
+      1,
+      0
+    ],
+    "98": [
+      "aastore",
+      1,
+      0
+    ],
+    "99": [
+      "iinc",
+      1,
+      0
+    ],
+    "100": [
+      "#8",
+      1,
+      0
+    ],
+    "101": [
+      "-89",
+      1,
+      0
+    ],
+    "102": [
+      "goto",
+      1,
+      4
+    ],
+    "103": [
+      "-37",
+      1,
+      4
+    ],
+    "105": [
+      "aload",
+      0,
+      0
+    ],
+    "106": [
+      "#5",
+      0,
+      0
+    ],
+    "107": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "verticesToTree": {
+    "0": [
+      "aload_2",
+      0,
+      0
+    ],
+    "1": [
+      "arraylength",
+      0,
+      0
+    ],
+    "2": [
+      "istore_3",
+      0,
+      0
+    ],
+    "3": [
+      "iload_3",
+      1,
+      1
+    ],
+    "4": [
+      "ifne",
+      1,
+      1
+    ],
+    "5": [
+      "14",
+      1,
+      1
+    ],
+    "7": [
+      "new",
+      1,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree",
+      1,
+      0
+    ],
+    "10": [
+      "dup",
+      1,
+      0
+    ],
+    "11": [
+      "getstatic",
+      1,
+      0
+    ],
+    "12": [
+      "java/lang/Boolean.TRUE:Ljava/lang/Boolean;",
+      1,
+      0
+    ],
+    "14": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "15": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.<init>:(Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "17": [
+      "areturn",
+      1,
+      0
+    ],
+    "18": [
+      "iload_3",
+      0,
+      0
+    ],
+    "19": [
+      "anewarray",
+      0,
+      0
+    ],
+    "20": [
+      "org/apache/commons/math3/geometry/spherical/twod/Vertex",
+      0,
+      0
+    ],
+    "22": [
+      "astore",
+      0,
+      0
+    ],
+    "23": [
+      "#4",
+      0,
+      0
+    ],
+    "24": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "25": [
+      "istore",
+      1,
+      4
+    ],
+    "26": [
+      "#5",
+      1,
+      4
+    ],
+    "27": [
+      "iload",
+      1,
+      4
+    ],
+    "28": [
+      "#5",
+      1,
+      4
+    ],
+    "29": [
+      "iload_3",
+      1,
+      4
+    ],
+    "30": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "31": [
+      "25",
+      1,
+      4
+    ],
+    "33": [
+      "aload",
+      1,
+      0
+    ],
+    "34": [
+      "#4",
+      1,
+      0
+    ],
+    "35": [
+      "iload",
+      1,
+      0
+    ],
+    "36": [
+      "#5",
+      1,
+      0
+    ],
+    "37": [
+      "new",
+      1,
+      0
+    ],
+    "38": [
+      "org/apache/commons/math3/geometry/spherical/twod/Vertex",
+      1,
+      0
+    ],
+    "40": [
+      "dup",
+      1,
+      0
+    ],
+    "41": [
+      "aload_2",
+      1,
+      0
+    ],
+    "42": [
+      "iload",
+      1,
+      0
+    ],
+    "43": [
+      "#5",
+      1,
+      0
+    ],
+    "44": [
+      "aaload",
+      1,
+      0
+    ],
+    "45": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "46": [
+      "org/apache/commons/math3/geometry/spherical/twod/Vertex.<init>:(Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;)V",
+      1,
+      0
+    ],
+    "48": [
+      "aastore",
+      1,
+      0
+    ],
+    "49": [
+      "iinc",
+      1,
+      0
+    ],
+    "50": [
+      "#5",
+      1,
+      0
+    ],
+    "51": [
+      "-89",
+      1,
+      0
+    ],
+    "52": [
+      "goto",
+      1,
+      4
+    ],
+    "53": [
+      "-25",
+      1,
+      4
+    ],
+    "55": [
+      "new",
+      0,
+      0
+    ],
+    "56": [
+      "java/util/ArrayList",
+      0,
+      0
+    ],
+    "58": [
+      "dup",
+      0,
+      0
+    ],
+    "59": [
+      "iload_3",
+      0,
+      0
+    ],
+    "60": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "61": [
+      "java/util/ArrayList.<init>:(I)V",
+      0,
+      0
+    ],
+    "63": [
+      "astore",
+      0,
+      0
+    ],
+    "64": [
+      "#5",
+      0,
+      0
+    ],
+    "65": [
+      "aload",
+      0,
+      0
+    ],
+    "66": [
+      "#4",
+      0,
+      0
+    ],
+    "67": [
+      "iload_3",
+      0,
+      0
+    ],
+    "68": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "69": [
+      "isub",
+      0,
+      0
+    ],
+    "70": [
+      "aaload",
+      0,
+      0
+    ],
+    "71": [
+      "astore",
+      0,
+      0
+    ],
+    "72": [
+      "#6",
+      0,
+      0
+    ],
+    "73": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "74": [
+      "istore",
+      1,
+      4
+    ],
+    "75": [
+      "#7",
+      1,
+      4
+    ],
+    "76": [
+      "iload",
+      1,
+      4
+    ],
+    "77": [
+      "#7",
+      1,
+      4
+    ],
+    "78": [
+      "iload_3",
+      1,
+      4
+    ],
+    "79": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "80": [
+      "165",
+      1,
+      4
+    ],
+    "82": [
+      "aload",
+      1,
+      0
+    ],
+    "83": [
+      "#6",
+      1,
+      0
+    ],
+    "84": [
+      "astore",
+      1,
+      0
+    ],
+    "85": [
+      "#8",
+      1,
+      0
+    ],
+    "86": [
+      "aload",
+      1,
+      0
+    ],
+    "87": [
+      "#4",
+      1,
+      0
+    ],
+    "88": [
+      "iload",
+      1,
+      0
+    ],
+    "89": [
+      "#7",
+      1,
+      0
+    ],
+    "90": [
+      "aaload",
+      1,
+      0
+    ],
+    "91": [
+      "astore",
+      1,
+      0
+    ],
+    "92": [
+      "#6",
+      1,
+      0
+    ],
+    "93": [
+      "aload",
+      1,
+      0
+    ],
+    "94": [
+      "#8",
+      1,
+      0
+    ],
+    "95": [
+      "aload",
+      1,
+      0
+    ],
+    "96": [
+      "#6",
+      1,
+      0
+    ],
+    "97": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "98": [
+      "org/apache/commons/math3/geometry/spherical/twod/Vertex.sharedCircleWith:(Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;)Lorg/apache/commons/math3/geometry/spherical/twod/Circle;",
+      1,
+      0
+    ],
+    "100": [
+      "astore",
+      1,
+      0
+    ],
+    "101": [
+      "#9",
+      1,
+      0
+    ],
+    "102": [
+      "aload",
+      2,
+      1
+    ],
+    "103": [
+      "#9",
+      2,
+      1
+    ],
+    "104": [
+      "ifnonnull",
+      2,
+      1
+    ],
+    "105": [
+      "23",
+      2,
+      1
+    ],
+    "107": [
+      "new",
+      2,
+      0
+    ],
+    "108": [
+      "org/apache/commons/math3/geometry/spherical/twod/Circle",
+      2,
+      0
+    ],
+    "110": [
+      "dup",
+      2,
+      0
+    ],
+    "111": [
+      "aload",
+      2,
+      0
+    ],
+    "112": [
+      "#8",
+      2,
+      0
+    ],
+    "113": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "114": [
+      "org/apache/commons/math3/geometry/spherical/twod/Vertex.getLocation:()Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;",
+      2,
+      0
+    ],
+    "116": [
+      "aload",
+      2,
+      0
+    ],
+    "117": [
+      "#6",
+      2,
+      0
+    ],
+    "118": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "119": [
+      "org/apache/commons/math3/geometry/spherical/twod/Vertex.getLocation:()Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;",
+      2,
+      0
+    ],
+    "121": [
+      "dload_0",
+      2,
+      0
+    ],
+    "122": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "123": [
+      "org/apache/commons/math3/geometry/spherical/twod/Circle.<init>:(Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;D)V",
+      2,
+      0
+    ],
+    "125": [
+      "astore",
+      2,
+      0
+    ],
+    "126": [
+      "#9",
+      2,
+      0
+    ],
+    "127": [
+      "aload",
+      1,
+      0
+    ],
+    "128": [
+      "#5",
+      1,
+      0
+    ],
+    "129": [
+      "new",
+      1,
+      0
+    ],
+    "130": [
+      "org/apache/commons/math3/geometry/spherical/twod/Edge",
+      1,
+      0
+    ],
+    "132": [
+      "dup",
+      1,
+      0
+    ],
+    "133": [
+      "aload",
+      1,
+      0
+    ],
+    "134": [
+      "#8",
+      1,
+      0
+    ],
+    "135": [
+      "aload",
+      1,
+      0
+    ],
+    "136": [
+      "#6",
+      1,
+      0
+    ],
+    "137": [
+      "aload",
+      1,
+      0
+    ],
+    "138": [
+      "#8",
+      1,
+      0
+    ],
+    "139": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "140": [
+      "org/apache/commons/math3/geometry/spherical/twod/Vertex.getLocation:()Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;",
+      1,
+      0
+    ],
+    "142": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "143": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.getVector:()Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      1,
+      0
+    ],
+    "145": [
+      "aload",
+      1,
+      0
+    ],
+    "146": [
+      "#6",
+      1,
+      0
+    ],
+    "147": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "148": [
+      "org/apache/commons/math3/geometry/spherical/twod/Vertex.getLocation:()Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;",
+      1,
+      0
+    ],
+    "150": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "151": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.getVector:()Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      1,
+      0
+    ],
+    "153": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "154": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Vector3D.angle:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;)D",
+      1,
+      0
+    ],
+    "156": [
+      "aload",
+      1,
+      0
+    ],
+    "157": [
+      "#9",
+      1,
+      0
+    ],
+    "158": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "159": [
+      "org/apache/commons/math3/geometry/spherical/twod/Edge.<init>:(Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;DLorg/apache/commons/math3/geometry/spherical/twod/Circle;)V",
+      1,
+      0
+    ],
+    "161": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "162": [
+      "java/util/List.getOffset:(Lorg/apache/commons/math3/geometry/Point;)D",
+      1,
+      0
+    ],
+    "164": [
+      "0",
+      1,
+      0
+    ],
+    "166": [
+      "pop",
+      1,
+      0
+    ],
+    "167": [
+      "aload",
+      2,
+      4
+    ],
+    "168": [
+      "#4",
+      2,
+      4
+    ],
+    "169": [
+      "astore",
+      2,
+      4
+    ],
+    "170": [
+      "#10",
+      2,
+      4
+    ],
+    "171": [
+      "aload",
+      2,
+      4
+    ],
+    "172": [
+      "#10",
+      2,
+      4
+    ],
+    "173": [
+      "arraylength",
+      2,
+      4
+    ],
+    "174": [
+      "istore",
+      2,
+      4
+    ],
+    "175": [
+      "#11",
+      2,
+      4
+    ],
+    "176": [
+      "iconst_0",
+      2,
+      4
+    ],
+    "177": [
+      "istore",
+      2,
+      4
+    ],
+    "178": [
+      "#12",
+      2,
+      4
+    ],
+    "179": [
+      "iload",
+      2,
+      4
+    ],
+    "180": [
+      "#12",
+      2,
+      4
+    ],
+    "181": [
+      "iload",
+      2,
+      4
+    ],
+    "182": [
+      "#11",
+      2,
+      4
+    ],
+    "183": [
+      "if_icmpge",
+      2,
+      4
+    ],
+    "184": [
+      "55",
+      2,
+      4
+    ],
+    "186": [
+      "aload",
+      2,
+      4
+    ],
+    "187": [
+      "#10",
+      2,
+      4
+    ],
+    "188": [
+      "iload",
+      2,
+      4
+    ],
+    "189": [
+      "#12",
+      2,
+      4
+    ],
+    "190": [
+      "aaload",
+      2,
+      4
+    ],
+    "191": [
+      "astore",
+      2,
+      4
+    ],
+    "192": [
+      "#13",
+      2,
+      4
+    ],
+    "193": [
+      "aload",
+      2,
+      1
+    ],
+    "194": [
+      "#13",
+      2,
+      1
+    ],
+    "195": [
+      "aload",
+      2,
+      1
+    ],
+    "196": [
+      "#8",
+      2,
+      1
+    ],
+    "197": [
+      "if_acmpeq",
+      2,
+      1
+    ],
+    "198": [
+      "35",
+      2,
+      1
+    ],
+    "200": [
+      "aload",
+      2,
+      1
+    ],
+    "201": [
+      "#13",
+      2,
+      1
+    ],
+    "202": [
+      "aload",
+      2,
+      1
+    ],
+    "203": [
+      "#6",
+      2,
+      1
+    ],
+    "204": [
+      "if_acmpeq",
+      2,
+      1
+    ],
+    "205": [
+      "28",
+      2,
+      1
+    ],
+    "207": [
+      "aload",
+      2,
+      1
+    ],
+    "208": [
+      "#9",
+      2,
+      1
+    ],
+    "209": [
+      "aload",
+      2,
+      1
+    ],
+    "210": [
+      "#13",
+      2,
+      1
+    ],
+    "211": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "212": [
+      "org/apache/commons/math3/geometry/spherical/twod/Vertex.getLocation:()Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;",
+      2,
+      0
+    ],
+    "214": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "215": [
+      "org/apache/commons/math3/geometry/spherical/twod/Circle.getOffset:(Lorg/apache/commons/math3/geometry/Point;)D",
+      2,
+      0
+    ],
+    "217": [
+      "invokestatic",
+      2,
+      0
+    ],
+    "218": [
+      "org/apache/commons/math3/util/FastMath.abs:(D)D",
+      2,
+      0
+    ],
+    "220": [
+      "dload_0",
+      2,
+      0
+    ],
+    "221": [
+      "dcmpg",
+      2,
+      0
+    ],
+    "222": [
+      "ifgt",
+      2,
+      0
+    ],
+    "223": [
+      "10",
+      2,
+      0
+    ],
+    "225": [
+      "aload",
+      2,
+      0
+    ],
+    "226": [
+      "#13",
+      2,
+      0
+    ],
+    "227": [
+      "aload",
+      2,
+      0
+    ],
+    "228": [
+      "#9",
+      2,
+      0
+    ],
+    "229": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "230": [
+      "org/apache/commons/math3/geometry/spherical/twod/Vertex.bindWith:(Lorg/apache/commons/math3/geometry/spherical/twod/Circle;)V",
+      2,
+      0
+    ],
+    "232": [
+      "iinc",
+      2,
+      0
+    ],
+    "233": [
+      "#12",
+      2,
+      0
+    ],
+    "234": [
+      "-89",
+      2,
+      0
+    ],
+    "235": [
+      "goto",
+      2,
+      4
+    ],
+    "236": [
+      "-56",
+      2,
+      4
+    ],
+    "238": [
+      "iinc",
+      2,
+      0
+    ],
+    "239": [
+      "#7",
+      2,
+      0
+    ],
+    "240": [
+      "-89",
+      2,
+      0
+    ],
+    "241": [
+      "goto",
+      2,
+      4
+    ],
+    "242": [
+      "-165",
+      2,
+      4
+    ],
+    "244": [
+      "new",
+      2,
+      0
+    ],
+    "245": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree",
+      2,
+      0
+    ],
+    "247": [
+      "dup",
+      2,
+      0
+    ],
+    "248": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "249": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.<init>:()V",
+      2,
+      0
+    ],
+    "251": [
+      "astore",
+      2,
+      0
+    ],
+    "252": [
+      "#7",
+      2,
+      0
+    ],
+    "253": [
+      "dload_0",
+      2,
+      0
+    ],
+    "254": [
+      "aload",
+      2,
+      0
+    ],
+    "255": [
+      "#7",
+      2,
+      0
+    ],
+    "256": [
+      "aload",
+      2,
+      0
+    ],
+    "257": [
+      "#5",
+      2,
+      0
+    ],
+    "258": [
+      "invokestatic",
+      2,
+      0
+    ],
+    "259": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.insertEdges:(DLorg/apache/commons/math3/geometry/partitioning/BSPTree;Ljava/util/List;)V",
+      2,
+      0
+    ],
+    "261": [
+      "aload",
+      2,
+      0
+    ],
+    "262": [
+      "#7",
+      2,
+      0
+    ],
+    "263": [
+      "areturn",
+      2,
+      0
+    ]
+  },
+  "insertEdges": {
+    "0": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "1": [
+      "istore",
+      0,
+      0
+    ],
+    "2": [
+      "#4",
+      0,
+      0
+    ],
+    "3": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "4": [
+      "astore",
+      0,
+      0
+    ],
+    "5": [
+      "#5",
+      0,
+      0
+    ],
+    "6": [
+      "aload",
+      1,
+      3
+    ],
+    "7": [
+      "#5",
+      1,
+      3
+    ],
+    "8": [
+      "ifnonnull",
+      1,
+      3
+    ],
+    "9": [
+      "48",
+      1,
+      3
+    ],
+    "11": [
+      "iload",
+      1,
+      3
+    ],
+    "12": [
+      "#4",
+      1,
+      3
+    ],
+    "13": [
+      "aload_3",
+      1,
+      3
+    ],
+    "14": [
+      "invokeinterface",
+      1,
+      3
+    ],
+    "15": [
+      "java/util/List.get:(I)Ljava/lang/Object;",
+      1,
+      3
+    ],
+    "17": [
+      "0",
+      1,
+      3
+    ],
+    "19": [
+      "if_icmpge",
+      1,
+      3
+    ],
+    "20": [
+      "37",
+      1,
+      3
+    ],
+    "22": [
+      "aload_3",
+      1,
+      0
+    ],
+    "23": [
+      "iload",
+      1,
+      0
+    ],
+    "24": [
+      "#4",
+      1,
+      0
+    ],
+    "25": [
+      "iinc",
+      1,
+      0
+    ],
+    "26": [
+      "#4",
+      1,
+      0
+    ],
+    "27": [
+      "-71",
+      1,
+      0
+    ],
+    "28": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "29": [
+      "java/util/List.getCircle:()Lorg/apache/commons/math3/geometry/spherical/twod/Circle;",
+      1,
+      0
+    ],
+    "31": [
+      "0",
+      1,
+      0
+    ],
+    "33": [
+      "checkcast",
+      1,
+      0
+    ],
+    "34": [
+      "org/apache/commons/math3/geometry/spherical/twod/Edge",
+      1,
+      0
+    ],
+    "36": [
+      "astore",
+      1,
+      0
+    ],
+    "37": [
+      "#5",
+      1,
+      0
+    ],
+    "38": [
+      "aload_2",
+      2,
+      1
+    ],
+    "39": [
+      "aload",
+      2,
+      1
+    ],
+    "40": [
+      "#5",
+      2,
+      1
+    ],
+    "41": [
+      "invokevirtual",
+      2,
+      1
+    ],
+    "42": [
+      "org/apache/commons/math3/geometry/spherical/twod/Edge.getCircle:()Lorg/apache/commons/math3/geometry/spherical/twod/Circle;",
+      2,
+      1
+    ],
+    "44": [
+      "invokevirtual",
+      2,
+      1
+    ],
+    "45": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.insertCut:(Lorg/apache/commons/math3/geometry/partitioning/Hyperplane;)Z",
+      2,
+      1
+    ],
+    "47": [
+      "ifne",
+      2,
+      3
+    ],
+    "48": [
+      "-41",
+      2,
+      3
+    ],
+    "50": [
+      "aconst_null",
+      2,
+      0
+    ],
+    "51": [
+      "astore",
+      2,
+      0
+    ],
+    "52": [
+      "#5",
+      2,
+      0
+    ],
+    "53": [
+      "goto",
+      2,
+      3
+    ],
+    "54": [
+      "-47",
+      2,
+      3
+    ],
+    "56": [
+      "aload",
+      1,
+      1
+    ],
+    "57": [
+      "#5",
+      1,
+      1
+    ],
+    "58": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "59": [
+      "41",
+      1,
+      1
+    ],
+    "61": [
+      "aload_2",
+      1,
+      0
+    ],
+    "62": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "63": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getParent:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      1,
+      0
+    ],
+    "65": [
+      "astore",
+      1,
+      0
+    ],
+    "66": [
+      "#6",
+      1,
+      0
+    ],
+    "67": [
+      "aload",
+      2,
+      1
+    ],
+    "68": [
+      "#6",
+      2,
+      1
+    ],
+    "69": [
+      "ifnull",
+      2,
+      1
+    ],
+    "70": [
+      "12",
+      2,
+      1
+    ],
+    "72": [
+      "aload_2",
+      2,
+      1
+    ],
+    "73": [
+      "aload",
+      2,
+      1
+    ],
+    "74": [
+      "#6",
+      2,
+      1
+    ],
+    "75": [
+      "invokevirtual",
+      2,
+      1
+    ],
+    "76": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getMinus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      2,
+      1
+    ],
+    "78": [
+      "if_acmpne",
+      2,
+      1
+    ],
+    "79": [
+      "13",
+      2,
+      1
+    ],
+    "81": [
+      "aload_2",
+      2,
+      0
+    ],
+    "82": [
+      "getstatic",
+      2,
+      0
+    ],
+    "83": [
+      "java/lang/Boolean.TRUE:Ljava/lang/Boolean;",
+      2,
+      0
+    ],
+    "85": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "86": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.setAttribute:(Ljava/lang/Object;)V",
+      2,
+      0
+    ],
+    "88": [
+      "goto",
+      2,
+      0
+    ],
+    "89": [
+      "10",
+      2,
+      0
+    ],
+    "91": [
+      "aload_2",
+      2,
+      0
+    ],
+    "92": [
+      "getstatic",
+      2,
+      0
+    ],
+    "93": [
+      "java/lang/Boolean.FALSE:Ljava/lang/Boolean;",
+      2,
+      0
+    ],
+    "95": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "96": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.setAttribute:(Ljava/lang/Object;)V",
+      2,
+      0
+    ],
+    "98": [
+      "return",
+      1,
+      0
+    ],
+    "99": [
+      "new",
+      0,
+      0
+    ],
+    "100": [
+      "java/util/ArrayList",
+      0,
+      0
+    ],
+    "102": [
+      "dup",
+      0,
+      0
+    ],
+    "103": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "104": [
+      "java/util/ArrayList.<init>:()V",
+      0,
+      0
+    ],
+    "106": [
+      "astore",
+      0,
+      0
+    ],
+    "107": [
+      "#6",
+      0,
+      0
+    ],
+    "108": [
+      "new",
+      0,
+      0
+    ],
+    "109": [
+      "java/util/ArrayList",
+      0,
+      0
+    ],
+    "111": [
+      "dup",
+      0,
+      0
+    ],
+    "112": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "113": [
+      "java/util/ArrayList.<init>:()V",
+      0,
+      0
+    ],
+    "115": [
+      "astore",
+      0,
+      0
+    ],
+    "116": [
+      "#7",
+      0,
+      0
+    ],
+    "117": [
+      "aload_3",
+      1,
+      4
+    ],
+    "118": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "119": [
+      "java/util/List.java/util/Iterator",
+      1,
+      4
+    ],
+    "121": [
+      "0",
+      1,
+      4
+    ],
+    "123": [
+      "astore",
+      1,
+      4
+    ],
+    "124": [
+      "#8",
+      1,
+      4
+    ],
+    "125": [
+      "aload",
+      1,
+      4
+    ],
+    "126": [
+      "#8",
+      1,
+      4
+    ],
+    "127": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "128": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "130": [
+      "0",
+      1,
+      4
+    ],
+    "132": [
+      "ifeq",
+      1,
+      4
+    ],
+    "133": [
+      "39",
+      1,
+      4
+    ],
+    "135": [
+      "aload",
+      1,
+      4
+    ],
+    "136": [
+      "#8",
+      1,
+      4
+    ],
+    "137": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "138": [
+      "java/util/Iterator.split:(Lorg/apache/commons/math3/geometry/spherical/twod/Circle;Ljava/util/List;Ljava/util/List;)V",
+      1,
+      4
+    ],
+    "140": [
+      "0",
+      1,
+      4
+    ],
+    "142": [
+      "checkcast",
+      1,
+      4
+    ],
+    "143": [
+      "org/apache/commons/math3/geometry/spherical/twod/Edge",
+      1,
+      4
+    ],
+    "145": [
+      "astore",
+      1,
+      4
+    ],
+    "146": [
+      "#9",
+      1,
+      4
+    ],
+    "147": [
+      "aload",
+      2,
+      1
+    ],
+    "148": [
+      "#9",
+      2,
+      1
+    ],
+    "149": [
+      "aload",
+      2,
+      1
+    ],
+    "150": [
+      "#5",
+      2,
+      1
+    ],
+    "151": [
+      "if_acmpeq",
+      2,
+      1
+    ],
+    "152": [
+      "17",
+      2,
+      1
+    ],
+    "154": [
+      "aload",
+      2,
+      0
+    ],
+    "155": [
+      "#9",
+      2,
+      0
+    ],
+    "156": [
+      "aload",
+      2,
+      0
+    ],
+    "157": [
+      "#5",
+      2,
+      0
+    ],
+    "158": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "159": [
+      "org/apache/commons/math3/geometry/spherical/twod/Edge.getCircle:()Lorg/apache/commons/math3/geometry/spherical/twod/Circle;",
+      2,
+      0
+    ],
+    "161": [
+      "aload",
+      2,
+      0
+    ],
+    "162": [
+      "#6",
+      2,
+      0
+    ],
+    "163": [
+      "aload",
+      2,
+      0
+    ],
+    "164": [
+      "#7",
+      2,
+      0
+    ],
+    "165": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "166": [
+      "org/apache/commons/math3/geometry/spherical/twod/Edge.split:(Lorg/apache/commons/math3/geometry/spherical/twod/Circle;Ljava/util/List;Ljava/util/List;)V",
+      2,
+      0
+    ],
+    "168": [
+      "goto",
+      0,
+      4
+    ],
+    "169": [
+      "-43",
+      0,
+      4
+    ],
+    "171": [
+      "aload",
+      1,
+      1
+    ],
+    "172": [
+      "#6",
+      1,
+      1
+    ],
+    "173": [
+      "invokeinterface",
+      1,
+      1
+    ],
+    "174": [
+      "java/util/List.getPlus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      1,
+      1
+    ],
+    "176": [
+      "0",
+      1,
+      1
+    ],
+    "178": [
+      "ifne",
+      1,
+      1
+    ],
+    "179": [
+      "16",
+      1,
+      1
+    ],
+    "181": [
+      "dload_0",
+      1,
+      0
+    ],
+    "182": [
+      "aload_2",
+      1,
+      0
+    ],
+    "183": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "184": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getPlus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      1,
+      0
+    ],
+    "186": [
+      "aload",
+      1,
+      0
+    ],
+    "187": [
+      "#6",
+      1,
+      0
+    ],
+    "188": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "189": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.insertEdges:(DLorg/apache/commons/math3/geometry/partitioning/BSPTree;Ljava/util/List;)V",
+      1,
+      0
+    ],
+    "191": [
+      "goto",
+      1,
+      0
+    ],
+    "192": [
+      "13",
+      1,
+      0
+    ],
+    "194": [
+      "aload_2",
+      1,
+      0
+    ],
+    "195": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "196": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getPlus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      1,
+      0
+    ],
+    "198": [
+      "getstatic",
+      1,
+      0
+    ],
+    "199": [
+      "java/lang/Boolean.FALSE:Ljava/lang/Boolean;",
+      1,
+      0
+    ],
+    "201": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "202": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.setAttribute:(Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "204": [
+      "aload",
+      1,
+      1
+    ],
+    "205": [
+      "#7",
+      1,
+      1
+    ],
+    "206": [
+      "invokeinterface",
+      1,
+      1
+    ],
+    "207": [
+      "java/util/List.getPlus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      1,
+      1
+    ],
+    "209": [
+      "0",
+      1,
+      1
+    ],
+    "211": [
+      "ifne",
+      1,
+      1
+    ],
+    "212": [
+      "16",
+      1,
+      1
+    ],
+    "214": [
+      "dload_0",
+      1,
+      0
+    ],
+    "215": [
+      "aload_2",
+      1,
+      0
+    ],
+    "216": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "217": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getMinus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      1,
+      0
+    ],
+    "219": [
+      "aload",
+      1,
+      0
+    ],
+    "220": [
+      "#7",
+      1,
+      0
+    ],
+    "221": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "222": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.insertEdges:(DLorg/apache/commons/math3/geometry/partitioning/BSPTree;Ljava/util/List;)V",
+      1,
+      0
+    ],
+    "224": [
+      "goto",
+      1,
+      0
+    ],
+    "225": [
+      "13",
+      1,
+      0
+    ],
+    "227": [
+      "aload_2",
+      1,
+      0
+    ],
+    "228": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "229": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getMinus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      1,
+      0
+    ],
+    "231": [
+      "getstatic",
+      1,
+      0
+    ],
+    "232": [
+      "java/lang/Boolean.TRUE:Ljava/lang/Boolean;",
+      1,
+      0
+    ],
+    "234": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "235": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.setAttribute:(Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "237": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "buildNew": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.buildNew:(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;)Lorg/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet;",
+      0,
+      0
+    ],
+    "5": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "computeGeometricalProperties": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.getTree:(Z)Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      0,
+      0
+    ],
+    "5": [
+      "astore_1",
+      0,
+      0
+    ],
+    "6": [
+      "aload_1",
+      1,
+      1
+    ],
+    "7": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "8": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getCut:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      1
+    ],
+    "10": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "11": [
+      "61",
+      1,
+      1
+    ],
+    "13": [
+      "aload_1",
+      2,
+      1
+    ],
+    "14": [
+      "invokevirtual",
+      2,
+      1
+    ],
+    "15": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getCut:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      2,
+      1
+    ],
+    "17": [
+      "ifnonnull",
+      2,
+      1
+    ],
+    "18": [
+      "39",
+      2,
+      1
+    ],
+    "20": [
+      "aload_1",
+      2,
+      1
+    ],
+    "21": [
+      "invokevirtual",
+      2,
+      1
+    ],
+    "22": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getAttribute:()Ljava/lang/Object;",
+      2,
+      1
+    ],
+    "24": [
+      "checkcast",
+      2,
+      1
+    ],
+    "25": [
+      "java/lang/Boolean",
+      2,
+      1
+    ],
+    "27": [
+      "invokevirtual",
+      2,
+      1
+    ],
+    "28": [
+      "java/lang/Boolean.booleanValue:()Z",
+      2,
+      1
+    ],
+    "30": [
+      "ifeq",
+      2,
+      1
+    ],
+    "31": [
+      "26",
+      2,
+      1
+    ],
+    "33": [
+      "aload_0",
+      2,
+      0
+    ],
+    "34": [
+      "ldc2_w",
+      2,
+      0
+    ],
+    "35": [
+      "12.566370614359172",
+      2,
+      0
+    ],
+    "37": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "38": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.setSize:(D)V",
+      2,
+      0
+    ],
+    "40": [
+      "aload_0",
+      2,
+      0
+    ],
+    "41": [
+      "new",
+      2,
+      0
+    ],
+    "42": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      2,
+      0
+    ],
+    "44": [
+      "dup",
+      2,
+      0
+    ],
+    "45": [
+      "dconst_0",
+      2,
+      0
+    ],
+    "46": [
+      "dconst_0",
+      2,
+      0
+    ],
+    "47": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "48": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.<init>:(DD)V",
+      2,
+      0
+    ],
+    "50": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "51": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.setBarycenter:(Lorg/apache/commons/math3/geometry/Point;)V",
+      2,
+      0
+    ],
+    "53": [
+      "goto",
+      2,
+      0
+    ],
+    "54": [
+      "51",
+      2,
+      0
+    ],
+    "56": [
+      "aload_0",
+      2,
+      0
+    ],
+    "57": [
+      "dconst_0",
+      2,
+      0
+    ],
+    "58": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "59": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.setSize:(D)V",
+      2,
+      0
+    ],
+    "61": [
+      "aload_0",
+      2,
+      0
+    ],
+    "62": [
+      "getstatic",
+      2,
+      0
+    ],
+    "63": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.NaN:Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;",
+      2,
+      0
+    ],
+    "65": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "66": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.setBarycenter:(Lorg/apache/commons/math3/geometry/Point;)V",
+      2,
+      0
+    ],
+    "68": [
+      "goto",
+      2,
+      0
+    ],
+    "69": [
+      "36",
+      2,
+      0
+    ],
+    "71": [
+      "new",
+      1,
+      0
+    ],
+    "72": [
+      "org/apache/commons/math3/geometry/spherical/twod/PropertiesComputer",
+      1,
+      0
+    ],
+    "74": [
+      "dup",
+      1,
+      0
+    ],
+    "75": [
+      "aload_0",
+      1,
+      0
+    ],
+    "76": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "77": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.getTolerance:()D",
+      1,
+      0
+    ],
+    "79": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "80": [
+      "org/apache/commons/math3/geometry/spherical/twod/PropertiesComputer.<init>:(D)V",
+      1,
+      0
+    ],
+    "82": [
+      "astore_2",
+      1,
+      0
+    ],
+    "83": [
+      "aload_1",
+      1,
+      0
+    ],
+    "84": [
+      "aload_2",
+      1,
+      0
+    ],
+    "85": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "86": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.visit:(Lorg/apache/commons/math3/geometry/partitioning/BSPTreeVisitor;)V",
+      1,
+      0
+    ],
+    "88": [
+      "aload_0",
+      1,
+      0
+    ],
+    "89": [
+      "aload_2",
+      1,
+      0
+    ],
+    "90": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "91": [
+      "org/apache/commons/math3/geometry/spherical/twod/PropertiesComputer.getArea:()D",
+      1,
+      0
+    ],
+    "93": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "94": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.setSize:(D)V",
+      1,
+      0
+    ],
+    "96": [
+      "aload_0",
+      1,
+      0
+    ],
+    "97": [
+      "aload_2",
+      1,
+      0
+    ],
+    "98": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "99": [
+      "org/apache/commons/math3/geometry/spherical/twod/PropertiesComputer.getBarycenter:()Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;",
+      1,
+      0
+    ],
+    "101": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "102": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.setBarycenter:(Lorg/apache/commons/math3/geometry/Point;)V",
+      1,
+      0
+    ],
+    "104": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getBoundaryLoops": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.loops:Ljava/util/List;",
+      1,
+      1
+    ],
+    "4": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "5": [
+      "167",
+      1,
+      1
+    ],
+    "7": [
+      "aload_0",
+      2,
+      1
+    ],
+    "8": [
+      "iconst_0",
+      2,
+      1
+    ],
+    "9": [
+      "invokevirtual",
+      2,
+      1
+    ],
+    "10": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.getTree:(Z)Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      2,
+      1
+    ],
+    "12": [
+      "invokevirtual",
+      2,
+      1
+    ],
+    "13": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getCut:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      2,
+      1
+    ],
+    "15": [
+      "ifnonnull",
+      2,
+      1
+    ],
+    "16": [
+      "13",
+      2,
+      1
+    ],
+    "18": [
+      "aload_0",
+      2,
+      0
+    ],
+    "19": [
+      "invokestatic",
+      2,
+      0
+    ],
+    "20": [
+      "java/util/Collections.emptyList:()Ljava/util/List;",
+      2,
+      0
+    ],
+    "22": [
+      "putfield",
+      2,
+      0
+    ],
+    "23": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.loops:Ljava/util/List;",
+      2,
+      0
+    ],
+    "25": [
+      "goto",
+      2,
+      0
+    ],
+    "26": [
+      "146",
+      2,
+      0
+    ],
+    "28": [
+      "aload_0",
+      2,
+      0
+    ],
+    "29": [
+      "iconst_1",
+      2,
+      0
+    ],
+    "30": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "31": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.getTree:(Z)Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      2,
+      0
+    ],
+    "33": [
+      "astore_1",
+      2,
+      0
+    ],
+    "34": [
+      "new",
+      2,
+      0
+    ],
+    "35": [
+      "org/apache/commons/math3/geometry/spherical/twod/EdgesBuilder",
+      2,
+      0
+    ],
+    "37": [
+      "dup",
+      2,
+      0
+    ],
+    "38": [
+      "aload_1",
+      2,
+      0
+    ],
+    "39": [
+      "aload_0",
+      2,
+      0
+    ],
+    "40": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "41": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.getTolerance:()D",
+      2,
+      0
+    ],
+    "43": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "44": [
+      "org/apache/commons/math3/geometry/spherical/twod/EdgesBuilder.<init>:(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;D)V",
+      2,
+      0
+    ],
+    "46": [
+      "astore_2",
+      2,
+      0
+    ],
+    "47": [
+      "aload_1",
+      2,
+      0
+    ],
+    "48": [
+      "aload_2",
+      2,
+      0
+    ],
+    "49": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "50": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.visit:(Lorg/apache/commons/math3/geometry/partitioning/BSPTreeVisitor;)V",
+      2,
+      0
+    ],
+    "52": [
+      "aload_2",
+      2,
+      0
+    ],
+    "53": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "54": [
+      "org/apache/commons/math3/geometry/spherical/twod/EdgesBuilder.getEdges:()Ljava/util/List;",
+      2,
+      0
+    ],
+    "56": [
+      "astore_3",
+      2,
+      0
+    ],
+    "57": [
+      "aload_0",
+      2,
+      0
+    ],
+    "58": [
+      "new",
+      2,
+      0
+    ],
+    "59": [
+      "java/util/ArrayList",
+      2,
+      0
+    ],
+    "61": [
+      "dup",
+      2,
+      0
+    ],
+    "62": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "63": [
+      "java/util/ArrayList.<init>:()V",
+      2,
+      0
+    ],
+    "65": [
+      "putfield",
+      2,
+      0
+    ],
+    "66": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.loops:Ljava/util/List;",
+      2,
+      0
+    ],
+    "68": [
+      "aload_3",
+      3,
+      3
+    ],
+    "69": [
+      "invokeinterface",
+      3,
+      3
+    ],
+    "70": [
+      "java/util/List.getPlus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      3,
+      3
+    ],
+    "72": [
+      "0",
+      3,
+      3
+    ],
+    "74": [
+      "ifne",
+      3,
+      3
+    ],
+    "75": [
+      "97",
+      3,
+      3
+    ],
+    "77": [
+      "aload_3",
+      3,
+      0
+    ],
+    "78": [
+      "iconst_0",
+      3,
+      0
+    ],
+    "79": [
+      "invokeinterface",
+      3,
+      0
+    ],
+    "80": [
+      "java/util/List.getCircle:()Lorg/apache/commons/math3/geometry/spherical/twod/Circle;",
+      3,
+      0
+    ],
+    "82": [
+      "0",
+      3,
+      0
+    ],
+    "84": [
+      "checkcast",
+      3,
+      0
+    ],
+    "85": [
+      "org/apache/commons/math3/geometry/spherical/twod/Edge",
+      3,
+      0
+    ],
+    "87": [
+      "astore",
+      3,
+      0
+    ],
+    "88": [
+      "#4",
+      3,
+      0
+    ],
+    "89": [
+      "aload",
+      3,
+      0
+    ],
+    "90": [
+      "#4",
+      3,
+      0
+    ],
+    "91": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "92": [
+      "org/apache/commons/math3/geometry/spherical/twod/Edge.getStart:()Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;",
+      3,
+      0
+    ],
+    "94": [
+      "astore",
+      3,
+      0
+    ],
+    "95": [
+      "#5",
+      3,
+      0
+    ],
+    "96": [
+      "aload_0",
+      3,
+      0
+    ],
+    "97": [
+      "getfield",
+      3,
+      0
+    ],
+    "98": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.loops:Ljava/util/List;",
+      3,
+      0
+    ],
+    "100": [
+      "aload",
+      3,
+      0
+    ],
+    "101": [
+      "#5",
+      3,
+      0
+    ],
+    "102": [
+      "invokeinterface",
+      3,
+      0
+    ],
+    "103": [
+      "java/util/List.getOffset:(Lorg/apache/commons/math3/geometry/Point;)D",
+      3,
+      0
+    ],
+    "105": [
+      "0",
+      3,
+      0
+    ],
+    "107": [
+      "pop",
+      3,
+      0
+    ],
+    "108": [
+      "aload_3",
+      5,
+      4
+    ],
+    "109": [
+      "invokeinterface",
+      5,
+      4
+    ],
+    "110": [
+      "java/util/List.java/util/Iterator",
+      5,
+      4
+    ],
+    "112": [
+      "0",
+      5,
+      4
+    ],
+    "114": [
+      "astore",
+      5,
+      4
+    ],
+    "115": [
+      "#6",
+      5,
+      4
+    ],
+    "116": [
+      "aload",
+      5,
+      4
+    ],
+    "117": [
+      "#6",
+      5,
+      4
+    ],
+    "118": [
+      "invokeinterface",
+      5,
+      4
+    ],
+    "119": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      5,
+      4
+    ],
+    "121": [
+      "0",
+      5,
+      4
+    ],
+    "123": [
+      "ifeq",
+      5,
+      4
+    ],
+    "124": [
+      "25",
+      5,
+      4
+    ],
+    "126": [
+      "aload",
+      6,
+      1
+    ],
+    "127": [
+      "#6",
+      6,
+      1
+    ],
+    "128": [
+      "invokeinterface",
+      6,
+      1
+    ],
+    "129": [
+      "java/util/Iterator.split:(Lorg/apache/commons/math3/geometry/spherical/twod/Circle;Ljava/util/List;Ljava/util/List;)V",
+      6,
+      1
+    ],
+    "131": [
+      "0",
+      6,
+      1
+    ],
+    "133": [
+      "aload",
+      6,
+      1
+    ],
+    "134": [
+      "#4",
+      6,
+      1
+    ],
+    "135": [
+      "if_acmpne",
+      6,
+      4
+    ],
+    "136": [
+      "-19",
+      6,
+      4
+    ],
+    "138": [
+      "aload",
+      6,
+      0
+    ],
+    "139": [
+      "#6",
+      6,
+      0
+    ],
+    "140": [
+      "invokeinterface",
+      6,
+      0
+    ],
+    "141": [
+      "java/util/Iterator.getEnd:()Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;",
+      6,
+      0
+    ],
+    "143": [
+      "0",
+      6,
+      0
+    ],
+    "145": [
+      "goto",
+      6,
+      0
+    ],
+    "146": [
+      "3",
+      6,
+      0
+    ],
+    "148": [
+      "aload",
+      3,
+      0
+    ],
+    "149": [
+      "#4",
+      3,
+      0
+    ],
+    "150": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "151": [
+      "org/apache/commons/math3/geometry/spherical/twod/Edge.getEnd:()Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;",
+      3,
+      0
+    ],
+    "153": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "154": [
+      "org/apache/commons/math3/geometry/spherical/twod/Vertex.getOutgoing:()Lorg/apache/commons/math3/geometry/spherical/twod/Edge;",
+      3,
+      0
+    ],
+    "156": [
+      "astore",
+      3,
+      0
+    ],
+    "157": [
+      "#4",
+      3,
+      0
+    ],
+    "158": [
+      "aload",
+      3,
+      3
+    ],
+    "159": [
+      "#4",
+      3,
+      3
+    ],
+    "160": [
+      "invokevirtual",
+      3,
+      3
+    ],
+    "161": [
+      "org/apache/commons/math3/geometry/spherical/twod/Edge.getStart:()Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;",
+      3,
+      3
+    ],
+    "163": [
+      "aload",
+      3,
+      3
+    ],
+    "164": [
+      "#5",
+      3,
+      3
+    ],
+    "165": [
+      "if_acmpne",
+      3,
+      4
+    ],
+    "166": [
+      "-57",
+      3,
+      4
+    ],
+    "168": [
+      "goto",
+      2,
+      3
+    ],
+    "169": [
+      "-100",
+      2,
+      3
+    ],
+    "171": [
+      "aload_0",
+      0,
+      0
+    ],
+    "172": [
+      "getfield",
+      0,
+      0
+    ],
+    "173": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.loops:Ljava/util/List;",
+      0,
+      0
+    ],
+    "175": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "176": [
+      "java/util/Collections.unmodifiableList:(Ljava/util/List;)Ljava/util/List;",
+      0,
+      0
+    ],
+    "178": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getEnclosingCap": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.isEmpty:()Z",
+      1,
+      1
+    ],
+    "4": [
+      "ifeq",
+      1,
+      1
+    ],
+    "5": [
+      "21",
+      1,
+      1
+    ],
+    "7": [
+      "new",
+      1,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall",
+      1,
+      0
+    ],
+    "10": [
+      "dup",
+      1,
+      0
+    ],
+    "11": [
+      "getstatic",
+      1,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.PLUS_K:Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;",
+      1,
+      0
+    ],
+    "14": [
+      "ldc2_w",
+      1,
+      0
+    ],
+    "15": [
+      "-inf",
+      1,
+      0
+    ],
+    "17": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "18": [
+      "anewarray",
+      1,
+      0
+    ],
+    "19": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      1,
+      0
+    ],
+    "21": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "22": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall.<init>:(Lorg/apache/commons/math3/geometry/Point;D[Lorg/apache/commons/math3/geometry/Point;)V",
+      1,
+      0
+    ],
+    "24": [
+      "areturn",
+      1,
+      0
+    ],
+    "25": [
+      "aload_0",
+      1,
+      1
+    ],
+    "26": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "27": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.isFull:()Z",
+      1,
+      1
+    ],
+    "29": [
+      "ifeq",
+      1,
+      1
+    ],
+    "30": [
+      "21",
+      1,
+      1
+    ],
+    "32": [
+      "new",
+      1,
+      0
+    ],
+    "33": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall",
+      1,
+      0
+    ],
+    "35": [
+      "dup",
+      1,
+      0
+    ],
+    "36": [
+      "getstatic",
+      1,
+      0
+    ],
+    "37": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.PLUS_K:Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;",
+      1,
+      0
+    ],
+    "39": [
+      "ldc2_w",
+      1,
+      0
+    ],
+    "40": [
+      "inf",
+      1,
+      0
+    ],
+    "42": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "43": [
+      "anewarray",
+      1,
+      0
+    ],
+    "44": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      1,
+      0
+    ],
+    "46": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "47": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall.<init>:(Lorg/apache/commons/math3/geometry/Point;D[Lorg/apache/commons/math3/geometry/Point;)V",
+      1,
+      0
+    ],
+    "49": [
+      "areturn",
+      1,
+      0
+    ],
+    "50": [
+      "aload_0",
+      0,
+      0
+    ],
+    "51": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "52": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "53": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.getTree:(Z)Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      0,
+      0
+    ],
+    "55": [
+      "astore_1",
+      0,
+      0
+    ],
+    "56": [
+      "aload_0",
+      1,
+      1
+    ],
+    "57": [
+      "aload_1",
+      1,
+      1
+    ],
+    "58": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "59": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getMinus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      1,
+      1
+    ],
+    "61": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "62": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.isEmpty:(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;)Z",
+      1,
+      1
+    ],
+    "64": [
+      "ifeq",
+      1,
+      1
+    ],
+    "65": [
+      "56",
+      1,
+      1
+    ],
+    "67": [
+      "aload_0",
+      1,
+      1
+    ],
+    "68": [
+      "aload_1",
+      1,
+      1
+    ],
+    "69": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "70": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getPlus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      1,
+      1
+    ],
+    "72": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "73": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.isFull:(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;)Z",
+      1,
+      1
+    ],
+    "75": [
+      "ifeq",
+      1,
+      1
+    ],
+    "76": [
+      "45",
+      1,
+      1
+    ],
+    "78": [
+      "aload_1",
+      1,
+      0
+    ],
+    "79": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "80": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getCut:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      0
+    ],
+    "82": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "83": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane.getPole:()Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      1,
+      0
+    ],
+    "85": [
+      "0",
+      1,
+      0
+    ],
+    "87": [
+      "checkcast",
+      1,
+      0
+    ],
+    "88": [
+      "org/apache/commons/math3/geometry/spherical/twod/Circle",
+      1,
+      0
+    ],
+    "90": [
+      "astore_2",
+      1,
+      0
+    ],
+    "91": [
+      "new",
+      1,
+      0
+    ],
+    "92": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall",
+      1,
+      0
+    ],
+    "94": [
+      "dup",
+      1,
+      0
+    ],
+    "95": [
+      "new",
+      1,
+      0
+    ],
+    "96": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      1,
+      0
+    ],
+    "98": [
+      "dup",
+      1,
+      0
+    ],
+    "99": [
+      "aload_2",
+      1,
+      0
+    ],
+    "100": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "101": [
+      "org/apache/commons/math3/geometry/spherical/twod/Circle.getPole:()Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      1,
+      0
+    ],
+    "103": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "104": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.<init>:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;)V",
+      1,
+      0
+    ],
+    "106": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "107": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.negate:()Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;",
+      1,
+      0
+    ],
+    "109": [
+      "ldc2_w",
+      1,
+      0
+    ],
+    "110": [
+      "1.5707963267948966",
+      1,
+      0
+    ],
+    "112": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "113": [
+      "anewarray",
+      1,
+      0
+    ],
+    "114": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      1,
+      0
+    ],
+    "116": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "117": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall.<init>:(Lorg/apache/commons/math3/geometry/Point;D[Lorg/apache/commons/math3/geometry/Point;)V",
+      1,
+      0
+    ],
+    "119": [
+      "areturn",
+      1,
+      0
+    ],
+    "120": [
+      "aload_0",
+      1,
+      1
+    ],
+    "121": [
+      "aload_1",
+      1,
+      1
+    ],
+    "122": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "123": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getMinus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      1,
+      1
+    ],
+    "125": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "126": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.isFull:(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;)Z",
+      1,
+      1
+    ],
+    "128": [
+      "ifeq",
+      1,
+      1
+    ],
+    "129": [
+      "53",
+      1,
+      1
+    ],
+    "131": [
+      "aload_0",
+      1,
+      1
+    ],
+    "132": [
+      "aload_1",
+      1,
+      1
+    ],
+    "133": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "134": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getPlus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      1,
+      1
+    ],
+    "136": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "137": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.isEmpty:(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;)Z",
+      1,
+      1
+    ],
+    "139": [
+      "ifeq",
+      1,
+      1
+    ],
+    "140": [
+      "42",
+      1,
+      1
+    ],
+    "142": [
+      "aload_1",
+      1,
+      0
+    ],
+    "143": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "144": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getCut:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      0
+    ],
+    "146": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "147": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane.getPole:()Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      1,
+      0
+    ],
+    "149": [
+      "0",
+      1,
+      0
+    ],
+    "151": [
+      "checkcast",
+      1,
+      0
+    ],
+    "152": [
+      "org/apache/commons/math3/geometry/spherical/twod/Circle",
+      1,
+      0
+    ],
+    "154": [
+      "astore_2",
+      1,
+      0
+    ],
+    "155": [
+      "new",
+      1,
+      0
+    ],
+    "156": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall",
+      1,
+      0
+    ],
+    "158": [
+      "dup",
+      1,
+      0
+    ],
+    "159": [
+      "new",
+      1,
+      0
+    ],
+    "160": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      1,
+      0
+    ],
+    "162": [
+      "dup",
+      1,
+      0
+    ],
+    "163": [
+      "aload_2",
+      1,
+      0
+    ],
+    "164": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "165": [
+      "org/apache/commons/math3/geometry/spherical/twod/Circle.getPole:()Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      1,
+      0
+    ],
+    "167": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "168": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.<init>:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;)V",
+      1,
+      0
+    ],
+    "170": [
+      "ldc2_w",
+      1,
+      0
+    ],
+    "171": [
+      "1.5707963267948966",
+      1,
+      0
+    ],
+    "173": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "174": [
+      "anewarray",
+      1,
+      0
+    ],
+    "175": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      1,
+      0
+    ],
+    "177": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "178": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall.<init>:(Lorg/apache/commons/math3/geometry/Point;D[Lorg/apache/commons/math3/geometry/Point;)V",
+      1,
+      0
+    ],
+    "180": [
+      "areturn",
+      1,
+      0
+    ],
+    "181": [
+      "aload_0",
+      0,
+      0
+    ],
+    "182": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "183": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.getInsidePoints:()Ljava/util/List;",
+      0,
+      0
+    ],
+    "185": [
+      "astore_2",
+      0,
+      0
+    ],
+    "186": [
+      "aload_0",
+      0,
+      0
+    ],
+    "187": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "188": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.getBoundaryLoops:()Ljava/util/List;",
+      0,
+      0
+    ],
+    "190": [
+      "astore_3",
+      0,
+      0
+    ],
+    "191": [
+      "aload_3",
+      1,
+      4
+    ],
+    "192": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "193": [
+      "java/util/List.java/util/Iterator",
+      1,
+      4
+    ],
+    "195": [
+      "0",
+      1,
+      4
+    ],
+    "197": [
+      "astore",
+      1,
+      4
+    ],
+    "198": [
+      "#4",
+      1,
+      4
+    ],
+    "199": [
+      "aload",
+      1,
+      4
+    ],
+    "200": [
+      "#4",
+      1,
+      4
+    ],
+    "201": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "202": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "204": [
+      "0",
+      1,
+      4
+    ],
+    "206": [
+      "ifeq",
+      1,
+      4
+    ],
+    "207": [
+      "68",
+      1,
+      4
+    ],
+    "209": [
+      "aload",
+      1,
+      4
+    ],
+    "210": [
+      "#4",
+      1,
+      4
+    ],
+    "211": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "212": [
+      "java/util/Iterator.split:(Lorg/apache/commons/math3/geometry/spherical/twod/Circle;Ljava/util/List;Ljava/util/List;)V",
+      1,
+      4
+    ],
+    "214": [
+      "0",
+      1,
+      4
+    ],
+    "216": [
+      "checkcast",
+      1,
+      4
+    ],
+    "217": [
+      "org/apache/commons/math3/geometry/spherical/twod/Vertex",
+      1,
+      4
+    ],
+    "219": [
+      "astore",
+      1,
+      4
+    ],
+    "220": [
+      "#5",
+      1,
+      4
+    ],
+    "221": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "222": [
+      "istore",
+      1,
+      0
+    ],
+    "223": [
+      "#6",
+      1,
+      0
+    ],
+    "224": [
+      "aload",
+      2,
+      4
+    ],
+    "225": [
+      "#5",
+      2,
+      4
+    ],
+    "226": [
+      "astore",
+      2,
+      4
+    ],
+    "227": [
+      "#7",
+      2,
+      4
+    ],
+    "228": [
+      "iload",
+      2,
+      4
+    ],
+    "229": [
+      "#6",
+      2,
+      4
+    ],
+    "230": [
+      "ifeq",
+      2,
+      4
+    ],
+    "231": [
+      "10",
+      2,
+      4
+    ],
+    "233": [
+      "aload",
+      2,
+      4
+    ],
+    "234": [
+      "#7",
+      2,
+      4
+    ],
+    "235": [
+      "aload",
+      2,
+      4
+    ],
+    "236": [
+      "#5",
+      2,
+      4
+    ],
+    "237": [
+      "if_acmpeq",
+      2,
+      4
+    ],
+    "238": [
+      "34",
+      2,
+      4
+    ],
+    "240": [
+      "iinc",
+      2,
+      0
+    ],
+    "241": [
+      "#6",
+      2,
+      0
+    ],
+    "242": [
+      "44",
+      2,
+      0
+    ],
+    "243": [
+      "aload_2",
+      2,
+      0
+    ],
+    "244": [
+      "aload",
+      2,
+      0
+    ],
+    "245": [
+      "#7",
+      2,
+      0
+    ],
+    "246": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "247": [
+      "org/apache/commons/math3/geometry/spherical/twod/Vertex.getLocation:()Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;",
+      2,
+      0
+    ],
+    "249": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "250": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.getVector:()Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      2,
+      0
+    ],
+    "252": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "253": [
+      "java/util/List.getOffset:(Lorg/apache/commons/math3/geometry/Point;)D",
+      2,
+      0
+    ],
+    "255": [
+      "0",
+      2,
+      0
+    ],
+    "257": [
+      "pop",
+      2,
+      0
+    ],
+    "258": [
+      "aload",
+      2,
+      0
+    ],
+    "259": [
+      "#7",
+      2,
+      0
+    ],
+    "260": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "261": [
+      "org/apache/commons/math3/geometry/spherical/twod/Vertex.getOutgoing:()Lorg/apache/commons/math3/geometry/spherical/twod/Edge;",
+      2,
+      0
+    ],
+    "263": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "264": [
+      "org/apache/commons/math3/geometry/spherical/twod/Edge.getEnd:()Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;",
+      2,
+      0
+    ],
+    "266": [
+      "astore",
+      2,
+      0
+    ],
+    "267": [
+      "#7",
+      2,
+      0
+    ],
+    "268": [
+      "goto",
+      2,
+      4
+    ],
+    "269": [
+      "-40",
+      2,
+      4
+    ],
+    "271": [
+      "goto",
+      0,
+      4
+    ],
+    "272": [
+      "-72",
+      0,
+      4
+    ],
+    "274": [
+      "new",
+      0,
+      0
+    ],
+    "275": [
+      "org/apache/commons/math3/geometry/euclidean/threed/SphereGenerator",
+      0,
+      0
+    ],
+    "277": [
+      "dup",
+      0,
+      0
+    ],
+    "278": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "279": [
+      "org/apache/commons/math3/geometry/euclidean/threed/SphereGenerator.<init>:()V",
+      0,
+      0
+    ],
+    "281": [
+      "astore",
+      0,
+      0
+    ],
+    "282": [
+      "#4",
+      0,
+      0
+    ],
+    "283": [
+      "new",
+      0,
+      0
+    ],
+    "284": [
+      "org/apache/commons/math3/geometry/enclosing/WelzlEncloser",
+      0,
+      0
+    ],
+    "286": [
+      "dup",
+      0,
+      0
+    ],
+    "287": [
+      "aload_0",
+      0,
+      0
+    ],
+    "288": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "289": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.getTolerance:()D",
+      0,
+      0
+    ],
+    "291": [
+      "aload",
+      0,
+      0
+    ],
+    "292": [
+      "#4",
+      0,
+      0
+    ],
+    "293": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "294": [
+      "org/apache/commons/math3/geometry/enclosing/WelzlEncloser.<init>:(DLorg/apache/commons/math3/geometry/enclosing/SupportBallGenerator;)V",
+      0,
+      0
+    ],
+    "296": [
+      "astore",
+      0,
+      0
+    ],
+    "297": [
+      "#5",
+      0,
+      0
+    ],
+    "298": [
+      "aload",
+      0,
+      0
+    ],
+    "299": [
+      "#5",
+      0,
+      0
+    ],
+    "300": [
+      "aload_2",
+      0,
+      0
+    ],
+    "301": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "302": [
+      "org/apache/commons/math3/geometry/enclosing/WelzlEncloser.enclose:(Ljava/lang/Iterable;)Lorg/apache/commons/math3/geometry/enclosing/EnclosingBall;",
+      0,
+      0
+    ],
+    "304": [
+      "astore",
+      0,
+      0
+    ],
+    "305": [
+      "#6",
+      0,
+      0
+    ],
+    "306": [
+      "aload",
+      0,
+      0
+    ],
+    "307": [
+      "#6",
+      0,
+      0
+    ],
+    "308": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "309": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall.getSupport:()[Lorg/apache/commons/math3/geometry/Point;",
+      0,
+      0
+    ],
+    "311": [
+      "checkcast",
+      0,
+      0
+    ],
+    "312": [
+      "[Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;",
+      0,
+      0
+    ],
+    "314": [
+      "astore",
+      0,
+      0
+    ],
+    "315": [
+      "#7",
+      0,
+      0
+    ],
+    "316": [
+      "aload",
+      0,
+      0
+    ],
+    "317": [
+      "#6",
+      0,
+      0
+    ],
+    "318": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "319": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall.getRadius:()D",
+      0,
+      0
+    ],
+    "321": [
+      "dstore",
+      0,
+      0
+    ],
+    "322": [
+      "#8",
+      0,
+      0
+    ],
+    "323": [
+      "aload",
+      0,
+      0
+    ],
+    "324": [
+      "#6",
+      0,
+      0
+    ],
+    "325": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "326": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall.getCenter:()Lorg/apache/commons/math3/geometry/Point;",
+      0,
+      0
+    ],
+    "328": [
+      "checkcast",
+      0,
+      0
+    ],
+    "329": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Vector3D",
+      0,
+      0
+    ],
+    "331": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "332": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Vector3D.getNorm:()D",
+      0,
+      0
+    ],
+    "334": [
+      "dstore",
+      0,
+      0
+    ],
+    "335": [
+      "#10",
+      0,
+      0
+    ],
+    "336": [
+      "dload",
+      1,
+      1
+    ],
+    "337": [
+      "#10",
+      1,
+      1
+    ],
+    "338": [
+      "aload_0",
+      1,
+      1
+    ],
+    "339": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "340": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.getTolerance:()D",
+      1,
+      1
+    ],
+    "342": [
+      "dcmpg",
+      1,
+      1
+    ],
+    "343": [
+      "ifge",
+      1,
+      1
+    ],
+    "344": [
+      "136",
+      1,
+      1
+    ],
+    "346": [
+      "new",
+      1,
+      0
+    ],
+    "347": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall",
+      1,
+      0
+    ],
+    "349": [
+      "dup",
+      1,
+      0
+    ],
+    "350": [
+      "getstatic",
+      1,
+      0
+    ],
+    "351": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.PLUS_K:Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;",
+      1,
+      0
+    ],
+    "353": [
+      "ldc2_w",
+      1,
+      0
+    ],
+    "354": [
+      "inf",
+      1,
+      0
+    ],
+    "356": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "357": [
+      "anewarray",
+      1,
+      0
+    ],
+    "358": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      1,
+      0
+    ],
+    "360": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "361": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall.<init>:(Lorg/apache/commons/math3/geometry/Point;D[Lorg/apache/commons/math3/geometry/Point;)V",
+      1,
+      0
+    ],
+    "363": [
+      "astore",
+      1,
+      0
+    ],
+    "364": [
+      "#12",
+      1,
+      0
+    ],
+    "365": [
+      "aload_0",
+      2,
+      4
+    ],
+    "366": [
+      "invokespecial",
+      2,
+      4
+    ],
+    "367": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.getOutsidePoints:()Ljava/util/List;",
+      2,
+      4
+    ],
+    "369": [
+      "invokeinterface",
+      2,
+      4
+    ],
+    "370": [
+      "java/util/List.java/util/Iterator",
+      2,
+      4
+    ],
+    "372": [
+      "0",
+      2,
+      4
+    ],
+    "374": [
+      "astore",
+      2,
+      4
+    ],
+    "375": [
+      "#13",
+      2,
+      4
+    ],
+    "376": [
+      "aload",
+      2,
+      4
+    ],
+    "377": [
+      "#13",
+      2,
+      4
+    ],
+    "378": [
+      "invokeinterface",
+      2,
+      4
+    ],
+    "379": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      2,
+      4
+    ],
+    "381": [
+      "0",
+      2,
+      4
+    ],
+    "383": [
+      "ifeq",
+      2,
+      4
+    ],
+    "384": [
+      "93",
+      2,
+      4
+    ],
+    "386": [
+      "aload",
+      2,
+      4
+    ],
+    "387": [
+      "#13",
+      2,
+      4
+    ],
+    "388": [
+      "invokeinterface",
+      2,
+      4
+    ],
+    "389": [
+      "java/util/Iterator.split:(Lorg/apache/commons/math3/geometry/spherical/twod/Circle;Ljava/util/List;Ljava/util/List;)V",
+      2,
+      4
+    ],
+    "391": [
+      "0",
+      2,
+      4
+    ],
+    "393": [
+      "checkcast",
+      2,
+      4
+    ],
+    "394": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Vector3D",
+      2,
+      4
+    ],
+    "396": [
+      "astore",
+      2,
+      4
+    ],
+    "397": [
+      "#14",
+      2,
+      4
+    ],
+    "398": [
+      "new",
+      2,
+      0
+    ],
+    "399": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      2,
+      0
+    ],
+    "401": [
+      "dup",
+      2,
+      0
+    ],
+    "402": [
+      "aload",
+      2,
+      0
+    ],
+    "403": [
+      "#14",
+      2,
+      0
+    ],
+    "404": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "405": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.<init>:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;)V",
+      2,
+      0
+    ],
+    "407": [
+      "astore",
+      2,
+      0
+    ],
+    "408": [
+      "#15",
+      2,
+      0
+    ],
+    "409": [
+      "aload_0",
+      2,
+      0
+    ],
+    "410": [
+      "aload",
+      2,
+      0
+    ],
+    "411": [
+      "#15",
+      2,
+      0
+    ],
+    "412": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "413": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.projectToBoundary:(Lorg/apache/commons/math3/geometry/Point;)Lorg/apache/commons/math3/geometry/partitioning/BoundaryProjection;",
+      2,
+      0
+    ],
+    "415": [
+      "astore",
+      2,
+      0
+    ],
+    "416": [
+      "#16",
+      2,
+      0
+    ],
+    "417": [
+      "ldc2_w",
+      3,
+      1
+    ],
+    "418": [
+      "3.141592653589793",
+      3,
+      1
+    ],
+    "420": [
+      "aload",
+      3,
+      1
+    ],
+    "421": [
+      "#16",
+      3,
+      1
+    ],
+    "422": [
+      "invokevirtual",
+      3,
+      1
+    ],
+    "423": [
+      "org/apache/commons/math3/geometry/partitioning/BoundaryProjection.getOffset:()D",
+      3,
+      1
+    ],
+    "425": [
+      "dsub",
+      3,
+      1
+    ],
+    "426": [
+      "aload",
+      3,
+      1
+    ],
+    "427": [
+      "#12",
+      3,
+      1
+    ],
+    "428": [
+      "invokevirtual",
+      3,
+      1
+    ],
+    "429": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall.getRadius:()D",
+      3,
+      1
+    ],
+    "431": [
+      "dcmpg",
+      3,
+      1
+    ],
+    "432": [
+      "ifge",
+      3,
+      1
+    ],
+    "433": [
+      "41",
+      3,
+      1
+    ],
+    "435": [
+      "new",
+      3,
+      0
+    ],
+    "436": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall",
+      3,
+      0
+    ],
+    "438": [
+      "dup",
+      3,
+      0
+    ],
+    "439": [
+      "aload",
+      3,
+      0
+    ],
+    "440": [
+      "#15",
+      3,
+      0
+    ],
+    "441": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "442": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.negate:()Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;",
+      3,
+      0
+    ],
+    "444": [
+      "ldc2_w",
+      3,
+      0
+    ],
+    "445": [
+      "3.141592653589793",
+      3,
+      0
+    ],
+    "447": [
+      "aload",
+      3,
+      0
+    ],
+    "448": [
+      "#16",
+      3,
+      0
+    ],
+    "449": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "450": [
+      "org/apache/commons/math3/geometry/partitioning/BoundaryProjection.getOffset:()D",
+      3,
+      0
+    ],
+    "452": [
+      "dsub",
+      3,
+      0
+    ],
+    "453": [
+      "iconst_1",
+      3,
+      0
+    ],
+    "454": [
+      "anewarray",
+      3,
+      0
+    ],
+    "455": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      3,
+      0
+    ],
+    "457": [
+      "dup",
+      3,
+      0
+    ],
+    "458": [
+      "iconst_0",
+      3,
+      0
+    ],
+    "459": [
+      "aload",
+      3,
+      0
+    ],
+    "460": [
+      "#16",
+      3,
+      0
+    ],
+    "461": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "462": [
+      "org/apache/commons/math3/geometry/partitioning/BoundaryProjection.getProjected:()Lorg/apache/commons/math3/geometry/Point;",
+      3,
+      0
+    ],
+    "464": [
+      "checkcast",
+      3,
+      0
+    ],
+    "465": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      3,
+      0
+    ],
+    "467": [
+      "aastore",
+      3,
+      0
+    ],
+    "468": [
+      "invokespecial",
+      3,
+      0
+    ],
+    "469": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall.<init>:(Lorg/apache/commons/math3/geometry/Point;D[Lorg/apache/commons/math3/geometry/Point;)V",
+      3,
+      0
+    ],
+    "471": [
+      "astore",
+      3,
+      0
+    ],
+    "472": [
+      "#12",
+      3,
+      0
+    ],
+    "473": [
+      "goto",
+      1,
+      4
+    ],
+    "474": [
+      "-97",
+      1,
+      4
+    ],
+    "476": [
+      "aload",
+      1,
+      0
+    ],
+    "477": [
+      "#12",
+      1,
+      0
+    ],
+    "478": [
+      "areturn",
+      1,
+      0
+    ],
+    "479": [
+      "aload",
+      0,
+      0
+    ],
+    "480": [
+      "#7",
+      0,
+      0
+    ],
+    "481": [
+      "arraylength",
+      0,
+      0
+    ],
+    "482": [
+      "anewarray",
+      0,
+      0
+    ],
+    "483": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      0,
+      0
+    ],
+    "485": [
+      "astore",
+      0,
+      0
+    ],
+    "486": [
+      "#12",
+      0,
+      0
+    ],
+    "487": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "488": [
+      "istore",
+      1,
+      4
+    ],
+    "489": [
+      "#13",
+      1,
+      4
+    ],
+    "490": [
+      "iload",
+      1,
+      4
+    ],
+    "491": [
+      "#13",
+      1,
+      4
+    ],
+    "492": [
+      "aload",
+      1,
+      4
+    ],
+    "493": [
+      "#7",
+      1,
+      4
+    ],
+    "494": [
+      "arraylength",
+      1,
+      4
+    ],
+    "495": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "496": [
+      "26",
+      1,
+      4
+    ],
+    "498": [
+      "aload",
+      1,
+      0
+    ],
+    "499": [
+      "#12",
+      1,
+      0
+    ],
+    "500": [
+      "iload",
+      1,
+      0
+    ],
+    "501": [
+      "#13",
+      1,
+      0
+    ],
+    "502": [
+      "new",
+      1,
+      0
+    ],
+    "503": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      1,
+      0
+    ],
+    "505": [
+      "dup",
+      1,
+      0
+    ],
+    "506": [
+      "aload",
+      1,
+      0
+    ],
+    "507": [
+      "#7",
+      1,
+      0
+    ],
+    "508": [
+      "iload",
+      1,
+      0
+    ],
+    "509": [
+      "#13",
+      1,
+      0
+    ],
+    "510": [
+      "aaload",
+      1,
+      0
+    ],
+    "511": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "512": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.<init>:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;)V",
+      1,
+      0
+    ],
+    "514": [
+      "aastore",
+      1,
+      0
+    ],
+    "515": [
+      "iinc",
+      1,
+      0
+    ],
+    "516": [
+      "#13",
+      1,
+      0
+    ],
+    "517": [
+      "-89",
+      1,
+      0
+    ],
+    "518": [
+      "goto",
+      1,
+      4
+    ],
+    "519": [
+      "-28",
+      1,
+      4
+    ],
+    "521": [
+      "new",
+      0,
+      0
+    ],
+    "522": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall",
+      0,
+      0
+    ],
+    "524": [
+      "dup",
+      0,
+      0
+    ],
+    "525": [
+      "new",
+      0,
+      0
+    ],
+    "526": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point",
+      0,
+      0
+    ],
+    "528": [
+      "dup",
+      0,
+      0
+    ],
+    "529": [
+      "aload",
+      0,
+      0
+    ],
+    "530": [
+      "#6",
+      0,
+      0
+    ],
+    "531": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "532": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall.getCenter:()Lorg/apache/commons/math3/geometry/Point;",
+      0,
+      0
+    ],
+    "534": [
+      "checkcast",
+      0,
+      0
+    ],
+    "535": [
+      "org/apache/commons/math3/geometry/euclidean/threed/Vector3D",
+      0,
+      0
+    ],
+    "537": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "538": [
+      "org/apache/commons/math3/geometry/spherical/twod/S2Point.<init>:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;)V",
+      0,
+      0
+    ],
+    "540": [
+      "dconst_1",
+      0,
+      0
+    ],
+    "541": [
+      "dload",
+      0,
+      0
+    ],
+    "542": [
+      "#10",
+      0,
+      0
+    ],
+    "543": [
+      "dload",
+      0,
+      0
+    ],
+    "544": [
+      "#10",
+      0,
+      0
+    ],
+    "545": [
+      "dmul",
+      0,
+      0
+    ],
+    "546": [
+      "dadd",
+      0,
+      0
+    ],
+    "547": [
+      "dload",
+      0,
+      0
+    ],
+    "548": [
+      "#8",
+      0,
+      0
+    ],
+    "549": [
+      "dload",
+      0,
+      0
+    ],
+    "550": [
+      "#8",
+      0,
+      0
+    ],
+    "551": [
+      "dmul",
+      0,
+      0
+    ],
+    "552": [
+      "dsub",
+      0,
+      0
+    ],
+    "553": [
+      "ldc2_w",
+      0,
+      0
+    ],
+    "554": [
+      "2.0",
+      0,
+      0
+    ],
+    "556": [
+      "dload",
+      0,
+      0
+    ],
+    "557": [
+      "#10",
+      0,
+      0
+    ],
+    "558": [
+      "dmul",
+      0,
+      0
+    ],
+    "559": [
+      "ddiv",
+      0,
+      0
+    ],
+    "560": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "561": [
+      "org/apache/commons/math3/util/FastMath.acos:(D)D",
+      0,
+      0
+    ],
+    "563": [
+      "aload",
+      0,
+      0
+    ],
+    "564": [
+      "#12",
+      0,
+      0
+    ],
+    "565": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "566": [
+      "org/apache/commons/math3/geometry/enclosing/EnclosingBall.<init>:(Lorg/apache/commons/math3/geometry/Point;D[Lorg/apache/commons/math3/geometry/Point;)V",
+      0,
+      0
+    ],
+    "568": [
+      "astore",
+      0,
+      0
+    ],
+    "569": [
+      "#13",
+      0,
+      0
+    ],
+    "570": [
+      "aload",
+      0,
+      0
+    ],
+    "571": [
+      "#13",
+      0,
+      0
+    ],
+    "572": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getInsidePoints": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/math3/geometry/spherical/twod/PropertiesComputer",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.getTolerance:()D",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/geometry/spherical/twod/PropertiesComputer.<init>:(D)V",
+      0,
+      0
+    ],
+    "11": [
+      "astore_1",
+      0,
+      0
+    ],
+    "12": [
+      "aload_0",
+      0,
+      0
+    ],
+    "13": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "14": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "15": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.getTree:(Z)Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      0,
+      0
+    ],
+    "17": [
+      "aload_1",
+      0,
+      0
+    ],
+    "18": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "19": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.visit:(Lorg/apache/commons/math3/geometry/partitioning/BSPTreeVisitor;)V",
+      0,
+      0
+    ],
+    "21": [
+      "aload_1",
+      0,
+      0
+    ],
+    "22": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "23": [
+      "org/apache/commons/math3/geometry/spherical/twod/PropertiesComputer.getConvexCellsInsidePoints:()Ljava/util/List;",
+      0,
+      0
+    ],
+    "25": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getOutsidePoints": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/math3/geometry/partitioning/RegionFactory",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/geometry/partitioning/RegionFactory.<init>:()V",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/geometry/partitioning/RegionFactory.getComplement:(Lorg/apache/commons/math3/geometry/partitioning/Region;)Lorg/apache/commons/math3/geometry/partitioning/Region;",
+      0,
+      0
+    ],
+    "11": [
+      "checkcast",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet",
+      0,
+      0
+    ],
+    "14": [
+      "astore_1",
+      0,
+      0
+    ],
+    "15": [
+      "new",
+      0,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/geometry/spherical/twod/PropertiesComputer",
+      0,
+      0
+    ],
+    "18": [
+      "dup",
+      0,
+      0
+    ],
+    "19": [
+      "aload_0",
+      0,
+      0
+    ],
+    "20": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "21": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.getTolerance:()D",
+      0,
+      0
+    ],
+    "23": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "24": [
+      "org/apache/commons/math3/geometry/spherical/twod/PropertiesComputer.<init>:(D)V",
+      0,
+      0
+    ],
+    "26": [
+      "astore_2",
+      0,
+      0
+    ],
+    "27": [
+      "aload_1",
+      0,
+      0
+    ],
+    "28": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "29": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "30": [
+      "org/apache/commons/math3/geometry/spherical/twod/SphericalPolygonsSet.getTree:(Z)Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      0,
+      0
+    ],
+    "32": [
+      "aload_2",
+      0,
+      0
+    ],
+    "33": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "34": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.visit:(Lorg/apache/commons/math3/geometry/partitioning/BSPTreeVisitor;)V",
+      0,
+      0
+    ],
+    "36": [
+      "aload_2",
+      0,
+      0
+    ],
+    "37": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "38": [
+      "org/apache/commons/math3/geometry/spherical/twod/PropertiesComputer.getConvexCellsInsidePoints:()Ljava/util/List;",
+      0,
+      0
+    ],
+    "40": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

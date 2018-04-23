@@ -1,0 +1,1978 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "new",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/random/RandomDataImpl",
+      0,
+      0
+    ],
+    "8": [
+      "dup",
+      0,
+      0
+    ],
+    "9": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "10": [
+      "org/apache/commons/math3/random/RandomDataImpl.<init>:()V",
+      0,
+      0
+    ],
+    "12": [
+      "putfield",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.randomData:Lorg/apache/commons/math3/random/RandomDataImpl;",
+      0,
+      0
+    ],
+    "15": [
+      "aload_0",
+      0,
+      0
+    ],
+    "16": [
+      "aload_1",
+      0,
+      0
+    ],
+    "17": [
+      "putfield",
+      0,
+      0
+    ],
+    "18": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.random:Lorg/apache/commons/math3/random/RandomGenerator;",
+      0,
+      0
+    ],
+    "20": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "cumulativeProbability": {
+    "0": [
+      "iload_2",
+      1,
+      1
+    ],
+    "1": [
+      "iload_1",
+      1,
+      1
+    ],
+    "2": [
+      "if_icmpge",
+      1,
+      1
+    ],
+    "3": [
+      "23",
+      1,
+      1
+    ],
+    "5": [
+      "new",
+      1,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/exception/NumberIsTooLargeException",
+      1,
+      0
+    ],
+    "8": [
+      "dup",
+      1,
+      0
+    ],
+    "9": [
+      "getstatic",
+      1,
+      0
+    ],
+    "10": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.LOWER_ENDPOINT_ABOVE_UPPER_ENDPOINT:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "12": [
+      "iload_1",
+      1,
+      0
+    ],
+    "13": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "14": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "16": [
+      "iload_2",
+      1,
+      0
+    ],
+    "17": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "18": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "20": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "21": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "22": [
+      "org/apache/commons/math3/exception/NumberIsTooLargeException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;Ljava/lang/Number;Ljava/lang/Number;Z)V",
+      1,
+      0
+    ],
+    "24": [
+      "athrow",
+      1,
+      0
+    ],
+    "25": [
+      "aload_0",
+      0,
+      0
+    ],
+    "26": [
+      "iload_2",
+      0,
+      0
+    ],
+    "27": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "28": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.cumulativeProbability:(I)D",
+      0,
+      0
+    ],
+    "30": [
+      "aload_0",
+      0,
+      0
+    ],
+    "31": [
+      "iload_1",
+      0,
+      0
+    ],
+    "32": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "33": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.cumulativeProbability:(I)D",
+      0,
+      0
+    ],
+    "35": [
+      "dsub",
+      0,
+      0
+    ],
+    "36": [
+      "dreturn",
+      0,
+      0
+    ]
+  },
+  "inverseCumulativeProbability": {
+    "0": [
+      "dload_1",
+      1,
+      1
+    ],
+    "1": [
+      "dconst_0",
+      1,
+      1
+    ],
+    "2": [
+      "dcmpg",
+      1,
+      1
+    ],
+    "3": [
+      "iflt",
+      1,
+      1
+    ],
+    "4": [
+      "9",
+      1,
+      1
+    ],
+    "6": [
+      "dload_1",
+      1,
+      1
+    ],
+    "7": [
+      "dconst_1",
+      1,
+      1
+    ],
+    "8": [
+      "dcmpl",
+      1,
+      1
+    ],
+    "9": [
+      "ifle",
+      1,
+      1
+    ],
+    "10": [
+      "23",
+      1,
+      1
+    ],
+    "12": [
+      "new",
+      1,
+      0
+    ],
+    "13": [
+      "org/apache/commons/math3/exception/OutOfRangeException",
+      1,
+      0
+    ],
+    "15": [
+      "dup",
+      1,
+      0
+    ],
+    "16": [
+      "dload_1",
+      1,
+      0
+    ],
+    "17": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "18": [
+      "java/lang/Double.valueOf:(D)Ljava/lang/Double;",
+      1,
+      0
+    ],
+    "20": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "21": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "22": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "24": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "25": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "26": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "28": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "29": [
+      "org/apache/commons/math3/exception/OutOfRangeException.<init>:(Ljava/lang/Number;Ljava/lang/Number;Ljava/lang/Number;)V",
+      1,
+      0
+    ],
+    "31": [
+      "athrow",
+      1,
+      0
+    ],
+    "32": [
+      "aload_0",
+      0,
+      0
+    ],
+    "33": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "34": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.getSupportLowerBound:()I",
+      0,
+      0
+    ],
+    "36": [
+      "istore_3",
+      0,
+      0
+    ],
+    "37": [
+      "dload_1",
+      1,
+      1
+    ],
+    "38": [
+      "dconst_0",
+      1,
+      1
+    ],
+    "39": [
+      "dcmpl",
+      1,
+      1
+    ],
+    "40": [
+      "ifne",
+      1,
+      1
+    ],
+    "41": [
+      "5",
+      1,
+      1
+    ],
+    "43": [
+      "iload_3",
+      1,
+      0
+    ],
+    "44": [
+      "ireturn",
+      1,
+      0
+    ],
+    "45": [
+      "iload_3",
+      1,
+      1
+    ],
+    "46": [
+      "ldc",
+      1,
+      1
+    ],
+    "47": [
+      "2147483648",
+      1,
+      1
+    ],
+    "48": [
+      "if_icmpne",
+      1,
+      1
+    ],
+    "49": [
+      "15",
+      1,
+      1
+    ],
+    "51": [
+      "aload_0",
+      2,
+      1
+    ],
+    "52": [
+      "iload_3",
+      2,
+      1
+    ],
+    "53": [
+      "invokespecial",
+      2,
+      1
+    ],
+    "54": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.checkedCumulativeProbability:(I)D",
+      2,
+      1
+    ],
+    "56": [
+      "dload_1",
+      2,
+      1
+    ],
+    "57": [
+      "dcmpl",
+      2,
+      1
+    ],
+    "58": [
+      "iflt",
+      2,
+      1
+    ],
+    "59": [
+      "8",
+      2,
+      1
+    ],
+    "61": [
+      "iload_3",
+      2,
+      0
+    ],
+    "62": [
+      "ireturn",
+      2,
+      0
+    ],
+    "63": [
+      "iinc",
+      1,
+      0
+    ],
+    "64": [
+      "#3",
+      1,
+      0
+    ],
+    "65": [
+      "42",
+      1,
+      0
+    ],
+    "66": [
+      "aload_0",
+      0,
+      0
+    ],
+    "67": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "68": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.getSupportUpperBound:()I",
+      0,
+      0
+    ],
+    "70": [
+      "istore",
+      0,
+      0
+    ],
+    "71": [
+      "#4",
+      0,
+      0
+    ],
+    "72": [
+      "dload_1",
+      1,
+      1
+    ],
+    "73": [
+      "dconst_1",
+      1,
+      1
+    ],
+    "74": [
+      "dcmpl",
+      1,
+      1
+    ],
+    "75": [
+      "ifne",
+      1,
+      1
+    ],
+    "76": [
+      "6",
+      1,
+      1
+    ],
+    "78": [
+      "iload",
+      1,
+      0
+    ],
+    "79": [
+      "#4",
+      1,
+      0
+    ],
+    "80": [
+      "ireturn",
+      1,
+      0
+    ],
+    "81": [
+      "aload_0",
+      0,
+      0
+    ],
+    "82": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "83": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.getNumericalMean:()D",
+      0,
+      0
+    ],
+    "85": [
+      "dstore",
+      0,
+      0
+    ],
+    "86": [
+      "#5",
+      0,
+      0
+    ],
+    "87": [
+      "aload_0",
+      0,
+      0
+    ],
+    "88": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "89": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.getNumericalVariance:()D",
+      0,
+      0
+    ],
+    "91": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "92": [
+      "org/apache/commons/math3/util/FastMath.sqrt:(D)D",
+      0,
+      0
+    ],
+    "94": [
+      "dstore",
+      0,
+      0
+    ],
+    "95": [
+      "#7",
+      0,
+      0
+    ],
+    "96": [
+      "dload",
+      0,
+      0
+    ],
+    "97": [
+      "#5",
+      0,
+      0
+    ],
+    "98": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "99": [
+      "java/lang/Double.isInfinite:(D)Z",
+      0,
+      0
+    ],
+    "101": [
+      "ifne",
+      0,
+      0
+    ],
+    "102": [
+      "38",
+      0,
+      0
+    ],
+    "104": [
+      "dload",
+      0,
+      0
+    ],
+    "105": [
+      "#5",
+      0,
+      0
+    ],
+    "106": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "107": [
+      "java/lang/Double.isNaN:(D)Z",
+      0,
+      0
+    ],
+    "109": [
+      "ifne",
+      0,
+      0
+    ],
+    "110": [
+      "30",
+      0,
+      0
+    ],
+    "112": [
+      "dload",
+      0,
+      0
+    ],
+    "113": [
+      "#7",
+      0,
+      0
+    ],
+    "114": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "115": [
+      "java/lang/Double.isInfinite:(D)Z",
+      0,
+      0
+    ],
+    "117": [
+      "ifne",
+      0,
+      0
+    ],
+    "118": [
+      "22",
+      0,
+      0
+    ],
+    "120": [
+      "dload",
+      0,
+      0
+    ],
+    "121": [
+      "#7",
+      0,
+      0
+    ],
+    "122": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "123": [
+      "java/lang/Double.isNaN:(D)Z",
+      0,
+      0
+    ],
+    "125": [
+      "ifne",
+      0,
+      0
+    ],
+    "126": [
+      "14",
+      0,
+      0
+    ],
+    "128": [
+      "dload",
+      0,
+      0
+    ],
+    "129": [
+      "#7",
+      0,
+      0
+    ],
+    "130": [
+      "dconst_0",
+      0,
+      0
+    ],
+    "131": [
+      "dcmpl",
+      0,
+      0
+    ],
+    "132": [
+      "ifeq",
+      0,
+      0
+    ],
+    "133": [
+      "7",
+      0,
+      0
+    ],
+    "135": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "136": [
+      "goto",
+      0,
+      0
+    ],
+    "137": [
+      "4",
+      0,
+      0
+    ],
+    "139": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "140": [
+      "istore",
+      0,
+      0
+    ],
+    "141": [
+      "#9",
+      0,
+      0
+    ],
+    "142": [
+      "iload",
+      1,
+      1
+    ],
+    "143": [
+      "#9",
+      1,
+      1
+    ],
+    "144": [
+      "ifeq",
+      1,
+      1
+    ],
+    "145": [
+      "75",
+      1,
+      1
+    ],
+    "147": [
+      "dconst_1",
+      1,
+      0
+    ],
+    "148": [
+      "dload_1",
+      1,
+      0
+    ],
+    "149": [
+      "dsub",
+      1,
+      0
+    ],
+    "150": [
+      "dload_1",
+      1,
+      0
+    ],
+    "151": [
+      "ddiv",
+      1,
+      0
+    ],
+    "152": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "153": [
+      "org/apache/commons/math3/util/FastMath.sqrt:(D)D",
+      1,
+      0
+    ],
+    "155": [
+      "dstore",
+      1,
+      0
+    ],
+    "156": [
+      "#10",
+      1,
+      0
+    ],
+    "157": [
+      "dload",
+      1,
+      0
+    ],
+    "158": [
+      "#5",
+      1,
+      0
+    ],
+    "159": [
+      "dload",
+      1,
+      0
+    ],
+    "160": [
+      "#10",
+      1,
+      0
+    ],
+    "161": [
+      "dload",
+      1,
+      0
+    ],
+    "162": [
+      "#7",
+      1,
+      0
+    ],
+    "163": [
+      "dmul",
+      1,
+      0
+    ],
+    "164": [
+      "dsub",
+      1,
+      0
+    ],
+    "165": [
+      "dstore",
+      1,
+      0
+    ],
+    "166": [
+      "#12",
+      1,
+      0
+    ],
+    "167": [
+      "dload",
+      2,
+      1
+    ],
+    "168": [
+      "#12",
+      2,
+      1
+    ],
+    "169": [
+      "iload_3",
+      2,
+      1
+    ],
+    "170": [
+      "i2d",
+      2,
+      1
+    ],
+    "171": [
+      "dcmpl",
+      2,
+      1
+    ],
+    "172": [
+      "ifle",
+      2,
+      1
+    ],
+    "173": [
+      "12",
+      2,
+      1
+    ],
+    "175": [
+      "dload",
+      2,
+      0
+    ],
+    "176": [
+      "#12",
+      2,
+      0
+    ],
+    "177": [
+      "invokestatic",
+      2,
+      0
+    ],
+    "178": [
+      "org/apache/commons/math3/util/FastMath.ceil:(D)D",
+      2,
+      0
+    ],
+    "180": [
+      "d2i",
+      2,
+      0
+    ],
+    "181": [
+      "iconst_1",
+      2,
+      0
+    ],
+    "182": [
+      "isub",
+      2,
+      0
+    ],
+    "183": [
+      "istore_3",
+      2,
+      0
+    ],
+    "184": [
+      "dconst_1",
+      1,
+      0
+    ],
+    "185": [
+      "dload",
+      1,
+      0
+    ],
+    "186": [
+      "#10",
+      1,
+      0
+    ],
+    "187": [
+      "ddiv",
+      1,
+      0
+    ],
+    "188": [
+      "dstore",
+      1,
+      0
+    ],
+    "189": [
+      "#10",
+      1,
+      0
+    ],
+    "190": [
+      "dload",
+      1,
+      0
+    ],
+    "191": [
+      "#5",
+      1,
+      0
+    ],
+    "192": [
+      "dload",
+      1,
+      0
+    ],
+    "193": [
+      "#10",
+      1,
+      0
+    ],
+    "194": [
+      "dload",
+      1,
+      0
+    ],
+    "195": [
+      "#7",
+      1,
+      0
+    ],
+    "196": [
+      "dmul",
+      1,
+      0
+    ],
+    "197": [
+      "dadd",
+      1,
+      0
+    ],
+    "198": [
+      "dstore",
+      1,
+      0
+    ],
+    "199": [
+      "#12",
+      1,
+      0
+    ],
+    "200": [
+      "dload",
+      2,
+      1
+    ],
+    "201": [
+      "#12",
+      2,
+      1
+    ],
+    "202": [
+      "iload",
+      2,
+      1
+    ],
+    "203": [
+      "#4",
+      2,
+      1
+    ],
+    "204": [
+      "i2d",
+      2,
+      1
+    ],
+    "205": [
+      "dcmpg",
+      2,
+      1
+    ],
+    "206": [
+      "ifge",
+      2,
+      1
+    ],
+    "207": [
+      "13",
+      2,
+      1
+    ],
+    "209": [
+      "dload",
+      2,
+      0
+    ],
+    "210": [
+      "#12",
+      2,
+      0
+    ],
+    "211": [
+      "invokestatic",
+      2,
+      0
+    ],
+    "212": [
+      "org/apache/commons/math3/util/FastMath.ceil:(D)D",
+      2,
+      0
+    ],
+    "214": [
+      "d2i",
+      2,
+      0
+    ],
+    "215": [
+      "iconst_1",
+      2,
+      0
+    ],
+    "216": [
+      "isub",
+      2,
+      0
+    ],
+    "217": [
+      "istore",
+      2,
+      0
+    ],
+    "218": [
+      "#4",
+      2,
+      0
+    ],
+    "219": [
+      "aload_0",
+      0,
+      0
+    ],
+    "220": [
+      "dload_1",
+      0,
+      0
+    ],
+    "221": [
+      "iload_3",
+      0,
+      0
+    ],
+    "222": [
+      "iload",
+      0,
+      0
+    ],
+    "223": [
+      "#4",
+      0,
+      0
+    ],
+    "224": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "225": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.solveInverseCumulativeProbability:(DII)I",
+      0,
+      0
+    ],
+    "227": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "solveInverseCumulativeProbability": {
+    "0": [
+      "iload_3",
+      1,
+      3
+    ],
+    "1": [
+      "iconst_1",
+      1,
+      3
+    ],
+    "2": [
+      "iadd",
+      1,
+      3
+    ],
+    "3": [
+      "iload",
+      1,
+      3
+    ],
+    "4": [
+      "#4",
+      1,
+      3
+    ],
+    "5": [
+      "if_icmpge",
+      1,
+      3
+    ],
+    "6": [
+      "62",
+      1,
+      3
+    ],
+    "8": [
+      "iload_3",
+      1,
+      0
+    ],
+    "9": [
+      "iload",
+      1,
+      0
+    ],
+    "10": [
+      "#4",
+      1,
+      0
+    ],
+    "11": [
+      "iadd",
+      1,
+      0
+    ],
+    "12": [
+      "iconst_2",
+      1,
+      0
+    ],
+    "13": [
+      "idiv",
+      1,
+      0
+    ],
+    "14": [
+      "istore",
+      1,
+      0
+    ],
+    "15": [
+      "#5",
+      1,
+      0
+    ],
+    "16": [
+      "iload",
+      2,
+      1
+    ],
+    "17": [
+      "#5",
+      2,
+      1
+    ],
+    "18": [
+      "iload_3",
+      2,
+      1
+    ],
+    "19": [
+      "if_icmplt",
+      2,
+      1
+    ],
+    "20": [
+      "10",
+      2,
+      1
+    ],
+    "22": [
+      "iload",
+      2,
+      1
+    ],
+    "23": [
+      "#5",
+      2,
+      1
+    ],
+    "24": [
+      "iload",
+      2,
+      1
+    ],
+    "25": [
+      "#4",
+      2,
+      1
+    ],
+    "26": [
+      "if_icmple",
+      2,
+      1
+    ],
+    "27": [
+      "13",
+      2,
+      1
+    ],
+    "29": [
+      "iload_3",
+      2,
+      0
+    ],
+    "30": [
+      "iload",
+      2,
+      0
+    ],
+    "31": [
+      "#4",
+      2,
+      0
+    ],
+    "32": [
+      "iload_3",
+      2,
+      0
+    ],
+    "33": [
+      "isub",
+      2,
+      0
+    ],
+    "34": [
+      "iconst_2",
+      2,
+      0
+    ],
+    "35": [
+      "idiv",
+      2,
+      0
+    ],
+    "36": [
+      "iadd",
+      2,
+      0
+    ],
+    "37": [
+      "istore",
+      2,
+      0
+    ],
+    "38": [
+      "#5",
+      2,
+      0
+    ],
+    "39": [
+      "aload_0",
+      1,
+      0
+    ],
+    "40": [
+      "iload",
+      1,
+      0
+    ],
+    "41": [
+      "#5",
+      1,
+      0
+    ],
+    "42": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "43": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.checkedCumulativeProbability:(I)D",
+      1,
+      0
+    ],
+    "45": [
+      "dstore",
+      1,
+      0
+    ],
+    "46": [
+      "#6",
+      1,
+      0
+    ],
+    "47": [
+      "dload",
+      2,
+      1
+    ],
+    "48": [
+      "#6",
+      2,
+      1
+    ],
+    "49": [
+      "dload_1",
+      2,
+      1
+    ],
+    "50": [
+      "dcmpl",
+      2,
+      1
+    ],
+    "51": [
+      "iflt",
+      2,
+      1
+    ],
+    "52": [
+      "10",
+      2,
+      1
+    ],
+    "54": [
+      "iload",
+      2,
+      0
+    ],
+    "55": [
+      "#5",
+      2,
+      0
+    ],
+    "56": [
+      "istore",
+      2,
+      0
+    ],
+    "57": [
+      "#4",
+      2,
+      0
+    ],
+    "58": [
+      "goto",
+      2,
+      0
+    ],
+    "59": [
+      "6",
+      2,
+      0
+    ],
+    "61": [
+      "iload",
+      2,
+      0
+    ],
+    "62": [
+      "#5",
+      2,
+      0
+    ],
+    "63": [
+      "istore_3",
+      2,
+      0
+    ],
+    "64": [
+      "goto",
+      0,
+      3
+    ],
+    "65": [
+      "-64",
+      0,
+      3
+    ],
+    "67": [
+      "iload",
+      0,
+      0
+    ],
+    "68": [
+      "#4",
+      0,
+      0
+    ],
+    "69": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "reseedRandomGenerator": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.random:Lorg/apache/commons/math3/random/RandomGenerator;",
+      0,
+      0
+    ],
+    "4": [
+      "lload_1",
+      0,
+      0
+    ],
+    "5": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/random/RandomGenerator.reSeed:(J)V",
+      0,
+      0
+    ],
+    "8": [
+      "0",
+      0,
+      0
+    ],
+    "10": [
+      "aload_0",
+      0,
+      0
+    ],
+    "11": [
+      "getfield",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.randomData:Lorg/apache/commons/math3/random/RandomDataImpl;",
+      0,
+      0
+    ],
+    "14": [
+      "lload_1",
+      0,
+      0
+    ],
+    "15": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/random/RandomDataImpl.reSeed:(J)V",
+      0,
+      0
+    ],
+    "18": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "sample": {
+    "0": [
+      "iload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifgt",
+      1,
+      1
+    ],
+    "2": [
+      "18",
+      1,
+      1
+    ],
+    "4": [
+      "new",
+      1,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/exception/NotStrictlyPositiveException",
+      1,
+      0
+    ],
+    "7": [
+      "dup",
+      1,
+      0
+    ],
+    "8": [
+      "getstatic",
+      1,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.NUMBER_OF_SAMPLES:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "11": [
+      "iload_1",
+      1,
+      0
+    ],
+    "12": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "13": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "15": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/exception/NotStrictlyPositiveException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;Ljava/lang/Number;)V",
+      1,
+      0
+    ],
+    "18": [
+      "athrow",
+      1,
+      0
+    ],
+    "19": [
+      "iload_1",
+      0,
+      0
+    ],
+    "20": [
+      "newarray",
+      0,
+      0
+    ],
+    "21": [
+      "10",
+      0,
+      0
+    ],
+    "22": [
+      "astore_2",
+      0,
+      0
+    ],
+    "23": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "24": [
+      "istore_3",
+      1,
+      4
+    ],
+    "25": [
+      "iload_3",
+      1,
+      4
+    ],
+    "26": [
+      "iload_1",
+      1,
+      4
+    ],
+    "27": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "28": [
+      "16",
+      1,
+      4
+    ],
+    "30": [
+      "aload_2",
+      1,
+      0
+    ],
+    "31": [
+      "iload_3",
+      1,
+      0
+    ],
+    "32": [
+      "aload_0",
+      1,
+      0
+    ],
+    "33": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "34": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.sample:()I",
+      1,
+      0
+    ],
+    "36": [
+      "iastore",
+      1,
+      0
+    ],
+    "37": [
+      "iinc",
+      1,
+      0
+    ],
+    "38": [
+      "#3",
+      1,
+      0
+    ],
+    "39": [
+      "-89",
+      1,
+      0
+    ],
+    "40": [
+      "goto",
+      1,
+      4
+    ],
+    "41": [
+      "-15",
+      1,
+      4
+    ],
+    "43": [
+      "aload_2",
+      0,
+      0
+    ],
+    "44": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "checkedCumulativeProbability": {
+    "0": [
+      "ldc2_w",
+      0,
+      0
+    ],
+    "1": [
+      "nan",
+      0,
+      0
+    ],
+    "3": [
+      "dstore_2",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "iload_1",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.cumulativeProbability:(I)D",
+      0,
+      0
+    ],
+    "9": [
+      "dstore_2",
+      0,
+      0
+    ],
+    "10": [
+      "dload_2",
+      1,
+      1
+    ],
+    "11": [
+      "invokestatic",
+      1,
+      1
+    ],
+    "12": [
+      "java/lang/Double.isNaN:(D)Z",
+      1,
+      1
+    ],
+    "14": [
+      "ifeq",
+      1,
+      1
+    ],
+    "15": [
+      "25",
+      1,
+      1
+    ],
+    "17": [
+      "new",
+      1,
+      0
+    ],
+    "18": [
+      "org/apache/commons/math3/exception/MathInternalError",
+      1,
+      0
+    ],
+    "20": [
+      "dup",
+      1,
+      0
+    ],
+    "21": [
+      "getstatic",
+      1,
+      0
+    ],
+    "22": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.DISCRETE_CUMULATIVE_PROBABILITY_RETURNED_NAN:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "24": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "25": [
+      "anewarray",
+      1,
+      0
+    ],
+    "26": [
+      "java/lang/Object",
+      1,
+      0
+    ],
+    "28": [
+      "dup",
+      1,
+      0
+    ],
+    "29": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "30": [
+      "iload_1",
+      1,
+      0
+    ],
+    "31": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "32": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "34": [
+      "aastore",
+      1,
+      0
+    ],
+    "35": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "36": [
+      "org/apache/commons/math3/exception/MathInternalError.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;[Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "38": [
+      "athrow",
+      1,
+      0
+    ],
+    "39": [
+      "dload_2",
+      0,
+      0
+    ],
+    "40": [
+      "dreturn",
+      0,
+      0
+    ]
+  },
+  "logProbability": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "iload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/distribution/AbstractIntegerDistribution.probability:(I)D",
+      0,
+      0
+    ],
+    "5": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/util/FastMath.log:(D)D",
+      0,
+      0
+    ],
+    "8": [
+      "dreturn",
+      0,
+      0
+    ]
+  }
+}

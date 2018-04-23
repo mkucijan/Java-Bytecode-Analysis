@@ -1,0 +1,300 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "putfield",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/fitting/leastsquares/LeastSquaresFactory$LocalValueAndJacobianFunction.value:Lorg/apache/commons/math3/analysis/MultivariateVectorFunction;",
+      0,
+      0
+    ],
+    "9": [
+      "aload_0",
+      0,
+      0
+    ],
+    "10": [
+      "aload_2",
+      0,
+      0
+    ],
+    "11": [
+      "putfield",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/fitting/leastsquares/LeastSquaresFactory$LocalValueAndJacobianFunction.jacobian:Lorg/apache/commons/math3/analysis/MultivariateMatrixFunction;",
+      0,
+      0
+    ],
+    "14": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "value": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/linear/RealVector.toArray:()[D",
+      0,
+      0
+    ],
+    "4": [
+      "astore_2",
+      0,
+      0
+    ],
+    "5": [
+      "new",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/util/Pair",
+      0,
+      0
+    ],
+    "8": [
+      "dup",
+      0,
+      0
+    ],
+    "9": [
+      "aload_0",
+      0,
+      0
+    ],
+    "10": [
+      "aload_2",
+      0,
+      0
+    ],
+    "11": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/fitting/leastsquares/LeastSquaresFactory$LocalValueAndJacobianFunction.computeValue:([D)Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "14": [
+      "aload_0",
+      0,
+      0
+    ],
+    "15": [
+      "aload_2",
+      0,
+      0
+    ],
+    "16": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "17": [
+      "org/apache/commons/math3/fitting/leastsquares/LeastSquaresFactory$LocalValueAndJacobianFunction.computeJacobian:([D)Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "19": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "20": [
+      "org/apache/commons/math3/util/Pair.<init>:(Ljava/lang/Object;Ljava/lang/Object;)V",
+      0,
+      0
+    ],
+    "22": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "computeValue": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/math3/linear/ArrayRealVector",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "getfield",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/fitting/leastsquares/LeastSquaresFactory$LocalValueAndJacobianFunction.value:Lorg/apache/commons/math3/analysis/MultivariateVectorFunction;",
+      0,
+      0
+    ],
+    "8": [
+      "aload_1",
+      0,
+      0
+    ],
+    "9": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "10": [
+      "org/apache/commons/math3/analysis/MultivariateVectorFunction.<init>:([DZ)V",
+      0,
+      0
+    ],
+    "12": [
+      "0",
+      0,
+      0
+    ],
+    "14": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "15": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/linear/ArrayRealVector.<init>:([DZ)V",
+      0,
+      0
+    ],
+    "18": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "computeJacobian": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/math3/linear/Array2DRowRealMatrix",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "getfield",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/fitting/leastsquares/LeastSquaresFactory$LocalValueAndJacobianFunction.jacobian:Lorg/apache/commons/math3/analysis/MultivariateMatrixFunction;",
+      0,
+      0
+    ],
+    "8": [
+      "aload_1",
+      0,
+      0
+    ],
+    "9": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "10": [
+      "org/apache/commons/math3/analysis/MultivariateMatrixFunction.<init>:([[DZ)V",
+      0,
+      0
+    ],
+    "12": [
+      "0",
+      0,
+      0
+    ],
+    "14": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "15": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/linear/Array2DRowRealMatrix.<init>:([[DZ)V",
+      0,
+      0
+    ],
+    "18": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

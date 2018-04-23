@@ -1,20 +1,31 @@
 import argparse
+import json
 import subprocess
 import sys
 from glob import glob
 import os,errno
 import shutil
+import re
 
 from JavaClassParser.Parser import Parser
 
 keywords = [
-    'if',
-    'else',
+    'if ',
+    'else ',
     'while',
     'for',
     'switch'
 ]
 
+reg = [re.compile('\W*'+keyword+'\W\W*') for keyword in keywords]
+'''
+Naive method for binding conditional expresions with with its bytecode.
+It finds the keywords in the source and includes all bytecode generated on that line
+and in the parentheses of the expression. It uses lineNumberTable attribute from the
+binary file parsed with JavaClassParser.
+First class defined by number 0 represents bytecode not belonging to any conditional
+statement.
+'''
 def bindCode(class_file, source):
     parser = Parser(class_file)
     parser.parse()
@@ -34,13 +45,15 @@ def bindCode(class_file, source):
         lineNumberTable = method.code.lineNumberTable.code2Line
         
         if ('<init>' in method.name) and (len(lineNumberTable) is 1):
-            continue    #default constrcutor
+            continue    #skipping default constrcutor
 
         numEmbending = 0
         lastIndex = lineNumberTable[instructions[0].startIndex] -1  # instructions[0].startIndex = 0 always
                                                                     # -1 because indexing starts with 1
         embendingType = [0]
         embendingLayer = [0]
+        currentType = 0
+        jump_candidates = {}
         for instruction in instructions:
             byteIndex = instruction.startIndex
             if byteIndex in lineNumberTable:
@@ -58,7 +71,7 @@ def bindCode(class_file, source):
                     numEmbending = max(0,numEmbending)
                     added = False
                     for i in range(len(keywords)):
-                        if keywords[i] in currentLine:
+                        if reg[i].match(currentLine):
                             embendingType.append(i+1)
                             added = True
                             embendingLayer.append(numEmbending)
@@ -72,12 +85,31 @@ def bindCode(class_file, source):
                         else:
                             break
                 lastIndex = lineNumber
+                if added:
+                    currentType = embendingType[-1]
+                else:
+                    currentType = 0
+            if currentType != 0:
+                jump_candidates[byteIndex] = currentType
             bytecode = instruction.mnemonic
-            methodLines[str(byteIndex) + " " + bytecode] = (len(embendingType)-1,embendingType[-1])
+            
+            '''
+             Labeling jumps as statemnt that it jumps to
+            '''
+            temp_Type = None
+            if 'if' in instruction.mnemonic or 'goto' in instruction.mnemonic:
+                jump_offset = instruction.argValues[0]
+                jump_index = byteIndex + jump_offset
+                if jump_index in jump_candidates:
+                    temp_Type = currentType
+                    currentType = jump_candidates[jump_index]
+            
+            methodLines[byteIndex] = (bytecode, embendingLayer[-1], currentType)
             offset = 1
             if 'wide' in instruction.mnemonic:
-                methodLines[str(byteIndex+offset) + " " + instruction.opcode.getMnemonic()] = (len(embendingType)-1,embendingType[-1])
+                methodLines[byteIndex+offset] = (instruction.opcode.getMnemonic(), embendingLayer[-1], currentType)
                 offset += 1
+
             if instruction.args:
                 for arg, fromPool, frm, size in zip(instruction.argValues,instruction.constArg,
                                     instruction.argsFormat.split(','),instruction.argsCount):
@@ -89,12 +121,13 @@ def bindCode(class_file, source):
                             arg = frm.format(*arg)
                         else:
                             arg = frm.format(arg)
-                    methodLines[str(byteIndex+offset) + " " + arg] = (len(embendingType)-1,embendingType[-1])
+                    methodLines[byteIndex+offset] =  (arg,embendingLayer[-1], currentType) 
                     offset += size
-                
+            if temp_Type:
+                currentType = temp_Type
             #print(methodLines[str(byteIndex) + " " + bytecode])
         
-        methodLines[str(byteIndex) + " " + bytecode] = (embendingLayer[-1], embendingType[-1]) # implicit return is usually pointed
+     # implicit return is usually pointed
                                                                            # to function closing bracket
         codeByLines[method.name] = methodLines
 
@@ -137,15 +170,7 @@ def main():
         if e.errno != errno.EEXIST:
             raise
 
-
-    '''
-    class_path = "/home/yolkin/NetBeansProjects/Cvor/src"
-    java_files = ["senzor/udp/UDPClient.java"]
-    save_class_directory = sys.path[0]+"/.class_files"
-    '''
-
-
-    
+        
     if not java_files:
         java_files = glob(class_path+'/**/*.java',recursive=True)
 
@@ -163,14 +188,30 @@ def main():
         if class_file.endswith(".class"):
             jf_class_name = class_file[:-6].split(save_class_directory)[1][1:]
             jf_name = jf_class_name.split('$')[0]
+            source = None
+            flag = 1
+            max_matches=0
+            most_similar = None
             for java_file in java_files:
-                if jf_name in java_file:
+                matches = sum(a==b for a, b in zip(jf_name, java_file))
+                if matches>max_matches:
+                    max_matches=matches
+                    most_similar = java_file
+                if jf_name+".java" in java_file:
                     source = java_file
+                    flag=0
                     break
-            
-            code_by_lines = bindCode(class_file, source)
+            if flag:
+                class_name = jf_name.split('/')[-1]
+                if class_name in open(most_similar).read():
+                    source = most_similar
 
-            filename = output_folder+'/'+jf_class_name+".txt"
+            if source:
+                code_by_lines = bindCode(class_file, source)
+            else:
+                continue
+
+            filename = output_folder+'/'+jf_class_name+".json"
             
             if not os.path.exists(os.path.dirname(filename)):
                 try:
@@ -181,14 +222,7 @@ def main():
 
 
             f=open(filename,'w')
-            for methodName in code_by_lines.keys():
-                f.write("Method: "+str(methodName)+"\n")
-                for bytecode in code_by_lines[methodName].keys():
-                    f.write("\t"+bytecode+" "+str(code_by_lines[methodName][bytecode]) +"\n" )
-                    
-                f.write("\n")
-                #print("Line:",key)
-                #print(code_by_lines[key])
+            json.dump(code_by_lines, f, indent=2)
             f.close()
 
     #links = re.search('LineNumberTable(.*)LocalVariableTable',output,re.DOTALL).group(1)

@@ -1,0 +1,1397 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "6": [
+      "putfield",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.outsideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      0,
+      0
+    ],
+    "9": [
+      "aload_0",
+      0,
+      0
+    ],
+    "10": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "11": [
+      "putfield",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.insideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      0,
+      0
+    ],
+    "14": [
+      "aload_0",
+      0,
+      0
+    ],
+    "15": [
+      "new",
+      0,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/geometry/partitioning/NodesSet",
+      0,
+      0
+    ],
+    "18": [
+      "dup",
+      0,
+      0
+    ],
+    "19": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "20": [
+      "org/apache/commons/math3/geometry/partitioning/NodesSet.<init>:()V",
+      0,
+      0
+    ],
+    "22": [
+      "putfield",
+      0,
+      0
+    ],
+    "23": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.outsideSplitters:Lorg/apache/commons/math3/geometry/partitioning/NodesSet;",
+      0,
+      0
+    ],
+    "25": [
+      "aload_0",
+      0,
+      0
+    ],
+    "26": [
+      "new",
+      0,
+      0
+    ],
+    "27": [
+      "org/apache/commons/math3/geometry/partitioning/NodesSet",
+      0,
+      0
+    ],
+    "29": [
+      "dup",
+      0,
+      0
+    ],
+    "30": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "31": [
+      "org/apache/commons/math3/geometry/partitioning/NodesSet.<init>:()V",
+      0,
+      0
+    ],
+    "33": [
+      "putfield",
+      0,
+      0
+    ],
+    "34": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.insideSplitters:Lorg/apache/commons/math3/geometry/partitioning/NodesSet;",
+      0,
+      0
+    ],
+    "36": [
+      "aload_0",
+      0,
+      0
+    ],
+    "37": [
+      "aload_1",
+      0,
+      0
+    ],
+    "38": [
+      "aload_2",
+      0,
+      0
+    ],
+    "39": [
+      "new",
+      0,
+      0
+    ],
+    "40": [
+      "java/util/ArrayList",
+      0,
+      0
+    ],
+    "42": [
+      "dup",
+      0,
+      0
+    ],
+    "43": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "44": [
+      "java/util/ArrayList.<init>:()V",
+      0,
+      0
+    ],
+    "46": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "47": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.characterize:(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;Ljava/util/List;)V",
+      0,
+      0
+    ],
+    "49": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "characterize": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getCut:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      1
+    ],
+    "4": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "5": [
+      "38",
+      1,
+      1
+    ],
+    "7": [
+      "aload_1",
+      1,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getAttribute:()Ljava/lang/Object;",
+      1,
+      0
+    ],
+    "11": [
+      "checkcast",
+      1,
+      0
+    ],
+    "12": [
+      "java/lang/Boolean",
+      1,
+      0
+    ],
+    "14": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "15": [
+      "java/lang/Boolean.booleanValue:()Z",
+      1,
+      0
+    ],
+    "17": [
+      "istore",
+      1,
+      0
+    ],
+    "18": [
+      "#4",
+      1,
+      0
+    ],
+    "19": [
+      "iload",
+      2,
+      1
+    ],
+    "20": [
+      "#4",
+      2,
+      1
+    ],
+    "21": [
+      "ifeq",
+      2,
+      1
+    ],
+    "22": [
+      "12",
+      2,
+      1
+    ],
+    "24": [
+      "aload_0",
+      2,
+      0
+    ],
+    "25": [
+      "aload_2",
+      2,
+      0
+    ],
+    "26": [
+      "aload_3",
+      2,
+      0
+    ],
+    "27": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "28": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.addInsideTouching:(Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;Ljava/util/List;)V",
+      2,
+      0
+    ],
+    "30": [
+      "goto",
+      2,
+      0
+    ],
+    "31": [
+      "9",
+      2,
+      0
+    ],
+    "33": [
+      "aload_0",
+      2,
+      0
+    ],
+    "34": [
+      "aload_2",
+      2,
+      0
+    ],
+    "35": [
+      "aload_3",
+      2,
+      0
+    ],
+    "36": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "37": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.addOutsideTouching:(Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;Ljava/util/List;)V",
+      2,
+      0
+    ],
+    "39": [
+      "goto",
+      1,
+      2
+    ],
+    "40": [
+      "149",
+      1,
+      2
+    ],
+    "42": [
+      "aload_1",
+      1,
+      0
+    ],
+    "43": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "44": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getCut:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      0
+    ],
+    "46": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "47": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane.split:(Lorg/apache/commons/math3/geometry/partitioning/Hyperplane;)Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane$SplitSubHyperplane;",
+      1,
+      0
+    ],
+    "49": [
+      "0",
+      1,
+      0
+    ],
+    "51": [
+      "astore",
+      1,
+      0
+    ],
+    "52": [
+      "#4",
+      1,
+      0
+    ],
+    "53": [
+      "aload_2",
+      1,
+      0
+    ],
+    "54": [
+      "aload",
+      1,
+      0
+    ],
+    "55": [
+      "#4",
+      1,
+      0
+    ],
+    "56": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "57": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane.$SwitchMap$org$apache$commons$math3$geometry$partitioning$Side:[I",
+      1,
+      0
+    ],
+    "59": [
+      "0",
+      1,
+      0
+    ],
+    "61": [
+      "astore",
+      1,
+      0
+    ],
+    "62": [
+      "#5",
+      1,
+      0
+    ],
+    "63": [
+      "getstatic",
+      2,
+      5
+    ],
+    "64": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization$1.$SwitchMap$org$apache$commons$math3$geometry$partitioning$Side:[I",
+      2,
+      5
+    ],
+    "66": [
+      "aload",
+      2,
+      5
+    ],
+    "67": [
+      "#5",
+      2,
+      5
+    ],
+    "68": [
+      "invokevirtual",
+      2,
+      5
+    ],
+    "69": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane$SplitSubHyperplane.getSide:()Lorg/apache/commons/math3/geometry/partitioning/Side;",
+      2,
+      5
+    ],
+    "71": [
+      "invokevirtual",
+      2,
+      5
+    ],
+    "72": [
+      "org/apache/commons/math3/geometry/partitioning/Side.ordinal:()I",
+      2,
+      5
+    ],
+    "74": [
+      "iaload",
+      2,
+      5
+    ],
+    "75": [
+      "tableswitch",
+      2,
+      5
+    ],
+    "76": [
+      "1 100",
+      2,
+      5
+    ],
+    "80": [
+      "2 113",
+      2,
+      5
+    ],
+    "84": [
+      "3 126",
+      2,
+      5
+    ],
+    "100": [
+      "aload_0",
+      2,
+      0
+    ],
+    "101": [
+      "aload_1",
+      2,
+      0
+    ],
+    "102": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "103": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getPlus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      2,
+      0
+    ],
+    "105": [
+      "aload_2",
+      2,
+      0
+    ],
+    "106": [
+      "aload_3",
+      2,
+      0
+    ],
+    "107": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "108": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.characterize:(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;Ljava/util/List;)V",
+      2,
+      0
+    ],
+    "110": [
+      "goto",
+      2,
+      0
+    ],
+    "111": [
+      "78",
+      2,
+      0
+    ],
+    "113": [
+      "aload_0",
+      2,
+      0
+    ],
+    "114": [
+      "aload_1",
+      2,
+      0
+    ],
+    "115": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "116": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getMinus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      2,
+      0
+    ],
+    "118": [
+      "aload_2",
+      2,
+      0
+    ],
+    "119": [
+      "aload_3",
+      2,
+      0
+    ],
+    "120": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "121": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.characterize:(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;Ljava/util/List;)V",
+      2,
+      0
+    ],
+    "123": [
+      "goto",
+      2,
+      0
+    ],
+    "124": [
+      "65",
+      2,
+      0
+    ],
+    "126": [
+      "aload_3",
+      2,
+      0
+    ],
+    "127": [
+      "aload_1",
+      2,
+      0
+    ],
+    "128": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "129": [
+      "java/util/List.getPlus:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      2,
+      0
+    ],
+    "131": [
+      "0",
+      2,
+      0
+    ],
+    "133": [
+      "pop",
+      2,
+      0
+    ],
+    "134": [
+      "aload_0",
+      2,
+      0
+    ],
+    "135": [
+      "aload_1",
+      2,
+      0
+    ],
+    "136": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "137": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getPlus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      2,
+      0
+    ],
+    "139": [
+      "aload",
+      2,
+      0
+    ],
+    "140": [
+      "#5",
+      2,
+      0
+    ],
+    "141": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "142": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane$SplitSubHyperplane.getPlus:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      2,
+      0
+    ],
+    "144": [
+      "aload_3",
+      2,
+      0
+    ],
+    "145": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "146": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.characterize:(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;Ljava/util/List;)V",
+      2,
+      0
+    ],
+    "148": [
+      "aload_0",
+      2,
+      0
+    ],
+    "149": [
+      "aload_1",
+      2,
+      0
+    ],
+    "150": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "151": [
+      "org/apache/commons/math3/geometry/partitioning/BSPTree.getMinus:()Lorg/apache/commons/math3/geometry/partitioning/BSPTree;",
+      2,
+      0
+    ],
+    "153": [
+      "aload",
+      2,
+      0
+    ],
+    "154": [
+      "#5",
+      2,
+      0
+    ],
+    "155": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "156": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane$SplitSubHyperplane.getMinus:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      2,
+      0
+    ],
+    "158": [
+      "aload_3",
+      2,
+      0
+    ],
+    "159": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "160": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.characterize:(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;Ljava/util/List;)V",
+      2,
+      0
+    ],
+    "162": [
+      "aload_3",
+      2,
+      0
+    ],
+    "163": [
+      "aload_3",
+      2,
+      0
+    ],
+    "164": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "165": [
+      "java/util/List.remove:(I)Ljava/lang/Object;",
+      2,
+      0
+    ],
+    "167": [
+      "0",
+      2,
+      0
+    ],
+    "169": [
+      "iconst_1",
+      2,
+      0
+    ],
+    "170": [
+      "isub",
+      2,
+      0
+    ],
+    "171": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "172": [
+      "java/util/List.org/apache/commons/math3/exception/MathInternalError",
+      2,
+      0
+    ],
+    "174": [
+      "0",
+      2,
+      0
+    ],
+    "176": [
+      "pop",
+      2,
+      0
+    ],
+    "177": [
+      "goto",
+      2,
+      0
+    ],
+    "178": [
+      "11",
+      2,
+      0
+    ],
+    "180": [
+      "new",
+      2,
+      0
+    ],
+    "181": [
+      "org/apache/commons/math3/exception/MathInternalError",
+      2,
+      0
+    ],
+    "183": [
+      "dup",
+      2,
+      0
+    ],
+    "184": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "185": [
+      "org/apache/commons/math3/exception/MathInternalError.<init>:()V",
+      2,
+      0
+    ],
+    "187": [
+      "athrow",
+      2,
+      0
+    ],
+    "188": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "addOutsideTouching": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.outsideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      1
+    ],
+    "4": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "5": [
+      "11",
+      1,
+      1
+    ],
+    "7": [
+      "aload_0",
+      1,
+      0
+    ],
+    "8": [
+      "aload_1",
+      1,
+      0
+    ],
+    "9": [
+      "putfield",
+      1,
+      0
+    ],
+    "10": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.outsideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      0
+    ],
+    "12": [
+      "goto",
+      1,
+      0
+    ],
+    "13": [
+      "17",
+      1,
+      0
+    ],
+    "15": [
+      "aload_0",
+      1,
+      0
+    ],
+    "16": [
+      "aload_0",
+      1,
+      0
+    ],
+    "17": [
+      "getfield",
+      1,
+      0
+    ],
+    "18": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.outsideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      0
+    ],
+    "20": [
+      "aload_1",
+      1,
+      0
+    ],
+    "21": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "22": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane.addAll:(Ljava/lang/Iterable;)V",
+      1,
+      0
+    ],
+    "24": [
+      "0",
+      1,
+      0
+    ],
+    "26": [
+      "putfield",
+      1,
+      0
+    ],
+    "27": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.outsideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      0
+    ],
+    "29": [
+      "aload_0",
+      0,
+      0
+    ],
+    "30": [
+      "getfield",
+      0,
+      0
+    ],
+    "31": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.outsideSplitters:Lorg/apache/commons/math3/geometry/partitioning/NodesSet;",
+      0,
+      0
+    ],
+    "33": [
+      "aload_2",
+      0,
+      0
+    ],
+    "34": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "35": [
+      "org/apache/commons/math3/geometry/partitioning/NodesSet.addAll:(Ljava/lang/Iterable;)V",
+      0,
+      0
+    ],
+    "37": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "addInsideTouching": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.insideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      1
+    ],
+    "4": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "5": [
+      "11",
+      1,
+      1
+    ],
+    "7": [
+      "aload_0",
+      1,
+      0
+    ],
+    "8": [
+      "aload_1",
+      1,
+      0
+    ],
+    "9": [
+      "putfield",
+      1,
+      0
+    ],
+    "10": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.insideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      0
+    ],
+    "12": [
+      "goto",
+      1,
+      0
+    ],
+    "13": [
+      "17",
+      1,
+      0
+    ],
+    "15": [
+      "aload_0",
+      1,
+      0
+    ],
+    "16": [
+      "aload_0",
+      1,
+      0
+    ],
+    "17": [
+      "getfield",
+      1,
+      0
+    ],
+    "18": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.insideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      0
+    ],
+    "20": [
+      "aload_1",
+      1,
+      0
+    ],
+    "21": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "22": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane.addAll:(Ljava/lang/Iterable;)V",
+      1,
+      0
+    ],
+    "24": [
+      "0",
+      1,
+      0
+    ],
+    "26": [
+      "putfield",
+      1,
+      0
+    ],
+    "27": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.insideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      1,
+      0
+    ],
+    "29": [
+      "aload_0",
+      0,
+      0
+    ],
+    "30": [
+      "getfield",
+      0,
+      0
+    ],
+    "31": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.insideSplitters:Lorg/apache/commons/math3/geometry/partitioning/NodesSet;",
+      0,
+      0
+    ],
+    "33": [
+      "aload_2",
+      0,
+      0
+    ],
+    "34": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "35": [
+      "org/apache/commons/math3/geometry/partitioning/NodesSet.addAll:(Ljava/lang/Iterable;)V",
+      0,
+      0
+    ],
+    "37": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "touchOutside": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.outsideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      0,
+      0
+    ],
+    "4": [
+      "ifnull",
+      0,
+      0
+    ],
+    "5": [
+      "19",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "getfield",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.outsideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      0,
+      0
+    ],
+    "11": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane.org/apache/commons/math3/geometry/partitioning/Characterization",
+      0,
+      0
+    ],
+    "14": [
+      "0",
+      0,
+      0
+    ],
+    "16": [
+      "ifne",
+      0,
+      0
+    ],
+    "17": [
+      "7",
+      0,
+      0
+    ],
+    "19": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "20": [
+      "goto",
+      0,
+      0
+    ],
+    "21": [
+      "4",
+      0,
+      0
+    ],
+    "23": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "24": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "outsideTouching": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.outsideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getOutsideSplitters": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.outsideSplitters:Lorg/apache/commons/math3/geometry/partitioning/NodesSet;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "touchInside": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.insideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      0,
+      0
+    ],
+    "4": [
+      "ifnull",
+      0,
+      0
+    ],
+    "5": [
+      "19",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "getfield",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.insideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      0,
+      0
+    ],
+    "11": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/geometry/partitioning/SubHyperplane.org/apache/commons/math3/geometry/partitioning/Characterization",
+      0,
+      0
+    ],
+    "14": [
+      "0",
+      0,
+      0
+    ],
+    "16": [
+      "ifne",
+      0,
+      0
+    ],
+    "17": [
+      "7",
+      0,
+      0
+    ],
+    "19": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "20": [
+      "goto",
+      0,
+      0
+    ],
+    "21": [
+      "4",
+      0,
+      0
+    ],
+    "23": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "24": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "insideTouching": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.insideTouching:Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getInsideSplitters": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/geometry/partitioning/Characterization.insideSplitters:Lorg/apache/commons/math3/geometry/partitioning/NodesSet;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

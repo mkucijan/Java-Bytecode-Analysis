@@ -1,0 +1,783 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/optim/BaseMultivariateOptimizer.<init>:(Lorg/apache/commons/math3/optim/ConvergenceChecker;)V",
+      0,
+      0
+    ],
+    "5": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "computeObjectiveValue": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/optim/BaseMultivariateOptimizer.incrementEvaluationCount:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "getfield",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.model:Lorg/apache/commons/math3/analysis/MultivariateVectorFunction;",
+      0,
+      0
+    ],
+    "8": [
+      "aload_1",
+      0,
+      0
+    ],
+    "9": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "10": [
+      "org/apache/commons/math3/analysis/MultivariateVectorFunction.optimize:([Lorg/apache/commons/math3/optim/OptimizationData;)Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "12": [
+      "0",
+      0,
+      0
+    ],
+    "14": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "optimize": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.optimize:([Lorg/apache/commons/math3/optim/OptimizationData;)Lorg/apache/commons/math3/optim/PointVectorValuePair;",
+      0,
+      0
+    ],
+    "5": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getWeight": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.weightMatrix:Lorg/apache/commons/math3/linear/RealMatrix;",
+      0,
+      0
+    ],
+    "4": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/linear/RealMatrix.target:[D",
+      0,
+      0
+    ],
+    "7": [
+      "0",
+      0,
+      0
+    ],
+    "9": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getTarget": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.target:[D",
+      0,
+      0
+    ],
+    "4": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "5": [
+      "[D.clone:()Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "7": [
+      "checkcast",
+      0,
+      0
+    ],
+    "8": [
+      "[D",
+      0,
+      0
+    ],
+    "10": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getTargetSize": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.target:[D",
+      0,
+      0
+    ],
+    "4": [
+      "arraylength",
+      0,
+      0
+    ],
+    "5": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "parseOptimizationData": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/optim/BaseMultivariateOptimizer.parseOptimizationData:([Lorg/apache/commons/math3/optim/OptimizationData;)V",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      1,
+      4
+    ],
+    "6": [
+      "astore_2",
+      1,
+      4
+    ],
+    "7": [
+      "aload_2",
+      1,
+      4
+    ],
+    "8": [
+      "arraylength",
+      1,
+      4
+    ],
+    "9": [
+      "istore_3",
+      1,
+      4
+    ],
+    "10": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "11": [
+      "istore",
+      1,
+      4
+    ],
+    "12": [
+      "#4",
+      1,
+      4
+    ],
+    "13": [
+      "iload",
+      1,
+      4
+    ],
+    "14": [
+      "#4",
+      1,
+      4
+    ],
+    "15": [
+      "iload_3",
+      1,
+      4
+    ],
+    "16": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "17": [
+      "84",
+      1,
+      4
+    ],
+    "19": [
+      "aload_2",
+      1,
+      4
+    ],
+    "20": [
+      "iload",
+      1,
+      4
+    ],
+    "21": [
+      "#4",
+      1,
+      4
+    ],
+    "22": [
+      "aaload",
+      1,
+      4
+    ],
+    "23": [
+      "astore",
+      1,
+      4
+    ],
+    "24": [
+      "#5",
+      1,
+      4
+    ],
+    "25": [
+      "aload",
+      2,
+      1
+    ],
+    "26": [
+      "#5",
+      2,
+      1
+    ],
+    "27": [
+      "instanceof",
+      2,
+      1
+    ],
+    "28": [
+      "org/apache/commons/math3/optim/nonlinear/vector/ModelFunction",
+      2,
+      1
+    ],
+    "30": [
+      "ifeq",
+      2,
+      1
+    ],
+    "31": [
+      "18",
+      2,
+      1
+    ],
+    "33": [
+      "aload_0",
+      2,
+      0
+    ],
+    "34": [
+      "aload",
+      2,
+      0
+    ],
+    "35": [
+      "#5",
+      2,
+      0
+    ],
+    "36": [
+      "checkcast",
+      2,
+      0
+    ],
+    "37": [
+      "org/apache/commons/math3/optim/nonlinear/vector/ModelFunction",
+      2,
+      0
+    ],
+    "39": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "40": [
+      "org/apache/commons/math3/optim/nonlinear/vector/ModelFunction.getModelFunction:()Lorg/apache/commons/math3/analysis/MultivariateVectorFunction;",
+      2,
+      0
+    ],
+    "42": [
+      "putfield",
+      2,
+      0
+    ],
+    "43": [
+      "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.model:Lorg/apache/commons/math3/analysis/MultivariateVectorFunction;",
+      2,
+      0
+    ],
+    "45": [
+      "goto",
+      2,
+      0
+    ],
+    "46": [
+      "49",
+      2,
+      0
+    ],
+    "48": [
+      "aload",
+      2,
+      1
+    ],
+    "49": [
+      "#5",
+      2,
+      1
+    ],
+    "50": [
+      "instanceof",
+      2,
+      1
+    ],
+    "51": [
+      "org/apache/commons/math3/optim/nonlinear/vector/Target",
+      2,
+      1
+    ],
+    "53": [
+      "ifeq",
+      2,
+      1
+    ],
+    "54": [
+      "18",
+      2,
+      1
+    ],
+    "56": [
+      "aload_0",
+      2,
+      0
+    ],
+    "57": [
+      "aload",
+      2,
+      0
+    ],
+    "58": [
+      "#5",
+      2,
+      0
+    ],
+    "59": [
+      "checkcast",
+      2,
+      0
+    ],
+    "60": [
+      "org/apache/commons/math3/optim/nonlinear/vector/Target",
+      2,
+      0
+    ],
+    "62": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "63": [
+      "org/apache/commons/math3/optim/nonlinear/vector/Target.getTarget:()[D",
+      2,
+      0
+    ],
+    "65": [
+      "putfield",
+      2,
+      0
+    ],
+    "66": [
+      "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.target:[D",
+      2,
+      0
+    ],
+    "68": [
+      "goto",
+      2,
+      0
+    ],
+    "69": [
+      "26",
+      2,
+      0
+    ],
+    "71": [
+      "aload",
+      2,
+      1
+    ],
+    "72": [
+      "#5",
+      2,
+      1
+    ],
+    "73": [
+      "instanceof",
+      2,
+      1
+    ],
+    "74": [
+      "org/apache/commons/math3/optim/nonlinear/vector/Weight",
+      2,
+      1
+    ],
+    "76": [
+      "ifeq",
+      2,
+      1
+    ],
+    "77": [
+      "18",
+      2,
+      1
+    ],
+    "79": [
+      "aload_0",
+      2,
+      0
+    ],
+    "80": [
+      "aload",
+      2,
+      0
+    ],
+    "81": [
+      "#5",
+      2,
+      0
+    ],
+    "82": [
+      "checkcast",
+      2,
+      0
+    ],
+    "83": [
+      "org/apache/commons/math3/optim/nonlinear/vector/Weight",
+      2,
+      0
+    ],
+    "85": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "86": [
+      "org/apache/commons/math3/optim/nonlinear/vector/Weight.getWeight:()Lorg/apache/commons/math3/linear/RealMatrix;",
+      2,
+      0
+    ],
+    "88": [
+      "putfield",
+      2,
+      0
+    ],
+    "89": [
+      "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.weightMatrix:Lorg/apache/commons/math3/linear/RealMatrix;",
+      2,
+      0
+    ],
+    "91": [
+      "goto",
+      2,
+      0
+    ],
+    "92": [
+      "3",
+      2,
+      0
+    ],
+    "94": [
+      "iinc",
+      2,
+      0
+    ],
+    "95": [
+      "#4",
+      2,
+      0
+    ],
+    "96": [
+      "-89",
+      2,
+      0
+    ],
+    "97": [
+      "goto",
+      2,
+      4
+    ],
+    "98": [
+      "-84",
+      2,
+      4
+    ],
+    "100": [
+      "aload_0",
+      1,
+      0
+    ],
+    "101": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "102": [
+      "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.checkParameters:()V",
+      1,
+      0
+    ],
+    "104": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "checkParameters": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.target:[D",
+      1,
+      1
+    ],
+    "4": [
+      "arraylength",
+      1,
+      1
+    ],
+    "5": [
+      "aload_0",
+      1,
+      1
+    ],
+    "6": [
+      "getfield",
+      1,
+      1
+    ],
+    "7": [
+      "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.weightMatrix:Lorg/apache/commons/math3/linear/RealMatrix;",
+      1,
+      1
+    ],
+    "9": [
+      "invokeinterface",
+      1,
+      1
+    ],
+    "10": [
+      "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/exception/DimensionMismatchException",
+      1,
+      1
+    ],
+    "12": [
+      "0",
+      1,
+      1
+    ],
+    "14": [
+      "if_icmpeq",
+      1,
+      1
+    ],
+    "15": [
+      "25",
+      1,
+      1
+    ],
+    "17": [
+      "new",
+      1,
+      0
+    ],
+    "18": [
+      "org/apache/commons/math3/exception/DimensionMismatchException",
+      1,
+      0
+    ],
+    "20": [
+      "dup",
+      1,
+      0
+    ],
+    "21": [
+      "aload_0",
+      1,
+      0
+    ],
+    "22": [
+      "getfield",
+      1,
+      0
+    ],
+    "23": [
+      "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.target:[D",
+      1,
+      0
+    ],
+    "25": [
+      "arraylength",
+      1,
+      0
+    ],
+    "26": [
+      "aload_0",
+      1,
+      0
+    ],
+    "27": [
+      "getfield",
+      1,
+      0
+    ],
+    "28": [
+      "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.weightMatrix:Lorg/apache/commons/math3/linear/RealMatrix;",
+      1,
+      0
+    ],
+    "30": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "31": [
+      "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/exception/DimensionMismatchException",
+      1,
+      0
+    ],
+    "33": [
+      "0",
+      1,
+      0
+    ],
+    "35": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "36": [
+      "org/apache/commons/math3/exception/DimensionMismatchException.<init>:(II)V",
+      1,
+      0
+    ],
+    "38": [
+      "athrow",
+      1,
+      0
+    ],
+    "39": [
+      "return",
+      0,
+      0
+    ]
+  }
+}

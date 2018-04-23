@@ -1,0 +1,383 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "dload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/math3/analysis/solvers/AbstractUnivariateDifferentiableSolver.<init>:(D)V",
+      0,
+      0
+    ],
+    "5": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "solve": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "iload_1",
+      0,
+      0
+    ],
+    "2": [
+      "aload_2",
+      0,
+      0
+    ],
+    "3": [
+      "checkcast",
+      0,
+      0
+    ],
+    "4": [
+      "org/apache/commons/math3/analysis/differentiation/UnivariateDifferentiableFunction",
+      0,
+      0
+    ],
+    "6": [
+      "dload_3",
+      0,
+      0
+    ],
+    "7": [
+      "dload",
+      0,
+      0
+    ],
+    "8": [
+      "#5",
+      0,
+      0
+    ],
+    "9": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "10": [
+      "org/apache/commons/math3/analysis/solvers/NewtonRaphsonSolver.solve:(ILorg/apache/commons/math3/analysis/differentiation/UnivariateDifferentiableFunction;DD)D",
+      0,
+      0
+    ],
+    "12": [
+      "dreturn",
+      0,
+      0
+    ]
+  },
+  "doSolve": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/analysis/solvers/NewtonRaphsonSolver.getStartValue:()D",
+      0,
+      0
+    ],
+    "4": [
+      "dstore_1",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/analysis/solvers/NewtonRaphsonSolver.getAbsoluteAccuracy:()D",
+      0,
+      0
+    ],
+    "9": [
+      "dstore_3",
+      0,
+      0
+    ],
+    "10": [
+      "dload_1",
+      0,
+      0
+    ],
+    "11": [
+      "dstore",
+      0,
+      0
+    ],
+    "12": [
+      "#5",
+      0,
+      0
+    ],
+    "13": [
+      "aload_0",
+      1,
+      0
+    ],
+    "14": [
+      "dload",
+      1,
+      0
+    ],
+    "15": [
+      "#5",
+      1,
+      0
+    ],
+    "16": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "17": [
+      "org/apache/commons/math3/analysis/solvers/NewtonRaphsonSolver.computeObjectiveValueAndDerivative:(D)Lorg/apache/commons/math3/analysis/differentiation/DerivativeStructure;",
+      1,
+      0
+    ],
+    "19": [
+      "astore",
+      1,
+      0
+    ],
+    "20": [
+      "#9",
+      1,
+      0
+    ],
+    "21": [
+      "dload",
+      1,
+      0
+    ],
+    "22": [
+      "#5",
+      1,
+      0
+    ],
+    "23": [
+      "aload",
+      1,
+      0
+    ],
+    "24": [
+      "#9",
+      1,
+      0
+    ],
+    "25": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "26": [
+      "org/apache/commons/math3/analysis/differentiation/DerivativeStructure.getValue:()D",
+      1,
+      0
+    ],
+    "28": [
+      "aload",
+      1,
+      0
+    ],
+    "29": [
+      "#9",
+      1,
+      0
+    ],
+    "30": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "31": [
+      "newarray",
+      1,
+      0
+    ],
+    "32": [
+      "10",
+      1,
+      0
+    ],
+    "33": [
+      "dup",
+      1,
+      0
+    ],
+    "34": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "35": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "36": [
+      "iastore",
+      1,
+      0
+    ],
+    "37": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "38": [
+      "org/apache/commons/math3/analysis/differentiation/DerivativeStructure.getPartialDerivative:([I)D",
+      1,
+      0
+    ],
+    "40": [
+      "ddiv",
+      1,
+      0
+    ],
+    "41": [
+      "dsub",
+      1,
+      0
+    ],
+    "42": [
+      "dstore",
+      1,
+      0
+    ],
+    "43": [
+      "#7",
+      1,
+      0
+    ],
+    "44": [
+      "dload",
+      2,
+      1
+    ],
+    "45": [
+      "#7",
+      2,
+      1
+    ],
+    "46": [
+      "dload",
+      2,
+      1
+    ],
+    "47": [
+      "#5",
+      2,
+      1
+    ],
+    "48": [
+      "dsub",
+      2,
+      1
+    ],
+    "49": [
+      "invokestatic",
+      2,
+      1
+    ],
+    "50": [
+      "org/apache/commons/math3/util/FastMath.abs:(D)D",
+      2,
+      1
+    ],
+    "52": [
+      "dload_3",
+      2,
+      1
+    ],
+    "53": [
+      "dcmpg",
+      2,
+      1
+    ],
+    "54": [
+      "ifgt",
+      2,
+      1
+    ],
+    "55": [
+      "6",
+      2,
+      1
+    ],
+    "57": [
+      "dload",
+      2,
+      0
+    ],
+    "58": [
+      "#7",
+      2,
+      0
+    ],
+    "59": [
+      "dreturn",
+      2,
+      0
+    ],
+    "60": [
+      "dload",
+      1,
+      0
+    ],
+    "61": [
+      "#7",
+      1,
+      0
+    ],
+    "62": [
+      "dstore",
+      1,
+      0
+    ],
+    "63": [
+      "#5",
+      1,
+      0
+    ],
+    "64": [
+      "goto",
+      0,
+      0
+    ],
+    "65": [
+      "-51",
+      0,
+      0
+    ]
+  }
+}

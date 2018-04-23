@@ -1,0 +1,1714 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "6": [
+      "putfield",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaCount:I",
+      0,
+      0
+    ],
+    "9": [
+      "aload_0",
+      0,
+      0
+    ],
+    "10": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "11": [
+      "putfield",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaReal:[D",
+      0,
+      0
+    ],
+    "14": [
+      "aload_0",
+      0,
+      0
+    ],
+    "15": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "16": [
+      "putfield",
+      0,
+      0
+    ],
+    "17": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaImaginaryCounterClockwise:[D",
+      0,
+      0
+    ],
+    "19": [
+      "aload_0",
+      0,
+      0
+    ],
+    "20": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "21": [
+      "putfield",
+      0,
+      0
+    ],
+    "22": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaImaginaryClockwise:[D",
+      0,
+      0
+    ],
+    "24": [
+      "aload_0",
+      0,
+      0
+    ],
+    "25": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "26": [
+      "putfield",
+      0,
+      0
+    ],
+    "27": [
+      "org/apache/commons/math3/complex/RootsOfUnity.isCounterClockWise:Z",
+      0,
+      0
+    ],
+    "29": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "isCounterClockWise": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaCount:I",
+      1,
+      1
+    ],
+    "4": [
+      "ifne",
+      1,
+      1
+    ],
+    "5": [
+      "18",
+      1,
+      1
+    ],
+    "7": [
+      "new",
+      1,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/exception/MathIllegalStateException",
+      1,
+      0
+    ],
+    "10": [
+      "dup",
+      1,
+      0
+    ],
+    "11": [
+      "getstatic",
+      1,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.ROOTS_OF_UNITY_NOT_COMPUTED_YET:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "14": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "15": [
+      "anewarray",
+      1,
+      0
+    ],
+    "16": [
+      "java/lang/Object",
+      1,
+      0
+    ],
+    "18": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "19": [
+      "org/apache/commons/math3/exception/MathIllegalStateException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;[Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "21": [
+      "athrow",
+      1,
+      0
+    ],
+    "22": [
+      "aload_0",
+      0,
+      0
+    ],
+    "23": [
+      "getfield",
+      0,
+      0
+    ],
+    "24": [
+      "org/apache/commons/math3/complex/RootsOfUnity.isCounterClockWise:Z",
+      0,
+      0
+    ],
+    "26": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "computeRoots": {
+    "0": [
+      "iload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifne",
+      1,
+      1
+    ],
+    "2": [
+      "18",
+      1,
+      1
+    ],
+    "4": [
+      "new",
+      1,
+      0
+    ],
+    "5": [
+      "org/apache/commons/math3/exception/ZeroException",
+      1,
+      0
+    ],
+    "7": [
+      "dup",
+      1,
+      0
+    ],
+    "8": [
+      "getstatic",
+      1,
+      0
+    ],
+    "9": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.CANNOT_COMPUTE_0TH_ROOT_OF_UNITY:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "11": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "12": [
+      "anewarray",
+      1,
+      0
+    ],
+    "13": [
+      "java/lang/Object",
+      1,
+      0
+    ],
+    "15": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/exception/ZeroException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;[Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "18": [
+      "athrow",
+      1,
+      0
+    ],
+    "19": [
+      "aload_0",
+      0,
+      0
+    ],
+    "20": [
+      "iload_1",
+      0,
+      0
+    ],
+    "21": [
+      "ifle",
+      0,
+      0
+    ],
+    "22": [
+      "7",
+      0,
+      0
+    ],
+    "24": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "25": [
+      "goto",
+      0,
+      0
+    ],
+    "26": [
+      "4",
+      0,
+      0
+    ],
+    "28": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "29": [
+      "putfield",
+      0,
+      0
+    ],
+    "30": [
+      "org/apache/commons/math3/complex/RootsOfUnity.isCounterClockWise:Z",
+      0,
+      0
+    ],
+    "32": [
+      "iload_1",
+      0,
+      0
+    ],
+    "33": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "34": [
+      "org/apache/commons/math3/util/FastMath.abs:(I)I",
+      0,
+      0
+    ],
+    "36": [
+      "istore_2",
+      0,
+      0
+    ],
+    "37": [
+      "iload_2",
+      1,
+      1
+    ],
+    "38": [
+      "aload_0",
+      1,
+      1
+    ],
+    "39": [
+      "getfield",
+      1,
+      1
+    ],
+    "40": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaCount:I",
+      1,
+      1
+    ],
+    "42": [
+      "if_icmpne",
+      1,
+      1
+    ],
+    "43": [
+      "4",
+      1,
+      1
+    ],
+    "45": [
+      "return",
+      1,
+      0
+    ],
+    "46": [
+      "ldc2_w",
+      0,
+      0
+    ],
+    "47": [
+      "6.283185307179586",
+      0,
+      0
+    ],
+    "49": [
+      "iload_2",
+      0,
+      0
+    ],
+    "50": [
+      "i2d",
+      0,
+      0
+    ],
+    "51": [
+      "ddiv",
+      0,
+      0
+    ],
+    "52": [
+      "dstore_3",
+      0,
+      0
+    ],
+    "53": [
+      "dload_3",
+      0,
+      0
+    ],
+    "54": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "55": [
+      "org/apache/commons/math3/util/FastMath.cos:(D)D",
+      0,
+      0
+    ],
+    "57": [
+      "dstore",
+      0,
+      0
+    ],
+    "58": [
+      "#5",
+      0,
+      0
+    ],
+    "59": [
+      "dload_3",
+      0,
+      0
+    ],
+    "60": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "61": [
+      "org/apache/commons/math3/util/FastMath.sin:(D)D",
+      0,
+      0
+    ],
+    "63": [
+      "dstore",
+      0,
+      0
+    ],
+    "64": [
+      "#7",
+      0,
+      0
+    ],
+    "65": [
+      "aload_0",
+      0,
+      0
+    ],
+    "66": [
+      "iload_2",
+      0,
+      0
+    ],
+    "67": [
+      "newarray",
+      0,
+      0
+    ],
+    "68": [
+      "7",
+      0,
+      0
+    ],
+    "69": [
+      "putfield",
+      0,
+      0
+    ],
+    "70": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaReal:[D",
+      0,
+      0
+    ],
+    "72": [
+      "aload_0",
+      0,
+      0
+    ],
+    "73": [
+      "iload_2",
+      0,
+      0
+    ],
+    "74": [
+      "newarray",
+      0,
+      0
+    ],
+    "75": [
+      "7",
+      0,
+      0
+    ],
+    "76": [
+      "putfield",
+      0,
+      0
+    ],
+    "77": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaImaginaryCounterClockwise:[D",
+      0,
+      0
+    ],
+    "79": [
+      "aload_0",
+      0,
+      0
+    ],
+    "80": [
+      "iload_2",
+      0,
+      0
+    ],
+    "81": [
+      "newarray",
+      0,
+      0
+    ],
+    "82": [
+      "7",
+      0,
+      0
+    ],
+    "83": [
+      "putfield",
+      0,
+      0
+    ],
+    "84": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaImaginaryClockwise:[D",
+      0,
+      0
+    ],
+    "86": [
+      "aload_0",
+      0,
+      0
+    ],
+    "87": [
+      "getfield",
+      0,
+      0
+    ],
+    "88": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaReal:[D",
+      0,
+      0
+    ],
+    "90": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "91": [
+      "dconst_1",
+      0,
+      0
+    ],
+    "92": [
+      "dastore",
+      0,
+      0
+    ],
+    "93": [
+      "aload_0",
+      0,
+      0
+    ],
+    "94": [
+      "getfield",
+      0,
+      0
+    ],
+    "95": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaImaginaryCounterClockwise:[D",
+      0,
+      0
+    ],
+    "97": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "98": [
+      "dconst_0",
+      0,
+      0
+    ],
+    "99": [
+      "dastore",
+      0,
+      0
+    ],
+    "100": [
+      "aload_0",
+      0,
+      0
+    ],
+    "101": [
+      "getfield",
+      0,
+      0
+    ],
+    "102": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaImaginaryClockwise:[D",
+      0,
+      0
+    ],
+    "104": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "105": [
+      "dconst_0",
+      0,
+      0
+    ],
+    "106": [
+      "dastore",
+      0,
+      0
+    ],
+    "107": [
+      "iconst_1",
+      1,
+      4
+    ],
+    "108": [
+      "istore",
+      1,
+      4
+    ],
+    "109": [
+      "#9",
+      1,
+      4
+    ],
+    "110": [
+      "iload",
+      1,
+      4
+    ],
+    "111": [
+      "#9",
+      1,
+      4
+    ],
+    "112": [
+      "iload_2",
+      1,
+      4
+    ],
+    "113": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "114": [
+      "88",
+      1,
+      4
+    ],
+    "116": [
+      "aload_0",
+      1,
+      0
+    ],
+    "117": [
+      "getfield",
+      1,
+      0
+    ],
+    "118": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaReal:[D",
+      1,
+      0
+    ],
+    "120": [
+      "iload",
+      1,
+      0
+    ],
+    "121": [
+      "#9",
+      1,
+      0
+    ],
+    "122": [
+      "aload_0",
+      1,
+      0
+    ],
+    "123": [
+      "getfield",
+      1,
+      0
+    ],
+    "124": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaReal:[D",
+      1,
+      0
+    ],
+    "126": [
+      "iload",
+      1,
+      0
+    ],
+    "127": [
+      "#9",
+      1,
+      0
+    ],
+    "128": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "129": [
+      "isub",
+      1,
+      0
+    ],
+    "130": [
+      "daload",
+      1,
+      0
+    ],
+    "131": [
+      "dload",
+      1,
+      0
+    ],
+    "132": [
+      "#5",
+      1,
+      0
+    ],
+    "133": [
+      "dmul",
+      1,
+      0
+    ],
+    "134": [
+      "aload_0",
+      1,
+      0
+    ],
+    "135": [
+      "getfield",
+      1,
+      0
+    ],
+    "136": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaImaginaryCounterClockwise:[D",
+      1,
+      0
+    ],
+    "138": [
+      "iload",
+      1,
+      0
+    ],
+    "139": [
+      "#9",
+      1,
+      0
+    ],
+    "140": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "141": [
+      "isub",
+      1,
+      0
+    ],
+    "142": [
+      "daload",
+      1,
+      0
+    ],
+    "143": [
+      "dload",
+      1,
+      0
+    ],
+    "144": [
+      "#7",
+      1,
+      0
+    ],
+    "145": [
+      "dmul",
+      1,
+      0
+    ],
+    "146": [
+      "dsub",
+      1,
+      0
+    ],
+    "147": [
+      "dastore",
+      1,
+      0
+    ],
+    "148": [
+      "aload_0",
+      1,
+      0
+    ],
+    "149": [
+      "getfield",
+      1,
+      0
+    ],
+    "150": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaImaginaryCounterClockwise:[D",
+      1,
+      0
+    ],
+    "152": [
+      "iload",
+      1,
+      0
+    ],
+    "153": [
+      "#9",
+      1,
+      0
+    ],
+    "154": [
+      "aload_0",
+      1,
+      0
+    ],
+    "155": [
+      "getfield",
+      1,
+      0
+    ],
+    "156": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaReal:[D",
+      1,
+      0
+    ],
+    "158": [
+      "iload",
+      1,
+      0
+    ],
+    "159": [
+      "#9",
+      1,
+      0
+    ],
+    "160": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "161": [
+      "isub",
+      1,
+      0
+    ],
+    "162": [
+      "daload",
+      1,
+      0
+    ],
+    "163": [
+      "dload",
+      1,
+      0
+    ],
+    "164": [
+      "#7",
+      1,
+      0
+    ],
+    "165": [
+      "dmul",
+      1,
+      0
+    ],
+    "166": [
+      "aload_0",
+      1,
+      0
+    ],
+    "167": [
+      "getfield",
+      1,
+      0
+    ],
+    "168": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaImaginaryCounterClockwise:[D",
+      1,
+      0
+    ],
+    "170": [
+      "iload",
+      1,
+      0
+    ],
+    "171": [
+      "#9",
+      1,
+      0
+    ],
+    "172": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "173": [
+      "isub",
+      1,
+      0
+    ],
+    "174": [
+      "daload",
+      1,
+      0
+    ],
+    "175": [
+      "dload",
+      1,
+      0
+    ],
+    "176": [
+      "#5",
+      1,
+      0
+    ],
+    "177": [
+      "dmul",
+      1,
+      0
+    ],
+    "178": [
+      "dadd",
+      1,
+      0
+    ],
+    "179": [
+      "dastore",
+      1,
+      0
+    ],
+    "180": [
+      "aload_0",
+      1,
+      0
+    ],
+    "181": [
+      "getfield",
+      1,
+      0
+    ],
+    "182": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaImaginaryClockwise:[D",
+      1,
+      0
+    ],
+    "184": [
+      "iload",
+      1,
+      0
+    ],
+    "185": [
+      "#9",
+      1,
+      0
+    ],
+    "186": [
+      "aload_0",
+      1,
+      0
+    ],
+    "187": [
+      "getfield",
+      1,
+      0
+    ],
+    "188": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaImaginaryCounterClockwise:[D",
+      1,
+      0
+    ],
+    "190": [
+      "iload",
+      1,
+      0
+    ],
+    "191": [
+      "#9",
+      1,
+      0
+    ],
+    "192": [
+      "daload",
+      1,
+      0
+    ],
+    "193": [
+      "dneg",
+      1,
+      0
+    ],
+    "194": [
+      "dastore",
+      1,
+      0
+    ],
+    "195": [
+      "iinc",
+      1,
+      0
+    ],
+    "196": [
+      "#9",
+      1,
+      0
+    ],
+    "197": [
+      "-89",
+      1,
+      0
+    ],
+    "198": [
+      "goto",
+      1,
+      4
+    ],
+    "199": [
+      "-88",
+      1,
+      4
+    ],
+    "201": [
+      "aload_0",
+      0,
+      0
+    ],
+    "202": [
+      "iload_2",
+      0,
+      0
+    ],
+    "203": [
+      "putfield",
+      0,
+      0
+    ],
+    "204": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaCount:I",
+      0,
+      0
+    ],
+    "206": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getReal": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaCount:I",
+      1,
+      1
+    ],
+    "4": [
+      "ifne",
+      1,
+      1
+    ],
+    "5": [
+      "18",
+      1,
+      1
+    ],
+    "7": [
+      "new",
+      1,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/exception/MathIllegalStateException",
+      1,
+      0
+    ],
+    "10": [
+      "dup",
+      1,
+      0
+    ],
+    "11": [
+      "getstatic",
+      1,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.ROOTS_OF_UNITY_NOT_COMPUTED_YET:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "14": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "15": [
+      "anewarray",
+      1,
+      0
+    ],
+    "16": [
+      "java/lang/Object",
+      1,
+      0
+    ],
+    "18": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "19": [
+      "org/apache/commons/math3/exception/MathIllegalStateException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;[Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "21": [
+      "athrow",
+      1,
+      0
+    ],
+    "22": [
+      "iload_1",
+      1,
+      1
+    ],
+    "23": [
+      "iflt",
+      1,
+      1
+    ],
+    "24": [
+      "11",
+      1,
+      1
+    ],
+    "26": [
+      "iload_1",
+      1,
+      1
+    ],
+    "27": [
+      "aload_0",
+      1,
+      1
+    ],
+    "28": [
+      "getfield",
+      1,
+      1
+    ],
+    "29": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaCount:I",
+      1,
+      1
+    ],
+    "31": [
+      "if_icmplt",
+      1,
+      1
+    ],
+    "32": [
+      "31",
+      1,
+      1
+    ],
+    "34": [
+      "new",
+      1,
+      0
+    ],
+    "35": [
+      "org/apache/commons/math3/exception/OutOfRangeException",
+      1,
+      0
+    ],
+    "37": [
+      "dup",
+      1,
+      0
+    ],
+    "38": [
+      "getstatic",
+      1,
+      0
+    ],
+    "39": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.OUT_OF_RANGE_ROOT_OF_UNITY_INDEX:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "41": [
+      "iload_1",
+      1,
+      0
+    ],
+    "42": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "43": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "45": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "46": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "47": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "49": [
+      "aload_0",
+      1,
+      0
+    ],
+    "50": [
+      "getfield",
+      1,
+      0
+    ],
+    "51": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaCount:I",
+      1,
+      0
+    ],
+    "53": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "54": [
+      "isub",
+      1,
+      0
+    ],
+    "55": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "56": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "58": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "59": [
+      "org/apache/commons/math3/exception/OutOfRangeException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;Ljava/lang/Number;Ljava/lang/Number;Ljava/lang/Number;)V",
+      1,
+      0
+    ],
+    "61": [
+      "athrow",
+      1,
+      0
+    ],
+    "62": [
+      "aload_0",
+      0,
+      0
+    ],
+    "63": [
+      "getfield",
+      0,
+      0
+    ],
+    "64": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaReal:[D",
+      0,
+      0
+    ],
+    "66": [
+      "iload_1",
+      0,
+      0
+    ],
+    "67": [
+      "daload",
+      0,
+      0
+    ],
+    "68": [
+      "dreturn",
+      0,
+      0
+    ]
+  },
+  "getImaginary": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaCount:I",
+      1,
+      1
+    ],
+    "4": [
+      "ifne",
+      1,
+      1
+    ],
+    "5": [
+      "18",
+      1,
+      1
+    ],
+    "7": [
+      "new",
+      1,
+      0
+    ],
+    "8": [
+      "org/apache/commons/math3/exception/MathIllegalStateException",
+      1,
+      0
+    ],
+    "10": [
+      "dup",
+      1,
+      0
+    ],
+    "11": [
+      "getstatic",
+      1,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.ROOTS_OF_UNITY_NOT_COMPUTED_YET:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "14": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "15": [
+      "anewarray",
+      1,
+      0
+    ],
+    "16": [
+      "java/lang/Object",
+      1,
+      0
+    ],
+    "18": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "19": [
+      "org/apache/commons/math3/exception/MathIllegalStateException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;[Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "21": [
+      "athrow",
+      1,
+      0
+    ],
+    "22": [
+      "iload_1",
+      1,
+      1
+    ],
+    "23": [
+      "iflt",
+      1,
+      1
+    ],
+    "24": [
+      "11",
+      1,
+      1
+    ],
+    "26": [
+      "iload_1",
+      1,
+      1
+    ],
+    "27": [
+      "aload_0",
+      1,
+      1
+    ],
+    "28": [
+      "getfield",
+      1,
+      1
+    ],
+    "29": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaCount:I",
+      1,
+      1
+    ],
+    "31": [
+      "if_icmplt",
+      1,
+      1
+    ],
+    "32": [
+      "31",
+      1,
+      1
+    ],
+    "34": [
+      "new",
+      1,
+      0
+    ],
+    "35": [
+      "org/apache/commons/math3/exception/OutOfRangeException",
+      1,
+      0
+    ],
+    "37": [
+      "dup",
+      1,
+      0
+    ],
+    "38": [
+      "getstatic",
+      1,
+      0
+    ],
+    "39": [
+      "org/apache/commons/math3/exception/util/LocalizedFormats.OUT_OF_RANGE_ROOT_OF_UNITY_INDEX:Lorg/apache/commons/math3/exception/util/LocalizedFormats;",
+      1,
+      0
+    ],
+    "41": [
+      "iload_1",
+      1,
+      0
+    ],
+    "42": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "43": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "45": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "46": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "47": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "49": [
+      "aload_0",
+      1,
+      0
+    ],
+    "50": [
+      "getfield",
+      1,
+      0
+    ],
+    "51": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaCount:I",
+      1,
+      0
+    ],
+    "53": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "54": [
+      "isub",
+      1,
+      0
+    ],
+    "55": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "56": [
+      "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;",
+      1,
+      0
+    ],
+    "58": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "59": [
+      "org/apache/commons/math3/exception/OutOfRangeException.<init>:(Lorg/apache/commons/math3/exception/util/Localizable;Ljava/lang/Number;Ljava/lang/Number;Ljava/lang/Number;)V",
+      1,
+      0
+    ],
+    "61": [
+      "athrow",
+      1,
+      0
+    ],
+    "62": [
+      "aload_0",
+      0,
+      0
+    ],
+    "63": [
+      "getfield",
+      0,
+      0
+    ],
+    "64": [
+      "org/apache/commons/math3/complex/RootsOfUnity.isCounterClockWise:Z",
+      0,
+      0
+    ],
+    "66": [
+      "ifeq",
+      0,
+      0
+    ],
+    "67": [
+      "12",
+      0,
+      0
+    ],
+    "69": [
+      "aload_0",
+      0,
+      0
+    ],
+    "70": [
+      "getfield",
+      0,
+      0
+    ],
+    "71": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaImaginaryCounterClockwise:[D",
+      0,
+      0
+    ],
+    "73": [
+      "iload_1",
+      0,
+      0
+    ],
+    "74": [
+      "daload",
+      0,
+      0
+    ],
+    "75": [
+      "goto",
+      0,
+      0
+    ],
+    "76": [
+      "9",
+      0,
+      0
+    ],
+    "78": [
+      "aload_0",
+      0,
+      0
+    ],
+    "79": [
+      "getfield",
+      0,
+      0
+    ],
+    "80": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaImaginaryClockwise:[D",
+      0,
+      0
+    ],
+    "82": [
+      "iload_1",
+      0,
+      0
+    ],
+    "83": [
+      "daload",
+      0,
+      0
+    ],
+    "84": [
+      "dreturn",
+      0,
+      0
+    ]
+  },
+  "getNumberOfRoots": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/complex/RootsOfUnity.omegaCount:I",
+      0,
+      0
+    ],
+    "4": [
+      "ireturn",
+      0,
+      0
+    ]
+  }
+}

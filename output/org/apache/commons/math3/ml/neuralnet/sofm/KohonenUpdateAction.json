@@ -1,0 +1,1361 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "new",
+      0,
+      0
+    ],
+    "6": [
+      "java/util/concurrent/atomic/AtomicLong",
+      0,
+      0
+    ],
+    "8": [
+      "dup",
+      0,
+      0
+    ],
+    "9": [
+      "lconst_0",
+      0,
+      0
+    ],
+    "10": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "11": [
+      "java/util/concurrent/atomic/AtomicLong.<init>:(J)V",
+      0,
+      0
+    ],
+    "13": [
+      "putfield",
+      0,
+      0
+    ],
+    "14": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/KohonenUpdateAction.numberOfCalls:Ljava/util/concurrent/atomic/AtomicLong;",
+      0,
+      0
+    ],
+    "16": [
+      "aload_0",
+      0,
+      0
+    ],
+    "17": [
+      "aload_1",
+      0,
+      0
+    ],
+    "18": [
+      "putfield",
+      0,
+      0
+    ],
+    "19": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/KohonenUpdateAction.distance:Lorg/apache/commons/math3/ml/distance/DistanceMeasure;",
+      0,
+      0
+    ],
+    "21": [
+      "aload_0",
+      0,
+      0
+    ],
+    "22": [
+      "aload_2",
+      0,
+      0
+    ],
+    "23": [
+      "putfield",
+      0,
+      0
+    ],
+    "24": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/KohonenUpdateAction.learningFactor:Lorg/apache/commons/math3/ml/neuralnet/sofm/LearningFactorFunction;",
+      0,
+      0
+    ],
+    "26": [
+      "aload_0",
+      0,
+      0
+    ],
+    "27": [
+      "aload_3",
+      0,
+      0
+    ],
+    "28": [
+      "putfield",
+      0,
+      0
+    ],
+    "29": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/KohonenUpdateAction.neighbourhoodSize:Lorg/apache/commons/math3/ml/neuralnet/sofm/NeighbourhoodSizeFunction;",
+      0,
+      0
+    ],
+    "31": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "update": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/KohonenUpdateAction.numberOfCalls:Ljava/util/concurrent/atomic/AtomicLong;",
+      0,
+      0
+    ],
+    "4": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "5": [
+      "java/util/concurrent/atomic/AtomicLong.incrementAndGet:()J",
+      0,
+      0
+    ],
+    "7": [
+      "lconst_1",
+      0,
+      0
+    ],
+    "8": [
+      "lsub",
+      0,
+      0
+    ],
+    "9": [
+      "lstore_3",
+      0,
+      0
+    ],
+    "10": [
+      "aload_0",
+      0,
+      0
+    ],
+    "11": [
+      "getfield",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/KohonenUpdateAction.learningFactor:Lorg/apache/commons/math3/ml/neuralnet/sofm/LearningFactorFunction;",
+      0,
+      0
+    ],
+    "14": [
+      "lload_3",
+      0,
+      0
+    ],
+    "15": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "16": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/LearningFactorFunction.findAndUpdateBestNeuron:(Lorg/apache/commons/math3/ml/neuralnet/Network;[DD)Lorg/apache/commons/math3/ml/neuralnet/Neuron;",
+      0,
+      0
+    ],
+    "18": [
+      "0",
+      0,
+      0
+    ],
+    "20": [
+      "dstore",
+      0,
+      0
+    ],
+    "21": [
+      "#5",
+      0,
+      0
+    ],
+    "22": [
+      "aload_0",
+      0,
+      0
+    ],
+    "23": [
+      "aload_1",
+      0,
+      0
+    ],
+    "24": [
+      "aload_2",
+      0,
+      0
+    ],
+    "25": [
+      "dload",
+      0,
+      0
+    ],
+    "26": [
+      "#5",
+      0,
+      0
+    ],
+    "27": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "28": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/KohonenUpdateAction.findAndUpdateBestNeuron:(Lorg/apache/commons/math3/ml/neuralnet/Network;[DD)Lorg/apache/commons/math3/ml/neuralnet/Neuron;",
+      0,
+      0
+    ],
+    "30": [
+      "astore",
+      0,
+      0
+    ],
+    "31": [
+      "#7",
+      0,
+      0
+    ],
+    "32": [
+      "aload_0",
+      0,
+      0
+    ],
+    "33": [
+      "getfield",
+      0,
+      0
+    ],
+    "34": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/KohonenUpdateAction.neighbourhoodSize:Lorg/apache/commons/math3/ml/neuralnet/sofm/NeighbourhoodSizeFunction;",
+      0,
+      0
+    ],
+    "36": [
+      "lload_3",
+      0,
+      0
+    ],
+    "37": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "38": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/NeighbourhoodSizeFunction.org/apache/commons/math3/analysis/function/Gaussian",
+      0,
+      0
+    ],
+    "40": [
+      "0",
+      0,
+      0
+    ],
+    "42": [
+      "istore",
+      0,
+      0
+    ],
+    "43": [
+      "#8",
+      0,
+      0
+    ],
+    "44": [
+      "new",
+      0,
+      0
+    ],
+    "45": [
+      "org/apache/commons/math3/analysis/function/Gaussian",
+      0,
+      0
+    ],
+    "47": [
+      "dup",
+      0,
+      0
+    ],
+    "48": [
+      "dload",
+      0,
+      0
+    ],
+    "49": [
+      "#5",
+      0,
+      0
+    ],
+    "50": [
+      "dconst_0",
+      0,
+      0
+    ],
+    "51": [
+      "iload",
+      0,
+      0
+    ],
+    "52": [
+      "#8",
+      0,
+      0
+    ],
+    "53": [
+      "i2d",
+      0,
+      0
+    ],
+    "54": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "55": [
+      "org/apache/commons/math3/analysis/function/Gaussian.<init>:(DDD)V",
+      0,
+      0
+    ],
+    "57": [
+      "astore",
+      0,
+      0
+    ],
+    "58": [
+      "#9",
+      0,
+      0
+    ],
+    "59": [
+      "iload",
+      1,
+      1
+    ],
+    "60": [
+      "#8",
+      1,
+      1
+    ],
+    "61": [
+      "ifle",
+      1,
+      1
+    ],
+    "62": [
+      "119",
+      1,
+      1
+    ],
+    "64": [
+      "new",
+      1,
+      0
+    ],
+    "65": [
+      "java/util/HashSet",
+      1,
+      0
+    ],
+    "67": [
+      "dup",
+      1,
+      0
+    ],
+    "68": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "69": [
+      "java/util/HashSet.<init>:()V",
+      1,
+      0
+    ],
+    "71": [
+      "astore",
+      1,
+      0
+    ],
+    "72": [
+      "#10",
+      1,
+      0
+    ],
+    "73": [
+      "aload",
+      1,
+      0
+    ],
+    "74": [
+      "#10",
+      1,
+      0
+    ],
+    "75": [
+      "aload",
+      1,
+      0
+    ],
+    "76": [
+      "#7",
+      1,
+      0
+    ],
+    "77": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "78": [
+      "java/util/Collection.org/apache/commons/math3/ml/neuralnet/Network",
+      1,
+      0
+    ],
+    "80": [
+      "0",
+      1,
+      0
+    ],
+    "82": [
+      "pop",
+      1,
+      0
+    ],
+    "83": [
+      "new",
+      1,
+      0
+    ],
+    "84": [
+      "java/util/HashSet",
+      1,
+      0
+    ],
+    "86": [
+      "dup",
+      1,
+      0
+    ],
+    "87": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "88": [
+      "java/util/HashSet.<init>:()V",
+      1,
+      0
+    ],
+    "90": [
+      "astore",
+      1,
+      0
+    ],
+    "91": [
+      "#11",
+      1,
+      0
+    ],
+    "92": [
+      "aload",
+      1,
+      0
+    ],
+    "93": [
+      "#11",
+      1,
+      0
+    ],
+    "94": [
+      "aload",
+      1,
+      0
+    ],
+    "95": [
+      "#7",
+      1,
+      0
+    ],
+    "96": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "97": [
+      "java/util/HashSet.add:(Ljava/lang/Object;)Z",
+      1,
+      0
+    ],
+    "99": [
+      "pop",
+      1,
+      0
+    ],
+    "100": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "101": [
+      "istore",
+      1,
+      0
+    ],
+    "102": [
+      "#12",
+      1,
+      0
+    ],
+    "103": [
+      "aload_1",
+      1,
+      0
+    ],
+    "104": [
+      "aload",
+      1,
+      0
+    ],
+    "105": [
+      "#10",
+      1,
+      0
+    ],
+    "106": [
+      "aload",
+      1,
+      0
+    ],
+    "107": [
+      "#11",
+      1,
+      0
+    ],
+    "108": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "109": [
+      "org/apache/commons/math3/ml/neuralnet/Network.getNeighbours:(Ljava/lang/Iterable;Ljava/lang/Iterable;)Ljava/util/Collection;",
+      1,
+      0
+    ],
+    "111": [
+      "astore",
+      1,
+      0
+    ],
+    "112": [
+      "#10",
+      1,
+      0
+    ],
+    "113": [
+      "aload",
+      3,
+      4
+    ],
+    "114": [
+      "#10",
+      3,
+      4
+    ],
+    "115": [
+      "invokeinterface",
+      3,
+      4
+    ],
+    "116": [
+      "java/util/Collection.java/util/Iterator",
+      3,
+      4
+    ],
+    "118": [
+      "0",
+      3,
+      4
+    ],
+    "120": [
+      "astore",
+      3,
+      4
+    ],
+    "121": [
+      "#13",
+      3,
+      4
+    ],
+    "122": [
+      "aload",
+      3,
+      4
+    ],
+    "123": [
+      "#13",
+      3,
+      4
+    ],
+    "124": [
+      "invokeinterface",
+      3,
+      4
+    ],
+    "125": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      3,
+      4
+    ],
+    "127": [
+      "0",
+      3,
+      4
+    ],
+    "129": [
+      "ifeq",
+      3,
+      4
+    ],
+    "130": [
+      "33",
+      3,
+      4
+    ],
+    "132": [
+      "aload",
+      3,
+      4
+    ],
+    "133": [
+      "#13",
+      3,
+      4
+    ],
+    "134": [
+      "invokeinterface",
+      3,
+      4
+    ],
+    "135": [
+      "java/util/Iterator.org/apache/commons/math3/ml/neuralnet/Neuron",
+      3,
+      4
+    ],
+    "137": [
+      "0",
+      3,
+      4
+    ],
+    "139": [
+      "checkcast",
+      3,
+      4
+    ],
+    "140": [
+      "org/apache/commons/math3/ml/neuralnet/Neuron",
+      3,
+      4
+    ],
+    "142": [
+      "astore",
+      3,
+      4
+    ],
+    "143": [
+      "#14",
+      3,
+      4
+    ],
+    "144": [
+      "aload_0",
+      3,
+      0
+    ],
+    "145": [
+      "aload",
+      3,
+      0
+    ],
+    "146": [
+      "#14",
+      3,
+      0
+    ],
+    "147": [
+      "aload_2",
+      3,
+      0
+    ],
+    "148": [
+      "aload",
+      3,
+      0
+    ],
+    "149": [
+      "#9",
+      3,
+      0
+    ],
+    "150": [
+      "iload",
+      3,
+      0
+    ],
+    "151": [
+      "#12",
+      3,
+      0
+    ],
+    "152": [
+      "i2d",
+      3,
+      0
+    ],
+    "153": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "154": [
+      "org/apache/commons/math3/analysis/function/Gaussian.value:(D)D",
+      3,
+      0
+    ],
+    "156": [
+      "invokespecial",
+      3,
+      0
+    ],
+    "157": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/KohonenUpdateAction.updateNeighbouringNeuron:(Lorg/apache/commons/math3/ml/neuralnet/Neuron;[DD)V",
+      3,
+      0
+    ],
+    "159": [
+      "goto",
+      1,
+      4
+    ],
+    "160": [
+      "-37",
+      1,
+      4
+    ],
+    "162": [
+      "aload",
+      1,
+      0
+    ],
+    "163": [
+      "#11",
+      1,
+      0
+    ],
+    "164": [
+      "aload",
+      1,
+      0
+    ],
+    "165": [
+      "#10",
+      1,
+      0
+    ],
+    "166": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "167": [
+      "java/util/HashSet.addAll:(Ljava/util/Collection;)Z",
+      1,
+      0
+    ],
+    "169": [
+      "pop",
+      1,
+      0
+    ],
+    "170": [
+      "iinc",
+      1,
+      0
+    ],
+    "171": [
+      "#12",
+      1,
+      0
+    ],
+    "172": [
+      "21",
+      1,
+      0
+    ],
+    "173": [
+      "iload",
+      1,
+      3
+    ],
+    "174": [
+      "#12",
+      1,
+      3
+    ],
+    "175": [
+      "iload",
+      1,
+      3
+    ],
+    "176": [
+      "#8",
+      1,
+      3
+    ],
+    "177": [
+      "if_icmple",
+      1,
+      3
+    ],
+    "178": [
+      "-74",
+      1,
+      3
+    ],
+    "180": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getNumberOfCalls": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/KohonenUpdateAction.numberOfCalls:Ljava/util/concurrent/atomic/AtomicLong;",
+      0,
+      0
+    ],
+    "4": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "5": [
+      "java/util/concurrent/atomic/AtomicLong.get:()J",
+      0,
+      0
+    ],
+    "7": [
+      "lreturn",
+      0,
+      0
+    ]
+  },
+  "attemptNeuronUpdate": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/math3/ml/neuralnet/Neuron.getFeatures:()[D",
+      0,
+      0
+    ],
+    "4": [
+      "astore",
+      0,
+      0
+    ],
+    "5": [
+      "#5",
+      0,
+      0
+    ],
+    "6": [
+      "aload_0",
+      0,
+      0
+    ],
+    "7": [
+      "aload",
+      0,
+      0
+    ],
+    "8": [
+      "#5",
+      0,
+      0
+    ],
+    "9": [
+      "aload_2",
+      0,
+      0
+    ],
+    "10": [
+      "dload_3",
+      0,
+      0
+    ],
+    "11": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/KohonenUpdateAction.computeFeatures:([D[DD)[D",
+      0,
+      0
+    ],
+    "14": [
+      "astore",
+      0,
+      0
+    ],
+    "15": [
+      "#6",
+      0,
+      0
+    ],
+    "16": [
+      "aload_1",
+      0,
+      0
+    ],
+    "17": [
+      "aload",
+      0,
+      0
+    ],
+    "18": [
+      "#5",
+      0,
+      0
+    ],
+    "19": [
+      "aload",
+      0,
+      0
+    ],
+    "20": [
+      "#6",
+      0,
+      0
+    ],
+    "21": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "22": [
+      "org/apache/commons/math3/ml/neuralnet/Neuron.compareAndSetFeatures:([D[D)Z",
+      0,
+      0
+    ],
+    "24": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "updateNeighbouringNeuron": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "aload_1",
+      1,
+      1
+    ],
+    "2": [
+      "aload_2",
+      1,
+      1
+    ],
+    "3": [
+      "dload_3",
+      1,
+      1
+    ],
+    "4": [
+      "invokespecial",
+      1,
+      1
+    ],
+    "5": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/KohonenUpdateAction.attemptNeuronUpdate:(Lorg/apache/commons/math3/ml/neuralnet/Neuron;[DD)Z",
+      1,
+      1
+    ],
+    "7": [
+      "ifeq",
+      1,
+      1
+    ],
+    "8": [
+      "-7",
+      1,
+      1
+    ],
+    "10": [
+      "goto",
+      1,
+      0
+    ],
+    "11": [
+      "3",
+      1,
+      0
+    ],
+    "13": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "findAndUpdateBestNeuron": {
+    "0": [
+      "aload_2",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "aload_0",
+      0,
+      0
+    ],
+    "3": [
+      "getfield",
+      0,
+      0
+    ],
+    "4": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/KohonenUpdateAction.distance:Lorg/apache/commons/math3/ml/distance/DistanceMeasure;",
+      0,
+      0
+    ],
+    "6": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/ml/neuralnet/MapUtils.findBest:([DLjava/lang/Iterable;Lorg/apache/commons/math3/ml/distance/DistanceMeasure;)Lorg/apache/commons/math3/ml/neuralnet/Neuron;",
+      0,
+      0
+    ],
+    "9": [
+      "astore",
+      0,
+      0
+    ],
+    "10": [
+      "#5",
+      0,
+      0
+    ],
+    "11": [
+      "aload_0",
+      1,
+      1
+    ],
+    "12": [
+      "aload",
+      1,
+      1
+    ],
+    "13": [
+      "#5",
+      1,
+      1
+    ],
+    "14": [
+      "aload_2",
+      1,
+      1
+    ],
+    "15": [
+      "dload_3",
+      1,
+      1
+    ],
+    "16": [
+      "invokespecial",
+      1,
+      1
+    ],
+    "17": [
+      "org/apache/commons/math3/ml/neuralnet/sofm/KohonenUpdateAction.attemptNeuronUpdate:(Lorg/apache/commons/math3/ml/neuralnet/Neuron;[DD)Z",
+      1,
+      1
+    ],
+    "19": [
+      "ifeq",
+      1,
+      1
+    ],
+    "20": [
+      "6",
+      1,
+      1
+    ],
+    "22": [
+      "aload",
+      1,
+      0
+    ],
+    "23": [
+      "#5",
+      1,
+      0
+    ],
+    "24": [
+      "areturn",
+      1,
+      0
+    ],
+    "25": [
+      "goto",
+      0,
+      0
+    ],
+    "26": [
+      "-25",
+      0,
+      0
+    ]
+  },
+  "computeFeatures": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/math3/linear/ArrayRealVector",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_1",
+      0,
+      0
+    ],
+    "5": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "6": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/math3/linear/ArrayRealVector.<init>:([DZ)V",
+      0,
+      0
+    ],
+    "9": [
+      "astore",
+      0,
+      0
+    ],
+    "10": [
+      "#5",
+      0,
+      0
+    ],
+    "11": [
+      "new",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/math3/linear/ArrayRealVector",
+      0,
+      0
+    ],
+    "14": [
+      "dup",
+      0,
+      0
+    ],
+    "15": [
+      "aload_2",
+      0,
+      0
+    ],
+    "16": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "17": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "18": [
+      "org/apache/commons/math3/linear/ArrayRealVector.<init>:([DZ)V",
+      0,
+      0
+    ],
+    "20": [
+      "astore",
+      0,
+      0
+    ],
+    "21": [
+      "#6",
+      0,
+      0
+    ],
+    "22": [
+      "aload",
+      0,
+      0
+    ],
+    "23": [
+      "#6",
+      0,
+      0
+    ],
+    "24": [
+      "aload",
+      0,
+      0
+    ],
+    "25": [
+      "#5",
+      0,
+      0
+    ],
+    "26": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "27": [
+      "org/apache/commons/math3/linear/ArrayRealVector.subtract:(Lorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/ArrayRealVector;",
+      0,
+      0
+    ],
+    "29": [
+      "dload_3",
+      0,
+      0
+    ],
+    "30": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "31": [
+      "org/apache/commons/math3/linear/ArrayRealVector.mapMultiplyToSelf:(D)Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "33": [
+      "aload",
+      0,
+      0
+    ],
+    "34": [
+      "#5",
+      0,
+      0
+    ],
+    "35": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "36": [
+      "org/apache/commons/math3/linear/RealVector.add:(Lorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;",
+      0,
+      0
+    ],
+    "38": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "39": [
+      "org/apache/commons/math3/linear/RealVector.toArray:()[D",
+      0,
+      0
+    ],
+    "41": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}
