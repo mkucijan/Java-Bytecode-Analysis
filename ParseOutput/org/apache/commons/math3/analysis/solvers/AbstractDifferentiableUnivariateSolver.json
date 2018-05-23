@@ -1,0 +1,174 @@
+{
+    "computeDerivativeObjectiveValue": {
+        "name": "computeDerivativeObjectiveValue",
+        "pos": [
+            67,
+            76
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    69,
+                    70
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/analysis/solvers/AbstractDifferentiableUnivariateSolver.incrementEvaluationCount:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/analysis/solvers/AbstractDifferentiableUnivariateSolver.functionDerivative:Lorg/apache/commons/math3/analysis/UnivariateFunction;"
+                    ],
+                    [
+                        "8",
+                        "dload_1"
+                    ],
+                    [
+                        "9",
+                        "invokeinterface"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/analysis/UnivariateFunction.setup:(ILorg/apache/commons/math3/analysis/UnivariateFunction;DDD)V"
+                    ],
+                    [
+                        "12",
+                        "0"
+                    ],
+                    [
+                        "14",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    70,
+                    71
+                ],
+                "children": []
+            }
+        ]
+    },
+    "setup": {
+        "name": "setup",
+        "pos": [
+            76,
+            82
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    79,
+                    80
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "aload_2"
+                    ],
+                    [
+                        "3",
+                        "dload_3"
+                    ],
+                    [
+                        "4",
+                        "dload"
+                    ],
+                    [
+                        "5",
+                        "#5"
+                    ],
+                    [
+                        "6",
+                        "dload"
+                    ],
+                    [
+                        "7",
+                        "#7"
+                    ],
+                    [
+                        "8",
+                        "invokespecial"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/analysis/solvers/BaseAbstractUnivariateSolver.setup:(ILorg/apache/commons/math3/analysis/UnivariateFunction;DDD)V"
+                    ],
+                    [
+                        "11",
+                        "aload_0"
+                    ],
+                    [
+                        "12",
+                        "aload_2"
+                    ],
+                    [
+                        "13",
+                        "invokeinterface"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/analysis/DifferentiableUnivariateFunction.org/apache/commons/math3/analysis/DifferentiableUnivariateFunction"
+                    ],
+                    [
+                        "16",
+                        "0"
+                    ],
+                    [
+                        "18",
+                        "putfield"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/analysis/solvers/AbstractDifferentiableUnivariateSolver.functionDerivative:Lorg/apache/commons/math3/analysis/UnivariateFunction;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    80,
+                    81
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "21",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

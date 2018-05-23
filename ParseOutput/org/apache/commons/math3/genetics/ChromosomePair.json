@@ -1,0 +1,171 @@
+{
+    "getFirst": {
+        "name": "getFirst",
+        "pos": [
+            48,
+            57
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    49,
+                    50
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/genetics/ChromosomePair.first:Lorg/apache/commons/math3/genetics/Chromosome;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSecond": {
+        "name": "getSecond",
+        "pos": [
+            57,
+            62
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    58,
+                    59
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/genetics/ChromosomePair.second:Lorg/apache/commons/math3/genetics/Chromosome;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "toString": {
+        "name": "toString",
+        "pos": [
+            62,
+            66
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    64,
+                    65
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "ldc"
+                    ],
+                    [
+                        "1",
+                        "(%s,%s)"
+                    ],
+                    [
+                        "2",
+                        "iconst_2"
+                    ],
+                    [
+                        "3",
+                        "anewarray"
+                    ],
+                    [
+                        "4",
+                        "java/lang/Object"
+                    ],
+                    [
+                        "6",
+                        "dup"
+                    ],
+                    [
+                        "7",
+                        "iconst_0"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/genetics/ChromosomePair.getFirst:()Lorg/apache/commons/math3/genetics/Chromosome;"
+                    ],
+                    [
+                        "12",
+                        "aastore"
+                    ],
+                    [
+                        "13",
+                        "dup"
+                    ],
+                    [
+                        "14",
+                        "iconst_1"
+                    ],
+                    [
+                        "15",
+                        "aload_0"
+                    ],
+                    [
+                        "16",
+                        "invokevirtual"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/genetics/ChromosomePair.getSecond:()Lorg/apache/commons/math3/genetics/Chromosome;"
+                    ],
+                    [
+                        "19",
+                        "aastore"
+                    ],
+                    [
+                        "20",
+                        "invokestatic"
+                    ],
+                    [
+                        "21",
+                        "java/lang/String.format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;"
+                    ],
+                    [
+                        "23",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

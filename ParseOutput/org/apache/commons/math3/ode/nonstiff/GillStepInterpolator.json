@@ -1,0 +1,643 @@
+{
+    "doCopy": {
+        "name": "doCopy",
+        "pos": [
+            94,
+            101
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    96,
+                    97
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/ode/nonstiff/GillStepInterpolator"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/ode/nonstiff/GillStepInterpolator.<init>:(Lorg/apache/commons/math3/ode/nonstiff/GillStepInterpolator;)V"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "computeInterpolatedStateAndDerivatives": {
+        "name": "computeInterpolatedStateAndDerivatives",
+        "pos": [
+            101,
+            151
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    105,
+                    106
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "ldc2_w"
+                    ],
+                    [
+                        "1",
+                        "2.0"
+                    ],
+                    [
+                        "3",
+                        "dload_1"
+                    ],
+                    [
+                        "4",
+                        "dmul"
+                    ],
+                    [
+                        "5",
+                        "dstore"
+                    ],
+                    [
+                        "6",
+                        "#5"
+                    ],
+                    [
+                        "7",
+                        "dload"
+                    ],
+                    [
+                        "8",
+                        "#5"
+                    ],
+                    [
+                        "9",
+                        "dload"
+                    ],
+                    [
+                        "10",
+                        "#5"
+                    ],
+                    [
+                        "11",
+                        "dmul"
+                    ],
+                    [
+                        "12",
+                        "dstore"
+                    ],
+                    [
+                        "13",
+                        "#7"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    106,
+                    107
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "14",
+                        "dload_1"
+                    ],
+                    [
+                        "15",
+                        "dload"
+                    ],
+                    [
+                        "16",
+                        "#5"
+                    ],
+                    [
+                        "17",
+                        "ldc2_w"
+                    ],
+                    [
+                        "18",
+                        "3.0"
+                    ],
+                    [
+                        "20",
+                        "dsub"
+                    ],
+                    [
+                        "21",
+                        "dmul"
+                    ],
+                    [
+                        "22",
+                        "dconst_1"
+                    ],
+                    [
+                        "23",
+                        "dadd"
+                    ],
+                    [
+                        "24",
+                        "dstore"
+                    ],
+                    [
+                        "25",
+                        "#9"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    107,
+                    108
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "26",
+                        "dload"
+                    ],
+                    [
+                        "27",
+                        "#5"
+                    ],
+                    [
+                        "28",
+                        "dconst_1"
+                    ],
+                    [
+                        "29",
+                        "dload_1"
+                    ],
+                    [
+                        "30",
+                        "dsub"
+                    ],
+                    [
+                        "31",
+                        "dmul"
+                    ],
+                    [
+                        "32",
+                        "dstore"
+                    ],
+                    [
+                        "33",
+                        "#11"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    108,
+                    109
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "34",
+                        "dload"
+                    ],
+                    [
+                        "35",
+                        "#11"
+                    ],
+                    [
+                        "36",
+                        "getstatic"
+                    ],
+                    [
+                        "37",
+                        "org/apache/commons/math3/ode/nonstiff/GillStepInterpolator.ONE_MINUS_INV_SQRT_2:D"
+                    ],
+                    [
+                        "39",
+                        "dmul"
+                    ],
+                    [
+                        "40",
+                        "dstore"
+                    ],
+                    [
+                        "41",
+                        "#13"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    109,
+                    110
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "42",
+                        "dload"
+                    ],
+                    [
+                        "43",
+                        "#11"
+                    ],
+                    [
+                        "44",
+                        "getstatic"
+                    ],
+                    [
+                        "45",
+                        "org/apache/commons/math3/ode/nonstiff/GillStepInterpolator.ONE_PLUS_INV_SQRT_2:D"
+                    ],
+                    [
+                        "47",
+                        "dmul"
+                    ],
+                    [
+                        "48",
+                        "dstore"
+                    ],
+                    [
+                        "49",
+                        "#15"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    110,
+                    111
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "50",
+                        "dload_1"
+                    ],
+                    [
+                        "51",
+                        "dload"
+                    ],
+                    [
+                        "52",
+                        "#5"
+                    ],
+                    [
+                        "53",
+                        "dconst_1"
+                    ],
+                    [
+                        "54",
+                        "dsub"
+                    ],
+                    [
+                        "55",
+                        "dmul"
+                    ],
+                    [
+                        "56",
+                        "dstore"
+                    ],
+                    [
+                        "57",
+                        "#17"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    111,
+                    113
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "58",
+                        "aload_0"
+                    ],
+                    [
+                        "59",
+                        "getfield"
+                    ],
+                    [
+                        "60",
+                        "org/apache/commons/math3/ode/nonstiff/GillStepInterpolator.previousState:[D"
+                    ],
+                    [
+                        "62",
+                        "ifnull"
+                    ],
+                    [
+                        "63",
+                        "216"
+                    ],
+                    [
+                        "65",
+                        "dload_1"
+                    ],
+                    [
+                        "66",
+                        "ldc2_w"
+                    ],
+                    [
+                        "67",
+                        "0.5"
+                    ],
+                    [
+                        "69",
+                        "dcmpg"
+                    ],
+                    [
+                        "70",
+                        "ifgt"
+                    ],
+                    [
+                        "71",
+                        "208"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    113,
+                    149
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            113,
+                            130
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    114,
+                                    115
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    115,
+                                    116
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    116,
+                                    117
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    117,
+                                    118
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    118,
+                                    119
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    119,
+                                    120
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    120,
+                                    130
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            120,
+                                            130
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    121,
+                                                    122
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    122,
+                                                    123
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    123,
+                                                    124
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    124,
+                                                    125
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    125,
+                                                    127
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    127,
+                                                    129
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            130,
+                            149
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    131,
+                                    132
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    132,
+                                    133
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    133,
+                                    134
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    134,
+                                    135
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    135,
+                                    136
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    136,
+                                    137
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    137,
+                                    147
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            137,
+                                            147
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    138,
+                                                    139
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    139,
+                                                    140
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    140,
+                                                    141
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    141,
+                                                    142
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    142,
+                                                    144
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    144,
+                                                    146
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

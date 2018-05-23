@@ -1,0 +1,839 @@
+{
+    "getAvailableLocales": {
+        "name": "getAvailableLocales",
+        "pos": [
+            77,
+            88
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    78,
+                    79
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "invokestatic"
+                    ],
+                    [
+                        "1",
+                        "java/text/NumberFormat.getAvailableLocales:()[Ljava/util/Locale;"
+                    ],
+                    [
+                        "3",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "formatBigFraction": {
+        "name": "formatBigFraction",
+        "pos": [
+            88,
+            96
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    89,
+                    90
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "invokestatic"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/fraction/BigFractionFormat.getImproperInstance:()Lorg/apache/commons/math3/fraction/BigFractionFormat;"
+                    ],
+                    [
+                        "3",
+                        "aload_0"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/fraction/BigFractionFormat.format:(Ljava/lang/Object;)Ljava/lang/String;"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getImproperInstance": {
+        "name": "getImproperInstance",
+        "pos": [
+            105,
+            113
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    106,
+                    107
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/fraction/BigFractionFormat"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/fraction/BigFractionFormat.getDefaultNumberFormat:(Ljava/util/Locale;)Ljava/text/NumberFormat;"
+                    ],
+                    [
+                        "8",
+                        "invokespecial"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/fraction/BigFractionFormat.<init>:(Ljava/text/NumberFormat;)V"
+                    ],
+                    [
+                        "11",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getProperInstance": {
+        "name": "getProperInstance",
+        "pos": [
+            122,
+            136
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    123,
+                    124
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/fraction/ProperBigFractionFormat"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/fraction/BigFractionFormat.getDefaultNumberFormat:(Ljava/util/Locale;)Ljava/text/NumberFormat;"
+                    ],
+                    [
+                        "8",
+                        "invokespecial"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/fraction/ProperBigFractionFormat.<init>:(Ljava/text/NumberFormat;)V"
+                    ],
+                    [
+                        "11",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "format": {
+        "name": "format",
+        "pos": [
+            163,
+            189
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    167,
+                    168
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "instanceof"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fraction/BigFraction"
+                    ],
+                    [
+                        "4",
+                        "ifeq"
+                    ],
+                    [
+                        "5",
+                        "18"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    168,
+                    179
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            168,
+                            170
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    169,
+                                    170
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "IfStatement",
+                        "pos": [
+                            170,
+                            179
+                        ],
+                        "children": [
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    170,
+                                    172
+                                ],
+                                "children": [
+                                    {
+                                        "name": "StatementExpression",
+                                        "pos": [
+                                            171,
+                                            172
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    172,
+                                    179
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            172,
+                                            175
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    173,
+                                                    175
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            175,
+                                            179
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ThrowStatement",
+                                                "pos": [
+                                                    176,
+                                                    177
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    179,
+                    180
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "parse": {
+        "name": "parse",
+        "pos": [
+            206,
+            266
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    208,
+                    211
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_2"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/text/ParsePosition.getIndex:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_3"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "aload_2"
+                    ],
+                    [
+                        "7",
+                        "invokestatic"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/fraction/BigFractionFormat.parseAndIgnoreWhitespace:(Ljava/lang/String;Ljava/text/ParsePosition;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    211,
+                    214
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "aload_1"
+                    ],
+                    [
+                        "12",
+                        "aload_2"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/fraction/BigFractionFormat.parseNextBigInteger:(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/math/BigInteger;"
+                    ],
+                    [
+                        "16",
+                        "astore"
+                    ],
+                    [
+                        "17",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    214,
+                    215
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "18",
+                        "aload"
+                    ],
+                    [
+                        "19",
+                        "#4"
+                    ],
+                    [
+                        "20",
+                        "ifnonnull"
+                    ],
+                    [
+                        "21",
+                        "10"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    215,
+                    224
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            215,
+                            224
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    219,
+                                    220
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    220,
+                                    221
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    224,
+                    225
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    225,
+                    226
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "SwitchStatement",
+                "pos": [
+                    226,
+                    244
+                ],
+                "children": [
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            230,
+                            231
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "BreakStatement",
+                        "pos": [
+                            233,
+                            234
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "StatementExpression",
+                        "pos": [
+                            238,
+                            239
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "StatementExpression",
+                        "pos": [
+                            239,
+                            240
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            240,
+                            241
+                        ],
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    244,
+                    247
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    247,
+                    248
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    248,
+                    256
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            248,
+                            256
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    252,
+                                    253
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    253,
+                                    254
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    256,
+                    257
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "parseNextBigInteger": {
+        "name": "parseNextBigInteger",
+        "pos": [
+            266,
+            287
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    269,
+                    270
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_2"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/text/ParsePosition.getIndex:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_3"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "iload_3"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "java/lang/String.charAt:(I)C"
+                    ],
+                    [
+                        "10",
+                        "bipush"
+                    ],
+                    [
+                        "11",
+                        "45"
+                    ],
+                    [
+                        "12",
+                        "if_icmpne"
+                    ],
+                    [
+                        "13",
+                        "9"
+                    ],
+                    [
+                        "15",
+                        "iload_3"
+                    ],
+                    [
+                        "16",
+                        "iconst_1"
+                    ],
+                    [
+                        "17",
+                        "iadd"
+                    ],
+                    [
+                        "18",
+                        "goto"
+                    ],
+                    [
+                        "19",
+                        "4"
+                    ],
+                    [
+                        "21",
+                        "iload_3"
+                    ],
+                    [
+                        "22",
+                        "istore"
+                    ],
+                    [
+                        "23",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    270,
+                    271
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "24",
+                        "iload"
+                    ],
+                    [
+                        "25",
+                        "#4"
+                    ],
+                    [
+                        "26",
+                        "aload_1"
+                    ],
+                    [
+                        "27",
+                        "invokevirtual"
+                    ],
+                    [
+                        "28",
+                        "java/lang/String.length:()I"
+                    ],
+                    [
+                        "30",
+                        "if_icmpge"
+                    ],
+                    [
+                        "31",
+                        "21"
+                    ],
+                    [
+                        "33",
+                        "aload_1"
+                    ],
+                    [
+                        "34",
+                        "iload"
+                    ],
+                    [
+                        "35",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    271,
+                    276
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            272,
+                            276
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    273,
+                                    274
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "TryStatement",
+                "pos": [
+                    276,
+                    285
+                ],
+                "children": [
+                    {
+                        "name": "LocalVariableDeclaration",
+                        "pos": [
+                            277,
+                            278
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "StatementExpression",
+                        "pos": [
+                            278,
+                            279
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            279,
+                            280
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "CatchClause",
+                        "pos": [
+                            280,
+                            285
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    281,
+                                    282
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    282,
+                                    283
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

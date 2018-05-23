@@ -1,0 +1,364 @@
+{
+    "getNetwork": {
+        "name": "getNetwork",
+        "pos": [
+            136,
+            145
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    137,
+                    138
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/oned/NeuronString.network:Lorg/apache/commons/math3/ml/neuralnet/Network;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSize": {
+        "name": "getSize",
+        "pos": [
+            145,
+            157
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    146,
+                    147
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/oned/NeuronString.size:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getFeatures": {
+        "name": "getFeatures",
+        "pos": [
+            157,
+            169
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    158,
+                    163
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            159,
+                            163
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    160,
+                                    161
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    163,
+                    164
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "createLinks": {
+        "name": "createLinks",
+        "pos": [
+            169,
+            187
+        ],
+        "children": [
+            {
+                "name": "ForStatement",
+                "pos": [
+                    170,
+                    173
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            170,
+                            173
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    171,
+                                    172
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    173,
+                    176
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            173,
+                            176
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    174,
+                                    175
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    176,
+                    180
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            176,
+                            180
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    177,
+                                    178
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    178,
+                                    179
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "readObject": {
+        "name": "readObject",
+        "pos": [
+            187,
+            196
+        ],
+        "children": [
+            {
+                "name": "ThrowStatement",
+                "pos": [
+                    188,
+                    189
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/lang/IllegalStateException"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "invokespecial"
+                    ],
+                    [
+                        "5",
+                        "java/lang/IllegalStateException.<init>:()V"
+                    ],
+                    [
+                        "7",
+                        "athrow"
+                    ]
+                ]
+            }
+        ]
+    },
+    "writeReplace": {
+        "name": "writeReplace",
+        "pos": [
+            196,
+            209
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    197,
+                    198
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/oned/NeuronString.size:I"
+                    ],
+                    [
+                        "4",
+                        "anewarray"
+                    ],
+                    [
+                        "5",
+                        "[D"
+                    ],
+                    [
+                        "7",
+                        "astore_1"
+                    ],
+                    [
+                        "8",
+                        "iconst_0"
+                    ],
+                    [
+                        "9",
+                        "istore_2"
+                    ],
+                    [
+                        "10",
+                        "iload_2"
+                    ],
+                    [
+                        "11",
+                        "aload_0"
+                    ],
+                    [
+                        "12",
+                        "getfield"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/ml/neuralnet/oned/NeuronString.size:I"
+                    ],
+                    [
+                        "15",
+                        "if_icmpge"
+                    ],
+                    [
+                        "16",
+                        "17"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    198,
+                    202
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            198,
+                            202
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    199,
+                                    200
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    202,
+                    204
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

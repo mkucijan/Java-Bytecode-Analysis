@@ -1,0 +1,452 @@
+{
+  "lazyMap": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/map/LazyMap",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/collections4/map/LazyMap.<init>:(Ljava/util/Map;Lorg/apache/commons/collections4/Transformer;)V",
+      0,
+      0
+    ],
+    "9": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/collections4/map/AbstractMapDecorator.<init>:(Ljava/util/Map;)V",
+      0,
+      0
+    ],
+    "5": [
+      "aload_2",
+      1,
+      1
+    ],
+    "6": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "7": [
+      "13",
+      1,
+      1
+    ],
+    "9": [
+      "new",
+      1,
+      0
+    ],
+    "10": [
+      "java/lang/NullPointerException",
+      1,
+      0
+    ],
+    "12": [
+      "dup",
+      1,
+      0
+    ],
+    "13": [
+      "ldc",
+      1,
+      0
+    ],
+    "14": [
+      "Factory must not be null",
+      1,
+      0
+    ],
+    "15": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "16": [
+      "java/lang/NullPointerException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "18": [
+      "athrow",
+      1,
+      0
+    ],
+    "19": [
+      "aload_0",
+      0,
+      0
+    ],
+    "20": [
+      "aload_2",
+      0,
+      0
+    ],
+    "21": [
+      "putfield",
+      0,
+      0
+    ],
+    "22": [
+      "org/apache/commons/collections4/map/LazyMap.factory:Lorg/apache/commons/collections4/Transformer;",
+      0,
+      0
+    ],
+    "24": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "writeObject": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "java/io/ObjectOutputStream.defaultWriteObject:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_1",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "getfield",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/collections4/map/LazyMap.map:Ljava/util/Map;",
+      0,
+      0
+    ],
+    "9": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "10": [
+      "java/io/ObjectOutputStream.writeObject:(Ljava/lang/Object;)V",
+      0,
+      0
+    ],
+    "12": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "readObject": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "java/io/ObjectInputStream.defaultReadObject:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "java/io/ObjectInputStream.readObject:()Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "9": [
+      "checkcast",
+      0,
+      0
+    ],
+    "10": [
+      "java/util/Map",
+      0,
+      0
+    ],
+    "12": [
+      "putfield",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/collections4/map/LazyMap.map:Ljava/util/Map;",
+      0,
+      0
+    ],
+    "15": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "get": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/LazyMap.map:Ljava/util/Map;",
+      1,
+      1
+    ],
+    "4": [
+      "aload_1",
+      1,
+      1
+    ],
+    "5": [
+      "invokeinterface",
+      1,
+      1
+    ],
+    "6": [
+      "java/util/Map.org/apache/commons/collections4/Transformer",
+      1,
+      1
+    ],
+    "8": [
+      "0",
+      1,
+      1
+    ],
+    "10": [
+      "ifne",
+      1,
+      1
+    ],
+    "11": [
+      "30",
+      1,
+      1
+    ],
+    "13": [
+      "aload_1",
+      1,
+      0
+    ],
+    "14": [
+      "astore_2",
+      1,
+      0
+    ],
+    "15": [
+      "aload_0",
+      1,
+      0
+    ],
+    "16": [
+      "getfield",
+      1,
+      0
+    ],
+    "17": [
+      "org/apache/commons/collections4/map/LazyMap.factory:Lorg/apache/commons/collections4/Transformer;",
+      1,
+      0
+    ],
+    "19": [
+      "aload_2",
+      1,
+      0
+    ],
+    "20": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "21": [
+      "org/apache/commons/collections4/Transformer.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+      1,
+      0
+    ],
+    "23": [
+      "0",
+      1,
+      0
+    ],
+    "25": [
+      "astore_3",
+      1,
+      0
+    ],
+    "26": [
+      "aload_0",
+      1,
+      0
+    ],
+    "27": [
+      "getfield",
+      1,
+      0
+    ],
+    "28": [
+      "org/apache/commons/collections4/map/LazyMap.map:Ljava/util/Map;",
+      1,
+      0
+    ],
+    "30": [
+      "aload_2",
+      1,
+      0
+    ],
+    "31": [
+      "aload_3",
+      1,
+      0
+    ],
+    "32": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "33": [
+      "java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;",
+      1,
+      0
+    ],
+    "35": [
+      "0",
+      1,
+      0
+    ],
+    "37": [
+      "pop",
+      1,
+      0
+    ],
+    "38": [
+      "aload_3",
+      1,
+      0
+    ],
+    "39": [
+      "areturn",
+      1,
+      0
+    ],
+    "40": [
+      "aload_0",
+      0,
+      0
+    ],
+    "41": [
+      "getfield",
+      0,
+      0
+    ],
+    "42": [
+      "org/apache/commons/collections4/map/LazyMap.map:Ljava/util/Map;",
+      0,
+      0
+    ],
+    "44": [
+      "aload_1",
+      0,
+      0
+    ],
+    "45": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "46": [
+      "java/util/Map.org/apache/commons/collections4/map/AbstractMapDecorator",
+      0,
+      0
+    ],
+    "48": [
+      "0",
+      0,
+      0
+    ],
+    "50": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

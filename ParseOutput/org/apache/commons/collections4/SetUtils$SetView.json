@@ -1,0 +1,228 @@
+{
+    "iterator": {
+        "name": "iterator",
+        "pos": [
+            607,
+            617
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    609,
+                    610
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/SetUtils$SetView.createIterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/IteratorUtils.unmodifiableIterator:(Ljava/util/Iterator;)Ljava/util/Iterator;"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "size": {
+        "name": "size",
+        "pos": [
+            619,
+            630
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    621,
+                    622
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/SetUtils$SetView.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/IteratorUtils.size:(Ljava/util/Iterator;)I"
+                    ],
+                    [
+                        "7",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "copyInto": {
+        "name": "copyInto",
+        "pos": [
+            630,
+            639
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    631,
+                    632
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/CollectionUtils.addAll:(Ljava/util/Collection;Ljava/lang/Iterable;)Z"
+                    ],
+                    [
+                        "5",
+                        "pop"
+                    ],
+                    [
+                        "6",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "toSet": {
+        "name": "toSet",
+        "pos": [
+            639,
+            644
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    640,
+                    641
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/util/HashSet"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/SetUtils$SetView.size:()I"
+                    ],
+                    [
+                        "8",
+                        "invokespecial"
+                    ],
+                    [
+                        "9",
+                        "java/util/HashSet.<init>:(I)V"
+                    ],
+                    [
+                        "11",
+                        "astore_1"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "aload_1"
+                    ],
+                    [
+                        "14",
+                        "invokevirtual"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/collections4/SetUtils$SetView.copyInto:(Ljava/util/Set;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    641,
+                    642
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "17",
+                        "aload_1"
+                    ],
+                    [
+                        "18",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    642,
+                    643
+                ],
+                "children": []
+            }
+        ]
+    }
+}

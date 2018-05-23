@@ -1,0 +1,134 @@
+{
+    "getInstance": {
+        "name": "getInstance",
+        "pos": [
+            43,
+            48
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    44,
+                    45
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "invokestatic"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/geometry/euclidean/oned/Euclidean1D$LazyHolder.access$000:()Lorg/apache/commons/math3/geometry/euclidean/oned/Euclidean1D;"
+                    ],
+                    [
+                        "3",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getDimension": {
+        "name": "getDimension",
+        "pos": [
+            48,
+            60
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    49,
+                    50
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_1"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSubSpace": {
+        "name": "getSubSpace",
+        "pos": [
+            60,
+            68
+        ],
+        "children": [
+            {
+                "name": "ThrowStatement",
+                "pos": [
+                    61,
+                    62
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/geometry/euclidean/oned/Euclidean1D$NoSubSpaceException"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "invokespecial"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/geometry/euclidean/oned/Euclidean1D$NoSubSpaceException.<init>:()V"
+                    ],
+                    [
+                        "7",
+                        "athrow"
+                    ]
+                ]
+            }
+        ]
+    },
+    "readResolve": {
+        "name": "readResolve",
+        "pos": [
+            77,
+            87
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    79,
+                    80
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "invokestatic"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/geometry/euclidean/oned/Euclidean1D$LazyHolder.access$000:()Lorg/apache/commons/math3/geometry/euclidean/oned/Euclidean1D;"
+                    ],
+                    [
+                        "3",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,885 @@
+{
+    "newSampleData": {
+        "name": "newSampleData",
+        "pos": [
+            55,
+            68
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    56,
+                    57
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_2"
+                    ],
+                    [
+                        "2",
+                        "aload_1"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.validateSampleData:([[D[D)V"
+                    ],
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "aload_1"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.newYSampleData:([D)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    57,
+                    58
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "11",
+                        "aload_0"
+                    ],
+                    [
+                        "12",
+                        "aload_2"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.newXSampleData:([[D)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    58,
+                    59
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "aload_2"
+                    ],
+                    [
+                        "18",
+                        "aload_3"
+                    ],
+                    [
+                        "19",
+                        "invokevirtual"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.validateCovarianceData:([[D[[D)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    59,
+                    60
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "22",
+                        "aload_0"
+                    ],
+                    [
+                        "23",
+                        "aload_3"
+                    ],
+                    [
+                        "24",
+                        "invokevirtual"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.newCovarianceData:([[D)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    60,
+                    61
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "27",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "newCovarianceData": {
+        "name": "newCovarianceData",
+        "pos": [
+            68,
+            78
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    69,
+                    70
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "new"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/Array2DRowRealMatrix"
+                    ],
+                    [
+                        "4",
+                        "dup"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokespecial"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/linear/Array2DRowRealMatrix.<init>:([[D)V"
+                    ],
+                    [
+                        "9",
+                        "putfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.Omega:Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "aconst_null"
+                    ],
+                    [
+                        "14",
+                        "putfield"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.OmegaInverse:Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    70,
+                    71
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "17",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getOmegaInverse": {
+        "name": "getOmegaInverse",
+        "pos": [
+            78,
+            92
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    79,
+                    82
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            79,
+                            82
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    80,
+                                    81
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    82,
+                    83
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "calculateBeta": {
+        "name": "calculateBeta",
+        "pos": [
+            92,
+            108
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    94,
+                    95
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.getOmegaInverse:()Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "astore_1"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.getX:()Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "9",
+                        "invokeinterface"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/linear/RealMatrix.multiply:(Lorg/apache/commons/math3/linear/RealMatrix;)Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "12",
+                        "0"
+                    ],
+                    [
+                        "14",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    95,
+                    96
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "15",
+                        "aload_2"
+                    ],
+                    [
+                        "16",
+                        "aload_1"
+                    ],
+                    [
+                        "17",
+                        "invokeinterface"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/linear/RealMatrix.getY:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "20",
+                        "0"
+                    ],
+                    [
+                        "22",
+                        "aload_0"
+                    ],
+                    [
+                        "23",
+                        "invokevirtual"
+                    ],
+                    [
+                        "24",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.getX:()Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "26",
+                        "invokeinterface"
+                    ],
+                    [
+                        "27",
+                        "org/apache/commons/math3/linear/RealMatrix.getY:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "29",
+                        "0"
+                    ],
+                    [
+                        "31",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    96,
+                    97
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "32",
+                        "new"
+                    ],
+                    [
+                        "33",
+                        "org/apache/commons/math3/linear/LUDecomposition"
+                    ],
+                    [
+                        "35",
+                        "dup"
+                    ],
+                    [
+                        "36",
+                        "aload_3"
+                    ],
+                    [
+                        "37",
+                        "invokespecial"
+                    ],
+                    [
+                        "38",
+                        "org/apache/commons/math3/linear/LUDecomposition.<init>:(Lorg/apache/commons/math3/linear/RealMatrix;)V"
+                    ],
+                    [
+                        "40",
+                        "invokevirtual"
+                    ],
+                    [
+                        "41",
+                        "org/apache/commons/math3/linear/LUDecomposition.getSolver:()Lorg/apache/commons/math3/linear/DecompositionSolver;"
+                    ],
+                    [
+                        "43",
+                        "invokeinterface"
+                    ],
+                    [
+                        "44",
+                        "org/apache/commons/math3/linear/DecompositionSolver.getOmegaInverse:()Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "46",
+                        "0"
+                    ],
+                    [
+                        "48",
+                        "astore"
+                    ],
+                    [
+                        "49",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    97,
+                    98
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "50",
+                        "aload"
+                    ],
+                    [
+                        "51",
+                        "#4"
+                    ],
+                    [
+                        "52",
+                        "aload_2"
+                    ],
+                    [
+                        "53",
+                        "invokeinterface"
+                    ],
+                    [
+                        "54",
+                        "org/apache/commons/math3/linear/RealMatrix.getY:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "56",
+                        "0"
+                    ],
+                    [
+                        "58",
+                        "aload_1"
+                    ],
+                    [
+                        "59",
+                        "invokeinterface"
+                    ],
+                    [
+                        "60",
+                        "org/apache/commons/math3/linear/RealMatrix.getY:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "62",
+                        "0"
+                    ],
+                    [
+                        "64",
+                        "aload_0"
+                    ],
+                    [
+                        "65",
+                        "invokevirtual"
+                    ],
+                    [
+                        "66",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.getY:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "68",
+                        "invokeinterface"
+                    ],
+                    [
+                        "69",
+                        "org/apache/commons/math3/linear/RealMatrix.calculateResiduals:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "71",
+                        "0"
+                    ],
+                    [
+                        "73",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    98,
+                    99
+                ],
+                "children": []
+            }
+        ]
+    },
+    "calculateBetaVariance": {
+        "name": "calculateBetaVariance",
+        "pos": [
+            108,
+            127
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    110,
+                    111
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.getOmegaInverse:()Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "astore_1"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.getX:()Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "9",
+                        "invokeinterface"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/linear/RealMatrix.multiply:(Lorg/apache/commons/math3/linear/RealMatrix;)Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "12",
+                        "0"
+                    ],
+                    [
+                        "14",
+                        "aload_1"
+                    ],
+                    [
+                        "15",
+                        "invokeinterface"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/linear/RealMatrix.getY:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "18",
+                        "0"
+                    ],
+                    [
+                        "20",
+                        "aload_0"
+                    ],
+                    [
+                        "21",
+                        "invokevirtual"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.getX:()Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "24",
+                        "invokeinterface"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/math3/linear/RealMatrix.getY:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "27",
+                        "0"
+                    ],
+                    [
+                        "29",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    111,
+                    112
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "30",
+                        "new"
+                    ],
+                    [
+                        "31",
+                        "org/apache/commons/math3/linear/LUDecomposition"
+                    ],
+                    [
+                        "33",
+                        "dup"
+                    ],
+                    [
+                        "34",
+                        "aload_2"
+                    ],
+                    [
+                        "35",
+                        "invokespecial"
+                    ],
+                    [
+                        "36",
+                        "org/apache/commons/math3/linear/LUDecomposition.<init>:(Lorg/apache/commons/math3/linear/RealMatrix;)V"
+                    ],
+                    [
+                        "38",
+                        "invokevirtual"
+                    ],
+                    [
+                        "39",
+                        "org/apache/commons/math3/linear/LUDecomposition.getSolver:()Lorg/apache/commons/math3/linear/DecompositionSolver;"
+                    ],
+                    [
+                        "41",
+                        "invokeinterface"
+                    ],
+                    [
+                        "42",
+                        "org/apache/commons/math3/linear/DecompositionSolver.getOmegaInverse:()Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "44",
+                        "0"
+                    ],
+                    [
+                        "46",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    112,
+                    113
+                ],
+                "children": []
+            }
+        ]
+    },
+    "calculateErrorVariance": {
+        "name": "calculateErrorVariance",
+        "pos": [
+            127,
+            135
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    129,
+                    130
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.calculateResiduals:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "4",
+                        "astore_1"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.getOmegaInverse:()Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "10",
+                        "aload_1"
+                    ],
+                    [
+                        "11",
+                        "invokeinterface"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/linear/RealMatrix.calculateResiduals:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "14",
+                        "0"
+                    ],
+                    [
+                        "16",
+                        "invokevirtual"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/linear/RealVector.dotProduct:(Lorg/apache/commons/math3/linear/RealVector;)D"
+                    ],
+                    [
+                        "19",
+                        "dstore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    130,
+                    131
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "20",
+                        "dload_2"
+                    ],
+                    [
+                        "21",
+                        "aload_0"
+                    ],
+                    [
+                        "22",
+                        "invokevirtual"
+                    ],
+                    [
+                        "23",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.getX:()Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "25",
+                        "invokeinterface"
+                    ],
+                    [
+                        "26",
+                        "org/apache/commons/math3/linear/RealMatrix.getColumnDimension:()I"
+                    ],
+                    [
+                        "28",
+                        "0"
+                    ],
+                    [
+                        "30",
+                        "aload_0"
+                    ],
+                    [
+                        "31",
+                        "invokevirtual"
+                    ],
+                    [
+                        "32",
+                        "org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression.getX:()Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "34",
+                        "invokeinterface"
+                    ],
+                    [
+                        "35",
+                        "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/stat/regression/GLSMultipleLinearRegression"
+                    ],
+                    [
+                        "37",
+                        "0"
+                    ],
+                    [
+                        "39",
+                        "isub"
+                    ],
+                    [
+                        "40",
+                        "i2d"
+                    ],
+                    [
+                        "41",
+                        "ddiv"
+                    ],
+                    [
+                        "42",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    131,
+                    133
+                ],
+                "children": []
+            }
+        ]
+    }
+}

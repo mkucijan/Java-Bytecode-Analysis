@@ -1,0 +1,365 @@
+{
+    "merge": {
+        "name": "merge",
+        "pos": [
+            304,
+            322
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    307,
+                    315
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            307,
+                            315
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    309,
+                                    311
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    311,
+                                    312
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    312,
+                                    313
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    315,
+                    317
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    317,
+                    318
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    318,
+                    319
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "fixNode": {
+        "name": "fixNode",
+        "pos": [
+            322,
+            331
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    324,
+                    325
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "getstatic"
+                    ],
+                    [
+                        "2",
+                        "java/lang/Boolean.TRUE:Ljava/lang/Boolean;"
+                    ],
+                    [
+                        "4",
+                        "getstatic"
+                    ],
+                    [
+                        "5",
+                        "java/lang/Boolean.FALSE:Ljava/lang/Boolean;"
+                    ],
+                    [
+                        "7",
+                        "aconst_null"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/geometry/partitioning/BSPTree.pruneAroundConvexCell:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lorg/apache/commons/math3/geometry/partitioning/BSPTree;"
+                    ],
+                    [
+                        "11",
+                        "astore_2"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "getfield"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/geometry/partitioning/RegionFactory$DifferenceMerger.region1:Lorg/apache/commons/math3/geometry/partitioning/Region;"
+                    ],
+                    [
+                        "16",
+                        "aload_2"
+                    ],
+                    [
+                        "17",
+                        "invokeinterface"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/geometry/partitioning/Region.getBarycenter:()Lorg/apache/commons/math3/geometry/Point;"
+                    ],
+                    [
+                        "20",
+                        "0"
+                    ],
+                    [
+                        "22",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    325,
+                    326
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "23",
+                        "aload_3"
+                    ],
+                    [
+                        "24",
+                        "invokeinterface"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/math3/geometry/partitioning/Region.org/apache/commons/math3/geometry/partitioning/BSPTree"
+                    ],
+                    [
+                        "27",
+                        "0"
+                    ],
+                    [
+                        "29",
+                        "astore"
+                    ],
+                    [
+                        "30",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    326,
+                    327
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "31",
+                        "new"
+                    ],
+                    [
+                        "32",
+                        "org/apache/commons/math3/geometry/partitioning/BSPTree"
+                    ],
+                    [
+                        "34",
+                        "dup"
+                    ],
+                    [
+                        "35",
+                        "aload_0"
+                    ],
+                    [
+                        "36",
+                        "getfield"
+                    ],
+                    [
+                        "37",
+                        "org/apache/commons/math3/geometry/partitioning/RegionFactory$DifferenceMerger.region1:Lorg/apache/commons/math3/geometry/partitioning/Region;"
+                    ],
+                    [
+                        "39",
+                        "aload"
+                    ],
+                    [
+                        "40",
+                        "#4"
+                    ],
+                    [
+                        "41",
+                        "invokeinterface"
+                    ],
+                    [
+                        "42",
+                        "org/apache/commons/math3/geometry/partitioning/Region.org/apache/commons/math3/geometry/partitioning/Region$Location"
+                    ],
+                    [
+                        "44",
+                        "0"
+                    ],
+                    [
+                        "46",
+                        "getstatic"
+                    ],
+                    [
+                        "47",
+                        "org/apache/commons/math3/geometry/partitioning/Region$Location.INSIDE:Lorg/apache/commons/math3/geometry/partitioning/Region$Location;"
+                    ],
+                    [
+                        "49",
+                        "if_acmpne"
+                    ],
+                    [
+                        "50",
+                        "24"
+                    ],
+                    [
+                        "52",
+                        "aload_0"
+                    ],
+                    [
+                        "53",
+                        "getfield"
+                    ],
+                    [
+                        "54",
+                        "org/apache/commons/math3/geometry/partitioning/RegionFactory$DifferenceMerger.region2:Lorg/apache/commons/math3/geometry/partitioning/Region;"
+                    ],
+                    [
+                        "56",
+                        "aload"
+                    ],
+                    [
+                        "57",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    327,
+                    329
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "58",
+                        "invokeinterface"
+                    ],
+                    [
+                        "59",
+                        "org/apache/commons/math3/geometry/partitioning/Region.org/apache/commons/math3/geometry/partitioning/Region$Location"
+                    ],
+                    [
+                        "61",
+                        "0"
+                    ],
+                    [
+                        "63",
+                        "getstatic"
+                    ],
+                    [
+                        "64",
+                        "org/apache/commons/math3/geometry/partitioning/Region$Location.OUTSIDE:Lorg/apache/commons/math3/geometry/partitioning/Region$Location;"
+                    ],
+                    [
+                        "66",
+                        "if_acmpne"
+                    ],
+                    [
+                        "67",
+                        "7"
+                    ],
+                    [
+                        "69",
+                        "iconst_1"
+                    ],
+                    [
+                        "70",
+                        "goto"
+                    ],
+                    [
+                        "71",
+                        "4"
+                    ],
+                    [
+                        "73",
+                        "iconst_0"
+                    ],
+                    [
+                        "74",
+                        "invokestatic"
+                    ],
+                    [
+                        "75",
+                        "java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;"
+                    ],
+                    [
+                        "77",
+                        "invokespecial"
+                    ],
+                    [
+                        "78",
+                        "org/apache/commons/math3/geometry/partitioning/BSPTree.<init>:(Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "80",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

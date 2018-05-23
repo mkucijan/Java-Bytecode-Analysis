@@ -1,0 +1,930 @@
+{
+    "getMean": {
+        "name": "getMean",
+        "pos": [
+            172,
+            177
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    173,
+                    174
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/ExponentialDistribution.mean:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "density": {
+        "name": "density",
+        "pos": [
+            177,
+            183
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    178,
+                    179
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "dload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/distribution/ExponentialDistribution.logDensity:(D)D"
+                    ],
+                    [
+                        "5",
+                        "dstore_3"
+                    ],
+                    [
+                        "6",
+                        "dload_3"
+                    ],
+                    [
+                        "7",
+                        "ldc2_w"
+                    ],
+                    [
+                        "8",
+                        "-inf"
+                    ],
+                    [
+                        "10",
+                        "dcmpl"
+                    ],
+                    [
+                        "11",
+                        "ifne"
+                    ],
+                    [
+                        "12",
+                        "7"
+                    ],
+                    [
+                        "14",
+                        "dconst_0"
+                    ],
+                    [
+                        "15",
+                        "goto"
+                    ],
+                    [
+                        "16",
+                        "7"
+                    ],
+                    [
+                        "18",
+                        "dload_3"
+                    ],
+                    [
+                        "19",
+                        "invokestatic"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/util/FastMath.exp:(D)D"
+                    ],
+                    [
+                        "22",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    179,
+                    180
+                ],
+                "children": []
+            }
+        ]
+    },
+    "logDensity": {
+        "name": "logDensity",
+        "pos": [
+            183,
+            201
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    185,
+                    188
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            185,
+                            188
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    186,
+                                    187
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    188,
+                    189
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "cumulativeProbability": {
+        "name": "cumulativeProbability",
+        "pos": [
+            201,
+            217
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    202,
+                    203
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dload_1"
+                    ],
+                    [
+                        "1",
+                        "dconst_0"
+                    ],
+                    [
+                        "2",
+                        "dcmpg"
+                    ],
+                    [
+                        "3",
+                        "ifgt"
+                    ],
+                    [
+                        "4",
+                        "8"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    203,
+                    208
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            203,
+                            205
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    204,
+                                    205
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            205,
+                            208
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    206,
+                                    207
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    208,
+                    209
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "inverseCumulativeProbability": {
+        "name": "inverseCumulativeProbability",
+        "pos": [
+            217,
+            243
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    219,
+                    221
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dload_1"
+                    ],
+                    [
+                        "1",
+                        "dconst_0"
+                    ],
+                    [
+                        "2",
+                        "dcmpg"
+                    ],
+                    [
+                        "3",
+                        "iflt"
+                    ],
+                    [
+                        "4",
+                        "9"
+                    ],
+                    [
+                        "6",
+                        "dload_1"
+                    ],
+                    [
+                        "7",
+                        "dconst_1"
+                    ],
+                    [
+                        "8",
+                        "dcmpl"
+                    ],
+                    [
+                        "9",
+                        "ifle"
+                    ],
+                    [
+                        "10",
+                        "23"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    221,
+                    229
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            221,
+                            223
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    222,
+                                    223
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "IfStatement",
+                        "pos": [
+                            223,
+                            229
+                        ],
+                        "children": [
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    223,
+                                    225
+                                ],
+                                "children": [
+                                    {
+                                        "name": "StatementExpression",
+                                        "pos": [
+                                            224,
+                                            225
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    225,
+                                    229
+                                ],
+                                "children": [
+                                    {
+                                        "name": "StatementExpression",
+                                        "pos": [
+                                            226,
+                                            227
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    229,
+                    230
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "sample": {
+        "name": "sample",
+        "pos": [
+            243,
+            284
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    246,
+                    247
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dconst_0"
+                    ],
+                    [
+                        "1",
+                        "dstore_1"
+                    ],
+                    [
+                        "2",
+                        "aload_0"
+                    ],
+                    [
+                        "3",
+                        "getfield"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/distribution/ExponentialDistribution.random:Lorg/apache/commons/math3/random/RandomGenerator;"
+                    ],
+                    [
+                        "6",
+                        "invokeinterface"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/random/RandomGenerator.EXPONENTIAL_SA_QI:[D"
+                    ],
+                    [
+                        "9",
+                        "0"
+                    ],
+                    [
+                        "11",
+                        "dstore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    247,
+                    250
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "dload_3"
+                    ],
+                    [
+                        "13",
+                        "ldc2_w"
+                    ],
+                    [
+                        "14",
+                        "0.5"
+                    ],
+                    [
+                        "16",
+                        "dcmpg"
+                    ],
+                    [
+                        "17",
+                        "ifge"
+                    ],
+                    [
+                        "18",
+                        "20"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    250,
+                    256
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            250,
+                            256
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    251,
+                                    252
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    252,
+                                    253
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    256,
+                    259
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    259,
+                    264
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            259,
+                            264
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    260,
+                                    261
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    264,
+                    265
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    265,
+                    266
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    266,
+                    269
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "DoStatement",
+                "pos": [
+                    269,
+                    280
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            269,
+                            278
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    270,
+                                    271
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    271,
+                                    273
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    273,
+                                    278
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            273,
+                                            278
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    274,
+                                                    275
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    280,
+                    281
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getSolverAbsoluteAccuracy": {
+        "name": "getSolverAbsoluteAccuracy",
+        "pos": [
+            284,
+            294
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    286,
+                    287
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/ExponentialDistribution.solverAbsoluteAccuracy:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNumericalMean": {
+        "name": "getNumericalMean",
+        "pos": [
+            294,
+            303
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    295,
+                    296
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/ExponentialDistribution.getMean:()D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNumericalVariance": {
+        "name": "getNumericalVariance",
+        "pos": [
+            303,
+            315
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    304,
+                    305
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/ExponentialDistribution.getMean:()D"
+                    ],
+                    [
+                        "4",
+                        "dstore_1"
+                    ],
+                    [
+                        "5",
+                        "dload_1"
+                    ],
+                    [
+                        "6",
+                        "dload_1"
+                    ],
+                    [
+                        "7",
+                        "dmul"
+                    ],
+                    [
+                        "8",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    305,
+                    306
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getSupportLowerBound": {
+        "name": "getSupportLowerBound",
+        "pos": [
+            315,
+            327
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    316,
+                    317
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dconst_0"
+                    ],
+                    [
+                        "1",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSupportUpperBound": {
+        "name": "getSupportUpperBound",
+        "pos": [
+            327,
+            332
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    328,
+                    329
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "ldc2_w"
+                    ],
+                    [
+                        "1",
+                        "inf"
+                    ],
+                    [
+                        "3",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportLowerBoundInclusive": {
+        "name": "isSupportLowerBoundInclusive",
+        "pos": [
+            332,
+            337
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    333,
+                    334
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_1"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportUpperBoundInclusive": {
+        "name": "isSupportUpperBoundInclusive",
+        "pos": [
+            337,
+            348
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    338,
+                    339
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_0"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportConnected": {
+        "name": "isSupportConnected",
+        "pos": [
+            348,
+            351
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    349,
+                    350
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_1"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

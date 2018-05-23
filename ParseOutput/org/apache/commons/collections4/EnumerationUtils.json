@@ -1,0 +1,263 @@
+{
+    "get": {
+        "name": "get",
+        "pos": [
+            54,
+            79
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    55,
+                    56
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_1"
+                    ],
+                    [
+                        "1",
+                        "istore_2"
+                    ],
+                    [
+                        "2",
+                        "iload_2"
+                    ],
+                    [
+                        "3",
+                        "invokestatic"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/collections4/CollectionUtils.checkIndexBounds:(I)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    56,
+                    57
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "invokeinterface"
+                    ],
+                    [
+                        "8",
+                        "java/util/Enumeration.nextElement:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "10",
+                        "0"
+                    ],
+                    [
+                        "12",
+                        "ifeq"
+                    ],
+                    [
+                        "13",
+                        "28"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    57,
+                    65
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            57,
+                            65
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    58,
+                                    59
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    59,
+                                    64
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            59,
+                                            61
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    60,
+                                                    61
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            61,
+                                            64
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    62,
+                                                    63
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ThrowStatement",
+                "pos": [
+                    65,
+                    66
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "toList": {
+        "name": "toList",
+        "pos": [
+            90,
+            97
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    91,
+                    92
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/util/ArrayList"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "java/util/StringTokenizer.countTokens:()I"
+                    ],
+                    [
+                        "8",
+                        "invokespecial"
+                    ],
+                    [
+                        "9",
+                        "java/util/ArrayList.<init>:(I)V"
+                    ],
+                    [
+                        "11",
+                        "astore_1"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "java/util/StringTokenizer.hasMoreTokens:()Z"
+                    ],
+                    [
+                        "16",
+                        "ifeq"
+                    ],
+                    [
+                        "17",
+                        "17"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    92,
+                    95
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            92,
+                            95
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    93,
+                                    94
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    95,
+                    96
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

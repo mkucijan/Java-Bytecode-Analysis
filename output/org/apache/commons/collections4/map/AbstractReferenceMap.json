@@ -1,0 +1,2899 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "iload_3",
+      0,
+      0
+    ],
+    "2": [
+      "fload",
+      0,
+      0
+    ],
+    "3": [
+      "#4",
+      0,
+      0
+    ],
+    "4": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/collections4/map/AbstractHashedMap.<init>:(IF)V",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "aload_1",
+      0,
+      0
+    ],
+    "9": [
+      "putfield",
+      0,
+      0
+    ],
+    "10": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.keyType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;",
+      0,
+      0
+    ],
+    "12": [
+      "aload_0",
+      0,
+      0
+    ],
+    "13": [
+      "aload_2",
+      0,
+      0
+    ],
+    "14": [
+      "putfield",
+      0,
+      0
+    ],
+    "15": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.valueType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;",
+      0,
+      0
+    ],
+    "17": [
+      "aload_0",
+      0,
+      0
+    ],
+    "18": [
+      "iload",
+      0,
+      0
+    ],
+    "19": [
+      "#5",
+      0,
+      0
+    ],
+    "20": [
+      "putfield",
+      0,
+      0
+    ],
+    "21": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.purgeValues:Z",
+      0,
+      0
+    ],
+    "23": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "init": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "new",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/ref/ReferenceQueue",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "java/lang/ref/ReferenceQueue.<init>:()V",
+      0,
+      0
+    ],
+    "8": [
+      "putfield",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.queue:Ljava/lang/ref/ReferenceQueue;",
+      0,
+      0
+    ],
+    "11": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "size": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.purgeBeforeRead:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/AbstractHashedMap.size:()I",
+      0,
+      0
+    ],
+    "8": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "isEmpty": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.purgeBeforeRead:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/AbstractHashedMap.isEmpty:()Z",
+      0,
+      0
+    ],
+    "8": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "containsKey": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.purgeBeforeRead:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.getEntry:(Ljava/lang/Object;)Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;",
+      0,
+      0
+    ],
+    "9": [
+      "astore_2",
+      0,
+      0
+    ],
+    "10": [
+      "aload_2",
+      1,
+      1
+    ],
+    "11": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "12": [
+      "5",
+      1,
+      1
+    ],
+    "14": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "15": [
+      "ireturn",
+      1,
+      0
+    ],
+    "16": [
+      "aload_2",
+      0,
+      0
+    ],
+    "17": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "18": [
+      "java/util/Map$Entry.containsValue:(Ljava/lang/Object;)Z",
+      0,
+      0
+    ],
+    "20": [
+      "0",
+      0,
+      0
+    ],
+    "22": [
+      "ifnull",
+      0,
+      0
+    ],
+    "23": [
+      "7",
+      0,
+      0
+    ],
+    "25": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "26": [
+      "goto",
+      0,
+      0
+    ],
+    "27": [
+      "4",
+      0,
+      0
+    ],
+    "29": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "30": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "containsValue": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.purgeBeforeRead:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_1",
+      1,
+      1
+    ],
+    "5": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "6": [
+      "5",
+      1,
+      1
+    ],
+    "8": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "9": [
+      "ireturn",
+      1,
+      0
+    ],
+    "10": [
+      "aload_0",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/collections4/map/AbstractHashedMap.containsValue:(Ljava/lang/Object;)Z",
+      0,
+      0
+    ],
+    "15": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "get": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.purgeBeforeRead:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.getEntry:(Ljava/lang/Object;)Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;",
+      0,
+      0
+    ],
+    "9": [
+      "astore_2",
+      0,
+      0
+    ],
+    "10": [
+      "aload_2",
+      1,
+      1
+    ],
+    "11": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "12": [
+      "5",
+      1,
+      1
+    ],
+    "14": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "15": [
+      "areturn",
+      1,
+      0
+    ],
+    "16": [
+      "aload_2",
+      0,
+      0
+    ],
+    "17": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "18": [
+      "java/util/Map$Entry.containsValue:(Ljava/lang/Object;)Z",
+      0,
+      0
+    ],
+    "20": [
+      "0",
+      0,
+      0
+    ],
+    "22": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "put": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "13",
+      1,
+      1
+    ],
+    "4": [
+      "new",
+      1,
+      0
+    ],
+    "5": [
+      "java/lang/NullPointerException",
+      1,
+      0
+    ],
+    "7": [
+      "dup",
+      1,
+      0
+    ],
+    "8": [
+      "ldc",
+      1,
+      0
+    ],
+    "9": [
+      "null keys not allowed",
+      1,
+      0
+    ],
+    "10": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "11": [
+      "java/lang/NullPointerException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "13": [
+      "athrow",
+      1,
+      0
+    ],
+    "14": [
+      "aload_2",
+      1,
+      1
+    ],
+    "15": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "16": [
+      "13",
+      1,
+      1
+    ],
+    "18": [
+      "new",
+      1,
+      0
+    ],
+    "19": [
+      "java/lang/NullPointerException",
+      1,
+      0
+    ],
+    "21": [
+      "dup",
+      1,
+      0
+    ],
+    "22": [
+      "ldc",
+      1,
+      0
+    ],
+    "23": [
+      "null values not allowed",
+      1,
+      0
+    ],
+    "24": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "25": [
+      "java/lang/NullPointerException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "27": [
+      "athrow",
+      1,
+      0
+    ],
+    "28": [
+      "aload_0",
+      0,
+      0
+    ],
+    "29": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "30": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.purgeBeforeWrite:()V",
+      0,
+      0
+    ],
+    "32": [
+      "aload_0",
+      0,
+      0
+    ],
+    "33": [
+      "aload_1",
+      0,
+      0
+    ],
+    "34": [
+      "aload_2",
+      0,
+      0
+    ],
+    "35": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "36": [
+      "org/apache/commons/collections4/map/AbstractHashedMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "38": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "remove": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "5",
+      1,
+      1
+    ],
+    "4": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "5": [
+      "areturn",
+      1,
+      0
+    ],
+    "6": [
+      "aload_0",
+      0,
+      0
+    ],
+    "7": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.purgeBeforeWrite:()V",
+      0,
+      0
+    ],
+    "10": [
+      "aload_0",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/collections4/map/AbstractHashedMap.remove:(Ljava/lang/Object;)Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "15": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "clear": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractHashedMap.clear:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      1,
+      3
+    ],
+    "5": [
+      "getfield",
+      1,
+      3
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.queue:Ljava/lang/ref/ReferenceQueue;",
+      1,
+      3
+    ],
+    "8": [
+      "invokevirtual",
+      1,
+      3
+    ],
+    "9": [
+      "java/lang/ref/ReferenceQueue.poll:()Ljava/lang/ref/Reference;",
+      1,
+      3
+    ],
+    "11": [
+      "ifnull",
+      1,
+      3
+    ],
+    "12": [
+      "6",
+      1,
+      3
+    ],
+    "14": [
+      "goto",
+      1,
+      3
+    ],
+    "15": [
+      "-10",
+      1,
+      3
+    ],
+    "17": [
+      "return",
+      1,
+      0
+    ]
+  },
+  "mapIterator": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceMapIterator",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceMapIterator.<init>:(Lorg/apache/commons/collections4/map/AbstractReferenceMap;)V",
+      0,
+      0
+    ],
+    "8": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "entrySet": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.entrySet:Lorg/apache/commons/collections4/map/AbstractHashedMap$EntrySet;",
+      1,
+      1
+    ],
+    "4": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "5": [
+      "15",
+      1,
+      1
+    ],
+    "7": [
+      "aload_0",
+      1,
+      0
+    ],
+    "8": [
+      "new",
+      1,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceEntrySet",
+      1,
+      0
+    ],
+    "11": [
+      "dup",
+      1,
+      0
+    ],
+    "12": [
+      "aload_0",
+      1,
+      0
+    ],
+    "13": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "14": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceEntrySet.<init>:(Lorg/apache/commons/collections4/map/AbstractHashedMap;)V",
+      1,
+      0
+    ],
+    "16": [
+      "putfield",
+      1,
+      0
+    ],
+    "17": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.entrySet:Lorg/apache/commons/collections4/map/AbstractHashedMap$EntrySet;",
+      1,
+      0
+    ],
+    "19": [
+      "aload_0",
+      0,
+      0
+    ],
+    "20": [
+      "getfield",
+      0,
+      0
+    ],
+    "21": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.entrySet:Lorg/apache/commons/collections4/map/AbstractHashedMap$EntrySet;",
+      0,
+      0
+    ],
+    "23": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "keySet": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.keySet:Lorg/apache/commons/collections4/map/AbstractHashedMap$KeySet;",
+      1,
+      1
+    ],
+    "4": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "5": [
+      "15",
+      1,
+      1
+    ],
+    "7": [
+      "aload_0",
+      1,
+      0
+    ],
+    "8": [
+      "new",
+      1,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceKeySet",
+      1,
+      0
+    ],
+    "11": [
+      "dup",
+      1,
+      0
+    ],
+    "12": [
+      "aload_0",
+      1,
+      0
+    ],
+    "13": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "14": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceKeySet.<init>:(Lorg/apache/commons/collections4/map/AbstractHashedMap;)V",
+      1,
+      0
+    ],
+    "16": [
+      "putfield",
+      1,
+      0
+    ],
+    "17": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.keySet:Lorg/apache/commons/collections4/map/AbstractHashedMap$KeySet;",
+      1,
+      0
+    ],
+    "19": [
+      "aload_0",
+      0,
+      0
+    ],
+    "20": [
+      "getfield",
+      0,
+      0
+    ],
+    "21": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.keySet:Lorg/apache/commons/collections4/map/AbstractHashedMap$KeySet;",
+      0,
+      0
+    ],
+    "23": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "values": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.values:Lorg/apache/commons/collections4/map/AbstractHashedMap$Values;",
+      1,
+      1
+    ],
+    "4": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "5": [
+      "15",
+      1,
+      1
+    ],
+    "7": [
+      "aload_0",
+      1,
+      0
+    ],
+    "8": [
+      "new",
+      1,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceValues",
+      1,
+      0
+    ],
+    "11": [
+      "dup",
+      1,
+      0
+    ],
+    "12": [
+      "aload_0",
+      1,
+      0
+    ],
+    "13": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "14": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceValues.<init>:(Lorg/apache/commons/collections4/map/AbstractHashedMap;)V",
+      1,
+      0
+    ],
+    "16": [
+      "putfield",
+      1,
+      0
+    ],
+    "17": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.values:Lorg/apache/commons/collections4/map/AbstractHashedMap$Values;",
+      1,
+      0
+    ],
+    "19": [
+      "aload_0",
+      0,
+      0
+    ],
+    "20": [
+      "getfield",
+      0,
+      0
+    ],
+    "21": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.values:Lorg/apache/commons/collections4/map/AbstractHashedMap$Values;",
+      0,
+      0
+    ],
+    "23": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "purgeBeforeRead": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.purge:()V",
+      0,
+      0
+    ],
+    "4": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "purgeBeforeWrite": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.purge:()V",
+      0,
+      0
+    ],
+    "4": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "purge": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.hashCode:()I",
+      0,
+      0
+    ],
+    "4": [
+      "istore_2",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "iload_2",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "getfield",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.data:[Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;",
+      0,
+      0
+    ],
+    "11": [
+      "arraylength",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.hashIndex:(II)I",
+      0,
+      0
+    ],
+    "15": [
+      "istore_3",
+      0,
+      0
+    ],
+    "16": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "17": [
+      "astore",
+      0,
+      0
+    ],
+    "18": [
+      "#4",
+      0,
+      0
+    ],
+    "19": [
+      "aload_0",
+      0,
+      0
+    ],
+    "20": [
+      "getfield",
+      0,
+      0
+    ],
+    "21": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.data:[Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;",
+      0,
+      0
+    ],
+    "23": [
+      "iload_3",
+      0,
+      0
+    ],
+    "24": [
+      "aaload",
+      0,
+      0
+    ],
+    "25": [
+      "astore",
+      0,
+      0
+    ],
+    "26": [
+      "#5",
+      0,
+      0
+    ],
+    "27": [
+      "aload",
+      1,
+      3
+    ],
+    "28": [
+      "#5",
+      1,
+      3
+    ],
+    "29": [
+      "ifnull",
+      1,
+      3
+    ],
+    "30": [
+      "69",
+      1,
+      3
+    ],
+    "32": [
+      "aload",
+      2,
+      1
+    ],
+    "33": [
+      "#5",
+      2,
+      1
+    ],
+    "34": [
+      "checkcast",
+      2,
+      1
+    ],
+    "35": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceEntry",
+      2,
+      1
+    ],
+    "37": [
+      "aload_1",
+      2,
+      1
+    ],
+    "38": [
+      "invokevirtual",
+      2,
+      1
+    ],
+    "39": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceEntry.purge:(Ljava/lang/ref/Reference;)Z",
+      2,
+      1
+    ],
+    "41": [
+      "ifeq",
+      2,
+      1
+    ],
+    "42": [
+      "43",
+      2,
+      1
+    ],
+    "44": [
+      "aload",
+      3,
+      1
+    ],
+    "45": [
+      "#4",
+      3,
+      1
+    ],
+    "46": [
+      "ifnonnull",
+      3,
+      1
+    ],
+    "47": [
+      "17",
+      3,
+      1
+    ],
+    "49": [
+      "aload_0",
+      3,
+      0
+    ],
+    "50": [
+      "getfield",
+      3,
+      0
+    ],
+    "51": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.data:[Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;",
+      3,
+      0
+    ],
+    "53": [
+      "iload_3",
+      3,
+      0
+    ],
+    "54": [
+      "aload",
+      3,
+      0
+    ],
+    "55": [
+      "#5",
+      3,
+      0
+    ],
+    "56": [
+      "getfield",
+      3,
+      0
+    ],
+    "57": [
+      "org/apache/commons/collections4/map/AbstractHashedMap$HashEntry.next:Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;",
+      3,
+      0
+    ],
+    "59": [
+      "aastore",
+      3,
+      0
+    ],
+    "60": [
+      "goto",
+      3,
+      0
+    ],
+    "61": [
+      "13",
+      3,
+      0
+    ],
+    "63": [
+      "aload",
+      4,
+      0
+    ],
+    "64": [
+      "#4",
+      4,
+      0
+    ],
+    "65": [
+      "aload",
+      4,
+      0
+    ],
+    "66": [
+      "#5",
+      4,
+      0
+    ],
+    "67": [
+      "getfield",
+      4,
+      0
+    ],
+    "68": [
+      "org/apache/commons/collections4/map/AbstractHashedMap$HashEntry.next:Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;",
+      4,
+      0
+    ],
+    "70": [
+      "putfield",
+      4,
+      0
+    ],
+    "71": [
+      "org/apache/commons/collections4/map/AbstractHashedMap$HashEntry.next:Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;",
+      4,
+      0
+    ],
+    "73": [
+      "aload_0",
+      2,
+      0
+    ],
+    "74": [
+      "dup",
+      2,
+      0
+    ],
+    "75": [
+      "getfield",
+      2,
+      0
+    ],
+    "76": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.size:I",
+      2,
+      0
+    ],
+    "78": [
+      "iconst_1",
+      2,
+      0
+    ],
+    "79": [
+      "isub",
+      2,
+      0
+    ],
+    "80": [
+      "putfield",
+      2,
+      0
+    ],
+    "81": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.size:I",
+      2,
+      0
+    ],
+    "83": [
+      "return",
+      2,
+      0
+    ],
+    "84": [
+      "aload",
+      1,
+      0
+    ],
+    "85": [
+      "#5",
+      1,
+      0
+    ],
+    "86": [
+      "astore",
+      1,
+      0
+    ],
+    "87": [
+      "#4",
+      1,
+      0
+    ],
+    "88": [
+      "aload",
+      1,
+      0
+    ],
+    "89": [
+      "#5",
+      1,
+      0
+    ],
+    "90": [
+      "getfield",
+      1,
+      0
+    ],
+    "91": [
+      "org/apache/commons/collections4/map/AbstractHashedMap$HashEntry.next:Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;",
+      1,
+      0
+    ],
+    "93": [
+      "astore",
+      1,
+      0
+    ],
+    "94": [
+      "#5",
+      1,
+      0
+    ],
+    "95": [
+      "goto",
+      1,
+      3
+    ],
+    "96": [
+      "-68",
+      1,
+      3
+    ],
+    "98": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getEntry": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "5",
+      1,
+      1
+    ],
+    "4": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "5": [
+      "areturn",
+      1,
+      0
+    ],
+    "6": [
+      "aload_0",
+      0,
+      0
+    ],
+    "7": [
+      "aload_1",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/map/AbstractHashedMap.getEntry:(Ljava/lang/Object;)Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;",
+      0,
+      0
+    ],
+    "11": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "hashEntry": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "ifnonnull",
+      0,
+      0
+    ],
+    "2": [
+      "7",
+      0,
+      0
+    ],
+    "4": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "5": [
+      "goto",
+      0,
+      0
+    ],
+    "6": [
+      "7",
+      0,
+      0
+    ],
+    "8": [
+      "aload_1",
+      0,
+      0
+    ],
+    "9": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "10": [
+      "java/lang/Object.hashCode:()I",
+      0,
+      0
+    ],
+    "12": [
+      "aload_2",
+      0,
+      0
+    ],
+    "13": [
+      "ifnonnull",
+      0,
+      0
+    ],
+    "14": [
+      "7",
+      0,
+      0
+    ],
+    "16": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "17": [
+      "goto",
+      0,
+      0
+    ],
+    "18": [
+      "7",
+      0,
+      0
+    ],
+    "20": [
+      "aload_2",
+      0,
+      0
+    ],
+    "21": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "22": [
+      "java/lang/Object.hashCode:()I",
+      0,
+      0
+    ],
+    "24": [
+      "ixor",
+      0,
+      0
+    ],
+    "25": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "isEqualKey": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.keyType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;",
+      0,
+      0
+    ],
+    "4": [
+      "getstatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength.HARD:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;",
+      0,
+      0
+    ],
+    "7": [
+      "if_acmpne",
+      0,
+      0
+    ],
+    "8": [
+      "7",
+      0,
+      0
+    ],
+    "10": [
+      "aload_2",
+      0,
+      0
+    ],
+    "11": [
+      "goto",
+      0,
+      0
+    ],
+    "12": [
+      "10",
+      0,
+      0
+    ],
+    "14": [
+      "aload_2",
+      0,
+      0
+    ],
+    "15": [
+      "checkcast",
+      0,
+      0
+    ],
+    "16": [
+      "java/lang/ref/Reference",
+      0,
+      0
+    ],
+    "18": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "19": [
+      "java/lang/ref/Reference.get:()Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "21": [
+      "astore_2",
+      0,
+      0
+    ],
+    "22": [
+      "aload_1",
+      0,
+      0
+    ],
+    "23": [
+      "aload_2",
+      0,
+      0
+    ],
+    "24": [
+      "if_acmpeq",
+      0,
+      0
+    ],
+    "25": [
+      "11",
+      0,
+      0
+    ],
+    "27": [
+      "aload_1",
+      0,
+      0
+    ],
+    "28": [
+      "aload_2",
+      0,
+      0
+    ],
+    "29": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "30": [
+      "java/lang/Object.equals:(Ljava/lang/Object;)Z",
+      0,
+      0
+    ],
+    "32": [
+      "ifeq",
+      0,
+      0
+    ],
+    "33": [
+      "7",
+      0,
+      0
+    ],
+    "35": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "36": [
+      "goto",
+      0,
+      0
+    ],
+    "37": [
+      "4",
+      0,
+      0
+    ],
+    "39": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "40": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "createEntry": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "iload_2",
+      0,
+      0
+    ],
+    "3": [
+      "aload_3",
+      0,
+      0
+    ],
+    "4": [
+      "aload",
+      0,
+      0
+    ],
+    "5": [
+      "#4",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.createEntry:(Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;ILjava/lang/Object;Ljava/lang/Object;)Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceEntry;",
+      0,
+      0
+    ],
+    "9": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "createEntrySetIterator": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceEntrySetIterator",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceEntrySetIterator.<init>:(Lorg/apache/commons/collections4/map/AbstractReferenceMap;)V",
+      0,
+      0
+    ],
+    "8": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "createKeySetIterator": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceKeySetIterator",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceKeySetIterator.<init>:(Lorg/apache/commons/collections4/map/AbstractReferenceMap;)V",
+      0,
+      0
+    ],
+    "8": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "createValuesIterator": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceValuesIterator",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceValuesIterator.<init>:(Lorg/apache/commons/collections4/map/AbstractReferenceMap;)V",
+      0,
+      0
+    ],
+    "8": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "doWriteObject": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "aload_0",
+      0,
+      0
+    ],
+    "2": [
+      "getfield",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.keyType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;",
+      0,
+      0
+    ],
+    "5": [
+      "getfield",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength.value:I",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "java/io/ObjectOutputStream.writeInt:(I)V",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "aload_0",
+      0,
+      0
+    ],
+    "13": [
+      "getfield",
+      0,
+      0
+    ],
+    "14": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.valueType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;",
+      0,
+      0
+    ],
+    "16": [
+      "getfield",
+      0,
+      0
+    ],
+    "17": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength.value:I",
+      0,
+      0
+    ],
+    "19": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "20": [
+      "java/io/ObjectOutputStream.writeInt:(I)V",
+      0,
+      0
+    ],
+    "22": [
+      "aload_1",
+      0,
+      0
+    ],
+    "23": [
+      "aload_0",
+      0,
+      0
+    ],
+    "24": [
+      "getfield",
+      0,
+      0
+    ],
+    "25": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.purgeValues:Z",
+      0,
+      0
+    ],
+    "27": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "28": [
+      "java/io/ObjectOutputStream.writeBoolean:(Z)V",
+      0,
+      0
+    ],
+    "30": [
+      "aload_1",
+      0,
+      0
+    ],
+    "31": [
+      "aload_0",
+      0,
+      0
+    ],
+    "32": [
+      "getfield",
+      0,
+      0
+    ],
+    "33": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.loadFactor:F",
+      0,
+      0
+    ],
+    "35": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "36": [
+      "java/io/ObjectOutputStream.writeFloat:(F)V",
+      0,
+      0
+    ],
+    "38": [
+      "aload_1",
+      0,
+      0
+    ],
+    "39": [
+      "aload_0",
+      0,
+      0
+    ],
+    "40": [
+      "getfield",
+      0,
+      0
+    ],
+    "41": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.data:[Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;",
+      0,
+      0
+    ],
+    "43": [
+      "arraylength",
+      0,
+      0
+    ],
+    "44": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "45": [
+      "java/io/ObjectOutputStream.writeInt:(I)V",
+      0,
+      0
+    ],
+    "47": [
+      "aload_0",
+      1,
+      4
+    ],
+    "48": [
+      "invokevirtual",
+      1,
+      4
+    ],
+    "49": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.mapIterator:()Lorg/apache/commons/collections4/MapIterator;",
+      1,
+      4
+    ],
+    "51": [
+      "astore_2",
+      1,
+      4
+    ],
+    "52": [
+      "aload_2",
+      1,
+      4
+    ],
+    "53": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "54": [
+      "org/apache/commons/collections4/MapIterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "56": [
+      "0",
+      1,
+      4
+    ],
+    "58": [
+      "ifeq",
+      1,
+      4
+    ],
+    "59": [
+      "26",
+      1,
+      4
+    ],
+    "61": [
+      "aload_1",
+      1,
+      0
+    ],
+    "62": [
+      "aload_2",
+      1,
+      0
+    ],
+    "63": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "64": [
+      "org/apache/commons/collections4/MapIterator.writeObject:(Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "66": [
+      "0",
+      1,
+      0
+    ],
+    "68": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "69": [
+      "java/io/ObjectOutputStream.writeObject:(Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "71": [
+      "aload_1",
+      1,
+      0
+    ],
+    "72": [
+      "aload_2",
+      1,
+      0
+    ],
+    "73": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "74": [
+      "org/apache/commons/collections4/MapIterator.containsValue:(Ljava/lang/Object;)Z",
+      1,
+      0
+    ],
+    "76": [
+      "0",
+      1,
+      0
+    ],
+    "78": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "79": [
+      "java/io/ObjectOutputStream.writeObject:(Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "81": [
+      "goto",
+      1,
+      4
+    ],
+    "82": [
+      "-29",
+      1,
+      4
+    ],
+    "84": [
+      "aload_1",
+      0,
+      0
+    ],
+    "85": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "86": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "87": [
+      "java/io/ObjectOutputStream.writeObject:(Ljava/lang/Object;)V",
+      0,
+      0
+    ],
+    "89": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "doReadObject": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "java/io/ObjectInputStream.readInt:()I",
+      0,
+      0
+    ],
+    "5": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength.resolve:(I)Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;",
+      0,
+      0
+    ],
+    "8": [
+      "putfield",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.keyType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;",
+      0,
+      0
+    ],
+    "11": [
+      "aload_0",
+      0,
+      0
+    ],
+    "12": [
+      "aload_1",
+      0,
+      0
+    ],
+    "13": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "14": [
+      "java/io/ObjectInputStream.readInt:()I",
+      0,
+      0
+    ],
+    "16": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "17": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength.resolve:(I)Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;",
+      0,
+      0
+    ],
+    "19": [
+      "putfield",
+      0,
+      0
+    ],
+    "20": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.valueType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;",
+      0,
+      0
+    ],
+    "22": [
+      "aload_0",
+      0,
+      0
+    ],
+    "23": [
+      "aload_1",
+      0,
+      0
+    ],
+    "24": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "25": [
+      "java/io/ObjectInputStream.readBoolean:()Z",
+      0,
+      0
+    ],
+    "27": [
+      "putfield",
+      0,
+      0
+    ],
+    "28": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.purgeValues:Z",
+      0,
+      0
+    ],
+    "30": [
+      "aload_0",
+      0,
+      0
+    ],
+    "31": [
+      "aload_1",
+      0,
+      0
+    ],
+    "32": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "33": [
+      "java/io/ObjectInputStream.readFloat:()F",
+      0,
+      0
+    ],
+    "35": [
+      "putfield",
+      0,
+      0
+    ],
+    "36": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.loadFactor:F",
+      0,
+      0
+    ],
+    "38": [
+      "aload_1",
+      0,
+      0
+    ],
+    "39": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "40": [
+      "java/io/ObjectInputStream.readInt:()I",
+      0,
+      0
+    ],
+    "42": [
+      "istore_2",
+      0,
+      0
+    ],
+    "43": [
+      "aload_0",
+      0,
+      0
+    ],
+    "44": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "45": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.init:()V",
+      0,
+      0
+    ],
+    "47": [
+      "aload_0",
+      0,
+      0
+    ],
+    "48": [
+      "iload_2",
+      0,
+      0
+    ],
+    "49": [
+      "anewarray",
+      0,
+      0
+    ],
+    "50": [
+      "org/apache/commons/collections4/map/AbstractHashedMap$HashEntry",
+      0,
+      0
+    ],
+    "52": [
+      "putfield",
+      0,
+      0
+    ],
+    "53": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.data:[Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;",
+      0,
+      0
+    ],
+    "55": [
+      "aload_1",
+      1,
+      0
+    ],
+    "56": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "57": [
+      "java/io/ObjectInputStream.readObject:()Ljava/lang/Object;",
+      1,
+      0
+    ],
+    "59": [
+      "astore_3",
+      1,
+      0
+    ],
+    "60": [
+      "aload_3",
+      2,
+      1
+    ],
+    "61": [
+      "ifnonnull",
+      2,
+      1
+    ],
+    "62": [
+      "6",
+      2,
+      1
+    ],
+    "64": [
+      "goto",
+      2,
+      0
+    ],
+    "65": [
+      "20",
+      2,
+      0
+    ],
+    "67": [
+      "aload_1",
+      1,
+      0
+    ],
+    "68": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "69": [
+      "java/io/ObjectInputStream.readObject:()Ljava/lang/Object;",
+      1,
+      0
+    ],
+    "71": [
+      "astore",
+      1,
+      0
+    ],
+    "72": [
+      "#4",
+      1,
+      0
+    ],
+    "73": [
+      "aload_0",
+      1,
+      0
+    ],
+    "74": [
+      "aload_3",
+      1,
+      0
+    ],
+    "75": [
+      "aload",
+      1,
+      0
+    ],
+    "76": [
+      "#4",
+      1,
+      0
+    ],
+    "77": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "78": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+      1,
+      0
+    ],
+    "80": [
+      "pop",
+      1,
+      0
+    ],
+    "81": [
+      "goto",
+      0,
+      0
+    ],
+    "82": [
+      "-26",
+      0,
+      0
+    ],
+    "84": [
+      "aload_0",
+      0,
+      0
+    ],
+    "85": [
+      "aload_0",
+      0,
+      0
+    ],
+    "86": [
+      "aload_0",
+      0,
+      0
+    ],
+    "87": [
+      "getfield",
+      0,
+      0
+    ],
+    "88": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.data:[Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;",
+      0,
+      0
+    ],
+    "90": [
+      "arraylength",
+      0,
+      0
+    ],
+    "91": [
+      "aload_0",
+      0,
+      0
+    ],
+    "92": [
+      "getfield",
+      0,
+      0
+    ],
+    "93": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.loadFactor:F",
+      0,
+      0
+    ],
+    "95": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "96": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.calculateThreshold:(IF)I",
+      0,
+      0
+    ],
+    "98": [
+      "putfield",
+      0,
+      0
+    ],
+    "99": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.threshold:I",
+      0,
+      0
+    ],
+    "101": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "isKeyType": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.keyType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;",
+      0,
+      0
+    ],
+    "4": [
+      "aload_1",
+      0,
+      0
+    ],
+    "5": [
+      "if_acmpne",
+      0,
+      0
+    ],
+    "6": [
+      "7",
+      0,
+      0
+    ],
+    "8": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "9": [
+      "goto",
+      0,
+      0
+    ],
+    "10": [
+      "4",
+      0,
+      0
+    ],
+    "12": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "13": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "access$000": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.keyType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "access$100": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.valueType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "access$200": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.queue:Ljava/lang/ref/ReferenceQueue;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "access$300": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/AbstractReferenceMap.purgeValues:Z",
+      0,
+      0
+    ],
+    "4": [
+      "ireturn",
+      0,
+      0
+    ]
+  }
+}

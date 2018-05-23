@@ -1,0 +1,167 @@
+{
+    "clone": {
+        "name": "clone",
+        "pos": [
+            94,
+            102
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    96,
+                    97
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/AbstractHashedMap.clone:()Lorg/apache/commons/collections4/map/AbstractHashedMap;"
+                    ],
+                    [
+                        "4",
+                        "checkcast"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/map/HashedMap"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "writeObject": {
+        "name": "writeObject",
+        "pos": [
+            102,
+            110
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    103,
+                    104
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectOutputStream.defaultWriteObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/map/HashedMap.doWriteObject:(Ljava/io/ObjectOutputStream;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    104,
+                    105
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "readObject": {
+        "name": "readObject",
+        "pos": [
+            110,
+            115
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    111,
+                    112
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectInputStream.defaultReadObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/map/HashedMap.doReadObject:(Ljava/io/ObjectInputStream;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    112,
+                    113
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

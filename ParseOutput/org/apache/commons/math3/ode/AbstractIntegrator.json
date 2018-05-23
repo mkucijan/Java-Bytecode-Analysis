@@ -1,0 +1,2260 @@
+{
+    "getName": {
+        "name": "getName",
+        "pos": [
+            100,
+            105
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    101,
+                    102
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.name:Ljava/lang/String;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "addStepHandler": {
+        "name": "addStepHandler",
+        "pos": [
+            105,
+            110
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    106,
+                    107
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.stepHandlers:Ljava/util/Collection;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/Collection.java/util/Collections"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "pop"
+                    ],
+                    [
+                        "11",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getStepHandlers": {
+        "name": "getStepHandlers",
+        "pos": [
+            110,
+            115
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    111,
+                    112
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.stepHandlers:Ljava/util/Collection;"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "java/util/Collections.unmodifiableCollection:(Ljava/util/Collection;)Ljava/util/Collection;"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "clearStepHandlers": {
+        "name": "clearStepHandlers",
+        "pos": [
+            115,
+            120
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    116,
+                    117
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.stepHandlers:Ljava/util/Collection;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Collection.org/apache/commons/math3/analysis/solvers/BracketingNthOrderBrentSolver"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "addEventHandler": {
+        "name": "addEventHandler",
+        "pos": [
+            130,
+            140
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    135,
+                    137
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.eventsStates:Ljava/util/Collection;"
+                    ],
+                    [
+                        "4",
+                        "new"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/ode/events/EventState"
+                    ],
+                    [
+                        "7",
+                        "dup"
+                    ],
+                    [
+                        "8",
+                        "aload_1"
+                    ],
+                    [
+                        "9",
+                        "dload_2"
+                    ],
+                    [
+                        "10",
+                        "dload"
+                    ],
+                    [
+                        "11",
+                        "#4"
+                    ],
+                    [
+                        "12",
+                        "iload"
+                    ],
+                    [
+                        "13",
+                        "#6"
+                    ],
+                    [
+                        "14",
+                        "aload"
+                    ],
+                    [
+                        "15",
+                        "#7"
+                    ],
+                    [
+                        "16",
+                        "invokespecial"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/ode/events/EventState.<init>:(Lorg/apache/commons/math3/ode/events/EventHandler;DDILorg/apache/commons/math3/analysis/solvers/UnivariateSolver;)V"
+                    ],
+                    [
+                        "19",
+                        "invokeinterface"
+                    ],
+                    [
+                        "20",
+                        "java/util/Collection.java/util/Collections"
+                    ],
+                    [
+                        "22",
+                        "0"
+                    ],
+                    [
+                        "24",
+                        "pop"
+                    ],
+                    [
+                        "25",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getEventHandlers": {
+        "name": "getEventHandlers",
+        "pos": [
+            140,
+            149
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    141,
+                    142
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/util/ArrayList"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.eventsStates:Ljava/util/Collection;"
+                    ],
+                    [
+                        "8",
+                        "invokeinterface"
+                    ],
+                    [
+                        "9",
+                        "java/util/Collection.<init>:(I)V"
+                    ],
+                    [
+                        "11",
+                        "0"
+                    ],
+                    [
+                        "13",
+                        "invokespecial"
+                    ],
+                    [
+                        "14",
+                        "java/util/ArrayList.<init>:(I)V"
+                    ],
+                    [
+                        "16",
+                        "astore_1"
+                    ],
+                    [
+                        "17",
+                        "aload_0"
+                    ],
+                    [
+                        "18",
+                        "getfield"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.eventsStates:Ljava/util/Collection;"
+                    ],
+                    [
+                        "21",
+                        "invokeinterface"
+                    ],
+                    [
+                        "22",
+                        "java/util/Collection.java/util/Iterator"
+                    ],
+                    [
+                        "24",
+                        "0"
+                    ],
+                    [
+                        "26",
+                        "astore_2"
+                    ],
+                    [
+                        "27",
+                        "aload_2"
+                    ],
+                    [
+                        "28",
+                        "invokeinterface"
+                    ],
+                    [
+                        "29",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "31",
+                        "0"
+                    ],
+                    [
+                        "33",
+                        "ifeq"
+                    ],
+                    [
+                        "34",
+                        "27"
+                    ],
+                    [
+                        "36",
+                        "aload_2"
+                    ],
+                    [
+                        "37",
+                        "invokeinterface"
+                    ],
+                    [
+                        "38",
+                        "java/util/Iterator.getEventHandler:()Lorg/apache/commons/math3/ode/events/EventHandler;"
+                    ],
+                    [
+                        "40",
+                        "0"
+                    ],
+                    [
+                        "42",
+                        "checkcast"
+                    ],
+                    [
+                        "43",
+                        "org/apache/commons/math3/ode/events/EventState"
+                    ],
+                    [
+                        "45",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    142,
+                    145
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            142,
+                            145
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    143,
+                                    144
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    145,
+                    146
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "clearEventHandlers": {
+        "name": "clearEventHandlers",
+        "pos": [
+            149,
+            154
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    150,
+                    151
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.eventsStates:Ljava/util/Collection;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Collection.org/apache/commons/math3/analysis/solvers/BracketingNthOrderBrentSolver"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getCurrentStepStart": {
+        "name": "getCurrentStepStart",
+        "pos": [
+            154,
+            159
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    155,
+                    156
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.stepStart:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getCurrentSignedStepsize": {
+        "name": "getCurrentSignedStepsize",
+        "pos": [
+            159,
+            164
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    160,
+                    161
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.stepSize:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setMaxEvaluations": {
+        "name": "setMaxEvaluations",
+        "pos": [
+            164,
+            169
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    165,
+                    166
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.evaluations:Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "5",
+                        "iload_1"
+                    ],
+                    [
+                        "6",
+                        "ifge"
+                    ],
+                    [
+                        "7",
+                        "8"
+                    ],
+                    [
+                        "9",
+                        "ldc"
+                    ],
+                    [
+                        "10",
+                        "2147483647"
+                    ],
+                    [
+                        "11",
+                        "goto"
+                    ],
+                    [
+                        "12",
+                        "4"
+                    ],
+                    [
+                        "14",
+                        "iload_1"
+                    ],
+                    [
+                        "15",
+                        "invokevirtual"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/util/IntegerSequence$Incrementor.withMaximalCount:(I)Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "18",
+                        "putfield"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.evaluations:Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "21",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getMaxEvaluations": {
+        "name": "getMaxEvaluations",
+        "pos": [
+            169,
+            174
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    170,
+                    171
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.evaluations:Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/util/IntegerSequence$Incrementor.getMaximalCount:()I"
+                    ],
+                    [
+                        "7",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getEvaluations": {
+        "name": "getEvaluations",
+        "pos": [
+            174,
+            183
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    175,
+                    176
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.evaluations:Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/util/IntegerSequence$Incrementor.getCount:()I"
+                    ],
+                    [
+                        "7",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "initIntegration": {
+        "name": "initIntegration",
+        "pos": [
+            183,
+            203
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    185,
+                    187
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.evaluations:Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "5",
+                        "iconst_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/util/IntegerSequence$Incrementor.withStart:(I)Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "9",
+                        "putfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.evaluations:Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "getfield"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.eventsStates:Ljava/util/Collection;"
+                    ],
+                    [
+                        "16",
+                        "invokeinterface"
+                    ],
+                    [
+                        "17",
+                        "java/util/Collection.java/util/Iterator"
+                    ],
+                    [
+                        "19",
+                        "0"
+                    ],
+                    [
+                        "21",
+                        "astore"
+                    ],
+                    [
+                        "22",
+                        "#6"
+                    ],
+                    [
+                        "23",
+                        "aload"
+                    ],
+                    [
+                        "24",
+                        "#6"
+                    ],
+                    [
+                        "25",
+                        "invokeinterface"
+                    ],
+                    [
+                        "26",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "28",
+                        "0"
+                    ],
+                    [
+                        "30",
+                        "ifeq"
+                    ],
+                    [
+                        "31",
+                        "41"
+                    ],
+                    [
+                        "33",
+                        "aload"
+                    ],
+                    [
+                        "34",
+                        "#6"
+                    ],
+                    [
+                        "35",
+                        "invokeinterface"
+                    ],
+                    [
+                        "36",
+                        "java/util/Iterator.getEventHandler:()Lorg/apache/commons/math3/ode/events/EventHandler;"
+                    ],
+                    [
+                        "38",
+                        "0"
+                    ],
+                    [
+                        "40",
+                        "checkcast"
+                    ],
+                    [
+                        "41",
+                        "org/apache/commons/math3/ode/events/EventState"
+                    ],
+                    [
+                        "43",
+                        "astore"
+                    ],
+                    [
+                        "44",
+                        "#7"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    187,
+                    192
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            187,
+                            192
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    188,
+                                    189
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    189,
+                                    190
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    192,
+                    196
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            192,
+                            196
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    193,
+                                    194
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    196,
+                    198
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "setEquations": {
+        "name": "setEquations",
+        "pos": [
+            203,
+            211
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    204,
+                    205
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.expandable:Lorg/apache/commons/math3/ode/ExpandableStatefulODE;"
+                    ],
+                    [
+                        "5",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getExpandable": {
+        "name": "getExpandable",
+        "pos": [
+            211,
+            220
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    212,
+                    213
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.expandable:Lorg/apache/commons/math3/ode/ExpandableStatefulODE;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getEvaluationsCounter": {
+        "name": "getEvaluationsCounter",
+        "pos": [
+            220,
+            229
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    222,
+                    223
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.evaluations:Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/util/Incrementor.wrap:(Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;)Lorg/apache/commons/math3/util/Incrementor;"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getCounter": {
+        "name": "getCounter",
+        "pos": [
+            229,
+            234
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    230,
+                    231
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.evaluations:Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "integrate": {
+        "name": "integrate",
+        "pos": [
+            234,
+            279
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    239,
+                    242
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            239,
+                            242
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    240,
+                                    241
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    242,
+                    247
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            242,
+                            247
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    243,
+                                    244
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    247,
+                    248
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    248,
+                    249
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    249,
+                    252
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    252,
+                    255
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    255,
+                    256
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    256,
+                    258
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "computeDerivatives": {
+        "name": "computeDerivatives",
+        "pos": [
+            293,
+            306
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    295,
+                    296
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.evaluations:Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/util/IntegerSequence$Incrementor.increment:()V"
+                    ],
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "getfield"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.expandable:Lorg/apache/commons/math3/ode/ExpandableStatefulODE;"
+                    ],
+                    [
+                        "11",
+                        "dload_1"
+                    ],
+                    [
+                        "12",
+                        "aload_3"
+                    ],
+                    [
+                        "13",
+                        "aload"
+                    ],
+                    [
+                        "14",
+                        "#4"
+                    ],
+                    [
+                        "15",
+                        "invokevirtual"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/ode/ExpandableStatefulODE.computeDerivatives:(D[D[D)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    296,
+                    297
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "18",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setStateInitialized": {
+        "name": "setStateInitialized",
+        "pos": [
+            306,
+            323
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    307,
+                    308
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.statesInitialized:Z"
+                    ],
+                    [
+                        "5",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "acceptStep": {
+        "name": "acceptStep",
+        "pos": [
+            323,
+            454
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    327,
+                    328
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/sampling/AbstractStepInterpolator.getGlobalPreviousTime:()D"
+                    ],
+                    [
+                        "4",
+                        "dstore"
+                    ],
+                    [
+                        "5",
+                        "#6"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/ode/sampling/AbstractStepInterpolator.getGlobalCurrentTime:()D"
+                    ],
+                    [
+                        "10",
+                        "dstore"
+                    ],
+                    [
+                        "11",
+                        "#8"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    328,
+                    331
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "getfield"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/ode/AbstractIntegrator.statesInitialized:Z"
+                    ],
+                    [
+                        "16",
+                        "ifne"
+                    ],
+                    [
+                        "17",
+                        "50"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    331,
+                    339
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            331,
+                            339
+                        ],
+                        "children": [
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    332,
+                                    335
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            332,
+                                            335
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    333,
+                                                    334
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    335,
+                                    336
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    339,
+                    340
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    340,
+                    349
+                ],
+                "children": [
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            344,
+                            345
+                        ],
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    349,
+                    356
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            349,
+                            356
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    350,
+                                    354
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            350,
+                                            354
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    352,
+                                                    353
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    356,
+                    423
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            356,
+                            423
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    359,
+                                    360
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    360,
+                                    361
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    361,
+                                    364
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    364,
+                                    365
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    365,
+                                    366
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    366,
+                                    369
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    369,
+                                    370
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    370,
+                                    371
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    371,
+                                    373
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    373,
+                                    374
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    374,
+                                    380
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            374,
+                                            380
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    375,
+                                                    377
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    380,
+                                    386
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            380,
+                                            386
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    381,
+                                                    382
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    382,
+                                                    383
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    386,
+                                    390
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            386,
+                                            390
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    387,
+                                                    388
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    390,
+                                    396
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            390,
+                                            396
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    392,
+                                                    393
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    393,
+                                                    394
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    396,
+                                    397
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    397,
+                                    398
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    398,
+                                    399
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    399,
+                                    410
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            399,
+                                            410
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    402,
+                                                    403
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    403,
+                                                    404
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    404,
+                                                    405
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    405,
+                                                    406
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    406,
+                                                    407
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    410,
+                                    411
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    411,
+                                    412
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    412,
+                                    415
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    415,
+                                    420
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            415,
+                                            420
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    417,
+                                                    418
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    423,
+                    424
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    424,
+                    425
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    425,
+                    427
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    427,
+                    428
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    428,
+                    432
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            428,
+                            432
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    429,
+                                    431
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    432,
+                    436
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            432,
+                            436
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    433,
+                                    434
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    434,
+                                    435
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    436,
+                    439
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    439,
+                    443
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            439,
+                            443
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    440,
+                                    441
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    443,
+                    445
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "sanityChecks": {
+        "name": "sanityChecks",
+        "pos": [
+            454,
+            467
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    457,
+                    459
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "ldc2_w"
+                    ],
+                    [
+                        "1",
+                        "1000.0"
+                    ],
+                    [
+                        "3",
+                        "aload_1"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/ode/ExpandableStatefulODE.getTime:()D"
+                    ],
+                    [
+                        "7",
+                        "invokestatic"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/util/FastMath.abs:(D)D"
+                    ],
+                    [
+                        "10",
+                        "dload_2"
+                    ],
+                    [
+                        "11",
+                        "invokestatic"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/util/FastMath.abs:(D)D"
+                    ],
+                    [
+                        "14",
+                        "invokestatic"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/util/FastMath.max:(DD)D"
+                    ],
+                    [
+                        "17",
+                        "invokestatic"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/util/FastMath.ulp:(D)D"
+                    ],
+                    [
+                        "20",
+                        "dmul"
+                    ],
+                    [
+                        "21",
+                        "dstore"
+                    ],
+                    [
+                        "22",
+                        "#4"
+                    ],
+                    [
+                        "23",
+                        "aload_1"
+                    ],
+                    [
+                        "24",
+                        "invokevirtual"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/math3/ode/ExpandableStatefulODE.getTime:()D"
+                    ],
+                    [
+                        "27",
+                        "dload_2"
+                    ],
+                    [
+                        "28",
+                        "dsub"
+                    ],
+                    [
+                        "29",
+                        "invokestatic"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/math3/util/FastMath.abs:(D)D"
+                    ],
+                    [
+                        "32",
+                        "dstore"
+                    ],
+                    [
+                        "33",
+                        "#6"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    459,
+                    460
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "34",
+                        "dload"
+                    ],
+                    [
+                        "35",
+                        "#6"
+                    ],
+                    [
+                        "36",
+                        "dload"
+                    ],
+                    [
+                        "37",
+                        "#4"
+                    ],
+                    [
+                        "38",
+                        "dcmpg"
+                    ],
+                    [
+                        "39",
+                        "ifgt"
+                    ],
+                    [
+                        "40",
+                        "25"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    460,
+                    465
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            460,
+                            465
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    461,
+                                    463
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

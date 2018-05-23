@@ -1,0 +1,537 @@
+{
+    "increment": {
+        "name": "increment",
+        "pos": [
+            83,
+            92
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    85,
+                    86
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "dup"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/stat/descriptive/summary/SumOfLogs.value:D"
+                    ],
+                    [
+                        "5",
+                        "dload_1"
+                    ],
+                    [
+                        "6",
+                        "invokestatic"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/util/FastMath.log:(D)D"
+                    ],
+                    [
+                        "9",
+                        "dadd"
+                    ],
+                    [
+                        "10",
+                        "putfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/stat/descriptive/summary/SumOfLogs.value:D"
+                    ],
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "dup"
+                    ],
+                    [
+                        "15",
+                        "getfield"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/stat/descriptive/summary/SumOfLogs.n:I"
+                    ],
+                    [
+                        "18",
+                        "iconst_1"
+                    ],
+                    [
+                        "19",
+                        "iadd"
+                    ],
+                    [
+                        "20",
+                        "putfield"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/math3/stat/descriptive/summary/SumOfLogs.n:I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    86,
+                    87
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "23",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getResult": {
+        "name": "getResult",
+        "pos": [
+            92,
+            100
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    94,
+                    95
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/summary/SumOfLogs.value:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getN": {
+        "name": "getN",
+        "pos": [
+            100,
+            107
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    101,
+                    102
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/summary/SumOfLogs.n:I"
+                    ],
+                    [
+                        "4",
+                        "i2l"
+                    ],
+                    [
+                        "5",
+                        "lreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "clear": {
+        "name": "clear",
+        "pos": [
+            107,
+            130
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    109,
+                    110
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "dconst_0"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/stat/descriptive/summary/SumOfLogs.value:D"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "iconst_0"
+                    ],
+                    [
+                        "7",
+                        "putfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/stat/descriptive/summary/SumOfLogs.n:I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    110,
+                    111
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "evaluate": {
+        "name": "evaluate",
+        "pos": [
+            130,
+            146
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    133,
+                    134
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "ldc2_w"
+                    ],
+                    [
+                        "1",
+                        "nan"
+                    ],
+                    [
+                        "3",
+                        "dstore"
+                    ],
+                    [
+                        "4",
+                        "#4"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "iload_2"
+                    ],
+                    [
+                        "8",
+                        "iload_3"
+                    ],
+                    [
+                        "9",
+                        "iconst_1"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/stat/descriptive/summary/SumOfLogs.test:([DIIZ)Z"
+                    ],
+                    [
+                        "13",
+                        "ifeq"
+                    ],
+                    [
+                        "14",
+                        "35"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    134,
+                    140
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            134,
+                            140
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    135,
+                                    136
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    136,
+                                    139
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            136,
+                                            139
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    137,
+                                                    138
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    140,
+                    141
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "copy": {
+        "name": "copy",
+        "pos": [
+            162,
+            170
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    164,
+                    165
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    165,
+                    166
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "8",
+                        "aload_1"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/stat/descriptive/summary/SumOfLogs.getDataRef:()[D"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/stat/descriptive/summary/SumOfLogs.setData:([D)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    166,
+                    167
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "aload_1"
+                    ],
+                    [
+                        "17",
+                        "aload_0"
+                    ],
+                    [
+                        "18",
+                        "getfield"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/stat/descriptive/summary/SumOfLogs.n:I"
+                    ],
+                    [
+                        "21",
+                        "putfield"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/stat/descriptive/summary/SumOfLogs.n:I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    167,
+                    168
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "24",
+                        "aload_1"
+                    ],
+                    [
+                        "25",
+                        "aload_0"
+                    ],
+                    [
+                        "26",
+                        "getfield"
+                    ],
+                    [
+                        "27",
+                        "org/apache/commons/math3/stat/descriptive/summary/SumOfLogs.value:D"
+                    ],
+                    [
+                        "29",
+                        "putfield"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/math3/stat/descriptive/summary/SumOfLogs.value:D"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    168,
+                    169
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "32",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

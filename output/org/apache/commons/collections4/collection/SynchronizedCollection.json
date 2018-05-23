@@ -1,0 +1,1838 @@
+{
+  "synchronizedCollection": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.<init>:(Ljava/util/Collection;)V",
+      0,
+      0
+    ],
+    "8": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_1",
+      1,
+      1
+    ],
+    "5": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "6": [
+      "13",
+      1,
+      1
+    ],
+    "8": [
+      "new",
+      1,
+      0
+    ],
+    "9": [
+      "java/lang/NullPointerException",
+      1,
+      0
+    ],
+    "11": [
+      "dup",
+      1,
+      0
+    ],
+    "12": [
+      "ldc",
+      1,
+      0
+    ],
+    "13": [
+      "Collection must not be null.",
+      1,
+      0
+    ],
+    "14": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "15": [
+      "java/lang/NullPointerException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "17": [
+      "athrow",
+      1,
+      0
+    ],
+    "18": [
+      "aload_2",
+      1,
+      1
+    ],
+    "19": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "20": [
+      "13",
+      1,
+      1
+    ],
+    "22": [
+      "new",
+      1,
+      0
+    ],
+    "23": [
+      "java/lang/NullPointerException",
+      1,
+      0
+    ],
+    "25": [
+      "dup",
+      1,
+      0
+    ],
+    "26": [
+      "ldc",
+      1,
+      0
+    ],
+    "27": [
+      "Lock must not be null.",
+      1,
+      0
+    ],
+    "28": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "29": [
+      "java/lang/NullPointerException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "31": [
+      "athrow",
+      1,
+      0
+    ],
+    "32": [
+      "aload_0",
+      0,
+      0
+    ],
+    "33": [
+      "aload_1",
+      0,
+      0
+    ],
+    "34": [
+      "putfield",
+      0,
+      0
+    ],
+    "35": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.collection:Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "37": [
+      "aload_0",
+      0,
+      0
+    ],
+    "38": [
+      "aload_2",
+      0,
+      0
+    ],
+    "39": [
+      "putfield",
+      0,
+      0
+    ],
+    "40": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.lock:Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "42": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "decorated": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.collection:Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "add": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.lock:Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "astore_2",
+      0,
+      0
+    ],
+    "6": [
+      "monitorenter",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "13": [
+      "java/util/Collection.addAll:(Ljava/util/Collection;)Z",
+      0,
+      0
+    ],
+    "15": [
+      "0",
+      0,
+      0
+    ],
+    "17": [
+      "aload_2",
+      0,
+      0
+    ],
+    "18": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "19": [
+      "ireturn",
+      0,
+      0
+    ],
+    "20": [
+      "astore_3",
+      0,
+      0
+    ],
+    "21": [
+      "aload_2",
+      0,
+      0
+    ],
+    "22": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "23": [
+      "aload_3",
+      0,
+      0
+    ],
+    "24": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "addAll": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.lock:Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "astore_2",
+      0,
+      0
+    ],
+    "6": [
+      "monitorenter",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "13": [
+      "java/util/Collection.clear:()V",
+      0,
+      0
+    ],
+    "15": [
+      "0",
+      0,
+      0
+    ],
+    "17": [
+      "aload_2",
+      0,
+      0
+    ],
+    "18": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "19": [
+      "ireturn",
+      0,
+      0
+    ],
+    "20": [
+      "astore_3",
+      0,
+      0
+    ],
+    "21": [
+      "aload_2",
+      0,
+      0
+    ],
+    "22": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "23": [
+      "aload_3",
+      0,
+      0
+    ],
+    "24": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "clear": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.lock:Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "astore_1",
+      0,
+      0
+    ],
+    "6": [
+      "monitorenter",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "11": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "12": [
+      "java/util/Collection.contains:(Ljava/lang/Object;)Z",
+      0,
+      0
+    ],
+    "14": [
+      "0",
+      0,
+      0
+    ],
+    "16": [
+      "aload_1",
+      0,
+      0
+    ],
+    "17": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "18": [
+      "goto",
+      0,
+      0
+    ],
+    "19": [
+      "8",
+      0,
+      0
+    ],
+    "21": [
+      "astore_2",
+      0,
+      0
+    ],
+    "22": [
+      "aload_1",
+      0,
+      0
+    ],
+    "23": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "24": [
+      "aload_2",
+      0,
+      0
+    ],
+    "25": [
+      "athrow",
+      0,
+      0
+    ],
+    "26": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "contains": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.lock:Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "astore_2",
+      0,
+      0
+    ],
+    "6": [
+      "monitorenter",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "13": [
+      "java/util/Collection.containsAll:(Ljava/util/Collection;)Z",
+      0,
+      0
+    ],
+    "15": [
+      "0",
+      0,
+      0
+    ],
+    "17": [
+      "aload_2",
+      0,
+      0
+    ],
+    "18": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "19": [
+      "ireturn",
+      0,
+      0
+    ],
+    "20": [
+      "astore_3",
+      0,
+      0
+    ],
+    "21": [
+      "aload_2",
+      0,
+      0
+    ],
+    "22": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "23": [
+      "aload_3",
+      0,
+      0
+    ],
+    "24": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "containsAll": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.lock:Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "astore_2",
+      0,
+      0
+    ],
+    "6": [
+      "monitorenter",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "13": [
+      "java/util/Collection.isEmpty:()Z",
+      0,
+      0
+    ],
+    "15": [
+      "0",
+      0,
+      0
+    ],
+    "17": [
+      "aload_2",
+      0,
+      0
+    ],
+    "18": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "19": [
+      "ireturn",
+      0,
+      0
+    ],
+    "20": [
+      "astore_3",
+      0,
+      0
+    ],
+    "21": [
+      "aload_2",
+      0,
+      0
+    ],
+    "22": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "23": [
+      "aload_3",
+      0,
+      0
+    ],
+    "24": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "isEmpty": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.lock:Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "astore_1",
+      0,
+      0
+    ],
+    "6": [
+      "monitorenter",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "11": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "12": [
+      "java/util/Collection.iterator:()Ljava/util/Iterator;",
+      0,
+      0
+    ],
+    "14": [
+      "0",
+      0,
+      0
+    ],
+    "16": [
+      "aload_1",
+      0,
+      0
+    ],
+    "17": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "18": [
+      "ireturn",
+      0,
+      0
+    ],
+    "19": [
+      "astore_2",
+      0,
+      0
+    ],
+    "20": [
+      "aload_1",
+      0,
+      0
+    ],
+    "21": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "22": [
+      "aload_2",
+      0,
+      0
+    ],
+    "23": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "iterator": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "4": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "5": [
+      "java/util/Collection.toArray:()[Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "7": [
+      "0",
+      0,
+      0
+    ],
+    "9": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "toArray": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.lock:Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "astore_2",
+      0,
+      0
+    ],
+    "6": [
+      "monitorenter",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "13": [
+      "java/util/Collection.remove:(Ljava/lang/Object;)Z",
+      0,
+      0
+    ],
+    "15": [
+      "0",
+      0,
+      0
+    ],
+    "17": [
+      "aload_2",
+      0,
+      0
+    ],
+    "18": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "19": [
+      "areturn",
+      0,
+      0
+    ],
+    "20": [
+      "astore_3",
+      0,
+      0
+    ],
+    "21": [
+      "aload_2",
+      0,
+      0
+    ],
+    "22": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "23": [
+      "aload_3",
+      0,
+      0
+    ],
+    "24": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "remove": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.lock:Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "astore_2",
+      0,
+      0
+    ],
+    "6": [
+      "monitorenter",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "13": [
+      "java/util/Collection.removeAll:(Ljava/util/Collection;)Z",
+      0,
+      0
+    ],
+    "15": [
+      "0",
+      0,
+      0
+    ],
+    "17": [
+      "aload_2",
+      0,
+      0
+    ],
+    "18": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "19": [
+      "ireturn",
+      0,
+      0
+    ],
+    "20": [
+      "astore_3",
+      0,
+      0
+    ],
+    "21": [
+      "aload_2",
+      0,
+      0
+    ],
+    "22": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "23": [
+      "aload_3",
+      0,
+      0
+    ],
+    "24": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "removeAll": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.lock:Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "astore_2",
+      0,
+      0
+    ],
+    "6": [
+      "monitorenter",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "13": [
+      "java/util/Collection.retainAll:(Ljava/util/Collection;)Z",
+      0,
+      0
+    ],
+    "15": [
+      "0",
+      0,
+      0
+    ],
+    "17": [
+      "aload_2",
+      0,
+      0
+    ],
+    "18": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "19": [
+      "ireturn",
+      0,
+      0
+    ],
+    "20": [
+      "astore_3",
+      0,
+      0
+    ],
+    "21": [
+      "aload_2",
+      0,
+      0
+    ],
+    "22": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "23": [
+      "aload_3",
+      0,
+      0
+    ],
+    "24": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "retainAll": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.lock:Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "astore_2",
+      0,
+      0
+    ],
+    "6": [
+      "monitorenter",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "13": [
+      "java/util/Collection.size:()I",
+      0,
+      0
+    ],
+    "15": [
+      "0",
+      0,
+      0
+    ],
+    "17": [
+      "aload_2",
+      0,
+      0
+    ],
+    "18": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "19": [
+      "ireturn",
+      0,
+      0
+    ],
+    "20": [
+      "astore_3",
+      0,
+      0
+    ],
+    "21": [
+      "aload_2",
+      0,
+      0
+    ],
+    "22": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "23": [
+      "aload_3",
+      0,
+      0
+    ],
+    "24": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "size": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.lock:Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "astore_1",
+      0,
+      0
+    ],
+    "6": [
+      "monitorenter",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "11": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "12": [
+      "java/util/Collection.equals:(Ljava/lang/Object;)Z",
+      0,
+      0
+    ],
+    "14": [
+      "0",
+      0,
+      0
+    ],
+    "16": [
+      "aload_1",
+      0,
+      0
+    ],
+    "17": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "18": [
+      "ireturn",
+      0,
+      0
+    ],
+    "19": [
+      "astore_2",
+      0,
+      0
+    ],
+    "20": [
+      "aload_1",
+      0,
+      0
+    ],
+    "21": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "22": [
+      "aload_2",
+      0,
+      0
+    ],
+    "23": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "equals": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.lock:Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "astore_2",
+      0,
+      0
+    ],
+    "6": [
+      "monitorenter",
+      0,
+      0
+    ],
+    "7": [
+      "aload_1",
+      1,
+      1
+    ],
+    "8": [
+      "aload_0",
+      1,
+      1
+    ],
+    "9": [
+      "if_acmpne",
+      1,
+      1
+    ],
+    "10": [
+      "7",
+      1,
+      1
+    ],
+    "12": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "13": [
+      "aload_2",
+      1,
+      0
+    ],
+    "14": [
+      "monitorexit",
+      1,
+      0
+    ],
+    "15": [
+      "ireturn",
+      1,
+      0
+    ],
+    "16": [
+      "aload_1",
+      0,
+      0
+    ],
+    "17": [
+      "aload_0",
+      0,
+      0
+    ],
+    "18": [
+      "if_acmpeq",
+      0,
+      0
+    ],
+    "19": [
+      "16",
+      0,
+      0
+    ],
+    "21": [
+      "aload_0",
+      0,
+      0
+    ],
+    "22": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "23": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "25": [
+      "aload_1",
+      0,
+      0
+    ],
+    "26": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "27": [
+      "java/util/Collection.hashCode:()I",
+      0,
+      0
+    ],
+    "29": [
+      "0",
+      0,
+      0
+    ],
+    "31": [
+      "ifeq",
+      0,
+      0
+    ],
+    "32": [
+      "7",
+      0,
+      0
+    ],
+    "34": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "35": [
+      "goto",
+      0,
+      0
+    ],
+    "36": [
+      "4",
+      0,
+      0
+    ],
+    "38": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "39": [
+      "aload_2",
+      0,
+      0
+    ],
+    "40": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "41": [
+      "ireturn",
+      0,
+      0
+    ],
+    "42": [
+      "astore_3",
+      0,
+      0
+    ],
+    "43": [
+      "aload_2",
+      0,
+      0
+    ],
+    "44": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "45": [
+      "aload_3",
+      0,
+      0
+    ],
+    "46": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "hashCode": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.lock:Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "astore_1",
+      0,
+      0
+    ],
+    "6": [
+      "monitorenter",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "11": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "12": [
+      "java/util/Collection.toString:()Ljava/lang/String;",
+      0,
+      0
+    ],
+    "14": [
+      "0",
+      0,
+      0
+    ],
+    "16": [
+      "aload_1",
+      0,
+      0
+    ],
+    "17": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "18": [
+      "ireturn",
+      0,
+      0
+    ],
+    "19": [
+      "astore_2",
+      0,
+      0
+    ],
+    "20": [
+      "aload_1",
+      0,
+      0
+    ],
+    "21": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "22": [
+      "aload_2",
+      0,
+      0
+    ],
+    "23": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "toString": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.lock:Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "astore_1",
+      0,
+      0
+    ],
+    "6": [
+      "monitorenter",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/collection/SynchronizedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "11": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "12": [
+      "java/lang/Object.toString:()Ljava/lang/String;",
+      0,
+      0
+    ],
+    "14": [
+      "aload_1",
+      0,
+      0
+    ],
+    "15": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "16": [
+      "areturn",
+      0,
+      0
+    ],
+    "17": [
+      "astore_2",
+      0,
+      0
+    ],
+    "18": [
+      "aload_1",
+      0,
+      0
+    ],
+    "19": [
+      "monitorexit",
+      0,
+      0
+    ],
+    "20": [
+      "aload_2",
+      0,
+      0
+    ],
+    "21": [
+      "athrow",
+      0,
+      0
+    ]
+  }
+}

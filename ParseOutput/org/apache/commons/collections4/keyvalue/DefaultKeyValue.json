@@ -1,0 +1,347 @@
+{
+    "setKey": {
+        "name": "setKey",
+        "pos": [
+            80,
+            96
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    82,
+                    86
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            82,
+                            86
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    83,
+                                    84
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    86,
+                    87
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "setValue": {
+        "name": "setValue",
+        "pos": [
+            96,
+            111
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    98,
+                    102
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            98,
+                            102
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    99,
+                                    100
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    102,
+                    103
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "toMapEntry": {
+        "name": "toMapEntry",
+        "pos": [
+            111,
+            125
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    112,
+                    113
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/keyvalue/DefaultMapEntry"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/keyvalue/DefaultMapEntry.<init>:(Lorg/apache/commons/collections4/KeyValue;)V"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "equals": {
+        "name": "equals",
+        "pos": [
+            125,
+            148
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    127,
+                    130
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            127,
+                            130
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    128,
+                                    129
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    130,
+                    134
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            130,
+                            134
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    131,
+                                    132
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    134,
+                    135
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    135,
+                    138
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "hashCode": {
+        "name": "hashCode",
+        "pos": [
+            148,
+            154
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    150,
+                    152
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/keyvalue/DefaultKeyValue.getKey:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "4",
+                        "ifnonnull"
+                    ],
+                    [
+                        "5",
+                        "7"
+                    ],
+                    [
+                        "7",
+                        "iconst_0"
+                    ],
+                    [
+                        "8",
+                        "goto"
+                    ],
+                    [
+                        "9",
+                        "10"
+                    ],
+                    [
+                        "11",
+                        "aload_0"
+                    ],
+                    [
+                        "12",
+                        "invokevirtual"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/collections4/keyvalue/DefaultKeyValue.getKey:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "15",
+                        "invokevirtual"
+                    ],
+                    [
+                        "16",
+                        "java/lang/Object.hashCode:()I"
+                    ],
+                    [
+                        "18",
+                        "aload_0"
+                    ],
+                    [
+                        "19",
+                        "invokevirtual"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/collections4/keyvalue/DefaultKeyValue.getValue:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "22",
+                        "ifnonnull"
+                    ],
+                    [
+                        "23",
+                        "7"
+                    ],
+                    [
+                        "25",
+                        "iconst_0"
+                    ],
+                    [
+                        "26",
+                        "goto"
+                    ],
+                    [
+                        "27",
+                        "10"
+                    ],
+                    [
+                        "29",
+                        "aload_0"
+                    ],
+                    [
+                        "30",
+                        "invokevirtual"
+                    ],
+                    [
+                        "31",
+                        "org/apache/commons/collections4/keyvalue/DefaultKeyValue.getValue:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "33",
+                        "invokevirtual"
+                    ],
+                    [
+                        "34",
+                        "java/lang/Object.hashCode:()I"
+                    ],
+                    [
+                        "36",
+                        "ixor"
+                    ],
+                    [
+                        "37",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

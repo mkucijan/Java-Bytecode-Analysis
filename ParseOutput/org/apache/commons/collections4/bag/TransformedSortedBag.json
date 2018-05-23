@@ -1,0 +1,381 @@
+{
+    "transformingSortedBag": {
+        "name": "transformingSortedBag",
+        "pos": [
+            55,
+            75
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    57,
+                    58
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/bag/TransformedSortedBag"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokespecial"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/bag/TransformedSortedBag.<init>:(Lorg/apache/commons/collections4/SortedBag;Lorg/apache/commons/collections4/Transformer;)V"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "transformedSortedBag": {
+        "name": "transformedSortedBag",
+        "pos": [
+            75,
+            101
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    78,
+                    79
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/bag/TransformedSortedBag"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokespecial"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/bag/TransformedSortedBag.<init>:(Lorg/apache/commons/collections4/SortedBag;Lorg/apache/commons/collections4/Transformer;)V"
+                    ],
+                    [
+                        "9",
+                        "astore_2"
+                    ],
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "invokeinterface"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/collections4/SortedBag.toArray:()[Ljava/lang/Object;"
+                    ],
+                    [
+                        "14",
+                        "0"
+                    ],
+                    [
+                        "16",
+                        "ifle"
+                    ],
+                    [
+                        "17",
+                        "68"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    79,
+                    87
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            79,
+                            87
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    80,
+                                    82
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    82,
+                                    83
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    83,
+                                    86
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            83,
+                                            86
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    84,
+                                                    85
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    87,
+                    88
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getSortedBag": {
+        "name": "getSortedBag",
+        "pos": [
+            110,
+            116
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    111,
+                    112
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/bag/TransformedSortedBag.decorated:()Ljava/util/Collection;"
+                    ],
+                    [
+                        "4",
+                        "checkcast"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/SortedBag"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "first": {
+        "name": "first",
+        "pos": [
+            116,
+            121
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    118,
+                    119
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/bag/TransformedSortedBag.getSortedBag:()Lorg/apache/commons/collections4/SortedBag;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/SortedBag.last:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "last": {
+        "name": "last",
+        "pos": [
+            121,
+            126
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    123,
+                    124
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/bag/TransformedSortedBag.getSortedBag:()Lorg/apache/commons/collections4/SortedBag;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/SortedBag.comparator:()Ljava/util/Comparator;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "comparator": {
+        "name": "comparator",
+        "pos": [
+            126,
+            131
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    128,
+                    129
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/bag/TransformedSortedBag.getSortedBag:()Lorg/apache/commons/collections4/SortedBag;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/SortedBag.org/apache/commons/collections4/bag/TransformedBag"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,752 @@
+{
+    "copy": {
+        "name": "copy",
+        "pos": [
+            77,
+            91
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    78,
+                    80
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.getIdentifier:()J"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.getFeatures:()[D"
+                    ],
+                    [
+                        "12",
+                        "invokespecial"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.<init>:(J[D)V"
+                    ],
+                    [
+                        "15",
+                        "astore_1"
+                    ],
+                    [
+                        "16",
+                        "aload_1"
+                    ],
+                    [
+                        "17",
+                        "getfield"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.numberOfAttemptedUpdates:Ljava/util/concurrent/atomic/AtomicLong;"
+                    ],
+                    [
+                        "20",
+                        "aload_0"
+                    ],
+                    [
+                        "21",
+                        "getfield"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.numberOfAttemptedUpdates:Ljava/util/concurrent/atomic/AtomicLong;"
+                    ],
+                    [
+                        "24",
+                        "invokevirtual"
+                    ],
+                    [
+                        "25",
+                        "java/util/concurrent/atomic/AtomicLong.get:()J"
+                    ],
+                    [
+                        "27",
+                        "invokevirtual"
+                    ],
+                    [
+                        "28",
+                        "java/util/concurrent/atomic/AtomicLong.set:(J)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    80,
+                    81
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "30",
+                        "aload_1"
+                    ],
+                    [
+                        "31",
+                        "getfield"
+                    ],
+                    [
+                        "32",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.numberOfSuccessfulUpdates:Ljava/util/concurrent/atomic/AtomicLong;"
+                    ],
+                    [
+                        "34",
+                        "aload_0"
+                    ],
+                    [
+                        "35",
+                        "getfield"
+                    ],
+                    [
+                        "36",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.numberOfSuccessfulUpdates:Ljava/util/concurrent/atomic/AtomicLong;"
+                    ],
+                    [
+                        "38",
+                        "invokevirtual"
+                    ],
+                    [
+                        "39",
+                        "java/util/concurrent/atomic/AtomicLong.get:()J"
+                    ],
+                    [
+                        "41",
+                        "invokevirtual"
+                    ],
+                    [
+                        "42",
+                        "java/util/concurrent/atomic/AtomicLong.set:(J)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    81,
+                    83
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "44",
+                        "aload_1"
+                    ],
+                    [
+                        "45",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    83,
+                    84
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getIdentifier": {
+        "name": "getIdentifier",
+        "pos": [
+            91,
+            100
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    92,
+                    93
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.identifier:J"
+                    ],
+                    [
+                        "4",
+                        "lreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSize": {
+        "name": "getSize",
+        "pos": [
+            100,
+            109
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    101,
+                    102
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.size:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getFeatures": {
+        "name": "getFeatures",
+        "pos": [
+            109,
+            141
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    110,
+                    111
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.features:Ljava/util/concurrent/atomic/AtomicReference;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "java/util/concurrent/atomic/AtomicReference.get:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "checkcast"
+                    ],
+                    [
+                        "8",
+                        "[D"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "[D.clone:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "13",
+                        "checkcast"
+                    ],
+                    [
+                        "14",
+                        "[D"
+                    ],
+                    [
+                        "16",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "compareAndSetFeatures": {
+        "name": "compareAndSetFeatures",
+        "pos": [
+            141,
+            179
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    143,
+                    149
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            143,
+                            149
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    144,
+                                    145
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    149,
+                    150
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    150,
+                    156
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            150,
+                            156
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    152,
+                                    153
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    156,
+                    158
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    158,
+                    166
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            158,
+                            162
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    160,
+                                    161
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    161,
+                                    162
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            162,
+                            166
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    164,
+                                    165
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "getNumberOfAttemptedUpdates": {
+        "name": "getNumberOfAttemptedUpdates",
+        "pos": [
+            179,
+            194
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    180,
+                    181
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.numberOfAttemptedUpdates:Ljava/util/concurrent/atomic/AtomicLong;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "java/util/concurrent/atomic/AtomicLong.get:()J"
+                    ],
+                    [
+                        "7",
+                        "lreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNumberOfSuccessfulUpdates": {
+        "name": "getNumberOfSuccessfulUpdates",
+        "pos": [
+            194,
+            208
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    195,
+                    196
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.numberOfSuccessfulUpdates:Ljava/util/concurrent/atomic/AtomicLong;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "java/util/concurrent/atomic/AtomicLong.get:()J"
+                    ],
+                    [
+                        "7",
+                        "lreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "containSameValues": {
+        "name": "containSameValues",
+        "pos": [
+            208,
+            227
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    210,
+                    214
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            210,
+                            214
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    211,
+                                    212
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    214,
+                    219
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            214,
+                            219
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    215,
+                                    218
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            215,
+                                            218
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    216,
+                                                    217
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    219,
+                    220
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "readObject": {
+        "name": "readObject",
+        "pos": [
+            227,
+            236
+        ],
+        "children": [
+            {
+                "name": "ThrowStatement",
+                "pos": [
+                    228,
+                    229
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/lang/IllegalStateException"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "invokespecial"
+                    ],
+                    [
+                        "5",
+                        "java/lang/IllegalStateException.<init>:()V"
+                    ],
+                    [
+                        "7",
+                        "athrow"
+                    ]
+                ]
+            }
+        ]
+    },
+    "writeReplace": {
+        "name": "writeReplace",
+        "pos": [
+            236,
+            244
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    237,
+                    239
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron$SerializationProxy"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.identifier:J"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "getfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.features:Ljava/util/concurrent/atomic/AtomicReference;"
+                    ],
+                    [
+                        "12",
+                        "invokevirtual"
+                    ],
+                    [
+                        "13",
+                        "java/util/concurrent/atomic/AtomicReference.get:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "15",
+                        "checkcast"
+                    ],
+                    [
+                        "16",
+                        "[D"
+                    ],
+                    [
+                        "18",
+                        "invokespecial"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron$SerializationProxy.<init>:(J[D)V"
+                    ],
+                    [
+                        "21",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

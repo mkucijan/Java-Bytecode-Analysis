@@ -1,0 +1,368 @@
+{
+    "create": {
+        "name": "create",
+        "pos": [
+            72,
+            96
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    79,
+                    83
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/ode/nonstiff/RungeKuttaFieldStepInterpolator.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "5",
+                        "iload_1"
+                    ],
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "getfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/ode/nonstiff/RungeKuttaFieldStepInterpolator.yDotK:[[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "10",
+                        "aload_2"
+                    ],
+                    [
+                        "11",
+                        "aload_3"
+                    ],
+                    [
+                        "12",
+                        "aload"
+                    ],
+                    [
+                        "13",
+                        "#4"
+                    ],
+                    [
+                        "14",
+                        "aload"
+                    ],
+                    [
+                        "15",
+                        "#5"
+                    ],
+                    [
+                        "16",
+                        "aload"
+                    ],
+                    [
+                        "17",
+                        "#6"
+                    ],
+                    [
+                        "18",
+                        "invokevirtual"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/ode/nonstiff/RungeKuttaFieldStepInterpolator.create:(Lorg/apache/commons/math3/Field;Z[[Lorg/apache/commons/math3/RealFieldElement;Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;Lorg/apache/commons/math3/ode/FieldEquationsMapper;)Lorg/apache/commons/math3/ode/nonstiff/RungeKuttaFieldStepInterpolator;"
+                    ],
+                    [
+                        "21",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "previousStateLinearCombination": {
+        "name": "previousStateLinearCombination",
+        "pos": [
+            107,
+            116
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    108,
+                    110
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/ode/nonstiff/RungeKuttaFieldStepInterpolator.getPreviousState:()Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/ode/FieldODEStateAndDerivative.getState:()[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "8",
+                        "aload_1"
+                    ],
+                    [
+                        "9",
+                        "invokespecial"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/ode/nonstiff/RungeKuttaFieldStepInterpolator.combine:([Lorg/apache/commons/math3/RealFieldElement;[Lorg/apache/commons/math3/RealFieldElement;)[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "12",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "currentStateLinearCombination": {
+        "name": "currentStateLinearCombination",
+        "pos": [
+            116,
+            125
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    117,
+                    119
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/ode/nonstiff/RungeKuttaFieldStepInterpolator.getCurrentState:()Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/ode/FieldODEStateAndDerivative.getState:()[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "8",
+                        "aload_1"
+                    ],
+                    [
+                        "9",
+                        "invokespecial"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/ode/nonstiff/RungeKuttaFieldStepInterpolator.combine:([Lorg/apache/commons/math3/RealFieldElement;[Lorg/apache/commons/math3/RealFieldElement;)[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "12",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "derivativeLinearCombination": {
+        "name": "derivativeLinearCombination",
+        "pos": [
+            125,
+            134
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    126,
+                    127
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/ode/nonstiff/RungeKuttaFieldStepInterpolator.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "getfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/ode/nonstiff/RungeKuttaFieldStepInterpolator.yDotK:[[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "9",
+                        "iconst_0"
+                    ],
+                    [
+                        "10",
+                        "aaload"
+                    ],
+                    [
+                        "11",
+                        "arraylength"
+                    ],
+                    [
+                        "12",
+                        "invokestatic"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/util/MathArrays.buildArray:(Lorg/apache/commons/math3/Field;I)[Ljava/lang/Object;"
+                    ],
+                    [
+                        "15",
+                        "checkcast"
+                    ],
+                    [
+                        "16",
+                        "[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "18",
+                        "aload_1"
+                    ],
+                    [
+                        "19",
+                        "invokespecial"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/ode/nonstiff/RungeKuttaFieldStepInterpolator.combine:([Lorg/apache/commons/math3/RealFieldElement;[Lorg/apache/commons/math3/RealFieldElement;)[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "22",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "combine": {
+        "name": "combine",
+        "pos": [
+            134,
+            143
+        ],
+        "children": [
+            {
+                "name": "ForStatement",
+                "pos": [
+                    135,
+                    140
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            135,
+                            140
+                        ],
+                        "children": [
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    136,
+                                    139
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            136,
+                                            139
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    137,
+                                                    138
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    140,
+                    141
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

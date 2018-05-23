@@ -1,0 +1,303 @@
+{
+    "value": {
+        "name": "value",
+        "pos": [
+            100,
+            120
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    103,
+                    104
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_3"
+                    ],
+                    [
+                        "2",
+                        "invokespecial"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/analysis/function/Sigmoid$Parametric.validateParameters:([D)V"
+                    ],
+                    [
+                        "5",
+                        "dload_1"
+                    ],
+                    [
+                        "6",
+                        "aload_3"
+                    ],
+                    [
+                        "7",
+                        "iconst_0"
+                    ],
+                    [
+                        "8",
+                        "daload"
+                    ],
+                    [
+                        "9",
+                        "aload_3"
+                    ],
+                    [
+                        "10",
+                        "iconst_1"
+                    ],
+                    [
+                        "11",
+                        "daload"
+                    ],
+                    [
+                        "12",
+                        "invokestatic"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/analysis/function/Sigmoid.access$000:(DDD)D"
+                    ],
+                    [
+                        "15",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    104,
+                    105
+                ],
+                "children": []
+            }
+        ]
+    },
+    "gradient": {
+        "name": "gradient",
+        "pos": [
+            120,
+            140
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    123,
+                    125
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_3"
+                    ],
+                    [
+                        "2",
+                        "invokespecial"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/analysis/function/Sigmoid$Parametric.validateParameters:([D)V"
+                    ],
+                    [
+                        "5",
+                        "dconst_1"
+                    ],
+                    [
+                        "6",
+                        "dconst_1"
+                    ],
+                    [
+                        "7",
+                        "dload_1"
+                    ],
+                    [
+                        "8",
+                        "dneg"
+                    ],
+                    [
+                        "9",
+                        "invokestatic"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/util/FastMath.exp:(D)D"
+                    ],
+                    [
+                        "12",
+                        "dadd"
+                    ],
+                    [
+                        "13",
+                        "ddiv"
+                    ],
+                    [
+                        "14",
+                        "dstore"
+                    ],
+                    [
+                        "15",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    125,
+                    127
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "iconst_2"
+                    ],
+                    [
+                        "17",
+                        "newarray"
+                    ],
+                    [
+                        "18",
+                        "7"
+                    ],
+                    [
+                        "19",
+                        "dup"
+                    ],
+                    [
+                        "20",
+                        "iconst_0"
+                    ],
+                    [
+                        "21",
+                        "dconst_1"
+                    ],
+                    [
+                        "22",
+                        "dload"
+                    ],
+                    [
+                        "23",
+                        "#4"
+                    ],
+                    [
+                        "24",
+                        "dsub"
+                    ],
+                    [
+                        "25",
+                        "dastore"
+                    ],
+                    [
+                        "26",
+                        "dup"
+                    ],
+                    [
+                        "27",
+                        "iconst_1"
+                    ],
+                    [
+                        "28",
+                        "dload"
+                    ],
+                    [
+                        "29",
+                        "#4"
+                    ],
+                    [
+                        "30",
+                        "dastore"
+                    ],
+                    [
+                        "31",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    127,
+                    128
+                ],
+                "children": []
+            }
+        ]
+    },
+    "validateParameters": {
+        "name": "validateParameters",
+        "pos": [
+            140,
+            150
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    143,
+                    146
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            143,
+                            146
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    144,
+                                    145
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    146,
+                    149
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            146,
+                            149
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    147,
+                                    148
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

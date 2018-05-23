@@ -1,0 +1,803 @@
+{
+    "visitOrder": {
+        "name": "visitOrder",
+        "pos": [
+            139,
+            144
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    140,
+                    141
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "getstatic"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/geometry/partitioning/BSPTreeVisitor$Order.MINUS_SUB_PLUS:Lorg/apache/commons/math3/geometry/partitioning/BSPTreeVisitor$Order;"
+                    ],
+                    [
+                        "3",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "visitInternalNode": {
+        "name": "visitInternalNode",
+        "pos": [
+            144,
+            157
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    145,
+                    148
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/partitioning/BSPTree.getAttribute:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "4",
+                        "checkcast"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/geometry/partitioning/BoundaryAttribute"
+                    ],
+                    [
+                        "7",
+                        "astore_2"
+                    ],
+                    [
+                        "8",
+                        "aload_2"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/geometry/partitioning/BoundaryAttribute.getPlusOutside:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;"
+                    ],
+                    [
+                        "12",
+                        "ifnull"
+                    ],
+                    [
+                        "13",
+                        "12"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    148,
+                    151
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            148,
+                            151
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    149,
+                                    150
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    151,
+                    154
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            151,
+                            154
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    152,
+                                    153
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "visitLeafNode": {
+        "name": "visitLeafNode",
+        "pos": [
+            157,
+            164
+        ],
+        "children": []
+    },
+    "addContribution": {
+        "name": "addContribution",
+        "pos": [
+            164,
+            257
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    167,
+                    170
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "checkcast"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/partitioning/AbstractSubHyperplane"
+                    ],
+                    [
+                        "4",
+                        "astore_3"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokeinterface"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/geometry/partitioning/SubHyperplane.org/apache/commons/math3/geometry/euclidean/threed/Plane"
+                    ],
+                    [
+                        "9",
+                        "0"
+                    ],
+                    [
+                        "11",
+                        "checkcast"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/geometry/euclidean/threed/Plane"
+                    ],
+                    [
+                        "14",
+                        "astore"
+                    ],
+                    [
+                        "15",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    170,
+                    172
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "aload"
+                    ],
+                    [
+                        "17",
+                        "#4"
+                    ],
+                    [
+                        "18",
+                        "invokevirtual"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/geometry/euclidean/threed/Plane.getNormal:()Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;"
+                    ],
+                    [
+                        "21",
+                        "aload_0"
+                    ],
+                    [
+                        "22",
+                        "getfield"
+                    ],
+                    [
+                        "23",
+                        "org/apache/commons/math3/geometry/euclidean/threed/OutlineExtractor$BoundaryProjector.this$0:Lorg/apache/commons/math3/geometry/euclidean/threed/OutlineExtractor;"
+                    ],
+                    [
+                        "25",
+                        "invokestatic"
+                    ],
+                    [
+                        "26",
+                        "org/apache/commons/math3/geometry/euclidean/threed/OutlineExtractor.access$000:(Lorg/apache/commons/math3/geometry/euclidean/threed/OutlineExtractor;)Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;"
+                    ],
+                    [
+                        "28",
+                        "invokevirtual"
+                    ],
+                    [
+                        "29",
+                        "org/apache/commons/math3/geometry/euclidean/threed/Vector3D.dotProduct:(Lorg/apache/commons/math3/geometry/Vector;)D"
+                    ],
+                    [
+                        "31",
+                        "dstore"
+                    ],
+                    [
+                        "32",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    172,
+                    173
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "33",
+                        "dload"
+                    ],
+                    [
+                        "34",
+                        "#5"
+                    ],
+                    [
+                        "35",
+                        "invokestatic"
+                    ],
+                    [
+                        "36",
+                        "org/apache/commons/math3/util/FastMath.abs:(D)D"
+                    ],
+                    [
+                        "38",
+                        "ldc2_w"
+                    ],
+                    [
+                        "39",
+                        "0.001"
+                    ],
+                    [
+                        "41",
+                        "dcmpl"
+                    ],
+                    [
+                        "42",
+                        "ifle"
+                    ],
+                    [
+                        "43",
+                        "539"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    173,
+                    252
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            173,
+                            252
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    174,
+                                    177
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    177,
+                                    203
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            177,
+                                            203
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    180,
+                                                    181
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "ForStatement",
+                                                "pos": [
+                                                    181,
+                                                    198
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            181,
+                                                            198
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "LocalVariableDeclaration",
+                                                                "pos": [
+                                                                    182,
+                                                                    183
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "LocalVariableDeclaration",
+                                                                "pos": [
+                                                                    183,
+                                                                    184
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "IfStatement",
+                                                                "pos": [
+                                                                    184,
+                                                                    194
+                                                                ],
+                                                                "children": [
+                                                                    {
+                                                                        "name": "BlockStatement",
+                                                                        "pos": [
+                                                                            184,
+                                                                            189
+                                                                        ],
+                                                                        "children": [
+                                                                            {
+                                                                                "name": "StatementExpression",
+                                                                                "pos": [
+                                                                                    185,
+                                                                                    186
+                                                                                ],
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "name": "ForStatement",
+                                                                                "pos": [
+                                                                                    186,
+                                                                                    189
+                                                                                ],
+                                                                                "children": [
+                                                                                    {
+                                                                                        "name": "BlockStatement",
+                                                                                        "pos": [
+                                                                                            186,
+                                                                                            189
+                                                                                        ],
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "name": "StatementExpression",
+                                                                                                "pos": [
+                                                                                                    187,
+                                                                                                    188
+                                                                                                ],
+                                                                                                "children": []
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "name": "BlockStatement",
+                                                                        "pos": [
+                                                                            189,
+                                                                            194
+                                                                        ],
+                                                                        "children": [
+                                                                            {
+                                                                                "name": "ForStatement",
+                                                                                "pos": [
+                                                                                    190,
+                                                                                    193
+                                                                                ],
+                                                                                "children": [
+                                                                                    {
+                                                                                        "name": "BlockStatement",
+                                                                                        "pos": [
+                                                                                            190,
+                                                                                            193
+                                                                                        ],
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "name": "StatementExpression",
+                                                                                                "pos": [
+                                                                                                    191,
+                                                                                                    192
+                                                                                                ],
+                                                                                                "children": []
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    194,
+                                                                    195
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    198,
+                                                    200
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    203,
+                                    204
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    204,
+                                    246
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            204,
+                                            246
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    205,
+                                                    206
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    206,
+                                                    207
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    207,
+                                                    208
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    208,
+                                                    209
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    209,
+                                                    211
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "WhileStatement",
+                                                "pos": [
+                                                    211,
+                                                    245
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            211,
+                                                            245
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "LocalVariableDeclaration",
+                                                                "pos": [
+                                                                    213,
+                                                                    214
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "LocalVariableDeclaration",
+                                                                "pos": [
+                                                                    214,
+                                                                    216
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "LocalVariableDeclaration",
+                                                                "pos": [
+                                                                    216,
+                                                                    218
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "LocalVariableDeclaration",
+                                                                "pos": [
+                                                                    218,
+                                                                    220
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "IfStatement",
+                                                                "pos": [
+                                                                    220,
+                                                                    229
+                                                                ],
+                                                                "children": [
+                                                                    {
+                                                                        "name": "BlockStatement",
+                                                                        "pos": [
+                                                                            220,
+                                                                            229
+                                                                        ],
+                                                                        "children": [
+                                                                            {
+                                                                                "name": "LocalVariableDeclaration",
+                                                                                "pos": [
+                                                                                    223,
+                                                                                    224
+                                                                                ],
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "name": "LocalVariableDeclaration",
+                                                                                "pos": [
+                                                                                    224,
+                                                                                    226
+                                                                                ],
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "name": "StatementExpression",
+                                                                                "pos": [
+                                                                                    226,
+                                                                                    227
+                                                                                ],
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "name": "IfStatement",
+                                                                "pos": [
+                                                                    229,
+                                                                    238
+                                                                ],
+                                                                "children": [
+                                                                    {
+                                                                        "name": "BlockStatement",
+                                                                        "pos": [
+                                                                            229,
+                                                                            238
+                                                                        ],
+                                                                        "children": [
+                                                                            {
+                                                                                "name": "LocalVariableDeclaration",
+                                                                                "pos": [
+                                                                                    232,
+                                                                                    233
+                                                                                ],
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "name": "LocalVariableDeclaration",
+                                                                                "pos": [
+                                                                                    233,
+                                                                                    235
+                                                                                ],
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "name": "StatementExpression",
+                                                                                "pos": [
+                                                                                    235,
+                                                                                    236
+                                                                                ],
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    238,
+                                                                    240
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    240,
+                                                                    241
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    241,
+                                                                    242
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    242,
+                                                                    244
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    246,
+                                    249
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    249,
+                                    251
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "getProjected": {
+        "name": "getProjected",
+        "pos": [
+            257,
+            261
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    258,
+                    259
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/euclidean/threed/OutlineExtractor$BoundaryProjector.projected:Lorg/apache/commons/math3/geometry/euclidean/twod/PolygonsSet;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,1270 @@
+{
+    "get": {
+        "name": "get",
+        "pos": [
+            99,
+            110
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    101,
+                    102
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "iconst_0"
+                    ],
+                    [
+                        "3",
+                        "aload_0"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/list/TreeList.size:()I"
+                    ],
+                    [
+                        "7",
+                        "iconst_1"
+                    ],
+                    [
+                        "8",
+                        "isub"
+                    ],
+                    [
+                        "9",
+                        "invokespecial"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/collections4/list/TreeList.checkInterval:(III)V"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "getfield"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/collections4/list/TreeList.root:Lorg/apache/commons/collections4/list/TreeList$AVLNode;"
+                    ],
+                    [
+                        "16",
+                        "iload_1"
+                    ],
+                    [
+                        "17",
+                        "invokevirtual"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/collections4/list/TreeList$AVLNode.get:(I)Lorg/apache/commons/collections4/list/TreeList$AVLNode;"
+                    ],
+                    [
+                        "20",
+                        "invokevirtual"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/collections4/list/TreeList$AVLNode.getValue:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "23",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    102,
+                    103
+                ],
+                "children": []
+            }
+        ]
+    },
+    "size": {
+        "name": "size",
+        "pos": [
+            110,
+            120
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    112,
+                    113
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/list/TreeList.size:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "iterator": {
+        "name": "iterator",
+        "pos": [
+            120,
+            131
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    123,
+                    124
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iconst_0"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/list/TreeList.listIterator:(I)Ljava/util/ListIterator;"
+                    ],
+                    [
+                        "5",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "listIterator": {
+        "name": "listIterator",
+        "pos": [
+            143,
+            157
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    147,
+                    148
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "iconst_0"
+                    ],
+                    [
+                        "3",
+                        "aload_0"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/list/TreeList.size:()I"
+                    ],
+                    [
+                        "7",
+                        "invokespecial"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/collections4/list/TreeList.checkInterval:(III)V"
+                    ],
+                    [
+                        "10",
+                        "new"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/collections4/list/TreeList$TreeListIterator"
+                    ],
+                    [
+                        "13",
+                        "dup"
+                    ],
+                    [
+                        "14",
+                        "aload_0"
+                    ],
+                    [
+                        "15",
+                        "iload_1"
+                    ],
+                    [
+                        "16",
+                        "invokespecial"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/collections4/list/TreeList$TreeListIterator.<init>:(Lorg/apache/commons/collections4/list/TreeList;I)V"
+                    ],
+                    [
+                        "19",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    148,
+                    149
+                ],
+                "children": []
+            }
+        ]
+    },
+    "indexOf": {
+        "name": "indexOf",
+        "pos": [
+            157,
+            172
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    160,
+                    163
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            160,
+                            163
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    161,
+                                    162
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    163,
+                    164
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "contains": {
+        "name": "contains",
+        "pos": [
+            172,
+            182
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    174,
+                    175
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/list/TreeList.indexOf:(Ljava/lang/Object;)I"
+                    ],
+                    [
+                        "5",
+                        "iflt"
+                    ],
+                    [
+                        "6",
+                        "7"
+                    ],
+                    [
+                        "8",
+                        "iconst_1"
+                    ],
+                    [
+                        "9",
+                        "goto"
+                    ],
+                    [
+                        "10",
+                        "4"
+                    ],
+                    [
+                        "12",
+                        "iconst_0"
+                    ],
+                    [
+                        "13",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "toArray": {
+        "name": "toArray",
+        "pos": [
+            182,
+            199
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    185,
+                    186
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/list/TreeList.size:()I"
+                    ],
+                    [
+                        "4",
+                        "anewarray"
+                    ],
+                    [
+                        "5",
+                        "java/lang/Object"
+                    ],
+                    [
+                        "7",
+                        "astore_1"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "getfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/collections4/list/TreeList.root:Lorg/apache/commons/collections4/list/TreeList$AVLNode;"
+                    ],
+                    [
+                        "12",
+                        "ifnull"
+                    ],
+                    [
+                        "13",
+                        "18"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    186,
+                    189
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            186,
+                            189
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    187,
+                                    188
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    189,
+                    190
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "add": {
+        "name": "add",
+        "pos": [
+            199,
+            222
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    201,
+                    202
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "dup"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/list/TreeList.modCount:I"
+                    ],
+                    [
+                        "5",
+                        "iconst_1"
+                    ],
+                    [
+                        "6",
+                        "iadd"
+                    ],
+                    [
+                        "7",
+                        "putfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/collections4/list/TreeList.modCount:I"
+                    ],
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "iload_1"
+                    ],
+                    [
+                        "12",
+                        "iconst_0"
+                    ],
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "invokevirtual"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/collections4/list/TreeList.size:()I"
+                    ],
+                    [
+                        "17",
+                        "invokespecial"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/collections4/list/TreeList.checkInterval:(III)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    202,
+                    203
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "20",
+                        "aload_0"
+                    ],
+                    [
+                        "21",
+                        "getfield"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/collections4/list/TreeList.root:Lorg/apache/commons/collections4/list/TreeList$AVLNode;"
+                    ],
+                    [
+                        "24",
+                        "ifnonnull"
+                    ],
+                    [
+                        "25",
+                        "22"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    203,
+                    208
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            203,
+                            205
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    204,
+                                    205
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            205,
+                            208
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    206,
+                                    207
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    208,
+                    209
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "addAll": {
+        "name": "addAll",
+        "pos": [
+            222,
+            242
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    224,
+                    227
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            224,
+                            227
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    225,
+                                    226
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    227,
+                    228
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    228,
+                    229
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    229,
+                    230
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    230,
+                    231
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    231,
+                    232
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "set": {
+        "name": "set",
+        "pos": [
+            242,
+            257
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    244,
+                    245
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "iconst_0"
+                    ],
+                    [
+                        "3",
+                        "aload_0"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/list/TreeList.size:()I"
+                    ],
+                    [
+                        "7",
+                        "iconst_1"
+                    ],
+                    [
+                        "8",
+                        "isub"
+                    ],
+                    [
+                        "9",
+                        "invokespecial"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/collections4/list/TreeList.checkInterval:(III)V"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "getfield"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/collections4/list/TreeList.root:Lorg/apache/commons/collections4/list/TreeList$AVLNode;"
+                    ],
+                    [
+                        "16",
+                        "iload_1"
+                    ],
+                    [
+                        "17",
+                        "invokevirtual"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/collections4/list/TreeList$AVLNode.get:(I)Lorg/apache/commons/collections4/list/TreeList$AVLNode;"
+                    ],
+                    [
+                        "20",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    245,
+                    246
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "21",
+                        "aload_3"
+                    ],
+                    [
+                        "22",
+                        "invokestatic"
+                    ],
+                    [
+                        "23",
+                        "org/apache/commons/collections4/list/TreeList$AVLNode.access$400:(Lorg/apache/commons/collections4/list/TreeList$AVLNode;)Ljava/lang/Object;"
+                    ],
+                    [
+                        "25",
+                        "astore"
+                    ],
+                    [
+                        "26",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    246,
+                    247
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "27",
+                        "aload_3"
+                    ],
+                    [
+                        "28",
+                        "aload_2"
+                    ],
+                    [
+                        "29",
+                        "invokevirtual"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/collections4/list/TreeList$AVLNode.setValue:(Ljava/lang/Object;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    247,
+                    248
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "32",
+                        "aload"
+                    ],
+                    [
+                        "33",
+                        "#4"
+                    ],
+                    [
+                        "34",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    248,
+                    249
+                ],
+                "children": []
+            }
+        ]
+    },
+    "remove": {
+        "name": "remove",
+        "pos": [
+            257,
+            270
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    259,
+                    260
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "dup"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/list/TreeList.modCount:I"
+                    ],
+                    [
+                        "5",
+                        "iconst_1"
+                    ],
+                    [
+                        "6",
+                        "iadd"
+                    ],
+                    [
+                        "7",
+                        "putfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/collections4/list/TreeList.modCount:I"
+                    ],
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "iload_1"
+                    ],
+                    [
+                        "12",
+                        "iconst_0"
+                    ],
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "invokevirtual"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/collections4/list/TreeList.size:()I"
+                    ],
+                    [
+                        "17",
+                        "iconst_1"
+                    ],
+                    [
+                        "18",
+                        "isub"
+                    ],
+                    [
+                        "19",
+                        "invokespecial"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/collections4/list/TreeList.checkInterval:(III)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    260,
+                    261
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "22",
+                        "aload_0"
+                    ],
+                    [
+                        "23",
+                        "iload_1"
+                    ],
+                    [
+                        "24",
+                        "invokevirtual"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/collections4/list/TreeList.get:(I)Ljava/lang/Object;"
+                    ],
+                    [
+                        "27",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    261,
+                    262
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "28",
+                        "aload_0"
+                    ],
+                    [
+                        "29",
+                        "aload_0"
+                    ],
+                    [
+                        "30",
+                        "getfield"
+                    ],
+                    [
+                        "31",
+                        "org/apache/commons/collections4/list/TreeList.root:Lorg/apache/commons/collections4/list/TreeList$AVLNode;"
+                    ],
+                    [
+                        "33",
+                        "iload_1"
+                    ],
+                    [
+                        "34",
+                        "invokevirtual"
+                    ],
+                    [
+                        "35",
+                        "org/apache/commons/collections4/list/TreeList$AVLNode.remove:(I)Lorg/apache/commons/collections4/list/TreeList$AVLNode;"
+                    ],
+                    [
+                        "37",
+                        "putfield"
+                    ],
+                    [
+                        "38",
+                        "org/apache/commons/collections4/list/TreeList.root:Lorg/apache/commons/collections4/list/TreeList$AVLNode;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    262,
+                    263
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "40",
+                        "aload_0"
+                    ],
+                    [
+                        "41",
+                        "dup"
+                    ],
+                    [
+                        "42",
+                        "getfield"
+                    ],
+                    [
+                        "43",
+                        "org/apache/commons/collections4/list/TreeList.size:I"
+                    ],
+                    [
+                        "45",
+                        "iconst_1"
+                    ],
+                    [
+                        "46",
+                        "isub"
+                    ],
+                    [
+                        "47",
+                        "putfield"
+                    ],
+                    [
+                        "48",
+                        "org/apache/commons/collections4/list/TreeList.size:I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    263,
+                    264
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "50",
+                        "aload_2"
+                    ],
+                    [
+                        "51",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    264,
+                    265
+                ],
+                "children": []
+            }
+        ]
+    },
+    "clear": {
+        "name": "clear",
+        "pos": [
+            270,
+            286
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    272,
+                    273
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "dup"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/list/TreeList.modCount:I"
+                    ],
+                    [
+                        "5",
+                        "iconst_1"
+                    ],
+                    [
+                        "6",
+                        "iadd"
+                    ],
+                    [
+                        "7",
+                        "putfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/collections4/list/TreeList.modCount:I"
+                    ],
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "aconst_null"
+                    ],
+                    [
+                        "12",
+                        "putfield"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/collections4/list/TreeList.root:Lorg/apache/commons/collections4/list/TreeList$AVLNode;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    273,
+                    274
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "15",
+                        "aload_0"
+                    ],
+                    [
+                        "16",
+                        "iconst_0"
+                    ],
+                    [
+                        "17",
+                        "putfield"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/collections4/list/TreeList.size:I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    274,
+                    275
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "20",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "checkInterval": {
+        "name": "checkInterval",
+        "pos": [
+            286,
+            305
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    287,
+                    290
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            287,
+                            290
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    288,
+                                    289
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

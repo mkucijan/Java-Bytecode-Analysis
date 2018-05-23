@@ -1,0 +1,970 @@
+{
+    "visitOrder": {
+        "name": "visitOrder",
+        "pos": [
+            63,
+            68
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    64,
+                    65
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "getstatic"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/geometry/partitioning/BSPTreeVisitor$Order.MINUS_SUB_PLUS:Lorg/apache/commons/math3/geometry/partitioning/BSPTreeVisitor$Order;"
+                    ],
+                    [
+                        "3",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "visitInternalNode": {
+        "name": "visitInternalNode",
+        "pos": [
+            68,
+            81
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    69,
+                    70
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/spherical/twod/EdgesBuilder.nodeToEdgesList:Ljava/util/Map;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "new"
+                    ],
+                    [
+                        "6",
+                        "java/util/ArrayList"
+                    ],
+                    [
+                        "8",
+                        "dup"
+                    ],
+                    [
+                        "9",
+                        "invokespecial"
+                    ],
+                    [
+                        "10",
+                        "java/util/ArrayList.<init>:()V"
+                    ],
+                    [
+                        "12",
+                        "invokeinterface"
+                    ],
+                    [
+                        "13",
+                        "java/util/Map.getAttribute:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "15",
+                        "0"
+                    ],
+                    [
+                        "17",
+                        "pop"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    70,
+                    72
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "18",
+                        "aload_1"
+                    ],
+                    [
+                        "19",
+                        "invokevirtual"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/geometry/partitioning/BSPTree.getAttribute:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "22",
+                        "checkcast"
+                    ],
+                    [
+                        "23",
+                        "org/apache/commons/math3/geometry/partitioning/BoundaryAttribute"
+                    ],
+                    [
+                        "25",
+                        "astore_2"
+                    ],
+                    [
+                        "26",
+                        "aload_2"
+                    ],
+                    [
+                        "27",
+                        "invokevirtual"
+                    ],
+                    [
+                        "28",
+                        "org/apache/commons/math3/geometry/partitioning/BoundaryAttribute.getPlusOutside:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;"
+                    ],
+                    [
+                        "30",
+                        "ifnull"
+                    ],
+                    [
+                        "31",
+                        "16"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    72,
+                    75
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            72,
+                            75
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    73,
+                                    74
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    75,
+                    78
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            75,
+                            78
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    76,
+                                    77
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "visitLeafNode": {
+        "name": "visitLeafNode",
+        "pos": [
+            81,
+            89
+        ],
+        "children": []
+    },
+    "addContribution": {
+        "name": "addContribution",
+        "pos": [
+            89,
+            115
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    91,
+                    92
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/spherical/twod/SubCircle.getHyperplane:()Lorg/apache/commons/math3/geometry/partitioning/Hyperplane;"
+                    ],
+                    [
+                        "4",
+                        "checkcast"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/geometry/spherical/twod/Circle"
+                    ],
+                    [
+                        "7",
+                        "astore"
+                    ],
+                    [
+                        "8",
+                        "#4"
+                    ],
+                    [
+                        "9",
+                        "aload_1"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/geometry/spherical/twod/SubCircle.getRemainingRegion:()Lorg/apache/commons/math3/geometry/partitioning/Region;"
+                    ],
+                    [
+                        "13",
+                        "checkcast"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/geometry/spherical/oned/ArcsSet"
+                    ],
+                    [
+                        "16",
+                        "invokevirtual"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/geometry/spherical/oned/ArcsSet.asList:()Ljava/util/List;"
+                    ],
+                    [
+                        "19",
+                        "astore"
+                    ],
+                    [
+                        "20",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    92,
+                    93
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "21",
+                        "aload"
+                    ],
+                    [
+                        "22",
+                        "#5"
+                    ],
+                    [
+                        "23",
+                        "invokeinterface"
+                    ],
+                    [
+                        "24",
+                        "java/util/List.java/util/Iterator"
+                    ],
+                    [
+                        "26",
+                        "0"
+                    ],
+                    [
+                        "28",
+                        "astore"
+                    ],
+                    [
+                        "29",
+                        "#6"
+                    ],
+                    [
+                        "30",
+                        "aload"
+                    ],
+                    [
+                        "31",
+                        "#6"
+                    ],
+                    [
+                        "32",
+                        "invokeinterface"
+                    ],
+                    [
+                        "33",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "35",
+                        "0"
+                    ],
+                    [
+                        "37",
+                        "ifeq"
+                    ],
+                    [
+                        "38",
+                        "168"
+                    ],
+                    [
+                        "40",
+                        "aload"
+                    ],
+                    [
+                        "41",
+                        "#6"
+                    ],
+                    [
+                        "42",
+                        "invokeinterface"
+                    ],
+                    [
+                        "43",
+                        "java/util/Iterator.org/apache/commons/math3/geometry/spherical/oned/Arc"
+                    ],
+                    [
+                        "45",
+                        "0"
+                    ],
+                    [
+                        "47",
+                        "checkcast"
+                    ],
+                    [
+                        "48",
+                        "org/apache/commons/math3/geometry/spherical/oned/Arc"
+                    ],
+                    [
+                        "50",
+                        "astore"
+                    ],
+                    [
+                        "51",
+                        "#7"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    93,
+                    107
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            93,
+                            107
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    94,
+                                    95
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    95,
+                                    96
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    96,
+                                    97
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    97,
+                                    98
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    98,
+                                    99
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    99,
+                                    104
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            99,
+                                            101
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    100,
+                                                    101
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            101,
+                                            104
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    102,
+                                                    103
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    104,
+                                    105
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    105,
+                                    106
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "getFollowingEdge": {
+        "name": "getFollowingEdge",
+        "pos": [
+            115,
+            158
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    119,
+                    120
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.getEnd:()Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/geometry/spherical/twod/Vertex.getLocation:()Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;"
+                    ],
+                    [
+                        "7",
+                        "astore_2"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "getfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/geometry/spherical/twod/EdgesBuilder.root:Lorg/apache/commons/math3/geometry/partitioning/BSPTree;"
+                    ],
+                    [
+                        "12",
+                        "aload_2"
+                    ],
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "getfield"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/geometry/spherical/twod/EdgesBuilder.tolerance:D"
+                    ],
+                    [
+                        "17",
+                        "invokevirtual"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/geometry/partitioning/BSPTree.getCloseCuts:(Lorg/apache/commons/math3/geometry/Point;D)Ljava/util/List;"
+                    ],
+                    [
+                        "20",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    120,
+                    123
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "21",
+                        "aload_0"
+                    ],
+                    [
+                        "22",
+                        "getfield"
+                    ],
+                    [
+                        "23",
+                        "org/apache/commons/math3/geometry/spherical/twod/EdgesBuilder.tolerance:D"
+                    ],
+                    [
+                        "25",
+                        "dstore"
+                    ],
+                    [
+                        "26",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    123,
+                    124
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "27",
+                        "aconst_null"
+                    ],
+                    [
+                        "28",
+                        "astore"
+                    ],
+                    [
+                        "29",
+                        "#6"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    124,
+                    125
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "30",
+                        "aload_3"
+                    ],
+                    [
+                        "31",
+                        "invokeinterface"
+                    ],
+                    [
+                        "32",
+                        "java/util/List.java/util/Iterator"
+                    ],
+                    [
+                        "34",
+                        "0"
+                    ],
+                    [
+                        "36",
+                        "astore"
+                    ],
+                    [
+                        "37",
+                        "#7"
+                    ],
+                    [
+                        "38",
+                        "aload"
+                    ],
+                    [
+                        "39",
+                        "#7"
+                    ],
+                    [
+                        "40",
+                        "invokeinterface"
+                    ],
+                    [
+                        "41",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "43",
+                        "0"
+                    ],
+                    [
+                        "45",
+                        "ifeq"
+                    ],
+                    [
+                        "46",
+                        "121"
+                    ],
+                    [
+                        "48",
+                        "aload"
+                    ],
+                    [
+                        "49",
+                        "#7"
+                    ],
+                    [
+                        "50",
+                        "invokeinterface"
+                    ],
+                    [
+                        "51",
+                        "java/util/Iterator.org/apache/commons/math3/geometry/spherical/oned/Arc"
+                    ],
+                    [
+                        "53",
+                        "0"
+                    ],
+                    [
+                        "55",
+                        "checkcast"
+                    ],
+                    [
+                        "56",
+                        "org/apache/commons/math3/geometry/partitioning/BSPTree"
+                    ],
+                    [
+                        "58",
+                        "astore"
+                    ],
+                    [
+                        "59",
+                        "#8"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    125,
+                    138
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            125,
+                            138
+                        ],
+                        "children": [
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    126,
+                                    136
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            126,
+                                            136
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    127,
+                                                    135
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            127,
+                                                            135
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "LocalVariableDeclaration",
+                                                                "pos": [
+                                                                    128,
+                                                                    129
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "LocalVariableDeclaration",
+                                                                "pos": [
+                                                                    129,
+                                                                    130
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "IfStatement",
+                                                                "pos": [
+                                                                    130,
+                                                                    134
+                                                                ],
+                                                                "children": [
+                                                                    {
+                                                                        "name": "BlockStatement",
+                                                                        "pos": [
+                                                                            130,
+                                                                            134
+                                                                        ],
+                                                                        "children": [
+                                                                            {
+                                                                                "name": "StatementExpression",
+                                                                                "pos": [
+                                                                                    131,
+                                                                                    132
+                                                                                ],
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "name": "StatementExpression",
+                                                                                "pos": [
+                                                                                    132,
+                                                                                    133
+                                                                                ],
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    138,
+                    150
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            138,
+                            150
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    139,
+                                    140
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    140,
+                                    146
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            140,
+                                            146
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    142,
+                                                    143
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    146,
+                                    148
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    150,
+                    152
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getEdges": {
+        "name": "getEdges",
+        "pos": [
+            158,
+            169
+        ],
+        "children": [
+            {
+                "name": "ForStatement",
+                "pos": [
+                    161,
+                    165
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            161,
+                            165
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    162,
+                                    163
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    165,
+                    167
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

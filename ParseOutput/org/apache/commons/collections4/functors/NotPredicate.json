@@ -1,0 +1,180 @@
+{
+    "notPredicate": {
+        "name": "notPredicate",
+        "pos": [
+            45,
+            58
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    46,
+                    49
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            46,
+                            49
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    47,
+                                    48
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    49,
+                    50
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "evaluate": {
+        "name": "evaluate",
+        "pos": [
+            69,
+            79
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    70,
+                    71
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/functors/NotPredicate.iPredicate:Lorg/apache/commons/collections4/Predicate;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/Predicate.org/apache/commons/collections4/Predicate"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "ifne"
+                    ],
+                    [
+                        "11",
+                        "7"
+                    ],
+                    [
+                        "13",
+                        "iconst_1"
+                    ],
+                    [
+                        "14",
+                        "goto"
+                    ],
+                    [
+                        "15",
+                        "4"
+                    ],
+                    [
+                        "17",
+                        "iconst_0"
+                    ],
+                    [
+                        "18",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getPredicates": {
+        "name": "getPredicates",
+        "pos": [
+            79,
+            84
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    81,
+                    82
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_1"
+                    ],
+                    [
+                        "1",
+                        "anewarray"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/Predicate"
+                    ],
+                    [
+                        "4",
+                        "dup"
+                    ],
+                    [
+                        "5",
+                        "iconst_0"
+                    ],
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "getfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/collections4/functors/NotPredicate.iPredicate:Lorg/apache/commons/collections4/Predicate;"
+                    ],
+                    [
+                        "10",
+                        "aastore"
+                    ],
+                    [
+                        "11",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,686 @@
+{
+    "hash": {
+        "name": "hash",
+        "pos": [
+            86,
+            109
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    87,
+                    88
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "java/util/Arrays.hashCode:([D)I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "equals": {
+        "name": "equals",
+        "pos": [
+            75,
+            86
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    76,
+                    77
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/lang/Double"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "dload_0"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "java/lang/Double.<init>:(D)V"
+                    ],
+                    [
+                        "8",
+                        "new"
+                    ],
+                    [
+                        "9",
+                        "java/lang/Double"
+                    ],
+                    [
+                        "11",
+                        "dup"
+                    ],
+                    [
+                        "12",
+                        "dload_2"
+                    ],
+                    [
+                        "13",
+                        "invokespecial"
+                    ],
+                    [
+                        "14",
+                        "java/lang/Double.<init>:(D)V"
+                    ],
+                    [
+                        "16",
+                        "invokevirtual"
+                    ],
+                    [
+                        "17",
+                        "java/lang/Double.equals:(Ljava/lang/Object;)Z"
+                    ],
+                    [
+                        "19",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "normalizeAngle": {
+        "name": "normalizeAngle",
+        "pos": [
+            109,
+            120
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    110,
+                    111
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dload_0"
+                    ],
+                    [
+                        "1",
+                        "ldc2_w"
+                    ],
+                    [
+                        "2",
+                        "6.283185307179586"
+                    ],
+                    [
+                        "4",
+                        "dload_0"
+                    ],
+                    [
+                        "5",
+                        "ldc2_w"
+                    ],
+                    [
+                        "6",
+                        "3.141592653589793"
+                    ],
+                    [
+                        "8",
+                        "dadd"
+                    ],
+                    [
+                        "9",
+                        "dload_2"
+                    ],
+                    [
+                        "10",
+                        "dsub"
+                    ],
+                    [
+                        "11",
+                        "ldc2_w"
+                    ],
+                    [
+                        "12",
+                        "6.283185307179586"
+                    ],
+                    [
+                        "14",
+                        "ddiv"
+                    ],
+                    [
+                        "15",
+                        "invokestatic"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/util/FastMath.floor:(D)D"
+                    ],
+                    [
+                        "18",
+                        "dmul"
+                    ],
+                    [
+                        "19",
+                        "dsub"
+                    ],
+                    [
+                        "20",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "max": {
+        "name": "max",
+        "pos": [
+            120,
+            131
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    121,
+                    122
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokeinterface"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/RealFieldElement.org/apache/commons/math3/RealFieldElement"
+                    ],
+                    [
+                        "5",
+                        "0"
+                    ],
+                    [
+                        "7",
+                        "checkcast"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/RealFieldElement"
+                    ],
+                    [
+                        "10",
+                        "invokeinterface"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/RealFieldElement.abs:(D)D"
+                    ],
+                    [
+                        "13",
+                        "0"
+                    ],
+                    [
+                        "15",
+                        "dconst_0"
+                    ],
+                    [
+                        "16",
+                        "dcmpl"
+                    ],
+                    [
+                        "17",
+                        "iflt"
+                    ],
+                    [
+                        "18",
+                        "7"
+                    ],
+                    [
+                        "20",
+                        "aload_0"
+                    ],
+                    [
+                        "21",
+                        "goto"
+                    ],
+                    [
+                        "22",
+                        "4"
+                    ],
+                    [
+                        "24",
+                        "aload_1"
+                    ],
+                    [
+                        "25",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "min": {
+        "name": "min",
+        "pos": [
+            131,
+            151
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    132,
+                    133
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokeinterface"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/RealFieldElement.org/apache/commons/math3/RealFieldElement"
+                    ],
+                    [
+                        "5",
+                        "0"
+                    ],
+                    [
+                        "7",
+                        "checkcast"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/RealFieldElement"
+                    ],
+                    [
+                        "10",
+                        "invokeinterface"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/RealFieldElement.abs:(D)D"
+                    ],
+                    [
+                        "13",
+                        "0"
+                    ],
+                    [
+                        "15",
+                        "dconst_0"
+                    ],
+                    [
+                        "16",
+                        "dcmpl"
+                    ],
+                    [
+                        "17",
+                        "iflt"
+                    ],
+                    [
+                        "18",
+                        "7"
+                    ],
+                    [
+                        "20",
+                        "aload_1"
+                    ],
+                    [
+                        "21",
+                        "goto"
+                    ],
+                    [
+                        "22",
+                        "4"
+                    ],
+                    [
+                        "24",
+                        "aload_0"
+                    ],
+                    [
+                        "25",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "reduce": {
+        "name": "reduce",
+        "pos": [
+            151,
+            168
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    154,
+                    155
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dload_2"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/FastMath.abs:(D)D"
+                    ],
+                    [
+                        "4",
+                        "dstore"
+                    ],
+                    [
+                        "5",
+                        "#6"
+                    ],
+                    [
+                        "6",
+                        "dload_0"
+                    ],
+                    [
+                        "7",
+                        "dload"
+                    ],
+                    [
+                        "8",
+                        "#6"
+                    ],
+                    [
+                        "9",
+                        "dload_0"
+                    ],
+                    [
+                        "10",
+                        "dload"
+                    ],
+                    [
+                        "11",
+                        "#4"
+                    ],
+                    [
+                        "12",
+                        "dsub"
+                    ],
+                    [
+                        "13",
+                        "dload"
+                    ],
+                    [
+                        "14",
+                        "#6"
+                    ],
+                    [
+                        "15",
+                        "ddiv"
+                    ],
+                    [
+                        "16",
+                        "invokestatic"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/util/FastMath.floor:(D)D"
+                    ],
+                    [
+                        "19",
+                        "dmul"
+                    ],
+                    [
+                        "20",
+                        "dsub"
+                    ],
+                    [
+                        "21",
+                        "dload"
+                    ],
+                    [
+                        "22",
+                        "#4"
+                    ],
+                    [
+                        "23",
+                        "dsub"
+                    ],
+                    [
+                        "24",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    155,
+                    156
+                ],
+                "children": []
+            }
+        ]
+    },
+    "copySign": {
+        "name": "copySign",
+        "pos": [
+            237,
+            256
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    239,
+                    248
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            240,
+                            242
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    241,
+                                    242
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "IfStatement",
+                        "pos": [
+                            242,
+                            248
+                        ],
+                        "children": [
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    243,
+                                    245
+                                ],
+                                "children": [
+                                    {
+                                        "name": "ThrowStatement",
+                                        "pos": [
+                                            244,
+                                            245
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    245,
+                                    248
+                                ],
+                                "children": [
+                                    {
+                                        "name": "ReturnStatement",
+                                        "pos": [
+                                            246,
+                                            247
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "checkFinite": {
+        "name": "checkFinite",
+        "pos": [
+            270,
+            288
+        ],
+        "children": [
+            {
+                "name": "ForStatement",
+                "pos": [
+                    272,
+                    278
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            272,
+                            278
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    273,
+                                    274
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    274,
+                                    277
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            274,
+                                            277
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ThrowStatement",
+                                                "pos": [
+                                                    275,
+                                                    276
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "checkNotNull": {
+        "name": "checkNotNull",
+        "pos": [
+            303,
+            309
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    305,
+                    308
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            305,
+                            308
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    306,
+                                    307
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

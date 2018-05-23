@@ -1,0 +1,359 @@
+{
+    "getKey": {
+        "name": "getKey",
+        "pos": [
+            447,
+            451
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    448,
+                    449
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/StaticBucketMap$Node.key:Ljava/lang/Object;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getValue": {
+        "name": "getValue",
+        "pos": [
+            451,
+            455
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    452,
+                    453
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/StaticBucketMap$Node.value:Ljava/lang/Object;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "hashCode": {
+        "name": "hashCode",
+        "pos": [
+            455,
+            461
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    457,
+                    459
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/StaticBucketMap$Node.key:Ljava/lang/Object;"
+                    ],
+                    [
+                        "4",
+                        "ifnonnull"
+                    ],
+                    [
+                        "5",
+                        "7"
+                    ],
+                    [
+                        "7",
+                        "iconst_0"
+                    ],
+                    [
+                        "8",
+                        "goto"
+                    ],
+                    [
+                        "9",
+                        "10"
+                    ],
+                    [
+                        "11",
+                        "aload_0"
+                    ],
+                    [
+                        "12",
+                        "getfield"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/collections4/map/StaticBucketMap$Node.key:Ljava/lang/Object;"
+                    ],
+                    [
+                        "15",
+                        "invokevirtual"
+                    ],
+                    [
+                        "16",
+                        "java/lang/Object.hashCode:()I"
+                    ],
+                    [
+                        "18",
+                        "aload_0"
+                    ],
+                    [
+                        "19",
+                        "getfield"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/collections4/map/StaticBucketMap$Node.value:Ljava/lang/Object;"
+                    ],
+                    [
+                        "22",
+                        "ifnonnull"
+                    ],
+                    [
+                        "23",
+                        "7"
+                    ],
+                    [
+                        "25",
+                        "iconst_0"
+                    ],
+                    [
+                        "26",
+                        "goto"
+                    ],
+                    [
+                        "27",
+                        "10"
+                    ],
+                    [
+                        "29",
+                        "aload_0"
+                    ],
+                    [
+                        "30",
+                        "getfield"
+                    ],
+                    [
+                        "31",
+                        "org/apache/commons/collections4/map/StaticBucketMap$Node.value:Ljava/lang/Object;"
+                    ],
+                    [
+                        "33",
+                        "invokevirtual"
+                    ],
+                    [
+                        "34",
+                        "java/lang/Object.hashCode:()I"
+                    ],
+                    [
+                        "36",
+                        "ixor"
+                    ],
+                    [
+                        "37",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "equals": {
+        "name": "equals",
+        "pos": [
+            461,
+            476
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    463,
+                    466
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            463,
+                            466
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    464,
+                                    465
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    466,
+                    470
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            466,
+                            470
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    467,
+                                    468
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    470,
+                    471
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    471,
+                    474
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "setValue": {
+        "name": "setValue",
+        "pos": [
+            476,
+            481
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    477,
+                    478
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/StaticBucketMap$Node.value:Ljava/lang/Object;"
+                    ],
+                    [
+                        "4",
+                        "astore_2"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "putfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/collections4/map/StaticBucketMap$Node.value:Ljava/lang/Object;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    478,
+                    479
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "aload_2"
+                    ],
+                    [
+                        "11",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    479,
+                    480
+                ],
+                "children": []
+            }
+        ]
+    }
+}

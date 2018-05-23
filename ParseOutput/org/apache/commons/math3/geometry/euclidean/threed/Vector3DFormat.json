@@ -1,0 +1,318 @@
+{
+    "getInstance": {
+        "name": "getInstance",
+        "pos": [
+            102,
+            114
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    103,
+                    104
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/geometry/euclidean/threed/Vector3DFormat"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/util/CompositeFormat.getDefaultNumberFormat:(Ljava/util/Locale;)Ljava/text/NumberFormat;"
+                    ],
+                    [
+                        "8",
+                        "invokespecial"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/geometry/euclidean/threed/Vector3DFormat.<init>:(Ljava/text/NumberFormat;)V"
+                    ],
+                    [
+                        "11",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "format": {
+        "name": "format",
+        "pos": [
+            114,
+            128
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    117,
+                    118
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "checkcast"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/euclidean/threed/Vector3D"
+                    ],
+                    [
+                        "4",
+                        "astore"
+                    ],
+                    [
+                        "5",
+                        "#4"
+                    ],
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "aload_2"
+                    ],
+                    [
+                        "8",
+                        "aload_3"
+                    ],
+                    [
+                        "9",
+                        "iconst_3"
+                    ],
+                    [
+                        "10",
+                        "newarray"
+                    ],
+                    [
+                        "11",
+                        "7"
+                    ],
+                    [
+                        "12",
+                        "dup"
+                    ],
+                    [
+                        "13",
+                        "iconst_0"
+                    ],
+                    [
+                        "14",
+                        "aload"
+                    ],
+                    [
+                        "15",
+                        "#4"
+                    ],
+                    [
+                        "16",
+                        "invokevirtual"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/geometry/euclidean/threed/Vector3D.getX:()D"
+                    ],
+                    [
+                        "19",
+                        "dastore"
+                    ],
+                    [
+                        "20",
+                        "dup"
+                    ],
+                    [
+                        "21",
+                        "iconst_1"
+                    ],
+                    [
+                        "22",
+                        "aload"
+                    ],
+                    [
+                        "23",
+                        "#4"
+                    ],
+                    [
+                        "24",
+                        "invokevirtual"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/math3/geometry/euclidean/threed/Vector3D.getY:()D"
+                    ],
+                    [
+                        "27",
+                        "dastore"
+                    ],
+                    [
+                        "28",
+                        "dup"
+                    ],
+                    [
+                        "29",
+                        "iconst_2"
+                    ],
+                    [
+                        "30",
+                        "aload"
+                    ],
+                    [
+                        "31",
+                        "#4"
+                    ],
+                    [
+                        "32",
+                        "invokevirtual"
+                    ],
+                    [
+                        "33",
+                        "org/apache/commons/math3/geometry/euclidean/threed/Vector3D.getZ:()D"
+                    ],
+                    [
+                        "35",
+                        "dastore"
+                    ],
+                    [
+                        "36",
+                        "invokevirtual"
+                    ],
+                    [
+                        "37",
+                        "org/apache/commons/math3/geometry/euclidean/threed/Vector3DFormat.format:(Ljava/lang/StringBuffer;Ljava/text/FieldPosition;[D)Ljava/lang/StringBuffer;"
+                    ],
+                    [
+                        "39",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    118,
+                    119
+                ],
+                "children": []
+            }
+        ]
+    },
+    "parse": {
+        "name": "parse",
+        "pos": [
+            146,
+            155
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    148,
+                    149
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iconst_3"
+                    ],
+                    [
+                        "2",
+                        "aload_1"
+                    ],
+                    [
+                        "3",
+                        "aload_2"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/geometry/euclidean/threed/Vector3DFormat.parseCoordinates:(ILjava/lang/String;Ljava/text/ParsePosition;)[D"
+                    ],
+                    [
+                        "7",
+                        "astore_3"
+                    ],
+                    [
+                        "8",
+                        "aload_3"
+                    ],
+                    [
+                        "9",
+                        "ifnonnull"
+                    ],
+                    [
+                        "10",
+                        "5"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    149,
+                    152
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            149,
+                            152
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    150,
+                                    151
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    152,
+                    153
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

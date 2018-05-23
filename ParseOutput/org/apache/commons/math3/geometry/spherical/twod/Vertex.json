@@ -1,0 +1,388 @@
+{
+    "getLocation": {
+        "name": "getLocation",
+        "pos": [
+            54,
+            61
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    55,
+                    56
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/spherical/twod/Vertex.location:Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "bindWith": {
+        "name": "bindWith",
+        "pos": [
+            61,
+            75
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    62,
+                    63
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/spherical/twod/Vertex.circles:Ljava/util/List;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/List.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "pop"
+                    ],
+                    [
+                        "11",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "sharedCircleWith": {
+        "name": "sharedCircleWith",
+        "pos": [
+            75,
+            93
+        ],
+        "children": [
+            {
+                "name": "ForStatement",
+                "pos": [
+                    76,
+                    83
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            76,
+                            83
+                        ],
+                        "children": [
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    77,
+                                    82
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            77,
+                                            82
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    78,
+                                                    81
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            78,
+                                                            81
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "ReturnStatement",
+                                                                "pos": [
+                                                                    79,
+                                                                    80
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    83,
+                    84
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "setIncoming": {
+        "name": "setIncoming",
+        "pos": [
+            93,
+            101
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    94,
+                    95
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/geometry/spherical/twod/Vertex.incoming:Lorg/apache/commons/math3/geometry/spherical/twod/Edge;"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.getCircle:()Lorg/apache/commons/math3/geometry/spherical/twod/Circle;"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/geometry/spherical/twod/Vertex.bindWith:(Lorg/apache/commons/math3/geometry/spherical/twod/Circle;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    95,
+                    96
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "13",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getIncoming": {
+        "name": "getIncoming",
+        "pos": [
+            101,
+            112
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    102,
+                    103
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/spherical/twod/Vertex.incoming:Lorg/apache/commons/math3/geometry/spherical/twod/Edge;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setOutgoing": {
+        "name": "setOutgoing",
+        "pos": [
+            112,
+            120
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    113,
+                    114
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/geometry/spherical/twod/Vertex.outgoing:Lorg/apache/commons/math3/geometry/spherical/twod/Edge;"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.getCircle:()Lorg/apache/commons/math3/geometry/spherical/twod/Circle;"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/geometry/spherical/twod/Vertex.bindWith:(Lorg/apache/commons/math3/geometry/spherical/twod/Circle;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    114,
+                    115
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "13",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getOutgoing": {
+        "name": "getOutgoing",
+        "pos": [
+            120,
+            124
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    121,
+                    122
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/spherical/twod/Vertex.outgoing:Lorg/apache/commons/math3/geometry/spherical/twod/Edge;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

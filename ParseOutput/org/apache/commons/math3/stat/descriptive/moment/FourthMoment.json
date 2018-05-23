@@ -1,0 +1,323 @@
+{
+    "increment": {
+        "name": "increment",
+        "pos": [
+            88,
+            111
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    90,
+                    97
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            90,
+                            97
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    91,
+                                    92
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    92,
+                                    93
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    93,
+                                    94
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    94,
+                                    95
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    97,
+                    98
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    98,
+                    100
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    100,
+                    102
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    102,
+                    104
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    104,
+                    106
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getResult": {
+        "name": "getResult",
+        "pos": [
+            111,
+            119
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    113,
+                    114
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/moment/FourthMoment.m4:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "clear": {
+        "name": "clear",
+        "pos": [
+            119,
+            128
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    121,
+                    122
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/moment/ThirdMoment.clear:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "ldc2_w"
+                    ],
+                    [
+                        "6",
+                        "nan"
+                    ],
+                    [
+                        "8",
+                        "putfield"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/stat/descriptive/moment/FourthMoment.m4:D"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    122,
+                    123
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "11",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "copy": {
+        "name": "copy",
+        "pos": [
+            144,
+            151
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    146,
+                    147
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    147,
+                    148
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "aload_1"
+                    ],
+                    [
+                        "10",
+                        "invokestatic"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/stat/descriptive/moment/ThirdMoment.copy:(Lorg/apache/commons/math3/stat/descriptive/moment/ThirdMoment;Lorg/apache/commons/math3/stat/descriptive/moment/ThirdMoment;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    148,
+                    149
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "13",
+                        "aload_1"
+                    ],
+                    [
+                        "14",
+                        "aload_0"
+                    ],
+                    [
+                        "15",
+                        "getfield"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/stat/descriptive/moment/FourthMoment.m4:D"
+                    ],
+                    [
+                        "18",
+                        "putfield"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/stat/descriptive/moment/FourthMoment.m4:D"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    149,
+                    150
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "21",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

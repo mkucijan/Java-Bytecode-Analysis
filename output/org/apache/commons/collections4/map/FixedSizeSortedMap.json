@@ -1,0 +1,946 @@
+{
+  "fixedSizeSortedMap": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.<init>:(Ljava/util/SortedMap;)V",
+      0,
+      0
+    ],
+    "8": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/collections4/map/AbstractSortedMapDecorator.<init>:(Ljava/util/SortedMap;)V",
+      0,
+      0
+    ],
+    "5": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getSortedMap": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.map:Ljava/util/Map;",
+      0,
+      0
+    ],
+    "4": [
+      "checkcast",
+      0,
+      0
+    ],
+    "5": [
+      "java/util/SortedMap",
+      0,
+      0
+    ],
+    "7": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "writeObject": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "java/io/ObjectOutputStream.defaultWriteObject:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_1",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "getfield",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.map:Ljava/util/Map;",
+      0,
+      0
+    ],
+    "9": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "10": [
+      "java/io/ObjectOutputStream.writeObject:(Ljava/lang/Object;)V",
+      0,
+      0
+    ],
+    "12": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "readObject": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "java/io/ObjectInputStream.defaultReadObject:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "java/io/ObjectInputStream.readObject:()Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "9": [
+      "checkcast",
+      0,
+      0
+    ],
+    "10": [
+      "java/util/Map",
+      0,
+      0
+    ],
+    "12": [
+      "putfield",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.map:Ljava/util/Map;",
+      0,
+      0
+    ],
+    "15": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "put": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.map:Ljava/util/Map;",
+      1,
+      1
+    ],
+    "4": [
+      "aload_1",
+      1,
+      1
+    ],
+    "5": [
+      "invokeinterface",
+      1,
+      1
+    ],
+    "6": [
+      "java/util/Map.java/lang/IllegalArgumentException",
+      1,
+      1
+    ],
+    "8": [
+      "0",
+      1,
+      1
+    ],
+    "10": [
+      "ifne",
+      1,
+      1
+    ],
+    "11": [
+      "13",
+      1,
+      1
+    ],
+    "13": [
+      "new",
+      1,
+      0
+    ],
+    "14": [
+      "java/lang/IllegalArgumentException",
+      1,
+      0
+    ],
+    "16": [
+      "dup",
+      1,
+      0
+    ],
+    "17": [
+      "ldc",
+      1,
+      0
+    ],
+    "18": [
+      "Cannot put new key/value pair - Map is fixed size",
+      1,
+      0
+    ],
+    "19": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "20": [
+      "java/lang/IllegalArgumentException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "22": [
+      "athrow",
+      1,
+      0
+    ],
+    "23": [
+      "aload_0",
+      0,
+      0
+    ],
+    "24": [
+      "getfield",
+      0,
+      0
+    ],
+    "25": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.map:Ljava/util/Map;",
+      0,
+      0
+    ],
+    "27": [
+      "aload_1",
+      0,
+      0
+    ],
+    "28": [
+      "aload_2",
+      0,
+      0
+    ],
+    "29": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "30": [
+      "java/util/Map.keySet:()Ljava/util/Set;",
+      0,
+      0
+    ],
+    "32": [
+      "0",
+      0,
+      0
+    ],
+    "34": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "putAll": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "invokeinterface",
+      1,
+      1
+    ],
+    "2": [
+      "java/util/Map.org/apache/commons/collections4/CollectionUtils",
+      1,
+      1
+    ],
+    "4": [
+      "0",
+      1,
+      1
+    ],
+    "6": [
+      "aload_0",
+      1,
+      1
+    ],
+    "7": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "8": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.keySet:()Ljava/util/Set;",
+      1,
+      1
+    ],
+    "10": [
+      "invokestatic",
+      1,
+      1
+    ],
+    "11": [
+      "org/apache/commons/collections4/CollectionUtils.isSubCollection:(Ljava/util/Collection;Ljava/util/Collection;)Z",
+      1,
+      1
+    ],
+    "13": [
+      "ifeq",
+      1,
+      1
+    ],
+    "14": [
+      "13",
+      1,
+      1
+    ],
+    "16": [
+      "new",
+      1,
+      0
+    ],
+    "17": [
+      "java/lang/IllegalArgumentException",
+      1,
+      0
+    ],
+    "19": [
+      "dup",
+      1,
+      0
+    ],
+    "20": [
+      "ldc",
+      1,
+      0
+    ],
+    "21": [
+      "Cannot put new key/value pair - Map is fixed size",
+      1,
+      0
+    ],
+    "22": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "23": [
+      "java/lang/IllegalArgumentException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "25": [
+      "athrow",
+      1,
+      0
+    ],
+    "26": [
+      "aload_0",
+      0,
+      0
+    ],
+    "27": [
+      "getfield",
+      0,
+      0
+    ],
+    "28": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.map:Ljava/util/Map;",
+      0,
+      0
+    ],
+    "30": [
+      "aload_1",
+      0,
+      0
+    ],
+    "31": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "32": [
+      "java/util/Map.java/lang/UnsupportedOperationException",
+      0,
+      0
+    ],
+    "34": [
+      "0",
+      0,
+      0
+    ],
+    "36": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "clear": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "java/lang/UnsupportedOperationException",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "ldc",
+      0,
+      0
+    ],
+    "5": [
+      "Map is fixed size",
+      0,
+      0
+    ],
+    "6": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "7": [
+      "java/lang/UnsupportedOperationException.<init>:(Ljava/lang/String;)V",
+      0,
+      0
+    ],
+    "9": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "remove": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "java/lang/UnsupportedOperationException",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "ldc",
+      0,
+      0
+    ],
+    "5": [
+      "Map is fixed size",
+      0,
+      0
+    ],
+    "6": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "7": [
+      "java/lang/UnsupportedOperationException.<init>:(Ljava/lang/String;)V",
+      0,
+      0
+    ],
+    "9": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "entrySet": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.map:Ljava/util/Map;",
+      0,
+      0
+    ],
+    "4": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "5": [
+      "java/util/Map.org/apache/commons/collections4/set/UnmodifiableSet",
+      0,
+      0
+    ],
+    "7": [
+      "0",
+      0,
+      0
+    ],
+    "9": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "10": [
+      "org/apache/commons/collections4/set/UnmodifiableSet.unmodifiableSet:(Ljava/util/Set;)Ljava/util/Set;",
+      0,
+      0
+    ],
+    "12": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "keySet": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.map:Ljava/util/Map;",
+      0,
+      0
+    ],
+    "4": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "5": [
+      "java/util/Map.org/apache/commons/collections4/CollectionUtils",
+      0,
+      0
+    ],
+    "7": [
+      "0",
+      0,
+      0
+    ],
+    "9": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "10": [
+      "org/apache/commons/collections4/set/UnmodifiableSet.unmodifiableSet:(Ljava/util/Set;)Ljava/util/Set;",
+      0,
+      0
+    ],
+    "12": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "values": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.map:Ljava/util/Map;",
+      0,
+      0
+    ],
+    "4": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "5": [
+      "java/util/Map.org/apache/commons/collections4/collection/UnmodifiableCollection",
+      0,
+      0
+    ],
+    "7": [
+      "0",
+      0,
+      0
+    ],
+    "9": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "10": [
+      "org/apache/commons/collections4/collection/UnmodifiableCollection.unmodifiableCollection:(Ljava/util/Collection;)Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "12": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "subMap": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.getSortedMap:()Ljava/util/SortedMap;",
+      0,
+      0
+    ],
+    "8": [
+      "aload_1",
+      0,
+      0
+    ],
+    "9": [
+      "aload_2",
+      0,
+      0
+    ],
+    "10": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "11": [
+      "java/util/SortedMap.headMap:(Ljava/lang/Object;)Ljava/util/SortedMap;",
+      0,
+      0
+    ],
+    "13": [
+      "0",
+      0,
+      0
+    ],
+    "15": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "16": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.<init>:(Ljava/util/SortedMap;)V",
+      0,
+      0
+    ],
+    "18": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "headMap": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.getSortedMap:()Ljava/util/SortedMap;",
+      0,
+      0
+    ],
+    "8": [
+      "aload_1",
+      0,
+      0
+    ],
+    "9": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "10": [
+      "java/util/SortedMap.tailMap:(Ljava/lang/Object;)Ljava/util/SortedMap;",
+      0,
+      0
+    ],
+    "12": [
+      "0",
+      0,
+      0
+    ],
+    "14": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "15": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.<init>:(Ljava/util/SortedMap;)V",
+      0,
+      0
+    ],
+    "17": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "tailMap": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.getSortedMap:()Ljava/util/SortedMap;",
+      0,
+      0
+    ],
+    "8": [
+      "aload_1",
+      0,
+      0
+    ],
+    "9": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "10": [
+      "java/util/SortedMap.size:()I",
+      0,
+      0
+    ],
+    "12": [
+      "0",
+      0,
+      0
+    ],
+    "14": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "15": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.<init>:(Ljava/util/SortedMap;)V",
+      0,
+      0
+    ],
+    "17": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "isFull": {
+    "0": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "1": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "maxSize": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/FixedSizeSortedMap.size:()I",
+      0,
+      0
+    ],
+    "4": [
+      "ireturn",
+      0,
+      0
+    ]
+  }
+}

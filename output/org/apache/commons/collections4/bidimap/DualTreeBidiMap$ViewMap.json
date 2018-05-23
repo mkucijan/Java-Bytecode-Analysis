@@ -1,0 +1,565 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "new",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap",
+      0,
+      0
+    ],
+    "4": [
+      "dup",
+      0,
+      0
+    ],
+    "5": [
+      "aload_2",
+      0,
+      0
+    ],
+    "6": [
+      "aload_1",
+      0,
+      0
+    ],
+    "7": [
+      "getfield",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap.reverseMap:Ljava/util/Map;",
+      0,
+      0
+    ],
+    "10": [
+      "aload_1",
+      0,
+      0
+    ],
+    "11": [
+      "getfield",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap.inverseBidiMap:Lorg/apache/commons/collections4/BidiMap;",
+      0,
+      0
+    ],
+    "14": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "15": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap.<init>:(Ljava/util/Map;Ljava/util/Map;Lorg/apache/commons/collections4/BidiMap;)V",
+      0,
+      0
+    ],
+    "17": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "18": [
+      "org/apache/commons/collections4/map/AbstractSortedMapDecorator.<init>:(Ljava/util/SortedMap;)V",
+      0,
+      0
+    ],
+    "20": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "containsValue": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap$ViewMap.decorated:()Lorg/apache/commons/collections4/bidimap/DualTreeBidiMap;",
+      0,
+      0
+    ],
+    "4": [
+      "getfield",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap.normalMap:Ljava/util/Map;",
+      0,
+      0
+    ],
+    "7": [
+      "aload_1",
+      0,
+      0
+    ],
+    "8": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "9": [
+      "java/util/Map.keySet:()Ljava/util/Set;",
+      0,
+      0
+    ],
+    "11": [
+      "0",
+      0,
+      0
+    ],
+    "13": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "clear": {
+    "0": [
+      "aload_0",
+      1,
+      4
+    ],
+    "1": [
+      "invokevirtual",
+      1,
+      4
+    ],
+    "2": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap$ViewMap.keySet:()Ljava/util/Set;",
+      1,
+      4
+    ],
+    "4": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "5": [
+      "java/util/Set.java/util/Iterator",
+      1,
+      4
+    ],
+    "7": [
+      "0",
+      1,
+      4
+    ],
+    "9": [
+      "astore_1",
+      1,
+      4
+    ],
+    "10": [
+      "aload_1",
+      1,
+      4
+    ],
+    "11": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "12": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "14": [
+      "0",
+      1,
+      4
+    ],
+    "16": [
+      "ifeq",
+      1,
+      4
+    ],
+    "17": [
+      "19",
+      1,
+      4
+    ],
+    "19": [
+      "aload_1",
+      1,
+      0
+    ],
+    "20": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "21": [
+      "java/util/Iterator.remove:()V",
+      1,
+      0
+    ],
+    "23": [
+      "0",
+      1,
+      0
+    ],
+    "25": [
+      "pop",
+      1,
+      0
+    ],
+    "26": [
+      "aload_1",
+      1,
+      0
+    ],
+    "27": [
+      "invokeinterface",
+      1,
+      0
+    ],
+    "28": [
+      "java/util/Iterator.org/apache/commons/collections4/bidimap/DualTreeBidiMap$ViewMap",
+      1,
+      0
+    ],
+    "30": [
+      "0",
+      1,
+      0
+    ],
+    "32": [
+      "goto",
+      1,
+      4
+    ],
+    "33": [
+      "-22",
+      1,
+      4
+    ],
+    "35": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "headMap": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap$ViewMap",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap$ViewMap.decorated:()Lorg/apache/commons/collections4/bidimap/DualTreeBidiMap;",
+      0,
+      0
+    ],
+    "8": [
+      "aload_0",
+      0,
+      0
+    ],
+    "9": [
+      "aload_1",
+      0,
+      0
+    ],
+    "10": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "11": [
+      "org/apache/commons/collections4/map/AbstractSortedMapDecorator.headMap:(Ljava/lang/Object;)Ljava/util/SortedMap;",
+      0,
+      0
+    ],
+    "13": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "14": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap$ViewMap.<init>:(Lorg/apache/commons/collections4/bidimap/DualTreeBidiMap;Ljava/util/SortedMap;)V",
+      0,
+      0
+    ],
+    "16": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "tailMap": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap$ViewMap",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap$ViewMap.decorated:()Lorg/apache/commons/collections4/bidimap/DualTreeBidiMap;",
+      0,
+      0
+    ],
+    "8": [
+      "aload_0",
+      0,
+      0
+    ],
+    "9": [
+      "aload_1",
+      0,
+      0
+    ],
+    "10": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "11": [
+      "org/apache/commons/collections4/map/AbstractSortedMapDecorator.tailMap:(Ljava/lang/Object;)Ljava/util/SortedMap;",
+      0,
+      0
+    ],
+    "13": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "14": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap$ViewMap.<init>:(Lorg/apache/commons/collections4/bidimap/DualTreeBidiMap;Ljava/util/SortedMap;)V",
+      0,
+      0
+    ],
+    "16": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "subMap": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap$ViewMap",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap$ViewMap.decorated:()Lorg/apache/commons/collections4/bidimap/DualTreeBidiMap;",
+      0,
+      0
+    ],
+    "8": [
+      "aload_0",
+      0,
+      0
+    ],
+    "9": [
+      "aload_1",
+      0,
+      0
+    ],
+    "10": [
+      "aload_2",
+      0,
+      0
+    ],
+    "11": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/collections4/map/AbstractSortedMapDecorator.subMap:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedMap;",
+      0,
+      0
+    ],
+    "14": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "15": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap$ViewMap.<init>:(Lorg/apache/commons/collections4/bidimap/DualTreeBidiMap;Ljava/util/SortedMap;)V",
+      0,
+      0
+    ],
+    "17": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "decorated": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap$ViewMap.decorated:()Lorg/apache/commons/collections4/bidimap/DualTreeBidiMap;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "previousKey": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap$ViewMap.decorated:()Lorg/apache/commons/collections4/bidimap/DualTreeBidiMap;",
+      0,
+      0
+    ],
+    "4": [
+      "aload_1",
+      0,
+      0
+    ],
+    "5": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap.previousKey:(Ljava/lang/Object;)Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "8": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "nextKey": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap$ViewMap.decorated:()Lorg/apache/commons/collections4/bidimap/DualTreeBidiMap;",
+      0,
+      0
+    ],
+    "4": [
+      "aload_1",
+      0,
+      0
+    ],
+    "5": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/bidimap/DualTreeBidiMap.nextKey:(Ljava/lang/Object;)Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "8": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

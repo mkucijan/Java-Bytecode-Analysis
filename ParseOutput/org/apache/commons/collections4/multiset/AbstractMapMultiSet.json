@@ -1,0 +1,1812 @@
+{
+    "getMap": {
+        "name": "getMap",
+        "pos": [
+            74,
+            85
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    75,
+                    76
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.map:Ljava/util/Map;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setMap": {
+        "name": "setMap",
+        "pos": [
+            85,
+            95
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    86,
+                    87
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.map:Ljava/util/Map;"
+                    ],
+                    [
+                        "5",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "size": {
+        "name": "size",
+        "pos": [
+            95,
+            105
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    97,
+                    98
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.size:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isEmpty": {
+        "name": "isEmpty",
+        "pos": [
+            105,
+            117
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    107,
+                    108
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.map:Ljava/util/Map;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getCount": {
+        "name": "getCount",
+        "pos": [
+            117,
+            134
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    119,
+                    120
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.map:Ljava/util/Map;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/Map.org/apache/commons/collections4/multiset/AbstractMapMultiSet$MutableInteger"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "checkcast"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet$MutableInteger"
+                    ],
+                    [
+                        "13",
+                        "astore_2"
+                    ],
+                    [
+                        "14",
+                        "aload_2"
+                    ],
+                    [
+                        "15",
+                        "ifnull"
+                    ],
+                    [
+                        "16",
+                        "8"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    120,
+                    123
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            120,
+                            123
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    121,
+                                    122
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    123,
+                    124
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "contains": {
+        "name": "contains",
+        "pos": [
+            134,
+            146
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    136,
+                    137
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.map:Ljava/util/Map;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/Map.org/apache/commons/collections4/multiset/AbstractMapMultiSet$MapBasedMultiSetIterator"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "iterator": {
+        "name": "iterator",
+        "pos": [
+            146,
+            154
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    148,
+                    149
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet$MapBasedMultiSetIterator"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet$MapBasedMultiSetIterator.<init>:(Lorg/apache/commons/collections4/multiset/AbstractMapMultiSet;)V"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "add": {
+        "name": "add",
+        "pos": [
+            217,
+            242
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    219,
+                    223
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            219,
+                            223
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    220,
+                                    221
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    223,
+                    224
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    224,
+                    226
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    226,
+                    235
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            226,
+                            235
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    227,
+                                    228
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    228,
+                                    229
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    229,
+                                    234
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            229,
+                                            231
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    230,
+                                                    231
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            231,
+                                            234
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    232,
+                                                    233
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    235,
+                    236
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "clear": {
+        "name": "clear",
+        "pos": [
+            242,
+            249
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    244,
+                    245
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "dup"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.modCount:I"
+                    ],
+                    [
+                        "5",
+                        "iconst_1"
+                    ],
+                    [
+                        "6",
+                        "iadd"
+                    ],
+                    [
+                        "7",
+                        "putfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.modCount:I"
+                    ],
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "getfield"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.map:Ljava/util/Map;"
+                    ],
+                    [
+                        "14",
+                        "invokeinterface"
+                    ],
+                    [
+                        "15",
+                        "java/util/Map.remove:(Ljava/lang/Object;)Ljava/lang/Object;"
+                    ],
+                    [
+                        "17",
+                        "0"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    245,
+                    246
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "19",
+                        "aload_0"
+                    ],
+                    [
+                        "20",
+                        "iconst_0"
+                    ],
+                    [
+                        "21",
+                        "putfield"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.size:I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    246,
+                    247
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "24",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "remove": {
+        "name": "remove",
+        "pos": [
+            249,
+            277
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    251,
+                    255
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            251,
+                            255
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    252,
+                                    253
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    255,
+                    256
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    256,
+                    259
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            256,
+                            259
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    257,
+                                    258
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    259,
+                    260
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    260,
+                    270
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            260,
+                            270
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    261,
+                                    262
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    262,
+                                    269
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            262,
+                                            265
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    263,
+                                                    264
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    264,
+                                                    265
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            265,
+                                            269
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    266,
+                                                    267
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    267,
+                                                    268
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    270,
+                    271
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "createUniqueSetIterator": {
+        "name": "createUniqueSetIterator",
+        "pos": [
+            304,
+            309
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    306,
+                    307
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet$UniqueSetIterator"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.getMap:()Ljava/util/Map;"
+                    ],
+                    [
+                        "8",
+                        "invokeinterface"
+                    ],
+                    [
+                        "9",
+                        "java/util/Map.java/util/Set"
+                    ],
+                    [
+                        "11",
+                        "0"
+                    ],
+                    [
+                        "13",
+                        "invokeinterface"
+                    ],
+                    [
+                        "14",
+                        "java/util/Set.<init>:(Ljava/util/Iterator;Lorg/apache/commons/collections4/multiset/AbstractMapMultiSet;)V"
+                    ],
+                    [
+                        "16",
+                        "0"
+                    ],
+                    [
+                        "18",
+                        "aload_0"
+                    ],
+                    [
+                        "19",
+                        "invokespecial"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet$UniqueSetIterator.<init>:(Ljava/util/Iterator;Lorg/apache/commons/collections4/multiset/AbstractMapMultiSet;)V"
+                    ],
+                    [
+                        "22",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "uniqueElements": {
+        "name": "uniqueElements",
+        "pos": [
+            309,
+            314
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    311,
+                    312
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.map:Ljava/util/Map;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Map.org/apache/commons/collections4/multiset/AbstractMapMultiSet$EntrySetIterator"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "createEntrySetIterator": {
+        "name": "createEntrySetIterator",
+        "pos": [
+            314,
+            323
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    316,
+                    317
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet$EntrySetIterator"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.map:Ljava/util/Map;"
+                    ],
+                    [
+                        "8",
+                        "invokeinterface"
+                    ],
+                    [
+                        "9",
+                        "java/util/Map.java/io/ObjectOutputStream"
+                    ],
+                    [
+                        "11",
+                        "0"
+                    ],
+                    [
+                        "13",
+                        "invokeinterface"
+                    ],
+                    [
+                        "14",
+                        "java/util/Set.<init>:(Ljava/util/Iterator;Lorg/apache/commons/collections4/multiset/AbstractMapMultiSet;)V"
+                    ],
+                    [
+                        "16",
+                        "0"
+                    ],
+                    [
+                        "18",
+                        "aload_0"
+                    ],
+                    [
+                        "19",
+                        "invokespecial"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet$EntrySetIterator.<init>:(Ljava/util/Iterator;Lorg/apache/commons/collections4/multiset/AbstractMapMultiSet;)V"
+                    ],
+                    [
+                        "22",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "doWriteObject": {
+        "name": "doWriteObject",
+        "pos": [
+            446,
+            462
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    448,
+                    449
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.map:Ljava/util/Map;"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/Map.org/apache/commons/collections4/multiset/AbstractMapMultiSet$EntrySetIterator"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "java/io/ObjectOutputStream.writeInt:(I)V"
+                    ],
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "getfield"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.map:Ljava/util/Map;"
+                    ],
+                    [
+                        "17",
+                        "invokeinterface"
+                    ],
+                    [
+                        "18",
+                        "java/util/Map.java/io/ObjectOutputStream"
+                    ],
+                    [
+                        "20",
+                        "0"
+                    ],
+                    [
+                        "22",
+                        "invokeinterface"
+                    ],
+                    [
+                        "23",
+                        "java/util/Set.<init>:(Ljava/util/Iterator;Lorg/apache/commons/collections4/multiset/AbstractMapMultiSet;)V"
+                    ],
+                    [
+                        "25",
+                        "0"
+                    ],
+                    [
+                        "27",
+                        "astore_2"
+                    ],
+                    [
+                        "28",
+                        "aload_2"
+                    ],
+                    [
+                        "29",
+                        "invokeinterface"
+                    ],
+                    [
+                        "30",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "32",
+                        "0"
+                    ],
+                    [
+                        "34",
+                        "ifeq"
+                    ],
+                    [
+                        "35",
+                        "42"
+                    ],
+                    [
+                        "37",
+                        "aload_2"
+                    ],
+                    [
+                        "38",
+                        "invokeinterface"
+                    ],
+                    [
+                        "39",
+                        "java/util/Iterator.java/util/Map$Entry"
+                    ],
+                    [
+                        "41",
+                        "0"
+                    ],
+                    [
+                        "43",
+                        "checkcast"
+                    ],
+                    [
+                        "44",
+                        "java/util/Map$Entry"
+                    ],
+                    [
+                        "46",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    449,
+                    453
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            449,
+                            453
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    450,
+                                    451
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    451,
+                                    452
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "doReadObject": {
+        "name": "doReadObject",
+        "pos": [
+            462,
+            481
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    465,
+                    466
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectInputStream.readInt:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_2"
+                    ],
+                    [
+                        "5",
+                        "iconst_0"
+                    ],
+                    [
+                        "6",
+                        "istore_3"
+                    ],
+                    [
+                        "7",
+                        "iload_3"
+                    ],
+                    [
+                        "8",
+                        "iload_2"
+                    ],
+                    [
+                        "9",
+                        "if_icmpge"
+                    ],
+                    [
+                        "10",
+                        "53"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    466,
+                    473
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            466,
+                            473
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    467,
+                                    469
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    469,
+                                    470
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    470,
+                                    471
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    471,
+                                    472
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "toArray": {
+        "name": "toArray",
+        "pos": [
+            507,
+            534
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    509,
+                    510
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.size:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_2"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "arraylength"
+                    ],
+                    [
+                        "7",
+                        "iload_2"
+                    ],
+                    [
+                        "8",
+                        "if_icmpge"
+                    ],
+                    [
+                        "9",
+                        "23"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    510,
+                    516
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            510,
+                            516
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    511,
+                                    513
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    513,
+                                    514
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    516,
+                    517
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    517,
+                    527
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            517,
+                            527
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    518,
+                                    519
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    519,
+                                    520
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    520,
+                                    526
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            520,
+                                            526
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    522,
+                                                    524
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    524,
+                                                    525
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    527,
+                    530
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            527,
+                            530
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    528,
+                                    529
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    530,
+                    531
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "equals": {
+        "name": "equals",
+        "pos": [
+            534,
+            554
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    536,
+                    539
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            536,
+                            539
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    537,
+                                    538
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    539,
+                    542
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            539,
+                            542
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    540,
+                                    541
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    542,
+                    543
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    543,
+                    546
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            543,
+                            546
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    544,
+                                    545
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    546,
+                    551
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            546,
+                            551
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    547,
+                                    550
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            547,
+                                            550
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    548,
+                                                    549
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    551,
+                    552
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "hashCode": {
+        "name": "hashCode",
+        "pos": [
+            554,
+            564
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    556,
+                    557
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_0"
+                    ],
+                    [
+                        "1",
+                        "istore_1"
+                    ],
+                    [
+                        "2",
+                        "aload_0"
+                    ],
+                    [
+                        "3",
+                        "getfield"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/collections4/multiset/AbstractMapMultiSet.map:Ljava/util/Map;"
+                    ],
+                    [
+                        "6",
+                        "invokeinterface"
+                    ],
+                    [
+                        "7",
+                        "java/util/Map.java/io/ObjectOutputStream"
+                    ],
+                    [
+                        "9",
+                        "0"
+                    ],
+                    [
+                        "11",
+                        "invokeinterface"
+                    ],
+                    [
+                        "12",
+                        "java/util/Set.<init>:(Ljava/util/Iterator;Lorg/apache/commons/collections4/multiset/AbstractMapMultiSet;)V"
+                    ],
+                    [
+                        "14",
+                        "0"
+                    ],
+                    [
+                        "16",
+                        "astore_2"
+                    ],
+                    [
+                        "17",
+                        "aload_2"
+                    ],
+                    [
+                        "18",
+                        "invokeinterface"
+                    ],
+                    [
+                        "19",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "21",
+                        "0"
+                    ],
+                    [
+                        "23",
+                        "ifeq"
+                    ],
+                    [
+                        "24",
+                        "58"
+                    ],
+                    [
+                        "26",
+                        "aload_2"
+                    ],
+                    [
+                        "27",
+                        "invokeinterface"
+                    ],
+                    [
+                        "28",
+                        "java/util/Iterator.java/util/Map$Entry"
+                    ],
+                    [
+                        "30",
+                        "0"
+                    ],
+                    [
+                        "32",
+                        "checkcast"
+                    ],
+                    [
+                        "33",
+                        "java/util/Map$Entry"
+                    ],
+                    [
+                        "35",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    557,
+                    562
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            557,
+                            562
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    558,
+                                    559
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    559,
+                                    560
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    560,
+                                    561
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    562,
+                    563
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

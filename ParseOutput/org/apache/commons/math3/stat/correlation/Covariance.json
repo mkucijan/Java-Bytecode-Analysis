@@ -1,0 +1,289 @@
+{
+    "getCovarianceMatrix": {
+        "name": "getCovarianceMatrix",
+        "pos": [
+            146,
+            155
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    147,
+                    148
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/correlation/Covariance.covarianceMatrix:Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getN": {
+        "name": "getN",
+        "pos": [
+            155,
+            167
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    156,
+                    157
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/correlation/Covariance.n:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "computeCovarianceMatrix": {
+        "name": "computeCovarianceMatrix",
+        "pos": [
+            222,
+            239
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    224,
+                    225
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "iconst_1"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/stat/correlation/Covariance.computeCovarianceMatrix:([[DZ)Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "6",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "covariance": {
+        "name": "covariance",
+        "pos": [
+            274,
+            286
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    276,
+                    277
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "aload_2"
+                    ],
+                    [
+                        "3",
+                        "iconst_1"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/stat/correlation/Covariance.covariance:([D[DZ)D"
+                    ],
+                    [
+                        "7",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "checkSufficientData": {
+        "name": "checkSufficientData",
+        "pos": [
+            286,
+            295
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    287,
+                    288
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokeinterface"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealMatrix.computeCovarianceMatrix:(Lorg/apache/commons/math3/linear/RealMatrix;Z)Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "0"
+                    ],
+                    [
+                        "6",
+                        "istore_2"
+                    ],
+                    [
+                        "7",
+                        "aload_1"
+                    ],
+                    [
+                        "8",
+                        "invokeinterface"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/stat/descriptive/moment/Variance"
+                    ],
+                    [
+                        "11",
+                        "0"
+                    ],
+                    [
+                        "13",
+                        "istore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    288,
+                    289
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "14",
+                        "iload_2"
+                    ],
+                    [
+                        "15",
+                        "iconst_2"
+                    ],
+                    [
+                        "16",
+                        "if_icmplt"
+                    ],
+                    [
+                        "17",
+                        "8"
+                    ],
+                    [
+                        "19",
+                        "iload_3"
+                    ],
+                    [
+                        "20",
+                        "iconst_1"
+                    ],
+                    [
+                        "21",
+                        "if_icmpge"
+                    ],
+                    [
+                        "22",
+                        "32"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    289,
+                    294
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            289,
+                            294
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    290,
+                                    293
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

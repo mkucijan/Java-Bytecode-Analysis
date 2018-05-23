@@ -1,0 +1,234 @@
+{
+    "predicatedSet": {
+        "name": "predicatedSet",
+        "pos": [
+            59,
+            75
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    60,
+                    61
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/set/PredicatedSet"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokespecial"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/set/PredicatedSet.<init>:(Ljava/util/Set;Lorg/apache/commons/collections4/Predicate;)V"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "decorated": {
+        "name": "decorated",
+        "pos": [
+            84,
+            89
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    86,
+                    87
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/collection/PredicatedCollection.decorated:()Ljava/util/Collection;"
+                    ],
+                    [
+                        "4",
+                        "checkcast"
+                    ],
+                    [
+                        "5",
+                        "java/util/Set"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "equals": {
+        "name": "equals",
+        "pos": [
+            89,
+            94
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    91,
+                    92
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "if_acmpeq"
+                    ],
+                    [
+                        "3",
+                        "16"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/set/PredicatedSet.decorated:()Ljava/util/Set;"
+                    ],
+                    [
+                        "9",
+                        "aload_1"
+                    ],
+                    [
+                        "10",
+                        "invokeinterface"
+                    ],
+                    [
+                        "11",
+                        "java/util/Set.hashCode:()I"
+                    ],
+                    [
+                        "13",
+                        "0"
+                    ],
+                    [
+                        "15",
+                        "ifeq"
+                    ],
+                    [
+                        "16",
+                        "7"
+                    ],
+                    [
+                        "18",
+                        "iconst_1"
+                    ],
+                    [
+                        "19",
+                        "goto"
+                    ],
+                    [
+                        "20",
+                        "4"
+                    ],
+                    [
+                        "22",
+                        "iconst_0"
+                    ],
+                    [
+                        "23",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "hashCode": {
+        "name": "hashCode",
+        "pos": [
+            94,
+            99
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    96,
+                    97
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/set/PredicatedSet.decorated:()Ljava/util/Set;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Set.org/apache/commons/collections4/collection/PredicatedCollection"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

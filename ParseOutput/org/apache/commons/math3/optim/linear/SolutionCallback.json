@@ -1,0 +1,191 @@
+{
+    "setTableau": {
+        "name": "setTableau",
+        "pos": [
+            38,
+            51
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    39,
+                    40
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/optim/linear/SolutionCallback.tableau:Lorg/apache/commons/math3/optim/linear/SimplexTableau;"
+                    ],
+                    [
+                        "5",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSolution": {
+        "name": "getSolution",
+        "pos": [
+            51,
+            59
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    52,
+                    53
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SolutionCallback.tableau:Lorg/apache/commons/math3/optim/linear/SimplexTableau;"
+                    ],
+                    [
+                        "4",
+                        "ifnull"
+                    ],
+                    [
+                        "5",
+                        "13"
+                    ],
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "getfield"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/optim/linear/SolutionCallback.tableau:Lorg/apache/commons/math3/optim/linear/SimplexTableau;"
+                    ],
+                    [
+                        "11",
+                        "invokevirtual"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getSolution:()Lorg/apache/commons/math3/optim/PointValuePair;"
+                    ],
+                    [
+                        "14",
+                        "goto"
+                    ],
+                    [
+                        "15",
+                        "4"
+                    ],
+                    [
+                        "17",
+                        "aconst_null"
+                    ],
+                    [
+                        "18",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSolutionOptimal": {
+        "name": "isSolutionOptimal",
+        "pos": [
+            59,
+            62
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    60,
+                    61
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SolutionCallback.tableau:Lorg/apache/commons/math3/optim/linear/SimplexTableau;"
+                    ],
+                    [
+                        "4",
+                        "ifnull"
+                    ],
+                    [
+                        "5",
+                        "13"
+                    ],
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "getfield"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/optim/linear/SolutionCallback.tableau:Lorg/apache/commons/math3/optim/linear/SimplexTableau;"
+                    ],
+                    [
+                        "11",
+                        "invokevirtual"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.isOptimal:()Z"
+                    ],
+                    [
+                        "14",
+                        "goto"
+                    ],
+                    [
+                        "15",
+                        "4"
+                    ],
+                    [
+                        "17",
+                        "iconst_0"
+                    ],
+                    [
+                        "18",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

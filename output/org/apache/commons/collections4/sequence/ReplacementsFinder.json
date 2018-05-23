@@ -1,0 +1,530 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "new",
+      0,
+      0
+    ],
+    "6": [
+      "java/util/ArrayList",
+      0,
+      0
+    ],
+    "8": [
+      "dup",
+      0,
+      0
+    ],
+    "9": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "10": [
+      "java/util/ArrayList.<init>:()V",
+      0,
+      0
+    ],
+    "12": [
+      "putfield",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.pendingInsertions:Ljava/util/List;",
+      0,
+      0
+    ],
+    "15": [
+      "aload_0",
+      0,
+      0
+    ],
+    "16": [
+      "new",
+      0,
+      0
+    ],
+    "17": [
+      "java/util/ArrayList",
+      0,
+      0
+    ],
+    "19": [
+      "dup",
+      0,
+      0
+    ],
+    "20": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "21": [
+      "java/util/ArrayList.<init>:()V",
+      0,
+      0
+    ],
+    "23": [
+      "putfield",
+      0,
+      0
+    ],
+    "24": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.pendingDeletions:Ljava/util/List;",
+      0,
+      0
+    ],
+    "26": [
+      "aload_0",
+      0,
+      0
+    ],
+    "27": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "28": [
+      "putfield",
+      0,
+      0
+    ],
+    "29": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.skipped:I",
+      0,
+      0
+    ],
+    "31": [
+      "aload_0",
+      0,
+      0
+    ],
+    "32": [
+      "aload_1",
+      0,
+      0
+    ],
+    "33": [
+      "putfield",
+      0,
+      0
+    ],
+    "34": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.handler:Lorg/apache/commons/collections4/sequence/ReplacementsHandler;",
+      0,
+      0
+    ],
+    "36": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "visitInsertCommand": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.pendingInsertions:Ljava/util/List;",
+      0,
+      0
+    ],
+    "4": [
+      "aload_1",
+      0,
+      0
+    ],
+    "5": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "6": [
+      "java/util/List.isEmpty:()Z",
+      0,
+      0
+    ],
+    "8": [
+      "0",
+      0,
+      0
+    ],
+    "10": [
+      "pop",
+      0,
+      0
+    ],
+    "11": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "visitKeepCommand": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.pendingDeletions:Ljava/util/List;",
+      1,
+      1
+    ],
+    "4": [
+      "invokeinterface",
+      1,
+      1
+    ],
+    "5": [
+      "java/util/List.org/apache/commons/collections4/sequence/ReplacementsHandler",
+      1,
+      1
+    ],
+    "7": [
+      "0",
+      1,
+      1
+    ],
+    "9": [
+      "ifeq",
+      1,
+      1
+    ],
+    "10": [
+      "28",
+      1,
+      1
+    ],
+    "12": [
+      "aload_0",
+      1,
+      1
+    ],
+    "13": [
+      "getfield",
+      1,
+      1
+    ],
+    "14": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.pendingInsertions:Ljava/util/List;",
+      1,
+      1
+    ],
+    "16": [
+      "invokeinterface",
+      1,
+      1
+    ],
+    "17": [
+      "java/util/List.org/apache/commons/collections4/sequence/ReplacementsHandler",
+      1,
+      1
+    ],
+    "19": [
+      "0",
+      1,
+      1
+    ],
+    "21": [
+      "ifeq",
+      1,
+      1
+    ],
+    "22": [
+      "16",
+      1,
+      1
+    ],
+    "24": [
+      "aload_0",
+      1,
+      0
+    ],
+    "25": [
+      "dup",
+      1,
+      0
+    ],
+    "26": [
+      "getfield",
+      1,
+      0
+    ],
+    "27": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.skipped:I",
+      1,
+      0
+    ],
+    "29": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "30": [
+      "iadd",
+      1,
+      0
+    ],
+    "31": [
+      "putfield",
+      1,
+      0
+    ],
+    "32": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.skipped:I",
+      1,
+      0
+    ],
+    "34": [
+      "goto",
+      1,
+      0
+    ],
+    "35": [
+      "47",
+      1,
+      0
+    ],
+    "37": [
+      "aload_0",
+      2,
+      0
+    ],
+    "38": [
+      "getfield",
+      2,
+      0
+    ],
+    "39": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.handler:Lorg/apache/commons/collections4/sequence/ReplacementsHandler;",
+      2,
+      0
+    ],
+    "41": [
+      "aload_0",
+      2,
+      0
+    ],
+    "42": [
+      "getfield",
+      2,
+      0
+    ],
+    "43": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.skipped:I",
+      2,
+      0
+    ],
+    "45": [
+      "aload_0",
+      2,
+      0
+    ],
+    "46": [
+      "getfield",
+      2,
+      0
+    ],
+    "47": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.pendingDeletions:Ljava/util/List;",
+      2,
+      0
+    ],
+    "49": [
+      "aload_0",
+      2,
+      0
+    ],
+    "50": [
+      "getfield",
+      2,
+      0
+    ],
+    "51": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.pendingInsertions:Ljava/util/List;",
+      2,
+      0
+    ],
+    "53": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "54": [
+      "org/apache/commons/collections4/sequence/ReplacementsHandler.clear:()V",
+      2,
+      0
+    ],
+    "56": [
+      "0",
+      2,
+      0
+    ],
+    "58": [
+      "aload_0",
+      2,
+      0
+    ],
+    "59": [
+      "getfield",
+      2,
+      0
+    ],
+    "60": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.pendingDeletions:Ljava/util/List;",
+      2,
+      0
+    ],
+    "62": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "63": [
+      "java/util/List.org/apache/commons/collections4/sequence/ReplacementsFinder",
+      2,
+      0
+    ],
+    "65": [
+      "0",
+      2,
+      0
+    ],
+    "67": [
+      "aload_0",
+      2,
+      0
+    ],
+    "68": [
+      "getfield",
+      2,
+      0
+    ],
+    "69": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.pendingInsertions:Ljava/util/List;",
+      2,
+      0
+    ],
+    "71": [
+      "invokeinterface",
+      2,
+      0
+    ],
+    "72": [
+      "java/util/List.org/apache/commons/collections4/sequence/ReplacementsFinder",
+      2,
+      0
+    ],
+    "74": [
+      "0",
+      2,
+      0
+    ],
+    "76": [
+      "aload_0",
+      2,
+      0
+    ],
+    "77": [
+      "iconst_1",
+      2,
+      0
+    ],
+    "78": [
+      "putfield",
+      2,
+      0
+    ],
+    "79": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.skipped:I",
+      2,
+      0
+    ],
+    "81": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "visitDeleteCommand": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/sequence/ReplacementsFinder.pendingDeletions:Ljava/util/List;",
+      0,
+      0
+    ],
+    "4": [
+      "aload_1",
+      0,
+      0
+    ],
+    "5": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "6": [
+      "java/util/List.isEmpty:()Z",
+      0,
+      0
+    ],
+    "8": [
+      "0",
+      0,
+      0
+    ],
+    "10": [
+      "pop",
+      0,
+      0
+    ],
+    "11": [
+      "return",
+      0,
+      0
+    ]
+  }
+}

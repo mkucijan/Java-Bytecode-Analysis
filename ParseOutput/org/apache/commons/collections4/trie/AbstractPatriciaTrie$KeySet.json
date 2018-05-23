@@ -1,0 +1,311 @@
+{
+    "iterator": {
+        "name": "iterator",
+        "pos": [
+            1436,
+            1441
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    1438,
+                    1439
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie$KeySet$KeyIterator"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aconst_null"
+                    ],
+                    [
+                        "6",
+                        "invokespecial"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie$KeySet$KeyIterator.<init>:(Lorg/apache/commons/collections4/trie/AbstractPatriciaTrie$KeySet;Lorg/apache/commons/collections4/trie/AbstractPatriciaTrie$1;)V"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "size": {
+        "name": "size",
+        "pos": [
+            1441,
+            1446
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    1443,
+                    1444
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie$KeySet.this$0:Lorg/apache/commons/collections4/trie/AbstractPatriciaTrie;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie.size:()I"
+                    ],
+                    [
+                        "7",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "contains": {
+        "name": "contains",
+        "pos": [
+            1446,
+            1451
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    1448,
+                    1449
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie$KeySet.this$0:Lorg/apache/commons/collections4/trie/AbstractPatriciaTrie;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie.containsKey:(Ljava/lang/Object;)Z"
+                    ],
+                    [
+                        "8",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "remove": {
+        "name": "remove",
+        "pos": [
+            1451,
+            1458
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    1453,
+                    1454
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie$KeySet.size:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_2"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "getfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie$KeySet.this$0:Lorg/apache/commons/collections4/trie/AbstractPatriciaTrie;"
+                    ],
+                    [
+                        "9",
+                        "aload_1"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie.remove:(Ljava/lang/Object;)Ljava/lang/Object;"
+                    ],
+                    [
+                        "13",
+                        "pop"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1454,
+                    1455
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "14",
+                        "iload_2"
+                    ],
+                    [
+                        "15",
+                        "aload_0"
+                    ],
+                    [
+                        "16",
+                        "invokevirtual"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie$KeySet.size:()I"
+                    ],
+                    [
+                        "19",
+                        "if_icmpeq"
+                    ],
+                    [
+                        "20",
+                        "7"
+                    ],
+                    [
+                        "22",
+                        "iconst_1"
+                    ],
+                    [
+                        "23",
+                        "goto"
+                    ],
+                    [
+                        "24",
+                        "4"
+                    ],
+                    [
+                        "26",
+                        "iconst_0"
+                    ],
+                    [
+                        "27",
+                        "ireturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    1455,
+                    1456
+                ],
+                "children": []
+            }
+        ]
+    },
+    "clear": {
+        "name": "clear",
+        "pos": [
+            1458,
+            1466
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1460,
+                    1461
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie$KeySet.this$0:Lorg/apache/commons/collections4/trie/AbstractPatriciaTrie;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie.clear:()V"
+                    ],
+                    [
+                        "7",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

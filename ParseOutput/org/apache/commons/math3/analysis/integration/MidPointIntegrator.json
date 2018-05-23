@@ -1,0 +1,512 @@
+{
+    "stage": {
+        "name": "stage",
+        "pos": [
+            117,
+            142
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    124,
+                    125
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "lconst_1"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "iconst_1"
+                    ],
+                    [
+                        "3",
+                        "isub"
+                    ],
+                    [
+                        "4",
+                        "lshl"
+                    ],
+                    [
+                        "5",
+                        "lstore"
+                    ],
+                    [
+                        "6",
+                        "#8"
+                    ],
+                    [
+                        "7",
+                        "dconst_0"
+                    ],
+                    [
+                        "8",
+                        "dstore"
+                    ],
+                    [
+                        "9",
+                        "#10"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    125,
+                    128
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "dload"
+                    ],
+                    [
+                        "11",
+                        "#6"
+                    ],
+                    [
+                        "12",
+                        "lload"
+                    ],
+                    [
+                        "13",
+                        "#8"
+                    ],
+                    [
+                        "14",
+                        "l2d"
+                    ],
+                    [
+                        "15",
+                        "ddiv"
+                    ],
+                    [
+                        "16",
+                        "dstore"
+                    ],
+                    [
+                        "17",
+                        "#12"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    128,
+                    131
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "18",
+                        "dload"
+                    ],
+                    [
+                        "19",
+                        "#4"
+                    ],
+                    [
+                        "20",
+                        "ldc2_w"
+                    ],
+                    [
+                        "21",
+                        "0.5"
+                    ],
+                    [
+                        "23",
+                        "dload"
+                    ],
+                    [
+                        "24",
+                        "#12"
+                    ],
+                    [
+                        "25",
+                        "dmul"
+                    ],
+                    [
+                        "26",
+                        "dadd"
+                    ],
+                    [
+                        "27",
+                        "dstore"
+                    ],
+                    [
+                        "28",
+                        "#14"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    131,
+                    132
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "29",
+                        "lconst_0"
+                    ],
+                    [
+                        "30",
+                        "lstore"
+                    ],
+                    [
+                        "31",
+                        "#16"
+                    ],
+                    [
+                        "32",
+                        "lload"
+                    ],
+                    [
+                        "33",
+                        "#16"
+                    ],
+                    [
+                        "34",
+                        "lload"
+                    ],
+                    [
+                        "35",
+                        "#8"
+                    ],
+                    [
+                        "36",
+                        "lcmp"
+                    ],
+                    [
+                        "37",
+                        "ifge"
+                    ],
+                    [
+                        "38",
+                        "30"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    132,
+                    137
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            132,
+                            137
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    133,
+                                    134
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    134,
+                                    135
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    137,
+                    138
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "doIntegrate": {
+        "name": "doIntegrate",
+        "pos": [
+            142,
+            169
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    146,
+                    147
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/analysis/integration/MidPointIntegrator.getMin:()D"
+                    ],
+                    [
+                        "4",
+                        "dstore_1"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/analysis/integration/MidPointIntegrator.getMax:()D"
+                    ],
+                    [
+                        "9",
+                        "dload_1"
+                    ],
+                    [
+                        "10",
+                        "dsub"
+                    ],
+                    [
+                        "11",
+                        "dstore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    147,
+                    148
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "dload_1"
+                    ],
+                    [
+                        "13",
+                        "ldc2_w"
+                    ],
+                    [
+                        "14",
+                        "0.5"
+                    ],
+                    [
+                        "16",
+                        "dload_3"
+                    ],
+                    [
+                        "17",
+                        "dmul"
+                    ],
+                    [
+                        "18",
+                        "dadd"
+                    ],
+                    [
+                        "19",
+                        "dstore"
+                    ],
+                    [
+                        "20",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    148,
+                    150
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "21",
+                        "dload_3"
+                    ],
+                    [
+                        "22",
+                        "aload_0"
+                    ],
+                    [
+                        "23",
+                        "dload"
+                    ],
+                    [
+                        "24",
+                        "#5"
+                    ],
+                    [
+                        "25",
+                        "invokevirtual"
+                    ],
+                    [
+                        "26",
+                        "org/apache/commons/math3/analysis/integration/MidPointIntegrator.computeObjectiveValue:(D)D"
+                    ],
+                    [
+                        "28",
+                        "dmul"
+                    ],
+                    [
+                        "29",
+                        "dstore"
+                    ],
+                    [
+                        "30",
+                        "#7"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    150,
+                    152
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    152,
+                    167
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            152,
+                            167
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    153,
+                                    154
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    154,
+                                    155
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    155,
+                                    156
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    156,
+                                    164
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            156,
+                                            164
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    157,
+                                                    158
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    158,
+                                                    160
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    160,
+                                                    163
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            160,
+                                                            163
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "ReturnStatement",
+                                                                "pos": [
+                                                                    161,
+                                                                    162
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    164,
+                                    165
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

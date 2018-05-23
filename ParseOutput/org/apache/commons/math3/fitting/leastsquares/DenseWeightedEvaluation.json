@@ -1,0 +1,191 @@
+{
+    "getJacobian": {
+        "name": "getJacobian",
+        "pos": [
+            52,
+            57
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    53,
+                    54
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/DenseWeightedEvaluation.weightSqrt:Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/fitting/leastsquares/DenseWeightedEvaluation.unweighted:Lorg/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation;"
+                    ],
+                    [
+                        "8",
+                        "invokeinterface"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation.multiply:(Lorg/apache/commons/math3/linear/RealMatrix;)Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "11",
+                        "0"
+                    ],
+                    [
+                        "13",
+                        "invokeinterface"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/linear/RealMatrix.getResiduals:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "16",
+                        "0"
+                    ],
+                    [
+                        "18",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getResiduals": {
+        "name": "getResiduals",
+        "pos": [
+            57,
+            64
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    58,
+                    59
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/DenseWeightedEvaluation.weightSqrt:Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/fitting/leastsquares/DenseWeightedEvaluation.unweighted:Lorg/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation;"
+                    ],
+                    [
+                        "8",
+                        "invokeinterface"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation.operate:(Lorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "11",
+                        "0"
+                    ],
+                    [
+                        "13",
+                        "invokeinterface"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/linear/RealMatrix.getPoint:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "16",
+                        "0"
+                    ],
+                    [
+                        "18",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getPoint": {
+        "name": "getPoint",
+        "pos": [
+            64,
+            68
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    65,
+                    66
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/DenseWeightedEvaluation.unweighted:Lorg/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation.org/apache/commons/math3/fitting/leastsquares/DenseWeightedEvaluation"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

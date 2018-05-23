@@ -1,0 +1,388 @@
+{
+    "getLocation": {
+        "name": "getLocation",
+        "pos": [
+            439,
+            446
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    440,
+                    441
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$Vertex.location:Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "bindWith": {
+        "name": "bindWith",
+        "pos": [
+            446,
+            460
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    447,
+                    448
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$Vertex.lines:Ljava/util/List;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/List.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "pop"
+                    ],
+                    [
+                        "11",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "sharedLineWith": {
+        "name": "sharedLineWith",
+        "pos": [
+            460,
+            478
+        ],
+        "children": [
+            {
+                "name": "ForStatement",
+                "pos": [
+                    461,
+                    468
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            461,
+                            468
+                        ],
+                        "children": [
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    462,
+                                    467
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            462,
+                                            467
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    463,
+                                                    466
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            463,
+                                                            466
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "ReturnStatement",
+                                                                "pos": [
+                                                                    464,
+                                                                    465
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    468,
+                    469
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "setIncoming": {
+        "name": "setIncoming",
+        "pos": [
+            478,
+            486
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    479,
+                    480
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$Vertex.incoming:Lorg/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$Edge;"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$Edge.getLine:()Lorg/apache/commons/math3/geometry/euclidean/twod/Line;"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$Vertex.bindWith:(Lorg/apache/commons/math3/geometry/euclidean/twod/Line;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    480,
+                    481
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "13",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getIncoming": {
+        "name": "getIncoming",
+        "pos": [
+            486,
+            497
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    487,
+                    488
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$Vertex.incoming:Lorg/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$Edge;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setOutgoing": {
+        "name": "setOutgoing",
+        "pos": [
+            497,
+            505
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    498,
+                    499
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$Vertex.outgoing:Lorg/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$Edge;"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$Edge.getLine:()Lorg/apache/commons/math3/geometry/euclidean/twod/Line;"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$Vertex.bindWith:(Lorg/apache/commons/math3/geometry/euclidean/twod/Line;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    499,
+                    500
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "13",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getOutgoing": {
+        "name": "getOutgoing",
+        "pos": [
+            505,
+            509
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    506,
+                    507
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$Vertex.outgoing:Lorg/apache/commons/math3/geometry/euclidean/twod/PolygonsSet$Edge;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

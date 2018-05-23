@@ -1,0 +1,4263 @@
+{
+    "initializeColumnLabels": {
+        "name": "initializeColumnLabels",
+        "pos": [
+            159,
+            184
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    160,
+                    163
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            160,
+                            163
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    161,
+                                    162
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    163,
+                    164
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    164,
+                    167
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            164,
+                            167
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    165,
+                                    166
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    167,
+                    170
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            167,
+                            170
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    168,
+                                    169
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    170,
+                    173
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            170,
+                            173
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    171,
+                                    172
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    173,
+                    176
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            173,
+                            176
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    174,
+                                    175
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    176,
+                    177
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "createTableau": {
+        "name": "createTableau",
+        "pos": [
+            184,
+            251
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    187,
+                    189
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.numDecisionVariables:I"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.numSlackVariables:I"
+                    ],
+                    [
+                        "8",
+                        "iadd"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.numArtificialVariables:I"
+                    ],
+                    [
+                        "13",
+                        "iadd"
+                    ],
+                    [
+                        "14",
+                        "aload_0"
+                    ],
+                    [
+                        "15",
+                        "invokevirtual"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getNumObjectiveFunctions:()I"
+                    ],
+                    [
+                        "18",
+                        "iadd"
+                    ],
+                    [
+                        "19",
+                        "iconst_1"
+                    ],
+                    [
+                        "20",
+                        "iadd"
+                    ],
+                    [
+                        "21",
+                        "istore_2"
+                    ],
+                    [
+                        "22",
+                        "aload_0"
+                    ],
+                    [
+                        "23",
+                        "getfield"
+                    ],
+                    [
+                        "24",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.constraints:Ljava/util/List;"
+                    ],
+                    [
+                        "26",
+                        "invokeinterface"
+                    ],
+                    [
+                        "27",
+                        "java/util/List.org/apache/commons/math3/linear/Array2DRowRealMatrix"
+                    ],
+                    [
+                        "29",
+                        "0"
+                    ],
+                    [
+                        "31",
+                        "aload_0"
+                    ],
+                    [
+                        "32",
+                        "invokevirtual"
+                    ],
+                    [
+                        "33",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getNumObjectiveFunctions:()I"
+                    ],
+                    [
+                        "35",
+                        "iadd"
+                    ],
+                    [
+                        "36",
+                        "istore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    189,
+                    190
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "37",
+                        "new"
+                    ],
+                    [
+                        "38",
+                        "org/apache/commons/math3/linear/Array2DRowRealMatrix"
+                    ],
+                    [
+                        "40",
+                        "dup"
+                    ],
+                    [
+                        "41",
+                        "iload_3"
+                    ],
+                    [
+                        "42",
+                        "iload_2"
+                    ],
+                    [
+                        "43",
+                        "invokespecial"
+                    ],
+                    [
+                        "44",
+                        "org/apache/commons/math3/linear/Array2DRowRealMatrix.<init>:(II)V"
+                    ],
+                    [
+                        "46",
+                        "astore"
+                    ],
+                    [
+                        "47",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    190,
+                    193
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "48",
+                        "aload_0"
+                    ],
+                    [
+                        "49",
+                        "invokevirtual"
+                    ],
+                    [
+                        "50",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getNumObjectiveFunctions:()I"
+                    ],
+                    [
+                        "52",
+                        "iconst_2"
+                    ],
+                    [
+                        "53",
+                        "if_icmpne"
+                    ],
+                    [
+                        "54",
+                        "13"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    193,
+                    197
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            193,
+                            197
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    194,
+                                    195
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    197,
+                    198
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    198,
+                    199
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    199,
+                    200
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    200,
+                    201
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    201,
+                    203
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    203,
+                    209
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            203,
+                            209
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    204,
+                                    206
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    209,
+                    210
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    210,
+                    211
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    211,
+                    243
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            211,
+                            243
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    212,
+                                    213
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    213,
+                                    216
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    216,
+                                    219
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    219,
+                                    225
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            219,
+                                            225
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    220,
+                                                    222
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    225,
+                                    228
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    228,
+                                    235
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            228,
+                                            230
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    229,
+                                                    230
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "IfStatement",
+                                        "pos": [
+                                            230,
+                                            235
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "BlockStatement",
+                                                "pos": [
+                                                    230,
+                                                    235
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "StatementExpression",
+                                                        "pos": [
+                                                            231,
+                                                            232
+                                                        ],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    235,
+                                    241
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            236,
+                                            241
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    237,
+                                                    238
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    238,
+                                                    239
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    239,
+                                                    240
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    243,
+                    244
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "normalizeConstraints": {
+        "name": "normalizeConstraints",
+        "pos": [
+            251,
+            264
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    252,
+                    253
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/util/ArrayList"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/Collection.org/apache/commons/math3/linear/Array2DRowRealMatrix"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "invokespecial"
+                    ],
+                    [
+                        "11",
+                        "java/util/ArrayList.<init>:(I)V"
+                    ],
+                    [
+                        "13",
+                        "astore_2"
+                    ],
+                    [
+                        "14",
+                        "aload_1"
+                    ],
+                    [
+                        "15",
+                        "invokeinterface"
+                    ],
+                    [
+                        "16",
+                        "java/util/Collection.java/util/Iterator"
+                    ],
+                    [
+                        "18",
+                        "0"
+                    ],
+                    [
+                        "20",
+                        "astore_3"
+                    ],
+                    [
+                        "21",
+                        "aload_3"
+                    ],
+                    [
+                        "22",
+                        "invokeinterface"
+                    ],
+                    [
+                        "23",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "25",
+                        "0"
+                    ],
+                    [
+                        "27",
+                        "ifeq"
+                    ],
+                    [
+                        "28",
+                        "30"
+                    ],
+                    [
+                        "30",
+                        "aload_3"
+                    ],
+                    [
+                        "31",
+                        "invokeinterface"
+                    ],
+                    [
+                        "32",
+                        "java/util/Iterator.normalize:(Lorg/apache/commons/math3/optim/linear/LinearConstraint;)Lorg/apache/commons/math3/optim/linear/LinearConstraint;"
+                    ],
+                    [
+                        "34",
+                        "0"
+                    ],
+                    [
+                        "36",
+                        "checkcast"
+                    ],
+                    [
+                        "37",
+                        "org/apache/commons/math3/optim/linear/LinearConstraint"
+                    ],
+                    [
+                        "39",
+                        "astore"
+                    ],
+                    [
+                        "40",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    253,
+                    256
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            253,
+                            256
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    254,
+                                    255
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    256,
+                    257
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "normalize": {
+        "name": "normalize",
+        "pos": [
+            264,
+            278
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    265,
+                    270
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            265,
+                            270
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    266,
+                                    269
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    270,
+                    272
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getNumObjectiveFunctions": {
+        "name": "getNumObjectiveFunctions",
+        "pos": [
+            278,
+            287
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    279,
+                    280
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.numArtificialVariables:I"
+                    ],
+                    [
+                        "4",
+                        "ifle"
+                    ],
+                    [
+                        "5",
+                        "7"
+                    ],
+                    [
+                        "7",
+                        "iconst_2"
+                    ],
+                    [
+                        "8",
+                        "goto"
+                    ],
+                    [
+                        "9",
+                        "4"
+                    ],
+                    [
+                        "11",
+                        "iconst_1"
+                    ],
+                    [
+                        "12",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getConstraintTypeCounts": {
+        "name": "getConstraintTypeCounts",
+        "pos": [
+            287,
+            302
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    288,
+                    289
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_0"
+                    ],
+                    [
+                        "1",
+                        "istore_2"
+                    ],
+                    [
+                        "2",
+                        "aload_0"
+                    ],
+                    [
+                        "3",
+                        "getfield"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.constraints:Ljava/util/List;"
+                    ],
+                    [
+                        "6",
+                        "invokeinterface"
+                    ],
+                    [
+                        "7",
+                        "java/util/List.java/util/Iterator"
+                    ],
+                    [
+                        "9",
+                        "0"
+                    ],
+                    [
+                        "11",
+                        "astore_3"
+                    ],
+                    [
+                        "12",
+                        "aload_3"
+                    ],
+                    [
+                        "13",
+                        "invokeinterface"
+                    ],
+                    [
+                        "14",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "16",
+                        "0"
+                    ],
+                    [
+                        "18",
+                        "ifeq"
+                    ],
+                    [
+                        "19",
+                        "29"
+                    ],
+                    [
+                        "21",
+                        "aload_3"
+                    ],
+                    [
+                        "22",
+                        "invokeinterface"
+                    ],
+                    [
+                        "23",
+                        "java/util/Iterator.normalize:(Lorg/apache/commons/math3/optim/linear/LinearConstraint;)Lorg/apache/commons/math3/optim/linear/LinearConstraint;"
+                    ],
+                    [
+                        "25",
+                        "0"
+                    ],
+                    [
+                        "27",
+                        "checkcast"
+                    ],
+                    [
+                        "28",
+                        "org/apache/commons/math3/optim/linear/LinearConstraint"
+                    ],
+                    [
+                        "30",
+                        "astore"
+                    ],
+                    [
+                        "31",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    289,
+                    294
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            289,
+                            294
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    290,
+                                    293
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            290,
+                                            293
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    291,
+                                                    292
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    294,
+                    295
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getInvertedCoefficientSum": {
+        "name": "getInvertedCoefficientSum",
+        "pos": [
+            302,
+            315
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    303,
+                    304
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dconst_0"
+                    ],
+                    [
+                        "1",
+                        "dstore_1"
+                    ],
+                    [
+                        "2",
+                        "aload_0"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/linear/RealVector.toArray:()[D"
+                    ],
+                    [
+                        "6",
+                        "astore_3"
+                    ],
+                    [
+                        "7",
+                        "aload_3"
+                    ],
+                    [
+                        "8",
+                        "arraylength"
+                    ],
+                    [
+                        "9",
+                        "istore"
+                    ],
+                    [
+                        "10",
+                        "#4"
+                    ],
+                    [
+                        "11",
+                        "iconst_0"
+                    ],
+                    [
+                        "12",
+                        "istore"
+                    ],
+                    [
+                        "13",
+                        "#5"
+                    ],
+                    [
+                        "14",
+                        "iload"
+                    ],
+                    [
+                        "15",
+                        "#5"
+                    ],
+                    [
+                        "16",
+                        "iload"
+                    ],
+                    [
+                        "17",
+                        "#4"
+                    ],
+                    [
+                        "18",
+                        "if_icmpge"
+                    ],
+                    [
+                        "19",
+                        "20"
+                    ],
+                    [
+                        "21",
+                        "aload_3"
+                    ],
+                    [
+                        "22",
+                        "iload"
+                    ],
+                    [
+                        "23",
+                        "#5"
+                    ],
+                    [
+                        "24",
+                        "daload"
+                    ],
+                    [
+                        "25",
+                        "dstore"
+                    ],
+                    [
+                        "26",
+                        "#6"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    304,
+                    307
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            304,
+                            307
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    305,
+                                    306
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    307,
+                    308
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getBasicRow": {
+        "name": "getBasicRow",
+        "pos": [
+            315,
+            325
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    316,
+                    317
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.basicVariables:[I"
+                    ],
+                    [
+                        "4",
+                        "iload_1"
+                    ],
+                    [
+                        "5",
+                        "iaload"
+                    ],
+                    [
+                        "6",
+                        "istore_2"
+                    ],
+                    [
+                        "7",
+                        "iload_2"
+                    ],
+                    [
+                        "8",
+                        "iconst_m1"
+                    ],
+                    [
+                        "9",
+                        "if_icmpne"
+                    ],
+                    [
+                        "10",
+                        "7"
+                    ],
+                    [
+                        "12",
+                        "aconst_null"
+                    ],
+                    [
+                        "13",
+                        "goto"
+                    ],
+                    [
+                        "14",
+                        "7"
+                    ],
+                    [
+                        "16",
+                        "iload_2"
+                    ],
+                    [
+                        "17",
+                        "invokestatic"
+                    ],
+                    [
+                        "18",
+                        "java/lang/Integer.valueOf:(I)Ljava/lang/Integer;"
+                    ],
+                    [
+                        "20",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    317,
+                    318
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getBasicVariable": {
+        "name": "getBasicVariable",
+        "pos": [
+            325,
+            333
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    326,
+                    327
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.basicRows:[I"
+                    ],
+                    [
+                        "4",
+                        "iload_1"
+                    ],
+                    [
+                        "5",
+                        "iaload"
+                    ],
+                    [
+                        "6",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "initializeBasicVariables": {
+        "name": "initializeBasicVariables",
+        "pos": [
+            333,
+            353
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    334,
+                    335
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getWidth:()I"
+                    ],
+                    [
+                        "5",
+                        "iconst_1"
+                    ],
+                    [
+                        "6",
+                        "isub"
+                    ],
+                    [
+                        "7",
+                        "newarray"
+                    ],
+                    [
+                        "8",
+                        "10"
+                    ],
+                    [
+                        "9",
+                        "putfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.basicVariables:[I"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "invokevirtual"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getHeight:()I"
+                    ],
+                    [
+                        "17",
+                        "newarray"
+                    ],
+                    [
+                        "18",
+                        "10"
+                    ],
+                    [
+                        "19",
+                        "putfield"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.basicRows:[I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    335,
+                    337
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "22",
+                        "aload_0"
+                    ],
+                    [
+                        "23",
+                        "getfield"
+                    ],
+                    [
+                        "24",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.basicVariables:[I"
+                    ],
+                    [
+                        "26",
+                        "iconst_m1"
+                    ],
+                    [
+                        "27",
+                        "invokestatic"
+                    ],
+                    [
+                        "28",
+                        "java/util/Arrays.fill:([II)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    337,
+                    339
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "30",
+                        "iload_1"
+                    ],
+                    [
+                        "31",
+                        "istore_2"
+                    ],
+                    [
+                        "32",
+                        "iload_2"
+                    ],
+                    [
+                        "33",
+                        "aload_0"
+                    ],
+                    [
+                        "34",
+                        "invokevirtual"
+                    ],
+                    [
+                        "35",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getWidth:()I"
+                    ],
+                    [
+                        "37",
+                        "iconst_1"
+                    ],
+                    [
+                        "38",
+                        "isub"
+                    ],
+                    [
+                        "39",
+                        "if_icmpge"
+                    ],
+                    [
+                        "40",
+                        "39"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    339,
+                    346
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            339,
+                            346
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    340,
+                                    341
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    341,
+                                    345
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            341,
+                                            345
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    342,
+                                                    343
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    343,
+                                                    344
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "findBasicRow": {
+        "name": "findBasicRow",
+        "pos": [
+            353,
+            370
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    354,
+                    355
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aconst_null"
+                    ],
+                    [
+                        "1",
+                        "astore_2"
+                    ],
+                    [
+                        "2",
+                        "iconst_0"
+                    ],
+                    [
+                        "3",
+                        "istore_3"
+                    ],
+                    [
+                        "4",
+                        "iload_3"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getHeight:()I"
+                    ],
+                    [
+                        "9",
+                        "if_icmpge"
+                    ],
+                    [
+                        "10",
+                        "57"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    355,
+                    363
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            355,
+                            363
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    356,
+                                    357
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    357,
+                                    362
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            357,
+                                            359
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    358,
+                                                    359
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "IfStatement",
+                                        "pos": [
+                                            359,
+                                            362
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "BlockStatement",
+                                                "pos": [
+                                                    359,
+                                                    362
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "ReturnStatement",
+                                                        "pos": [
+                                                            360,
+                                                            361
+                                                        ],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    363,
+                    364
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "dropPhase1Objective": {
+        "name": "dropPhase1Objective",
+        "pos": [
+            370,
+            420
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    371,
+                    375
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            371,
+                            375
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    372,
+                                    373
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    375,
+                    376
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    376,
+                    379
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    379,
+                    387
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            379,
+                            387
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    380,
+                                    381
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    381,
+                                    384
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            381,
+                                            384
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    382,
+                                                    383
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    387,
+                    394
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            387,
+                            394
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    388,
+                                    389
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    389,
+                                    392
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            389,
+                                            392
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    390,
+                                                    391
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    394,
+                    395
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    395,
+                    405
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            395,
+                            405
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    396,
+                                    397
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    397,
+                                    402
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            397,
+                                            402
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    398,
+                                                    401
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            398,
+                                                            401
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    399,
+                                                                    400
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    405,
+                    406
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    406,
+                    410
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            406,
+                            410
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    407,
+                                    408
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    410,
+                    411
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    411,
+                    413
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    413,
+                    414
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "copyArray": {
+        "name": "copyArray",
+        "pos": [
+            420,
+            428
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    421,
+                    422
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "iconst_0"
+                    ],
+                    [
+                        "2",
+                        "aload_2"
+                    ],
+                    [
+                        "3",
+                        "aload_0"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getNumObjectiveFunctions:()I"
+                    ],
+                    [
+                        "7",
+                        "aload_1"
+                    ],
+                    [
+                        "8",
+                        "arraylength"
+                    ],
+                    [
+                        "9",
+                        "invokestatic"
+                    ],
+                    [
+                        "10",
+                        "java/lang/System.arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V"
+                    ],
+                    [
+                        "12",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isOptimal": {
+        "name": "isOptimal",
+        "pos": [
+            428,
+            444
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    429,
+                    430
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iconst_0"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getRow:(I)[D"
+                    ],
+                    [
+                        "5",
+                        "astore_1"
+                    ],
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getRhsOffset:()I"
+                    ],
+                    [
+                        "10",
+                        "istore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    430,
+                    431
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "11",
+                        "aload_0"
+                    ],
+                    [
+                        "12",
+                        "invokevirtual"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getNumObjectiveFunctions:()I"
+                    ],
+                    [
+                        "15",
+                        "istore_3"
+                    ],
+                    [
+                        "16",
+                        "iload_3"
+                    ],
+                    [
+                        "17",
+                        "iload_2"
+                    ],
+                    [
+                        "18",
+                        "if_icmpge"
+                    ],
+                    [
+                        "19",
+                        "29"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    431,
+                    437
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            431,
+                            437
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    432,
+                                    433
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    433,
+                                    436
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            433,
+                                            436
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    434,
+                                                    435
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    437,
+                    438
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getSolution": {
+        "name": "getSolution",
+        "pos": [
+            444,
+            483
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    445,
+                    446
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.columnLabels:Ljava/util/List;"
+                    ],
+                    [
+                        "4",
+                        "ldc"
+                    ],
+                    [
+                        "5",
+                        "x-"
+                    ],
+                    [
+                        "6",
+                        "invokeinterface"
+                    ],
+                    [
+                        "7",
+                        "java/util/List.java/util/HashSet"
+                    ],
+                    [
+                        "9",
+                        "0"
+                    ],
+                    [
+                        "11",
+                        "istore_1"
+                    ],
+                    [
+                        "12",
+                        "iload_1"
+                    ],
+                    [
+                        "13",
+                        "ifle"
+                    ],
+                    [
+                        "14",
+                        "11"
+                    ],
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "iload_1"
+                    ],
+                    [
+                        "18",
+                        "invokevirtual"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getBasicRow:(I)Ljava/lang/Integer;"
+                    ],
+                    [
+                        "21",
+                        "goto"
+                    ],
+                    [
+                        "22",
+                        "4"
+                    ],
+                    [
+                        "24",
+                        "aconst_null"
+                    ],
+                    [
+                        "25",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    446,
+                    447
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "26",
+                        "aload_2"
+                    ],
+                    [
+                        "27",
+                        "ifnonnull"
+                    ],
+                    [
+                        "28",
+                        "7"
+                    ],
+                    [
+                        "30",
+                        "dconst_0"
+                    ],
+                    [
+                        "31",
+                        "goto"
+                    ],
+                    [
+                        "32",
+                        "15"
+                    ],
+                    [
+                        "34",
+                        "aload_0"
+                    ],
+                    [
+                        "35",
+                        "aload_2"
+                    ],
+                    [
+                        "36",
+                        "invokevirtual"
+                    ],
+                    [
+                        "37",
+                        "java/lang/Integer.intValue:()I"
+                    ],
+                    [
+                        "39",
+                        "aload_0"
+                    ],
+                    [
+                        "40",
+                        "invokevirtual"
+                    ],
+                    [
+                        "41",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getRhsOffset:()I"
+                    ],
+                    [
+                        "43",
+                        "invokevirtual"
+                    ],
+                    [
+                        "44",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getEntry:(II)D"
+                    ],
+                    [
+                        "46",
+                        "dstore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    447,
+                    449
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "47",
+                        "new"
+                    ],
+                    [
+                        "48",
+                        "java/util/HashSet"
+                    ],
+                    [
+                        "50",
+                        "dup"
+                    ],
+                    [
+                        "51",
+                        "invokespecial"
+                    ],
+                    [
+                        "52",
+                        "java/util/HashSet.<init>:()V"
+                    ],
+                    [
+                        "54",
+                        "astore"
+                    ],
+                    [
+                        "55",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    449,
+                    450
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "56",
+                        "aload_0"
+                    ],
+                    [
+                        "57",
+                        "invokevirtual"
+                    ],
+                    [
+                        "58",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getOriginalNumDecisionVariables:()I"
+                    ],
+                    [
+                        "60",
+                        "newarray"
+                    ],
+                    [
+                        "61",
+                        "7"
+                    ],
+                    [
+                        "62",
+                        "astore"
+                    ],
+                    [
+                        "63",
+                        "#6"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    450,
+                    451
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "64",
+                        "iconst_0"
+                    ],
+                    [
+                        "65",
+                        "istore"
+                    ],
+                    [
+                        "66",
+                        "#7"
+                    ],
+                    [
+                        "67",
+                        "iload"
+                    ],
+                    [
+                        "68",
+                        "#7"
+                    ],
+                    [
+                        "69",
+                        "aload"
+                    ],
+                    [
+                        "70",
+                        "#6"
+                    ],
+                    [
+                        "71",
+                        "arraylength"
+                    ],
+                    [
+                        "72",
+                        "if_icmpge"
+                    ],
+                    [
+                        "73",
+                        "168"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    451,
+                    474
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            451,
+                            474
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    452,
+                                    453
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    453,
+                                    457
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            453,
+                                            457
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    454,
+                                                    455
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "ContinueStatement",
+                                                "pos": [
+                                                    455,
+                                                    456
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    457,
+                                    458
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    458,
+                                    473
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            458,
+                                            463
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    462,
+                                                    463
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "IfStatement",
+                                        "pos": [
+                                            463,
+                                            473
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "BlockStatement",
+                                                "pos": [
+                                                    463,
+                                                    467
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "StatementExpression",
+                                                        "pos": [
+                                                            466,
+                                                            467
+                                                        ],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "BlockStatement",
+                                                "pos": [
+                                                    467,
+                                                    473
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "StatementExpression",
+                                                        "pos": [
+                                                            468,
+                                                            469
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "StatementExpression",
+                                                        "pos": [
+                                                            469,
+                                                            472
+                                                        ],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    474,
+                    475
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "performRowOperations": {
+        "name": "performRowOperations",
+        "pos": [
+            483,
+            514
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    485,
+                    486
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_2"
+                    ],
+                    [
+                        "2",
+                        "iload_1"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getEntry:(II)D"
+                    ],
+                    [
+                        "6",
+                        "dstore_3"
+                    ],
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "iload_2"
+                    ],
+                    [
+                        "9",
+                        "dload_3"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.divideRow:(ID)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    486,
+                    489
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "13",
+                        "iconst_0"
+                    ],
+                    [
+                        "14",
+                        "istore"
+                    ],
+                    [
+                        "15",
+                        "#5"
+                    ],
+                    [
+                        "16",
+                        "iload"
+                    ],
+                    [
+                        "17",
+                        "#5"
+                    ],
+                    [
+                        "18",
+                        "aload_0"
+                    ],
+                    [
+                        "19",
+                        "invokevirtual"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getHeight:()I"
+                    ],
+                    [
+                        "22",
+                        "if_icmpge"
+                    ],
+                    [
+                        "23",
+                        "40"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    489,
+                    499
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            489,
+                            499
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    490,
+                                    496
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            490,
+                                            496
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    491,
+                                                    492
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    492,
+                                                    495
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            492,
+                                                            495
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    493,
+                                                                    494
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    499,
+                    500
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    500,
+                    501
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    501,
+                    502
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    502,
+                    503
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "divideRow": {
+        "name": "divideRow",
+        "pos": [
+            514,
+            531
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    515,
+                    516
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getRow:(I)[D"
+                    ],
+                    [
+                        "5",
+                        "astore"
+                    ],
+                    [
+                        "6",
+                        "#4"
+                    ],
+                    [
+                        "7",
+                        "iconst_0"
+                    ],
+                    [
+                        "8",
+                        "istore"
+                    ],
+                    [
+                        "9",
+                        "#5"
+                    ],
+                    [
+                        "10",
+                        "iload"
+                    ],
+                    [
+                        "11",
+                        "#5"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getWidth:()I"
+                    ],
+                    [
+                        "16",
+                        "if_icmpge"
+                    ],
+                    [
+                        "17",
+                        "18"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    516,
+                    519
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            516,
+                            519
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    517,
+                                    518
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "subtractRow": {
+        "name": "subtractRow",
+        "pos": [
+            531,
+            543
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    532,
+                    533
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getRow:(I)[D"
+                    ],
+                    [
+                        "5",
+                        "astore"
+                    ],
+                    [
+                        "6",
+                        "#5"
+                    ],
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "iload_2"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getRow:(I)[D"
+                    ],
+                    [
+                        "12",
+                        "astore"
+                    ],
+                    [
+                        "13",
+                        "#6"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    533,
+                    534
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "14",
+                        "iconst_0"
+                    ],
+                    [
+                        "15",
+                        "istore"
+                    ],
+                    [
+                        "16",
+                        "#7"
+                    ],
+                    [
+                        "17",
+                        "iload"
+                    ],
+                    [
+                        "18",
+                        "#7"
+                    ],
+                    [
+                        "19",
+                        "aload_0"
+                    ],
+                    [
+                        "20",
+                        "invokevirtual"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getWidth:()I"
+                    ],
+                    [
+                        "23",
+                        "if_icmpge"
+                    ],
+                    [
+                        "24",
+                        "24"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    534,
+                    537
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            534,
+                            537
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    535,
+                                    536
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "getWidth": {
+        "name": "getWidth",
+        "pos": [
+            543,
+            551
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    544,
+                    545
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.tableau:Lorg/apache/commons/math3/linear/Array2DRowRealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/linear/Array2DRowRealMatrix.getColumnDimension:()I"
+                    ],
+                    [
+                        "7",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getHeight": {
+        "name": "getHeight",
+        "pos": [
+            551,
+            561
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    552,
+                    553
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.tableau:Lorg/apache/commons/math3/linear/Array2DRowRealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/linear/Array2DRowRealMatrix.getRowDimension:()I"
+                    ],
+                    [
+                        "7",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getEntry": {
+        "name": "getEntry",
+        "pos": [
+            561,
+            571
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    562,
+                    563
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.tableau:Lorg/apache/commons/math3/linear/Array2DRowRealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "iload_1"
+                    ],
+                    [
+                        "5",
+                        "iload_2"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/linear/Array2DRowRealMatrix.getEntry:(II)D"
+                    ],
+                    [
+                        "9",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setEntry": {
+        "name": "setEntry",
+        "pos": [
+            571,
+            579
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    572,
+                    573
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.tableau:Lorg/apache/commons/math3/linear/Array2DRowRealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "iload_1"
+                    ],
+                    [
+                        "5",
+                        "iload_2"
+                    ],
+                    [
+                        "6",
+                        "dload_3"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/linear/Array2DRowRealMatrix.setEntry:(IID)V"
+                    ],
+                    [
+                        "10",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSlackVariableOffset": {
+        "name": "getSlackVariableOffset",
+        "pos": [
+            579,
+            587
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    580,
+                    581
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getNumObjectiveFunctions:()I"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.numDecisionVariables:I"
+                    ],
+                    [
+                        "8",
+                        "iadd"
+                    ],
+                    [
+                        "9",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getArtificialVariableOffset": {
+        "name": "getArtificialVariableOffset",
+        "pos": [
+            587,
+            595
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    588,
+                    589
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getNumObjectiveFunctions:()I"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.numDecisionVariables:I"
+                    ],
+                    [
+                        "8",
+                        "iadd"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.numSlackVariables:I"
+                    ],
+                    [
+                        "13",
+                        "iadd"
+                    ],
+                    [
+                        "14",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getRhsOffset": {
+        "name": "getRhsOffset",
+        "pos": [
+            595,
+            608
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    596,
+                    597
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.getWidth:()I"
+                    ],
+                    [
+                        "4",
+                        "iconst_1"
+                    ],
+                    [
+                        "5",
+                        "isub"
+                    ],
+                    [
+                        "6",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNumDecisionVariables": {
+        "name": "getNumDecisionVariables",
+        "pos": [
+            608,
+            617
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    609,
+                    610
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.numDecisionVariables:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getOriginalNumDecisionVariables": {
+        "name": "getOriginalNumDecisionVariables",
+        "pos": [
+            617,
+            625
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    618,
+                    619
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.f:Lorg/apache/commons/math3/optim/linear/LinearObjectiveFunction;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/optim/linear/LinearObjectiveFunction.getCoefficients:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/linear/RealVector.getDimension:()I"
+                    ],
+                    [
+                        "10",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNumSlackVariables": {
+        "name": "getNumSlackVariables",
+        "pos": [
+            625,
+            633
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    626,
+                    627
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.numSlackVariables:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNumArtificialVariables": {
+        "name": "getNumArtificialVariables",
+        "pos": [
+            633,
+            642
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    634,
+                    635
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.numArtificialVariables:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getRow": {
+        "name": "getRow",
+        "pos": [
+            642,
+            650
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    643,
+                    644
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.tableau:Lorg/apache/commons/math3/linear/Array2DRowRealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/linear/Array2DRowRealMatrix.getDataRef:()[[D"
+                    ],
+                    [
+                        "7",
+                        "iload_1"
+                    ],
+                    [
+                        "8",
+                        "aaload"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getData": {
+        "name": "getData",
+        "pos": [
+            650,
+            655
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    651,
+                    652
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.tableau:Lorg/apache/commons/math3/linear/Array2DRowRealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/linear/Array2DRowRealMatrix.getData:()[[D"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "equals": {
+        "name": "equals",
+        "pos": [
+            655,
+            678
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    658,
+                    662
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            658,
+                            662
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    659,
+                                    660
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    662,
+                    674
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            662,
+                            674
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    663,
+                                    664
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    664,
+                                    673
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    674,
+                    675
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "hashCode": {
+        "name": "hashCode",
+        "pos": [
+            678,
+            696
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    680,
+                    689
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.restrictToNonNegative:Z"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "java/lang/Boolean.hashCode:()I"
+                    ],
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "getfield"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.numDecisionVariables:I"
+                    ],
+                    [
+                        "14",
+                        "ixor"
+                    ],
+                    [
+                        "15",
+                        "aload_0"
+                    ],
+                    [
+                        "16",
+                        "getfield"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.numSlackVariables:I"
+                    ],
+                    [
+                        "19",
+                        "ixor"
+                    ],
+                    [
+                        "20",
+                        "aload_0"
+                    ],
+                    [
+                        "21",
+                        "getfield"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.numArtificialVariables:I"
+                    ],
+                    [
+                        "24",
+                        "ixor"
+                    ],
+                    [
+                        "25",
+                        "aload_0"
+                    ],
+                    [
+                        "26",
+                        "getfield"
+                    ],
+                    [
+                        "27",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.epsilon:D"
+                    ],
+                    [
+                        "29",
+                        "invokestatic"
+                    ],
+                    [
+                        "30",
+                        "java/lang/Double.valueOf:(D)Ljava/lang/Double;"
+                    ],
+                    [
+                        "32",
+                        "invokevirtual"
+                    ],
+                    [
+                        "33",
+                        "java/lang/Double.hashCode:()I"
+                    ],
+                    [
+                        "35",
+                        "ixor"
+                    ],
+                    [
+                        "36",
+                        "aload_0"
+                    ],
+                    [
+                        "37",
+                        "getfield"
+                    ],
+                    [
+                        "38",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.maxUlps:I"
+                    ],
+                    [
+                        "40",
+                        "ixor"
+                    ],
+                    [
+                        "41",
+                        "aload_0"
+                    ],
+                    [
+                        "42",
+                        "getfield"
+                    ],
+                    [
+                        "43",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.f:Lorg/apache/commons/math3/optim/linear/LinearObjectiveFunction;"
+                    ],
+                    [
+                        "45",
+                        "invokevirtual"
+                    ],
+                    [
+                        "46",
+                        "org/apache/commons/math3/optim/linear/LinearObjectiveFunction.hashCode:()I"
+                    ],
+                    [
+                        "48",
+                        "ixor"
+                    ],
+                    [
+                        "49",
+                        "aload_0"
+                    ],
+                    [
+                        "50",
+                        "getfield"
+                    ],
+                    [
+                        "51",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.constraints:Ljava/util/List;"
+                    ],
+                    [
+                        "53",
+                        "invokeinterface"
+                    ],
+                    [
+                        "54",
+                        "java/util/List.java/lang/Double"
+                    ],
+                    [
+                        "56",
+                        "0"
+                    ],
+                    [
+                        "58",
+                        "ixor"
+                    ],
+                    [
+                        "59",
+                        "aload_0"
+                    ],
+                    [
+                        "60",
+                        "getfield"
+                    ],
+                    [
+                        "61",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.tableau:Lorg/apache/commons/math3/linear/Array2DRowRealMatrix;"
+                    ],
+                    [
+                        "63",
+                        "invokevirtual"
+                    ],
+                    [
+                        "64",
+                        "org/apache/commons/math3/linear/Array2DRowRealMatrix.hashCode:()I"
+                    ],
+                    [
+                        "66",
+                        "ixor"
+                    ],
+                    [
+                        "67",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "writeObject": {
+        "name": "writeObject",
+        "pos": [
+            696,
+            708
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    698,
+                    699
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectOutputStream.defaultWriteObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/optim/linear/SimplexTableau.tableau:Lorg/apache/commons/math3/linear/Array2DRowRealMatrix;"
+                    ],
+                    [
+                        "8",
+                        "aload_1"
+                    ],
+                    [
+                        "9",
+                        "invokestatic"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/linear/MatrixUtils.serializeRealMatrix:(Lorg/apache/commons/math3/linear/RealMatrix;Ljava/io/ObjectOutputStream;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    699,
+                    700
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "readObject": {
+        "name": "readObject",
+        "pos": [
+            708,
+            713
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    710,
+                    711
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectInputStream.defaultReadObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "ldc"
+                    ],
+                    [
+                        "6",
+                        "tableau"
+                    ],
+                    [
+                        "7",
+                        "aload_1"
+                    ],
+                    [
+                        "8",
+                        "invokestatic"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/linear/MatrixUtils.deserializeRealMatrix:(Ljava/lang/Object;Ljava/lang/String;Ljava/io/ObjectInputStream;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    711,
+                    712
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "11",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

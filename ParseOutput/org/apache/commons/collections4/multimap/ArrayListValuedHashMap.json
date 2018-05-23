@@ -1,0 +1,264 @@
+{
+    "createCollection": {
+        "name": "createCollection",
+        "pos": [
+            115,
+            124
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    117,
+                    118
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/util/ArrayList"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/multimap/ArrayListValuedHashMap.initialListCapacity:I"
+                    ],
+                    [
+                        "8",
+                        "invokespecial"
+                    ],
+                    [
+                        "9",
+                        "java/util/ArrayList.<init>:(I)V"
+                    ],
+                    [
+                        "11",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "trimToSize": {
+        "name": "trimToSize",
+        "pos": [
+            124,
+            132
+        ],
+        "children": [
+            {
+                "name": "ForStatement",
+                "pos": [
+                    125,
+                    129
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            125,
+                            129
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    126,
+                                    127
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    127,
+                                    128
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "writeObject": {
+        "name": "writeObject",
+        "pos": [
+            132,
+            137
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    133,
+                    134
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectOutputStream.defaultWriteObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/multimap/ArrayListValuedHashMap.doWriteObject:(Ljava/io/ObjectOutputStream;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    134,
+                    135
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "readObject": {
+        "name": "readObject",
+        "pos": [
+            137,
+            143
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    138,
+                    139
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectInputStream.defaultReadObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "new"
+                    ],
+                    [
+                        "6",
+                        "java/util/HashMap"
+                    ],
+                    [
+                        "8",
+                        "dup"
+                    ],
+                    [
+                        "9",
+                        "invokespecial"
+                    ],
+                    [
+                        "10",
+                        "java/util/HashMap.<init>:()V"
+                    ],
+                    [
+                        "12",
+                        "invokevirtual"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/collections4/multimap/ArrayListValuedHashMap.setMap:(Ljava/util/Map;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    139,
+                    140
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "15",
+                        "aload_0"
+                    ],
+                    [
+                        "16",
+                        "aload_1"
+                    ],
+                    [
+                        "17",
+                        "invokevirtual"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/collections4/multimap/ArrayListValuedHashMap.doReadObject:(Ljava/io/ObjectInputStream;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    140,
+                    141
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "20",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

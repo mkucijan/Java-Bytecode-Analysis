@@ -1,0 +1,148 @@
+{
+    "writeObject": {
+        "name": "writeObject",
+        "pos": [
+            54,
+            66
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    55,
+                    56
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectOutputStream.defaultWriteObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/list/AbstractSerializableListDecorator.decorated:()Ljava/util/List;"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "java/io/ObjectOutputStream.writeObject:(Ljava/lang/Object;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    56,
+                    57
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "readObject": {
+        "name": "readObject",
+        "pos": [
+            66,
+            72
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    68,
+                    69
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectInputStream.defaultReadObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "java/io/ObjectInputStream.readObject:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "9",
+                        "checkcast"
+                    ],
+                    [
+                        "10",
+                        "java/util/Collection"
+                    ],
+                    [
+                        "12",
+                        "invokevirtual"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/collections4/list/AbstractSerializableListDecorator.setCollection:(Ljava/util/Collection;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    69,
+                    70
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "15",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,1044 @@
+{
+    "getStart": {
+        "name": "getStart",
+        "pos": [
+            67,
+            74
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    68,
+                    69
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.start:Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getEnd": {
+        "name": "getEnd",
+        "pos": [
+            74,
+            81
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    75,
+                    76
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.end:Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getLength": {
+        "name": "getLength",
+        "pos": [
+            81,
+            88
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    82,
+                    83
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.length:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getCircle": {
+        "name": "getCircle",
+        "pos": [
+            88,
+            102
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    89,
+                    90
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.circle:Lorg/apache/commons/math3/geometry/spherical/twod/Circle;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getPointAt": {
+        "name": "getPointAt",
+        "pos": [
+            102,
+            109
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    103,
+                    104
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.circle:Lorg/apache/commons/math3/geometry/spherical/twod/Circle;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "getfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.circle:Lorg/apache/commons/math3/geometry/spherical/twod/Circle;"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.start:Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/geometry/spherical/twod/Vertex.getLocation:()Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;"
+                    ],
+                    [
+                        "16",
+                        "invokevirtual"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/geometry/spherical/twod/S2Point.getVector:()Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;"
+                    ],
+                    [
+                        "19",
+                        "invokevirtual"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/geometry/spherical/twod/Circle.getPhase:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;)D"
+                    ],
+                    [
+                        "22",
+                        "dadd"
+                    ],
+                    [
+                        "23",
+                        "invokevirtual"
+                    ],
+                    [
+                        "24",
+                        "org/apache/commons/math3/geometry/spherical/twod/Circle.getPointAt:(D)Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;"
+                    ],
+                    [
+                        "26",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setNextEdge": {
+        "name": "setNextEdge",
+        "pos": [
+            109,
+            125
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    110,
+                    111
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.getStart:()Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;"
+                    ],
+                    [
+                        "5",
+                        "putfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.end:Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "getfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.end:Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/geometry/spherical/twod/Vertex.setIncoming:(Lorg/apache/commons/math3/geometry/spherical/twod/Edge;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    111,
+                    112
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "getfield"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.end:Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;"
+                    ],
+                    [
+                        "20",
+                        "aload_0"
+                    ],
+                    [
+                        "21",
+                        "invokevirtual"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.getCircle:()Lorg/apache/commons/math3/geometry/spherical/twod/Circle;"
+                    ],
+                    [
+                        "24",
+                        "invokevirtual"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/math3/geometry/spherical/twod/Vertex.bindWith:(Lorg/apache/commons/math3/geometry/spherical/twod/Circle;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    112,
+                    113
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "27",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "split": {
+        "name": "split",
+        "pos": [
+            125,
+            206
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    129,
+                    130
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.circle:Lorg/apache/commons/math3/geometry/spherical/twod/Circle;"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.start:Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/geometry/spherical/twod/Vertex.getLocation:()Lorg/apache/commons/math3/geometry/spherical/twod/S2Point;"
+                    ],
+                    [
+                        "11",
+                        "invokevirtual"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/geometry/spherical/twod/S2Point.getVector:()Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;"
+                    ],
+                    [
+                        "14",
+                        "invokevirtual"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/geometry/spherical/twod/Circle.getPhase:(Lorg/apache/commons/math3/geometry/euclidean/threed/Vector3D;)D"
+                    ],
+                    [
+                        "17",
+                        "dstore"
+                    ],
+                    [
+                        "18",
+                        "#4"
+                    ],
+                    [
+                        "19",
+                        "aload_0"
+                    ],
+                    [
+                        "20",
+                        "getfield"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.circle:Lorg/apache/commons/math3/geometry/spherical/twod/Circle;"
+                    ],
+                    [
+                        "23",
+                        "aload_1"
+                    ],
+                    [
+                        "24",
+                        "invokevirtual"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/math3/geometry/spherical/twod/Circle.getInsideArc:(Lorg/apache/commons/math3/geometry/spherical/twod/Circle;)Lorg/apache/commons/math3/geometry/spherical/oned/Arc;"
+                    ],
+                    [
+                        "27",
+                        "astore"
+                    ],
+                    [
+                        "28",
+                        "#6"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    130,
+                    131
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "29",
+                        "aload"
+                    ],
+                    [
+                        "30",
+                        "#6"
+                    ],
+                    [
+                        "31",
+                        "invokevirtual"
+                    ],
+                    [
+                        "32",
+                        "org/apache/commons/math3/geometry/spherical/oned/Arc.getInf:()D"
+                    ],
+                    [
+                        "34",
+                        "dload"
+                    ],
+                    [
+                        "35",
+                        "#4"
+                    ],
+                    [
+                        "36",
+                        "ldc2_w"
+                    ],
+                    [
+                        "37",
+                        "3.141592653589793"
+                    ],
+                    [
+                        "39",
+                        "dadd"
+                    ],
+                    [
+                        "40",
+                        "invokestatic"
+                    ],
+                    [
+                        "41",
+                        "org/apache/commons/math3/util/MathUtils.normalizeAngle:(DD)D"
+                    ],
+                    [
+                        "43",
+                        "dload"
+                    ],
+                    [
+                        "44",
+                        "#4"
+                    ],
+                    [
+                        "45",
+                        "dsub"
+                    ],
+                    [
+                        "46",
+                        "dstore"
+                    ],
+                    [
+                        "47",
+                        "#7"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    131,
+                    132
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "48",
+                        "dload"
+                    ],
+                    [
+                        "49",
+                        "#7"
+                    ],
+                    [
+                        "50",
+                        "aload"
+                    ],
+                    [
+                        "51",
+                        "#6"
+                    ],
+                    [
+                        "52",
+                        "invokevirtual"
+                    ],
+                    [
+                        "53",
+                        "org/apache/commons/math3/geometry/spherical/oned/Arc.getSize:()D"
+                    ],
+                    [
+                        "55",
+                        "dadd"
+                    ],
+                    [
+                        "56",
+                        "dstore"
+                    ],
+                    [
+                        "57",
+                        "#9"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    132,
+                    133
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "58",
+                        "dload"
+                    ],
+                    [
+                        "59",
+                        "#9"
+                    ],
+                    [
+                        "60",
+                        "ldc2_w"
+                    ],
+                    [
+                        "61",
+                        "6.283185307179586"
+                    ],
+                    [
+                        "63",
+                        "dsub"
+                    ],
+                    [
+                        "64",
+                        "dstore"
+                    ],
+                    [
+                        "65",
+                        "#11"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    133,
+                    136
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "66",
+                        "aload_0"
+                    ],
+                    [
+                        "67",
+                        "getfield"
+                    ],
+                    [
+                        "68",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.circle:Lorg/apache/commons/math3/geometry/spherical/twod/Circle;"
+                    ],
+                    [
+                        "70",
+                        "invokevirtual"
+                    ],
+                    [
+                        "71",
+                        "org/apache/commons/math3/geometry/spherical/twod/Circle.getTolerance:()D"
+                    ],
+                    [
+                        "73",
+                        "dstore"
+                    ],
+                    [
+                        "74",
+                        "#13"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    136,
+                    137
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "75",
+                        "aload_0"
+                    ],
+                    [
+                        "76",
+                        "getfield"
+                    ],
+                    [
+                        "77",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.start:Lorg/apache/commons/math3/geometry/spherical/twod/Vertex;"
+                    ],
+                    [
+                        "79",
+                        "astore"
+                    ],
+                    [
+                        "80",
+                        "#15"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    137,
+                    138
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "81",
+                        "dload"
+                    ],
+                    [
+                        "82",
+                        "#11"
+                    ],
+                    [
+                        "83",
+                        "aload_0"
+                    ],
+                    [
+                        "84",
+                        "getfield"
+                    ],
+                    [
+                        "85",
+                        "org/apache/commons/math3/geometry/spherical/twod/Edge.length:D"
+                    ],
+                    [
+                        "87",
+                        "dload"
+                    ],
+                    [
+                        "88",
+                        "#13"
+                    ],
+                    [
+                        "89",
+                        "dsub"
+                    ],
+                    [
+                        "90",
+                        "dcmpl"
+                    ],
+                    [
+                        "91",
+                        "iflt"
+                    ],
+                    [
+                        "92",
+                        "14"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    138,
+                    191
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            138,
+                            144
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    142,
+                                    144
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            144,
+                            191
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    148,
+                                    149
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    149,
+                                    157
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            149,
+                                            157
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    151,
+                                                    154
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    154,
+                                                    155
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    157,
+                                    189
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            157,
+                                            167
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    159,
+                                                    167
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            159,
+                                                            162
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    160,
+                                                                    162
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            162,
+                                                            167
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    165,
+                                                                    166
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            167,
+                                            189
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    169,
+                                                    172
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    172,
+                                                    174
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    174,
+                                                    187
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            174,
+                                                            178
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    176,
+                                                                    178
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            178,
+                                                            187
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    180,
+                                                                    183
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    183,
+                                                                    184
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    184,
+                                                                    186
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "addSubEdge": {
+        "name": "addSubEdge",
+        "pos": [
+            206,
+            222
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    209,
+                    215
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            209,
+                            215
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    211,
+                                    212
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    215,
+                    216
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    216,
+                    217
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    217,
+                    218
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    218,
+                    220
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

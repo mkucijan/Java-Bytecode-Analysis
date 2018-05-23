@@ -1,0 +1,675 @@
+{
+    "isEmpty": {
+        "name": "isEmpty",
+        "pos": [
+            1298,
+            1305
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    1299,
+                    1300
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie$TrieEntry.key:Ljava/lang/Object;"
+                    ],
+                    [
+                        "4",
+                        "ifnonnull"
+                    ],
+                    [
+                        "5",
+                        "7"
+                    ],
+                    [
+                        "7",
+                        "iconst_1"
+                    ],
+                    [
+                        "8",
+                        "goto"
+                    ],
+                    [
+                        "9",
+                        "4"
+                    ],
+                    [
+                        "11",
+                        "iconst_0"
+                    ],
+                    [
+                        "12",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isInternalNode": {
+        "name": "isInternalNode",
+        "pos": [
+            1305,
+            1312
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    1306,
+                    1307
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie$TrieEntry.left:Lorg/apache/commons/collections4/trie/AbstractPatriciaTrie$TrieEntry;"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "if_acmpeq"
+                    ],
+                    [
+                        "6",
+                        "15"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "getfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie$TrieEntry.right:Lorg/apache/commons/collections4/trie/AbstractPatriciaTrie$TrieEntry;"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "if_acmpeq"
+                    ],
+                    [
+                        "14",
+                        "7"
+                    ],
+                    [
+                        "16",
+                        "iconst_1"
+                    ],
+                    [
+                        "17",
+                        "goto"
+                    ],
+                    [
+                        "18",
+                        "4"
+                    ],
+                    [
+                        "20",
+                        "iconst_0"
+                    ],
+                    [
+                        "21",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isExternalNode": {
+        "name": "isExternalNode",
+        "pos": [
+            1312,
+            1316
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    1313,
+                    1314
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie$TrieEntry.isInternalNode:()Z"
+                    ],
+                    [
+                        "4",
+                        "ifne"
+                    ],
+                    [
+                        "5",
+                        "7"
+                    ],
+                    [
+                        "7",
+                        "iconst_1"
+                    ],
+                    [
+                        "8",
+                        "goto"
+                    ],
+                    [
+                        "9",
+                        "4"
+                    ],
+                    [
+                        "11",
+                        "iconst_0"
+                    ],
+                    [
+                        "12",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "toString": {
+        "name": "toString",
+        "pos": [
+            1316,
+            1375
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    1318,
+                    1320
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/lang/StringBuilder"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "invokespecial"
+                    ],
+                    [
+                        "5",
+                        "java/lang/StringBuilder.<init>:()V"
+                    ],
+                    [
+                        "7",
+                        "astore_1"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "getfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/collections4/trie/AbstractPatriciaTrie$TrieEntry.bitIndex:I"
+                    ],
+                    [
+                        "12",
+                        "iconst_m1"
+                    ],
+                    [
+                        "13",
+                        "if_icmpne"
+                    ],
+                    [
+                        "14",
+                        "13"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    1320,
+                    1326
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1320,
+                            1322
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    1321,
+                                    1322
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1322,
+                            1326
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    1323,
+                                    1324
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1326,
+                    1327
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1327,
+                    1330
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    1330,
+                    1339
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1330,
+                            1336
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    1331,
+                                    1336
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            1331,
+                                            1333
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    1332,
+                                                    1333
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            1333,
+                                            1336
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    1334,
+                                                    1335
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1336,
+                            1339
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    1337,
+                                    1338
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1339,
+                    1341
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    1341,
+                    1350
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1341,
+                            1347
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    1342,
+                                    1347
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            1342,
+                                            1344
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    1343,
+                                                    1344
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            1344,
+                                            1347
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    1345,
+                                                    1346
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1347,
+                            1350
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    1348,
+                                    1349
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1350,
+                    1352
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    1352,
+                    1361
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1352,
+                            1358
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    1353,
+                                    1358
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            1353,
+                                            1355
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    1354,
+                                                    1355
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            1355,
+                                            1358
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    1356,
+                                                    1357
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1358,
+                            1361
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    1359,
+                                    1360
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1361,
+                    1363
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    1363,
+                    1372
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1363,
+                            1372
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    1364,
+                                    1370
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            1364,
+                                            1366
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    1365,
+                                                    1366
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            1366,
+                                            1370
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    1367,
+                                                    1369
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1372,
+                    1373
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    1373,
+                    1374
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

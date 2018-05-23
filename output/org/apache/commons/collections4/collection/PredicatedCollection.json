@@ -1,0 +1,776 @@
+{
+  "builder": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/collection/PredicatedCollection$Builder",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/collection/PredicatedCollection$Builder.<init>:(Lorg/apache/commons/collections4/Predicate;)V",
+      0,
+      0
+    ],
+    "8": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "notNullBuilder": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/collection/PredicatedCollection$Builder",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/collections4/functors/NotNullPredicate.notNullPredicate:()Lorg/apache/commons/collections4/Predicate;",
+      0,
+      0
+    ],
+    "7": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/collections4/collection/PredicatedCollection$Builder.<init>:(Lorg/apache/commons/collections4/Predicate;)V",
+      0,
+      0
+    ],
+    "10": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "predicatedCollection": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/collection/PredicatedCollection",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/collections4/collection/PredicatedCollection.<init>:(Ljava/util/Collection;Lorg/apache/commons/collections4/Predicate;)V",
+      0,
+      0
+    ],
+    "9": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/collections4/collection/AbstractCollectionDecorator.<init>:(Ljava/util/Collection;)V",
+      0,
+      0
+    ],
+    "5": [
+      "aload_2",
+      1,
+      1
+    ],
+    "6": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "7": [
+      "13",
+      1,
+      1
+    ],
+    "9": [
+      "new",
+      1,
+      0
+    ],
+    "10": [
+      "java/lang/NullPointerException",
+      1,
+      0
+    ],
+    "12": [
+      "dup",
+      1,
+      0
+    ],
+    "13": [
+      "ldc",
+      1,
+      0
+    ],
+    "14": [
+      "Predicate must not be null.",
+      1,
+      0
+    ],
+    "15": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "16": [
+      "java/lang/NullPointerException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "18": [
+      "athrow",
+      1,
+      0
+    ],
+    "19": [
+      "aload_0",
+      0,
+      0
+    ],
+    "20": [
+      "aload_2",
+      0,
+      0
+    ],
+    "21": [
+      "putfield",
+      0,
+      0
+    ],
+    "22": [
+      "org/apache/commons/collections4/collection/PredicatedCollection.predicate:Lorg/apache/commons/collections4/Predicate;",
+      0,
+      0
+    ],
+    "24": [
+      "aload_1",
+      1,
+      4
+    ],
+    "25": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "26": [
+      "java/util/Collection.java/util/Iterator",
+      1,
+      4
+    ],
+    "28": [
+      "0",
+      1,
+      4
+    ],
+    "30": [
+      "astore_3",
+      1,
+      4
+    ],
+    "31": [
+      "aload_3",
+      1,
+      4
+    ],
+    "32": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "33": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "35": [
+      "0",
+      1,
+      4
+    ],
+    "37": [
+      "ifeq",
+      1,
+      4
+    ],
+    "38": [
+      "20",
+      1,
+      4
+    ],
+    "40": [
+      "aload_3",
+      1,
+      4
+    ],
+    "41": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "42": [
+      "java/util/Iterator.validate:(Ljava/lang/Object;)V",
+      1,
+      4
+    ],
+    "44": [
+      "0",
+      1,
+      4
+    ],
+    "46": [
+      "astore",
+      1,
+      4
+    ],
+    "47": [
+      "#4",
+      1,
+      4
+    ],
+    "48": [
+      "aload_0",
+      1,
+      0
+    ],
+    "49": [
+      "aload",
+      1,
+      0
+    ],
+    "50": [
+      "#4",
+      1,
+      0
+    ],
+    "51": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "52": [
+      "org/apache/commons/collections4/collection/PredicatedCollection.validate:(Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "54": [
+      "goto",
+      0,
+      4
+    ],
+    "55": [
+      "-23",
+      0,
+      4
+    ],
+    "57": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "validate": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/collections4/collection/PredicatedCollection.predicate:Lorg/apache/commons/collections4/Predicate;",
+      1,
+      1
+    ],
+    "4": [
+      "aload_1",
+      1,
+      1
+    ],
+    "5": [
+      "invokeinterface",
+      1,
+      1
+    ],
+    "6": [
+      "org/apache/commons/collections4/Predicate.java/lang/IllegalArgumentException",
+      1,
+      1
+    ],
+    "8": [
+      "0",
+      1,
+      1
+    ],
+    "10": [
+      "ifne",
+      1,
+      1
+    ],
+    "11": [
+      "47",
+      1,
+      1
+    ],
+    "13": [
+      "new",
+      1,
+      0
+    ],
+    "14": [
+      "java/lang/IllegalArgumentException",
+      1,
+      0
+    ],
+    "16": [
+      "dup",
+      1,
+      0
+    ],
+    "17": [
+      "new",
+      1,
+      0
+    ],
+    "18": [
+      "java/lang/StringBuilder",
+      1,
+      0
+    ],
+    "20": [
+      "dup",
+      1,
+      0
+    ],
+    "21": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "22": [
+      "java/lang/StringBuilder.<init>:()V",
+      1,
+      0
+    ],
+    "24": [
+      "ldc",
+      1,
+      0
+    ],
+    "25": [
+      "Cannot add Object '",
+      1,
+      0
+    ],
+    "26": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "27": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      1,
+      0
+    ],
+    "29": [
+      "aload_1",
+      1,
+      0
+    ],
+    "30": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "31": [
+      "java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;",
+      1,
+      0
+    ],
+    "33": [
+      "ldc",
+      1,
+      0
+    ],
+    "34": [
+      "' - Predicate '",
+      1,
+      0
+    ],
+    "35": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "36": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      1,
+      0
+    ],
+    "38": [
+      "aload_0",
+      1,
+      0
+    ],
+    "39": [
+      "getfield",
+      1,
+      0
+    ],
+    "40": [
+      "org/apache/commons/collections4/collection/PredicatedCollection.predicate:Lorg/apache/commons/collections4/Predicate;",
+      1,
+      0
+    ],
+    "42": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "43": [
+      "java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;",
+      1,
+      0
+    ],
+    "45": [
+      "ldc",
+      1,
+      0
+    ],
+    "46": [
+      "' rejected it",
+      1,
+      0
+    ],
+    "47": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "48": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      1,
+      0
+    ],
+    "50": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "51": [
+      "java/lang/StringBuilder.toString:()Ljava/lang/String;",
+      1,
+      0
+    ],
+    "53": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "54": [
+      "java/lang/IllegalArgumentException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "56": [
+      "athrow",
+      1,
+      0
+    ],
+    "57": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "add": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/collections4/collection/PredicatedCollection.validate:(Ljava/lang/Object;)V",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/collections4/collection/PredicatedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "9": [
+      "aload_1",
+      0,
+      0
+    ],
+    "10": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "11": [
+      "java/util/Collection.addAll:(Ljava/util/Collection;)Z",
+      0,
+      0
+    ],
+    "13": [
+      "0",
+      0,
+      0
+    ],
+    "15": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "addAll": {
+    "0": [
+      "aload_1",
+      1,
+      4
+    ],
+    "1": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "2": [
+      "java/util/Collection.java/util/Iterator",
+      1,
+      4
+    ],
+    "4": [
+      "0",
+      1,
+      4
+    ],
+    "6": [
+      "astore_2",
+      1,
+      4
+    ],
+    "7": [
+      "aload_2",
+      1,
+      4
+    ],
+    "8": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "9": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "11": [
+      "0",
+      1,
+      4
+    ],
+    "13": [
+      "ifeq",
+      1,
+      4
+    ],
+    "14": [
+      "18",
+      1,
+      4
+    ],
+    "16": [
+      "aload_2",
+      1,
+      4
+    ],
+    "17": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "18": [
+      "java/util/Iterator.validate:(Ljava/lang/Object;)V",
+      1,
+      4
+    ],
+    "20": [
+      "0",
+      1,
+      4
+    ],
+    "22": [
+      "astore_3",
+      1,
+      4
+    ],
+    "23": [
+      "aload_0",
+      1,
+      0
+    ],
+    "24": [
+      "aload_3",
+      1,
+      0
+    ],
+    "25": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "26": [
+      "org/apache/commons/collections4/collection/PredicatedCollection.validate:(Ljava/lang/Object;)V",
+      1,
+      0
+    ],
+    "28": [
+      "goto",
+      0,
+      4
+    ],
+    "29": [
+      "-21",
+      0,
+      4
+    ],
+    "31": [
+      "aload_0",
+      0,
+      0
+    ],
+    "32": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "33": [
+      "org/apache/commons/collections4/collection/PredicatedCollection.decorated:()Ljava/util/Collection;",
+      0,
+      0
+    ],
+    "35": [
+      "aload_1",
+      0,
+      0
+    ],
+    "36": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "37": [
+      "java/util/Collection.org/apache/commons/collections4/collection/AbstractCollectionDecorator",
+      0,
+      0
+    ],
+    "39": [
+      "0",
+      0,
+      0
+    ],
+    "41": [
+      "ireturn",
+      0,
+      0
+    ]
+  }
+}

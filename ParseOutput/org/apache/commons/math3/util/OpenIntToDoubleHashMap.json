@@ -1,0 +1,2549 @@
+{
+    "computeCapacity": {
+        "name": "computeCapacity",
+        "pos": [
+            148,
+            165
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    149,
+                    152
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            149,
+                            152
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    150,
+                                    151
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    152,
+                    153
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    153,
+                    154
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    154,
+                    157
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            154,
+                            157
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    155,
+                                    156
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    157,
+                    158
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "nextPowerOfTwo": {
+        "name": "nextPowerOfTwo",
+        "pos": [
+            165,
+            174
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    166,
+                    167
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "java/lang/Integer.highestOneBit:(I)I"
+                    ],
+                    [
+                        "4",
+                        "iconst_1"
+                    ],
+                    [
+                        "5",
+                        "ishl"
+                    ],
+                    [
+                        "6",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "get": {
+        "name": "get",
+        "pos": [
+            174,
+            204
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    176,
+                    177
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_1"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.hashOf:(I)I"
+                    ],
+                    [
+                        "4",
+                        "istore_2"
+                    ],
+                    [
+                        "5",
+                        "iload_2"
+                    ],
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "getfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.mask:I"
+                    ],
+                    [
+                        "10",
+                        "iand"
+                    ],
+                    [
+                        "11",
+                        "istore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    177,
+                    178
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "iload_1"
+                    ],
+                    [
+                        "14",
+                        "iload_3"
+                    ],
+                    [
+                        "15",
+                        "invokespecial"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.containsKey:(II)Z"
+                    ],
+                    [
+                        "18",
+                        "ifeq"
+                    ],
+                    [
+                        "19",
+                        "10"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    178,
+                    182
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            178,
+                            182
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    179,
+                                    180
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    182,
+                    186
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            182,
+                            186
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    183,
+                                    184
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    186,
+                    187
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    187,
+                    195
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            187,
+                            195
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    188,
+                                    189
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    189,
+                                    190
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    190,
+                                    193
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            190,
+                                            193
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    191,
+                                                    192
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    195,
+                    197
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "containsKey": {
+        "name": "containsKey",
+        "pos": [
+            380,
+            389
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    381,
+                    382
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_1"
+                    ],
+                    [
+                        "1",
+                        "ifne"
+                    ],
+                    [
+                        "2",
+                        "13"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.states:[B"
+                    ],
+                    [
+                        "8",
+                        "iload_2"
+                    ],
+                    [
+                        "9",
+                        "baload"
+                    ],
+                    [
+                        "10",
+                        "iconst_1"
+                    ],
+                    [
+                        "11",
+                        "if_icmpne"
+                    ],
+                    [
+                        "12",
+                        "17"
+                    ],
+                    [
+                        "14",
+                        "aload_0"
+                    ],
+                    [
+                        "15",
+                        "getfield"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.keys:[I"
+                    ],
+                    [
+                        "18",
+                        "iload_2"
+                    ],
+                    [
+                        "19",
+                        "iaload"
+                    ],
+                    [
+                        "20",
+                        "iload_1"
+                    ],
+                    [
+                        "21",
+                        "if_icmpne"
+                    ],
+                    [
+                        "22",
+                        "7"
+                    ],
+                    [
+                        "24",
+                        "iconst_1"
+                    ],
+                    [
+                        "25",
+                        "goto"
+                    ],
+                    [
+                        "26",
+                        "4"
+                    ],
+                    [
+                        "28",
+                        "iconst_0"
+                    ],
+                    [
+                        "29",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "iterator": {
+        "name": "iterator",
+        "pos": [
+            236,
+            245
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    237,
+                    238
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap$Iterator"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aconst_null"
+                    ],
+                    [
+                        "6",
+                        "invokespecial"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap$Iterator.<init>:(Lorg/apache/commons/math3/util/OpenIntToDoubleHashMap;Lorg/apache/commons/math3/util/OpenIntToDoubleHashMap$1;)V"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "perturb": {
+        "name": "perturb",
+        "pos": [
+            245,
+            254
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    246,
+                    247
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_0"
+                    ],
+                    [
+                        "1",
+                        "ldc"
+                    ],
+                    [
+                        "2",
+                        "2147483647"
+                    ],
+                    [
+                        "3",
+                        "iand"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "findInsertionIndex": {
+        "name": "findInsertionIndex",
+        "pos": [
+            266,
+            321
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    268,
+                    269
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_2"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.hashOf:(I)I"
+                    ],
+                    [
+                        "4",
+                        "istore"
+                    ],
+                    [
+                        "5",
+                        "#4"
+                    ],
+                    [
+                        "6",
+                        "iload"
+                    ],
+                    [
+                        "7",
+                        "#4"
+                    ],
+                    [
+                        "8",
+                        "iload_3"
+                    ],
+                    [
+                        "9",
+                        "iand"
+                    ],
+                    [
+                        "10",
+                        "istore"
+                    ],
+                    [
+                        "11",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    269,
+                    270
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "aload_1"
+                    ],
+                    [
+                        "13",
+                        "iload"
+                    ],
+                    [
+                        "14",
+                        "#5"
+                    ],
+                    [
+                        "15",
+                        "baload"
+                    ],
+                    [
+                        "16",
+                        "ifne"
+                    ],
+                    [
+                        "17",
+                        "6"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    270,
+                    276
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            270,
+                            272
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    271,
+                                    272
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "IfStatement",
+                        "pos": [
+                            272,
+                            276
+                        ],
+                        "children": [
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    272,
+                                    276
+                                ],
+                                "children": [
+                                    {
+                                        "name": "ReturnStatement",
+                                        "pos": [
+                                            273,
+                                            274
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    276,
+                    277
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    277,
+                    278
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    278,
+                    290
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            278,
+                            290
+                        ],
+                        "children": [
+                            {
+                                "name": "WhileStatement",
+                                "pos": [
+                                    279,
+                                    288
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            279,
+                                            288
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    280,
+                                                    281
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    281,
+                                                    282
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    282,
+                                                    284
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    284,
+                                                    287
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            284,
+                                                            287
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "BreakStatement",
+                                                                "pos": [
+                                                                    285,
+                                                                    286
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    290,
+                    298
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            290,
+                            292
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    291,
+                                    292
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "IfStatement",
+                        "pos": [
+                            292,
+                            298
+                        ],
+                        "children": [
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    292,
+                                    298
+                                ],
+                                "children": [
+                                    {
+                                        "name": "ReturnStatement",
+                                        "pos": [
+                                            295,
+                                            296
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    298,
+                    299
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    299,
+                    313
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            299,
+                            313
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    300,
+                                    301
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    301,
+                                    303
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    303,
+                                    309
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            303,
+                                            305
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    304,
+                                                    305
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "IfStatement",
+                                        "pos": [
+                                            305,
+                                            309
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "BlockStatement",
+                                                "pos": [
+                                                    305,
+                                                    309
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "ReturnStatement",
+                                                        "pos": [
+                                                            306,
+                                                            307
+                                                        ],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    309,
+                                    311
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "probe": {
+        "name": "probe",
+        "pos": [
+            321,
+            330
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    322,
+                    323
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_1"
+                    ],
+                    [
+                        "1",
+                        "iconst_2"
+                    ],
+                    [
+                        "2",
+                        "ishl"
+                    ],
+                    [
+                        "3",
+                        "iload_1"
+                    ],
+                    [
+                        "4",
+                        "iadd"
+                    ],
+                    [
+                        "5",
+                        "iload_0"
+                    ],
+                    [
+                        "6",
+                        "iadd"
+                    ],
+                    [
+                        "7",
+                        "iconst_1"
+                    ],
+                    [
+                        "8",
+                        "iadd"
+                    ],
+                    [
+                        "9",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "changeIndexSign": {
+        "name": "changeIndexSign",
+        "pos": [
+            330,
+            338
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    331,
+                    332
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_0"
+                    ],
+                    [
+                        "1",
+                        "ineg"
+                    ],
+                    [
+                        "2",
+                        "iconst_1"
+                    ],
+                    [
+                        "3",
+                        "isub"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "size": {
+        "name": "size",
+        "pos": [
+            338,
+            348
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    339,
+                    340
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.size:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "remove": {
+        "name": "remove",
+        "pos": [
+            348,
+            380
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    350,
+                    351
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_1"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.hashOf:(I)I"
+                    ],
+                    [
+                        "4",
+                        "istore_2"
+                    ],
+                    [
+                        "5",
+                        "iload_2"
+                    ],
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "getfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.mask:I"
+                    ],
+                    [
+                        "10",
+                        "iand"
+                    ],
+                    [
+                        "11",
+                        "istore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    351,
+                    352
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "iload_1"
+                    ],
+                    [
+                        "14",
+                        "iload_3"
+                    ],
+                    [
+                        "15",
+                        "invokespecial"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.containsKey:(II)Z"
+                    ],
+                    [
+                        "18",
+                        "ifeq"
+                    ],
+                    [
+                        "19",
+                        "9"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    352,
+                    356
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            352,
+                            356
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    353,
+                                    354
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    356,
+                    360
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            356,
+                            360
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    357,
+                                    358
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    360,
+                    361
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    361,
+                    369
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            361,
+                            369
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    362,
+                                    363
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    363,
+                                    364
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    364,
+                                    367
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            364,
+                                            367
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    365,
+                                                    366
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    369,
+                    371
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "doRemove": {
+        "name": "doRemove",
+        "pos": [
+            389,
+            405
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    390,
+                    391
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.keys:[I"
+                    ],
+                    [
+                        "4",
+                        "iload_1"
+                    ],
+                    [
+                        "5",
+                        "iconst_0"
+                    ],
+                    [
+                        "6",
+                        "iastore"
+                    ],
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "getfield"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.states:[B"
+                    ],
+                    [
+                        "11",
+                        "iload_1"
+                    ],
+                    [
+                        "12",
+                        "iconst_2"
+                    ],
+                    [
+                        "13",
+                        "bastore"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    391,
+                    392
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "14",
+                        "aload_0"
+                    ],
+                    [
+                        "15",
+                        "getfield"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.values:[D"
+                    ],
+                    [
+                        "18",
+                        "iload_1"
+                    ],
+                    [
+                        "19",
+                        "daload"
+                    ],
+                    [
+                        "20",
+                        "dstore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    392,
+                    393
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "21",
+                        "aload_0"
+                    ],
+                    [
+                        "22",
+                        "getfield"
+                    ],
+                    [
+                        "23",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.values:[D"
+                    ],
+                    [
+                        "25",
+                        "iload_1"
+                    ],
+                    [
+                        "26",
+                        "aload_0"
+                    ],
+                    [
+                        "27",
+                        "getfield"
+                    ],
+                    [
+                        "28",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.missingEntries:D"
+                    ],
+                    [
+                        "30",
+                        "dastore"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    393,
+                    394
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "31",
+                        "aload_0"
+                    ],
+                    [
+                        "32",
+                        "dup"
+                    ],
+                    [
+                        "33",
+                        "getfield"
+                    ],
+                    [
+                        "34",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.size:I"
+                    ],
+                    [
+                        "36",
+                        "iconst_1"
+                    ],
+                    [
+                        "37",
+                        "isub"
+                    ],
+                    [
+                        "38",
+                        "putfield"
+                    ],
+                    [
+                        "39",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.size:I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    394,
+                    395
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "41",
+                        "aload_0"
+                    ],
+                    [
+                        "42",
+                        "dup"
+                    ],
+                    [
+                        "43",
+                        "getfield"
+                    ],
+                    [
+                        "44",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.count:I"
+                    ],
+                    [
+                        "46",
+                        "iconst_1"
+                    ],
+                    [
+                        "47",
+                        "iadd"
+                    ],
+                    [
+                        "48",
+                        "putfield"
+                    ],
+                    [
+                        "49",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.count:I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    395,
+                    396
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "51",
+                        "dload_2"
+                    ],
+                    [
+                        "52",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    396,
+                    397
+                ],
+                "children": []
+            }
+        ]
+    },
+    "put": {
+        "name": "put",
+        "pos": [
+            405,
+            431
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    406,
+                    407
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "invokespecial"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.findInsertionIndex:(I)I"
+                    ],
+                    [
+                        "5",
+                        "istore"
+                    ],
+                    [
+                        "6",
+                        "#4"
+                    ],
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "getfield"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.missingEntries:D"
+                    ],
+                    [
+                        "11",
+                        "dstore"
+                    ],
+                    [
+                        "12",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    407,
+                    408
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "13",
+                        "iconst_1"
+                    ],
+                    [
+                        "14",
+                        "istore"
+                    ],
+                    [
+                        "15",
+                        "#7"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    408,
+                    409
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "iload"
+                    ],
+                    [
+                        "17",
+                        "#4"
+                    ],
+                    [
+                        "18",
+                        "ifge"
+                    ],
+                    [
+                        "19",
+                        "22"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    409,
+                    414
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            409,
+                            414
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    410,
+                                    411
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    411,
+                                    412
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    412,
+                                    413
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    414,
+                    415
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    415,
+                    416
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    416,
+                    417
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    417,
+                    424
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            417,
+                            424
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    418,
+                                    419
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    419,
+                                    422
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            419,
+                                            422
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    420,
+                                                    421
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    422,
+                                    423
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    424,
+                    426
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "growTable": {
+        "name": "growTable",
+        "pos": [
+            431,
+            464
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    433,
+                    434
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.states:[B"
+                    ],
+                    [
+                        "4",
+                        "arraylength"
+                    ],
+                    [
+                        "5",
+                        "istore_1"
+                    ],
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "getfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.keys:[I"
+                    ],
+                    [
+                        "10",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    434,
+                    435
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "11",
+                        "aload_0"
+                    ],
+                    [
+                        "12",
+                        "getfield"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.values:[D"
+                    ],
+                    [
+                        "15",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    435,
+                    436
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "getfield"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.states:[B"
+                    ],
+                    [
+                        "20",
+                        "astore"
+                    ],
+                    [
+                        "21",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    436,
+                    438
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "22",
+                        "iconst_2"
+                    ],
+                    [
+                        "23",
+                        "iload_1"
+                    ],
+                    [
+                        "24",
+                        "imul"
+                    ],
+                    [
+                        "25",
+                        "istore"
+                    ],
+                    [
+                        "26",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    438,
+                    439
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "27",
+                        "iload"
+                    ],
+                    [
+                        "28",
+                        "#5"
+                    ],
+                    [
+                        "29",
+                        "newarray"
+                    ],
+                    [
+                        "30",
+                        "10"
+                    ],
+                    [
+                        "31",
+                        "astore"
+                    ],
+                    [
+                        "32",
+                        "#6"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    439,
+                    440
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "33",
+                        "iload"
+                    ],
+                    [
+                        "34",
+                        "#5"
+                    ],
+                    [
+                        "35",
+                        "newarray"
+                    ],
+                    [
+                        "36",
+                        "7"
+                    ],
+                    [
+                        "37",
+                        "astore"
+                    ],
+                    [
+                        "38",
+                        "#7"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    440,
+                    441
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "39",
+                        "iload"
+                    ],
+                    [
+                        "40",
+                        "#5"
+                    ],
+                    [
+                        "41",
+                        "newarray"
+                    ],
+                    [
+                        "42",
+                        "8"
+                    ],
+                    [
+                        "43",
+                        "astore"
+                    ],
+                    [
+                        "44",
+                        "#8"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    441,
+                    442
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "45",
+                        "iload"
+                    ],
+                    [
+                        "46",
+                        "#5"
+                    ],
+                    [
+                        "47",
+                        "iconst_1"
+                    ],
+                    [
+                        "48",
+                        "isub"
+                    ],
+                    [
+                        "49",
+                        "istore"
+                    ],
+                    [
+                        "50",
+                        "#9"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    442,
+                    443
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "51",
+                        "iconst_0"
+                    ],
+                    [
+                        "52",
+                        "istore"
+                    ],
+                    [
+                        "53",
+                        "#10"
+                    ],
+                    [
+                        "54",
+                        "iload"
+                    ],
+                    [
+                        "55",
+                        "#10"
+                    ],
+                    [
+                        "56",
+                        "iload_1"
+                    ],
+                    [
+                        "57",
+                        "if_icmpge"
+                    ],
+                    [
+                        "58",
+                        "59"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    443,
+                    453
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            443,
+                            453
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    444,
+                                    451
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            444,
+                                            451
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    445,
+                                                    446
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    446,
+                                                    447
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    447,
+                                                    448
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    448,
+                                                    449
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    449,
+                                                    450
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    453,
+                    454
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    454,
+                    455
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    455,
+                    456
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    456,
+                    458
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "shouldGrowTable": {
+        "name": "shouldGrowTable",
+        "pos": [
+            464,
+            473
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    465,
+                    466
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.size:I"
+                    ],
+                    [
+                        "4",
+                        "i2f"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "getfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.mask:I"
+                    ],
+                    [
+                        "9",
+                        "iconst_1"
+                    ],
+                    [
+                        "10",
+                        "iadd"
+                    ],
+                    [
+                        "11",
+                        "i2f"
+                    ],
+                    [
+                        "12",
+                        "ldc"
+                    ],
+                    [
+                        "13",
+                        "0.5"
+                    ],
+                    [
+                        "14",
+                        "fmul"
+                    ],
+                    [
+                        "15",
+                        "fcmpl"
+                    ],
+                    [
+                        "16",
+                        "ifle"
+                    ],
+                    [
+                        "17",
+                        "7"
+                    ],
+                    [
+                        "19",
+                        "iconst_1"
+                    ],
+                    [
+                        "20",
+                        "goto"
+                    ],
+                    [
+                        "21",
+                        "4"
+                    ],
+                    [
+                        "23",
+                        "iconst_0"
+                    ],
+                    [
+                        "24",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "hashOf": {
+        "name": "hashOf",
+        "pos": [
+            473,
+            480
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    474,
+                    475
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_0"
+                    ],
+                    [
+                        "2",
+                        "bipush"
+                    ],
+                    [
+                        "3",
+                        "20"
+                    ],
+                    [
+                        "4",
+                        "iushr"
+                    ],
+                    [
+                        "5",
+                        "iload_0"
+                    ],
+                    [
+                        "6",
+                        "bipush"
+                    ],
+                    [
+                        "7",
+                        "12"
+                    ],
+                    [
+                        "8",
+                        "iushr"
+                    ],
+                    [
+                        "9",
+                        "ixor"
+                    ],
+                    [
+                        "10",
+                        "ixor"
+                    ],
+                    [
+                        "11",
+                        "istore_1"
+                    ],
+                    [
+                        "12",
+                        "iload_1"
+                    ],
+                    [
+                        "13",
+                        "iload_1"
+                    ],
+                    [
+                        "14",
+                        "bipush"
+                    ],
+                    [
+                        "15",
+                        "7"
+                    ],
+                    [
+                        "16",
+                        "iushr"
+                    ],
+                    [
+                        "17",
+                        "ixor"
+                    ],
+                    [
+                        "18",
+                        "iload_1"
+                    ],
+                    [
+                        "19",
+                        "iconst_4"
+                    ],
+                    [
+                        "20",
+                        "iushr"
+                    ],
+                    [
+                        "21",
+                        "ixor"
+                    ],
+                    [
+                        "22",
+                        "ireturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    475,
+                    476
+                ],
+                "children": []
+            }
+        ]
+    },
+    "readObject": {
+        "name": "readObject",
+        "pos": [
+            589,
+            596
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    591,
+                    592
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectInputStream.defaultReadObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "iconst_0"
+                    ],
+                    [
+                        "6",
+                        "putfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.count:I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    592,
+                    593
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

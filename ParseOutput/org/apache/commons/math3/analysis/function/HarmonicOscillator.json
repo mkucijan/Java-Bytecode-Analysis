@@ -1,0 +1,335 @@
+{
+    "value": {
+        "name": "value",
+        "pos": [
+            164,
+            183
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    166,
+                    167
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/analysis/differentiation/DerivativeStructure.getValue:()D"
+                    ],
+                    [
+                        "4",
+                        "dstore_2"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/analysis/differentiation/DerivativeStructure.getOrder:()I"
+                    ],
+                    [
+                        "9",
+                        "iconst_1"
+                    ],
+                    [
+                        "10",
+                        "iadd"
+                    ],
+                    [
+                        "11",
+                        "newarray"
+                    ],
+                    [
+                        "12",
+                        "7"
+                    ],
+                    [
+                        "13",
+                        "astore"
+                    ],
+                    [
+                        "14",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    167,
+                    169
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "15",
+                        "aload_0"
+                    ],
+                    [
+                        "16",
+                        "getfield"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/analysis/function/HarmonicOscillator.omega:D"
+                    ],
+                    [
+                        "19",
+                        "dload_2"
+                    ],
+                    [
+                        "20",
+                        "dmul"
+                    ],
+                    [
+                        "21",
+                        "aload_0"
+                    ],
+                    [
+                        "22",
+                        "getfield"
+                    ],
+                    [
+                        "23",
+                        "org/apache/commons/math3/analysis/function/HarmonicOscillator.phase:D"
+                    ],
+                    [
+                        "25",
+                        "dadd"
+                    ],
+                    [
+                        "26",
+                        "dstore"
+                    ],
+                    [
+                        "27",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    169,
+                    170
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "28",
+                        "aload"
+                    ],
+                    [
+                        "29",
+                        "#4"
+                    ],
+                    [
+                        "30",
+                        "iconst_0"
+                    ],
+                    [
+                        "31",
+                        "aload_0"
+                    ],
+                    [
+                        "32",
+                        "getfield"
+                    ],
+                    [
+                        "33",
+                        "org/apache/commons/math3/analysis/function/HarmonicOscillator.amplitude:D"
+                    ],
+                    [
+                        "35",
+                        "dload"
+                    ],
+                    [
+                        "36",
+                        "#5"
+                    ],
+                    [
+                        "37",
+                        "invokestatic"
+                    ],
+                    [
+                        "38",
+                        "org/apache/commons/math3/util/FastMath.cos:(D)D"
+                    ],
+                    [
+                        "40",
+                        "dmul"
+                    ],
+                    [
+                        "41",
+                        "dastore"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    170,
+                    171
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "42",
+                        "aload"
+                    ],
+                    [
+                        "43",
+                        "#4"
+                    ],
+                    [
+                        "44",
+                        "arraylength"
+                    ],
+                    [
+                        "45",
+                        "iconst_1"
+                    ],
+                    [
+                        "46",
+                        "if_icmple"
+                    ],
+                    [
+                        "47",
+                        "67"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    171,
+                    179
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            171,
+                            179
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    172,
+                                    173
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    173,
+                                    174
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    174,
+                                    177
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            174,
+                                            177
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    175,
+                                                    176
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    179,
+                    181
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "derivative": {
+        "name": "derivative",
+        "pos": [
+            67,
+            81
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    69,
+                    70
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/analysis/FunctionUtils.toDifferentiableUnivariateFunction:(Lorg/apache/commons/math3/analysis/differentiation/UnivariateDifferentiableFunction;)Lorg/apache/commons/math3/analysis/DifferentiableUnivariateFunction;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/analysis/DifferentiableUnivariateFunction.org/apache/commons/math3/util/FastMath"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

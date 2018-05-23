@@ -1,0 +1,387 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "3": [
+      "java/util/Map.putAll:(Lorg/apache/commons/collections4/MultiValuedMap;)Z",
+      0,
+      0
+    ],
+    "5": [
+      "0",
+      0,
+      0
+    ],
+    "7": [
+      "iconst_3",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/multimap/ArrayListValuedHashMap.<init>:(II)V",
+      0,
+      0
+    ],
+    "11": [
+      "aload_0",
+      0,
+      0
+    ],
+    "12": [
+      "aload_1",
+      0,
+      0
+    ],
+    "13": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "14": [
+      "org/apache/commons/collections4/multimap/AbstractListValuedMap.putAll:(Ljava/util/Map;)Z",
+      0,
+      0
+    ],
+    "16": [
+      "pop",
+      0,
+      0
+    ],
+    "17": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "createCollection": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/multimap/ArrayListValuedHashMap.createCollection:()Ljava/util/ArrayList;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "trimToSize": {
+    "0": [
+      "aload_0",
+      1,
+      4
+    ],
+    "1": [
+      "invokevirtual",
+      1,
+      4
+    ],
+    "2": [
+      "org/apache/commons/collections4/multimap/ArrayListValuedHashMap.getMap:()Ljava/util/Map;",
+      1,
+      4
+    ],
+    "4": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "5": [
+      "java/util/Map.iterator:()Ljava/util/Iterator;",
+      1,
+      4
+    ],
+    "7": [
+      "0",
+      1,
+      4
+    ],
+    "9": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "10": [
+      "java/util/Collection.java/util/Iterator",
+      1,
+      4
+    ],
+    "12": [
+      "0",
+      1,
+      4
+    ],
+    "14": [
+      "astore_1",
+      1,
+      4
+    ],
+    "15": [
+      "aload_1",
+      1,
+      4
+    ],
+    "16": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "17": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "19": [
+      "0",
+      1,
+      4
+    ],
+    "21": [
+      "ifeq",
+      1,
+      4
+    ],
+    "22": [
+      "25",
+      1,
+      4
+    ],
+    "24": [
+      "aload_1",
+      1,
+      4
+    ],
+    "25": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "26": [
+      "java/util/Iterator.java/util/Collection",
+      1,
+      4
+    ],
+    "28": [
+      "0",
+      1,
+      4
+    ],
+    "30": [
+      "checkcast",
+      1,
+      4
+    ],
+    "31": [
+      "java/util/Collection",
+      1,
+      4
+    ],
+    "33": [
+      "astore_2",
+      1,
+      4
+    ],
+    "34": [
+      "aload_2",
+      1,
+      0
+    ],
+    "35": [
+      "checkcast",
+      1,
+      0
+    ],
+    "36": [
+      "java/util/ArrayList",
+      1,
+      0
+    ],
+    "38": [
+      "astore_3",
+      1,
+      0
+    ],
+    "39": [
+      "aload_3",
+      1,
+      0
+    ],
+    "40": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "41": [
+      "java/util/ArrayList.trimToSize:()V",
+      1,
+      0
+    ],
+    "43": [
+      "goto",
+      0,
+      4
+    ],
+    "44": [
+      "-28",
+      0,
+      4
+    ],
+    "46": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "writeObject": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "java/io/ObjectOutputStream.defaultWriteObject:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/collections4/multimap/ArrayListValuedHashMap.doWriteObject:(Ljava/io/ObjectOutputStream;)V",
+      0,
+      0
+    ],
+    "9": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "readObject": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "java/io/ObjectInputStream.defaultReadObject:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "new",
+      0,
+      0
+    ],
+    "6": [
+      "java/util/HashMap",
+      0,
+      0
+    ],
+    "8": [
+      "dup",
+      0,
+      0
+    ],
+    "9": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "10": [
+      "java/util/HashMap.<init>:()V",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/collections4/multimap/ArrayListValuedHashMap.setMap:(Ljava/util/Map;)V",
+      0,
+      0
+    ],
+    "15": [
+      "aload_0",
+      0,
+      0
+    ],
+    "16": [
+      "aload_1",
+      0,
+      0
+    ],
+    "17": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "18": [
+      "org/apache/commons/collections4/multimap/ArrayListValuedHashMap.doReadObject:(Ljava/io/ObjectInputStream;)V",
+      0,
+      0
+    ],
+    "20": [
+      "return",
+      0,
+      0
+    ]
+  }
+}

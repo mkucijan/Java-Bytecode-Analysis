@@ -1,0 +1,328 @@
+{
+    "nullTransformer": {
+        "name": "nullTransformer",
+        "pos": [
+            52,
+            65
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    54,
+                    55
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "getstatic"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/functors/ConstantTransformer.NULL_INSTANCE:Lorg/apache/commons/collections4/Transformer;"
+                    ],
+                    [
+                        "3",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "constantTransformer": {
+        "name": "constantTransformer",
+        "pos": [
+            65,
+            78
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    66,
+                    69
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            66,
+                            69
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    67,
+                                    68
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    69,
+                    70
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "transform": {
+        "name": "transform",
+        "pos": [
+            89,
+            99
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    90,
+                    91
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/functors/ConstantTransformer.iConstant:Ljava/lang/Object;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getConstant": {
+        "name": "getConstant",
+        "pos": [
+            99,
+            106
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    100,
+                    101
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/functors/ConstantTransformer.iConstant:Ljava/lang/Object;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "equals": {
+        "name": "equals",
+        "pos": [
+            106,
+            121
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    108,
+                    111
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            108,
+                            111
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    109,
+                                    110
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    111,
+                    114
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            111,
+                            114
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    112,
+                                    113
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    114,
+                    115
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    115,
+                    116
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "hashCode": {
+        "name": "hashCode",
+        "pos": [
+            121,
+            129
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    123,
+                    124
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "ldc"
+                    ],
+                    [
+                        "1",
+                        "ConstantTransformer"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "java/lang/String.hashCode:()I"
+                    ],
+                    [
+                        "5",
+                        "iconst_2"
+                    ],
+                    [
+                        "6",
+                        "ishl"
+                    ],
+                    [
+                        "7",
+                        "istore_1"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/collections4/functors/ConstantTransformer.getConstant:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "12",
+                        "ifnull"
+                    ],
+                    [
+                        "13",
+                        "13"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    124,
+                    127
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            124,
+                            127
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    125,
+                                    126
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    127,
+                    128
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

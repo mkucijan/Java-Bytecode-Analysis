@@ -1,0 +1,356 @@
+{
+    "isBetterScore": {
+        "name": "isBetterScore",
+        "pos": [
+            74,
+            86
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    75,
+                    76
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dload_1"
+                    ],
+                    [
+                        "1",
+                        "dload_3"
+                    ],
+                    [
+                        "2",
+                        "dcmpg"
+                    ],
+                    [
+                        "3",
+                        "ifge"
+                    ],
+                    [
+                        "4",
+                        "7"
+                    ],
+                    [
+                        "6",
+                        "iconst_1"
+                    ],
+                    [
+                        "7",
+                        "goto"
+                    ],
+                    [
+                        "8",
+                        "4"
+                    ],
+                    [
+                        "10",
+                        "iconst_0"
+                    ],
+                    [
+                        "11",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "distance": {
+        "name": "distance",
+        "pos": [
+            86,
+            97
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    87,
+                    88
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/clustering/evaluation/ClusterEvaluator.measure:Lorg/apache/commons/math3/ml/distance/DistanceMeasure;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/ml/clustering/Clusterable.org/apache/commons/math3/ml/distance/DistanceMeasure"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "aload_2"
+                    ],
+                    [
+                        "11",
+                        "invokeinterface"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/ml/clustering/Clusterable.org/apache/commons/math3/ml/distance/DistanceMeasure"
+                    ],
+                    [
+                        "14",
+                        "0"
+                    ],
+                    [
+                        "16",
+                        "invokeinterface"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/ml/distance/DistanceMeasure.org/apache/commons/math3/ml/clustering/Cluster"
+                    ],
+                    [
+                        "19",
+                        "0"
+                    ],
+                    [
+                        "21",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "centroidOf": {
+        "name": "centroidOf",
+        "pos": [
+            97,
+            122
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    98,
+                    99
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/clustering/Cluster.getPoints:()Ljava/util/List;"
+                    ],
+                    [
+                        "4",
+                        "astore_2"
+                    ],
+                    [
+                        "5",
+                        "aload_2"
+                    ],
+                    [
+                        "6",
+                        "invokeinterface"
+                    ],
+                    [
+                        "7",
+                        "java/util/List.org/apache/commons/math3/ml/clustering/CentroidCluster"
+                    ],
+                    [
+                        "9",
+                        "0"
+                    ],
+                    [
+                        "11",
+                        "ifeq"
+                    ],
+                    [
+                        "12",
+                        "5"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    99,
+                    104
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            99,
+                            104
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    100,
+                                    101
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    104,
+                    108
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            104,
+                            108
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    105,
+                                    106
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    108,
+                    109
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    109,
+                    110
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    110,
+                    116
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            110,
+                            116
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    111,
+                                    112
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    112,
+                                    115
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            112,
+                                            115
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    113,
+                                                    114
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    116,
+                    119
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            116,
+                            119
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    117,
+                                    118
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    119,
+                    120
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

@@ -1,0 +1,420 @@
+{
+    "buildNew": {
+        "name": "buildNew",
+        "pos": [
+            46,
+            58
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    49,
+                    50
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/geometry/euclidean/threed/SubPlane"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "aload_2"
+                    ],
+                    [
+                        "6",
+                        "invokespecial"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/geometry/euclidean/threed/SubPlane.<init>:(Lorg/apache/commons/math3/geometry/partitioning/Hyperplane;Lorg/apache/commons/math3/geometry/partitioning/Region;)V"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "split": {
+        "name": "split",
+        "pos": [
+            58,
+            108
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    61,
+                    62
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "checkcast"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/euclidean/threed/Plane"
+                    ],
+                    [
+                        "4",
+                        "astore_2"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/geometry/euclidean/threed/SubPlane.getHyperplane:()Lorg/apache/commons/math3/geometry/partitioning/Hyperplane;"
+                    ],
+                    [
+                        "9",
+                        "checkcast"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/geometry/euclidean/threed/Plane"
+                    ],
+                    [
+                        "12",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    62,
+                    63
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "13",
+                        "aload_2"
+                    ],
+                    [
+                        "14",
+                        "aload_3"
+                    ],
+                    [
+                        "15",
+                        "invokevirtual"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/geometry/euclidean/threed/Plane.intersection:(Lorg/apache/commons/math3/geometry/euclidean/threed/Plane;)Lorg/apache/commons/math3/geometry/euclidean/threed/Line;"
+                    ],
+                    [
+                        "18",
+                        "astore"
+                    ],
+                    [
+                        "19",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    63,
+                    64
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "20",
+                        "aload_3"
+                    ],
+                    [
+                        "21",
+                        "invokevirtual"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/geometry/euclidean/threed/Plane.getTolerance:()D"
+                    ],
+                    [
+                        "24",
+                        "dstore"
+                    ],
+                    [
+                        "25",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    64,
+                    66
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "26",
+                        "aload"
+                    ],
+                    [
+                        "27",
+                        "#4"
+                    ],
+                    [
+                        "28",
+                        "ifnonnull"
+                    ],
+                    [
+                        "29",
+                        "57"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    66,
+                    79
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            66,
+                            79
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    68,
+                                    69
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    69,
+                                    76
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            69,
+                                            71
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    70,
+                                                    71
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "IfStatement",
+                                        "pos": [
+                                            71,
+                                            76
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "BlockStatement",
+                                                "pos": [
+                                                    71,
+                                                    73
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "ReturnStatement",
+                                                        "pos": [
+                                                            72,
+                                                            73
+                                                        ],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "BlockStatement",
+                                                "pos": [
+                                                    73,
+                                                    76
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "ReturnStatement",
+                                                        "pos": [
+                                                            74,
+                                                            75
+                                                        ],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    79,
+                    80
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    80,
+                    81
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    81,
+                    82
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    82,
+                    87
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            82,
+                            87
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    83,
+                                    84
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    84,
+                                    85
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    85,
+                                    86
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    87,
+                    89
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    89,
+                    92
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    92,
+                    93
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    93,
+                    98
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    98,
+                    103
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    103,
+                    106
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

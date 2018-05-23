@@ -1,0 +1,438 @@
+{
+    "empty": {
+        "name": "empty",
+        "pos": [
+            77,
+            87
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    78,
+                    79
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/ArrayStack.isEmpty:()Z"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "peek": {
+        "name": "peek",
+        "pos": [
+            105,
+            120
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    106,
+                    107
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/ArrayStack.size:()I"
+                    ],
+                    [
+                        "4",
+                        "iload_1"
+                    ],
+                    [
+                        "5",
+                        "isub"
+                    ],
+                    [
+                        "6",
+                        "iconst_1"
+                    ],
+                    [
+                        "7",
+                        "isub"
+                    ],
+                    [
+                        "8",
+                        "istore_2"
+                    ],
+                    [
+                        "9",
+                        "iload_2"
+                    ],
+                    [
+                        "10",
+                        "ifge"
+                    ],
+                    [
+                        "11",
+                        "11"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    107,
+                    112
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            107,
+                            109
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    108,
+                                    109
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            109,
+                            112
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    110,
+                                    111
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "pop": {
+        "name": "pop",
+        "pos": [
+            120,
+            136
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    121,
+                    122
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/ArrayStack.size:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_1"
+                    ],
+                    [
+                        "5",
+                        "iload_1"
+                    ],
+                    [
+                        "6",
+                        "ifgt"
+                    ],
+                    [
+                        "7",
+                        "11"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    122,
+                    127
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            122,
+                            124
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    123,
+                                    124
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            124,
+                            127
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    125,
+                                    126
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "push": {
+        "name": "push",
+        "pos": [
+            136,
+            152
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    137,
+                    138
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/ArrayStack.add:(Ljava/lang/Object;)Z"
+                    ],
+                    [
+                        "5",
+                        "pop"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    138,
+                    139
+                ],
+                "children": []
+            }
+        ]
+    },
+    "search": {
+        "name": "search",
+        "pos": [
+            152,
+            167
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    153,
+                    154
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/ArrayStack.size:()I"
+                    ],
+                    [
+                        "4",
+                        "iconst_1"
+                    ],
+                    [
+                        "5",
+                        "isub"
+                    ],
+                    [
+                        "6",
+                        "istore_2"
+                    ],
+                    [
+                        "7",
+                        "iconst_1"
+                    ],
+                    [
+                        "8",
+                        "istore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    154,
+                    155
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "iload_2"
+                    ],
+                    [
+                        "10",
+                        "iflt"
+                    ],
+                    [
+                        "11",
+                        "43"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    155,
+                    164
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            155,
+                            164
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    156,
+                                    157
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    157,
+                                    161
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            158,
+                                            161
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    159,
+                                                    160
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    161,
+                                    162
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    162,
+                                    163
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    164,
+                    165
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

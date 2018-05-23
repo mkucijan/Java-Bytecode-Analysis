@@ -1,0 +1,255 @@
+{
+    "computeJacobian": {
+        "name": "computeJacobian",
+        "pos": [
+            63,
+            82
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    64,
+                    65
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/nonlinear/vector/JacobianMultivariateVectorOptimizer.jacobian:Lorg/apache/commons/math3/analysis/MultivariateMatrixFunction;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/analysis/MultivariateMatrixFunction.optimize:([Lorg/apache/commons/math3/optim/OptimizationData;)Lorg/apache/commons/math3/optim/PointVectorValuePair;"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "optimize": {
+        "name": "optimize",
+        "pos": [
+            82,
+            100
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    87,
+                    88
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokespecial"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.optimize:([Lorg/apache/commons/math3/optim/OptimizationData;)Lorg/apache/commons/math3/optim/PointVectorValuePair;"
+                    ],
+                    [
+                        "5",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "parseOptimizationData": {
+        "name": "parseOptimizationData",
+        "pos": [
+            100,
+            116
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    103,
+                    107
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokespecial"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.parseOptimizationData:([Lorg/apache/commons/math3/optim/OptimizationData;)V"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "astore_2"
+                    ],
+                    [
+                        "7",
+                        "aload_2"
+                    ],
+                    [
+                        "8",
+                        "arraylength"
+                    ],
+                    [
+                        "9",
+                        "istore_3"
+                    ],
+                    [
+                        "10",
+                        "iconst_0"
+                    ],
+                    [
+                        "11",
+                        "istore"
+                    ],
+                    [
+                        "12",
+                        "#4"
+                    ],
+                    [
+                        "13",
+                        "iload"
+                    ],
+                    [
+                        "14",
+                        "#4"
+                    ],
+                    [
+                        "15",
+                        "iload_3"
+                    ],
+                    [
+                        "16",
+                        "if_icmpge"
+                    ],
+                    [
+                        "17",
+                        "38"
+                    ],
+                    [
+                        "19",
+                        "aload_2"
+                    ],
+                    [
+                        "20",
+                        "iload"
+                    ],
+                    [
+                        "21",
+                        "#4"
+                    ],
+                    [
+                        "22",
+                        "aaload"
+                    ],
+                    [
+                        "23",
+                        "astore"
+                    ],
+                    [
+                        "24",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    107,
+                    115
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            107,
+                            115
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    108,
+                                    114
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            108,
+                                            114
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    109,
+                                                    112
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "BreakStatement",
+                                                "pos": [
+                                                    112,
+                                                    113
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,421 @@
+{
+    "createAdaptor": {
+        "name": "createAdaptor",
+        "pos": [
+            57,
+            70
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    58,
+                    59
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/random/RandomAdaptor"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/random/RandomAdaptor.<init>:(Lorg/apache/commons/math3/random/RandomGenerator;)V"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "nextBoolean": {
+        "name": "nextBoolean",
+        "pos": [
+            70,
+            83
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    72,
+                    73
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/RandomAdaptor.randomGenerator:Lorg/apache/commons/math3/random/RandomGenerator;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/random/RandomGenerator.nextBytes:([B)V"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "nextBytes": {
+        "name": "nextBytes",
+        "pos": [
+            83,
+            97
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    85,
+                    86
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/RandomAdaptor.randomGenerator:Lorg/apache/commons/math3/random/RandomGenerator;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/random/RandomGenerator.nextDouble:()D"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "nextDouble": {
+        "name": "nextDouble",
+        "pos": [
+            97,
+            111
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    99,
+                    100
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/RandomAdaptor.randomGenerator:Lorg/apache/commons/math3/random/RandomGenerator;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/random/RandomGenerator.nextFloat:()F"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "nextFloat": {
+        "name": "nextFloat",
+        "pos": [
+            111,
+            126
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    113,
+                    114
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/RandomAdaptor.randomGenerator:Lorg/apache/commons/math3/random/RandomGenerator;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/random/RandomGenerator.nextGaussian:()D"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "freturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "nextGaussian": {
+        "name": "nextGaussian",
+        "pos": [
+            126,
+            140
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    128,
+                    129
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/RandomAdaptor.randomGenerator:Lorg/apache/commons/math3/random/RandomGenerator;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/random/RandomGenerator.nextInt:()I"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "nextInt": {
+        "name": "nextInt",
+        "pos": [
+            156,
+            170
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    158,
+                    159
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/RandomAdaptor.randomGenerator:Lorg/apache/commons/math3/random/RandomGenerator;"
+                    ],
+                    [
+                        "4",
+                        "iload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/random/RandomGenerator.nextLong:()J"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "nextLong": {
+        "name": "nextLong",
+        "pos": [
+            170,
+            176
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    172,
+                    173
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/RandomAdaptor.randomGenerator:Lorg/apache/commons/math3/random/RandomGenerator;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/random/RandomGenerator.setSeed:(I)V"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "lreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setSeed": {
+        "name": "setSeed",
+        "pos": [
+            190,
+            197
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    192,
+                    195
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            192,
+                            195
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    193,
+                                    194
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

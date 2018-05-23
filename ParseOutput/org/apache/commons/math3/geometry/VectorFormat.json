@@ -1,0 +1,575 @@
+{
+    "getAvailableLocales": {
+        "name": "getAvailableLocales",
+        "pos": [
+            130,
+            138
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    131,
+                    132
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "invokestatic"
+                    ],
+                    [
+                        "1",
+                        "java/text/NumberFormat.getAvailableLocales:()[Ljava/util/Locale;"
+                    ],
+                    [
+                        "3",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getPrefix": {
+        "name": "getPrefix",
+        "pos": [
+            138,
+            146
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    139,
+                    140
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/VectorFormat.prefix:Ljava/lang/String;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSuffix": {
+        "name": "getSuffix",
+        "pos": [
+            146,
+            154
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    147,
+                    148
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/VectorFormat.suffix:Ljava/lang/String;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSeparator": {
+        "name": "getSeparator",
+        "pos": [
+            154,
+            162
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    155,
+                    156
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/VectorFormat.separator:Ljava/lang/String;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getFormat": {
+        "name": "getFormat",
+        "pos": [
+            162,
+            171
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    163,
+                    164
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/VectorFormat.format:Ljava/text/NumberFormat;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "format": {
+        "name": "format",
+        "pos": [
+            171,
+            183
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    172,
+                    173
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "new"
+                    ],
+                    [
+                        "3",
+                        "java/lang/StringBuffer"
+                    ],
+                    [
+                        "5",
+                        "dup"
+                    ],
+                    [
+                        "6",
+                        "invokespecial"
+                    ],
+                    [
+                        "7",
+                        "java/lang/StringBuffer.<init>:()V"
+                    ],
+                    [
+                        "9",
+                        "new"
+                    ],
+                    [
+                        "10",
+                        "java/text/FieldPosition"
+                    ],
+                    [
+                        "12",
+                        "dup"
+                    ],
+                    [
+                        "13",
+                        "iconst_0"
+                    ],
+                    [
+                        "14",
+                        "invokespecial"
+                    ],
+                    [
+                        "15",
+                        "java/text/FieldPosition.<init>:(I)V"
+                    ],
+                    [
+                        "17",
+                        "invokevirtual"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/geometry/VectorFormat.format:(Lorg/apache/commons/math3/geometry/Vector;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;"
+                    ],
+                    [
+                        "20",
+                        "invokevirtual"
+                    ],
+                    [
+                        "21",
+                        "java/lang/StringBuffer.toString:()Ljava/lang/String;"
+                    ],
+                    [
+                        "23",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "parseCoordinates": {
+        "name": "parseCoordinates",
+        "pos": [
+            242,
+            290
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    244,
+                    245
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_3"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/text/ParsePosition.getIndex:()I"
+                    ],
+                    [
+                        "4",
+                        "istore"
+                    ],
+                    [
+                        "5",
+                        "#4"
+                    ],
+                    [
+                        "6",
+                        "iload_1"
+                    ],
+                    [
+                        "7",
+                        "newarray"
+                    ],
+                    [
+                        "8",
+                        "7"
+                    ],
+                    [
+                        "9",
+                        "astore"
+                    ],
+                    [
+                        "10",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    245,
+                    248
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "11",
+                        "aload_2"
+                    ],
+                    [
+                        "12",
+                        "aload_3"
+                    ],
+                    [
+                        "13",
+                        "invokestatic"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/util/CompositeFormat.parseAndIgnoreWhitespace:(Ljava/lang/String;Ljava/text/ParsePosition;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    248,
+                    249
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "aload_2"
+                    ],
+                    [
+                        "17",
+                        "aload_0"
+                    ],
+                    [
+                        "18",
+                        "getfield"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/geometry/VectorFormat.trimmedPrefix:Ljava/lang/String;"
+                    ],
+                    [
+                        "21",
+                        "aload_3"
+                    ],
+                    [
+                        "22",
+                        "invokestatic"
+                    ],
+                    [
+                        "23",
+                        "org/apache/commons/math3/util/CompositeFormat.parseFixedstring:(Ljava/lang/String;Ljava/lang/String;Ljava/text/ParsePosition;)Z"
+                    ],
+                    [
+                        "25",
+                        "ifne"
+                    ],
+                    [
+                        "26",
+                        "5"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    249,
+                    253
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            249,
+                            253
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    250,
+                                    251
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    253,
+                    281
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            253,
+                            281
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    256,
+                                    259
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    259,
+                                    264
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            259,
+                                            264
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    260,
+                                                    261
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    264,
+                                    267
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    267,
+                                    268
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    268,
+                                    276
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            268,
+                                            276
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    271,
+                                                    272
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    272,
+                                                    273
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    276,
+                                    278
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    281,
+                    282
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    282,
+                    286
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            282,
+                            286
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    283,
+                                    284
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    286,
+                    288
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

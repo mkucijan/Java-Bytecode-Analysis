@@ -1,0 +1,543 @@
+{
+    "restrictStep": {
+        "name": "restrictStep",
+        "pos": [
+            93,
+            107
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    95,
+                    96
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.forward:Z"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "getfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.globalPreviousState:Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.globalCurrentState:Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "13",
+                        "aload_1"
+                    ],
+                    [
+                        "14",
+                        "aload_2"
+                    ],
+                    [
+                        "15",
+                        "aload_0"
+                    ],
+                    [
+                        "16",
+                        "getfield"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.mapper:Lorg/apache/commons/math3/ode/FieldEquationsMapper;"
+                    ],
+                    [
+                        "19",
+                        "invokevirtual"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.create:(ZLorg/apache/commons/math3/ode/FieldODEStateAndDerivative;Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;Lorg/apache/commons/math3/ode/FieldEquationsMapper;)Lorg/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator;"
+                    ],
+                    [
+                        "22",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getGlobalPreviousState": {
+        "name": "getGlobalPreviousState",
+        "pos": [
+            118,
+            126
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    119,
+                    120
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.globalPreviousState:Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getGlobalCurrentState": {
+        "name": "getGlobalCurrentState",
+        "pos": [
+            126,
+            131
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    127,
+                    128
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.globalCurrentState:Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getPreviousState": {
+        "name": "getPreviousState",
+        "pos": [
+            131,
+            136
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    132,
+                    133
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.softPreviousState:Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getCurrentState": {
+        "name": "getCurrentState",
+        "pos": [
+            136,
+            141
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    137,
+                    138
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.softCurrentState:Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getInterpolatedState": {
+        "name": "getInterpolatedState",
+        "pos": [
+            141,
+            149
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    142,
+                    143
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.globalPreviousState:Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/ode/FieldODEStateAndDerivative.getTime:()Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "8",
+                        "invokeinterface"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/RealFieldElement.org/apache/commons/math3/RealFieldElement"
+                    ],
+                    [
+                        "11",
+                        "0"
+                    ],
+                    [
+                        "13",
+                        "checkcast"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/RealFieldElement"
+                    ],
+                    [
+                        "16",
+                        "astore_2"
+                    ],
+                    [
+                        "17",
+                        "aload_0"
+                    ],
+                    [
+                        "18",
+                        "getfield"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.globalCurrentState:Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "21",
+                        "invokevirtual"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/ode/FieldODEStateAndDerivative.getTime:()Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "24",
+                        "aload_1"
+                    ],
+                    [
+                        "25",
+                        "invokeinterface"
+                    ],
+                    [
+                        "26",
+                        "org/apache/commons/math3/RealFieldElement.org/apache/commons/math3/RealFieldElement"
+                    ],
+                    [
+                        "28",
+                        "0"
+                    ],
+                    [
+                        "30",
+                        "checkcast"
+                    ],
+                    [
+                        "31",
+                        "org/apache/commons/math3/RealFieldElement"
+                    ],
+                    [
+                        "33",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    143,
+                    144
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "34",
+                        "aload_2"
+                    ],
+                    [
+                        "35",
+                        "aload_0"
+                    ],
+                    [
+                        "36",
+                        "getfield"
+                    ],
+                    [
+                        "37",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.globalCurrentState:Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "39",
+                        "invokevirtual"
+                    ],
+                    [
+                        "40",
+                        "org/apache/commons/math3/ode/FieldODEStateAndDerivative.getTime:()Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "42",
+                        "aload_0"
+                    ],
+                    [
+                        "43",
+                        "getfield"
+                    ],
+                    [
+                        "44",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.globalPreviousState:Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "46",
+                        "invokevirtual"
+                    ],
+                    [
+                        "47",
+                        "org/apache/commons/math3/ode/FieldODEStateAndDerivative.getTime:()Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "49",
+                        "invokeinterface"
+                    ],
+                    [
+                        "50",
+                        "org/apache/commons/math3/RealFieldElement.org/apache/commons/math3/RealFieldElement"
+                    ],
+                    [
+                        "52",
+                        "0"
+                    ],
+                    [
+                        "54",
+                        "invokeinterface"
+                    ],
+                    [
+                        "55",
+                        "org/apache/commons/math3/RealFieldElement.computeInterpolatedStateAndDerivatives:(Lorg/apache/commons/math3/ode/FieldEquationsMapper;Lorg/apache/commons/math3/RealFieldElement;Lorg/apache/commons/math3/RealFieldElement;Lorg/apache/commons/math3/RealFieldElement;Lorg/apache/commons/math3/RealFieldElement;)Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "57",
+                        "0"
+                    ],
+                    [
+                        "59",
+                        "checkcast"
+                    ],
+                    [
+                        "60",
+                        "org/apache/commons/math3/RealFieldElement"
+                    ],
+                    [
+                        "62",
+                        "astore"
+                    ],
+                    [
+                        "63",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    144,
+                    145
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "64",
+                        "aload_0"
+                    ],
+                    [
+                        "65",
+                        "aload_0"
+                    ],
+                    [
+                        "66",
+                        "getfield"
+                    ],
+                    [
+                        "67",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.mapper:Lorg/apache/commons/math3/ode/FieldEquationsMapper;"
+                    ],
+                    [
+                        "69",
+                        "aload_1"
+                    ],
+                    [
+                        "70",
+                        "aload"
+                    ],
+                    [
+                        "71",
+                        "#4"
+                    ],
+                    [
+                        "72",
+                        "aload_2"
+                    ],
+                    [
+                        "73",
+                        "aload_3"
+                    ],
+                    [
+                        "74",
+                        "invokevirtual"
+                    ],
+                    [
+                        "75",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.computeInterpolatedStateAndDerivatives:(Lorg/apache/commons/math3/ode/FieldEquationsMapper;Lorg/apache/commons/math3/RealFieldElement;Lorg/apache/commons/math3/RealFieldElement;Lorg/apache/commons/math3/RealFieldElement;Lorg/apache/commons/math3/RealFieldElement;)Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "77",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    145,
+                    146
+                ],
+                "children": []
+            }
+        ]
+    },
+    "isForward": {
+        "name": "isForward",
+        "pos": [
+            149,
+            166
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    150,
+                    151
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/sampling/AbstractFieldStepInterpolator.forward:Z"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

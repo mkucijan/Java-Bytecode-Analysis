@@ -1,0 +1,589 @@
+{
+    "getScale": {
+        "name": "getScale",
+        "pos": [
+            160,
+            169
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    161,
+                    162
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/ParetoDistribution.scale:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getShape": {
+        "name": "getShape",
+        "pos": [
+            169,
+            183
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    170,
+                    171
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/ParetoDistribution.shape:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "density": {
+        "name": "density",
+        "pos": [
+            183,
+            194
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    184,
+                    187
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            184,
+                            187
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    185,
+                                    186
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    187,
+                    188
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "logDensity": {
+        "name": "logDensity",
+        "pos": [
+            194,
+            211
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    196,
+                    199
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            196,
+                            199
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    197,
+                                    198
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    199,
+                    200
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "cumulativeProbability": {
+        "name": "cumulativeProbability",
+        "pos": [
+            223,
+            231
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    227,
+                    228
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "dload_1"
+                    ],
+                    [
+                        "2",
+                        "dload_3"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/distribution/ParetoDistribution.probability:(DD)D"
+                    ],
+                    [
+                        "6",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSolverAbsoluteAccuracy": {
+        "name": "getSolverAbsoluteAccuracy",
+        "pos": [
+            231,
+            245
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    233,
+                    234
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/ParetoDistribution.solverAbsoluteAccuracy:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNumericalMean": {
+        "name": "getNumericalMean",
+        "pos": [
+            245,
+            261
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    246,
+                    249
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            246,
+                            249
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    247,
+                                    248
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    249,
+                    250
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getNumericalVariance": {
+        "name": "getNumericalVariance",
+        "pos": [
+            261,
+            276
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    262,
+                    265
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            262,
+                            265
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    263,
+                                    264
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    265,
+                    266
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    266,
+                    267
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getSupportLowerBound": {
+        "name": "getSupportLowerBound",
+        "pos": [
+            276,
+            287
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    277,
+                    278
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/ParetoDistribution.scale:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSupportUpperBound": {
+        "name": "getSupportUpperBound",
+        "pos": [
+            287,
+            292
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    288,
+                    289
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "ldc2_w"
+                    ],
+                    [
+                        "1",
+                        "inf"
+                    ],
+                    [
+                        "3",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportLowerBoundInclusive": {
+        "name": "isSupportLowerBoundInclusive",
+        "pos": [
+            292,
+            297
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    293,
+                    294
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_1"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportUpperBoundInclusive": {
+        "name": "isSupportUpperBoundInclusive",
+        "pos": [
+            297,
+            308
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    298,
+                    299
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_0"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportConnected": {
+        "name": "isSupportConnected",
+        "pos": [
+            308,
+            313
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    309,
+                    310
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_1"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "sample": {
+        "name": "sample",
+        "pos": [
+            313,
+            318
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    315,
+                    316
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/ParetoDistribution.random:Lorg/apache/commons/math3/random/RandomGenerator;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/random/RandomGenerator.org/apache/commons/math3/distribution/AbstractRealDistribution"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "dstore_1"
+                    ],
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "getfield"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/distribution/ParetoDistribution.scale:D"
+                    ],
+                    [
+                        "14",
+                        "dload_1"
+                    ],
+                    [
+                        "15",
+                        "dconst_1"
+                    ],
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "getfield"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/distribution/ParetoDistribution.shape:D"
+                    ],
+                    [
+                        "20",
+                        "ddiv"
+                    ],
+                    [
+                        "21",
+                        "invokestatic"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/util/FastMath.pow:(DD)D"
+                    ],
+                    [
+                        "24",
+                        "ddiv"
+                    ],
+                    [
+                        "25",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    316,
+                    317
+                ],
+                "children": []
+            }
+        ]
+    }
+}

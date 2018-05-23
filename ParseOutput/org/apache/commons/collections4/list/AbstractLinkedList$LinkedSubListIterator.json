@@ -1,0 +1,473 @@
+{
+    "hasNext": {
+        "name": "hasNext",
+        "pos": [
+            904,
+            909
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    906,
+                    907
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubListIterator.nextIndex:()I"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubListIterator.sub:Lorg/apache/commons/collections4/list/AbstractLinkedList$LinkedSubList;"
+                    ],
+                    [
+                        "8",
+                        "getfield"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubList.size:I"
+                    ],
+                    [
+                        "11",
+                        "if_icmpge"
+                    ],
+                    [
+                        "12",
+                        "7"
+                    ],
+                    [
+                        "14",
+                        "iconst_1"
+                    ],
+                    [
+                        "15",
+                        "goto"
+                    ],
+                    [
+                        "16",
+                        "4"
+                    ],
+                    [
+                        "18",
+                        "iconst_0"
+                    ],
+                    [
+                        "19",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "hasPrevious": {
+        "name": "hasPrevious",
+        "pos": [
+            909,
+            914
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    911,
+                    912
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubListIterator.previousIndex:()I"
+                    ],
+                    [
+                        "4",
+                        "iflt"
+                    ],
+                    [
+                        "5",
+                        "7"
+                    ],
+                    [
+                        "7",
+                        "iconst_1"
+                    ],
+                    [
+                        "8",
+                        "goto"
+                    ],
+                    [
+                        "9",
+                        "4"
+                    ],
+                    [
+                        "11",
+                        "iconst_0"
+                    ],
+                    [
+                        "12",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "nextIndex": {
+        "name": "nextIndex",
+        "pos": [
+            914,
+            919
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    916,
+                    917
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.nextIndex:()I"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubListIterator.sub:Lorg/apache/commons/collections4/list/AbstractLinkedList$LinkedSubList;"
+                    ],
+                    [
+                        "8",
+                        "getfield"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubList.offset:I"
+                    ],
+                    [
+                        "11",
+                        "isub"
+                    ],
+                    [
+                        "12",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "add": {
+        "name": "add",
+        "pos": [
+            919,
+            926
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    921,
+                    922
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokespecial"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.add:(Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "getfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubListIterator.sub:Lorg/apache/commons/collections4/list/AbstractLinkedList$LinkedSubList;"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubListIterator.parent:Lorg/apache/commons/collections4/list/AbstractLinkedList;"
+                    ],
+                    [
+                        "13",
+                        "getfield"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/collections4/list/AbstractLinkedList.modCount:I"
+                    ],
+                    [
+                        "16",
+                        "putfield"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubList.expectedModCount:I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    922,
+                    923
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "19",
+                        "aload_0"
+                    ],
+                    [
+                        "20",
+                        "getfield"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubListIterator.sub:Lorg/apache/commons/collections4/list/AbstractLinkedList$LinkedSubList;"
+                    ],
+                    [
+                        "23",
+                        "dup"
+                    ],
+                    [
+                        "24",
+                        "getfield"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubList.size:I"
+                    ],
+                    [
+                        "27",
+                        "iconst_1"
+                    ],
+                    [
+                        "28",
+                        "iadd"
+                    ],
+                    [
+                        "29",
+                        "putfield"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubList.size:I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    923,
+                    924
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "32",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "remove": {
+        "name": "remove",
+        "pos": [
+            926,
+            932
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    928,
+                    929
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.remove:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubListIterator.sub:Lorg/apache/commons/collections4/list/AbstractLinkedList$LinkedSubList;"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "getfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubListIterator.parent:Lorg/apache/commons/collections4/list/AbstractLinkedList;"
+                    ],
+                    [
+                        "12",
+                        "getfield"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/collections4/list/AbstractLinkedList.modCount:I"
+                    ],
+                    [
+                        "15",
+                        "putfield"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubList.expectedModCount:I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    929,
+                    930
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "18",
+                        "aload_0"
+                    ],
+                    [
+                        "19",
+                        "getfield"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubListIterator.sub:Lorg/apache/commons/collections4/list/AbstractLinkedList$LinkedSubList;"
+                    ],
+                    [
+                        "22",
+                        "dup"
+                    ],
+                    [
+                        "23",
+                        "getfield"
+                    ],
+                    [
+                        "24",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubList.size:I"
+                    ],
+                    [
+                        "26",
+                        "iconst_1"
+                    ],
+                    [
+                        "27",
+                        "isub"
+                    ],
+                    [
+                        "28",
+                        "putfield"
+                    ],
+                    [
+                        "29",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$LinkedSubList.size:I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    930,
+                    931
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "31",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,316 @@
+{
+    "getMapEntry": {
+        "name": "getMapEntry",
+        "pos": [
+            53,
+            59
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    54,
+                    55
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/keyvalue/AbstractMapEntryDecorator.entry:Ljava/util/Map$Entry;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getKey": {
+        "name": "getKey",
+        "pos": [
+            59,
+            63
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    60,
+                    61
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/keyvalue/AbstractMapEntryDecorator.entry:Ljava/util/Map$Entry;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Map$Entry.getValue:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getValue": {
+        "name": "getValue",
+        "pos": [
+            63,
+            67
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    64,
+                    65
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/keyvalue/AbstractMapEntryDecorator.entry:Ljava/util/Map$Entry;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Map$Entry.setValue:(Ljava/lang/Object;)Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setValue": {
+        "name": "setValue",
+        "pos": [
+            67,
+            71
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    68,
+                    69
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/keyvalue/AbstractMapEntryDecorator.entry:Ljava/util/Map$Entry;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/Map$Entry.equals:(Ljava/lang/Object;)Z"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "equals": {
+        "name": "equals",
+        "pos": [
+            71,
+            79
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    73,
+                    76
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            73,
+                            76
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    74,
+                                    75
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    76,
+                    77
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "hashCode": {
+        "name": "hashCode",
+        "pos": [
+            79,
+            84
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    81,
+                    82
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/keyvalue/AbstractMapEntryDecorator.entry:Ljava/util/Map$Entry;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Map$Entry.toString:()Ljava/lang/String;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "toString": {
+        "name": "toString",
+        "pos": [
+            84,
+            89
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    86,
+                    87
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/keyvalue/AbstractMapEntryDecorator.entry:Ljava/util/Map$Entry;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "java/lang/Object.toString:()Ljava/lang/String;"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

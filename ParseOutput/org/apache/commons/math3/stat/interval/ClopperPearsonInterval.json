@@ -1,0 +1,354 @@
+{
+    "createInterval": {
+        "name": "createInterval",
+        "pos": [
+            32,
+            58
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    34,
+                    35
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_1"
+                    ],
+                    [
+                        "1",
+                        "iload_2"
+                    ],
+                    [
+                        "2",
+                        "dload_3"
+                    ],
+                    [
+                        "3",
+                        "invokestatic"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/stat/interval/IntervalUtils.checkParameters:(IID)V"
+                    ],
+                    [
+                        "6",
+                        "dconst_0"
+                    ],
+                    [
+                        "7",
+                        "dstore"
+                    ],
+                    [
+                        "8",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    35,
+                    36
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "dconst_0"
+                    ],
+                    [
+                        "10",
+                        "dstore"
+                    ],
+                    [
+                        "11",
+                        "#7"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    36,
+                    37
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "dconst_1"
+                    ],
+                    [
+                        "13",
+                        "dload_3"
+                    ],
+                    [
+                        "14",
+                        "dsub"
+                    ],
+                    [
+                        "15",
+                        "ldc2_w"
+                    ],
+                    [
+                        "16",
+                        "2.0"
+                    ],
+                    [
+                        "18",
+                        "ddiv"
+                    ],
+                    [
+                        "19",
+                        "dstore"
+                    ],
+                    [
+                        "20",
+                        "#9"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    37,
+                    39
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "21",
+                        "new"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/distribution/FDistribution"
+                    ],
+                    [
+                        "24",
+                        "dup"
+                    ],
+                    [
+                        "25",
+                        "iconst_2"
+                    ],
+                    [
+                        "26",
+                        "iload_1"
+                    ],
+                    [
+                        "27",
+                        "iload_2"
+                    ],
+                    [
+                        "28",
+                        "isub"
+                    ],
+                    [
+                        "29",
+                        "iconst_1"
+                    ],
+                    [
+                        "30",
+                        "iadd"
+                    ],
+                    [
+                        "31",
+                        "imul"
+                    ],
+                    [
+                        "32",
+                        "i2d"
+                    ],
+                    [
+                        "33",
+                        "iconst_2"
+                    ],
+                    [
+                        "34",
+                        "iload_2"
+                    ],
+                    [
+                        "35",
+                        "imul"
+                    ],
+                    [
+                        "36",
+                        "i2d"
+                    ],
+                    [
+                        "37",
+                        "invokespecial"
+                    ],
+                    [
+                        "38",
+                        "org/apache/commons/math3/distribution/FDistribution.<init>:(DD)V"
+                    ],
+                    [
+                        "40",
+                        "astore"
+                    ],
+                    [
+                        "41",
+                        "#11"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    39,
+                    41
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "42",
+                        "aload"
+                    ],
+                    [
+                        "43",
+                        "#11"
+                    ],
+                    [
+                        "44",
+                        "dconst_1"
+                    ],
+                    [
+                        "45",
+                        "dload"
+                    ],
+                    [
+                        "46",
+                        "#9"
+                    ],
+                    [
+                        "47",
+                        "dsub"
+                    ],
+                    [
+                        "48",
+                        "invokevirtual"
+                    ],
+                    [
+                        "49",
+                        "org/apache/commons/math3/distribution/FDistribution.inverseCumulativeProbability:(D)D"
+                    ],
+                    [
+                        "51",
+                        "dstore"
+                    ],
+                    [
+                        "52",
+                        "#12"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    41,
+                    42
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "53",
+                        "iload_2"
+                    ],
+                    [
+                        "54",
+                        "ifle"
+                    ],
+                    [
+                        "55",
+                        "20"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    42,
+                    47
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            42,
+                            47
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    43,
+                                    45
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    47,
+                    49
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    49,
+                    50
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    50,
+                    55
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            50,
+                            55
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    51,
+                                    53
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    55,
+                    56
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

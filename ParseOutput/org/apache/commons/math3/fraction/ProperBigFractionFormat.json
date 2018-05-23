@@ -1,0 +1,874 @@
+{
+    "format": {
+        "name": "format",
+        "pos": [
+            87,
+            117
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    91,
+                    92
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_3"
+                    ],
+                    [
+                        "1",
+                        "iconst_0"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "java/text/FieldPosition.setBeginIndex:(I)V"
+                    ],
+                    [
+                        "5",
+                        "aload_3"
+                    ],
+                    [
+                        "6",
+                        "iconst_0"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "java/text/FieldPosition.setEndIndex:(I)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    92,
+                    94
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "aload_1"
+                    ],
+                    [
+                        "11",
+                        "invokevirtual"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/fraction/BigFraction.getNumerator:()Ljava/math/BigInteger;"
+                    ],
+                    [
+                        "14",
+                        "astore"
+                    ],
+                    [
+                        "15",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    94,
+                    95
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "aload_1"
+                    ],
+                    [
+                        "17",
+                        "invokevirtual"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/fraction/BigFraction.getDenominator:()Ljava/math/BigInteger;"
+                    ],
+                    [
+                        "20",
+                        "astore"
+                    ],
+                    [
+                        "21",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    95,
+                    96
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "22",
+                        "aload"
+                    ],
+                    [
+                        "23",
+                        "#4"
+                    ],
+                    [
+                        "24",
+                        "aload"
+                    ],
+                    [
+                        "25",
+                        "#5"
+                    ],
+                    [
+                        "26",
+                        "invokevirtual"
+                    ],
+                    [
+                        "27",
+                        "java/math/BigInteger.divide:(Ljava/math/BigInteger;)Ljava/math/BigInteger;"
+                    ],
+                    [
+                        "29",
+                        "astore"
+                    ],
+                    [
+                        "30",
+                        "#6"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    96,
+                    97
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "31",
+                        "aload"
+                    ],
+                    [
+                        "32",
+                        "#4"
+                    ],
+                    [
+                        "33",
+                        "aload"
+                    ],
+                    [
+                        "34",
+                        "#5"
+                    ],
+                    [
+                        "35",
+                        "invokevirtual"
+                    ],
+                    [
+                        "36",
+                        "java/math/BigInteger.remainder:(Ljava/math/BigInteger;)Ljava/math/BigInteger;"
+                    ],
+                    [
+                        "38",
+                        "astore"
+                    ],
+                    [
+                        "39",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    97,
+                    99
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "40",
+                        "getstatic"
+                    ],
+                    [
+                        "41",
+                        "java/math/BigInteger.ZERO:Ljava/math/BigInteger;"
+                    ],
+                    [
+                        "43",
+                        "aload"
+                    ],
+                    [
+                        "44",
+                        "#6"
+                    ],
+                    [
+                        "45",
+                        "invokevirtual"
+                    ],
+                    [
+                        "46",
+                        "java/math/BigInteger.equals:(Ljava/lang/Object;)Z"
+                    ],
+                    [
+                        "48",
+                        "ifne"
+                    ],
+                    [
+                        "49",
+                        "40"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    99,
+                    106
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            99,
+                            106
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    100,
+                                    101
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    101,
+                                    102
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    102,
+                                    105
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            102,
+                                            105
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    103,
+                                                    104
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    106,
+                    107
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    107,
+                    108
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    108,
+                    110
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    110,
+                    111
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getWholeFormat": {
+        "name": "getWholeFormat",
+        "pos": [
+            117,
+            133
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    118,
+                    119
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fraction/ProperBigFractionFormat.wholeFormat:Ljava/text/NumberFormat;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "parse": {
+        "name": "parse",
+        "pos": [
+            133,
+            232
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    136,
+                    137
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "aload_2"
+                    ],
+                    [
+                        "3",
+                        "invokespecial"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/fraction/BigFractionFormat.parse:(Ljava/lang/String;Ljava/text/ParsePosition;)Lorg/apache/commons/math3/fraction/BigFraction;"
+                    ],
+                    [
+                        "6",
+                        "astore_3"
+                    ],
+                    [
+                        "7",
+                        "aload_3"
+                    ],
+                    [
+                        "8",
+                        "ifnull"
+                    ],
+                    [
+                        "9",
+                        "5"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    137,
+                    141
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            137,
+                            141
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    138,
+                                    139
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    141,
+                    144
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    144,
+                    147
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    147,
+                    148
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    148,
+                    157
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            148,
+                            157
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    152,
+                                    153
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    153,
+                                    154
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    157,
+                    160
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    160,
+                    161
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    161,
+                    169
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            161,
+                            169
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    165,
+                                    166
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    166,
+                                    167
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    169,
+                    176
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            169,
+                            176
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    171,
+                                    172
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    172,
+                                    173
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    176,
+                    177
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    177,
+                    178
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "SwitchStatement",
+                "pos": [
+                    178,
+                    196
+                ],
+                "children": [
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            182,
+                            183
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "BreakStatement",
+                        "pos": [
+                            185,
+                            186
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "StatementExpression",
+                        "pos": [
+                            190,
+                            191
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "StatementExpression",
+                        "pos": [
+                            191,
+                            192
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            192,
+                            193
+                        ],
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    196,
+                    199
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    199,
+                    200
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    200,
+                    208
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            200,
+                            208
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    204,
+                                    205
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    205,
+                                    206
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    208,
+                    214
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            208,
+                            214
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    210,
+                                    211
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    211,
+                                    212
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    214,
+                    215
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    215,
+                    218
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            215,
+                            218
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    216,
+                                    217
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    218,
+                    219
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    219,
+                    223
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            219,
+                            223
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    220,
+                                    221
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    223,
+                    225
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "setWholeFormat": {
+        "name": "setWholeFormat",
+        "pos": [
+            232,
+            238
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    233,
+                    236
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            233,
+                            236
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    234,
+                                    235
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    236,
+                    237
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

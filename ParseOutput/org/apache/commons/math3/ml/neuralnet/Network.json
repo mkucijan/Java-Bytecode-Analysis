@@ -1,0 +1,1691 @@
+{
+    "copy": {
+        "name": "copy",
+        "pos": [
+            146,
+            165
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    147,
+                    151
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/ml/neuralnet/Network"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/ml/neuralnet/Network.nextId:Ljava/util/concurrent/atomic/AtomicLong;"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "java/util/concurrent/atomic/AtomicLong.get:()J"
+                    ],
+                    [
+                        "11",
+                        "aload_0"
+                    ],
+                    [
+                        "12",
+                        "getfield"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/ml/neuralnet/Network.featureSize:I"
+                    ],
+                    [
+                        "15",
+                        "invokespecial"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/ml/neuralnet/Network.<init>:(JI)V"
+                    ],
+                    [
+                        "18",
+                        "astore_1"
+                    ],
+                    [
+                        "19",
+                        "aload_0"
+                    ],
+                    [
+                        "20",
+                        "getfield"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/math3/ml/neuralnet/Network.neuronMap:Ljava/util/concurrent/ConcurrentHashMap;"
+                    ],
+                    [
+                        "23",
+                        "invokevirtual"
+                    ],
+                    [
+                        "24",
+                        "java/util/concurrent/ConcurrentHashMap.entrySet:()Ljava/util/Set;"
+                    ],
+                    [
+                        "26",
+                        "invokeinterface"
+                    ],
+                    [
+                        "27",
+                        "java/util/Set.java/util/Iterator"
+                    ],
+                    [
+                        "29",
+                        "0"
+                    ],
+                    [
+                        "31",
+                        "astore_2"
+                    ],
+                    [
+                        "32",
+                        "aload_2"
+                    ],
+                    [
+                        "33",
+                        "invokeinterface"
+                    ],
+                    [
+                        "34",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "36",
+                        "0"
+                    ],
+                    [
+                        "38",
+                        "ifeq"
+                    ],
+                    [
+                        "39",
+                        "42"
+                    ],
+                    [
+                        "41",
+                        "aload_2"
+                    ],
+                    [
+                        "42",
+                        "invokeinterface"
+                    ],
+                    [
+                        "43",
+                        "java/util/Iterator.java/util/Map"
+                    ],
+                    [
+                        "45",
+                        "0"
+                    ],
+                    [
+                        "47",
+                        "checkcast"
+                    ],
+                    [
+                        "48",
+                        "java/util/Map$Entry"
+                    ],
+                    [
+                        "50",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    151,
+                    155
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            151,
+                            155
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    152,
+                                    153
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    155,
+                    159
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            155,
+                            159
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    156,
+                                    157
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    159,
+                    160
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "iterator": {
+        "name": "iterator",
+        "pos": [
+            165,
+            177
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    166,
+                    167
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/Network.neuronMap:Ljava/util/concurrent/ConcurrentHashMap;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "java/util/concurrent/ConcurrentHashMap.values:()Ljava/util/Collection;"
+                    ],
+                    [
+                        "7",
+                        "invokeinterface"
+                    ],
+                    [
+                        "8",
+                        "java/util/Collection.java/util/Iterator"
+                    ],
+                    [
+                        "10",
+                        "0"
+                    ],
+                    [
+                        "12",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNeurons": {
+        "name": "getNeurons",
+        "pos": [
+            177,
+            195
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    178,
+                    179
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/util/ArrayList"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "invokespecial"
+                    ],
+                    [
+                        "5",
+                        "java/util/ArrayList.<init>:()V"
+                    ],
+                    [
+                        "7",
+                        "astore_2"
+                    ],
+                    [
+                        "8",
+                        "aload_2"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/ml/neuralnet/Network.neuronMap:Ljava/util/concurrent/ConcurrentHashMap;"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "java/util/concurrent/ConcurrentHashMap.values:()Ljava/util/Collection;"
+                    ],
+                    [
+                        "16",
+                        "invokeinterface"
+                    ],
+                    [
+                        "17",
+                        "java/util/List.java/util/Collections"
+                    ],
+                    [
+                        "19",
+                        "0"
+                    ],
+                    [
+                        "21",
+                        "pop"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    179,
+                    181
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "22",
+                        "aload_2"
+                    ],
+                    [
+                        "23",
+                        "aload_1"
+                    ],
+                    [
+                        "24",
+                        "invokestatic"
+                    ],
+                    [
+                        "25",
+                        "java/util/Collections.sort:(Ljava/util/List;Ljava/util/Comparator;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    181,
+                    183
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "27",
+                        "aload_2"
+                    ],
+                    [
+                        "28",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    183,
+                    184
+                ],
+                "children": []
+            }
+        ]
+    },
+    "createNeuron": {
+        "name": "createNeuron",
+        "pos": [
+            195,
+            215
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    196,
+                    200
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            196,
+                            200
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    197,
+                                    198
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    200,
+                    201
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    201,
+                    202
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    202,
+                    203
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    203,
+                    204
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "deleteNeuron": {
+        "name": "deleteNeuron",
+        "pos": [
+            215,
+            232
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    216,
+                    219
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/ml/neuralnet/Network.getNeighbours:(Lorg/apache/commons/math3/ml/neuralnet/Neuron;)Ljava/util/Collection;"
+                    ],
+                    [
+                        "5",
+                        "astore_2"
+                    ],
+                    [
+                        "6",
+                        "aload_2"
+                    ],
+                    [
+                        "7",
+                        "invokeinterface"
+                    ],
+                    [
+                        "8",
+                        "java/util/Collection.java/util/Iterator"
+                    ],
+                    [
+                        "10",
+                        "0"
+                    ],
+                    [
+                        "12",
+                        "astore_3"
+                    ],
+                    [
+                        "13",
+                        "aload_3"
+                    ],
+                    [
+                        "14",
+                        "invokeinterface"
+                    ],
+                    [
+                        "15",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "17",
+                        "0"
+                    ],
+                    [
+                        "19",
+                        "ifeq"
+                    ],
+                    [
+                        "20",
+                        "24"
+                    ],
+                    [
+                        "22",
+                        "aload_3"
+                    ],
+                    [
+                        "23",
+                        "invokeinterface"
+                    ],
+                    [
+                        "24",
+                        "java/util/Iterator.java/util/Map"
+                    ],
+                    [
+                        "26",
+                        "0"
+                    ],
+                    [
+                        "28",
+                        "checkcast"
+                    ],
+                    [
+                        "29",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron"
+                    ],
+                    [
+                        "31",
+                        "astore"
+                    ],
+                    [
+                        "32",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    219,
+                    224
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            219,
+                            224
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    220,
+                                    221
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    224,
+                    225
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getFeaturesSize": {
+        "name": "getFeaturesSize",
+        "pos": [
+            232,
+            247
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    233,
+                    234
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/Network.featureSize:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "addLink": {
+        "name": "addLink",
+        "pos": [
+            247,
+            272
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    249,
+                    250
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.getIdentifier:()J"
+                    ],
+                    [
+                        "4",
+                        "lstore_3"
+                    ],
+                    [
+                        "5",
+                        "aload_2"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.getIdentifier:()J"
+                    ],
+                    [
+                        "9",
+                        "lstore"
+                    ],
+                    [
+                        "10",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    250,
+                    253
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "11",
+                        "aload_1"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "lload_3"
+                    ],
+                    [
+                        "14",
+                        "invokevirtual"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/ml/neuralnet/Network.getNeuron:(J)Lorg/apache/commons/math3/ml/neuralnet/Neuron;"
+                    ],
+                    [
+                        "17",
+                        "if_acmpeq"
+                    ],
+                    [
+                        "18",
+                        "15"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    253,
+                    256
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            253,
+                            256
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    254,
+                                    255
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    256,
+                    261
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            256,
+                            261
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    257,
+                                    258
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    261,
+                    262
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "addLinkToLinkSet": {
+        "name": "addLinkToLinkSet",
+        "pos": [
+            272,
+            285
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    274,
+                    275
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "lload_2"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "java/lang/Long.valueOf:(J)Ljava/lang/Long;"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/Set.deleteLinkFromLinkSet:(Ljava/util/Set;J)V"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "pop"
+                    ],
+                    [
+                        "11",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "deleteLink": {
+        "name": "deleteLink",
+        "pos": [
+            285,
+            310
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    287,
+                    288
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.getIdentifier:()J"
+                    ],
+                    [
+                        "4",
+                        "lstore_3"
+                    ],
+                    [
+                        "5",
+                        "aload_2"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.getIdentifier:()J"
+                    ],
+                    [
+                        "9",
+                        "lstore"
+                    ],
+                    [
+                        "10",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    288,
+                    291
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "11",
+                        "aload_1"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "lload_3"
+                    ],
+                    [
+                        "14",
+                        "invokevirtual"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/ml/neuralnet/Network.getNeuron:(J)Lorg/apache/commons/math3/ml/neuralnet/Neuron;"
+                    ],
+                    [
+                        "17",
+                        "if_acmpeq"
+                    ],
+                    [
+                        "18",
+                        "15"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    291,
+                    294
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            291,
+                            294
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    292,
+                                    293
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    294,
+                    299
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            294,
+                            299
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    295,
+                                    296
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    299,
+                    300
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "deleteLinkFromLinkSet": {
+        "name": "deleteLinkFromLinkSet",
+        "pos": [
+            310,
+            323
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    312,
+                    313
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "lload_2"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "java/lang/Long.valueOf:(J)Ljava/lang/Long;"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/Set.getNeighbours:(Ljava/lang/Iterable;Ljava/lang/Iterable;)Ljava/util/Collection;"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "pop"
+                    ],
+                    [
+                        "11",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNeuron": {
+        "name": "getNeuron",
+        "pos": [
+            323,
+            338
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    324,
+                    325
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/Network.neuronMap:Ljava/util/concurrent/ConcurrentHashMap;"
+                    ],
+                    [
+                        "4",
+                        "lload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "java/lang/Long.valueOf:(J)Ljava/lang/Long;"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "java/util/concurrent/ConcurrentHashMap.get:(Ljava/lang/Object;)Ljava/lang/Object;"
+                    ],
+                    [
+                        "11",
+                        "checkcast"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron"
+                    ],
+                    [
+                        "14",
+                        "astore_3"
+                    ],
+                    [
+                        "15",
+                        "aload_3"
+                    ],
+                    [
+                        "16",
+                        "ifnonnull"
+                    ],
+                    [
+                        "17",
+                        "15"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    325,
+                    328
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            325,
+                            328
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    326,
+                                    327
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    328,
+                    329
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getNeighbours": {
+        "name": "getNeighbours",
+        "pos": [
+            394,
+            416
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    396,
+                    397
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/Network.linkMap:Ljava/util/concurrent/ConcurrentHashMap;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron.getIdentifier:()J"
+                    ],
+                    [
+                        "8",
+                        "invokestatic"
+                    ],
+                    [
+                        "9",
+                        "java/lang/Long.valueOf:(J)Ljava/lang/Long;"
+                    ],
+                    [
+                        "11",
+                        "invokevirtual"
+                    ],
+                    [
+                        "12",
+                        "java/util/concurrent/ConcurrentHashMap.get:(Ljava/lang/Object;)Ljava/lang/Object;"
+                    ],
+                    [
+                        "14",
+                        "checkcast"
+                    ],
+                    [
+                        "15",
+                        "java/util/Set"
+                    ],
+                    [
+                        "17",
+                        "astore_3"
+                    ],
+                    [
+                        "18",
+                        "aload_2"
+                    ],
+                    [
+                        "19",
+                        "ifnull"
+                    ],
+                    [
+                        "20",
+                        "51"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    397,
+                    403
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            397,
+                            403
+                        ],
+                        "children": [
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    398,
+                                    401
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            398,
+                                            401
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    399,
+                                                    400
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    403,
+                    404
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    404,
+                    408
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            404,
+                            408
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    405,
+                                    406
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    408,
+                    409
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "createNextId": {
+        "name": "createNextId",
+        "pos": [
+            416,
+            425
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    417,
+                    418
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/Network.nextId:Ljava/util/concurrent/atomic/AtomicLong;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "java/util/concurrent/atomic/AtomicLong.getAndIncrement:()J"
+                    ],
+                    [
+                        "7",
+                        "invokestatic"
+                    ],
+                    [
+                        "8",
+                        "java/lang/Long.valueOf:(J)Ljava/lang/Long;"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "readObject": {
+        "name": "readObject",
+        "pos": [
+            425,
+            434
+        ],
+        "children": [
+            {
+                "name": "ThrowStatement",
+                "pos": [
+                    426,
+                    427
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/lang/IllegalStateException"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "invokespecial"
+                    ],
+                    [
+                        "5",
+                        "java/lang/IllegalStateException.<init>:()V"
+                    ],
+                    [
+                        "7",
+                        "athrow"
+                    ]
+                ]
+            }
+        ]
+    },
+    "writeReplace": {
+        "name": "writeReplace",
+        "pos": [
+            434,
+            458
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    435,
+                    436
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/Network.neuronMap:Ljava/util/concurrent/ConcurrentHashMap;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "java/util/concurrent/ConcurrentHashMap.values:()Ljava/util/Collection;"
+                    ],
+                    [
+                        "7",
+                        "iconst_0"
+                    ],
+                    [
+                        "8",
+                        "anewarray"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/ml/neuralnet/Neuron"
+                    ],
+                    [
+                        "11",
+                        "invokeinterface"
+                    ],
+                    [
+                        "12",
+                        "java/util/Collection.size:()I"
+                    ],
+                    [
+                        "14",
+                        "0"
+                    ],
+                    [
+                        "16",
+                        "checkcast"
+                    ],
+                    [
+                        "17",
+                        "[Lorg/apache/commons/math3/ml/neuralnet/Neuron;"
+                    ],
+                    [
+                        "19",
+                        "astore_1"
+                    ],
+                    [
+                        "20",
+                        "aload_1"
+                    ],
+                    [
+                        "21",
+                        "arraylength"
+                    ],
+                    [
+                        "22",
+                        "anewarray"
+                    ],
+                    [
+                        "23",
+                        "[J"
+                    ],
+                    [
+                        "25",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    436,
+                    438
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "26",
+                        "iconst_0"
+                    ],
+                    [
+                        "27",
+                        "istore_3"
+                    ],
+                    [
+                        "28",
+                        "iload_3"
+                    ],
+                    [
+                        "29",
+                        "aload_1"
+                    ],
+                    [
+                        "30",
+                        "arraylength"
+                    ],
+                    [
+                        "31",
+                        "if_icmpge"
+                    ],
+                    [
+                        "32",
+                        "84"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    438,
+                    449
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            438,
+                            449
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    439,
+                                    440
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    440,
+                                    441
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    441,
+                                    442
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    442,
+                                    446
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            442,
+                                            446
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    443,
+                                                    444
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    444,
+                                                    445
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    446,
+                                    447
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    449,
+                    453
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

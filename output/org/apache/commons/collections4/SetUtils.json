@@ -1,0 +1,1423 @@
+{
+  "emptySet": {
+    "0": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "1": [
+      "java/util/Collections.emptySet:()Ljava/util/Set;",
+      0,
+      0
+    ],
+    "3": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "emptySortedSet": {
+    "0": [
+      "getstatic",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/SetUtils.EMPTY_SORTED_SET:Ljava/util/SortedSet;",
+      0,
+      0
+    ],
+    "3": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "emptyIfNull": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "ifnonnull",
+      0,
+      0
+    ],
+    "2": [
+      "9",
+      0,
+      0
+    ],
+    "4": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "5": [
+      "java/util/Collections.emptySet:()Ljava/util/Set;",
+      0,
+      0
+    ],
+    "7": [
+      "goto",
+      0,
+      0
+    ],
+    "8": [
+      "4",
+      0,
+      0
+    ],
+    "10": [
+      "aload_0",
+      0,
+      0
+    ],
+    "11": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "isEqualSet": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "aload_1",
+      1,
+      1
+    ],
+    "2": [
+      "if_acmpne",
+      1,
+      1
+    ],
+    "3": [
+      "5",
+      1,
+      1
+    ],
+    "5": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "6": [
+      "ireturn",
+      1,
+      0
+    ],
+    "7": [
+      "aload_0",
+      1,
+      1
+    ],
+    "8": [
+      "ifnull",
+      1,
+      1
+    ],
+    "9": [
+      "22",
+      1,
+      1
+    ],
+    "11": [
+      "aload_1",
+      1,
+      1
+    ],
+    "12": [
+      "ifnull",
+      1,
+      1
+    ],
+    "13": [
+      "18",
+      1,
+      1
+    ],
+    "15": [
+      "aload_0",
+      1,
+      1
+    ],
+    "16": [
+      "invokeinterface",
+      1,
+      1
+    ],
+    "17": [
+      "java/util/Collection.containsAll:(Ljava/util/Collection;)Z",
+      1,
+      1
+    ],
+    "19": [
+      "0",
+      1,
+      1
+    ],
+    "21": [
+      "aload_1",
+      1,
+      1
+    ],
+    "22": [
+      "invokeinterface",
+      1,
+      1
+    ],
+    "23": [
+      "java/util/Collection.containsAll:(Ljava/util/Collection;)Z",
+      1,
+      1
+    ],
+    "25": [
+      "0",
+      1,
+      1
+    ],
+    "27": [
+      "if_icmpeq",
+      1,
+      1
+    ],
+    "28": [
+      "5",
+      1,
+      1
+    ],
+    "30": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "31": [
+      "ireturn",
+      1,
+      0
+    ],
+    "32": [
+      "aload_0",
+      0,
+      0
+    ],
+    "33": [
+      "aload_1",
+      0,
+      0
+    ],
+    "34": [
+      "invokeinterface",
+      0,
+      0
+    ],
+    "35": [
+      "java/util/Collection.iterator:()Ljava/util/Iterator;",
+      0,
+      0
+    ],
+    "37": [
+      "0",
+      0,
+      0
+    ],
+    "39": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "hashCodeForSet": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "5",
+      1,
+      1
+    ],
+    "4": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "5": [
+      "ireturn",
+      1,
+      0
+    ],
+    "6": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "7": [
+      "istore_1",
+      0,
+      0
+    ],
+    "8": [
+      "aload_0",
+      1,
+      4
+    ],
+    "9": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "10": [
+      "java/util/Collection.java/util/Iterator",
+      1,
+      4
+    ],
+    "12": [
+      "0",
+      1,
+      4
+    ],
+    "14": [
+      "astore_2",
+      1,
+      4
+    ],
+    "15": [
+      "aload_2",
+      1,
+      4
+    ],
+    "16": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "17": [
+      "java/util/Iterator.next:()Ljava/lang/Object;",
+      1,
+      4
+    ],
+    "19": [
+      "0",
+      1,
+      4
+    ],
+    "21": [
+      "ifeq",
+      1,
+      4
+    ],
+    "22": [
+      "24",
+      1,
+      4
+    ],
+    "24": [
+      "aload_2",
+      1,
+      4
+    ],
+    "25": [
+      "invokeinterface",
+      1,
+      4
+    ],
+    "26": [
+      "java/util/Iterator.hashCode:()I",
+      1,
+      4
+    ],
+    "28": [
+      "0",
+      1,
+      4
+    ],
+    "30": [
+      "astore_3",
+      1,
+      4
+    ],
+    "31": [
+      "aload_3",
+      2,
+      1
+    ],
+    "32": [
+      "ifnull",
+      2,
+      1
+    ],
+    "33": [
+      "10",
+      2,
+      1
+    ],
+    "35": [
+      "iload_1",
+      2,
+      0
+    ],
+    "36": [
+      "aload_3",
+      2,
+      0
+    ],
+    "37": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "38": [
+      "java/lang/Object.hashCode:()I",
+      2,
+      0
+    ],
+    "40": [
+      "iadd",
+      2,
+      0
+    ],
+    "41": [
+      "istore_1",
+      2,
+      0
+    ],
+    "42": [
+      "goto",
+      0,
+      4
+    ],
+    "43": [
+      "-27",
+      0,
+      4
+    ],
+    "45": [
+      "iload_1",
+      0,
+      0
+    ],
+    "46": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "newIdentityHashSet": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "java/util/IdentityHashMap",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "5": [
+      "java/util/IdentityHashMap.<init>:()V",
+      0,
+      0
+    ],
+    "7": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "8": [
+      "java/util/Collections.newSetFromMap:(Ljava/util/Map;)Ljava/util/Set;",
+      0,
+      0
+    ],
+    "10": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "synchronizedSet": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "2": [
+      "java/util/Collections.synchronizedSet:(Ljava/util/Set;)Ljava/util/Set;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "unmodifiableSet": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/set/UnmodifiableSet.unmodifiableSet:(Ljava/util/Set;)Ljava/util/Set;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "predicatedSet": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/collections4/set/PredicatedSet.predicatedSet:(Ljava/util/Set;Lorg/apache/commons/collections4/Predicate;)Lorg/apache/commons/collections4/set/PredicatedSet;",
+      0,
+      0
+    ],
+    "5": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "transformedSet": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/collections4/set/TransformedSet.transformingSet:(Ljava/util/Set;Lorg/apache/commons/collections4/Transformer;)Lorg/apache/commons/collections4/set/TransformedSet;",
+      0,
+      0
+    ],
+    "5": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "orderedSet": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/set/ListOrderedSet.listOrderedSet:(Ljava/util/Set;)Lorg/apache/commons/collections4/set/ListOrderedSet;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "synchronizedSortedSet": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "2": [
+      "java/util/Collections.synchronizedSortedSet:(Ljava/util/SortedSet;)Ljava/util/SortedSet;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "unmodifiableSortedSet": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/set/UnmodifiableSortedSet.unmodifiableSortedSet:(Ljava/util/SortedSet;)Ljava/util/SortedSet;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "predicatedSortedSet": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/collections4/set/PredicatedSortedSet.predicatedSortedSet:(Ljava/util/SortedSet;Lorg/apache/commons/collections4/Predicate;)Lorg/apache/commons/collections4/set/PredicatedSortedSet;",
+      0,
+      0
+    ],
+    "5": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "transformedSortedSet": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/collections4/set/TransformedSortedSet.transformingSortedSet:(Ljava/util/SortedSet;Lorg/apache/commons/collections4/Transformer;)Lorg/apache/commons/collections4/set/TransformedSortedSet;",
+      0,
+      0
+    ],
+    "5": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "unmodifiableNavigableSet": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/set/UnmodifiableNavigableSet.unmodifiableNavigableSet:(Ljava/util/NavigableSet;)Ljava/util/NavigableSet;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "predicatedNavigableSet": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/collections4/set/PredicatedNavigableSet.predicatedNavigableSet:(Ljava/util/NavigableSet;Lorg/apache/commons/collections4/Predicate;)Lorg/apache/commons/collections4/set/PredicatedNavigableSet;",
+      0,
+      0
+    ],
+    "5": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "transformedNavigableSet": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/collections4/set/TransformedNavigableSet.transformingNavigableSet:(Ljava/util/NavigableSet;Lorg/apache/commons/collections4/Transformer;)Lorg/apache/commons/collections4/set/TransformedNavigableSet;",
+      0,
+      0
+    ],
+    "5": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "union": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "ifnull",
+      1,
+      1
+    ],
+    "2": [
+      "7",
+      1,
+      1
+    ],
+    "4": [
+      "aload_1",
+      1,
+      1
+    ],
+    "5": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "6": [
+      "13",
+      1,
+      1
+    ],
+    "8": [
+      "new",
+      1,
+      0
+    ],
+    "9": [
+      "java/lang/NullPointerException",
+      1,
+      0
+    ],
+    "11": [
+      "dup",
+      1,
+      0
+    ],
+    "12": [
+      "ldc",
+      1,
+      0
+    ],
+    "13": [
+      "Sets must not be null.",
+      1,
+      0
+    ],
+    "14": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "15": [
+      "java/lang/NullPointerException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "17": [
+      "athrow",
+      1,
+      0
+    ],
+    "18": [
+      "aload_1",
+      0,
+      0
+    ],
+    "19": [
+      "aload_0",
+      0,
+      0
+    ],
+    "20": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "21": [
+      "org/apache/commons/collections4/SetUtils.difference:(Ljava/util/Set;Ljava/util/Set;)Lorg/apache/commons/collections4/SetUtils$SetView;",
+      0,
+      0
+    ],
+    "23": [
+      "astore_2",
+      0,
+      0
+    ],
+    "24": [
+      "new",
+      0,
+      0
+    ],
+    "25": [
+      "org/apache/commons/collections4/SetUtils$1",
+      0,
+      0
+    ],
+    "27": [
+      "dup",
+      0,
+      0
+    ],
+    "28": [
+      "aload_0",
+      0,
+      0
+    ],
+    "29": [
+      "aload_1",
+      0,
+      0
+    ],
+    "30": [
+      "aload_2",
+      0,
+      0
+    ],
+    "31": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "32": [
+      "org/apache/commons/collections4/SetUtils$1.<init>:(Ljava/util/Set;Ljava/util/Set;Lorg/apache/commons/collections4/SetUtils$SetView;)V",
+      0,
+      0
+    ],
+    "34": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "difference": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "ifnull",
+      1,
+      1
+    ],
+    "2": [
+      "7",
+      1,
+      1
+    ],
+    "4": [
+      "aload_1",
+      1,
+      1
+    ],
+    "5": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "6": [
+      "13",
+      1,
+      1
+    ],
+    "8": [
+      "new",
+      1,
+      0
+    ],
+    "9": [
+      "java/lang/NullPointerException",
+      1,
+      0
+    ],
+    "11": [
+      "dup",
+      1,
+      0
+    ],
+    "12": [
+      "ldc",
+      1,
+      0
+    ],
+    "13": [
+      "Sets must not be null.",
+      1,
+      0
+    ],
+    "14": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "15": [
+      "java/lang/NullPointerException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "17": [
+      "athrow",
+      1,
+      0
+    ],
+    "18": [
+      "new",
+      0,
+      0
+    ],
+    "19": [
+      "org/apache/commons/collections4/SetUtils$2",
+      0,
+      0
+    ],
+    "21": [
+      "dup",
+      0,
+      0
+    ],
+    "22": [
+      "aload_1",
+      0,
+      0
+    ],
+    "23": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "24": [
+      "org/apache/commons/collections4/SetUtils$2.<init>:(Ljava/util/Set;)V",
+      0,
+      0
+    ],
+    "26": [
+      "astore_2",
+      0,
+      0
+    ],
+    "27": [
+      "new",
+      0,
+      0
+    ],
+    "28": [
+      "org/apache/commons/collections4/SetUtils$3",
+      0,
+      0
+    ],
+    "30": [
+      "dup",
+      0,
+      0
+    ],
+    "31": [
+      "aload_0",
+      0,
+      0
+    ],
+    "32": [
+      "aload_1",
+      0,
+      0
+    ],
+    "33": [
+      "aload_2",
+      0,
+      0
+    ],
+    "34": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "35": [
+      "org/apache/commons/collections4/SetUtils$3.<init>:(Ljava/util/Set;Ljava/util/Set;Lorg/apache/commons/collections4/Predicate;)V",
+      0,
+      0
+    ],
+    "37": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "intersection": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "ifnull",
+      1,
+      1
+    ],
+    "2": [
+      "7",
+      1,
+      1
+    ],
+    "4": [
+      "aload_1",
+      1,
+      1
+    ],
+    "5": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "6": [
+      "13",
+      1,
+      1
+    ],
+    "8": [
+      "new",
+      1,
+      0
+    ],
+    "9": [
+      "java/lang/NullPointerException",
+      1,
+      0
+    ],
+    "11": [
+      "dup",
+      1,
+      0
+    ],
+    "12": [
+      "ldc",
+      1,
+      0
+    ],
+    "13": [
+      "Sets must not be null.",
+      1,
+      0
+    ],
+    "14": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "15": [
+      "java/lang/NullPointerException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "17": [
+      "athrow",
+      1,
+      0
+    ],
+    "18": [
+      "new",
+      0,
+      0
+    ],
+    "19": [
+      "org/apache/commons/collections4/SetUtils$4",
+      0,
+      0
+    ],
+    "21": [
+      "dup",
+      0,
+      0
+    ],
+    "22": [
+      "aload_1",
+      0,
+      0
+    ],
+    "23": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "24": [
+      "org/apache/commons/collections4/SetUtils$4.<init>:(Ljava/util/Set;)V",
+      0,
+      0
+    ],
+    "26": [
+      "astore_2",
+      0,
+      0
+    ],
+    "27": [
+      "new",
+      0,
+      0
+    ],
+    "28": [
+      "org/apache/commons/collections4/SetUtils$5",
+      0,
+      0
+    ],
+    "30": [
+      "dup",
+      0,
+      0
+    ],
+    "31": [
+      "aload_0",
+      0,
+      0
+    ],
+    "32": [
+      "aload_1",
+      0,
+      0
+    ],
+    "33": [
+      "aload_2",
+      0,
+      0
+    ],
+    "34": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "35": [
+      "org/apache/commons/collections4/SetUtils$5.<init>:(Ljava/util/Set;Ljava/util/Set;Lorg/apache/commons/collections4/Predicate;)V",
+      0,
+      0
+    ],
+    "37": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "disjunction": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "ifnull",
+      1,
+      1
+    ],
+    "2": [
+      "7",
+      1,
+      1
+    ],
+    "4": [
+      "aload_1",
+      1,
+      1
+    ],
+    "5": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "6": [
+      "13",
+      1,
+      1
+    ],
+    "8": [
+      "new",
+      1,
+      0
+    ],
+    "9": [
+      "java/lang/NullPointerException",
+      1,
+      0
+    ],
+    "11": [
+      "dup",
+      1,
+      0
+    ],
+    "12": [
+      "ldc",
+      1,
+      0
+    ],
+    "13": [
+      "Sets must not be null.",
+      1,
+      0
+    ],
+    "14": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "15": [
+      "java/lang/NullPointerException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "17": [
+      "athrow",
+      1,
+      0
+    ],
+    "18": [
+      "aload_0",
+      0,
+      0
+    ],
+    "19": [
+      "aload_1",
+      0,
+      0
+    ],
+    "20": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "21": [
+      "org/apache/commons/collections4/SetUtils.difference:(Ljava/util/Set;Ljava/util/Set;)Lorg/apache/commons/collections4/SetUtils$SetView;",
+      0,
+      0
+    ],
+    "23": [
+      "astore_2",
+      0,
+      0
+    ],
+    "24": [
+      "aload_1",
+      0,
+      0
+    ],
+    "25": [
+      "aload_0",
+      0,
+      0
+    ],
+    "26": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "27": [
+      "org/apache/commons/collections4/SetUtils.difference:(Ljava/util/Set;Ljava/util/Set;)Lorg/apache/commons/collections4/SetUtils$SetView;",
+      0,
+      0
+    ],
+    "29": [
+      "astore_3",
+      0,
+      0
+    ],
+    "30": [
+      "new",
+      0,
+      0
+    ],
+    "31": [
+      "org/apache/commons/collections4/SetUtils$6",
+      0,
+      0
+    ],
+    "33": [
+      "dup",
+      0,
+      0
+    ],
+    "34": [
+      "aload_0",
+      0,
+      0
+    ],
+    "35": [
+      "aload_1",
+      0,
+      0
+    ],
+    "36": [
+      "aload_2",
+      0,
+      0
+    ],
+    "37": [
+      "aload_3",
+      0,
+      0
+    ],
+    "38": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "39": [
+      "org/apache/commons/collections4/SetUtils$6.<init>:(Ljava/util/Set;Ljava/util/Set;Lorg/apache/commons/collections4/SetUtils$SetView;Lorg/apache/commons/collections4/SetUtils$SetView;)V",
+      0,
+      0
+    ],
+    "41": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "<clinit>": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "java/util/TreeSet",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "5": [
+      "java/util/TreeSet.<init>:()V",
+      0,
+      0
+    ],
+    "7": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/collections4/set/UnmodifiableSortedSet.unmodifiableSortedSet:(Ljava/util/SortedSet;)Ljava/util/SortedSet;",
+      0,
+      0
+    ],
+    "10": [
+      "putstatic",
+      0,
+      0
+    ],
+    "11": [
+      "org/apache/commons/collections4/SetUtils.EMPTY_SORTED_SET:Ljava/util/SortedSet;",
+      0,
+      0
+    ],
+    "13": [
+      "return",
+      0,
+      0
+    ]
+  }
+}

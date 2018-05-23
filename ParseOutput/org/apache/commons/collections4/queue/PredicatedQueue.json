@@ -1,0 +1,359 @@
+{
+    "predicatedQueue": {
+        "name": "predicatedQueue",
+        "pos": [
+            56,
+            73
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    58,
+                    59
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/queue/PredicatedQueue"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokespecial"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/queue/PredicatedQueue.<init>:(Ljava/util/Queue;Lorg/apache/commons/collections4/Predicate;)V"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "decorated": {
+        "name": "decorated",
+        "pos": [
+            82,
+            97
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    84,
+                    85
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/collection/PredicatedCollection.decorated:()Ljava/util/Collection;"
+                    ],
+                    [
+                        "4",
+                        "checkcast"
+                    ],
+                    [
+                        "5",
+                        "java/util/Queue"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "offer": {
+        "name": "offer",
+        "pos": [
+            97,
+            102
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    98,
+                    99
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/queue/PredicatedQueue.validate:(Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/queue/PredicatedQueue.decorated:()Ljava/util/Queue;"
+                    ],
+                    [
+                        "9",
+                        "aload_1"
+                    ],
+                    [
+                        "10",
+                        "invokeinterface"
+                    ],
+                    [
+                        "11",
+                        "java/util/Queue.poll:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "13",
+                        "0"
+                    ],
+                    [
+                        "15",
+                        "ireturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    99,
+                    100
+                ],
+                "children": []
+            }
+        ]
+    },
+    "poll": {
+        "name": "poll",
+        "pos": [
+            102,
+            106
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    103,
+                    104
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/queue/PredicatedQueue.decorated:()Ljava/util/Queue;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Queue.peek:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "peek": {
+        "name": "peek",
+        "pos": [
+            106,
+            110
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    107,
+                    108
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/queue/PredicatedQueue.decorated:()Ljava/util/Queue;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Queue.element:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "element": {
+        "name": "element",
+        "pos": [
+            110,
+            114
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    111,
+                    112
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/queue/PredicatedQueue.decorated:()Ljava/util/Queue;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Queue.remove:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "remove": {
+        "name": "remove",
+        "pos": [
+            114,
+            118
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    115,
+                    116
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/queue/PredicatedQueue.decorated:()Ljava/util/Queue;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Queue.org/apache/commons/collections4/collection/PredicatedCollection"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

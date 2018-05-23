@@ -1,0 +1,295 @@
+{
+    "integrate": {
+        "name": "integrate",
+        "pos": [
+            88,
+            106
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    89,
+                    90
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dconst_0"
+                    ],
+                    [
+                        "1",
+                        "dstore_2"
+                    ],
+                    [
+                        "2",
+                        "dconst_0"
+                    ],
+                    [
+                        "3",
+                        "dstore"
+                    ],
+                    [
+                        "4",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    90,
+                    91
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "5",
+                        "iconst_0"
+                    ],
+                    [
+                        "6",
+                        "istore"
+                    ],
+                    [
+                        "7",
+                        "#6"
+                    ],
+                    [
+                        "8",
+                        "iload"
+                    ],
+                    [
+                        "9",
+                        "#6"
+                    ],
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "getfield"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/analysis/integration/gauss/GaussIntegrator.points:[D"
+                    ],
+                    [
+                        "14",
+                        "arraylength"
+                    ],
+                    [
+                        "15",
+                        "if_icmpge"
+                    ],
+                    [
+                        "16",
+                        "61"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    91,
+                    99
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            91,
+                            99
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    92,
+                                    93
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    93,
+                                    94
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    94,
+                                    95
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    95,
+                                    96
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    96,
+                                    97
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    97,
+                                    98
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    99,
+                    100
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getNumberOfPoints": {
+        "name": "getNumberOfPoints",
+        "pos": [
+            106,
+            116
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    107,
+                    108
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/analysis/integration/gauss/GaussIntegrator.points:[D"
+                    ],
+                    [
+                        "4",
+                        "arraylength"
+                    ],
+                    [
+                        "5",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getPoint": {
+        "name": "getPoint",
+        "pos": [
+            116,
+            126
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    117,
+                    118
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/analysis/integration/gauss/GaussIntegrator.points:[D"
+                    ],
+                    [
+                        "4",
+                        "iload_1"
+                    ],
+                    [
+                        "5",
+                        "daload"
+                    ],
+                    [
+                        "6",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getWeight": {
+        "name": "getWeight",
+        "pos": [
+            126,
+            129
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    127,
+                    128
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/analysis/integration/gauss/GaussIntegrator.weights:[D"
+                    ],
+                    [
+                        "4",
+                        "iload_1"
+                    ],
+                    [
+                        "5",
+                        "daload"
+                    ],
+                    [
+                        "6",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

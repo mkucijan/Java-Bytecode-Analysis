@@ -1,0 +1,490 @@
+{
+    "increment": {
+        "name": "increment",
+        "pos": [
+            75,
+            86
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    77,
+                    80
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            77,
+                            80
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    78,
+                                    79
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    80,
+                    81
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "clear": {
+        "name": "clear",
+        "pos": [
+            86,
+            95
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    88,
+                    89
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "ldc2_w"
+                    ],
+                    [
+                        "2",
+                        "nan"
+                    ],
+                    [
+                        "4",
+                        "putfield"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/stat/descriptive/rank/Min.value:D"
+                    ],
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "lconst_0"
+                    ],
+                    [
+                        "9",
+                        "putfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/stat/descriptive/rank/Min.n:J"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    89,
+                    90
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getResult": {
+        "name": "getResult",
+        "pos": [
+            95,
+            103
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    97,
+                    98
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/rank/Min.value:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getN": {
+        "name": "getN",
+        "pos": [
+            103,
+            129
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    104,
+                    105
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/rank/Min.n:J"
+                    ],
+                    [
+                        "4",
+                        "lreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "evaluate": {
+        "name": "evaluate",
+        "pos": [
+            129,
+            147
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    132,
+                    133
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "ldc2_w"
+                    ],
+                    [
+                        "1",
+                        "nan"
+                    ],
+                    [
+                        "3",
+                        "dstore"
+                    ],
+                    [
+                        "4",
+                        "#4"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "iload_2"
+                    ],
+                    [
+                        "8",
+                        "iload_3"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/stat/descriptive/rank/Min.test:([DII)Z"
+                    ],
+                    [
+                        "12",
+                        "ifeq"
+                    ],
+                    [
+                        "13",
+                        "56"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    133,
+                    141
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            133,
+                            141
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    134,
+                                    135
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    135,
+                                    140
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            135,
+                                            140
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    136,
+                                                    139
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            136,
+                                                            139
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    137,
+                                                                    138
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    141,
+                    142
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "copy": {
+        "name": "copy",
+        "pos": [
+            163,
+            171
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    165,
+                    166
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    166,
+                    167
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "8",
+                        "aload_1"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/stat/descriptive/rank/Min.getDataRef:()[D"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/stat/descriptive/rank/Min.setData:([D)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    167,
+                    168
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "aload_1"
+                    ],
+                    [
+                        "17",
+                        "aload_0"
+                    ],
+                    [
+                        "18",
+                        "getfield"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/stat/descriptive/rank/Min.n:J"
+                    ],
+                    [
+                        "21",
+                        "putfield"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/stat/descriptive/rank/Min.n:J"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    168,
+                    169
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "24",
+                        "aload_1"
+                    ],
+                    [
+                        "25",
+                        "aload_0"
+                    ],
+                    [
+                        "26",
+                        "getfield"
+                    ],
+                    [
+                        "27",
+                        "org/apache/commons/math3/stat/descriptive/rank/Min.value:D"
+                    ],
+                    [
+                        "29",
+                        "putfield"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/math3/stat/descriptive/rank/Min.value:D"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    169,
+                    170
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "32",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

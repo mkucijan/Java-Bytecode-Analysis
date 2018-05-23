@@ -1,0 +1,181 @@
+{
+    "exceptionFactory": {
+        "name": "exceptionFactory",
+        "pos": [
+            61,
+            73
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    62,
+                    63
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "invokestatic"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/functors/ExceptionFactory.exceptionFactory:()Lorg/apache/commons/collections4/Factory;"
+                    ],
+                    [
+                        "3",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "nullFactory": {
+        "name": "nullFactory",
+        "pos": [
+            73,
+            89
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    74,
+                    75
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aconst_null"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/functors/ConstantFactory.constantFactory:(Ljava/lang/Object;)Lorg/apache/commons/collections4/Factory;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "constantFactory": {
+        "name": "constantFactory",
+        "pos": [
+            89,
+            111
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    90,
+                    91
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/functors/ConstantFactory.constantFactory:(Ljava/lang/Object;)Lorg/apache/commons/collections4/Factory;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "prototypeFactory": {
+        "name": "prototypeFactory",
+        "pos": [
+            111,
+            126
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    112,
+                    113
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/functors/PrototypeFactory.prototypeFactory:(Ljava/lang/Object;)Lorg/apache/commons/collections4/Factory;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "instantiateFactory": {
+        "name": "instantiateFactory",
+        "pos": [
+            145,
+            150
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    147,
+                    148
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "aload_2"
+                    ],
+                    [
+                        "3",
+                        "invokestatic"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/collections4/functors/InstantiateFactory.instantiateFactory:(Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Lorg/apache/commons/collections4/Factory;"
+                    ],
+                    [
+                        "6",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

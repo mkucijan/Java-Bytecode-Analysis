@@ -1,0 +1,409 @@
+{
+    "getEvaluations": {
+        "name": "getEvaluations",
+        "pos": [
+            54,
+            59
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    55,
+                    56
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/OptimumImpl.evaluations:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getIterations": {
+        "name": "getIterations",
+        "pos": [
+            59,
+            64
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    60,
+                    61
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/OptimumImpl.iterations:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getCovariances": {
+        "name": "getCovariances",
+        "pos": [
+            64,
+            69
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    65,
+                    66
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/OptimumImpl.value:Lorg/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation.getSigma:(D)Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSigma": {
+        "name": "getSigma",
+        "pos": [
+            69,
+            74
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    70,
+                    71
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/OptimumImpl.value:Lorg/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation.getRMS:()D"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getRMS": {
+        "name": "getRMS",
+        "pos": [
+            74,
+            79
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    75,
+                    76
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/OptimumImpl.value:Lorg/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation.getJacobian:()Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getJacobian": {
+        "name": "getJacobian",
+        "pos": [
+            79,
+            84
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    80,
+                    81
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/OptimumImpl.value:Lorg/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation.getCost:()D"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getCost": {
+        "name": "getCost",
+        "pos": [
+            84,
+            89
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    85,
+                    86
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/OptimumImpl.value:Lorg/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation.getResiduals:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getResiduals": {
+        "name": "getResiduals",
+        "pos": [
+            89,
+            94
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    90,
+                    91
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/OptimumImpl.value:Lorg/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation.getPoint:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getPoint": {
+        "name": "getPoint",
+        "pos": [
+            94,
+            97
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    95,
+                    96
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/OptimumImpl.value:Lorg/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem$Evaluation.org/apache/commons/math3/fitting/leastsquares/OptimumImpl"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

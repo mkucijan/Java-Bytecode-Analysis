@@ -1,0 +1,1503 @@
+{
+    "multiValueMap": {
+        "name": "multiValueMap",
+        "pos": [
+            121,
+            131
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    123,
+                    124
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/map/MultiValueMap"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokespecial"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/map/MultiValueMap.<init>:(Ljava/util/Map;Lorg/apache/commons/collections4/Factory;)V"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "writeObject": {
+        "name": "writeObject",
+        "pos": [
+            162,
+            175
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    163,
+                    164
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectOutputStream.defaultWriteObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "getfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/map/MultiValueMap.map:Ljava/util/Map;"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "java/io/ObjectOutputStream.writeObject:(Ljava/lang/Object;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    164,
+                    165
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "readObject": {
+        "name": "readObject",
+        "pos": [
+            175,
+            185
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    177,
+                    178
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectInputStream.defaultReadObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "java/io/ObjectInputStream.readObject:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "9",
+                        "checkcast"
+                    ],
+                    [
+                        "10",
+                        "java/util/Map"
+                    ],
+                    [
+                        "12",
+                        "putfield"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/collections4/map/MultiValueMap.map:Ljava/util/Map;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    178,
+                    179
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "15",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "clear": {
+        "name": "clear",
+        "pos": [
+            185,
+            211
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    195,
+                    196
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/MultiValueMap.decorated:()Ljava/util/Map;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Map.getCollection:(Ljava/lang/Object;)Ljava/util/Collection;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "removeMapping": {
+        "name": "removeMapping",
+        "pos": [
+            211,
+            235
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    213,
+                    214
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/map/MultiValueMap.getCollection:(Ljava/lang/Object;)Ljava/util/Collection;"
+                    ],
+                    [
+                        "5",
+                        "astore_3"
+                    ],
+                    [
+                        "6",
+                        "aload_3"
+                    ],
+                    [
+                        "7",
+                        "ifnonnull"
+                    ],
+                    [
+                        "8",
+                        "5"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    214,
+                    217
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            214,
+                            217
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    215,
+                                    216
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    217,
+                    218
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    218,
+                    221
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            218,
+                            221
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    219,
+                                    220
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    221,
+                    224
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            221,
+                            224
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    222,
+                                    223
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    224,
+                    225
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "containsValue": {
+        "name": "containsValue",
+        "pos": [
+            338,
+            353
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    339,
+                    340
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/map/MultiValueMap.getCollection:(Ljava/lang/Object;)Ljava/util/Collection;"
+                    ],
+                    [
+                        "5",
+                        "astore_3"
+                    ],
+                    [
+                        "6",
+                        "aload_3"
+                    ],
+                    [
+                        "7",
+                        "ifnonnull"
+                    ],
+                    [
+                        "8",
+                        "5"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    340,
+                    343
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            340,
+                            343
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    341,
+                                    342
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    343,
+                    344
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "put": {
+        "name": "put",
+        "pos": [
+            259,
+            289
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    262,
+                    263
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_0"
+                    ],
+                    [
+                        "1",
+                        "istore_3"
+                    ],
+                    [
+                        "2",
+                        "aload_0"
+                    ],
+                    [
+                        "3",
+                        "aload_1"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/map/MultiValueMap.getCollection:(Ljava/lang/Object;)Ljava/util/Collection;"
+                    ],
+                    [
+                        "7",
+                        "astore"
+                    ],
+                    [
+                        "8",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    263,
+                    264
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "aload"
+                    ],
+                    [
+                        "10",
+                        "#4"
+                    ],
+                    [
+                        "11",
+                        "ifnonnull"
+                    ],
+                    [
+                        "12",
+                        "47"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    264,
+                    275
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            264,
+                            272
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    265,
+                                    266
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    266,
+                                    267
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    267,
+                                    272
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            267,
+                                            272
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    269,
+                                                    270
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    270,
+                                                    271
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            272,
+                            275
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    273,
+                                    274
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    275,
+                    276
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "putAll": {
+        "name": "putAll",
+        "pos": [
+            380,
+            406
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    381,
+                    384
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            381,
+                            384
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    382,
+                                    383
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    384,
+                    385
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    385,
+                    386
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    386,
+                    397
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            386,
+                            394
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    387,
+                                    388
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    388,
+                                    389
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    389,
+                                    394
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            389,
+                                            394
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    391,
+                                                    392
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    392,
+                                                    393
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            394,
+                            397
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    395,
+                                    396
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    397,
+                    398
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "entrySet": {
+        "name": "entrySet",
+        "pos": [
+            312,
+            324
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    314,
+                    315
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/AbstractMapDecorator.entrySet:()Ljava/util/Set;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "values": {
+        "name": "values",
+        "pos": [
+            324,
+            338
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    327,
+                    328
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/MultiValueMap.valuesView:Ljava/util/Collection;"
+                    ],
+                    [
+                        "4",
+                        "astore_1"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "ifnull"
+                    ],
+                    [
+                        "7",
+                        "7"
+                    ],
+                    [
+                        "9",
+                        "aload_1"
+                    ],
+                    [
+                        "10",
+                        "goto"
+                    ],
+                    [
+                        "11",
+                        "17"
+                    ],
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "new"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/collections4/map/MultiValueMap$Values"
+                    ],
+                    [
+                        "17",
+                        "dup"
+                    ],
+                    [
+                        "18",
+                        "aload_0"
+                    ],
+                    [
+                        "19",
+                        "aconst_null"
+                    ],
+                    [
+                        "20",
+                        "invokespecial"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/collections4/map/MultiValueMap$Values.<init>:(Lorg/apache/commons/collections4/map/MultiValueMap;Lorg/apache/commons/collections4/map/MultiValueMap$1;)V"
+                    ],
+                    [
+                        "23",
+                        "dup_x1"
+                    ],
+                    [
+                        "24",
+                        "putfield"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/collections4/map/MultiValueMap.valuesView:Ljava/util/Collection;"
+                    ],
+                    [
+                        "27",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    328,
+                    329
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getCollection": {
+        "name": "getCollection",
+        "pos": [
+            353,
+            364
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    355,
+                    356
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/MultiValueMap.decorated:()Ljava/util/Map;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/Map.addAll:(Ljava/util/Collection;)Z"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "checkcast"
+                    ],
+                    [
+                        "11",
+                        "java/util/Collection"
+                    ],
+                    [
+                        "13",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "size": {
+        "name": "size",
+        "pos": [
+            364,
+            380
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    365,
+                    366
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/map/MultiValueMap.getCollection:(Ljava/lang/Object;)Ljava/util/Collection;"
+                    ],
+                    [
+                        "5",
+                        "astore_2"
+                    ],
+                    [
+                        "6",
+                        "aload_2"
+                    ],
+                    [
+                        "7",
+                        "ifnonnull"
+                    ],
+                    [
+                        "8",
+                        "5"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    366,
+                    369
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            366,
+                            369
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    367,
+                                    368
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    369,
+                    370
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "iterator": {
+        "name": "iterator",
+        "pos": [
+            425,
+            465
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    426,
+                    427
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/util/ArrayList"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/map/MultiValueMap.keySet:()Ljava/util/Set;"
+                    ],
+                    [
+                        "8",
+                        "invokespecial"
+                    ],
+                    [
+                        "9",
+                        "java/util/ArrayList.<init>:(Ljava/util/Collection;)V"
+                    ],
+                    [
+                        "11",
+                        "astore_1"
+                    ],
+                    [
+                        "12",
+                        "aload_1"
+                    ],
+                    [
+                        "13",
+                        "invokeinterface"
+                    ],
+                    [
+                        "14",
+                        "java/util/Collection.java/util/Iterator"
+                    ],
+                    [
+                        "16",
+                        "0"
+                    ],
+                    [
+                        "18",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    427,
+                    429
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "19",
+                        "new"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/collections4/map/MultiValueMap$1"
+                    ],
+                    [
+                        "22",
+                        "dup"
+                    ],
+                    [
+                        "23",
+                        "aload_0"
+                    ],
+                    [
+                        "24",
+                        "aload_2"
+                    ],
+                    [
+                        "25",
+                        "invokespecial"
+                    ],
+                    [
+                        "26",
+                        "org/apache/commons/collections4/map/MultiValueMap$1.<init>:(Lorg/apache/commons/collections4/map/MultiValueMap;Ljava/util/Iterator;)V"
+                    ],
+                    [
+                        "28",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    429,
+                    458
+                ],
+                "children": [
+                    {
+                        "name": "IfStatement",
+                        "pos": [
+                            432,
+                            435
+                        ],
+                        "children": [
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    432,
+                                    435
+                                ],
+                                "children": [
+                                    {
+                                        "name": "ReturnStatement",
+                                        "pos": [
+                                            433,
+                                            434
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "LocalVariableDeclaration",
+                        "pos": [
+                            435,
+                            436
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "LocalVariableDeclaration",
+                        "pos": [
+                            436,
+                            455
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    439,
+                                    453
+                                ],
+                                "children": [
+                                    {
+                                        "name": "ReturnStatement",
+                                        "pos": [
+                                            442,
+                                            443
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "name": "ReturnStatement",
+                                        "pos": [
+                                            446,
+                                            447
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "name": "ThrowStatement",
+                                        "pos": [
+                                            450,
+                                            451
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            455,
+                            456
+                        ],
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "totalSize": {
+        "name": "totalSize",
+        "pos": [
+            465,
+            483
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    466,
+                    467
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_0"
+                    ],
+                    [
+                        "1",
+                        "istore_1"
+                    ],
+                    [
+                        "2",
+                        "aload_0"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/collections4/map/MultiValueMap.decorated:()Ljava/util/Map;"
+                    ],
+                    [
+                        "6",
+                        "invokeinterface"
+                    ],
+                    [
+                        "7",
+                        "java/util/Map.org/apache/commons/collections4/CollectionUtils"
+                    ],
+                    [
+                        "9",
+                        "0"
+                    ],
+                    [
+                        "11",
+                        "invokeinterface"
+                    ],
+                    [
+                        "12",
+                        "java/util/Collection.java/util/Iterator"
+                    ],
+                    [
+                        "14",
+                        "0"
+                    ],
+                    [
+                        "16",
+                        "astore_2"
+                    ],
+                    [
+                        "17",
+                        "aload_2"
+                    ],
+                    [
+                        "18",
+                        "invokeinterface"
+                    ],
+                    [
+                        "19",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "21",
+                        "0"
+                    ],
+                    [
+                        "23",
+                        "ifeq"
+                    ],
+                    [
+                        "24",
+                        "20"
+                    ],
+                    [
+                        "26",
+                        "aload_2"
+                    ],
+                    [
+                        "27",
+                        "invokeinterface"
+                    ],
+                    [
+                        "28",
+                        "java/util/Iterator.java/util/Map$Entry"
+                    ],
+                    [
+                        "30",
+                        "0"
+                    ],
+                    [
+                        "32",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    467,
+                    470
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            467,
+                            470
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    468,
+                                    469
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    470,
+                    471
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "createCollection": {
+        "name": "createCollection",
+        "pos": [
+            483,
+            491
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    484,
+                    485
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/MultiValueMap.collectionFactory:Lorg/apache/commons/collections4/Factory;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/Factory.org/apache/commons/collections4/map/AbstractMapDecorator"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "checkcast"
+                    ],
+                    [
+                        "10",
+                        "java/util/Collection"
+                    ],
+                    [
+                        "12",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

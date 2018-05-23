@@ -1,0 +1,961 @@
+{
+    "increment": {
+        "name": "increment",
+        "pos": [
+            64,
+            82
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    65,
+                    68
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            65,
+                            68
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    66,
+                                    67
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    68,
+                    69
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    69,
+                    75
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            69,
+                            75
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    70,
+                                    71
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    71,
+                                    74
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            71,
+                                            74
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    72,
+                                                    73
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    75,
+                    76
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getResult": {
+        "name": "getResult",
+        "pos": [
+            82,
+            107
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    84,
+                    85
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/moment/VectorialCovariance.sums:[D"
+                    ],
+                    [
+                        "4",
+                        "arraylength"
+                    ],
+                    [
+                        "5",
+                        "istore_1"
+                    ],
+                    [
+                        "6",
+                        "iload_1"
+                    ],
+                    [
+                        "7",
+                        "iload_1"
+                    ],
+                    [
+                        "8",
+                        "invokestatic"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/linear/MatrixUtils.createRealMatrix:(II)Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "11",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    85,
+                    87
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "getfield"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/stat/descriptive/moment/VectorialCovariance.n:J"
+                    ],
+                    [
+                        "16",
+                        "lconst_1"
+                    ],
+                    [
+                        "17",
+                        "lcmp"
+                    ],
+                    [
+                        "18",
+                        "ifle"
+                    ],
+                    [
+                        "19",
+                        "126"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    87,
+                    99
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            87,
+                            99
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    88,
+                                    89
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    89,
+                                    90
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    90,
+                                    97
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            90,
+                                            97
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ForStatement",
+                                                "pos": [
+                                                    91,
+                                                    96
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            91,
+                                                            96
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "LocalVariableDeclaration",
+                                                                "pos": [
+                                                                    92,
+                                                                    93
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    93,
+                                                                    94
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    94,
+                                                                    95
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    99,
+                    101
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getN": {
+        "name": "getN",
+        "pos": [
+            107,
+            114
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    108,
+                    109
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/moment/VectorialCovariance.n:J"
+                    ],
+                    [
+                        "4",
+                        "lreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "clear": {
+        "name": "clear",
+        "pos": [
+            114,
+            121
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    115,
+                    116
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "lconst_0"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/stat/descriptive/moment/VectorialCovariance.n:J"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "getfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/stat/descriptive/moment/VectorialCovariance.sums:[D"
+                    ],
+                    [
+                        "9",
+                        "dconst_0"
+                    ],
+                    [
+                        "10",
+                        "invokestatic"
+                    ],
+                    [
+                        "11",
+                        "java/util/Arrays.fill:([DD)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    116,
+                    117
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "getfield"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/stat/descriptive/moment/VectorialCovariance.productsSums:[D"
+                    ],
+                    [
+                        "17",
+                        "dconst_0"
+                    ],
+                    [
+                        "18",
+                        "invokestatic"
+                    ],
+                    [
+                        "19",
+                        "java/util/Arrays.fill:([DD)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    117,
+                    118
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "21",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "hashCode": {
+        "name": "hashCode",
+        "pos": [
+            121,
+            133
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    123,
+                    124
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "bipush"
+                    ],
+                    [
+                        "1",
+                        "31"
+                    ],
+                    [
+                        "2",
+                        "istore_1"
+                    ],
+                    [
+                        "3",
+                        "iconst_1"
+                    ],
+                    [
+                        "4",
+                        "istore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    124,
+                    125
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "5",
+                        "bipush"
+                    ],
+                    [
+                        "6",
+                        "31"
+                    ],
+                    [
+                        "7",
+                        "iload_2"
+                    ],
+                    [
+                        "8",
+                        "imul"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/stat/descriptive/moment/VectorialCovariance.isBiasCorrected:Z"
+                    ],
+                    [
+                        "13",
+                        "ifeq"
+                    ],
+                    [
+                        "14",
+                        "9"
+                    ],
+                    [
+                        "16",
+                        "sipush"
+                    ],
+                    [
+                        "17",
+                        "1231"
+                    ],
+                    [
+                        "19",
+                        "goto"
+                    ],
+                    [
+                        "20",
+                        "6"
+                    ],
+                    [
+                        "22",
+                        "sipush"
+                    ],
+                    [
+                        "23",
+                        "1237"
+                    ],
+                    [
+                        "25",
+                        "iadd"
+                    ],
+                    [
+                        "26",
+                        "istore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    125,
+                    126
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "27",
+                        "bipush"
+                    ],
+                    [
+                        "28",
+                        "31"
+                    ],
+                    [
+                        "29",
+                        "iload_2"
+                    ],
+                    [
+                        "30",
+                        "imul"
+                    ],
+                    [
+                        "31",
+                        "aload_0"
+                    ],
+                    [
+                        "32",
+                        "getfield"
+                    ],
+                    [
+                        "33",
+                        "org/apache/commons/math3/stat/descriptive/moment/VectorialCovariance.n:J"
+                    ],
+                    [
+                        "35",
+                        "aload_0"
+                    ],
+                    [
+                        "36",
+                        "getfield"
+                    ],
+                    [
+                        "37",
+                        "org/apache/commons/math3/stat/descriptive/moment/VectorialCovariance.n:J"
+                    ],
+                    [
+                        "39",
+                        "bipush"
+                    ],
+                    [
+                        "40",
+                        "32"
+                    ],
+                    [
+                        "41",
+                        "lushr"
+                    ],
+                    [
+                        "42",
+                        "lxor"
+                    ],
+                    [
+                        "43",
+                        "l2i"
+                    ],
+                    [
+                        "44",
+                        "iadd"
+                    ],
+                    [
+                        "45",
+                        "istore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    126,
+                    127
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "46",
+                        "bipush"
+                    ],
+                    [
+                        "47",
+                        "31"
+                    ],
+                    [
+                        "48",
+                        "iload_2"
+                    ],
+                    [
+                        "49",
+                        "imul"
+                    ],
+                    [
+                        "50",
+                        "aload_0"
+                    ],
+                    [
+                        "51",
+                        "getfield"
+                    ],
+                    [
+                        "52",
+                        "org/apache/commons/math3/stat/descriptive/moment/VectorialCovariance.productsSums:[D"
+                    ],
+                    [
+                        "54",
+                        "invokestatic"
+                    ],
+                    [
+                        "55",
+                        "java/util/Arrays.hashCode:([D)I"
+                    ],
+                    [
+                        "57",
+                        "iadd"
+                    ],
+                    [
+                        "58",
+                        "istore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    127,
+                    128
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "59",
+                        "bipush"
+                    ],
+                    [
+                        "60",
+                        "31"
+                    ],
+                    [
+                        "61",
+                        "iload_2"
+                    ],
+                    [
+                        "62",
+                        "imul"
+                    ],
+                    [
+                        "63",
+                        "aload_0"
+                    ],
+                    [
+                        "64",
+                        "getfield"
+                    ],
+                    [
+                        "65",
+                        "org/apache/commons/math3/stat/descriptive/moment/VectorialCovariance.sums:[D"
+                    ],
+                    [
+                        "67",
+                        "invokestatic"
+                    ],
+                    [
+                        "68",
+                        "java/util/Arrays.hashCode:([D)I"
+                    ],
+                    [
+                        "70",
+                        "iadd"
+                    ],
+                    [
+                        "71",
+                        "istore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    128,
+                    129
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "72",
+                        "iload_2"
+                    ],
+                    [
+                        "73",
+                        "ireturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    129,
+                    130
+                ],
+                "children": []
+            }
+        ]
+    },
+    "equals": {
+        "name": "equals",
+        "pos": [
+            133,
+            157
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    135,
+                    138
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            135,
+                            138
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    136,
+                                    137
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    138,
+                    141
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            138,
+                            141
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    139,
+                                    140
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    141,
+                    142
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    142,
+                    145
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            142,
+                            145
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    143,
+                                    144
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    145,
+                    148
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            145,
+                            148
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    146,
+                                    147
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    148,
+                    151
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            148,
+                            151
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    149,
+                                    150
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    151,
+                    154
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            151,
+                            154
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    152,
+                                    153
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    154,
+                    155
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

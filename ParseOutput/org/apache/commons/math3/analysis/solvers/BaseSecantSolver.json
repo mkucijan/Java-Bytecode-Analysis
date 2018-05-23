@@ -1,0 +1,787 @@
+{
+    "solve": {
+        "name": "solve",
+        "pos": [
+            121,
+            133
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    124,
+                    125
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "aload_2"
+                    ],
+                    [
+                        "3",
+                        "dload_3"
+                    ],
+                    [
+                        "4",
+                        "dload"
+                    ],
+                    [
+                        "5",
+                        "#5"
+                    ],
+                    [
+                        "6",
+                        "dload"
+                    ],
+                    [
+                        "7",
+                        "#7"
+                    ],
+                    [
+                        "8",
+                        "getstatic"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/analysis/solvers/AllowedSolution.ANY_SIDE:Lorg/apache/commons/math3/analysis/solvers/AllowedSolution;"
+                    ],
+                    [
+                        "11",
+                        "invokevirtual"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/analysis/solvers/BaseSecantSolver.solve:(ILorg/apache/commons/math3/analysis/UnivariateFunction;DDDLorg/apache/commons/math3/analysis/solvers/AllowedSolution;)D"
+                    ],
+                    [
+                        "14",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "doSolve": {
+        "name": "doSolve",
+        "pos": [
+            133,
+            263
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    137,
+                    138
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/analysis/solvers/BaseSecantSolver.getMin:()D"
+                    ],
+                    [
+                        "4",
+                        "dstore_1"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/analysis/solvers/BaseSecantSolver.getMax:()D"
+                    ],
+                    [
+                        "9",
+                        "dstore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    138,
+                    139
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "dload_1"
+                    ],
+                    [
+                        "12",
+                        "invokevirtual"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/analysis/solvers/BaseSecantSolver.computeObjectiveValue:(D)D"
+                    ],
+                    [
+                        "15",
+                        "dstore"
+                    ],
+                    [
+                        "16",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    139,
+                    140
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "17",
+                        "aload_0"
+                    ],
+                    [
+                        "18",
+                        "dload_3"
+                    ],
+                    [
+                        "19",
+                        "invokevirtual"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/analysis/solvers/BaseSecantSolver.computeObjectiveValue:(D)D"
+                    ],
+                    [
+                        "22",
+                        "dstore"
+                    ],
+                    [
+                        "23",
+                        "#7"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    140,
+                    145
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "24",
+                        "dload"
+                    ],
+                    [
+                        "25",
+                        "#5"
+                    ],
+                    [
+                        "26",
+                        "dconst_0"
+                    ],
+                    [
+                        "27",
+                        "dcmpl"
+                    ],
+                    [
+                        "28",
+                        "ifne"
+                    ],
+                    [
+                        "29",
+                        "5"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    145,
+                    148
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            145,
+                            148
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    146,
+                                    147
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    148,
+                    153
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            148,
+                            153
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    149,
+                                    150
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    153,
+                    156
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    156,
+                    157
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    157,
+                    158
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    158,
+                    162
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    162,
+                    165
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    165,
+                    260
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            165,
+                            260
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    167,
+                                    168
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    168,
+                                    173
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    173,
+                                    178
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            173,
+                                            178
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    174,
+                                                    175
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    178,
+                                    205
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            178,
+                                            184
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    181,
+                                                    182
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    182,
+                                                    183
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    183,
+                                                    184
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            184,
+                                            205
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "SwitchStatement",
+                                                "pos": [
+                                                    185,
+                                                    203
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "StatementExpression",
+                                                        "pos": [
+                                                            187,
+                                                            188
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "BreakStatement",
+                                                        "pos": [
+                                                            188,
+                                                            189
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "StatementExpression",
+                                                        "pos": [
+                                                            190,
+                                                            191
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "BreakStatement",
+                                                        "pos": [
+                                                            191,
+                                                            192
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "IfStatement",
+                                                        "pos": [
+                                                            195,
+                                                            198
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "BlockStatement",
+                                                                "pos": [
+                                                                    195,
+                                                                    198
+                                                                ],
+                                                                "children": [
+                                                                    {
+                                                                        "name": "ThrowStatement",
+                                                                        "pos": [
+                                                                            196,
+                                                                            197
+                                                                        ],
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "name": "BreakStatement",
+                                                        "pos": [
+                                                            198,
+                                                            199
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "ThrowStatement",
+                                                        "pos": [
+                                                            201,
+                                                            202
+                                                        ],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    205,
+                                    206
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    206,
+                                    211
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    211,
+                                    242
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            211,
+                                            242
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "SwitchStatement",
+                                                "pos": [
+                                                    212,
+                                                    238
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "ReturnStatement",
+                                                        "pos": [
+                                                            214,
+                                                            215
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "IfStatement",
+                                                        "pos": [
+                                                            216,
+                                                            219
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "BlockStatement",
+                                                                "pos": [
+                                                                    216,
+                                                                    219
+                                                                ],
+                                                                "children": [
+                                                                    {
+                                                                        "name": "ReturnStatement",
+                                                                        "pos": [
+                                                                            217,
+                                                                            218
+                                                                        ],
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "name": "BreakStatement",
+                                                        "pos": [
+                                                            219,
+                                                            220
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "IfStatement",
+                                                        "pos": [
+                                                            221,
+                                                            224
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "BlockStatement",
+                                                                "pos": [
+                                                                    221,
+                                                                    224
+                                                                ],
+                                                                "children": [
+                                                                    {
+                                                                        "name": "ReturnStatement",
+                                                                        "pos": [
+                                                                            222,
+                                                                            223
+                                                                        ],
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "name": "BreakStatement",
+                                                        "pos": [
+                                                            224,
+                                                            225
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "IfStatement",
+                                                        "pos": [
+                                                            226,
+                                                            229
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "BlockStatement",
+                                                                "pos": [
+                                                                    226,
+                                                                    229
+                                                                ],
+                                                                "children": [
+                                                                    {
+                                                                        "name": "ReturnStatement",
+                                                                        "pos": [
+                                                                            227,
+                                                                            228
+                                                                        ],
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "name": "BreakStatement",
+                                                        "pos": [
+                                                            229,
+                                                            230
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "IfStatement",
+                                                        "pos": [
+                                                            231,
+                                                            234
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "BlockStatement",
+                                                                "pos": [
+                                                                    231,
+                                                                    234
+                                                                ],
+                                                                "children": [
+                                                                    {
+                                                                        "name": "ReturnStatement",
+                                                                        "pos": [
+                                                                            232,
+                                                                            233
+                                                                        ],
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "name": "BreakStatement",
+                                                        "pos": [
+                                                            234,
+                                                            235
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "ThrowStatement",
+                                                        "pos": [
+                                                            236,
+                                                            237
+                                                        ],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    242,
+                                    259
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            243,
+                                            259
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "SwitchStatement",
+                                                "pos": [
+                                                    244,
+                                                    258
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "ReturnStatement",
+                                                        "pos": [
+                                                            246,
+                                                            247
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "ReturnStatement",
+                                                        "pos": [
+                                                            248,
+                                                            249
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "ReturnStatement",
+                                                        "pos": [
+                                                            250,
+                                                            251
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "ReturnStatement",
+                                                        "pos": [
+                                                            252,
+                                                            253
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "ReturnStatement",
+                                                        "pos": [
+                                                            254,
+                                                            255
+                                                        ],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "name": "ThrowStatement",
+                                                        "pos": [
+                                                            256,
+                                                            257
+                                                        ],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

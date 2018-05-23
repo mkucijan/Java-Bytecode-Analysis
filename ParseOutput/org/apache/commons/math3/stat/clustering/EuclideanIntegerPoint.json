@@ -1,0 +1,424 @@
+{
+    "getPoint": {
+        "name": "getPoint",
+        "pos": [
+            54,
+            59
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    55,
+                    56
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/clustering/EuclideanIntegerPoint.point:[I"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "distanceFrom": {
+        "name": "distanceFrom",
+        "pos": [
+            59,
+            64
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    60,
+                    61
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/clustering/EuclideanIntegerPoint.point:[I"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/stat/clustering/EuclideanIntegerPoint.getPoint:()[I"
+                    ],
+                    [
+                        "8",
+                        "invokestatic"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/util/MathArrays.distance:([I[I)D"
+                    ],
+                    [
+                        "11",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "centroidOf": {
+        "name": "centroidOf",
+        "pos": [
+            64,
+            78
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    65,
+                    66
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/clustering/EuclideanIntegerPoint.getPoint:()[I"
+                    ],
+                    [
+                        "4",
+                        "arraylength"
+                    ],
+                    [
+                        "5",
+                        "newarray"
+                    ],
+                    [
+                        "6",
+                        "10"
+                    ],
+                    [
+                        "7",
+                        "astore_2"
+                    ],
+                    [
+                        "8",
+                        "aload_1"
+                    ],
+                    [
+                        "9",
+                        "invokeinterface"
+                    ],
+                    [
+                        "10",
+                        "java/util/Collection.java/util/Iterator"
+                    ],
+                    [
+                        "12",
+                        "0"
+                    ],
+                    [
+                        "14",
+                        "astore_3"
+                    ],
+                    [
+                        "15",
+                        "aload_3"
+                    ],
+                    [
+                        "16",
+                        "invokeinterface"
+                    ],
+                    [
+                        "17",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "19",
+                        "0"
+                    ],
+                    [
+                        "21",
+                        "ifeq"
+                    ],
+                    [
+                        "22",
+                        "48"
+                    ],
+                    [
+                        "24",
+                        "aload_3"
+                    ],
+                    [
+                        "25",
+                        "invokeinterface"
+                    ],
+                    [
+                        "26",
+                        "java/util/Iterator.org/apache/commons/math3/stat/clustering/EuclideanIntegerPoint"
+                    ],
+                    [
+                        "28",
+                        "0"
+                    ],
+                    [
+                        "30",
+                        "checkcast"
+                    ],
+                    [
+                        "31",
+                        "org/apache/commons/math3/stat/clustering/EuclideanIntegerPoint"
+                    ],
+                    [
+                        "33",
+                        "astore"
+                    ],
+                    [
+                        "34",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    66,
+                    71
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            66,
+                            71
+                        ],
+                        "children": [
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    67,
+                                    70
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            67,
+                                            70
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    68,
+                                                    69
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    71,
+                    74
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            71,
+                            74
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    72,
+                                    73
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    74,
+                    75
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "equals": {
+        "name": "equals",
+        "pos": [
+            78,
+            87
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    80,
+                    83
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            80,
+                            83
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    81,
+                                    82
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    83,
+                    84
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "hashCode": {
+        "name": "hashCode",
+        "pos": [
+            87,
+            96
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    89,
+                    90
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/clustering/EuclideanIntegerPoint.point:[I"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "java/util/Arrays.hashCode:([I)I"
+                    ],
+                    [
+                        "7",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "toString": {
+        "name": "toString",
+        "pos": [
+            96,
+            101
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    98,
+                    99
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/clustering/EuclideanIntegerPoint.point:[I"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "java/util/Arrays.toString:([I)Ljava/lang/String;"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

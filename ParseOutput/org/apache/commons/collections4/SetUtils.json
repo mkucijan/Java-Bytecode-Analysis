@@ -1,0 +1,1114 @@
+{
+    "emptySet": {
+        "name": "emptySet",
+        "pos": [
+            55,
+            63
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    56,
+                    57
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "invokestatic"
+                    ],
+                    [
+                        "1",
+                        "java/util/Collections.emptySet:()Ljava/util/Set;"
+                    ],
+                    [
+                        "3",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "emptySortedSet": {
+        "name": "emptySortedSet",
+        "pos": [
+            72,
+            80
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    74,
+                    75
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "getstatic"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/SetUtils.EMPTY_SORTED_SET:Ljava/util/SortedSet;"
+                    ],
+                    [
+                        "3",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "emptyIfNull": {
+        "name": "emptyIfNull",
+        "pos": [
+            92,
+            124
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    93,
+                    94
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "ifnonnull"
+                    ],
+                    [
+                        "2",
+                        "9"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "java/util/Collections.emptySet:()Ljava/util/Set;"
+                    ],
+                    [
+                        "7",
+                        "goto"
+                    ],
+                    [
+                        "8",
+                        "4"
+                    ],
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isEqualSet": {
+        "name": "isEqualSet",
+        "pos": [
+            124,
+            148
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    125,
+                    128
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            125,
+                            128
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    126,
+                                    127
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    128,
+                    132
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            128,
+                            132
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    129,
+                                    130
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    132,
+                    133
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "hashCodeForSet": {
+        "name": "hashCodeForSet",
+        "pos": [
+            148,
+            181
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    149,
+                    153
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            149,
+                            153
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    150,
+                                    151
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    153,
+                    154
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    154,
+                    159
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            154,
+                            159
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    155,
+                                    158
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            155,
+                                            158
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    156,
+                                                    157
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    159,
+                    160
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "newIdentityHashSet": {
+        "name": "newIdentityHashSet",
+        "pos": [
+            181,
+            210
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    182,
+                    183
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/util/IdentityHashMap"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "invokespecial"
+                    ],
+                    [
+                        "5",
+                        "java/util/IdentityHashMap.<init>:()V"
+                    ],
+                    [
+                        "7",
+                        "invokestatic"
+                    ],
+                    [
+                        "8",
+                        "java/util/Collections.newSetFromMap:(Ljava/util/Map;)Ljava/util/Set;"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "synchronizedSet": {
+        "name": "synchronizedSet",
+        "pos": [
+            210,
+            224
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    211,
+                    212
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "java/util/Collections.synchronizedSet:(Ljava/util/Set;)Ljava/util/Set;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "unmodifiableSet": {
+        "name": "unmodifiableSet",
+        "pos": [
+            224,
+            242
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    225,
+                    226
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/set/UnmodifiableSet.unmodifiableSet:(Ljava/util/Set;)Ljava/util/Set;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "predicatedSet": {
+        "name": "predicatedSet",
+        "pos": [
+            242,
+            262
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    243,
+                    244
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/set/PredicatedSet.predicatedSet:(Ljava/util/Set;Lorg/apache/commons/collections4/Predicate;)Lorg/apache/commons/collections4/set/PredicatedSet;"
+                    ],
+                    [
+                        "5",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "transformedSet": {
+        "name": "transformedSet",
+        "pos": [
+            262,
+            279
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    264,
+                    265
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/set/TransformedSet.transformingSet:(Ljava/util/Set;Lorg/apache/commons/collections4/Transformer;)Lorg/apache/commons/collections4/set/TransformedSet;"
+                    ],
+                    [
+                        "5",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "orderedSet": {
+        "name": "orderedSet",
+        "pos": [
+            279,
+            308
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    280,
+                    281
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/set/ListOrderedSet.listOrderedSet:(Ljava/util/Set;)Lorg/apache/commons/collections4/set/ListOrderedSet;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "synchronizedSortedSet": {
+        "name": "synchronizedSortedSet",
+        "pos": [
+            308,
+            322
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    309,
+                    310
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "java/util/Collections.synchronizedSortedSet:(Ljava/util/SortedSet;)Ljava/util/SortedSet;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "unmodifiableSortedSet": {
+        "name": "unmodifiableSortedSet",
+        "pos": [
+            322,
+            340
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    323,
+                    324
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/set/UnmodifiableSortedSet.unmodifiableSortedSet:(Ljava/util/SortedSet;)Ljava/util/SortedSet;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "predicatedSortedSet": {
+        "name": "predicatedSortedSet",
+        "pos": [
+            340,
+            361
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    342,
+                    343
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/set/PredicatedSortedSet.predicatedSortedSet:(Ljava/util/SortedSet;Lorg/apache/commons/collections4/Predicate;)Lorg/apache/commons/collections4/set/PredicatedSortedSet;"
+                    ],
+                    [
+                        "5",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "transformedSortedSet": {
+        "name": "transformedSortedSet",
+        "pos": [
+            361,
+            379
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    363,
+                    364
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/set/TransformedSortedSet.transformingSortedSet:(Ljava/util/SortedSet;Lorg/apache/commons/collections4/Transformer;)Lorg/apache/commons/collections4/set/TransformedSortedSet;"
+                    ],
+                    [
+                        "5",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "unmodifiableNavigableSet": {
+        "name": "unmodifiableNavigableSet",
+        "pos": [
+            379,
+            398
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    380,
+                    381
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/set/UnmodifiableNavigableSet.unmodifiableNavigableSet:(Ljava/util/NavigableSet;)Ljava/util/NavigableSet;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "predicatedNavigableSet": {
+        "name": "predicatedNavigableSet",
+        "pos": [
+            398,
+            420
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    400,
+                    401
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/set/PredicatedNavigableSet.predicatedNavigableSet:(Ljava/util/NavigableSet;Lorg/apache/commons/collections4/Predicate;)Lorg/apache/commons/collections4/set/PredicatedNavigableSet;"
+                    ],
+                    [
+                        "5",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "transformedNavigableSet": {
+        "name": "transformedNavigableSet",
+        "pos": [
+            420,
+            441
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    422,
+                    423
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/set/TransformedNavigableSet.transformingNavigableSet:(Ljava/util/NavigableSet;Lorg/apache/commons/collections4/Transformer;)Lorg/apache/commons/collections4/set/TransformedNavigableSet;"
+                    ],
+                    [
+                        "5",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "union": {
+        "name": "union",
+        "pos": [
+            441,
+            485
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    442,
+                    446
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            442,
+                            446
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    443,
+                                    444
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    446,
+                    448
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    448,
+                    469
+                ],
+                "children": [
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            451,
+                            452
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            456,
+                            457
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            461,
+                            462
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            466,
+                            467
+                        ],
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "difference": {
+        "name": "difference",
+        "pos": [
+            485,
+            523
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    486,
+                    490
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            486,
+                            490
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    487,
+                                    488
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    490,
+                    497
+                ],
+                "children": [
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            493,
+                            494
+                        ],
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    497,
+                    508
+                ],
+                "children": [
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            500,
+                            501
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            505,
+                            506
+                        ],
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "intersection": {
+        "name": "intersection",
+        "pos": [
+            523,
+            564
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    524,
+                    528
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            524,
+                            528
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    525,
+                                    526
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    528,
+                    535
+                ],
+                "children": [
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            531,
+                            532
+                        ],
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    535,
+                    546
+                ],
+                "children": [
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            538,
+                            539
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            543,
+                            544
+                        ],
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "disjunction": {
+        "name": "disjunction",
+        "pos": [
+            564,
+            605
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    565,
+                    569
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            565,
+                            569
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    566,
+                                    567
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    569,
+                    570
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    570,
+                    572
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    572,
+                    593
+                ],
+                "children": [
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            575,
+                            576
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            580,
+                            581
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            585,
+                            586
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            590,
+                            591
+                        ],
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,562 @@
+{
+    "increment": {
+        "name": "increment",
+        "pos": [
+            168,
+            178
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    170,
+                    173
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            170,
+                            173
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    171,
+                                    172
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "getResult": {
+        "name": "getResult",
+        "pos": [
+            178,
+            196
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    180,
+                    191
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            180,
+                            182
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    181,
+                                    182
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "IfStatement",
+                        "pos": [
+                            182,
+                            191
+                        ],
+                        "children": [
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    182,
+                                    184
+                                ],
+                                "children": [
+                                    {
+                                        "name": "ReturnStatement",
+                                        "pos": [
+                                            183,
+                                            184
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    184,
+                                    191
+                                ],
+                                "children": [
+                                    {
+                                        "name": "IfStatement",
+                                        "pos": [
+                                            185,
+                                            190
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "BlockStatement",
+                                                "pos": [
+                                                    185,
+                                                    187
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "ReturnStatement",
+                                                        "pos": [
+                                                            186,
+                                                            187
+                                                        ],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "BlockStatement",
+                                                "pos": [
+                                                    187,
+                                                    190
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "ReturnStatement",
+                                                        "pos": [
+                                                            188,
+                                                            189
+                                                        ],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "getN": {
+        "name": "getN",
+        "pos": [
+            196,
+            203
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    197,
+                    198
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance.moment:Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/stat/descriptive/moment/SecondMoment.getN:()J"
+                    ],
+                    [
+                        "7",
+                        "lreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "clear": {
+        "name": "clear",
+        "pos": [
+            203,
+            226
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    205,
+                    208
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            205,
+                            208
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    206,
+                                    207
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "evaluate": {
+        "name": "evaluate",
+        "pos": [
+            580,
+            588
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    582,
+                    583
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "aload_2"
+                    ],
+                    [
+                        "3",
+                        "dload_3"
+                    ],
+                    [
+                        "4",
+                        "iconst_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "arraylength"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance.evaluate:([D[DDII)D"
+                    ],
+                    [
+                        "10",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isBiasCorrected": {
+        "name": "isBiasCorrected",
+        "pos": [
+            588,
+            595
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    589,
+                    590
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance.isBiasCorrected:Z"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setBiasCorrected": {
+        "name": "setBiasCorrected",
+        "pos": [
+            595,
+            602
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    596,
+                    597
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance.isBiasCorrected:Z"
+                    ],
+                    [
+                        "5",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "copy": {
+        "name": "copy",
+        "pos": [
+            618,
+            627
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    620,
+                    621
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    621,
+                    622
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "8",
+                        "aload_1"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance.getDataRef:()[D"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance.setData:([D)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    622,
+                    623
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "aload_1"
+                    ],
+                    [
+                        "17",
+                        "aload_0"
+                    ],
+                    [
+                        "18",
+                        "getfield"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance.moment:Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ],
+                    [
+                        "21",
+                        "invokevirtual"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/stat/descriptive/moment/SecondMoment.copy:()Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ],
+                    [
+                        "24",
+                        "putfield"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance.moment:Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    623,
+                    624
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "27",
+                        "aload_1"
+                    ],
+                    [
+                        "28",
+                        "aload_0"
+                    ],
+                    [
+                        "29",
+                        "getfield"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance.isBiasCorrected:Z"
+                    ],
+                    [
+                        "32",
+                        "putfield"
+                    ],
+                    [
+                        "33",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance.isBiasCorrected:Z"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    624,
+                    625
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "35",
+                        "aload_1"
+                    ],
+                    [
+                        "36",
+                        "aload_0"
+                    ],
+                    [
+                        "37",
+                        "getfield"
+                    ],
+                    [
+                        "38",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance.incMoment:Z"
+                    ],
+                    [
+                        "40",
+                        "putfield"
+                    ],
+                    [
+                        "41",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance.incMoment:Z"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    625,
+                    626
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "43",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

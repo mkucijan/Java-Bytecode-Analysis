@@ -1,0 +1,521 @@
+{
+    "getStart": {
+        "name": "getStart",
+        "pos": [
+            50,
+            57
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    51,
+                    52
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Segment.start:Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getEnd": {
+        "name": "getEnd",
+        "pos": [
+            57,
+            64
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    58,
+                    59
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Segment.end:Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getLine": {
+        "name": "getLine",
+        "pos": [
+            64,
+            83
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    65,
+                    66
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Segment.line:Lorg/apache/commons/math3/geometry/euclidean/twod/Line;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "distance": {
+        "name": "distance",
+        "pos": [
+            83,
+            112
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    84,
+                    85
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Segment.end:Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Vector2D.getX:()D"
+                    ],
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "getfield"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Segment.start:Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;"
+                    ],
+                    [
+                        "11",
+                        "invokevirtual"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Vector2D.getX:()D"
+                    ],
+                    [
+                        "14",
+                        "dsub"
+                    ],
+                    [
+                        "15",
+                        "dstore_2"
+                    ],
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "getfield"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Segment.end:Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;"
+                    ],
+                    [
+                        "20",
+                        "invokevirtual"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Vector2D.getY:()D"
+                    ],
+                    [
+                        "23",
+                        "aload_0"
+                    ],
+                    [
+                        "24",
+                        "getfield"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Segment.start:Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;"
+                    ],
+                    [
+                        "27",
+                        "invokevirtual"
+                    ],
+                    [
+                        "28",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Vector2D.getY:()D"
+                    ],
+                    [
+                        "30",
+                        "dsub"
+                    ],
+                    [
+                        "31",
+                        "dstore"
+                    ],
+                    [
+                        "32",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    85,
+                    87
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "33",
+                        "aload_1"
+                    ],
+                    [
+                        "34",
+                        "invokevirtual"
+                    ],
+                    [
+                        "35",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Vector2D.getX:()D"
+                    ],
+                    [
+                        "37",
+                        "aload_0"
+                    ],
+                    [
+                        "38",
+                        "getfield"
+                    ],
+                    [
+                        "39",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Segment.start:Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;"
+                    ],
+                    [
+                        "41",
+                        "invokevirtual"
+                    ],
+                    [
+                        "42",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Vector2D.getX:()D"
+                    ],
+                    [
+                        "44",
+                        "dsub"
+                    ],
+                    [
+                        "45",
+                        "dload_2"
+                    ],
+                    [
+                        "46",
+                        "dmul"
+                    ],
+                    [
+                        "47",
+                        "aload_1"
+                    ],
+                    [
+                        "48",
+                        "invokevirtual"
+                    ],
+                    [
+                        "49",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Vector2D.getY:()D"
+                    ],
+                    [
+                        "51",
+                        "aload_0"
+                    ],
+                    [
+                        "52",
+                        "getfield"
+                    ],
+                    [
+                        "53",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Segment.start:Lorg/apache/commons/math3/geometry/euclidean/twod/Vector2D;"
+                    ],
+                    [
+                        "55",
+                        "invokevirtual"
+                    ],
+                    [
+                        "56",
+                        "org/apache/commons/math3/geometry/euclidean/twod/Vector2D.getY:()D"
+                    ],
+                    [
+                        "58",
+                        "dsub"
+                    ],
+                    [
+                        "59",
+                        "dload"
+                    ],
+                    [
+                        "60",
+                        "#4"
+                    ],
+                    [
+                        "61",
+                        "dmul"
+                    ],
+                    [
+                        "62",
+                        "dadd"
+                    ],
+                    [
+                        "63",
+                        "dload_2"
+                    ],
+                    [
+                        "64",
+                        "dload_2"
+                    ],
+                    [
+                        "65",
+                        "dmul"
+                    ],
+                    [
+                        "66",
+                        "dload"
+                    ],
+                    [
+                        "67",
+                        "#4"
+                    ],
+                    [
+                        "68",
+                        "dload"
+                    ],
+                    [
+                        "69",
+                        "#4"
+                    ],
+                    [
+                        "70",
+                        "dmul"
+                    ],
+                    [
+                        "71",
+                        "dadd"
+                    ],
+                    [
+                        "72",
+                        "ddiv"
+                    ],
+                    [
+                        "73",
+                        "dstore"
+                    ],
+                    [
+                        "74",
+                        "#6"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    87,
+                    97
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "75",
+                        "dload"
+                    ],
+                    [
+                        "76",
+                        "#6"
+                    ],
+                    [
+                        "77",
+                        "dconst_0"
+                    ],
+                    [
+                        "78",
+                        "dcmpg"
+                    ],
+                    [
+                        "79",
+                        "iflt"
+                    ],
+                    [
+                        "80",
+                        "10"
+                    ],
+                    [
+                        "82",
+                        "dload"
+                    ],
+                    [
+                        "83",
+                        "#6"
+                    ],
+                    [
+                        "84",
+                        "dconst_1"
+                    ],
+                    [
+                        "85",
+                        "dcmpl"
+                    ],
+                    [
+                        "86",
+                        "ifle"
+                    ],
+                    [
+                        "87",
+                        "31"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    97,
+                    111
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            97,
+                            103
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    98,
+                                    99
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    99,
+                                    101
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    101,
+                                    102
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            103,
+                            111
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    105,
+                                    106
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    106,
+                                    108
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    108,
+                                    109
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    109,
+                                    110
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

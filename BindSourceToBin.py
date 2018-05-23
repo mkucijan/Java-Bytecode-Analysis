@@ -2,29 +2,32 @@ import argparse
 import json
 import subprocess
 import sys
-from glob import glob
-import os,errno
+import os
+import errno
 import shutil
 import re
 
+from glob import glob
+
 from JavaClassParser.Parser import Parser
 
-keywords = [
+
+KEYWORDS = [
     'if ',
     'else ',
     'while',
-    'for',
-    'switch'
+    'for'
+#    'switch'
 ]
 
-reg = [re.compile('\W*'+keyword+'\W\W*') for keyword in keywords]
+REG = [re.compile('\W*'+keyword+'\W\W*') for keyword in KEYWORDS]
 '''
 Naive method for binding conditional expresions with with its bytecode.
-It finds the keywords in the source and includes all bytecode generated on that line
+It finds the KEYWORDS in the source and includes all bytecode generated on that line
 and in the parentheses of the expression. It uses lineNumberTable attribute from the
 binary file parsed with JavaClassParser.
 First class defined by number 0 represents bytecode not belonging to any conditional
-statement.
+or loop statement.
 '''
 def bindCode(class_file, source):
     parser = Parser(class_file)
@@ -70,8 +73,8 @@ def bindCode(class_file, source):
                     numEmbending +=  diff
                     numEmbending = max(0,numEmbending)
                     added = False
-                    for i in range(len(keywords)):
-                        if reg[i].match(currentLine):
+                    for i in range(len(KEYWORDS)):
+                        if REG[i].match(currentLine):
                             embendingType.append(i+1)
                             added = True
                             embendingLayer.append(numEmbending)
@@ -104,10 +107,10 @@ def bindCode(class_file, source):
                     temp_Type = currentType
                     currentType = jump_candidates[jump_index]
             
-            methodLines[byteIndex] = (bytecode, embendingLayer[-1], currentType)
+            methodLines[byteIndex] = (bytecode, len(embendingLayer)-1, currentType)
             offset = 1
             if 'wide' in instruction.mnemonic:
-                methodLines[byteIndex+offset] = (instruction.opcode.getMnemonic(), embendingLayer[-1], currentType)
+                methodLines[byteIndex+offset] = (instruction.opcode.getMnemonic(), len(embendingLayer)-1, currentType)
                 offset += 1
 
             if instruction.args:
@@ -121,7 +124,7 @@ def bindCode(class_file, source):
                             arg = frm.format(*arg)
                         else:
                             arg = frm.format(arg)
-                    methodLines[byteIndex+offset] =  (arg,embendingLayer[-1], currentType) 
+                    methodLines[byteIndex+offset] =  (arg,len(embendingLayer)-1, currentType) 
                     offset += size
             if temp_Type:
                 currentType = temp_Type
@@ -151,6 +154,7 @@ def main():
     parser.add_argument("-r", "--remove", action="store_true")
     parser.add_argument("-o", "--output", nargs='?', default=sys.path[0]+'/output', 
                         help="Path to output directory. By default in output in current directory of the script.")
+    parser.add_argument("-c", "--compile", action="store_false")
     args = parser.parse_args()
 
     class_path = args.classpath
@@ -175,13 +179,14 @@ def main():
         java_files = glob(class_path+'/**/*.java',recursive=True)
 
 
-    compileCommand = "javac -cp " + class_path + " -d "+ save_class_directory + " -g " + \
-                     ' '.join(java_files) 
-    process = subprocess.Popen(compileCommand.split(), stdout=subprocess.PIPE)
-    output, error = process.communicate()
-    if process.returncode != 0: 
-        print("javac failed %d %s %s" % (process.returncode, output, error))
-    output = output.decode('utf-8')
+    if args.compile:
+        compileCommand = "javac -cp " + class_path + " -d "+ save_class_directory + " -g " + \
+                        ' '.join(java_files) 
+        process = subprocess.Popen(compileCommand.split(), stdout=subprocess.PIPE)
+        output, error = process.communicate()
+        if process.returncode != 0: 
+            print("javac failed %d %s %s" % (process.returncode, output, error))
+        output = output.decode('utf-8')
 
     class_files=glob(save_class_directory+"/**",recursive=True)
     for class_file in class_files:

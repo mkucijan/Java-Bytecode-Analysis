@@ -1,0 +1,343 @@
+{
+    "getLowerBound": {
+        "name": "getLowerBound",
+        "pos": [
+            66,
+            73
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    67,
+                    68
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/interval/ConfidenceInterval.lowerBound:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getUpperBound": {
+        "name": "getUpperBound",
+        "pos": [
+            73,
+            81
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    74,
+                    75
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/interval/ConfidenceInterval.upperBound:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getConfidenceLevel": {
+        "name": "getConfidenceLevel",
+        "pos": [
+            81,
+            88
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    82,
+                    83
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/interval/ConfidenceInterval.confidenceLevel:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "toString": {
+        "name": "toString",
+        "pos": [
+            88,
+            101
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    90,
+                    91
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/lang/StringBuilder"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "invokespecial"
+                    ],
+                    [
+                        "5",
+                        "java/lang/StringBuilder.<init>:()V"
+                    ],
+                    [
+                        "7",
+                        "ldc"
+                    ],
+                    [
+                        "8",
+                        "["
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "getfield"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/stat/interval/ConfidenceInterval.lowerBound:D"
+                    ],
+                    [
+                        "16",
+                        "invokevirtual"
+                    ],
+                    [
+                        "17",
+                        "java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "19",
+                        "ldc"
+                    ],
+                    [
+                        "20",
+                        ";"
+                    ],
+                    [
+                        "21",
+                        "invokevirtual"
+                    ],
+                    [
+                        "22",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "24",
+                        "aload_0"
+                    ],
+                    [
+                        "25",
+                        "getfield"
+                    ],
+                    [
+                        "26",
+                        "org/apache/commons/math3/stat/interval/ConfidenceInterval.upperBound:D"
+                    ],
+                    [
+                        "28",
+                        "invokevirtual"
+                    ],
+                    [
+                        "29",
+                        "java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "31",
+                        "ldc"
+                    ],
+                    [
+                        "32",
+                        "] (confidence level:"
+                    ],
+                    [
+                        "33",
+                        "invokevirtual"
+                    ],
+                    [
+                        "34",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "36",
+                        "aload_0"
+                    ],
+                    [
+                        "37",
+                        "getfield"
+                    ],
+                    [
+                        "38",
+                        "org/apache/commons/math3/stat/interval/ConfidenceInterval.confidenceLevel:D"
+                    ],
+                    [
+                        "40",
+                        "invokevirtual"
+                    ],
+                    [
+                        "41",
+                        "java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "43",
+                        "ldc"
+                    ],
+                    [
+                        "44",
+                        ")"
+                    ],
+                    [
+                        "45",
+                        "invokevirtual"
+                    ],
+                    [
+                        "46",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "48",
+                        "invokevirtual"
+                    ],
+                    [
+                        "49",
+                        "java/lang/StringBuilder.toString:()Ljava/lang/String;"
+                    ],
+                    [
+                        "51",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "checkParameters": {
+        "name": "checkParameters",
+        "pos": [
+            101,
+            109
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    102,
+                    105
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            102,
+                            105
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    103,
+                                    104
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    105,
+                    108
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            105,
+                            108
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    106,
+                                    107
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

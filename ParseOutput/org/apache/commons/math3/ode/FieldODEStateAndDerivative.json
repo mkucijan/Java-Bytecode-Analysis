@@ -1,0 +1,168 @@
+{
+    "getDerivative": {
+        "name": "getDerivative",
+        "pos": [
+            68,
+            78
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    69,
+                    70
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/FieldODEStateAndDerivative.derivative:[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "[Lorg/apache/commons/math3/RealFieldElement;.clone:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "checkcast"
+                    ],
+                    [
+                        "8",
+                        "[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSecondaryDerivative": {
+        "name": "getSecondaryDerivative",
+        "pos": [
+            78,
+            82
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    79,
+                    80
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_1"
+                    ],
+                    [
+                        "1",
+                        "ifne"
+                    ],
+                    [
+                        "2",
+                        "16"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/ode/FieldODEStateAndDerivative.derivative:[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "[Lorg/apache/commons/math3/RealFieldElement;.clone:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "11",
+                        "checkcast"
+                    ],
+                    [
+                        "12",
+                        "[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "14",
+                        "goto"
+                    ],
+                    [
+                        "15",
+                        "17"
+                    ],
+                    [
+                        "17",
+                        "aload_0"
+                    ],
+                    [
+                        "18",
+                        "getfield"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/ode/FieldODEStateAndDerivative.secondaryDerivative:[[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "21",
+                        "iload_1"
+                    ],
+                    [
+                        "22",
+                        "iconst_1"
+                    ],
+                    [
+                        "23",
+                        "isub"
+                    ],
+                    [
+                        "24",
+                        "aaload"
+                    ],
+                    [
+                        "25",
+                        "invokevirtual"
+                    ],
+                    [
+                        "26",
+                        "[Lorg/apache/commons/math3/RealFieldElement;.clone:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "28",
+                        "checkcast"
+                    ],
+                    [
+                        "29",
+                        "[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "31",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

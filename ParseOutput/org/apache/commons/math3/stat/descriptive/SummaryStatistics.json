@@ -1,0 +1,4835 @@
+{
+    "getSummary": {
+        "name": "getSummary",
+        "pos": [
+            140,
+            149
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    141,
+                    143
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/stat/descriptive/StatisticalSummaryValues"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getMean:()D"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getVariance:()D"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getN:()J"
+                    ],
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "invokevirtual"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getMax:()D"
+                    ],
+                    [
+                        "20",
+                        "aload_0"
+                    ],
+                    [
+                        "21",
+                        "invokevirtual"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getMin:()D"
+                    ],
+                    [
+                        "24",
+                        "aload_0"
+                    ],
+                    [
+                        "25",
+                        "invokevirtual"
+                    ],
+                    [
+                        "26",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getSum:()D"
+                    ],
+                    [
+                        "28",
+                        "invokespecial"
+                    ],
+                    [
+                        "29",
+                        "org/apache/commons/math3/stat/descriptive/StatisticalSummaryValues.<init>:(DDJDDD)V"
+                    ],
+                    [
+                        "31",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "addValue": {
+        "name": "addValue",
+        "pos": [
+            149,
+            174
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    150,
+                    151
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.getResult:()D"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "getfield"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumsqImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "14",
+                        "dload_1"
+                    ],
+                    [
+                        "15",
+                        "invokeinterface"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.getResult:()D"
+                    ],
+                    [
+                        "18",
+                        "0"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    151,
+                    152
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "20",
+                        "aload_0"
+                    ],
+                    [
+                        "21",
+                        "getfield"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.minImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "24",
+                        "dload_1"
+                    ],
+                    [
+                        "25",
+                        "invokeinterface"
+                    ],
+                    [
+                        "26",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.getResult:()D"
+                    ],
+                    [
+                        "28",
+                        "0"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    152,
+                    153
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "30",
+                        "aload_0"
+                    ],
+                    [
+                        "31",
+                        "getfield"
+                    ],
+                    [
+                        "32",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.maxImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "34",
+                        "dload_1"
+                    ],
+                    [
+                        "35",
+                        "invokeinterface"
+                    ],
+                    [
+                        "36",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.getResult:()D"
+                    ],
+                    [
+                        "38",
+                        "0"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    153,
+                    154
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "40",
+                        "aload_0"
+                    ],
+                    [
+                        "41",
+                        "getfield"
+                    ],
+                    [
+                        "42",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumLogImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "44",
+                        "dload_1"
+                    ],
+                    [
+                        "45",
+                        "invokeinterface"
+                    ],
+                    [
+                        "46",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.getResult:()D"
+                    ],
+                    [
+                        "48",
+                        "0"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    154,
+                    155
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "50",
+                        "aload_0"
+                    ],
+                    [
+                        "51",
+                        "getfield"
+                    ],
+                    [
+                        "52",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.secondMoment:Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ],
+                    [
+                        "54",
+                        "dload_1"
+                    ],
+                    [
+                        "55",
+                        "invokevirtual"
+                    ],
+                    [
+                        "56",
+                        "org/apache/commons/math3/stat/descriptive/moment/SecondMoment.increment:(D)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    155,
+                    158
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "58",
+                        "aload_0"
+                    ],
+                    [
+                        "59",
+                        "getfield"
+                    ],
+                    [
+                        "60",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.meanImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "62",
+                        "aload_0"
+                    ],
+                    [
+                        "63",
+                        "getfield"
+                    ],
+                    [
+                        "64",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.mean:Lorg/apache/commons/math3/stat/descriptive/moment/Mean;"
+                    ],
+                    [
+                        "66",
+                        "if_acmpeq"
+                    ],
+                    [
+                        "67",
+                        "13"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    158,
+                    161
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            158,
+                            161
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    159,
+                                    160
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    161,
+                    164
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            161,
+                            164
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    162,
+                                    163
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    164,
+                    167
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            164,
+                            167
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    165,
+                                    166
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    167,
+                    168
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getN": {
+        "name": "getN",
+        "pos": [
+            174,
+            182
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    175,
+                    176
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.n:J"
+                    ],
+                    [
+                        "4",
+                        "lreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSum": {
+        "name": "getSum",
+        "pos": [
+            182,
+            193
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    183,
+                    184
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.java/lang/Double"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSumsq": {
+        "name": "getSumsq",
+        "pos": [
+            193,
+            204
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    194,
+                    195
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumsqImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.java/lang/Double"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getMean": {
+        "name": "getMean",
+        "pos": [
+            204,
+            215
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    205,
+                    206
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.meanImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.java/lang/Double"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getStandardDeviation": {
+        "name": "getStandardDeviation",
+        "pos": [
+            215,
+            234
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    216,
+                    217
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "ldc2_w"
+                    ],
+                    [
+                        "1",
+                        "nan"
+                    ],
+                    [
+                        "3",
+                        "dstore_1"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getN:()J"
+                    ],
+                    [
+                        "8",
+                        "lconst_0"
+                    ],
+                    [
+                        "9",
+                        "lcmp"
+                    ],
+                    [
+                        "10",
+                        "ifle"
+                    ],
+                    [
+                        "11",
+                        "25"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    217,
+                    224
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            217,
+                            224
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    218,
+                                    223
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            218,
+                                            220
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    219,
+                                                    220
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            220,
+                                            223
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    221,
+                                                    222
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    224,
+                    225
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getQuadraticMean": {
+        "name": "getQuadraticMean",
+        "pos": [
+            234,
+            250
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    235,
+                    236
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getN:()J"
+                    ],
+                    [
+                        "4",
+                        "lstore_1"
+                    ],
+                    [
+                        "5",
+                        "lload_1"
+                    ],
+                    [
+                        "6",
+                        "lconst_0"
+                    ],
+                    [
+                        "7",
+                        "lcmp"
+                    ],
+                    [
+                        "8",
+                        "ifle"
+                    ],
+                    [
+                        "9",
+                        "16"
+                    ],
+                    [
+                        "11",
+                        "aload_0"
+                    ],
+                    [
+                        "12",
+                        "invokevirtual"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getSumsq:()D"
+                    ],
+                    [
+                        "15",
+                        "lload_1"
+                    ],
+                    [
+                        "16",
+                        "l2d"
+                    ],
+                    [
+                        "17",
+                        "ddiv"
+                    ],
+                    [
+                        "18",
+                        "invokestatic"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/util/FastMath.sqrt:(D)D"
+                    ],
+                    [
+                        "21",
+                        "goto"
+                    ],
+                    [
+                        "22",
+                        "6"
+                    ],
+                    [
+                        "24",
+                        "ldc2_w"
+                    ],
+                    [
+                        "25",
+                        "nan"
+                    ],
+                    [
+                        "27",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    236,
+                    237
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getVariance": {
+        "name": "getVariance",
+        "pos": [
+            250,
+            262
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    251,
+                    252
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.varianceImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.java/lang/Double"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getPopulationVariance": {
+        "name": "getPopulationVariance",
+        "pos": [
+            262,
+            275
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    263,
+                    264
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.secondMoment:Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ],
+                    [
+                        "8",
+                        "invokespecial"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance.<init>:(Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;)V"
+                    ],
+                    [
+                        "11",
+                        "astore_1"
+                    ],
+                    [
+                        "12",
+                        "aload_1"
+                    ],
+                    [
+                        "13",
+                        "iconst_0"
+                    ],
+                    [
+                        "14",
+                        "invokevirtual"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance.setBiasCorrected:(Z)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    264,
+                    265
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "17",
+                        "aload_1"
+                    ],
+                    [
+                        "18",
+                        "invokevirtual"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance.getResult:()D"
+                    ],
+                    [
+                        "21",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    265,
+                    266
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getMax": {
+        "name": "getMax",
+        "pos": [
+            275,
+            286
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    276,
+                    277
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.maxImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.java/lang/Double"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getMin": {
+        "name": "getMin",
+        "pos": [
+            286,
+            297
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    287,
+                    288
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.minImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.java/lang/Double"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getGeometricMean": {
+        "name": "getGeometricMean",
+        "pos": [
+            297,
+            309
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    298,
+                    299
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.geoMeanImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.java/lang/Double"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSumOfLogs": {
+        "name": "getSumOfLogs",
+        "pos": [
+            309,
+            324
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    310,
+                    311
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumLogImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.java/lang/Double"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSecondMoment": {
+        "name": "getSecondMoment",
+        "pos": [
+            324,
+            334
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    325,
+                    326
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.secondMoment:Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/stat/descriptive/moment/SecondMoment.getResult:()D"
+                    ],
+                    [
+                        "7",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "toString": {
+        "name": "toString",
+        "pos": [
+            334,
+            359
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    336,
+                    337
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/lang/StringBuilder"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "invokespecial"
+                    ],
+                    [
+                        "5",
+                        "java/lang/StringBuilder.<init>:()V"
+                    ],
+                    [
+                        "7",
+                        "astore_1"
+                    ],
+                    [
+                        "8",
+                        "ldc"
+                    ],
+                    [
+                        "9",
+                        "\n"
+                    ],
+                    [
+                        "10",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    337,
+                    338
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "11",
+                        "aload_1"
+                    ],
+                    [
+                        "12",
+                        "ldc"
+                    ],
+                    [
+                        "13",
+                        "SummaryStatistics:"
+                    ],
+                    [
+                        "14",
+                        "invokevirtual"
+                    ],
+                    [
+                        "15",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "17",
+                        "aload_2"
+                    ],
+                    [
+                        "18",
+                        "invokevirtual"
+                    ],
+                    [
+                        "19",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "21",
+                        "pop"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    338,
+                    339
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "22",
+                        "aload_1"
+                    ],
+                    [
+                        "23",
+                        "ldc"
+                    ],
+                    [
+                        "24",
+                        "n: "
+                    ],
+                    [
+                        "25",
+                        "invokevirtual"
+                    ],
+                    [
+                        "26",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "28",
+                        "aload_0"
+                    ],
+                    [
+                        "29",
+                        "invokevirtual"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getN:()J"
+                    ],
+                    [
+                        "32",
+                        "invokevirtual"
+                    ],
+                    [
+                        "33",
+                        "java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "35",
+                        "aload_2"
+                    ],
+                    [
+                        "36",
+                        "invokevirtual"
+                    ],
+                    [
+                        "37",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "39",
+                        "pop"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    339,
+                    340
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "40",
+                        "aload_1"
+                    ],
+                    [
+                        "41",
+                        "ldc"
+                    ],
+                    [
+                        "42",
+                        "min: "
+                    ],
+                    [
+                        "43",
+                        "invokevirtual"
+                    ],
+                    [
+                        "44",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "46",
+                        "aload_0"
+                    ],
+                    [
+                        "47",
+                        "invokevirtual"
+                    ],
+                    [
+                        "48",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getMin:()D"
+                    ],
+                    [
+                        "50",
+                        "invokevirtual"
+                    ],
+                    [
+                        "51",
+                        "java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "53",
+                        "aload_2"
+                    ],
+                    [
+                        "54",
+                        "invokevirtual"
+                    ],
+                    [
+                        "55",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "57",
+                        "pop"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    340,
+                    341
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "58",
+                        "aload_1"
+                    ],
+                    [
+                        "59",
+                        "ldc"
+                    ],
+                    [
+                        "60",
+                        "max: "
+                    ],
+                    [
+                        "61",
+                        "invokevirtual"
+                    ],
+                    [
+                        "62",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "64",
+                        "aload_0"
+                    ],
+                    [
+                        "65",
+                        "invokevirtual"
+                    ],
+                    [
+                        "66",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getMax:()D"
+                    ],
+                    [
+                        "68",
+                        "invokevirtual"
+                    ],
+                    [
+                        "69",
+                        "java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "71",
+                        "aload_2"
+                    ],
+                    [
+                        "72",
+                        "invokevirtual"
+                    ],
+                    [
+                        "73",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "75",
+                        "pop"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    341,
+                    342
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "76",
+                        "aload_1"
+                    ],
+                    [
+                        "77",
+                        "ldc"
+                    ],
+                    [
+                        "78",
+                        "sum: "
+                    ],
+                    [
+                        "79",
+                        "invokevirtual"
+                    ],
+                    [
+                        "80",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "82",
+                        "aload_0"
+                    ],
+                    [
+                        "83",
+                        "invokevirtual"
+                    ],
+                    [
+                        "84",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getSum:()D"
+                    ],
+                    [
+                        "86",
+                        "invokevirtual"
+                    ],
+                    [
+                        "87",
+                        "java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "89",
+                        "aload_2"
+                    ],
+                    [
+                        "90",
+                        "invokevirtual"
+                    ],
+                    [
+                        "91",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "93",
+                        "pop"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    342,
+                    343
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "94",
+                        "aload_1"
+                    ],
+                    [
+                        "95",
+                        "ldc"
+                    ],
+                    [
+                        "96",
+                        "mean: "
+                    ],
+                    [
+                        "97",
+                        "invokevirtual"
+                    ],
+                    [
+                        "98",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "100",
+                        "aload_0"
+                    ],
+                    [
+                        "101",
+                        "invokevirtual"
+                    ],
+                    [
+                        "102",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getMean:()D"
+                    ],
+                    [
+                        "104",
+                        "invokevirtual"
+                    ],
+                    [
+                        "105",
+                        "java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "107",
+                        "aload_2"
+                    ],
+                    [
+                        "108",
+                        "invokevirtual"
+                    ],
+                    [
+                        "109",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "111",
+                        "pop"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    343,
+                    344
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "112",
+                        "aload_1"
+                    ],
+                    [
+                        "113",
+                        "ldc"
+                    ],
+                    [
+                        "114",
+                        "geometric mean: "
+                    ],
+                    [
+                        "115",
+                        "invokevirtual"
+                    ],
+                    [
+                        "116",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "118",
+                        "aload_0"
+                    ],
+                    [
+                        "119",
+                        "invokevirtual"
+                    ],
+                    [
+                        "120",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getGeometricMean:()D"
+                    ],
+                    [
+                        "122",
+                        "invokevirtual"
+                    ],
+                    [
+                        "123",
+                        "java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "125",
+                        "aload_2"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    344,
+                    346
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "126",
+                        "invokevirtual"
+                    ],
+                    [
+                        "127",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "129",
+                        "pop"
+                    ],
+                    [
+                        "130",
+                        "aload_1"
+                    ],
+                    [
+                        "131",
+                        "ldc"
+                    ],
+                    [
+                        "132",
+                        "variance: "
+                    ],
+                    [
+                        "133",
+                        "invokevirtual"
+                    ],
+                    [
+                        "134",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "136",
+                        "aload_0"
+                    ],
+                    [
+                        "137",
+                        "invokevirtual"
+                    ],
+                    [
+                        "138",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getVariance:()D"
+                    ],
+                    [
+                        "140",
+                        "invokevirtual"
+                    ],
+                    [
+                        "141",
+                        "java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "143",
+                        "aload_2"
+                    ],
+                    [
+                        "144",
+                        "invokevirtual"
+                    ],
+                    [
+                        "145",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "147",
+                        "pop"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    346,
+                    347
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "148",
+                        "aload_1"
+                    ],
+                    [
+                        "149",
+                        "ldc"
+                    ],
+                    [
+                        "150",
+                        "population variance: "
+                    ],
+                    [
+                        "151",
+                        "invokevirtual"
+                    ],
+                    [
+                        "152",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "154",
+                        "aload_0"
+                    ],
+                    [
+                        "155",
+                        "invokevirtual"
+                    ],
+                    [
+                        "156",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getPopulationVariance:()D"
+                    ],
+                    [
+                        "158",
+                        "invokevirtual"
+                    ],
+                    [
+                        "159",
+                        "java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "161",
+                        "aload_2"
+                    ],
+                    [
+                        "162",
+                        "invokevirtual"
+                    ],
+                    [
+                        "163",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "165",
+                        "pop"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    347,
+                    348
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "166",
+                        "aload_1"
+                    ],
+                    [
+                        "167",
+                        "ldc"
+                    ],
+                    [
+                        "168",
+                        "second moment: "
+                    ],
+                    [
+                        "169",
+                        "invokevirtual"
+                    ],
+                    [
+                        "170",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "172",
+                        "aload_0"
+                    ],
+                    [
+                        "173",
+                        "invokevirtual"
+                    ],
+                    [
+                        "174",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getSecondMoment:()D"
+                    ],
+                    [
+                        "176",
+                        "invokevirtual"
+                    ],
+                    [
+                        "177",
+                        "java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "179",
+                        "aload_2"
+                    ],
+                    [
+                        "180",
+                        "invokevirtual"
+                    ],
+                    [
+                        "181",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "183",
+                        "pop"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    348,
+                    349
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "184",
+                        "aload_1"
+                    ],
+                    [
+                        "185",
+                        "ldc"
+                    ],
+                    [
+                        "186",
+                        "sum of squares: "
+                    ],
+                    [
+                        "187",
+                        "invokevirtual"
+                    ],
+                    [
+                        "188",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "190",
+                        "aload_0"
+                    ],
+                    [
+                        "191",
+                        "invokevirtual"
+                    ],
+                    [
+                        "192",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getSumsq:()D"
+                    ],
+                    [
+                        "194",
+                        "invokevirtual"
+                    ],
+                    [
+                        "195",
+                        "java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "197",
+                        "aload_2"
+                    ],
+                    [
+                        "198",
+                        "invokevirtual"
+                    ],
+                    [
+                        "199",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "201",
+                        "pop"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    349,
+                    350
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "202",
+                        "aload_1"
+                    ],
+                    [
+                        "203",
+                        "ldc"
+                    ],
+                    [
+                        "204",
+                        "standard deviation: "
+                    ],
+                    [
+                        "205",
+                        "invokevirtual"
+                    ],
+                    [
+                        "206",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "208",
+                        "aload_0"
+                    ],
+                    [
+                        "209",
+                        "invokevirtual"
+                    ],
+                    [
+                        "210",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getStandardDeviation:()D"
+                    ],
+                    [
+                        "212",
+                        "invokevirtual"
+                    ],
+                    [
+                        "213",
+                        "java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "215",
+                        "aload_2"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    350,
+                    352
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "216",
+                        "invokevirtual"
+                    ],
+                    [
+                        "217",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "219",
+                        "pop"
+                    ],
+                    [
+                        "220",
+                        "aload_1"
+                    ],
+                    [
+                        "221",
+                        "ldc"
+                    ],
+                    [
+                        "222",
+                        "sum of logs: "
+                    ],
+                    [
+                        "223",
+                        "invokevirtual"
+                    ],
+                    [
+                        "224",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "226",
+                        "aload_0"
+                    ],
+                    [
+                        "227",
+                        "invokevirtual"
+                    ],
+                    [
+                        "228",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getSumOfLogs:()D"
+                    ],
+                    [
+                        "230",
+                        "invokevirtual"
+                    ],
+                    [
+                        "231",
+                        "java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "233",
+                        "aload_2"
+                    ],
+                    [
+                        "234",
+                        "invokevirtual"
+                    ],
+                    [
+                        "235",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "237",
+                        "pop"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    352,
+                    353
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "238",
+                        "aload_1"
+                    ],
+                    [
+                        "239",
+                        "invokevirtual"
+                    ],
+                    [
+                        "240",
+                        "java/lang/StringBuilder.toString:()Ljava/lang/String;"
+                    ],
+                    [
+                        "242",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    353,
+                    354
+                ],
+                "children": []
+            }
+        ]
+    },
+    "clear": {
+        "name": "clear",
+        "pos": [
+            359,
+            383
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    360,
+                    361
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "lconst_0"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.n:J"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "getfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.minImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "9",
+                        "invokeinterface"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.org/apache/commons/math3/stat/descriptive/SummaryStatistics"
+                    ],
+                    [
+                        "12",
+                        "0"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    361,
+                    362
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "14",
+                        "aload_0"
+                    ],
+                    [
+                        "15",
+                        "getfield"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.maxImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "18",
+                        "invokeinterface"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.org/apache/commons/math3/stat/descriptive/SummaryStatistics"
+                    ],
+                    [
+                        "21",
+                        "0"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    362,
+                    363
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "23",
+                        "aload_0"
+                    ],
+                    [
+                        "24",
+                        "getfield"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "27",
+                        "invokeinterface"
+                    ],
+                    [
+                        "28",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.org/apache/commons/math3/stat/descriptive/SummaryStatistics"
+                    ],
+                    [
+                        "30",
+                        "0"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    363,
+                    364
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "32",
+                        "aload_0"
+                    ],
+                    [
+                        "33",
+                        "getfield"
+                    ],
+                    [
+                        "34",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumLogImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "36",
+                        "invokeinterface"
+                    ],
+                    [
+                        "37",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.org/apache/commons/math3/stat/descriptive/SummaryStatistics"
+                    ],
+                    [
+                        "39",
+                        "0"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    364,
+                    365
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "41",
+                        "aload_0"
+                    ],
+                    [
+                        "42",
+                        "getfield"
+                    ],
+                    [
+                        "43",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumsqImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "45",
+                        "invokeinterface"
+                    ],
+                    [
+                        "46",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.org/apache/commons/math3/stat/descriptive/SummaryStatistics"
+                    ],
+                    [
+                        "48",
+                        "0"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    365,
+                    366
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "50",
+                        "aload_0"
+                    ],
+                    [
+                        "51",
+                        "getfield"
+                    ],
+                    [
+                        "52",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.geoMeanImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "54",
+                        "invokeinterface"
+                    ],
+                    [
+                        "55",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.org/apache/commons/math3/stat/descriptive/SummaryStatistics"
+                    ],
+                    [
+                        "57",
+                        "0"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    366,
+                    367
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "59",
+                        "aload_0"
+                    ],
+                    [
+                        "60",
+                        "getfield"
+                    ],
+                    [
+                        "61",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.secondMoment:Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ],
+                    [
+                        "63",
+                        "invokevirtual"
+                    ],
+                    [
+                        "64",
+                        "org/apache/commons/math3/stat/descriptive/moment/SecondMoment.clear:()V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    367,
+                    368
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "66",
+                        "aload_0"
+                    ],
+                    [
+                        "67",
+                        "getfield"
+                    ],
+                    [
+                        "68",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.meanImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "70",
+                        "aload_0"
+                    ],
+                    [
+                        "71",
+                        "getfield"
+                    ],
+                    [
+                        "72",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.mean:Lorg/apache/commons/math3/stat/descriptive/moment/Mean;"
+                    ],
+                    [
+                        "74",
+                        "if_acmpeq"
+                    ],
+                    [
+                        "75",
+                        "12"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    368,
+                    371
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            368,
+                            371
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    369,
+                                    370
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    371,
+                    374
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            371,
+                            374
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    372,
+                                    373
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "equals": {
+        "name": "equals",
+        "pos": [
+            383,
+            406
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    385,
+                    388
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            385,
+                            388
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    386,
+                                    387
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    388,
+                    391
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            388,
+                            391
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    389,
+                                    390
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    391,
+                    392
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    392,
+                    400
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "hashCode": {
+        "name": "hashCode",
+        "pos": [
+            406,
+            426
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    408,
+                    409
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "bipush"
+                    ],
+                    [
+                        "1",
+                        "31"
+                    ],
+                    [
+                        "2",
+                        "aload_0"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getGeometricMean:()D"
+                    ],
+                    [
+                        "6",
+                        "invokestatic"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/util/MathUtils.hash:(D)I"
+                    ],
+                    [
+                        "9",
+                        "iadd"
+                    ],
+                    [
+                        "10",
+                        "istore_1"
+                    ],
+                    [
+                        "11",
+                        "iload_1"
+                    ],
+                    [
+                        "12",
+                        "bipush"
+                    ],
+                    [
+                        "13",
+                        "31"
+                    ],
+                    [
+                        "14",
+                        "imul"
+                    ],
+                    [
+                        "15",
+                        "aload_0"
+                    ],
+                    [
+                        "16",
+                        "invokevirtual"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getGeometricMean:()D"
+                    ],
+                    [
+                        "19",
+                        "invokestatic"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/util/MathUtils.hash:(D)I"
+                    ],
+                    [
+                        "22",
+                        "iadd"
+                    ],
+                    [
+                        "23",
+                        "istore_1"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    409,
+                    410
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "24",
+                        "iload_1"
+                    ],
+                    [
+                        "25",
+                        "bipush"
+                    ],
+                    [
+                        "26",
+                        "31"
+                    ],
+                    [
+                        "27",
+                        "imul"
+                    ],
+                    [
+                        "28",
+                        "aload_0"
+                    ],
+                    [
+                        "29",
+                        "invokevirtual"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getMax:()D"
+                    ],
+                    [
+                        "32",
+                        "invokestatic"
+                    ],
+                    [
+                        "33",
+                        "org/apache/commons/math3/util/MathUtils.hash:(D)I"
+                    ],
+                    [
+                        "35",
+                        "iadd"
+                    ],
+                    [
+                        "36",
+                        "istore_1"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    410,
+                    411
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "37",
+                        "iload_1"
+                    ],
+                    [
+                        "38",
+                        "bipush"
+                    ],
+                    [
+                        "39",
+                        "31"
+                    ],
+                    [
+                        "40",
+                        "imul"
+                    ],
+                    [
+                        "41",
+                        "aload_0"
+                    ],
+                    [
+                        "42",
+                        "invokevirtual"
+                    ],
+                    [
+                        "43",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getMean:()D"
+                    ],
+                    [
+                        "45",
+                        "invokestatic"
+                    ],
+                    [
+                        "46",
+                        "org/apache/commons/math3/util/MathUtils.hash:(D)I"
+                    ],
+                    [
+                        "48",
+                        "iadd"
+                    ],
+                    [
+                        "49",
+                        "istore_1"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    411,
+                    412
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "50",
+                        "iload_1"
+                    ],
+                    [
+                        "51",
+                        "bipush"
+                    ],
+                    [
+                        "52",
+                        "31"
+                    ],
+                    [
+                        "53",
+                        "imul"
+                    ],
+                    [
+                        "54",
+                        "aload_0"
+                    ],
+                    [
+                        "55",
+                        "invokevirtual"
+                    ],
+                    [
+                        "56",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getMin:()D"
+                    ],
+                    [
+                        "58",
+                        "invokestatic"
+                    ],
+                    [
+                        "59",
+                        "org/apache/commons/math3/util/MathUtils.hash:(D)I"
+                    ],
+                    [
+                        "61",
+                        "iadd"
+                    ],
+                    [
+                        "62",
+                        "istore_1"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    412,
+                    413
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "63",
+                        "iload_1"
+                    ],
+                    [
+                        "64",
+                        "bipush"
+                    ],
+                    [
+                        "65",
+                        "31"
+                    ],
+                    [
+                        "66",
+                        "imul"
+                    ],
+                    [
+                        "67",
+                        "aload_0"
+                    ],
+                    [
+                        "68",
+                        "invokevirtual"
+                    ],
+                    [
+                        "69",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getN:()J"
+                    ],
+                    [
+                        "71",
+                        "l2d"
+                    ],
+                    [
+                        "72",
+                        "invokestatic"
+                    ],
+                    [
+                        "73",
+                        "org/apache/commons/math3/util/MathUtils.hash:(D)I"
+                    ],
+                    [
+                        "75",
+                        "iadd"
+                    ],
+                    [
+                        "76",
+                        "istore_1"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    413,
+                    414
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "77",
+                        "iload_1"
+                    ],
+                    [
+                        "78",
+                        "bipush"
+                    ],
+                    [
+                        "79",
+                        "31"
+                    ],
+                    [
+                        "80",
+                        "imul"
+                    ],
+                    [
+                        "81",
+                        "aload_0"
+                    ],
+                    [
+                        "82",
+                        "invokevirtual"
+                    ],
+                    [
+                        "83",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getSum:()D"
+                    ],
+                    [
+                        "85",
+                        "invokestatic"
+                    ],
+                    [
+                        "86",
+                        "org/apache/commons/math3/util/MathUtils.hash:(D)I"
+                    ],
+                    [
+                        "88",
+                        "iadd"
+                    ],
+                    [
+                        "89",
+                        "istore_1"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    414,
+                    415
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "90",
+                        "iload_1"
+                    ],
+                    [
+                        "91",
+                        "bipush"
+                    ],
+                    [
+                        "92",
+                        "31"
+                    ],
+                    [
+                        "93",
+                        "imul"
+                    ],
+                    [
+                        "94",
+                        "aload_0"
+                    ],
+                    [
+                        "95",
+                        "invokevirtual"
+                    ],
+                    [
+                        "96",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getSumsq:()D"
+                    ],
+                    [
+                        "98",
+                        "invokestatic"
+                    ],
+                    [
+                        "99",
+                        "org/apache/commons/math3/util/MathUtils.hash:(D)I"
+                    ],
+                    [
+                        "101",
+                        "iadd"
+                    ],
+                    [
+                        "102",
+                        "istore_1"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    415,
+                    416
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "103",
+                        "iload_1"
+                    ],
+                    [
+                        "104",
+                        "bipush"
+                    ],
+                    [
+                        "105",
+                        "31"
+                    ],
+                    [
+                        "106",
+                        "imul"
+                    ],
+                    [
+                        "107",
+                        "aload_0"
+                    ],
+                    [
+                        "108",
+                        "invokevirtual"
+                    ],
+                    [
+                        "109",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getVariance:()D"
+                    ],
+                    [
+                        "111",
+                        "invokestatic"
+                    ],
+                    [
+                        "112",
+                        "org/apache/commons/math3/util/MathUtils.hash:(D)I"
+                    ],
+                    [
+                        "114",
+                        "iadd"
+                    ],
+                    [
+                        "115",
+                        "istore_1"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    416,
+                    417
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "116",
+                        "iload_1"
+                    ],
+                    [
+                        "117",
+                        "ireturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    417,
+                    418
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getSumImpl": {
+        "name": "getSumImpl",
+        "pos": [
+            426,
+            445
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    427,
+                    428
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setSumImpl": {
+        "name": "setSumImpl",
+        "pos": [
+            445,
+            456
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    447,
+                    448
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.checkEmpty:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "putfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    448,
+                    449
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSumsqImpl": {
+        "name": "getSumsqImpl",
+        "pos": [
+            456,
+            475
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    457,
+                    458
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumsqImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setSumsqImpl": {
+        "name": "setSumsqImpl",
+        "pos": [
+            475,
+            486
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    477,
+                    478
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.checkEmpty:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "putfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumsqImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    478,
+                    479
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getMinImpl": {
+        "name": "getMinImpl",
+        "pos": [
+            486,
+            505
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    487,
+                    488
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.minImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setMinImpl": {
+        "name": "setMinImpl",
+        "pos": [
+            505,
+            516
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    507,
+                    508
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.checkEmpty:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "putfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.minImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    508,
+                    509
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getMaxImpl": {
+        "name": "getMaxImpl",
+        "pos": [
+            516,
+            535
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    517,
+                    518
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.maxImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setMaxImpl": {
+        "name": "setMaxImpl",
+        "pos": [
+            535,
+            546
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    537,
+                    538
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.checkEmpty:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "putfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.maxImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    538,
+                    539
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSumLogImpl": {
+        "name": "getSumLogImpl",
+        "pos": [
+            546,
+            565
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    547,
+                    548
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumLogImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setSumLogImpl": {
+        "name": "setSumLogImpl",
+        "pos": [
+            565,
+            577
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    567,
+                    568
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.checkEmpty:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "putfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumLogImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    568,
+                    569
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.geoMean:Lorg/apache/commons/math3/stat/descriptive/moment/GeometricMean;"
+                    ],
+                    [
+                        "13",
+                        "aload_1"
+                    ],
+                    [
+                        "14",
+                        "invokevirtual"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/stat/descriptive/moment/GeometricMean.setSumLogImpl:(Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    569,
+                    570
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "17",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getGeoMeanImpl": {
+        "name": "getGeoMeanImpl",
+        "pos": [
+            577,
+            596
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    578,
+                    579
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.geoMeanImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setGeoMeanImpl": {
+        "name": "setGeoMeanImpl",
+        "pos": [
+            596,
+            607
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    598,
+                    599
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.checkEmpty:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "putfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.geoMeanImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    599,
+                    600
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getMeanImpl": {
+        "name": "getMeanImpl",
+        "pos": [
+            607,
+            626
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    608,
+                    609
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.meanImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setMeanImpl": {
+        "name": "setMeanImpl",
+        "pos": [
+            626,
+            637
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    628,
+                    629
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.checkEmpty:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "putfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.meanImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    629,
+                    630
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getVarianceImpl": {
+        "name": "getVarianceImpl",
+        "pos": [
+            637,
+            656
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    638,
+                    639
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.varianceImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setVarianceImpl": {
+        "name": "setVarianceImpl",
+        "pos": [
+            656,
+            666
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    658,
+                    659
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.checkEmpty:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "putfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.varianceImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    659,
+                    660
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "checkEmpty": {
+        "name": "checkEmpty",
+        "pos": [
+            666,
+            678
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    667,
+                    671
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            667,
+                            671
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    668,
+                                    670
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "copy": {
+        "name": "copy",
+        "pos": [
+            693,
+            765
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    695,
+                    696
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    696,
+                    697
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "8",
+                        "aload_1"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.maxImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "13",
+                        "invokeinterface"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.copy:()Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ],
+                    [
+                        "16",
+                        "0"
+                    ],
+                    [
+                        "18",
+                        "putfield"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.maxImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    697,
+                    698
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "21",
+                        "aload_1"
+                    ],
+                    [
+                        "22",
+                        "aload_0"
+                    ],
+                    [
+                        "23",
+                        "getfield"
+                    ],
+                    [
+                        "24",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.minImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "26",
+                        "invokeinterface"
+                    ],
+                    [
+                        "27",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.copy:()Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ],
+                    [
+                        "29",
+                        "0"
+                    ],
+                    [
+                        "31",
+                        "putfield"
+                    ],
+                    [
+                        "32",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.minImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    698,
+                    699
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "34",
+                        "aload_1"
+                    ],
+                    [
+                        "35",
+                        "aload_0"
+                    ],
+                    [
+                        "36",
+                        "getfield"
+                    ],
+                    [
+                        "37",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "39",
+                        "invokeinterface"
+                    ],
+                    [
+                        "40",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.copy:()Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ],
+                    [
+                        "42",
+                        "0"
+                    ],
+                    [
+                        "44",
+                        "putfield"
+                    ],
+                    [
+                        "45",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    699,
+                    700
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "47",
+                        "aload_1"
+                    ],
+                    [
+                        "48",
+                        "aload_0"
+                    ],
+                    [
+                        "49",
+                        "getfield"
+                    ],
+                    [
+                        "50",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumLogImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "52",
+                        "invokeinterface"
+                    ],
+                    [
+                        "53",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.copy:()Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ],
+                    [
+                        "55",
+                        "0"
+                    ],
+                    [
+                        "57",
+                        "putfield"
+                    ],
+                    [
+                        "58",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumLogImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    700,
+                    701
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "60",
+                        "aload_1"
+                    ],
+                    [
+                        "61",
+                        "aload_0"
+                    ],
+                    [
+                        "62",
+                        "getfield"
+                    ],
+                    [
+                        "63",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumsqImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "65",
+                        "invokeinterface"
+                    ],
+                    [
+                        "66",
+                        "org/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic.copy:()Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ],
+                    [
+                        "68",
+                        "0"
+                    ],
+                    [
+                        "70",
+                        "putfield"
+                    ],
+                    [
+                        "71",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.sumsqImpl:Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    701,
+                    702
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "73",
+                        "aload_1"
+                    ],
+                    [
+                        "74",
+                        "aload_0"
+                    ],
+                    [
+                        "75",
+                        "getfield"
+                    ],
+                    [
+                        "76",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.secondMoment:Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ],
+                    [
+                        "78",
+                        "invokevirtual"
+                    ],
+                    [
+                        "79",
+                        "org/apache/commons/math3/stat/descriptive/moment/SecondMoment.copy:()Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ],
+                    [
+                        "81",
+                        "putfield"
+                    ],
+                    [
+                        "82",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.secondMoment:Lorg/apache/commons/math3/stat/descriptive/moment/SecondMoment;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    702,
+                    703
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "84",
+                        "aload_1"
+                    ],
+                    [
+                        "85",
+                        "aload_0"
+                    ],
+                    [
+                        "86",
+                        "getfield"
+                    ],
+                    [
+                        "87",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.n:J"
+                    ],
+                    [
+                        "89",
+                        "putfield"
+                    ],
+                    [
+                        "90",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.n:J"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    703,
+                    706
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "92",
+                        "aload_0"
+                    ],
+                    [
+                        "93",
+                        "invokevirtual"
+                    ],
+                    [
+                        "94",
+                        "org/apache/commons/math3/stat/descriptive/SummaryStatistics.getVarianceImpl:()Lorg/apache/commons/math3/stat/descriptive/StorelessUnivariateStatistic;"
+                    ],
+                    [
+                        "96",
+                        "instanceof"
+                    ],
+                    [
+                        "97",
+                        "org/apache/commons/math3/stat/descriptive/moment/Variance"
+                    ],
+                    [
+                        "99",
+                        "ifeq"
+                    ],
+                    [
+                        "100",
+                        "21"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    706,
+                    711
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            706,
+                            708
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    707,
+                                    708
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            708,
+                            711
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    709,
+                                    710
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    711,
+                    716
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            711,
+                            713
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    712,
+                                    713
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            713,
+                            716
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    714,
+                                    715
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    716,
+                    724
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            716,
+                            718
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    717,
+                                    718
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            718,
+                            724
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    719,
+                                    720
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    724,
+                    729
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            724,
+                            726
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    725,
+                                    726
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            726,
+                            729
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    727,
+                                    728
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    729,
+                    734
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            729,
+                            731
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    730,
+                                    731
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            731,
+                            734
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    732,
+                                    733
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    734,
+                    739
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            734,
+                            736
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    735,
+                                    736
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            736,
+                            739
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    737,
+                                    738
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    739,
+                    744
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            739,
+                            741
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    740,
+                                    741
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            741,
+                            744
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    742,
+                                    743
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    744,
+                    749
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            744,
+                            746
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    745,
+                                    746
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            746,
+                            749
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    747,
+                                    748
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    749,
+                    754
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            749,
+                            751
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    750,
+                                    751
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            751,
+                            754
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    752,
+                                    753
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    754,
+                    759
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            754,
+                            756
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    755,
+                                    756
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            756,
+                            759
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    757,
+                                    758
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    759,
+                    764
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            759,
+                            761
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    760,
+                                    761
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            761,
+                            764
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    762,
+                                    763
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

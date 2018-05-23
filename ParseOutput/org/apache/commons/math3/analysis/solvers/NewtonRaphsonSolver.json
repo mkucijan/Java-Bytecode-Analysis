@@ -1,0 +1,224 @@
+{
+    "solve": {
+        "name": "solve",
+        "pos": [
+            64,
+            74
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    68,
+                    69
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "aload_2"
+                    ],
+                    [
+                        "3",
+                        "dload_3"
+                    ],
+                    [
+                        "4",
+                        "dload"
+                    ],
+                    [
+                        "5",
+                        "#5"
+                    ],
+                    [
+                        "6",
+                        "invokestatic"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/analysis/solvers/UnivariateSolverUtils.midpoint:(DD)D"
+                    ],
+                    [
+                        "9",
+                        "invokespecial"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/analysis/solvers/AbstractUnivariateDifferentiableSolver.solve:(ILorg/apache/commons/math3/analysis/UnivariateFunction;D)D"
+                    ],
+                    [
+                        "12",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "doSolve": {
+        "name": "doSolve",
+        "pos": [
+            74,
+            92
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    77,
+                    78
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/analysis/solvers/NewtonRaphsonSolver.getStartValue:()D"
+                    ],
+                    [
+                        "4",
+                        "dstore_1"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/analysis/solvers/NewtonRaphsonSolver.getAbsoluteAccuracy:()D"
+                    ],
+                    [
+                        "9",
+                        "dstore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    78,
+                    80
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "dload_1"
+                    ],
+                    [
+                        "11",
+                        "dstore"
+                    ],
+                    [
+                        "12",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    80,
+                    81
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    81,
+                    82
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    82,
+                    91
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            82,
+                            91
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    83,
+                                    84
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    84,
+                                    85
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    85,
+                                    89
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            85,
+                                            89
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    86,
+                                                    87
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    89,
+                                    90
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

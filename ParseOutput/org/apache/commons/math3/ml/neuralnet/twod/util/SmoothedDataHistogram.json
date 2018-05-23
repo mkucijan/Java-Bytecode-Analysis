@@ -1,0 +1,258 @@
+{
+    "computeImage": {
+        "name": "computeImage",
+        "pos": [
+            68,
+            97
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    70,
+                    71
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ml/neuralnet/twod/NeuronSquareMesh2D.getNumberOfRows:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_3"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/ml/neuralnet/twod/NeuronSquareMesh2D.getNumberOfColumns:()I"
+                    ],
+                    [
+                        "9",
+                        "istore"
+                    ],
+                    [
+                        "10",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    71,
+                    73
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "11",
+                        "iload_3"
+                    ],
+                    [
+                        "12",
+                        "iload"
+                    ],
+                    [
+                        "13",
+                        "#4"
+                    ],
+                    [
+                        "14",
+                        "imul"
+                    ],
+                    [
+                        "15",
+                        "istore"
+                    ],
+                    [
+                        "16",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    73,
+                    74
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "17",
+                        "iload"
+                    ],
+                    [
+                        "18",
+                        "#5"
+                    ],
+                    [
+                        "19",
+                        "aload_0"
+                    ],
+                    [
+                        "20",
+                        "getfield"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/math3/ml/neuralnet/twod/util/SmoothedDataHistogram.smoothingBins:I"
+                    ],
+                    [
+                        "23",
+                        "if_icmpge"
+                    ],
+                    [
+                        "24",
+                        "24"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    74,
+                    78
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            74,
+                            78
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    75,
+                                    76
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    78,
+                    81
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    81,
+                    83
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    83,
+                    95
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            83,
+                            95
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    84,
+                                    87
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    87,
+                                    93
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            87,
+                                            93
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    88,
+                                                    89
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    89,
+                                                    90
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    90,
+                                                    91
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    91,
+                                                    92
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    95,
+                    96
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

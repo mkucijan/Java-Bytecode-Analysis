@@ -1,0 +1,1268 @@
+{
+    "getNext": {
+        "name": "getNext",
+        "pos": [
+            132,
+            157
+        ],
+        "children": [
+            {
+                "name": "SwitchStatement",
+                "pos": [
+                    133,
+                    147
+                ],
+                "children": [
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            134,
+                            135
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            135,
+                            136
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            136,
+                            137
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            137,
+                            138
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            138,
+                            139
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            139,
+                            140
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ThrowStatement",
+                        "pos": [
+                            140,
+                            146
+                        ],
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "fill": {
+        "name": "fill",
+        "pos": [
+            174,
+            197
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    176,
+                    177
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_1"
+                    ],
+                    [
+                        "1",
+                        "newarray"
+                    ],
+                    [
+                        "2",
+                        "7"
+                    ],
+                    [
+                        "3",
+                        "astore_2"
+                    ],
+                    [
+                        "4",
+                        "iconst_0"
+                    ],
+                    [
+                        "5",
+                        "istore_3"
+                    ],
+                    [
+                        "6",
+                        "iload_3"
+                    ],
+                    [
+                        "7",
+                        "iload_1"
+                    ],
+                    [
+                        "8",
+                        "if_icmpge"
+                    ],
+                    [
+                        "9",
+                        "16"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    177,
+                    180
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            177,
+                            180
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    178,
+                                    179
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    180,
+                    181
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "computeDistribution": {
+        "name": "computeDistribution",
+        "pos": [
+            217,
+            230
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    218,
+                    219
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "new"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/EmpiricalDistribution"
+                    ],
+                    [
+                        "4",
+                        "dup"
+                    ],
+                    [
+                        "5",
+                        "iload_1"
+                    ],
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "getfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/random/ValueServer.randomData:Lorg/apache/commons/math3/random/RandomDataGenerator;"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/random/RandomDataGenerator.getRandomGenerator:()Lorg/apache/commons/math3/random/RandomGenerator;"
+                    ],
+                    [
+                        "13",
+                        "invokespecial"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/random/EmpiricalDistribution.<init>:(ILorg/apache/commons/math3/random/RandomGenerator;)V"
+                    ],
+                    [
+                        "16",
+                        "putfield"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/random/ValueServer.empiricalDistribution:Lorg/apache/commons/math3/random/EmpiricalDistribution;"
+                    ],
+                    [
+                        "19",
+                        "aload_0"
+                    ],
+                    [
+                        "20",
+                        "getfield"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/math3/random/ValueServer.empiricalDistribution:Lorg/apache/commons/math3/random/EmpiricalDistribution;"
+                    ],
+                    [
+                        "23",
+                        "aload_0"
+                    ],
+                    [
+                        "24",
+                        "getfield"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/math3/random/ValueServer.valuesFileURL:Ljava/net/URL;"
+                    ],
+                    [
+                        "27",
+                        "invokevirtual"
+                    ],
+                    [
+                        "28",
+                        "org/apache/commons/math3/random/EmpiricalDistribution.load:(Ljava/net/URL;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    219,
+                    220
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "30",
+                        "aload_0"
+                    ],
+                    [
+                        "31",
+                        "aload_0"
+                    ],
+                    [
+                        "32",
+                        "getfield"
+                    ],
+                    [
+                        "33",
+                        "org/apache/commons/math3/random/ValueServer.empiricalDistribution:Lorg/apache/commons/math3/random/EmpiricalDistribution;"
+                    ],
+                    [
+                        "35",
+                        "invokevirtual"
+                    ],
+                    [
+                        "36",
+                        "org/apache/commons/math3/random/EmpiricalDistribution.getSampleStats:()Lorg/apache/commons/math3/stat/descriptive/StatisticalSummary;"
+                    ],
+                    [
+                        "38",
+                        "invokeinterface"
+                    ],
+                    [
+                        "39",
+                        "org/apache/commons/math3/stat/descriptive/StatisticalSummary.getStandardDeviation:()D"
+                    ],
+                    [
+                        "41",
+                        "0"
+                    ],
+                    [
+                        "43",
+                        "putfield"
+                    ],
+                    [
+                        "44",
+                        "org/apache/commons/math3/random/ValueServer.mu:D"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    220,
+                    221
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "46",
+                        "aload_0"
+                    ],
+                    [
+                        "47",
+                        "aload_0"
+                    ],
+                    [
+                        "48",
+                        "getfield"
+                    ],
+                    [
+                        "49",
+                        "org/apache/commons/math3/random/ValueServer.empiricalDistribution:Lorg/apache/commons/math3/random/EmpiricalDistribution;"
+                    ],
+                    [
+                        "51",
+                        "invokevirtual"
+                    ],
+                    [
+                        "52",
+                        "org/apache/commons/math3/random/EmpiricalDistribution.getSampleStats:()Lorg/apache/commons/math3/stat/descriptive/StatisticalSummary;"
+                    ],
+                    [
+                        "54",
+                        "invokeinterface"
+                    ],
+                    [
+                        "55",
+                        "org/apache/commons/math3/stat/descriptive/StatisticalSummary.java/net/URL"
+                    ],
+                    [
+                        "57",
+                        "0"
+                    ],
+                    [
+                        "59",
+                        "putfield"
+                    ],
+                    [
+                        "60",
+                        "org/apache/commons/math3/random/ValueServer.sigma:D"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    221,
+                    222
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "62",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getMode": {
+        "name": "getMode",
+        "pos": [
+            230,
+            239
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    231,
+                    232
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/ValueServer.mode:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setMode": {
+        "name": "setMode",
+        "pos": [
+            239,
+            249
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    240,
+                    241
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/random/ValueServer.mode:I"
+                    ],
+                    [
+                        "5",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getValuesFileURL": {
+        "name": "getValuesFileURL",
+        "pos": [
+            249,
+            260
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    250,
+                    251
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/ValueServer.valuesFileURL:Ljava/net/URL;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setValuesFileURL": {
+        "name": "setValuesFileURL",
+        "pos": [
+            272,
+            281
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    273,
+                    274
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/random/ValueServer.valuesFileURL:Ljava/net/URL;"
+                    ],
+                    [
+                        "5",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getEmpiricalDistribution": {
+        "name": "getEmpiricalDistribution",
+        "pos": [
+            281,
+            291
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    282,
+                    283
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/ValueServer.empiricalDistribution:Lorg/apache/commons/math3/random/EmpiricalDistribution;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "resetReplayFile": {
+        "name": "resetReplayFile",
+        "pos": [
+            291,
+            308
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    292,
+                    300
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            292,
+                            300
+                        ],
+                        "children": [
+                            {
+                                "name": "TryStatement",
+                                "pos": [
+                                    293,
+                                    299
+                                ],
+                                "children": [
+                                    {
+                                        "name": "StatementExpression",
+                                        "pos": [
+                                            294,
+                                            295
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "name": "StatementExpression",
+                                        "pos": [
+                                            295,
+                                            296
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "name": "CatchClause",
+                                        "pos": [
+                                            296,
+                                            299
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    300,
+                    301
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "closeReplayFile": {
+        "name": "closeReplayFile",
+        "pos": [
+            308,
+            323
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    309,
+                    313
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            309,
+                            313
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    310,
+                                    311
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    311,
+                                    312
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "getMu": {
+        "name": "getMu",
+        "pos": [
+            323,
+            334
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    324,
+                    325
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/ValueServer.mu:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setMu": {
+        "name": "setMu",
+        "pos": [
+            334,
+            347
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    335,
+                    336
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "dload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/random/ValueServer.mu:D"
+                    ],
+                    [
+                        "5",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSigma": {
+        "name": "getSigma",
+        "pos": [
+            347,
+            356
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    348,
+                    349
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/ValueServer.sigma:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setSigma": {
+        "name": "setSigma",
+        "pos": [
+            356,
+            366
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    357,
+                    358
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "dload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/random/ValueServer.sigma:D"
+                    ],
+                    [
+                        "5",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "reSeed": {
+        "name": "reSeed",
+        "pos": [
+            366,
+            383
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    367,
+                    368
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/ValueServer.randomData:Lorg/apache/commons/math3/random/RandomDataGenerator;"
+                    ],
+                    [
+                        "4",
+                        "lload_1"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/random/RandomDataGenerator.reSeed:(J)V"
+                    ],
+                    [
+                        "8",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNextDigest": {
+        "name": "getNextDigest",
+        "pos": [
+            383,
+            410
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    384,
+                    388
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            385,
+                            388
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    386,
+                                    387
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    388,
+                    389
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getNextReplay": {
+        "name": "getNextReplay",
+        "pos": [
+            410,
+            433
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    411,
+                    412
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aconst_null"
+                    ],
+                    [
+                        "1",
+                        "astore_1"
+                    ],
+                    [
+                        "2",
+                        "aload_0"
+                    ],
+                    [
+                        "3",
+                        "getfield"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/random/ValueServer.filePointer:Ljava/io/BufferedReader;"
+                    ],
+                    [
+                        "6",
+                        "ifnonnull"
+                    ],
+                    [
+                        "7",
+                        "7"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    412,
+                    415
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            412,
+                            415
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    413,
+                                    414
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    415,
+                    424
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            415,
+                            424
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    417,
+                                    418
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    418,
+                                    419
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    419,
+                                    423
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            419,
+                                            423
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ThrowStatement",
+                                                "pos": [
+                                                    420,
+                                                    422
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    424,
+                    425
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getNextUniform": {
+        "name": "getNextUniform",
+        "pos": [
+            433,
+            443
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    434,
+                    435
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/ValueServer.randomData:Lorg/apache/commons/math3/random/RandomDataGenerator;"
+                    ],
+                    [
+                        "4",
+                        "dconst_0"
+                    ],
+                    [
+                        "5",
+                        "ldc2_w"
+                    ],
+                    [
+                        "6",
+                        "2.0"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "getfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/random/ValueServer.mu:D"
+                    ],
+                    [
+                        "12",
+                        "dmul"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/random/RandomDataGenerator.nextUniform:(DD)D"
+                    ],
+                    [
+                        "16",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNextExponential": {
+        "name": "getNextExponential",
+        "pos": [
+            443,
+            454
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    444,
+                    445
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/ValueServer.randomData:Lorg/apache/commons/math3/random/RandomDataGenerator;"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/random/ValueServer.mu:D"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/random/RandomDataGenerator.nextExponential:(D)D"
+                    ],
+                    [
+                        "11",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNextGaussian": {
+        "name": "getNextGaussian",
+        "pos": [
+            454,
+            458
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    455,
+                    456
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/ValueServer.randomData:Lorg/apache/commons/math3/random/RandomDataGenerator;"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/random/ValueServer.mu:D"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "getfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/random/ValueServer.sigma:D"
+                    ],
+                    [
+                        "12",
+                        "invokevirtual"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/random/RandomDataGenerator.nextGaussian:(DD)D"
+                    ],
+                    [
+                        "15",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

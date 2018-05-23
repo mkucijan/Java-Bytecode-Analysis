@@ -1,0 +1,226 @@
+{
+    "getTolerance": {
+        "name": "getTolerance",
+        "pos": [
+            74,
+            83
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    75,
+                    76
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/euclidean/twod/hull/AbstractConvexHullGenerator2D.tolerance:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isIncludeCollinearPoints": {
+        "name": "isIncludeCollinearPoints",
+        "pos": [
+            83,
+            88
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    84,
+                    85
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/euclidean/twod/hull/AbstractConvexHullGenerator2D.includeCollinearPoints:Z"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "generate": {
+        "name": "generate",
+        "pos": [
+            88,
+            114
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    91,
+                    93
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "4",
+                        "aconst_null"
+                    ],
+                    [
+                        "5",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    93,
+                    94
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "invokeinterface"
+                    ],
+                    [
+                        "8",
+                        "java/util/Collection.findHullVertices:(Ljava/util/Collection;)Ljava/util/Collection;"
+                    ],
+                    [
+                        "10",
+                        "0"
+                    ],
+                    [
+                        "12",
+                        "iconst_2"
+                    ],
+                    [
+                        "13",
+                        "if_icmpge"
+                    ],
+                    [
+                        "14",
+                        "8"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    94,
+                    100
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            94,
+                            96
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    95,
+                                    96
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            96,
+                            100
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    97,
+                                    98
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "TryStatement",
+                "pos": [
+                    100,
+                    107
+                ],
+                "children": [
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            101,
+                            103
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "CatchClause",
+                        "pos": [
+                            103,
+                            107
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    105,
+                                    106
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,191 @@
+{
+    "visitOrder": {
+        "name": "visitOrder",
+        "pos": [
+            37,
+            42
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    38,
+                    39
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "getstatic"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/geometry/partitioning/BSPTreeVisitor$Order.MINUS_SUB_PLUS:Lorg/apache/commons/math3/geometry/partitioning/BSPTreeVisitor$Order;"
+                    ],
+                    [
+                        "3",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "visitInternalNode": {
+        "name": "visitInternalNode",
+        "pos": [
+            42,
+            55
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    43,
+                    46
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/partitioning/BSPTree.getAttribute:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "4",
+                        "checkcast"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/geometry/partitioning/BoundaryAttribute"
+                    ],
+                    [
+                        "7",
+                        "astore_2"
+                    ],
+                    [
+                        "8",
+                        "aload_2"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/geometry/partitioning/BoundaryAttribute.getPlusOutside:()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;"
+                    ],
+                    [
+                        "12",
+                        "ifnull"
+                    ],
+                    [
+                        "13",
+                        "21"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    46,
+                    49
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            46,
+                            49
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    47,
+                                    48
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    49,
+                    52
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            49,
+                            52
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    50,
+                                    51
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "visitLeafNode": {
+        "name": "visitLeafNode",
+        "pos": [
+            55,
+            61
+        ],
+        "children": []
+    },
+    "getSize": {
+        "name": "getSize",
+        "pos": [
+            61,
+            65
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    62,
+                    63
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/geometry/partitioning/BoundarySizeVisitor.boundarySize:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

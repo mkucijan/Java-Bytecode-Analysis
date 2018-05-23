@@ -1,0 +1,191 @@
+{
+    "isNonSingular": {
+        "name": "isNonSingular",
+        "pos": [
+            222,
+            227
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    223,
+                    224
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RRQRDecomposition$Solver.upper:Lorg/apache/commons/math3/linear/DecompositionSolver;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/linear/DecompositionSolver.solve:(Lorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "solve": {
+        "name": "solve",
+        "pos": [
+            232,
+            240
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    233,
+                    234
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RRQRDecomposition$Solver.p:Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/RRQRDecomposition$Solver.upper:Lorg/apache/commons/math3/linear/DecompositionSolver;"
+                    ],
+                    [
+                        "8",
+                        "aload_1"
+                    ],
+                    [
+                        "9",
+                        "invokeinterface"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/linear/DecompositionSolver.multiply:(Lorg/apache/commons/math3/linear/RealMatrix;)Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "12",
+                        "0"
+                    ],
+                    [
+                        "14",
+                        "invokeinterface"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/linear/RealMatrix.getRowDimension:()I"
+                    ],
+                    [
+                        "17",
+                        "0"
+                    ],
+                    [
+                        "19",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getInverse": {
+        "name": "getInverse",
+        "pos": [
+            240,
+            243
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    241,
+                    242
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/RRQRDecomposition$Solver.p:Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/linear/MatrixUtils"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "invokestatic"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/linear/MatrixUtils.createRealIdentityMatrix:(I)Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/linear/RRQRDecomposition$Solver.solve:(Lorg/apache/commons/math3/linear/RealMatrix;)Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "16",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

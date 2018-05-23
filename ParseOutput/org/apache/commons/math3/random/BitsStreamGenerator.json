@@ -1,0 +1,1006 @@
+{
+    "nextBoolean": {
+        "name": "nextBoolean",
+        "pos": [
+            65,
+            70
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    66,
+                    67
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iconst_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/random/BitsStreamGenerator.next:(I)I"
+                    ],
+                    [
+                        "5",
+                        "ifeq"
+                    ],
+                    [
+                        "6",
+                        "7"
+                    ],
+                    [
+                        "8",
+                        "iconst_1"
+                    ],
+                    [
+                        "9",
+                        "goto"
+                    ],
+                    [
+                        "10",
+                        "4"
+                    ],
+                    [
+                        "12",
+                        "iconst_0"
+                    ],
+                    [
+                        "13",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "nextDouble": {
+        "name": "nextDouble",
+        "pos": [
+            70,
+            77
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    71,
+                    72
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "bipush"
+                    ],
+                    [
+                        "2",
+                        "26"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/random/BitsStreamGenerator.next:(I)I"
+                    ],
+                    [
+                        "6",
+                        "i2l"
+                    ],
+                    [
+                        "7",
+                        "bipush"
+                    ],
+                    [
+                        "8",
+                        "26"
+                    ],
+                    [
+                        "9",
+                        "lshl"
+                    ],
+                    [
+                        "10",
+                        "lstore_1"
+                    ],
+                    [
+                        "11",
+                        "aload_0"
+                    ],
+                    [
+                        "12",
+                        "bipush"
+                    ],
+                    [
+                        "13",
+                        "26"
+                    ],
+                    [
+                        "14",
+                        "invokevirtual"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/random/BitsStreamGenerator.next:(I)I"
+                    ],
+                    [
+                        "17",
+                        "istore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    72,
+                    73
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "18",
+                        "lload_1"
+                    ],
+                    [
+                        "19",
+                        "iload_3"
+                    ],
+                    [
+                        "20",
+                        "i2l"
+                    ],
+                    [
+                        "21",
+                        "lor"
+                    ],
+                    [
+                        "22",
+                        "l2d"
+                    ],
+                    [
+                        "23",
+                        "ldc2_w"
+                    ],
+                    [
+                        "24",
+                        "2.220446049250313e-16"
+                    ],
+                    [
+                        "26",
+                        "dmul"
+                    ],
+                    [
+                        "27",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    73,
+                    74
+                ],
+                "children": []
+            }
+        ]
+    },
+    "nextFloat": {
+        "name": "nextFloat",
+        "pos": [
+            77,
+            82
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    78,
+                    79
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "bipush"
+                    ],
+                    [
+                        "2",
+                        "23"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/random/BitsStreamGenerator.next:(I)I"
+                    ],
+                    [
+                        "6",
+                        "i2f"
+                    ],
+                    [
+                        "7",
+                        "ldc"
+                    ],
+                    [
+                        "8",
+                        "1.1920928955078125e-07"
+                    ],
+                    [
+                        "9",
+                        "fmul"
+                    ],
+                    [
+                        "10",
+                        "freturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "nextGaussian": {
+        "name": "nextGaussian",
+        "pos": [
+            82,
+            104
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    84,
+                    85
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/random/BitsStreamGenerator.nextGaussian:D"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "java/lang/Double.isNaN:(D)Z"
+                    ],
+                    [
+                        "7",
+                        "ifeq"
+                    ],
+                    [
+                        "8",
+                        "59"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    85,
+                    99
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            85,
+                            93
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    87,
+                                    88
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    88,
+                                    89
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    89,
+                                    90
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    90,
+                                    91
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    91,
+                                    92
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    92,
+                                    93
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            93,
+                            99
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    95,
+                                    96
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    96,
+                                    97
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    99,
+                    101
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "nextInt": {
+        "name": "nextInt",
+        "pos": [
+            123,
+            140
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    124,
+                    136
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            124,
+                            136
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    125,
+                                    128
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            125,
+                                            128
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    126,
+                                                    127
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    128,
+                                    129
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    129,
+                                    130
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "DoStatement",
+                                "pos": [
+                                    130,
+                                    134
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            130,
+                                            133
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    131,
+                                                    132
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    132,
+                                                    133
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    134,
+                                    135
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ThrowStatement",
+                "pos": [
+                    136,
+                    137
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "nextLong": {
+        "name": "nextLong",
+        "pos": [
+            157,
+            175
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    158,
+                    168
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            158,
+                            168
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    159,
+                                    160
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    160,
+                                    161
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "DoStatement",
+                                "pos": [
+                                    161,
+                                    166
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            161,
+                                            165
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    162,
+                                                    163
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    163,
+                                                    164
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    164,
+                                                    165
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    166,
+                                    167
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ThrowStatement",
+                "pos": [
+                    168,
+                    169
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "clear": {
+        "name": "clear",
+        "pos": [
+            175,
+            190
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    176,
+                    177
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "ldc2_w"
+                    ],
+                    [
+                        "2",
+                        "nan"
+                    ],
+                    [
+                        "4",
+                        "putfield"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/random/BitsStreamGenerator.nextGaussian:D"
+                    ],
+                    [
+                        "7",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "nextBytes": {
+        "name": "nextBytes",
+        "pos": [
+            209,
+            237
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    212,
+                    216
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            213,
+                            216
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    214,
+                                    215
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    216,
+                    221
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            217,
+                            221
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    218,
+                                    219
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    221,
+                    222
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "nextBytesFill": {
+        "name": "nextBytesFill",
+        "pos": [
+            237,
+            270
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    240,
+                    244
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_2"
+                    ],
+                    [
+                        "1",
+                        "istore"
+                    ],
+                    [
+                        "2",
+                        "#4"
+                    ],
+                    [
+                        "3",
+                        "iload"
+                    ],
+                    [
+                        "4",
+                        "#4"
+                    ],
+                    [
+                        "5",
+                        "iload_3"
+                    ],
+                    [
+                        "6",
+                        "ldc"
+                    ],
+                    [
+                        "7",
+                        "2147483644"
+                    ],
+                    [
+                        "8",
+                        "iand"
+                    ],
+                    [
+                        "9",
+                        "iadd"
+                    ],
+                    [
+                        "10",
+                        "istore"
+                    ],
+                    [
+                        "11",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    244,
+                    247
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "iload"
+                    ],
+                    [
+                        "13",
+                        "#4"
+                    ],
+                    [
+                        "14",
+                        "iload"
+                    ],
+                    [
+                        "15",
+                        "#5"
+                    ],
+                    [
+                        "16",
+                        "if_icmpge"
+                    ],
+                    [
+                        "17",
+                        "63"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    247,
+                    255
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            247,
+                            255
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    248,
+                                    249
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    249,
+                                    250
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    250,
+                                    251
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    251,
+                                    252
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    252,
+                                    253
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    255,
+                    258
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    258,
+                    269
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            258,
+                            269
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    259,
+                                    260
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "WhileStatement",
+                                "pos": [
+                                    260,
+                                    268
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            260,
+                                            268
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    261,
+                                                    262
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    262,
+                                                    267
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            262,
+                                                            264
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    263,
+                                                                    264
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            264,
+                                                            267
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "BreakStatement",
+                                                                "pos": [
+                                                                    265,
+                                                                    266
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

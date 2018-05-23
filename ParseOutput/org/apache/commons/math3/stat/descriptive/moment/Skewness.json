@@ -1,0 +1,655 @@
+{
+    "increment": {
+        "name": "increment",
+        "pos": [
+            98,
+            112
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    100,
+                    103
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            100,
+                            103
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    101,
+                                    102
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "getResult": {
+        "name": "getResult",
+        "pos": [
+            112,
+            131
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    115,
+                    118
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            115,
+                            118
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    116,
+                                    117
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    118,
+                    119
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    119,
+                    126
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            119,
+                            121
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    120,
+                                    121
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            121,
+                            126
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    122,
+                                    123
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    123,
+                                    125
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "getN": {
+        "name": "getN",
+        "pos": [
+            131,
+            138
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    132,
+                    133
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/stat/descriptive/moment/Skewness.moment:Lorg/apache/commons/math3/stat/descriptive/moment/ThirdMoment;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/stat/descriptive/moment/ThirdMoment.getN:()J"
+                    ],
+                    [
+                        "7",
+                        "lreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "clear": {
+        "name": "clear",
+        "pos": [
+            138,
+            161
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    140,
+                    143
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            140,
+                            143
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    141,
+                                    142
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "evaluate": {
+        "name": "evaluate",
+        "pos": [
+            161,
+            204
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    166,
+                    168
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "ldc2_w"
+                    ],
+                    [
+                        "1",
+                        "nan"
+                    ],
+                    [
+                        "3",
+                        "dstore"
+                    ],
+                    [
+                        "4",
+                        "#4"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "iload_2"
+                    ],
+                    [
+                        "8",
+                        "iload_3"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/stat/descriptive/moment/Skewness.test:([DII)Z"
+                    ],
+                    [
+                        "12",
+                        "ifeq"
+                    ],
+                    [
+                        "13",
+                        "172"
+                    ],
+                    [
+                        "15",
+                        "iload_3"
+                    ],
+                    [
+                        "16",
+                        "iconst_2"
+                    ],
+                    [
+                        "17",
+                        "if_icmple"
+                    ],
+                    [
+                        "18",
+                        "167"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    168,
+                    198
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            168,
+                            198
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    169,
+                                    171
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    171,
+                                    176
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    176,
+                                    177
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    177,
+                                    178
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    178,
+                                    183
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            178,
+                                            183
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    179,
+                                                    180
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    180,
+                                                    181
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    181,
+                                                    182
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    183,
+                                    185
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    185,
+                                    186
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    186,
+                                    190
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            186,
+                                            190
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    187,
+                                                    188
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    188,
+                                                    189
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    190,
+                                    193
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    193,
+                                    196
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    196,
+                                    197
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    198,
+                    199
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "copy": {
+        "name": "copy",
+        "pos": [
+            220,
+            228
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    222,
+                    223
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    223,
+                    224
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "8",
+                        "aload_1"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/stat/descriptive/moment/Skewness.getDataRef:()[D"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/stat/descriptive/moment/Skewness.setData:([D)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    224,
+                    225
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "aload_1"
+                    ],
+                    [
+                        "17",
+                        "new"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/stat/descriptive/moment/ThirdMoment"
+                    ],
+                    [
+                        "20",
+                        "dup"
+                    ],
+                    [
+                        "21",
+                        "aload_0"
+                    ],
+                    [
+                        "22",
+                        "getfield"
+                    ],
+                    [
+                        "23",
+                        "org/apache/commons/math3/stat/descriptive/moment/Skewness.moment:Lorg/apache/commons/math3/stat/descriptive/moment/ThirdMoment;"
+                    ],
+                    [
+                        "25",
+                        "invokevirtual"
+                    ],
+                    [
+                        "26",
+                        "org/apache/commons/math3/stat/descriptive/moment/ThirdMoment.copy:()Lorg/apache/commons/math3/stat/descriptive/moment/ThirdMoment;"
+                    ],
+                    [
+                        "28",
+                        "invokespecial"
+                    ],
+                    [
+                        "29",
+                        "org/apache/commons/math3/stat/descriptive/moment/ThirdMoment.<init>:(Lorg/apache/commons/math3/stat/descriptive/moment/ThirdMoment;)V"
+                    ],
+                    [
+                        "31",
+                        "putfield"
+                    ],
+                    [
+                        "32",
+                        "org/apache/commons/math3/stat/descriptive/moment/Skewness.moment:Lorg/apache/commons/math3/stat/descriptive/moment/ThirdMoment;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    225,
+                    226
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "34",
+                        "aload_1"
+                    ],
+                    [
+                        "35",
+                        "aload_0"
+                    ],
+                    [
+                        "36",
+                        "getfield"
+                    ],
+                    [
+                        "37",
+                        "org/apache/commons/math3/stat/descriptive/moment/Skewness.incMoment:Z"
+                    ],
+                    [
+                        "39",
+                        "putfield"
+                    ],
+                    [
+                        "40",
+                        "org/apache/commons/math3/stat/descriptive/moment/Skewness.incMoment:Z"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    226,
+                    227
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "42",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

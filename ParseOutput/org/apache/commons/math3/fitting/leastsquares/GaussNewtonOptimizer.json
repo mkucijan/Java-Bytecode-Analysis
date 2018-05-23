@@ -1,0 +1,784 @@
+{
+    "getDecomposition": {
+        "name": "getDecomposition",
+        "pos": [
+            192,
+            202
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    193,
+                    194
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/GaussNewtonOptimizer.decomposition:Lorg/apache/commons/math3/fitting/leastsquares/GaussNewtonOptimizer$Decomposition;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "withDecomposition": {
+        "name": "withDecomposition",
+        "pos": [
+            202,
+            207
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    203,
+                    204
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/fitting/leastsquares/GaussNewtonOptimizer"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/fitting/leastsquares/GaussNewtonOptimizer.<init>:(Lorg/apache/commons/math3/fitting/leastsquares/GaussNewtonOptimizer$Decomposition;)V"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "optimize": {
+        "name": "optimize",
+        "pos": [
+            207,
+            251
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    209,
+                    210
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokeinterface"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem.getIterationCounter:()Lorg/apache/commons/math3/util/Incrementor;"
+                    ],
+                    [
+                        "4",
+                        "0"
+                    ],
+                    [
+                        "6",
+                        "astore_2"
+                    ],
+                    [
+                        "7",
+                        "aload_1"
+                    ],
+                    [
+                        "8",
+                        "invokeinterface"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem.getConvergenceChecker:()Lorg/apache/commons/math3/optim/ConvergenceChecker;"
+                    ],
+                    [
+                        "11",
+                        "0"
+                    ],
+                    [
+                        "13",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    210,
+                    211
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "14",
+                        "aload_1"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    211,
+                    215
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "15",
+                        "invokeinterface"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem.org/apache/commons/math3/exception/NullArgumentException"
+                    ],
+                    [
+                        "18",
+                        "0"
+                    ],
+                    [
+                        "20",
+                        "astore"
+                    ],
+                    [
+                        "21",
+                        "#4"
+                    ],
+                    [
+                        "22",
+                        "aload"
+                    ],
+                    [
+                        "23",
+                        "#4"
+                    ],
+                    [
+                        "24",
+                        "ifnonnull"
+                    ],
+                    [
+                        "25",
+                        "11"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    215,
+                    219
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            215,
+                            219
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    216,
+                                    217
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    219,
+                    222
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    222,
+                    223
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    223,
+                    248
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            223,
+                            248
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    224,
+                                    227
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    227,
+                                    229
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    229,
+                                    230
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    230,
+                                    231
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    231,
+                                    232
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    232,
+                                    233
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    233,
+                                    236
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    236,
+                                    244
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            237,
+                                            244
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    238,
+                                                    241
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    244,
+                                    246
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    246,
+                                    247
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "toString": {
+        "name": "toString",
+        "pos": [
+            251,
+            265
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    253,
+                    256
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/lang/StringBuilder"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "invokespecial"
+                    ],
+                    [
+                        "5",
+                        "java/lang/StringBuilder.<init>:()V"
+                    ],
+                    [
+                        "7",
+                        "ldc"
+                    ],
+                    [
+                        "8",
+                        "GaussNewtonOptimizer{decomposition="
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "getfield"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/fitting/leastsquares/GaussNewtonOptimizer.decomposition:Lorg/apache/commons/math3/fitting/leastsquares/GaussNewtonOptimizer$Decomposition;"
+                    ],
+                    [
+                        "16",
+                        "invokevirtual"
+                    ],
+                    [
+                        "17",
+                        "java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "19",
+                        "bipush"
+                    ],
+                    [
+                        "20",
+                        "125"
+                    ],
+                    [
+                        "21",
+                        "invokevirtual"
+                    ],
+                    [
+                        "22",
+                        "java/lang/StringBuilder.append:(C)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "24",
+                        "invokevirtual"
+                    ],
+                    [
+                        "25",
+                        "java/lang/StringBuilder.toString:()Ljava/lang/String;"
+                    ],
+                    [
+                        "27",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "computeNormalMatrix": {
+        "name": "computeNormalMatrix",
+        "pos": [
+            265,
+            299
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    268,
+                    269
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokeinterface"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealMatrix.getColumnDimension:()I"
+                    ],
+                    [
+                        "4",
+                        "0"
+                    ],
+                    [
+                        "6",
+                        "istore_2"
+                    ],
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "invokeinterface"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/linear/MatrixUtils"
+                    ],
+                    [
+                        "11",
+                        "0"
+                    ],
+                    [
+                        "13",
+                        "istore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    269,
+                    271
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "14",
+                        "iload_3"
+                    ],
+                    [
+                        "15",
+                        "iload_3"
+                    ],
+                    [
+                        "16",
+                        "invokestatic"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/linear/MatrixUtils.createRealMatrix:(II)Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "19",
+                        "astore"
+                    ],
+                    [
+                        "20",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    271,
+                    272
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "21",
+                        "new"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/linear/ArrayRealVector"
+                    ],
+                    [
+                        "24",
+                        "dup"
+                    ],
+                    [
+                        "25",
+                        "iload_3"
+                    ],
+                    [
+                        "26",
+                        "invokespecial"
+                    ],
+                    [
+                        "27",
+                        "org/apache/commons/math3/linear/ArrayRealVector.<init>:(I)V"
+                    ],
+                    [
+                        "29",
+                        "astore"
+                    ],
+                    [
+                        "30",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    272,
+                    274
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "31",
+                        "iconst_0"
+                    ],
+                    [
+                        "32",
+                        "istore"
+                    ],
+                    [
+                        "33",
+                        "#6"
+                    ],
+                    [
+                        "34",
+                        "iload"
+                    ],
+                    [
+                        "35",
+                        "#6"
+                    ],
+                    [
+                        "36",
+                        "iload_2"
+                    ],
+                    [
+                        "37",
+                        "if_icmpge"
+                    ],
+                    [
+                        "38",
+                        "131"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    274,
+                    291
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            274,
+                            291
+                        ],
+                        "children": [
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    276,
+                                    282
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            276,
+                                            282
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    277,
+                                                    279
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    282,
+                                    289
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            282,
+                                            289
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ForStatement",
+                                                "pos": [
+                                                    284,
+                                                    288
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            284,
+                                                            288
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    285,
+                                                                    287
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    291,
+                    296
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            291,
+                            296
+                        ],
+                        "children": [
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    292,
+                                    295
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            292,
+                                            295
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    293,
+                                                    294
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    296,
+                    297
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

@@ -1,0 +1,333 @@
+{
+    "getObservationSize": {
+        "name": "getObservationSize",
+        "pos": [
+            407,
+            412
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    408,
+                    409
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresFactory$LocalLeastSquaresProblem.target:Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/linear/RealVector.getDimension:()I"
+                    ],
+                    [
+                        "7",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getParameterSize": {
+        "name": "getParameterSize",
+        "pos": [
+            412,
+            417
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    413,
+                    414
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresFactory$LocalLeastSquaresProblem.start:Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/linear/RealVector.getDimension:()I"
+                    ],
+                    [
+                        "7",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getStart": {
+        "name": "getStart",
+        "pos": [
+            417,
+            422
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    418,
+                    419
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresFactory$LocalLeastSquaresProblem.start:Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "4",
+                        "ifnonnull"
+                    ],
+                    [
+                        "5",
+                        "7"
+                    ],
+                    [
+                        "7",
+                        "aconst_null"
+                    ],
+                    [
+                        "8",
+                        "goto"
+                    ],
+                    [
+                        "9",
+                        "10"
+                    ],
+                    [
+                        "11",
+                        "aload_0"
+                    ],
+                    [
+                        "12",
+                        "getfield"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresFactory$LocalLeastSquaresProblem.start:Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "15",
+                        "invokevirtual"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/linear/RealVector.copy:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "18",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "evaluate": {
+        "name": "evaluate",
+        "pos": [
+            422,
+            445
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    424,
+                    428
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresFactory$LocalLeastSquaresProblem.paramValidator:Lorg/apache/commons/math3/fitting/leastsquares/ParameterValidator;"
+                    ],
+                    [
+                        "4",
+                        "ifnonnull"
+                    ],
+                    [
+                        "5",
+                        "10"
+                    ],
+                    [
+                        "7",
+                        "aload_1"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/linear/RealVector.copy:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "11",
+                        "goto"
+                    ],
+                    [
+                        "12",
+                        "16"
+                    ],
+                    [
+                        "14",
+                        "aload_0"
+                    ],
+                    [
+                        "15",
+                        "getfield"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresFactory$LocalLeastSquaresProblem.paramValidator:Lorg/apache/commons/math3/fitting/leastsquares/ParameterValidator;"
+                    ],
+                    [
+                        "18",
+                        "aload_1"
+                    ],
+                    [
+                        "19",
+                        "invokevirtual"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/linear/RealVector.copy:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "22",
+                        "invokeinterface"
+                    ],
+                    [
+                        "23",
+                        "org/apache/commons/math3/fitting/leastsquares/ParameterValidator.org/apache/commons/math3/fitting/leastsquares/LeastSquaresFactory$LocalLeastSquaresProblem$LazyUnweightedEvaluation"
+                    ],
+                    [
+                        "25",
+                        "0"
+                    ],
+                    [
+                        "27",
+                        "astore_2"
+                    ],
+                    [
+                        "28",
+                        "aload_0"
+                    ],
+                    [
+                        "29",
+                        "getfield"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresFactory$LocalLeastSquaresProblem.lazyEvaluation:Z"
+                    ],
+                    [
+                        "32",
+                        "ifeq"
+                    ],
+                    [
+                        "33",
+                        "24"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    428,
+                    440
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            428,
+                            432
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    429,
+                                    432
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            432,
+                            440
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    434,
+                                    435
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    435,
+                                    439
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

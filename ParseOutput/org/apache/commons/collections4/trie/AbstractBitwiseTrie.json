@@ -1,0 +1,680 @@
+{
+    "getKeyAnalyzer": {
+        "name": "getKeyAnalyzer",
+        "pos": [
+            60,
+            64
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    61,
+                    62
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/trie/AbstractBitwiseTrie.keyAnalyzer:Lorg/apache/commons/collections4/trie/KeyAnalyzer;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "toString": {
+        "name": "toString",
+        "pos": [
+            64,
+            78
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    66,
+                    67
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/lang/StringBuilder"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "invokespecial"
+                    ],
+                    [
+                        "5",
+                        "java/lang/StringBuilder.<init>:()V"
+                    ],
+                    [
+                        "7",
+                        "astore_1"
+                    ],
+                    [
+                        "8",
+                        "aload_1"
+                    ],
+                    [
+                        "9",
+                        "ldc"
+                    ],
+                    [
+                        "10",
+                        "Trie["
+                    ],
+                    [
+                        "11",
+                        "invokevirtual"
+                    ],
+                    [
+                        "12",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "14",
+                        "aload_0"
+                    ],
+                    [
+                        "15",
+                        "invokevirtual"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/collections4/trie/AbstractBitwiseTrie.size:()I"
+                    ],
+                    [
+                        "18",
+                        "invokevirtual"
+                    ],
+                    [
+                        "19",
+                        "java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "21",
+                        "ldc"
+                    ],
+                    [
+                        "22",
+                        "]={\n"
+                    ],
+                    [
+                        "23",
+                        "invokevirtual"
+                    ],
+                    [
+                        "24",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "26",
+                        "pop"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    67,
+                    68
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "27",
+                        "aload_0"
+                    ],
+                    [
+                        "28",
+                        "invokevirtual"
+                    ],
+                    [
+                        "29",
+                        "org/apache/commons/collections4/trie/AbstractBitwiseTrie.entrySet:()Ljava/util/Set;"
+                    ],
+                    [
+                        "31",
+                        "invokeinterface"
+                    ],
+                    [
+                        "32",
+                        "java/util/Set.java/util/Iterator"
+                    ],
+                    [
+                        "34",
+                        "0"
+                    ],
+                    [
+                        "36",
+                        "astore_2"
+                    ],
+                    [
+                        "37",
+                        "aload_2"
+                    ],
+                    [
+                        "38",
+                        "invokeinterface"
+                    ],
+                    [
+                        "39",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "41",
+                        "0"
+                    ],
+                    [
+                        "43",
+                        "ifeq"
+                    ],
+                    [
+                        "44",
+                        "32"
+                    ],
+                    [
+                        "46",
+                        "aload_2"
+                    ],
+                    [
+                        "47",
+                        "invokeinterface"
+                    ],
+                    [
+                        "48",
+                        "java/util/Iterator.java/util/Map"
+                    ],
+                    [
+                        "50",
+                        "0"
+                    ],
+                    [
+                        "52",
+                        "checkcast"
+                    ],
+                    [
+                        "53",
+                        "java/util/Map$Entry"
+                    ],
+                    [
+                        "55",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    68,
+                    71
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            68,
+                            71
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    69,
+                                    70
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    71,
+                    72
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    72,
+                    73
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "castKey": {
+        "name": "castKey",
+        "pos": [
+            78,
+            88
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    80,
+                    81
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "lengthInBits": {
+        "name": "lengthInBits",
+        "pos": [
+            88,
+            101
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    89,
+                    93
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            89,
+                            93
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    90,
+                                    91
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    93,
+                    94
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "bitsPerElement": {
+        "name": "bitsPerElement",
+        "pos": [
+            101,
+            110
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    102,
+                    103
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/trie/AbstractBitwiseTrie.keyAnalyzer:Lorg/apache/commons/collections4/trie/KeyAnalyzer;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/trie/KeyAnalyzer.bitsPerElement:()I"
+                    ],
+                    [
+                        "7",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isBitSet": {
+        "name": "isBitSet",
+        "pos": [
+            110,
+            120
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    111,
+                    114
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            111,
+                            114
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    112,
+                                    113
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    114,
+                    115
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "bitIndex": {
+        "name": "bitIndex",
+        "pos": [
+            120,
+            127
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    121,
+                    122
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/trie/AbstractBitwiseTrie.keyAnalyzer:Lorg/apache/commons/collections4/trie/KeyAnalyzer;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "iconst_0"
+                    ],
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "aload_1"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/collections4/trie/AbstractBitwiseTrie.lengthInBits:(Ljava/lang/Object;)I"
+                    ],
+                    [
+                        "11",
+                        "aload_2"
+                    ],
+                    [
+                        "12",
+                        "iconst_0"
+                    ],
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "aload_2"
+                    ],
+                    [
+                        "15",
+                        "invokevirtual"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/collections4/trie/AbstractBitwiseTrie.lengthInBits:(Ljava/lang/Object;)I"
+                    ],
+                    [
+                        "18",
+                        "invokevirtual"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/collections4/trie/KeyAnalyzer.bitIndex:(Ljava/lang/Object;IILjava/lang/Object;II)I"
+                    ],
+                    [
+                        "21",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "compareKeys": {
+        "name": "compareKeys",
+        "pos": [
+            127,
+            140
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    128,
+                    134
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            128,
+                            130
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    129,
+                                    130
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "IfStatement",
+                        "pos": [
+                            130,
+                            134
+                        ],
+                        "children": [
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    130,
+                                    134
+                                ],
+                                "children": [
+                                    {
+                                        "name": "ReturnStatement",
+                                        "pos": [
+                                            131,
+                                            132
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    134,
+                    135
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "compare": {
+        "name": "compare",
+        "pos": [
+            140,
+            147
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    141,
+                    142
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "ifnonnull"
+                    ],
+                    [
+                        "2",
+                        "15"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "ifnonnull"
+                    ],
+                    [
+                        "6",
+                        "7"
+                    ],
+                    [
+                        "8",
+                        "iconst_1"
+                    ],
+                    [
+                        "9",
+                        "goto"
+                    ],
+                    [
+                        "10",
+                        "12"
+                    ],
+                    [
+                        "12",
+                        "iconst_0"
+                    ],
+                    [
+                        "13",
+                        "goto"
+                    ],
+                    [
+                        "14",
+                        "8"
+                    ],
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "aload_1"
+                    ],
+                    [
+                        "18",
+                        "invokevirtual"
+                    ],
+                    [
+                        "19",
+                        "java/lang/Object.equals:(Ljava/lang/Object;)Z"
+                    ],
+                    [
+                        "21",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

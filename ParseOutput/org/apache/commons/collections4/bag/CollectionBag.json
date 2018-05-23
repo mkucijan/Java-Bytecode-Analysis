@@ -1,0 +1,779 @@
+{
+    "collectionBag": {
+        "name": "collectionBag",
+        "pos": [
+            54,
+            65
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    55,
+                    56
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/bag/CollectionBag"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/bag/CollectionBag.<init>:(Lorg/apache/commons/collections4/Bag;)V"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "writeObject": {
+        "name": "writeObject",
+        "pos": [
+            76,
+            89
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    77,
+                    78
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectOutputStream.defaultWriteObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/bag/CollectionBag.decorated:()Lorg/apache/commons/collections4/Bag;"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "java/io/ObjectOutputStream.writeObject:(Ljava/lang/Object;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    78,
+                    79
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "readObject": {
+        "name": "readObject",
+        "pos": [
+            89,
+            109
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    91,
+                    92
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectInputStream.defaultReadObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "java/io/ObjectInputStream.readObject:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "9",
+                        "checkcast"
+                    ],
+                    [
+                        "10",
+                        "java/util/Collection"
+                    ],
+                    [
+                        "12",
+                        "invokevirtual"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/collections4/bag/CollectionBag.setCollection:(Ljava/util/Collection;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    92,
+                    93
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "15",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "containsAll": {
+        "name": "containsAll",
+        "pos": [
+            109,
+            130
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    111,
+                    112
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokeinterface"
+                    ],
+                    [
+                        "2",
+                        "java/util/Collection.java/util/Iterator"
+                    ],
+                    [
+                        "4",
+                        "0"
+                    ],
+                    [
+                        "6",
+                        "astore_2"
+                    ],
+                    [
+                        "7",
+                        "aload_2"
+                    ],
+                    [
+                        "8",
+                        "invokeinterface"
+                    ],
+                    [
+                        "9",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "11",
+                        "0"
+                    ],
+                    [
+                        "13",
+                        "ifeq"
+                    ],
+                    [
+                        "14",
+                        "18"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    112,
+                    117
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            112,
+                            117
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    113,
+                                    116
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            113,
+                                            116
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    114,
+                                                    115
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    117,
+                    118
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "add": {
+        "name": "add",
+        "pos": [
+            237,
+            243
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    239,
+                    240
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/bag/CollectionBag.decorated:()Lorg/apache/commons/collections4/Bag;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "iload_2"
+                    ],
+                    [
+                        "6",
+                        "invokeinterface"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/Bag.remove:(Ljava/lang/Object;I)Z"
+                    ],
+                    [
+                        "9",
+                        "0"
+                    ],
+                    [
+                        "11",
+                        "pop"
+                    ],
+                    [
+                        "12",
+                        "iconst_1"
+                    ],
+                    [
+                        "13",
+                        "ireturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    240,
+                    241
+                ],
+                "children": []
+            }
+        ]
+    },
+    "addAll": {
+        "name": "addAll",
+        "pos": [
+            135,
+            156
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    137,
+                    138
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_0"
+                    ],
+                    [
+                        "1",
+                        "istore_2"
+                    ],
+                    [
+                        "2",
+                        "aload_1"
+                    ],
+                    [
+                        "3",
+                        "invokeinterface"
+                    ],
+                    [
+                        "4",
+                        "java/util/Collection.java/util/Iterator"
+                    ],
+                    [
+                        "6",
+                        "0"
+                    ],
+                    [
+                        "8",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    138,
+                    139
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "aload_3"
+                    ],
+                    [
+                        "10",
+                        "invokeinterface"
+                    ],
+                    [
+                        "11",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "13",
+                        "0"
+                    ],
+                    [
+                        "15",
+                        "ifeq"
+                    ],
+                    [
+                        "16",
+                        "34"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    139,
+                    143
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            139,
+                            143
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    140,
+                                    141
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    141,
+                                    142
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    143,
+                    144
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "remove": {
+        "name": "remove",
+        "pos": [
+            156,
+            170
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    158,
+                    159
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "iconst_1"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/collections4/bag/CollectionBag.remove:(Ljava/lang/Object;I)Z"
+                    ],
+                    [
+                        "6",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "removeAll": {
+        "name": "removeAll",
+        "pos": [
+            170,
+            204
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    172,
+                    185
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            172,
+                            181
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    173,
+                                    174
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    174,
+                                    175
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "WhileStatement",
+                                "pos": [
+                                    175,
+                                    180
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            175,
+                                            180
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    176,
+                                                    177
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    177,
+                                                    178
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    178,
+                                                    179
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    180,
+                                    181
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            181,
+                            185
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    183,
+                                    184
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "retainAll": {
+        "name": "retainAll",
+        "pos": [
+            204,
+            237
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    206,
+                    220
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            206,
+                            216
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    207,
+                                    208
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    208,
+                                    209
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "WhileStatement",
+                                "pos": [
+                                    209,
+                                    215
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            209,
+                                            215
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    210,
+                                                    214
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            210,
+                                                            214
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    211,
+                                                                    212
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    212,
+                                                                    213
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    215,
+                                    216
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            216,
+                            220
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    218,
+                                    219
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

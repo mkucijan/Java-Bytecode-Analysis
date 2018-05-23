@@ -1,0 +1,601 @@
+{
+    "getDefaultNumberFormat": {
+        "name": "getDefaultNumberFormat",
+        "pos": [
+            90,
+            101
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    91,
+                    92
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "java/text/NumberFormat.getNumberInstance:(Ljava/util/Locale;)Ljava/text/NumberFormat;"
+                    ],
+                    [
+                        "4",
+                        "astore_1"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "iconst_0"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "java/text/NumberFormat.setMaximumFractionDigits:(I)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    92,
+                    93
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "aload_1"
+                    ],
+                    [
+                        "11",
+                        "iconst_1"
+                    ],
+                    [
+                        "12",
+                        "invokevirtual"
+                    ],
+                    [
+                        "13",
+                        "java/text/NumberFormat.setParseIntegerOnly:(Z)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    93,
+                    94
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "15",
+                        "aload_1"
+                    ],
+                    [
+                        "16",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    94,
+                    95
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getDenominatorFormat": {
+        "name": "getDenominatorFormat",
+        "pos": [
+            101,
+            109
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    102,
+                    103
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fraction/AbstractFormat.denominatorFormat:Ljava/text/NumberFormat;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNumeratorFormat": {
+        "name": "getNumeratorFormat",
+        "pos": [
+            109,
+            118
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    110,
+                    111
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fraction/AbstractFormat.numeratorFormat:Ljava/text/NumberFormat;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setDenominatorFormat": {
+        "name": "setDenominatorFormat",
+        "pos": [
+            118,
+            130
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    119,
+                    122
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            119,
+                            122
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    120,
+                                    121
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    122,
+                    123
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "setNumeratorFormat": {
+        "name": "setNumeratorFormat",
+        "pos": [
+            130,
+            143
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    131,
+                    134
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            131,
+                            134
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    132,
+                                    133
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    134,
+                    135
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "parseAndIgnoreWhitespace": {
+        "name": "parseAndIgnoreWhitespace",
+        "pos": [
+            143,
+            155
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    145,
+                    146
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/fraction/AbstractFormat.parseNextCharacter:(Ljava/lang/String;Ljava/text/ParsePosition;)C"
+                    ],
+                    [
+                        "5",
+                        "pop"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "aload_1"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "java/text/ParsePosition.getIndex:()I"
+                    ],
+                    [
+                        "11",
+                        "iconst_1"
+                    ],
+                    [
+                        "12",
+                        "isub"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "java/text/ParsePosition.setIndex:(I)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    146,
+                    147
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "parseNextCharacter": {
+        "name": "parseNextCharacter",
+        "pos": [
+            155,
+            186
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    157,
+                    158
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/text/ParsePosition.getIndex:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_2"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "java/lang/String.length:()I"
+                    ],
+                    [
+                        "9",
+                        "istore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    158,
+                    159
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "iconst_0"
+                    ],
+                    [
+                        "11",
+                        "istore"
+                    ],
+                    [
+                        "12",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    159,
+                    161
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "13",
+                        "iload_2"
+                    ],
+                    [
+                        "14",
+                        "iload_3"
+                    ],
+                    [
+                        "15",
+                        "if_icmpge"
+                    ],
+                    [
+                        "16",
+                        "40"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    161,
+                    173
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            161,
+                            173
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    162,
+                                    163
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "DoStatement",
+                                "pos": [
+                                    163,
+                                    166
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            163,
+                                            165
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    164,
+                                                    165
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    166,
+                                    168
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    168,
+                                    171
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            168,
+                                            171
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    169,
+                                                    170
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    173,
+                    174
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "format": {
+        "name": "format",
+        "pos": [
+            203,
+            209
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    206,
+                    207
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "lload_1"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "java/lang/Long.valueOf:(J)Ljava/lang/Long;"
+                    ],
+                    [
+                        "5",
+                        "aload_3"
+                    ],
+                    [
+                        "6",
+                        "aload"
+                    ],
+                    [
+                        "7",
+                        "#4"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/fraction/AbstractFormat.format:(Ljava/lang/Object;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;"
+                    ],
+                    [
+                        "11",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

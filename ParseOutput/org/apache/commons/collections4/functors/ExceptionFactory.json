@@ -1,0 +1,115 @@
+{
+    "exceptionFactory": {
+        "name": "exceptionFactory",
+        "pos": [
+            46,
+            54
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    48,
+                    49
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "getstatic"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/functors/ExceptionFactory.INSTANCE:Lorg/apache/commons/collections4/Factory;"
+                    ],
+                    [
+                        "3",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "create": {
+        "name": "create",
+        "pos": [
+            64,
+            68
+        ],
+        "children": [
+            {
+                "name": "ThrowStatement",
+                "pos": [
+                    65,
+                    66
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/FunctorException"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "ldc"
+                    ],
+                    [
+                        "5",
+                        "ExceptionFactory invoked"
+                    ],
+                    [
+                        "6",
+                        "invokespecial"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/FunctorException.<init>:(Ljava/lang/String;)V"
+                    ],
+                    [
+                        "9",
+                        "athrow"
+                    ]
+                ]
+            }
+        ]
+    },
+    "readResolve": {
+        "name": "readResolve",
+        "pos": [
+            68,
+            72
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    69,
+                    70
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "getstatic"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/functors/ExceptionFactory.INSTANCE:Lorg/apache/commons/collections4/Factory;"
+                    ],
+                    [
+                        "3",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

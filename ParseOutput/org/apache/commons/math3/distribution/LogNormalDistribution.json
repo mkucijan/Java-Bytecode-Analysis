@@ -1,0 +1,846 @@
+{
+    "getScale": {
+        "name": "getScale",
+        "pos": [
+            183,
+            192
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    184,
+                    185
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/LogNormalDistribution.scale:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getShape": {
+        "name": "getShape",
+        "pos": [
+            192,
+            207
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    193,
+                    194
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/LogNormalDistribution.shape:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "density": {
+        "name": "density",
+        "pos": [
+            207,
+            220
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    208,
+                    211
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            208,
+                            211
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    209,
+                                    210
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    211,
+                    212
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    212,
+                    213
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    213,
+                    214
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "logDensity": {
+        "name": "logDensity",
+        "pos": [
+            220,
+            246
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    222,
+                    225
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            222,
+                            225
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    223,
+                                    224
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    225,
+                    226
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    226,
+                    227
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    227,
+                    228
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    228,
+                    229
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "cumulativeProbability": {
+        "name": "cumulativeProbability",
+        "pos": [
+            262,
+            269
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    265,
+                    266
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "dload_1"
+                    ],
+                    [
+                        "2",
+                        "dload_3"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/distribution/LogNormalDistribution.probability:(DD)D"
+                    ],
+                    [
+                        "6",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "probability": {
+        "name": "probability",
+        "pos": [
+            269,
+            287
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    273,
+                    277
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            273,
+                            277
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    274,
+                                    276
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    277,
+                    280
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            277,
+                            280
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    278,
+                                    279
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    280,
+                    281
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    281,
+                    282
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    282,
+                    283
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    283,
+                    284
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getSolverAbsoluteAccuracy": {
+        "name": "getSolverAbsoluteAccuracy",
+        "pos": [
+            287,
+            298
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    289,
+                    290
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/LogNormalDistribution.solverAbsoluteAccuracy:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNumericalMean": {
+        "name": "getNumericalMean",
+        "pos": [
+            298,
+            309
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    299,
+                    300
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/LogNormalDistribution.shape:D"
+                    ],
+                    [
+                        "4",
+                        "dstore_1"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "getfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/distribution/LogNormalDistribution.scale:D"
+                    ],
+                    [
+                        "9",
+                        "dload_1"
+                    ],
+                    [
+                        "10",
+                        "dload_1"
+                    ],
+                    [
+                        "11",
+                        "dmul"
+                    ],
+                    [
+                        "12",
+                        "ldc2_w"
+                    ],
+                    [
+                        "13",
+                        "2.0"
+                    ],
+                    [
+                        "15",
+                        "ddiv"
+                    ],
+                    [
+                        "16",
+                        "dadd"
+                    ],
+                    [
+                        "17",
+                        "invokestatic"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/util/FastMath.exp:(D)D"
+                    ],
+                    [
+                        "20",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    300,
+                    301
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getNumericalVariance": {
+        "name": "getNumericalVariance",
+        "pos": [
+            309,
+            322
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    310,
+                    311
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/LogNormalDistribution.shape:D"
+                    ],
+                    [
+                        "4",
+                        "dstore_1"
+                    ],
+                    [
+                        "5",
+                        "dload_1"
+                    ],
+                    [
+                        "6",
+                        "dload_1"
+                    ],
+                    [
+                        "7",
+                        "dmul"
+                    ],
+                    [
+                        "8",
+                        "dstore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    311,
+                    312
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "dload_3"
+                    ],
+                    [
+                        "10",
+                        "invokestatic"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/util/FastMath.expm1:(D)D"
+                    ],
+                    [
+                        "13",
+                        "ldc2_w"
+                    ],
+                    [
+                        "14",
+                        "2.0"
+                    ],
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "getfield"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/distribution/LogNormalDistribution.scale:D"
+                    ],
+                    [
+                        "20",
+                        "dmul"
+                    ],
+                    [
+                        "21",
+                        "dload_3"
+                    ],
+                    [
+                        "22",
+                        "dadd"
+                    ],
+                    [
+                        "23",
+                        "invokestatic"
+                    ],
+                    [
+                        "24",
+                        "org/apache/commons/math3/util/FastMath.exp:(D)D"
+                    ],
+                    [
+                        "26",
+                        "dmul"
+                    ],
+                    [
+                        "27",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    312,
+                    313
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getSupportLowerBound": {
+        "name": "getSupportLowerBound",
+        "pos": [
+            322,
+            335
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    323,
+                    324
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dconst_0"
+                    ],
+                    [
+                        "1",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSupportUpperBound": {
+        "name": "getSupportUpperBound",
+        "pos": [
+            335,
+            340
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    336,
+                    337
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "ldc2_w"
+                    ],
+                    [
+                        "1",
+                        "inf"
+                    ],
+                    [
+                        "3",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportLowerBoundInclusive": {
+        "name": "isSupportLowerBoundInclusive",
+        "pos": [
+            340,
+            345
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    341,
+                    342
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_1"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportUpperBoundInclusive": {
+        "name": "isSupportUpperBoundInclusive",
+        "pos": [
+            345,
+            356
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    346,
+                    347
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_0"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportConnected": {
+        "name": "isSupportConnected",
+        "pos": [
+            356,
+            361
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    357,
+                    358
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_1"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "sample": {
+        "name": "sample",
+        "pos": [
+            361,
+            366
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    363,
+                    364
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/LogNormalDistribution.random:Lorg/apache/commons/math3/random/RandomGenerator;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/random/RandomGenerator.sqrt:(D)D"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "dstore_1"
+                    ],
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "getfield"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/distribution/LogNormalDistribution.scale:D"
+                    ],
+                    [
+                        "14",
+                        "aload_0"
+                    ],
+                    [
+                        "15",
+                        "getfield"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/distribution/LogNormalDistribution.shape:D"
+                    ],
+                    [
+                        "18",
+                        "dload_1"
+                    ],
+                    [
+                        "19",
+                        "dmul"
+                    ],
+                    [
+                        "20",
+                        "dadd"
+                    ],
+                    [
+                        "21",
+                        "invokestatic"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/util/FastMath.exp:(D)D"
+                    ],
+                    [
+                        "24",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    364,
+                    365
+                ],
+                "children": []
+            }
+        ]
+    }
+}

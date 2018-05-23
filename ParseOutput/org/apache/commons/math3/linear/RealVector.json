@@ -1,0 +1,4687 @@
+{
+    "addToEntry": {
+        "name": "addToEntry",
+        "pos": [
+            96,
+            107
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    98,
+                    99
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "aload_0"
+                    ],
+                    [
+                        "3",
+                        "iload_1"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/linear/RealVector.getEntry:(I)D"
+                    ],
+                    [
+                        "7",
+                        "dload_2"
+                    ],
+                    [
+                        "8",
+                        "dadd"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/linear/RealVector.setEntry:(ID)V"
+                    ],
+                    [
+                        "12",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "checkVectorDimensions": {
+        "name": "checkVectorDimensions",
+        "pos": [
+            174,
+            188
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    176,
+                    177
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.getDimension:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_2"
+                    ],
+                    [
+                        "5",
+                        "iload_2"
+                    ],
+                    [
+                        "6",
+                        "iload_1"
+                    ],
+                    [
+                        "7",
+                        "if_icmpeq"
+                    ],
+                    [
+                        "8",
+                        "13"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    177,
+                    180
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            177,
+                            180
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    178,
+                                    179
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "checkIndex": {
+        "name": "checkIndex",
+        "pos": [
+            188,
+            205
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    189,
+                    194
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            190,
+                            194
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    191,
+                                    193
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "checkIndices": {
+        "name": "checkIndices",
+        "pos": [
+            205,
+            232
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    207,
+                    208
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.getDimension:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_3"
+                    ],
+                    [
+                        "5",
+                        "iload_1"
+                    ],
+                    [
+                        "6",
+                        "iflt"
+                    ],
+                    [
+                        "7",
+                        "8"
+                    ],
+                    [
+                        "9",
+                        "iload_1"
+                    ],
+                    [
+                        "10",
+                        "iload_3"
+                    ],
+                    [
+                        "11",
+                        "if_icmplt"
+                    ],
+                    [
+                        "12",
+                        "28"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    208,
+                    212
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            208,
+                            212
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    209,
+                                    211
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    212,
+                    216
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            212,
+                            216
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    213,
+                                    215
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    216,
+                    221
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            216,
+                            221
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    218,
+                                    220
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "add": {
+        "name": "add",
+        "pos": [
+            232,
+            253
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    233,
+                    234
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/RealVector.checkVectorDimensions:(Lorg/apache/commons/math3/linear/RealVector;)V"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/linear/RealVector.copy:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "9",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    234,
+                    235
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "invokevirtual"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/linear/RealVector.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "14",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    235,
+                    236
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "15",
+                        "aload_3"
+                    ],
+                    [
+                        "16",
+                        "invokeinterface"
+                    ],
+                    [
+                        "17",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "19",
+                        "0"
+                    ],
+                    [
+                        "21",
+                        "ifeq"
+                    ],
+                    [
+                        "22",
+                        "42"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    236,
+                    241
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            236,
+                            241
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    237,
+                                    238
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    238,
+                                    239
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    239,
+                                    240
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    241,
+                    242
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "subtract": {
+        "name": "subtract",
+        "pos": [
+            253,
+            272
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    254,
+                    255
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/RealVector.checkVectorDimensions:(Lorg/apache/commons/math3/linear/RealVector;)V"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "ldc2_w"
+                    ],
+                    [
+                        "7",
+                        "-1.0"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/linear/RealVector.mapMultiply:(D)Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "12",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    255,
+                    256
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "invokevirtual"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/linear/RealVector.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "17",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    256,
+                    257
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "18",
+                        "aload_3"
+                    ],
+                    [
+                        "19",
+                        "invokeinterface"
+                    ],
+                    [
+                        "20",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "22",
+                        "0"
+                    ],
+                    [
+                        "24",
+                        "ifeq"
+                    ],
+                    [
+                        "25",
+                        "42"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    257,
+                    262
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            257,
+                            262
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    258,
+                                    259
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    259,
+                                    260
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    260,
+                                    261
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    262,
+                    263
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "mapAdd": {
+        "name": "mapAdd",
+        "pos": [
+            272,
+            283
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    273,
+                    274
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.copy:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/RealVector.mapAddToSelf:(D)Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "mapAddToSelf": {
+        "name": "mapAddToSelf",
+        "pos": [
+            283,
+            295
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    284,
+                    287
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            284,
+                            287
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    285,
+                                    286
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    287,
+                    288
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "dotProduct": {
+        "name": "dotProduct",
+        "pos": [
+            305,
+            326
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    306,
+                    307
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/RealVector.checkVectorDimensions:(Lorg/apache/commons/math3/linear/RealVector;)V"
+                    ],
+                    [
+                        "5",
+                        "dconst_0"
+                    ],
+                    [
+                        "6",
+                        "dstore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    307,
+                    308
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/linear/RealVector.getDimension:()I"
+                    ],
+                    [
+                        "11",
+                        "istore"
+                    ],
+                    [
+                        "12",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    308,
+                    309
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "13",
+                        "iconst_0"
+                    ],
+                    [
+                        "14",
+                        "istore"
+                    ],
+                    [
+                        "15",
+                        "#5"
+                    ],
+                    [
+                        "16",
+                        "iload"
+                    ],
+                    [
+                        "17",
+                        "#5"
+                    ],
+                    [
+                        "18",
+                        "iload"
+                    ],
+                    [
+                        "19",
+                        "#4"
+                    ],
+                    [
+                        "20",
+                        "if_icmpge"
+                    ],
+                    [
+                        "21",
+                        "25"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    309,
+                    312
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            309,
+                            312
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    310,
+                                    311
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    312,
+                    313
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "cosine": {
+        "name": "cosine",
+        "pos": [
+            326,
+            346
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    328,
+                    329
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.getNorm:()D"
+                    ],
+                    [
+                        "4",
+                        "dstore_2"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/linear/RealVector.getNorm:()D"
+                    ],
+                    [
+                        "9",
+                        "dstore"
+                    ],
+                    [
+                        "10",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    329,
+                    331
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "11",
+                        "dload_2"
+                    ],
+                    [
+                        "12",
+                        "dconst_0"
+                    ],
+                    [
+                        "13",
+                        "dcmpl"
+                    ],
+                    [
+                        "14",
+                        "ifeq"
+                    ],
+                    [
+                        "15",
+                        "10"
+                    ],
+                    [
+                        "17",
+                        "dload"
+                    ],
+                    [
+                        "18",
+                        "#4"
+                    ],
+                    [
+                        "19",
+                        "dconst_0"
+                    ],
+                    [
+                        "20",
+                        "dcmpl"
+                    ],
+                    [
+                        "21",
+                        "ifne"
+                    ],
+                    [
+                        "22",
+                        "18"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    331,
+                    335
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            332,
+                            335
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    333,
+                                    334
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    335,
+                    336
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getDistance": {
+        "name": "getDistance",
+        "pos": [
+            374,
+            396
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    375,
+                    376
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/RealVector.checkVectorDimensions:(Lorg/apache/commons/math3/linear/RealVector;)V"
+                    ],
+                    [
+                        "5",
+                        "dconst_0"
+                    ],
+                    [
+                        "6",
+                        "dstore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    376,
+                    377
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/linear/RealVector.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "11",
+                        "astore"
+                    ],
+                    [
+                        "12",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    377,
+                    378
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "13",
+                        "aload"
+                    ],
+                    [
+                        "14",
+                        "#4"
+                    ],
+                    [
+                        "15",
+                        "invokeinterface"
+                    ],
+                    [
+                        "16",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "18",
+                        "0"
+                    ],
+                    [
+                        "20",
+                        "ifeq"
+                    ],
+                    [
+                        "21",
+                        "43"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    378,
+                    383
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            378,
+                            383
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    379,
+                                    380
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    380,
+                                    381
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    381,
+                                    382
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    383,
+                    384
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getNorm": {
+        "name": "getNorm",
+        "pos": [
+            396,
+            417
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    397,
+                    398
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dconst_0"
+                    ],
+                    [
+                        "1",
+                        "dstore_1"
+                    ],
+                    [
+                        "2",
+                        "aload_0"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/linear/RealVector.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "6",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    398,
+                    399
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "7",
+                        "aload_3"
+                    ],
+                    [
+                        "8",
+                        "invokeinterface"
+                    ],
+                    [
+                        "9",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "11",
+                        "0"
+                    ],
+                    [
+                        "13",
+                        "ifeq"
+                    ],
+                    [
+                        "14",
+                        "32"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    399,
+                    404
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            399,
+                            404
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    400,
+                                    401
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    401,
+                                    402
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    402,
+                                    403
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    404,
+                    405
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getL1Norm": {
+        "name": "getL1Norm",
+        "pos": [
+            417,
+            437
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    418,
+                    419
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dconst_0"
+                    ],
+                    [
+                        "1",
+                        "dstore_1"
+                    ],
+                    [
+                        "2",
+                        "aload_0"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/linear/RealVector.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "6",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    419,
+                    420
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "7",
+                        "aload_3"
+                    ],
+                    [
+                        "8",
+                        "invokeinterface"
+                    ],
+                    [
+                        "9",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "11",
+                        "0"
+                    ],
+                    [
+                        "13",
+                        "ifeq"
+                    ],
+                    [
+                        "14",
+                        "28"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    420,
+                    424
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            420,
+                            424
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    421,
+                                    422
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    422,
+                                    423
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    424,
+                    425
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getLInfNorm": {
+        "name": "getLInfNorm",
+        "pos": [
+            437,
+            458
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    438,
+                    439
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dconst_0"
+                    ],
+                    [
+                        "1",
+                        "dstore_1"
+                    ],
+                    [
+                        "2",
+                        "aload_0"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/linear/RealVector.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "6",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    439,
+                    440
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "7",
+                        "aload_3"
+                    ],
+                    [
+                        "8",
+                        "invokeinterface"
+                    ],
+                    [
+                        "9",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "11",
+                        "0"
+                    ],
+                    [
+                        "13",
+                        "ifeq"
+                    ],
+                    [
+                        "14",
+                        "30"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    440,
+                    444
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            440,
+                            444
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    441,
+                                    442
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    442,
+                                    443
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    444,
+                    445
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getL1Distance": {
+        "name": "getL1Distance",
+        "pos": [
+            458,
+            484
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    460,
+                    461
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/RealVector.checkVectorDimensions:(Lorg/apache/commons/math3/linear/RealVector;)V"
+                    ],
+                    [
+                        "5",
+                        "dconst_0"
+                    ],
+                    [
+                        "6",
+                        "dstore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    461,
+                    462
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/linear/RealVector.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "11",
+                        "astore"
+                    ],
+                    [
+                        "12",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    462,
+                    463
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "13",
+                        "aload"
+                    ],
+                    [
+                        "14",
+                        "#4"
+                    ],
+                    [
+                        "15",
+                        "invokeinterface"
+                    ],
+                    [
+                        "16",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "18",
+                        "0"
+                    ],
+                    [
+                        "20",
+                        "ifeq"
+                    ],
+                    [
+                        "21",
+                        "39"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    463,
+                    467
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            463,
+                            467
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    464,
+                                    465
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    465,
+                                    466
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    467,
+                    468
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getLInfDistance": {
+        "name": "getLInfDistance",
+        "pos": [
+            484,
+            502
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    486,
+                    487
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/RealVector.checkVectorDimensions:(Lorg/apache/commons/math3/linear/RealVector;)V"
+                    ],
+                    [
+                        "5",
+                        "dconst_0"
+                    ],
+                    [
+                        "6",
+                        "dstore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    487,
+                    488
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/linear/RealVector.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "11",
+                        "astore"
+                    ],
+                    [
+                        "12",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    488,
+                    489
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "13",
+                        "aload"
+                    ],
+                    [
+                        "14",
+                        "#4"
+                    ],
+                    [
+                        "15",
+                        "invokeinterface"
+                    ],
+                    [
+                        "16",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "18",
+                        "0"
+                    ],
+                    [
+                        "20",
+                        "ifeq"
+                    ],
+                    [
+                        "21",
+                        "41"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    489,
+                    493
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            489,
+                            493
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    490,
+                                    491
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    491,
+                                    492
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    493,
+                    494
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getMinIndex": {
+        "name": "getMinIndex",
+        "pos": [
+            502,
+            522
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    503,
+                    504
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_m1"
+                    ],
+                    [
+                        "1",
+                        "istore_1"
+                    ],
+                    [
+                        "2",
+                        "ldc2_w"
+                    ],
+                    [
+                        "3",
+                        "inf"
+                    ],
+                    [
+                        "5",
+                        "dstore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    504,
+                    505
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/linear/RealVector.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "10",
+                        "astore"
+                    ],
+                    [
+                        "11",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    505,
+                    506
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "aload"
+                    ],
+                    [
+                        "13",
+                        "#4"
+                    ],
+                    [
+                        "14",
+                        "invokeinterface"
+                    ],
+                    [
+                        "15",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "17",
+                        "0"
+                    ],
+                    [
+                        "19",
+                        "ifeq"
+                    ],
+                    [
+                        "20",
+                        "40"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    506,
+                    513
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            506,
+                            513
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    507,
+                                    508
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    508,
+                                    512
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            508,
+                                            512
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    509,
+                                                    510
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    510,
+                                                    511
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    513,
+                    514
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getMinValue": {
+        "name": "getMinValue",
+        "pos": [
+            522,
+            533
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    523,
+                    524
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.getMinIndex:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_1"
+                    ],
+                    [
+                        "5",
+                        "iload_1"
+                    ],
+                    [
+                        "6",
+                        "ifge"
+                    ],
+                    [
+                        "7",
+                        "9"
+                    ],
+                    [
+                        "9",
+                        "ldc2_w"
+                    ],
+                    [
+                        "10",
+                        "nan"
+                    ],
+                    [
+                        "12",
+                        "goto"
+                    ],
+                    [
+                        "13",
+                        "8"
+                    ],
+                    [
+                        "15",
+                        "aload_0"
+                    ],
+                    [
+                        "16",
+                        "iload_1"
+                    ],
+                    [
+                        "17",
+                        "invokevirtual"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/linear/RealVector.getEntry:(I)D"
+                    ],
+                    [
+                        "20",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    524,
+                    525
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getMaxIndex": {
+        "name": "getMaxIndex",
+        "pos": [
+            533,
+            553
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    534,
+                    535
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_m1"
+                    ],
+                    [
+                        "1",
+                        "istore_1"
+                    ],
+                    [
+                        "2",
+                        "ldc2_w"
+                    ],
+                    [
+                        "3",
+                        "-inf"
+                    ],
+                    [
+                        "5",
+                        "dstore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    535,
+                    536
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/linear/RealVector.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "10",
+                        "astore"
+                    ],
+                    [
+                        "11",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    536,
+                    537
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "aload"
+                    ],
+                    [
+                        "13",
+                        "#4"
+                    ],
+                    [
+                        "14",
+                        "invokeinterface"
+                    ],
+                    [
+                        "15",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "17",
+                        "0"
+                    ],
+                    [
+                        "19",
+                        "ifeq"
+                    ],
+                    [
+                        "20",
+                        "40"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    537,
+                    544
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            537,
+                            544
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    538,
+                                    539
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    539,
+                                    543
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            539,
+                                            543
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    540,
+                                                    541
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    541,
+                                                    542
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    544,
+                    545
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getMaxValue": {
+        "name": "getMaxValue",
+        "pos": [
+            553,
+            566
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    554,
+                    555
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.getMaxIndex:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_1"
+                    ],
+                    [
+                        "5",
+                        "iload_1"
+                    ],
+                    [
+                        "6",
+                        "ifge"
+                    ],
+                    [
+                        "7",
+                        "9"
+                    ],
+                    [
+                        "9",
+                        "ldc2_w"
+                    ],
+                    [
+                        "10",
+                        "nan"
+                    ],
+                    [
+                        "12",
+                        "goto"
+                    ],
+                    [
+                        "13",
+                        "8"
+                    ],
+                    [
+                        "15",
+                        "aload_0"
+                    ],
+                    [
+                        "16",
+                        "iload_1"
+                    ],
+                    [
+                        "17",
+                        "invokevirtual"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/linear/RealVector.getEntry:(I)D"
+                    ],
+                    [
+                        "20",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    555,
+                    556
+                ],
+                "children": []
+            }
+        ]
+    },
+    "mapMultiply": {
+        "name": "mapMultiply",
+        "pos": [
+            566,
+            577
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    567,
+                    568
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.copy:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/RealVector.mapMultiplyToSelf:(D)Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "mapMultiplyToSelf": {
+        "name": "mapMultiplyToSelf",
+        "pos": [
+            577,
+            588
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    578,
+                    579
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "new"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/analysis/function/Multiply"
+                    ],
+                    [
+                        "4",
+                        "dup"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/analysis/function/Multiply.<init>:()V"
+                    ],
+                    [
+                        "8",
+                        "dload_1"
+                    ],
+                    [
+                        "9",
+                        "invokestatic"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/analysis/FunctionUtils.fix2ndArgument:(Lorg/apache/commons/math3/analysis/BivariateFunction;D)Lorg/apache/commons/math3/analysis/UnivariateFunction;"
+                    ],
+                    [
+                        "12",
+                        "invokevirtual"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/linear/RealVector.mapToSelf:(Lorg/apache/commons/math3/analysis/UnivariateFunction;)Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "15",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "mapSubtract": {
+        "name": "mapSubtract",
+        "pos": [
+            588,
+            599
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    589,
+                    590
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.copy:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/RealVector.mapSubtractToSelf:(D)Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "mapSubtractToSelf": {
+        "name": "mapSubtractToSelf",
+        "pos": [
+            599,
+            610
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    600,
+                    601
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "dload_1"
+                    ],
+                    [
+                        "2",
+                        "dneg"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/linear/RealVector.mapAddToSelf:(D)Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "6",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "mapDivide": {
+        "name": "mapDivide",
+        "pos": [
+            610,
+            621
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    611,
+                    612
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.copy:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/RealVector.mapDivideToSelf:(D)Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "mapDivideToSelf": {
+        "name": "mapDivideToSelf",
+        "pos": [
+            621,
+            631
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    622,
+                    623
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "new"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/analysis/function/Divide"
+                    ],
+                    [
+                        "4",
+                        "dup"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/analysis/function/Divide.<init>:()V"
+                    ],
+                    [
+                        "8",
+                        "dload_1"
+                    ],
+                    [
+                        "9",
+                        "invokestatic"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/analysis/FunctionUtils.fix2ndArgument:(Lorg/apache/commons/math3/analysis/BivariateFunction;D)Lorg/apache/commons/math3/analysis/UnivariateFunction;"
+                    ],
+                    [
+                        "12",
+                        "invokevirtual"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/linear/RealVector.mapToSelf:(Lorg/apache/commons/math3/analysis/UnivariateFunction;)Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "15",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "outerProduct": {
+        "name": "outerProduct",
+        "pos": [
+            631,
+            658
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    632,
+                    633
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.getDimension:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_2"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/linear/RealVector.getDimension:()I"
+                    ],
+                    [
+                        "9",
+                        "istore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    633,
+                    634
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    634,
+                    635
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "aload_1"
+                    ],
+                    [
+                        "11",
+                        "instanceof"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/linear/SparseRealVector"
+                    ],
+                    [
+                        "14",
+                        "ifne"
+                    ],
+                    [
+                        "15",
+                        "10"
+                    ],
+                    [
+                        "17",
+                        "aload_0"
+                    ],
+                    [
+                        "18",
+                        "instanceof"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/linear/SparseRealVector"
+                    ],
+                    [
+                        "21",
+                        "ifeq"
+                    ],
+                    [
+                        "22",
+                        "17"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    635,
+                    640
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            635,
+                            637
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    636,
+                                    637
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            637,
+                            640
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    638,
+                                    639
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    640,
+                    645
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            640,
+                            645
+                        ],
+                        "children": [
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    641,
+                                    644
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            641,
+                                            644
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    642,
+                                                    643
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    645,
+                    646
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "projection": {
+        "name": "projection",
+        "pos": [
+            658,
+            672
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    660,
+                    661
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/RealVector.dotProduct:(Lorg/apache/commons/math3/linear/RealVector;)D"
+                    ],
+                    [
+                        "5",
+                        "dstore_2"
+                    ],
+                    [
+                        "6",
+                        "dload_2"
+                    ],
+                    [
+                        "7",
+                        "dconst_0"
+                    ],
+                    [
+                        "8",
+                        "dcmpl"
+                    ],
+                    [
+                        "9",
+                        "ifne"
+                    ],
+                    [
+                        "10",
+                        "18"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    661,
+                    664
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            661,
+                            664
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    662,
+                                    663
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    664,
+                    665
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "set": {
+        "name": "set",
+        "pos": [
+            672,
+            687
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    673,
+                    674
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "4",
+                        "astore_3"
+                    ],
+                    [
+                        "5",
+                        "aload_3"
+                    ],
+                    [
+                        "6",
+                        "invokeinterface"
+                    ],
+                    [
+                        "7",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "9",
+                        "0"
+                    ],
+                    [
+                        "11",
+                        "ifeq"
+                    ],
+                    [
+                        "12",
+                        "23"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    674,
+                    678
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            674,
+                            678
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    675,
+                                    676
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    676,
+                                    677
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "toArray": {
+        "name": "toArray",
+        "pos": [
+            687,
+            703
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    688,
+                    689
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.getDimension:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_1"
+                    ],
+                    [
+                        "5",
+                        "iload_1"
+                    ],
+                    [
+                        "6",
+                        "newarray"
+                    ],
+                    [
+                        "7",
+                        "7"
+                    ],
+                    [
+                        "8",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    689,
+                    690
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "iconst_0"
+                    ],
+                    [
+                        "10",
+                        "istore_3"
+                    ],
+                    [
+                        "11",
+                        "iload_3"
+                    ],
+                    [
+                        "12",
+                        "iload_1"
+                    ],
+                    [
+                        "13",
+                        "if_icmpge"
+                    ],
+                    [
+                        "14",
+                        "17"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    690,
+                    693
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            690,
+                            693
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    691,
+                                    692
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    693,
+                    694
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "unitVector": {
+        "name": "unitVector",
+        "pos": [
+            703,
+            717
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    704,
+                    705
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.getNorm:()D"
+                    ],
+                    [
+                        "4",
+                        "dstore_1"
+                    ],
+                    [
+                        "5",
+                        "dload_1"
+                    ],
+                    [
+                        "6",
+                        "dconst_0"
+                    ],
+                    [
+                        "7",
+                        "dcmpl"
+                    ],
+                    [
+                        "8",
+                        "ifne"
+                    ],
+                    [
+                        "9",
+                        "18"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    705,
+                    708
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            705,
+                            708
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    706,
+                                    707
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    708,
+                    709
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "unitize": {
+        "name": "unitize",
+        "pos": [
+            717,
+            737
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    718,
+                    719
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.getNorm:()D"
+                    ],
+                    [
+                        "4",
+                        "dstore_1"
+                    ],
+                    [
+                        "5",
+                        "dload_1"
+                    ],
+                    [
+                        "6",
+                        "dconst_0"
+                    ],
+                    [
+                        "7",
+                        "dcmpl"
+                    ],
+                    [
+                        "8",
+                        "ifne"
+                    ],
+                    [
+                        "9",
+                        "18"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    719,
+                    722
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            719,
+                            722
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    720,
+                                    721
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    722,
+                    723
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "sparseIterator": {
+        "name": "sparseIterator",
+        "pos": [
+            737,
+            751
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    738,
+                    739
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/linear/RealVector$SparseEntryIterator"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/RealVector$SparseEntryIterator.<init>:(Lorg/apache/commons/math3/linear/RealVector;)V"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "iterator": {
+        "name": "iterator",
+        "pos": [
+            751,
+            797
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    752,
+                    753
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.getDimension:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_1"
+                    ],
+                    [
+                        "5",
+                        "new"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/RealVector$1"
+                    ],
+                    [
+                        "8",
+                        "dup"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "iload_1"
+                    ],
+                    [
+                        "11",
+                        "invokespecial"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/linear/RealVector$1.<init>:(Lorg/apache/commons/math3/linear/RealVector;I)V"
+                    ],
+                    [
+                        "14",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    753,
+                    785
+                ],
+                "children": [
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            763,
+                            764
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "IfStatement",
+                        "pos": [
+                            768,
+                            774
+                        ],
+                        "children": [
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    768,
+                                    771
+                                ],
+                                "children": [
+                                    {
+                                        "name": "StatementExpression",
+                                        "pos": [
+                                            769,
+                                            770
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "name": "ReturnStatement",
+                                        "pos": [
+                                            770,
+                                            771
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    771,
+                                    774
+                                ],
+                                "children": [
+                                    {
+                                        "name": "ThrowStatement",
+                                        "pos": [
+                                            772,
+                                            773
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "ThrowStatement",
+                        "pos": [
+                            782,
+                            783
+                        ],
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "map": {
+        "name": "map",
+        "pos": [
+            797,
+            814
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    798,
+                    799
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.copy:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/RealVector.mapToSelf:(Lorg/apache/commons/math3/analysis/UnivariateFunction;)Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "mapToSelf": {
+        "name": "mapToSelf",
+        "pos": [
+            814,
+            836
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    815,
+                    816
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "4",
+                        "astore_2"
+                    ],
+                    [
+                        "5",
+                        "aload_2"
+                    ],
+                    [
+                        "6",
+                        "invokeinterface"
+                    ],
+                    [
+                        "7",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "9",
+                        "0"
+                    ],
+                    [
+                        "11",
+                        "ifeq"
+                    ],
+                    [
+                        "12",
+                        "30"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    816,
+                    820
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            816,
+                            820
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    817,
+                                    818
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    818,
+                                    819
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    820,
+                    821
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "combine": {
+        "name": "combine",
+        "pos": [
+            836,
+            853
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    838,
+                    839
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/RealVector.copy:()Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "dload_3"
+                    ],
+                    [
+                        "6",
+                        "aload"
+                    ],
+                    [
+                        "7",
+                        "#5"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/linear/RealVector.combineToSelf:(DDLorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "11",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "combineToSelf": {
+        "name": "combineToSelf",
+        "pos": [
+            853,
+            874
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    855,
+                    856
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload"
+                    ],
+                    [
+                        "2",
+                        "#5"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/linear/RealVector.checkVectorDimensions:(Lorg/apache/commons/math3/linear/RealVector;)V"
+                    ],
+                    [
+                        "6",
+                        "iconst_0"
+                    ],
+                    [
+                        "7",
+                        "istore"
+                    ],
+                    [
+                        "8",
+                        "#6"
+                    ],
+                    [
+                        "9",
+                        "iload"
+                    ],
+                    [
+                        "10",
+                        "#6"
+                    ],
+                    [
+                        "11",
+                        "aload_0"
+                    ],
+                    [
+                        "12",
+                        "invokevirtual"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/linear/RealVector.getDimension:()I"
+                    ],
+                    [
+                        "15",
+                        "if_icmpge"
+                    ],
+                    [
+                        "16",
+                        "41"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    856,
+                    861
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            856,
+                            861
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    857,
+                                    858
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    858,
+                                    859
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    859,
+                                    860
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    861,
+                    862
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "walkInDefaultOrder": {
+        "name": "walkInDefaultOrder",
+        "pos": [
+            976,
+            999
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    979,
+                    980
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_2"
+                    ],
+                    [
+                        "2",
+                        "iload_3"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/linear/RealVector.checkIndices:(II)V"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/linear/RealVector.getDimension:()I"
+                    ],
+                    [
+                        "11",
+                        "iload_2"
+                    ],
+                    [
+                        "12",
+                        "iload_3"
+                    ],
+                    [
+                        "13",
+                        "invokeinterface"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/linear/RealVectorChangingVisitor.visit:(ID)V"
+                    ],
+                    [
+                        "16",
+                        "0"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    980,
+                    981
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "18",
+                        "iload_2"
+                    ],
+                    [
+                        "19",
+                        "istore"
+                    ],
+                    [
+                        "20",
+                        "#4"
+                    ],
+                    [
+                        "21",
+                        "iload"
+                    ],
+                    [
+                        "22",
+                        "#4"
+                    ],
+                    [
+                        "23",
+                        "iload_3"
+                    ],
+                    [
+                        "24",
+                        "if_icmpgt"
+                    ],
+                    [
+                        "25",
+                        "29"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    981,
+                    984
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            981,
+                            984
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    982,
+                                    983
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    984,
+                    985
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "walkInOptimizedOrder": {
+        "name": "walkInOptimizedOrder",
+        "pos": [
+            1018,
+            1025
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    1021,
+                    1022
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "iload_2"
+                    ],
+                    [
+                        "3",
+                        "iload_3"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/linear/RealVector.walkInDefaultOrder:(Lorg/apache/commons/math3/linear/RealVectorChangingVisitor;II)D"
+                    ],
+                    [
+                        "7",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "equals": {
+        "name": "equals",
+        "pos": [
+            1093,
+            1107
+        ],
+        "children": [
+            {
+                "name": "ThrowStatement",
+                "pos": [
+                    1096,
+                    1097
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/exception/MathUnsupportedOperationException"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "invokespecial"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/exception/MathUnsupportedOperationException.<init>:()V"
+                    ],
+                    [
+                        "7",
+                        "athrow"
+                    ]
+                ]
+            }
+        ]
+    },
+    "hashCode": {
+        "name": "hashCode",
+        "pos": [
+            1107,
+            1126
+        ],
+        "children": [
+            {
+                "name": "ThrowStatement",
+                "pos": [
+                    1109,
+                    1110
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/exception/MathUnsupportedOperationException"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "invokespecial"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/exception/MathUnsupportedOperationException.<init>:()V"
+                    ],
+                    [
+                        "7",
+                        "athrow"
+                    ]
+                ]
+            }
+        ]
+    },
+    "unmodifiableRealVector": {
+        "name": "unmodifiableRealVector",
+        "pos": [
+            1205,
+            1617
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    1215,
+                    1616
+                ],
+                "children": [
+                    {
+                        "name": "ThrowStatement",
+                        "pos": [
+                            1224,
+                            1225
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1230,
+                            1231
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "LocalVariableDeclaration",
+                        "pos": [
+                            1236,
+                            1237
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1237,
+                            1262
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    1243,
+                                    1244
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    1248,
+                                    1249
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    1249,
+                                    1250
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    1259,
+                                    1260
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "LocalVariableDeclaration",
+                        "pos": [
+                            1267,
+                            1269
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1269,
+                            1295
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    1275,
+                                    1276
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    1280,
+                                    1281
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    1281,
+                                    1282
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    1292,
+                                    1293
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1300,
+                            1301
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1307,
+                            1308
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1314,
+                            1315
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1320,
+                            1321
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ThrowStatement",
+                        "pos": [
+                            1332,
+                            1333
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1338,
+                            1339
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ThrowStatement",
+                        "pos": [
+                            1350,
+                            1351
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1356,
+                            1357
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ThrowStatement",
+                        "pos": [
+                            1368,
+                            1369
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1374,
+                            1375
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ThrowStatement",
+                        "pos": [
+                            1386,
+                            1387
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1393,
+                            1394
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1400,
+                            1401
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1407,
+                            1408
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1414,
+                            1415
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1420,
+                            1421
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1426,
+                            1427
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1432,
+                            1433
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1439,
+                            1440
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1446,
+                            1447
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1453,
+                            1454
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1459,
+                            1460
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ThrowStatement",
+                        "pos": [
+                            1470,
+                            1471
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1476,
+                            1477
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1482,
+                            1483
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ThrowStatement",
+                        "pos": [
+                            1494,
+                            1495
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ThrowStatement",
+                        "pos": [
+                            1506,
+                            1507
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1512,
+                            1513
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1518,
+                            1519
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1524,
+                            1525
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1531,
+                            1532
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ThrowStatement",
+                        "pos": [
+                            1543,
+                            1544
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ThrowStatement",
+                        "pos": [
+                            1555,
+                            1556
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1561,
+                            1562
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1567,
+                            1568
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1573,
+                            1574
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1580,
+                            1581
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ThrowStatement",
+                        "pos": [
+                            1592,
+                            1593
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1600,
+                            1601
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ThrowStatement",
+                        "pos": [
+                            1612,
+                            1613
+                        ],
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+}

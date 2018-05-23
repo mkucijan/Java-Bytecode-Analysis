@@ -1,0 +1,471 @@
+{
+    "iterate": {
+        "name": "iterate",
+        "pos": [
+            155,
+            195
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    159,
+                    160
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optimization/direct/MultiDirectionalSimplex.getPoints:()[Lorg/apache/commons/math3/optimization/PointValuePair;"
+                    ],
+                    [
+                        "4",
+                        "astore_3"
+                    ],
+                    [
+                        "5",
+                        "aload_3"
+                    ],
+                    [
+                        "6",
+                        "iconst_0"
+                    ],
+                    [
+                        "7",
+                        "aaload"
+                    ],
+                    [
+                        "8",
+                        "astore"
+                    ],
+                    [
+                        "9",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    160,
+                    163
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "aload_1"
+                    ],
+                    [
+                        "12",
+                        "aload_3"
+                    ],
+                    [
+                        "13",
+                        "dconst_1"
+                    ],
+                    [
+                        "14",
+                        "aload_2"
+                    ],
+                    [
+                        "15",
+                        "invokespecial"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/optimization/direct/MultiDirectionalSimplex.evaluateNewSimplex:(Lorg/apache/commons/math3/analysis/MultivariateFunction;[Lorg/apache/commons/math3/optimization/PointValuePair;DLjava/util/Comparator;)Lorg/apache/commons/math3/optimization/PointValuePair;"
+                    ],
+                    [
+                        "18",
+                        "astore"
+                    ],
+                    [
+                        "19",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    163,
+                    165
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "20",
+                        "aload_2"
+                    ],
+                    [
+                        "21",
+                        "aload"
+                    ],
+                    [
+                        "22",
+                        "#5"
+                    ],
+                    [
+                        "23",
+                        "aload"
+                    ],
+                    [
+                        "24",
+                        "#4"
+                    ],
+                    [
+                        "25",
+                        "invokeinterface"
+                    ],
+                    [
+                        "26",
+                        "java/util/Comparator.setPoints:([Lorg/apache/commons/math3/optimization/PointValuePair;)V"
+                    ],
+                    [
+                        "28",
+                        "0"
+                    ],
+                    [
+                        "30",
+                        "ifge"
+                    ],
+                    [
+                        "31",
+                        "42"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    165,
+                    179
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            165,
+                            179
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    167,
+                                    168
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    168,
+                                    170
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    170,
+                                    175
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            170,
+                                            175
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    172,
+                                                    173
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    175,
+                                    176
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    179,
+                    181
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "evaluateNewSimplex": {
+        "name": "evaluateNewSimplex",
+        "pos": [
+            195,
+            218
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    199,
+                    202
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_2"
+                    ],
+                    [
+                        "1",
+                        "iconst_0"
+                    ],
+                    [
+                        "2",
+                        "aaload"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/optimization/PointValuePair.getPointRef:()[D"
+                    ],
+                    [
+                        "6",
+                        "astore"
+                    ],
+                    [
+                        "7",
+                        "#6"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "iconst_0"
+                    ],
+                    [
+                        "10",
+                        "aload_2"
+                    ],
+                    [
+                        "11",
+                        "iconst_0"
+                    ],
+                    [
+                        "12",
+                        "aaload"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/optimization/direct/MultiDirectionalSimplex.setPoint:(ILorg/apache/commons/math3/optimization/PointValuePair;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    202,
+                    203
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "invokevirtual"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/optimization/direct/MultiDirectionalSimplex.getDimension:()I"
+                    ],
+                    [
+                        "20",
+                        "istore"
+                    ],
+                    [
+                        "21",
+                        "#7"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    203,
+                    204
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "22",
+                        "iconst_1"
+                    ],
+                    [
+                        "23",
+                        "istore"
+                    ],
+                    [
+                        "24",
+                        "#8"
+                    ],
+                    [
+                        "25",
+                        "iload"
+                    ],
+                    [
+                        "26",
+                        "#8"
+                    ],
+                    [
+                        "27",
+                        "aload_0"
+                    ],
+                    [
+                        "28",
+                        "invokevirtual"
+                    ],
+                    [
+                        "29",
+                        "org/apache/commons/math3/optimization/direct/MultiDirectionalSimplex.getSize:()I"
+                    ],
+                    [
+                        "31",
+                        "if_icmpge"
+                    ],
+                    [
+                        "32",
+                        "83"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    204,
+                    214
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            204,
+                            214
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    205,
+                                    206
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    206,
+                                    207
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    207,
+                                    210
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            207,
+                                            210
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    208,
+                                                    209
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    210,
+                                    211
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    214,
+                    216
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    216,
+                    217
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

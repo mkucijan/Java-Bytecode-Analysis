@@ -1,0 +1,534 @@
+{
+    "getOptima": {
+        "name": "getOptima",
+        "pos": [
+            113,
+            121
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    114,
+                    117
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            114,
+                            117
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    115,
+                                    116
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    117,
+                    118
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getMaxEvaluations": {
+        "name": "getMaxEvaluations",
+        "pos": [
+            121,
+            126
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    122,
+                    123
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optimization/BaseMultivariateMultiStartOptimizer.maxEvaluations:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getEvaluations": {
+        "name": "getEvaluations",
+        "pos": [
+            126,
+            131
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    127,
+                    128
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optimization/BaseMultivariateMultiStartOptimizer.totalEvaluations:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getConvergenceChecker": {
+        "name": "getConvergenceChecker",
+        "pos": [
+            131,
+            138
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    132,
+                    133
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optimization/BaseMultivariateMultiStartOptimizer.optimizer:Lorg/apache/commons/math3/optimization/BaseMultivariateOptimizer;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/optimization/BaseMultivariateOptimizer.org/apache/commons/math3/optimization/PointValuePair"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "optimize": {
+        "name": "optimize",
+        "pos": [
+            138,
+            176
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    141,
+                    142
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/optimization/BaseMultivariateMultiStartOptimizer.maxEvaluations:I"
+                    ],
+                    [
+                        "5",
+                        "aconst_null"
+                    ],
+                    [
+                        "6",
+                        "astore"
+                    ],
+                    [
+                        "7",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    142,
+                    143
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/optimization/BaseMultivariateMultiStartOptimizer.starts:I"
+                    ],
+                    [
+                        "13",
+                        "anewarray"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/optimization/PointValuePair"
+                    ],
+                    [
+                        "16",
+                        "putfield"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/optimization/BaseMultivariateMultiStartOptimizer.optima:[Lorg/apache/commons/math3/optimization/PointValuePair;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    143,
+                    144
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "19",
+                        "aload_0"
+                    ],
+                    [
+                        "20",
+                        "iconst_0"
+                    ],
+                    [
+                        "21",
+                        "putfield"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/optimization/BaseMultivariateMultiStartOptimizer.totalEvaluations:I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    144,
+                    147
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "24",
+                        "iconst_0"
+                    ],
+                    [
+                        "25",
+                        "istore"
+                    ],
+                    [
+                        "26",
+                        "#6"
+                    ],
+                    [
+                        "27",
+                        "iload"
+                    ],
+                    [
+                        "28",
+                        "#6"
+                    ],
+                    [
+                        "29",
+                        "aload_0"
+                    ],
+                    [
+                        "30",
+                        "getfield"
+                    ],
+                    [
+                        "31",
+                        "org/apache/commons/math3/optimization/BaseMultivariateMultiStartOptimizer.starts:I"
+                    ],
+                    [
+                        "33",
+                        "if_icmpge"
+                    ],
+                    [
+                        "34",
+                        "87"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    147,
+                    161
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            147,
+                            161
+                        ],
+                        "children": [
+                            {
+                                "name": "TryStatement",
+                                "pos": [
+                                    149,
+                                    158
+                                ],
+                                "children": [
+                                    {
+                                        "name": "StatementExpression",
+                                        "pos": [
+                                            150,
+                                            152
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "name": "CatchClause",
+                                        "pos": [
+                                            152,
+                                            158
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    153,
+                                                    154
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    154,
+                                                    155
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    158,
+                                    159
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    161,
+                    163
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    163,
+                    168
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            163,
+                            168
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    164,
+                                    165
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    168,
+                    169
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "sortPairs": {
+        "name": "sortPairs",
+        "pos": [
+            176,
+            193
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    177,
+                    192
+                ],
+                "children": [
+                    {
+                        "name": "IfStatement",
+                        "pos": [
+                            181,
+                            186
+                        ],
+                        "children": [
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    181,
+                                    183
+                                ],
+                                "children": [
+                                    {
+                                        "name": "ReturnStatement",
+                                        "pos": [
+                                            182,
+                                            183
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    183,
+                                    186
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            183,
+                                            186
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    184,
+                                                    185
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "LocalVariableDeclaration",
+                        "pos": [
+                            186,
+                            187
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "LocalVariableDeclaration",
+                        "pos": [
+                            187,
+                            188
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            188,
+                            190
+                        ],
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,3914 @@
+{
+    "getField": {
+        "name": "getField",
+        "pos": [
+            428,
+            433
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    429,
+                    430
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "copy": {
+        "name": "copy",
+        "pos": [
+            433,
+            438
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    434,
+                    435
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/linear/ArrayFieldVector"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "iconst_1"
+                    ],
+                    [
+                        "6",
+                        "invokespecial"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.<init>:(Lorg/apache/commons/math3/linear/ArrayFieldVector;Z)V"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "add": {
+        "name": "add",
+        "pos": [
+            459,
+            470
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    461,
+                    462
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "5",
+                        "arraylength"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.checkVectorDimensions:(I)V"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "getfield"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "17",
+                        "arraylength"
+                    ],
+                    [
+                        "18",
+                        "invokestatic"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/util/MathArrays.buildArray:(Lorg/apache/commons/math3/Field;I)[Ljava/lang/Object;"
+                    ],
+                    [
+                        "21",
+                        "checkcast"
+                    ],
+                    [
+                        "22",
+                        "[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "24",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    462,
+                    463
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "25",
+                        "iconst_0"
+                    ],
+                    [
+                        "26",
+                        "istore_3"
+                    ],
+                    [
+                        "27",
+                        "iload_3"
+                    ],
+                    [
+                        "28",
+                        "aload_0"
+                    ],
+                    [
+                        "29",
+                        "getfield"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "32",
+                        "arraylength"
+                    ],
+                    [
+                        "33",
+                        "if_icmpge"
+                    ],
+                    [
+                        "34",
+                        "32"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    463,
+                    466
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            463,
+                            466
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    464,
+                                    465
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    466,
+                    467
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "subtract": {
+        "name": "subtract",
+        "pos": [
+            491,
+            502
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    493,
+                    494
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "5",
+                        "arraylength"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.checkVectorDimensions:(I)V"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "getfield"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "17",
+                        "arraylength"
+                    ],
+                    [
+                        "18",
+                        "invokestatic"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/util/MathArrays.buildArray:(Lorg/apache/commons/math3/Field;I)[Ljava/lang/Object;"
+                    ],
+                    [
+                        "21",
+                        "checkcast"
+                    ],
+                    [
+                        "22",
+                        "[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "24",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    494,
+                    495
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "25",
+                        "iconst_0"
+                    ],
+                    [
+                        "26",
+                        "istore_3"
+                    ],
+                    [
+                        "27",
+                        "iload_3"
+                    ],
+                    [
+                        "28",
+                        "aload_0"
+                    ],
+                    [
+                        "29",
+                        "getfield"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "32",
+                        "arraylength"
+                    ],
+                    [
+                        "33",
+                        "if_icmpge"
+                    ],
+                    [
+                        "34",
+                        "32"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    495,
+                    498
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            495,
+                            498
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    496,
+                                    497
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    498,
+                    499
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "mapAdd": {
+        "name": "mapAdd",
+        "pos": [
+            502,
+            511
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    503,
+                    504
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "8",
+                        "arraylength"
+                    ],
+                    [
+                        "9",
+                        "invokestatic"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/util/MathArrays.buildArray:(Lorg/apache/commons/math3/Field;I)[Ljava/lang/Object;"
+                    ],
+                    [
+                        "12",
+                        "checkcast"
+                    ],
+                    [
+                        "13",
+                        "[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "15",
+                        "astore_2"
+                    ],
+                    [
+                        "16",
+                        "iconst_0"
+                    ],
+                    [
+                        "17",
+                        "istore_3"
+                    ],
+                    [
+                        "18",
+                        "iload_3"
+                    ],
+                    [
+                        "19",
+                        "aload_0"
+                    ],
+                    [
+                        "20",
+                        "getfield"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "23",
+                        "arraylength"
+                    ],
+                    [
+                        "24",
+                        "if_icmpge"
+                    ],
+                    [
+                        "25",
+                        "27"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    504,
+                    507
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            504,
+                            507
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    505,
+                                    506
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    507,
+                    508
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "mapAddToSelf": {
+        "name": "mapAddToSelf",
+        "pos": [
+            511,
+            519
+        ],
+        "children": [
+            {
+                "name": "ForStatement",
+                "pos": [
+                    512,
+                    515
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            512,
+                            515
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    513,
+                                    514
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    515,
+                    516
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "mapSubtract": {
+        "name": "mapSubtract",
+        "pos": [
+            519,
+            528
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    520,
+                    521
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "8",
+                        "arraylength"
+                    ],
+                    [
+                        "9",
+                        "invokestatic"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/util/MathArrays.buildArray:(Lorg/apache/commons/math3/Field;I)[Ljava/lang/Object;"
+                    ],
+                    [
+                        "12",
+                        "checkcast"
+                    ],
+                    [
+                        "13",
+                        "[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "15",
+                        "astore_2"
+                    ],
+                    [
+                        "16",
+                        "iconst_0"
+                    ],
+                    [
+                        "17",
+                        "istore_3"
+                    ],
+                    [
+                        "18",
+                        "iload_3"
+                    ],
+                    [
+                        "19",
+                        "aload_0"
+                    ],
+                    [
+                        "20",
+                        "getfield"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "23",
+                        "arraylength"
+                    ],
+                    [
+                        "24",
+                        "if_icmpge"
+                    ],
+                    [
+                        "25",
+                        "27"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    521,
+                    524
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            521,
+                            524
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    522,
+                                    523
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    524,
+                    525
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "mapSubtractToSelf": {
+        "name": "mapSubtractToSelf",
+        "pos": [
+            528,
+            536
+        ],
+        "children": [
+            {
+                "name": "ForStatement",
+                "pos": [
+                    529,
+                    532
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            529,
+                            532
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    530,
+                                    531
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    532,
+                    533
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "mapMultiply": {
+        "name": "mapMultiply",
+        "pos": [
+            536,
+            545
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    537,
+                    538
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "8",
+                        "arraylength"
+                    ],
+                    [
+                        "9",
+                        "invokestatic"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/util/MathArrays.buildArray:(Lorg/apache/commons/math3/Field;I)[Ljava/lang/Object;"
+                    ],
+                    [
+                        "12",
+                        "checkcast"
+                    ],
+                    [
+                        "13",
+                        "[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "15",
+                        "astore_2"
+                    ],
+                    [
+                        "16",
+                        "iconst_0"
+                    ],
+                    [
+                        "17",
+                        "istore_3"
+                    ],
+                    [
+                        "18",
+                        "iload_3"
+                    ],
+                    [
+                        "19",
+                        "aload_0"
+                    ],
+                    [
+                        "20",
+                        "getfield"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "23",
+                        "arraylength"
+                    ],
+                    [
+                        "24",
+                        "if_icmpge"
+                    ],
+                    [
+                        "25",
+                        "27"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    538,
+                    541
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            538,
+                            541
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    539,
+                                    540
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    541,
+                    542
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "mapMultiplyToSelf": {
+        "name": "mapMultiplyToSelf",
+        "pos": [
+            545,
+            553
+        ],
+        "children": [
+            {
+                "name": "ForStatement",
+                "pos": [
+                    546,
+                    549
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            546,
+                            549
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    547,
+                                    548
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    549,
+                    550
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "mapDivide": {
+        "name": "mapDivide",
+        "pos": [
+            553,
+            564
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    555,
+                    556
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "getfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "12",
+                        "arraylength"
+                    ],
+                    [
+                        "13",
+                        "invokestatic"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/util/MathArrays.buildArray:(Lorg/apache/commons/math3/Field;I)[Ljava/lang/Object;"
+                    ],
+                    [
+                        "16",
+                        "checkcast"
+                    ],
+                    [
+                        "17",
+                        "[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "19",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    556,
+                    557
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "20",
+                        "iconst_0"
+                    ],
+                    [
+                        "21",
+                        "istore_3"
+                    ],
+                    [
+                        "22",
+                        "iload_3"
+                    ],
+                    [
+                        "23",
+                        "aload_0"
+                    ],
+                    [
+                        "24",
+                        "getfield"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "27",
+                        "arraylength"
+                    ],
+                    [
+                        "28",
+                        "if_icmpge"
+                    ],
+                    [
+                        "29",
+                        "27"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    557,
+                    560
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            557,
+                            560
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    558,
+                                    559
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    560,
+                    561
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "mapDivideToSelf": {
+        "name": "mapDivideToSelf",
+        "pos": [
+            564,
+            574
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    566,
+                    567
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "4",
+                        "iconst_0"
+                    ],
+                    [
+                        "5",
+                        "istore_2"
+                    ],
+                    [
+                        "6",
+                        "iload_2"
+                    ],
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "getfield"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "11",
+                        "arraylength"
+                    ],
+                    [
+                        "12",
+                        "if_icmpge"
+                    ],
+                    [
+                        "13",
+                        "30"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    567,
+                    570
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            567,
+                            570
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    568,
+                                    569
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    570,
+                    571
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "mapInv": {
+        "name": "mapInv",
+        "pos": [
+            574,
+            588
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    575,
+                    576
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "8",
+                        "arraylength"
+                    ],
+                    [
+                        "9",
+                        "invokestatic"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/util/MathArrays.buildArray:(Lorg/apache/commons/math3/Field;I)[Ljava/lang/Object;"
+                    ],
+                    [
+                        "12",
+                        "checkcast"
+                    ],
+                    [
+                        "13",
+                        "[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "15",
+                        "astore_1"
+                    ],
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "getfield"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "20",
+                        "invokeinterface"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/math3/Field.org/apache/commons/math3/exception/MathArithmeticException"
+                    ],
+                    [
+                        "23",
+                        "0"
+                    ],
+                    [
+                        "25",
+                        "checkcast"
+                    ],
+                    [
+                        "26",
+                        "org/apache/commons/math3/FieldElement"
+                    ],
+                    [
+                        "28",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    576,
+                    577
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "29",
+                        "iconst_0"
+                    ],
+                    [
+                        "30",
+                        "istore_3"
+                    ],
+                    [
+                        "31",
+                        "iload_3"
+                    ],
+                    [
+                        "32",
+                        "aload_0"
+                    ],
+                    [
+                        "33",
+                        "getfield"
+                    ],
+                    [
+                        "34",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "36",
+                        "arraylength"
+                    ],
+                    [
+                        "37",
+                        "if_icmpge"
+                    ],
+                    [
+                        "38",
+                        "54"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    577,
+                    584
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            577,
+                            584
+                        ],
+                        "children": [
+                            {
+                                "name": "TryStatement",
+                                "pos": [
+                                    578,
+                                    583
+                                ],
+                                "children": [
+                                    {
+                                        "name": "StatementExpression",
+                                        "pos": [
+                                            579,
+                                            580
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "name": "CatchClause",
+                                        "pos": [
+                                            580,
+                                            583
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ThrowStatement",
+                                                "pos": [
+                                                    581,
+                                                    582
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    584,
+                    585
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "mapInvToSelf": {
+        "name": "mapInvToSelf",
+        "pos": [
+            588,
+            601
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    589,
+                    590
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/Field.org/apache/commons/math3/exception/MathArithmeticException"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "checkcast"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/FieldElement"
+                    ],
+                    [
+                        "12",
+                        "astore_1"
+                    ],
+                    [
+                        "13",
+                        "iconst_0"
+                    ],
+                    [
+                        "14",
+                        "istore_2"
+                    ],
+                    [
+                        "15",
+                        "iload_2"
+                    ],
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "getfield"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "20",
+                        "arraylength"
+                    ],
+                    [
+                        "21",
+                        "if_icmpge"
+                    ],
+                    [
+                        "22",
+                        "56"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    590,
+                    597
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            590,
+                            597
+                        ],
+                        "children": [
+                            {
+                                "name": "TryStatement",
+                                "pos": [
+                                    591,
+                                    596
+                                ],
+                                "children": [
+                                    {
+                                        "name": "StatementExpression",
+                                        "pos": [
+                                            592,
+                                            593
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "name": "CatchClause",
+                                        "pos": [
+                                            593,
+                                            596
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ThrowStatement",
+                                                "pos": [
+                                                    594,
+                                                    595
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    597,
+                    598
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "ebeMultiply": {
+        "name": "ebeMultiply",
+        "pos": [
+            622,
+            633
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    624,
+                    625
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "5",
+                        "arraylength"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.checkVectorDimensions:(I)V"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "getfield"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "17",
+                        "arraylength"
+                    ],
+                    [
+                        "18",
+                        "invokestatic"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/util/MathArrays.buildArray:(Lorg/apache/commons/math3/Field;I)[Ljava/lang/Object;"
+                    ],
+                    [
+                        "21",
+                        "checkcast"
+                    ],
+                    [
+                        "22",
+                        "[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "24",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    625,
+                    626
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "25",
+                        "iconst_0"
+                    ],
+                    [
+                        "26",
+                        "istore_3"
+                    ],
+                    [
+                        "27",
+                        "iload_3"
+                    ],
+                    [
+                        "28",
+                        "aload_0"
+                    ],
+                    [
+                        "29",
+                        "getfield"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "32",
+                        "arraylength"
+                    ],
+                    [
+                        "33",
+                        "if_icmpge"
+                    ],
+                    [
+                        "34",
+                        "32"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    626,
+                    629
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            626,
+                            629
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    627,
+                                    628
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    629,
+                    630
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "ebeDivide": {
+        "name": "ebeDivide",
+        "pos": [
+            659,
+            674
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    661,
+                    662
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "5",
+                        "arraylength"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.checkVectorDimensions:(I)V"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "getfield"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "17",
+                        "arraylength"
+                    ],
+                    [
+                        "18",
+                        "invokestatic"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/util/MathArrays.buildArray:(Lorg/apache/commons/math3/Field;I)[Ljava/lang/Object;"
+                    ],
+                    [
+                        "21",
+                        "checkcast"
+                    ],
+                    [
+                        "22",
+                        "[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "24",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    662,
+                    663
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "25",
+                        "iconst_0"
+                    ],
+                    [
+                        "26",
+                        "istore_3"
+                    ],
+                    [
+                        "27",
+                        "iload_3"
+                    ],
+                    [
+                        "28",
+                        "aload_0"
+                    ],
+                    [
+                        "29",
+                        "getfield"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "32",
+                        "arraylength"
+                    ],
+                    [
+                        "33",
+                        "if_icmpge"
+                    ],
+                    [
+                        "34",
+                        "59"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    663,
+                    670
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            663,
+                            670
+                        ],
+                        "children": [
+                            {
+                                "name": "TryStatement",
+                                "pos": [
+                                    664,
+                                    669
+                                ],
+                                "children": [
+                                    {
+                                        "name": "StatementExpression",
+                                        "pos": [
+                                            665,
+                                            666
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "name": "CatchClause",
+                                        "pos": [
+                                            666,
+                                            669
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ThrowStatement",
+                                                "pos": [
+                                                    667,
+                                                    668
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    670,
+                    671
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getData": {
+        "name": "getData",
+        "pos": [
+            674,
+            683
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    675,
+                    676
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "[Lorg/apache/commons/math3/FieldElement;.clone:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "checkcast"
+                    ],
+                    [
+                        "8",
+                        "[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getDataRef": {
+        "name": "getDataRef",
+        "pos": [
+            683,
+            688
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    684,
+                    685
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "dotProduct": {
+        "name": "dotProduct",
+        "pos": [
+            709,
+            720
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    711,
+                    712
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "5",
+                        "arraylength"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.checkVectorDimensions:(I)V"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "13",
+                        "invokeinterface"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/Field.dotProduct:(Lorg/apache/commons/math3/linear/FieldVector;)Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "16",
+                        "0"
+                    ],
+                    [
+                        "18",
+                        "checkcast"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/FieldElement"
+                    ],
+                    [
+                        "21",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    712,
+                    713
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "22",
+                        "iconst_0"
+                    ],
+                    [
+                        "23",
+                        "istore_3"
+                    ],
+                    [
+                        "24",
+                        "iload_3"
+                    ],
+                    [
+                        "25",
+                        "aload_0"
+                    ],
+                    [
+                        "26",
+                        "getfield"
+                    ],
+                    [
+                        "27",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "29",
+                        "arraylength"
+                    ],
+                    [
+                        "30",
+                        "if_icmpge"
+                    ],
+                    [
+                        "31",
+                        "36"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    713,
+                    716
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            713,
+                            716
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    714,
+                                    715
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    716,
+                    717
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "projection": {
+        "name": "projection",
+        "pos": [
+            732,
+            738
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    734,
+                    735
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "aload_1"
+                    ],
+                    [
+                        "3",
+                        "invokevirtual"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.dotProduct:(Lorg/apache/commons/math3/linear/ArrayFieldVector;)Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "aload_1"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.dotProduct:(Lorg/apache/commons/math3/linear/ArrayFieldVector;)Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "11",
+                        "invokeinterface"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/FieldElement.org/apache/commons/math3/Field"
+                    ],
+                    [
+                        "14",
+                        "0"
+                    ],
+                    [
+                        "16",
+                        "checkcast"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/FieldElement"
+                    ],
+                    [
+                        "19",
+                        "invokevirtual"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.mapMultiply:(Lorg/apache/commons/math3/FieldElement;)Lorg/apache/commons/math3/linear/FieldVector;"
+                    ],
+                    [
+                        "22",
+                        "checkcast"
+                    ],
+                    [
+                        "23",
+                        "org/apache/commons/math3/linear/ArrayFieldVector"
+                    ],
+                    [
+                        "25",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "outerProduct": {
+        "name": "outerProduct",
+        "pos": [
+            759,
+            772
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    760,
+                    761
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "4",
+                        "arraylength"
+                    ],
+                    [
+                        "5",
+                        "istore_2"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "getfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "10",
+                        "arraylength"
+                    ],
+                    [
+                        "11",
+                        "istore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    761,
+                    762
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "12",
+                        "new"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/linear/Array2DRowFieldMatrix"
+                    ],
+                    [
+                        "15",
+                        "dup"
+                    ],
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "getfield"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "20",
+                        "iload_2"
+                    ],
+                    [
+                        "21",
+                        "iload_3"
+                    ],
+                    [
+                        "22",
+                        "invokespecial"
+                    ],
+                    [
+                        "23",
+                        "org/apache/commons/math3/linear/Array2DRowFieldMatrix.<init>:(Lorg/apache/commons/math3/Field;II)V"
+                    ],
+                    [
+                        "25",
+                        "astore"
+                    ],
+                    [
+                        "26",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    762,
+                    763
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "27",
+                        "iconst_0"
+                    ],
+                    [
+                        "28",
+                        "istore"
+                    ],
+                    [
+                        "29",
+                        "#5"
+                    ],
+                    [
+                        "30",
+                        "iload"
+                    ],
+                    [
+                        "31",
+                        "#5"
+                    ],
+                    [
+                        "32",
+                        "iload_2"
+                    ],
+                    [
+                        "33",
+                        "if_icmpge"
+                    ],
+                    [
+                        "34",
+                        "57"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    763,
+                    768
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            763,
+                            768
+                        ],
+                        "children": [
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    764,
+                                    767
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            764,
+                                            767
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    765,
+                                                    766
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    768,
+                    769
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getEntry": {
+        "name": "getEntry",
+        "pos": [
+            772,
+            777
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    773,
+                    774
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "4",
+                        "iload_1"
+                    ],
+                    [
+                        "5",
+                        "aaload"
+                    ],
+                    [
+                        "6",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getDimension": {
+        "name": "getDimension",
+        "pos": [
+            777,
+            782
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    778,
+                    779
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "4",
+                        "arraylength"
+                    ],
+                    [
+                        "5",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "append": {
+        "name": "append",
+        "pos": [
+            800,
+            808
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    801,
+                    802
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "8",
+                        "arraylength"
+                    ],
+                    [
+                        "9",
+                        "iconst_1"
+                    ],
+                    [
+                        "10",
+                        "iadd"
+                    ],
+                    [
+                        "11",
+                        "invokestatic"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/util/MathArrays.buildArray:(Lorg/apache/commons/math3/Field;I)[Ljava/lang/Object;"
+                    ],
+                    [
+                        "14",
+                        "checkcast"
+                    ],
+                    [
+                        "15",
+                        "[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "17",
+                        "astore_2"
+                    ],
+                    [
+                        "18",
+                        "aload_0"
+                    ],
+                    [
+                        "19",
+                        "getfield"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "22",
+                        "iconst_0"
+                    ],
+                    [
+                        "23",
+                        "aload_2"
+                    ],
+                    [
+                        "24",
+                        "iconst_0"
+                    ],
+                    [
+                        "25",
+                        "aload_0"
+                    ],
+                    [
+                        "26",
+                        "getfield"
+                    ],
+                    [
+                        "27",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "29",
+                        "arraylength"
+                    ],
+                    [
+                        "30",
+                        "invokestatic"
+                    ],
+                    [
+                        "31",
+                        "java/lang/System.arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    802,
+                    803
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "33",
+                        "aload_2"
+                    ],
+                    [
+                        "34",
+                        "aload_0"
+                    ],
+                    [
+                        "35",
+                        "getfield"
+                    ],
+                    [
+                        "36",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "38",
+                        "arraylength"
+                    ],
+                    [
+                        "39",
+                        "aload_1"
+                    ],
+                    [
+                        "40",
+                        "aastore"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    803,
+                    804
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "41",
+                        "new"
+                    ],
+                    [
+                        "42",
+                        "org/apache/commons/math3/linear/ArrayFieldVector"
+                    ],
+                    [
+                        "44",
+                        "dup"
+                    ],
+                    [
+                        "45",
+                        "aload_0"
+                    ],
+                    [
+                        "46",
+                        "getfield"
+                    ],
+                    [
+                        "47",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.field:Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "49",
+                        "aload_2"
+                    ],
+                    [
+                        "50",
+                        "iconst_0"
+                    ],
+                    [
+                        "51",
+                        "invokespecial"
+                    ],
+                    [
+                        "52",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.<init>:(Lorg/apache/commons/math3/Field;[Lorg/apache/commons/math3/FieldElement;Z)V"
+                    ],
+                    [
+                        "54",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    804,
+                    805
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getSubVector": {
+        "name": "getSubVector",
+        "pos": [
+            808,
+            824
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    810,
+                    813
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            810,
+                            813
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    811,
+                                    812
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    813,
+                    814
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "TryStatement",
+                "pos": [
+                    814,
+                    820
+                ],
+                "children": [
+                    {
+                        "name": "StatementExpression",
+                        "pos": [
+                            815,
+                            816
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "CatchClause",
+                        "pos": [
+                            816,
+                            820
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    817,
+                                    818
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    818,
+                                    819
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    820,
+                    821
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "setEntry": {
+        "name": "setEntry",
+        "pos": [
+            824,
+            833
+        ],
+        "children": [
+            {
+                "name": "TryStatement",
+                "pos": [
+                    825,
+                    830
+                ],
+                "children": [
+                    {
+                        "name": "StatementExpression",
+                        "pos": [
+                            826,
+                            827
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "CatchClause",
+                        "pos": [
+                            827,
+                            830
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    828,
+                                    829
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "setSubVector": {
+        "name": "setSubVector",
+        "pos": [
+            833,
+            855
+        ],
+        "children": [
+            {
+                "name": "TryStatement",
+                "pos": [
+                    834,
+                    846
+                ],
+                "children": [
+                    {
+                        "name": "TryStatement",
+                        "pos": [
+                            835,
+                            842
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    836,
+                                    837
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "CatchClause",
+                                "pos": [
+                                    837,
+                                    842
+                                ],
+                                "children": [
+                                    {
+                                        "name": "ForStatement",
+                                        "pos": [
+                                            838,
+                                            841
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "BlockStatement",
+                                                "pos": [
+                                                    838,
+                                                    841
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "StatementExpression",
+                                                        "pos": [
+                                                            839,
+                                                            840
+                                                        ],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "CatchClause",
+                        "pos": [
+                            842,
+                            846
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    843,
+                                    844
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    844,
+                                    845
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "set": {
+        "name": "set",
+        "pos": [
+            865,
+            870
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    866,
+                    867
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "java/util/Arrays.fill:([Ljava/lang/Object;Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "8",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "toArray": {
+        "name": "toArray",
+        "pos": [
+            870,
+            880
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    871,
+                    872
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "[Lorg/apache/commons/math3/FieldElement;.clone:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "checkcast"
+                    ],
+                    [
+                        "8",
+                        "[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "checkVectorDimensions": {
+        "name": "checkVectorDimensions",
+        "pos": [
+            892,
+            909
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    894,
+                    897
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            894,
+                            897
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    895,
+                                    896
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "walkInDefaultOrder": {
+        "name": "walkInDefaultOrder",
+        "pos": [
+            1011,
+            1034
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1014,
+                    1015
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_2"
+                    ],
+                    [
+                        "2",
+                        "iload_3"
+                    ],
+                    [
+                        "3",
+                        "invokespecial"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.checkIndices:(II)V"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.getDimension:()I"
+                    ],
+                    [
+                        "11",
+                        "iload_2"
+                    ],
+                    [
+                        "12",
+                        "iload_3"
+                    ],
+                    [
+                        "13",
+                        "invokeinterface"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/linear/FieldVectorChangingVisitor.visit:(ILorg/apache/commons/math3/FieldElement;)V"
+                    ],
+                    [
+                        "16",
+                        "0"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1015,
+                    1016
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "18",
+                        "iload_2"
+                    ],
+                    [
+                        "19",
+                        "istore"
+                    ],
+                    [
+                        "20",
+                        "#4"
+                    ],
+                    [
+                        "21",
+                        "iload"
+                    ],
+                    [
+                        "22",
+                        "#4"
+                    ],
+                    [
+                        "23",
+                        "iload_3"
+                    ],
+                    [
+                        "24",
+                        "if_icmpgt"
+                    ],
+                    [
+                        "25",
+                        "29"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    1016,
+                    1019
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1016,
+                            1019
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    1017,
+                                    1018
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    1019,
+                    1020
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "walkInOptimizedOrder": {
+        "name": "walkInOptimizedOrder",
+        "pos": [
+            1053,
+            1066
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    1056,
+                    1057
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "iload_2"
+                    ],
+                    [
+                        "3",
+                        "iload_3"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.walkInDefaultOrder:(Lorg/apache/commons/math3/linear/FieldVectorChangingVisitor;II)Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "equals": {
+        "name": "equals",
+        "pos": [
+            1066,
+            1099
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    1068,
+                    1071
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1068,
+                            1071
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    1069,
+                                    1070
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    1071,
+                    1075
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1071,
+                            1075
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    1072,
+                                    1073
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "TryStatement",
+                "pos": [
+                    1075,
+                    1092
+                ],
+                "children": [
+                    {
+                        "name": "LocalVariableDeclaration",
+                        "pos": [
+                            1076,
+                            1078
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "IfStatement",
+                        "pos": [
+                            1078,
+                            1082
+                        ],
+                        "children": [
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    1078,
+                                    1082
+                                ],
+                                "children": [
+                                    {
+                                        "name": "ReturnStatement",
+                                        "pos": [
+                                            1079,
+                                            1080
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "ForStatement",
+                        "pos": [
+                            1082,
+                            1087
+                        ],
+                        "children": [
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    1082,
+                                    1087
+                                ],
+                                "children": [
+                                    {
+                                        "name": "IfStatement",
+                                        "pos": [
+                                            1083,
+                                            1086
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "BlockStatement",
+                                                "pos": [
+                                                    1083,
+                                                    1086
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "ReturnStatement",
+                                                        "pos": [
+                                                            1084,
+                                                            1085
+                                                        ],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "ReturnStatement",
+                        "pos": [
+                            1087,
+                            1088
+                        ],
+                        "children": []
+                    },
+                    {
+                        "name": "CatchClause",
+                        "pos": [
+                            1088,
+                            1092
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    1090,
+                                    1091
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "hashCode": {
+        "name": "hashCode",
+        "pos": [
+            1099,
+            1114
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    1101,
+                    1102
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "sipush"
+                    ],
+                    [
+                        "1",
+                        "3542"
+                    ],
+                    [
+                        "3",
+                        "istore_1"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.data:[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "8",
+                        "astore_2"
+                    ],
+                    [
+                        "9",
+                        "aload_2"
+                    ],
+                    [
+                        "10",
+                        "arraylength"
+                    ],
+                    [
+                        "11",
+                        "istore_3"
+                    ],
+                    [
+                        "12",
+                        "iconst_0"
+                    ],
+                    [
+                        "13",
+                        "istore"
+                    ],
+                    [
+                        "14",
+                        "#4"
+                    ],
+                    [
+                        "15",
+                        "iload"
+                    ],
+                    [
+                        "16",
+                        "#4"
+                    ],
+                    [
+                        "17",
+                        "iload_3"
+                    ],
+                    [
+                        "18",
+                        "if_icmpge"
+                    ],
+                    [
+                        "19",
+                        "23"
+                    ],
+                    [
+                        "21",
+                        "aload_2"
+                    ],
+                    [
+                        "22",
+                        "iload"
+                    ],
+                    [
+                        "23",
+                        "#4"
+                    ],
+                    [
+                        "24",
+                        "aaload"
+                    ],
+                    [
+                        "25",
+                        "astore"
+                    ],
+                    [
+                        "26",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    1102,
+                    1105
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1102,
+                            1105
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    1103,
+                                    1104
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    1105,
+                    1106
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "checkIndex": {
+        "name": "checkIndex",
+        "pos": [
+            1114,
+            1130
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    1115,
+                    1119
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1115,
+                            1119
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    1116,
+                                    1118
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "checkIndices": {
+        "name": "checkIndices",
+        "pos": [
+            1130,
+            1147
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    1132,
+                    1133
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/ArrayFieldVector.getDimension:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_3"
+                    ],
+                    [
+                        "5",
+                        "iload_1"
+                    ],
+                    [
+                        "6",
+                        "iflt"
+                    ],
+                    [
+                        "7",
+                        "8"
+                    ],
+                    [
+                        "9",
+                        "iload_1"
+                    ],
+                    [
+                        "10",
+                        "iload_3"
+                    ],
+                    [
+                        "11",
+                        "if_icmplt"
+                    ],
+                    [
+                        "12",
+                        "28"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    1133,
+                    1137
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1133,
+                            1137
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    1134,
+                                    1136
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    1137,
+                    1141
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1137,
+                            1141
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    1138,
+                                    1140
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    1141,
+                    1145
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1141,
+                            1145
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    1142,
+                                    1144
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

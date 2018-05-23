@@ -1,0 +1,779 @@
+{
+    "create": {
+        "name": "create",
+        "pos": [
+            118,
+            134
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    125,
+                    131
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/ode/nonstiff/AdamsFieldStepInterpolator"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/ode/nonstiff/AdamsFieldStepInterpolator.scalingH:Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "getfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/ode/nonstiff/AdamsFieldStepInterpolator.reference:Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "getfield"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/ode/nonstiff/AdamsFieldStepInterpolator.scaled:[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "getfield"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/ode/nonstiff/AdamsFieldStepInterpolator.nordsieck:Lorg/apache/commons/math3/linear/Array2DRowFieldMatrix;"
+                    ],
+                    [
+                        "20",
+                        "iload_1"
+                    ],
+                    [
+                        "21",
+                        "aload_2"
+                    ],
+                    [
+                        "22",
+                        "aload_3"
+                    ],
+                    [
+                        "23",
+                        "aload"
+                    ],
+                    [
+                        "24",
+                        "#4"
+                    ],
+                    [
+                        "25",
+                        "aload"
+                    ],
+                    [
+                        "26",
+                        "#5"
+                    ],
+                    [
+                        "27",
+                        "aload"
+                    ],
+                    [
+                        "28",
+                        "#6"
+                    ],
+                    [
+                        "29",
+                        "invokespecial"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/math3/ode/nonstiff/AdamsFieldStepInterpolator.<init>:(Lorg/apache/commons/math3/RealFieldElement;Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;[Lorg/apache/commons/math3/RealFieldElement;Lorg/apache/commons/math3/linear/Array2DRowFieldMatrix;ZLorg/apache/commons/math3/ode/FieldODEStateAndDerivative;Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;Lorg/apache/commons/math3/ode/FieldEquationsMapper;)V"
+                    ],
+                    [
+                        "32",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "computeInterpolatedStateAndDerivatives": {
+        "name": "computeInterpolatedStateAndDerivatives",
+        "pos": [
+            134,
+            150
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    138,
+                    139
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/nonstiff/AdamsFieldStepInterpolator.reference:Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "4",
+                        "aload_2"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "getfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/ode/nonstiff/AdamsFieldStepInterpolator.scalingH:Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "getfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/ode/nonstiff/AdamsFieldStepInterpolator.scaled:[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "getfield"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/ode/nonstiff/AdamsFieldStepInterpolator.nordsieck:Lorg/apache/commons/math3/linear/Array2DRowFieldMatrix;"
+                    ],
+                    [
+                        "17",
+                        "invokestatic"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/ode/nonstiff/AdamsFieldStepInterpolator.taylor:(Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;Lorg/apache/commons/math3/RealFieldElement;Lorg/apache/commons/math3/RealFieldElement;[Lorg/apache/commons/math3/RealFieldElement;Lorg/apache/commons/math3/linear/Array2DRowFieldMatrix;)Lorg/apache/commons/math3/ode/FieldODEStateAndDerivative;"
+                    ],
+                    [
+                        "20",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "taylor": {
+        "name": "taylor",
+        "pos": [
+            150,
+            189
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    155,
+                    156
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/ode/FieldODEStateAndDerivative.getTime:()Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/RealFieldElement.org/apache/commons/math3/RealFieldElement"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "checkcast"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/RealFieldElement"
+                    ],
+                    [
+                        "13",
+                        "astore"
+                    ],
+                    [
+                        "14",
+                        "#5"
+                    ],
+                    [
+                        "15",
+                        "aload"
+                    ],
+                    [
+                        "16",
+                        "#5"
+                    ],
+                    [
+                        "17",
+                        "aload_2"
+                    ],
+                    [
+                        "18",
+                        "invokeinterface"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/RealFieldElement.getField:()Lorg/apache/commons/math3/Field;"
+                    ],
+                    [
+                        "21",
+                        "0"
+                    ],
+                    [
+                        "23",
+                        "checkcast"
+                    ],
+                    [
+                        "24",
+                        "org/apache/commons/math3/RealFieldElement"
+                    ],
+                    [
+                        "26",
+                        "astore"
+                    ],
+                    [
+                        "27",
+                        "#6"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    156,
+                    158
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "28",
+                        "aload_1"
+                    ],
+                    [
+                        "29",
+                        "invokeinterface"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/math3/RealFieldElement.org/apache/commons/math3/util/MathArrays"
+                    ],
+                    [
+                        "32",
+                        "0"
+                    ],
+                    [
+                        "34",
+                        "aload_3"
+                    ],
+                    [
+                        "35",
+                        "arraylength"
+                    ],
+                    [
+                        "36",
+                        "invokestatic"
+                    ],
+                    [
+                        "37",
+                        "org/apache/commons/math3/util/MathArrays.buildArray:(Lorg/apache/commons/math3/Field;I)[Ljava/lang/Object;"
+                    ],
+                    [
+                        "39",
+                        "checkcast"
+                    ],
+                    [
+                        "40",
+                        "[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "42",
+                        "astore"
+                    ],
+                    [
+                        "43",
+                        "#7"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    158,
+                    159
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "44",
+                        "aload"
+                    ],
+                    [
+                        "45",
+                        "#7"
+                    ],
+                    [
+                        "46",
+                        "aload_1"
+                    ],
+                    [
+                        "47",
+                        "invokeinterface"
+                    ],
+                    [
+                        "48",
+                        "org/apache/commons/math3/RealFieldElement.org/apache/commons/math3/util/MathArrays"
+                    ],
+                    [
+                        "50",
+                        "0"
+                    ],
+                    [
+                        "52",
+                        "invokeinterface"
+                    ],
+                    [
+                        "53",
+                        "org/apache/commons/math3/Field.java/util/Arrays"
+                    ],
+                    [
+                        "55",
+                        "0"
+                    ],
+                    [
+                        "57",
+                        "invokestatic"
+                    ],
+                    [
+                        "58",
+                        "java/util/Arrays.fill:([Ljava/lang/Object;Ljava/lang/Object;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    159,
+                    160
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "60",
+                        "aload_1"
+                    ],
+                    [
+                        "61",
+                        "invokeinterface"
+                    ],
+                    [
+                        "62",
+                        "org/apache/commons/math3/RealFieldElement.org/apache/commons/math3/util/MathArrays"
+                    ],
+                    [
+                        "64",
+                        "0"
+                    ],
+                    [
+                        "66",
+                        "aload_3"
+                    ],
+                    [
+                        "67",
+                        "arraylength"
+                    ],
+                    [
+                        "68",
+                        "invokestatic"
+                    ],
+                    [
+                        "69",
+                        "org/apache/commons/math3/util/MathArrays.buildArray:(Lorg/apache/commons/math3/Field;I)[Ljava/lang/Object;"
+                    ],
+                    [
+                        "71",
+                        "checkcast"
+                    ],
+                    [
+                        "72",
+                        "[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "74",
+                        "astore"
+                    ],
+                    [
+                        "75",
+                        "#8"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    160,
+                    161
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "76",
+                        "aload"
+                    ],
+                    [
+                        "77",
+                        "#8"
+                    ],
+                    [
+                        "78",
+                        "aload_1"
+                    ],
+                    [
+                        "79",
+                        "invokeinterface"
+                    ],
+                    [
+                        "80",
+                        "org/apache/commons/math3/RealFieldElement.org/apache/commons/math3/util/MathArrays"
+                    ],
+                    [
+                        "82",
+                        "0"
+                    ],
+                    [
+                        "84",
+                        "invokeinterface"
+                    ],
+                    [
+                        "85",
+                        "org/apache/commons/math3/Field.java/util/Arrays"
+                    ],
+                    [
+                        "87",
+                        "0"
+                    ],
+                    [
+                        "89",
+                        "invokestatic"
+                    ],
+                    [
+                        "90",
+                        "java/util/Arrays.fill:([Ljava/lang/Object;Ljava/lang/Object;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    161,
+                    165
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "92",
+                        "aload"
+                    ],
+                    [
+                        "93",
+                        "#4"
+                    ],
+                    [
+                        "94",
+                        "invokevirtual"
+                    ],
+                    [
+                        "95",
+                        "org/apache/commons/math3/linear/Array2DRowFieldMatrix.getDataRef:()[[Lorg/apache/commons/math3/FieldElement;"
+                    ],
+                    [
+                        "97",
+                        "checkcast"
+                    ],
+                    [
+                        "98",
+                        "[[Lorg/apache/commons/math3/RealFieldElement;"
+                    ],
+                    [
+                        "100",
+                        "astore"
+                    ],
+                    [
+                        "101",
+                        "#9"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    165,
+                    166
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "102",
+                        "aload"
+                    ],
+                    [
+                        "103",
+                        "#9"
+                    ],
+                    [
+                        "104",
+                        "arraylength"
+                    ],
+                    [
+                        "105",
+                        "iconst_1"
+                    ],
+                    [
+                        "106",
+                        "isub"
+                    ],
+                    [
+                        "107",
+                        "istore"
+                    ],
+                    [
+                        "108",
+                        "#10"
+                    ],
+                    [
+                        "109",
+                        "iload"
+                    ],
+                    [
+                        "110",
+                        "#10"
+                    ],
+                    [
+                        "111",
+                        "iflt"
+                    ],
+                    [
+                        "112",
+                        "117"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    166,
+                    177
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            166,
+                            177
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    167,
+                                    168
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    168,
+                                    169
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    169,
+                                    170
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    170,
+                                    175
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            170,
+                                            175
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    171,
+                                                    172
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    172,
+                                                    173
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    173,
+                                                    174
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    177,
+                    178
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    178,
+                    185
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            178,
+                            185
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    179,
+                                    180
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    180,
+                                    181
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    181,
+                                    183
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    185,
+                    187
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

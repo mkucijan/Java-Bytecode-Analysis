@@ -1,0 +1,163 @@
+{
+    "getEvaluationCounter": {
+        "name": "getEvaluationCounter",
+        "pos": [
+            62,
+            67
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    63,
+                    64
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/util/Incrementor"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/optim/AbstractOptimizationProblem.maxEvaluations:I"
+                    ],
+                    [
+                        "8",
+                        "getstatic"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/optim/AbstractOptimizationProblem.MAX_EVAL_CALLBACK:Lorg/apache/commons/math3/optim/AbstractOptimizationProblem$MaxEvalCallback;"
+                    ],
+                    [
+                        "11",
+                        "invokespecial"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/util/Incrementor.<init>:(ILorg/apache/commons/math3/util/Incrementor$MaxCountExceededCallback;)V"
+                    ],
+                    [
+                        "14",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getIterationCounter": {
+        "name": "getIterationCounter",
+        "pos": [
+            67,
+            72
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    68,
+                    69
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/util/Incrementor"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/optim/AbstractOptimizationProblem.maxIterations:I"
+                    ],
+                    [
+                        "8",
+                        "getstatic"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/optim/AbstractOptimizationProblem.MAX_ITER_CALLBACK:Lorg/apache/commons/math3/optim/AbstractOptimizationProblem$MaxIterCallback;"
+                    ],
+                    [
+                        "11",
+                        "invokespecial"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/util/Incrementor.<init>:(ILorg/apache/commons/math3/util/Incrementor$MaxCountExceededCallback;)V"
+                    ],
+                    [
+                        "14",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getConvergenceChecker": {
+        "name": "getConvergenceChecker",
+        "pos": [
+            72,
+            77
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    73,
+                    74
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/AbstractOptimizationProblem.checker:Lorg/apache/commons/math3/optim/ConvergenceChecker;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

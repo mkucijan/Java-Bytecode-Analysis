@@ -1,0 +1,204 @@
+{
+    "append": {
+        "name": "append",
+        "pos": [
+            91,
+            105
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    92,
+                    93
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/sequence/EditScript.commands:Ljava/util/List;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/List.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "pop"
+                    ],
+                    [
+                        "11",
+                        "aload_0"
+                    ],
+                    [
+                        "12",
+                        "dup"
+                    ],
+                    [
+                        "13",
+                        "getfield"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/collections4/sequence/EditScript.modifications:I"
+                    ],
+                    [
+                        "16",
+                        "iconst_1"
+                    ],
+                    [
+                        "17",
+                        "iadd"
+                    ],
+                    [
+                        "18",
+                        "putfield"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/collections4/sequence/EditScript.modifications:I"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    93,
+                    94
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "21",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "visit": {
+        "name": "visit",
+        "pos": [
+            105,
+            118
+        ],
+        "children": [
+            {
+                "name": "ForStatement",
+                "pos": [
+                    106,
+                    109
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            106,
+                            109
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    107,
+                                    108
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "getLCSLength": {
+        "name": "getLCSLength",
+        "pos": [
+            118,
+            129
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    119,
+                    120
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/sequence/EditScript.lcsLength:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getModifications": {
+        "name": "getModifications",
+        "pos": [
+            129,
+            133
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    130,
+                    131
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/sequence/EditScript.modifications:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,831 @@
+{
+    "getMaximumCacheSize": {
+        "name": "getMaximumCacheSize",
+        "pos": [
+            104,
+            113
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    105,
+                    106
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/list/NodeCachingLinkedList.maximumCacheSize:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setMaximumCacheSize": {
+        "name": "setMaximumCacheSize",
+        "pos": [
+            113,
+            121
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    114,
+                    115
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/list/NodeCachingLinkedList.maximumCacheSize:I"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/list/NodeCachingLinkedList.shrinkCacheToMaximumSize:()V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    115,
+                    116
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "shrinkCacheToMaximumSize": {
+        "name": "shrinkCacheToMaximumSize",
+        "pos": [
+            121,
+            135
+        ],
+        "children": [
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    123,
+                    126
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            123,
+                            126
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    124,
+                                    125
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "getNodeFromCache": {
+        "name": "getNodeFromCache",
+        "pos": [
+            135,
+            152
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    136,
+                    139
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            136,
+                            139
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    137,
+                                    138
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    139,
+                    140
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    140,
+                    141
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    141,
+                    143
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    143,
+                    144
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    144,
+                    145
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "isCacheFull": {
+        "name": "isCacheFull",
+        "pos": [
+            152,
+            162
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    153,
+                    154
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/list/NodeCachingLinkedList.cacheSize:I"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/list/NodeCachingLinkedList.maximumCacheSize:I"
+                    ],
+                    [
+                        "8",
+                        "if_icmplt"
+                    ],
+                    [
+                        "9",
+                        "7"
+                    ],
+                    [
+                        "11",
+                        "iconst_1"
+                    ],
+                    [
+                        "12",
+                        "goto"
+                    ],
+                    [
+                        "13",
+                        "4"
+                    ],
+                    [
+                        "15",
+                        "iconst_0"
+                    ],
+                    [
+                        "16",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "addNodeToCache": {
+        "name": "addNodeToCache",
+        "pos": [
+            162,
+            184
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    163,
+                    168
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            163,
+                            168
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    165,
+                                    166
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    168,
+                    169
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    169,
+                    170
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    170,
+                    171
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    171,
+                    172
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    172,
+                    173
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    173,
+                    174
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "createNode": {
+        "name": "createNode",
+        "pos": [
+            184,
+            200
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    186,
+                    187
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/list/NodeCachingLinkedList.getNodeFromCache:()Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;"
+                    ],
+                    [
+                        "4",
+                        "astore_2"
+                    ],
+                    [
+                        "5",
+                        "aload_2"
+                    ],
+                    [
+                        "6",
+                        "ifnonnull"
+                    ],
+                    [
+                        "7",
+                        "9"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    187,
+                    190
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            187,
+                            190
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    188,
+                                    189
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    190,
+                    191
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    191,
+                    192
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "removeNode": {
+        "name": "removeNode",
+        "pos": [
+            200,
+            211
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    202,
+                    203
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokespecial"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/list/AbstractLinkedList.removeNode:(Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;)V"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/collections4/list/NodeCachingLinkedList.addNodeToCache:(Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    203,
+                    204
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "removeAllNodes": {
+        "name": "removeAllNodes",
+        "pos": [
+            211,
+            231
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    217,
+                    218
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/list/NodeCachingLinkedList.size:I"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/list/NodeCachingLinkedList.maximumCacheSize:I"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "getfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/collections4/list/NodeCachingLinkedList.cacheSize:I"
+                    ],
+                    [
+                        "12",
+                        "isub"
+                    ],
+                    [
+                        "13",
+                        "invokestatic"
+                    ],
+                    [
+                        "14",
+                        "java/lang/Math.min:(II)I"
+                    ],
+                    [
+                        "16",
+                        "istore_1"
+                    ],
+                    [
+                        "17",
+                        "aload_0"
+                    ],
+                    [
+                        "18",
+                        "getfield"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/collections4/list/NodeCachingLinkedList.header:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;"
+                    ],
+                    [
+                        "21",
+                        "getfield"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/collections4/list/AbstractLinkedList$Node.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;"
+                    ],
+                    [
+                        "24",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    218,
+                    219
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "25",
+                        "iconst_0"
+                    ],
+                    [
+                        "26",
+                        "istore_3"
+                    ],
+                    [
+                        "27",
+                        "iload_3"
+                    ],
+                    [
+                        "28",
+                        "iload_1"
+                    ],
+                    [
+                        "29",
+                        "if_icmpge"
+                    ],
+                    [
+                        "30",
+                        "23"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    219,
+                    224
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            219,
+                            224
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    220,
+                                    221
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    221,
+                                    222
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    222,
+                                    223
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    224,
+                    225
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "writeObject": {
+        "name": "writeObject",
+        "pos": [
+            231,
+            239
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    232,
+                    233
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectOutputStream.defaultWriteObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/list/NodeCachingLinkedList.doWriteObject:(Ljava/io/ObjectOutputStream;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    233,
+                    234
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "readObject": {
+        "name": "readObject",
+        "pos": [
+            239,
+            244
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    240,
+                    241
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectInputStream.defaultReadObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/list/NodeCachingLinkedList.doReadObject:(Ljava/io/ObjectInputStream;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    241,
+                    242
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

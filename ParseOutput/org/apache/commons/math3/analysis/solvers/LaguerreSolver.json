@@ -1,0 +1,1024 @@
+{
+    "doSolve": {
+        "name": "doSolve",
+        "pos": [
+            90,
+            153
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    95,
+                    96
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver.getMin:()D"
+                    ],
+                    [
+                        "4",
+                        "dstore_1"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver.getMax:()D"
+                    ],
+                    [
+                        "9",
+                        "dstore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    96,
+                    97
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "invokevirtual"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver.getStartValue:()D"
+                    ],
+                    [
+                        "14",
+                        "dstore"
+                    ],
+                    [
+                        "15",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    97,
+                    98
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "invokevirtual"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver.getFunctionValueAccuracy:()D"
+                    ],
+                    [
+                        "20",
+                        "dstore"
+                    ],
+                    [
+                        "21",
+                        "#7"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    98,
+                    100
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "22",
+                        "aload_0"
+                    ],
+                    [
+                        "23",
+                        "dload_1"
+                    ],
+                    [
+                        "24",
+                        "dload"
+                    ],
+                    [
+                        "25",
+                        "#5"
+                    ],
+                    [
+                        "26",
+                        "dload_3"
+                    ],
+                    [
+                        "27",
+                        "invokevirtual"
+                    ],
+                    [
+                        "28",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver.verifySequence:(DDD)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    100,
+                    103
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "30",
+                        "aload_0"
+                    ],
+                    [
+                        "31",
+                        "dload"
+                    ],
+                    [
+                        "32",
+                        "#5"
+                    ],
+                    [
+                        "33",
+                        "invokevirtual"
+                    ],
+                    [
+                        "34",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver.computeObjectiveValue:(D)D"
+                    ],
+                    [
+                        "36",
+                        "dstore"
+                    ],
+                    [
+                        "37",
+                        "#9"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    103,
+                    104
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "38",
+                        "dload"
+                    ],
+                    [
+                        "39",
+                        "#9"
+                    ],
+                    [
+                        "40",
+                        "invokestatic"
+                    ],
+                    [
+                        "41",
+                        "org/apache/commons/math3/util/FastMath.abs:(D)D"
+                    ],
+                    [
+                        "43",
+                        "dload"
+                    ],
+                    [
+                        "44",
+                        "#7"
+                    ],
+                    [
+                        "45",
+                        "dcmpg"
+                    ],
+                    [
+                        "46",
+                        "ifgt"
+                    ],
+                    [
+                        "47",
+                        "6"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    104,
+                    109
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            104,
+                            109
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    105,
+                                    106
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    109,
+                    110
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    110,
+                    115
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            110,
+                            115
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    111,
+                                    112
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    115,
+                    120
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            115,
+                            120
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    116,
+                                    117
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    120,
+                    121
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    121,
+                    126
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            121,
+                            126
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    122,
+                                    123
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    126,
+                    130
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            126,
+                            130
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    127,
+                                    128
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ThrowStatement",
+                "pos": [
+                    130,
+                    131
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "laguerre": {
+        "name": "laguerre",
+        "pos": [
+            153,
+            192
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    156,
+                    158
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver.getCoefficients:()[D"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/complex/ComplexUtils.convertToComplex:([D)[Lorg/apache/commons/math3/complex/Complex;"
+                    ],
+                    [
+                        "7",
+                        "astore"
+                    ],
+                    [
+                        "8",
+                        "#9"
+                    ],
+                    [
+                        "9",
+                        "new"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/complex/Complex"
+                    ],
+                    [
+                        "12",
+                        "dup"
+                    ],
+                    [
+                        "13",
+                        "ldc2_w"
+                    ],
+                    [
+                        "14",
+                        "0.5"
+                    ],
+                    [
+                        "16",
+                        "dload_1"
+                    ],
+                    [
+                        "17",
+                        "dload_3"
+                    ],
+                    [
+                        "18",
+                        "dadd"
+                    ],
+                    [
+                        "19",
+                        "dmul"
+                    ],
+                    [
+                        "20",
+                        "dconst_0"
+                    ],
+                    [
+                        "21",
+                        "invokespecial"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/complex/Complex.<init>:(DD)V"
+                    ],
+                    [
+                        "24",
+                        "astore"
+                    ],
+                    [
+                        "25",
+                        "#10"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    158,
+                    159
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "26",
+                        "aload_0"
+                    ],
+                    [
+                        "27",
+                        "getfield"
+                    ],
+                    [
+                        "28",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver.complexSolver:Lorg/apache/commons/math3/analysis/solvers/LaguerreSolver$ComplexSolver;"
+                    ],
+                    [
+                        "30",
+                        "aload"
+                    ],
+                    [
+                        "31",
+                        "#9"
+                    ],
+                    [
+                        "32",
+                        "aload"
+                    ],
+                    [
+                        "33",
+                        "#10"
+                    ],
+                    [
+                        "34",
+                        "invokevirtual"
+                    ],
+                    [
+                        "35",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver$ComplexSolver.solve:([Lorg/apache/commons/math3/complex/Complex;Lorg/apache/commons/math3/complex/Complex;)Lorg/apache/commons/math3/complex/Complex;"
+                    ],
+                    [
+                        "37",
+                        "astore"
+                    ],
+                    [
+                        "38",
+                        "#11"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    159,
+                    160
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "39",
+                        "aload_0"
+                    ],
+                    [
+                        "40",
+                        "getfield"
+                    ],
+                    [
+                        "41",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver.complexSolver:Lorg/apache/commons/math3/analysis/solvers/LaguerreSolver$ComplexSolver;"
+                    ],
+                    [
+                        "43",
+                        "dload_1"
+                    ],
+                    [
+                        "44",
+                        "dload_3"
+                    ],
+                    [
+                        "45",
+                        "aload"
+                    ],
+                    [
+                        "46",
+                        "#11"
+                    ],
+                    [
+                        "47",
+                        "invokevirtual"
+                    ],
+                    [
+                        "48",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver$ComplexSolver.isRoot:(DDLorg/apache/commons/math3/complex/Complex;)Z"
+                    ],
+                    [
+                        "50",
+                        "ifeq"
+                    ],
+                    [
+                        "51",
+                        "9"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    160,
+                    174
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            160,
+                            162
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    161,
+                                    162
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            162,
+                            174
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    163,
+                                    165
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    165,
+                                    166
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    166,
+                                    172
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            166,
+                                            172
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    167,
+                                                    171
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            167,
+                                                            171
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    168,
+                                                                    169
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "BreakStatement",
+                                                                "pos": [
+                                                                    169,
+                                                                    170
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    172,
+                                    173
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "solveAllComplex": {
+        "name": "solveAllComplex",
+        "pos": [
+            217,
+            247
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    222,
+                    227
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload"
+                    ],
+                    [
+                        "2",
+                        "#4"
+                    ],
+                    [
+                        "3",
+                        "new"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/analysis/polynomials/PolynomialFunction"
+                    ],
+                    [
+                        "6",
+                        "dup"
+                    ],
+                    [
+                        "7",
+                        "aload_1"
+                    ],
+                    [
+                        "8",
+                        "invokespecial"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/analysis/polynomials/PolynomialFunction.<init>:([D)V"
+                    ],
+                    [
+                        "11",
+                        "ldc2_w"
+                    ],
+                    [
+                        "12",
+                        "-inf"
+                    ],
+                    [
+                        "14",
+                        "ldc2_w"
+                    ],
+                    [
+                        "15",
+                        "inf"
+                    ],
+                    [
+                        "17",
+                        "dload_2"
+                    ],
+                    [
+                        "18",
+                        "invokevirtual"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver.setup:(ILorg/apache/commons/math3/analysis/polynomials/PolynomialFunction;DDD)V"
+                    ],
+                    [
+                        "21",
+                        "aload_0"
+                    ],
+                    [
+                        "22",
+                        "getfield"
+                    ],
+                    [
+                        "23",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver.complexSolver:Lorg/apache/commons/math3/analysis/solvers/LaguerreSolver$ComplexSolver;"
+                    ],
+                    [
+                        "25",
+                        "aload_1"
+                    ],
+                    [
+                        "26",
+                        "invokestatic"
+                    ],
+                    [
+                        "27",
+                        "org/apache/commons/math3/complex/ComplexUtils.convertToComplex:([D)[Lorg/apache/commons/math3/complex/Complex;"
+                    ],
+                    [
+                        "29",
+                        "new"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/math3/complex/Complex"
+                    ],
+                    [
+                        "32",
+                        "dup"
+                    ],
+                    [
+                        "33",
+                        "dload_2"
+                    ],
+                    [
+                        "34",
+                        "dconst_0"
+                    ],
+                    [
+                        "35",
+                        "invokespecial"
+                    ],
+                    [
+                        "36",
+                        "org/apache/commons/math3/complex/Complex.<init>:(DD)V"
+                    ],
+                    [
+                        "38",
+                        "invokevirtual"
+                    ],
+                    [
+                        "39",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver$ComplexSolver.solveAll:([Lorg/apache/commons/math3/complex/Complex;Lorg/apache/commons/math3/complex/Complex;)[Lorg/apache/commons/math3/complex/Complex;"
+                    ],
+                    [
+                        "41",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    227,
+                    229
+                ],
+                "children": []
+            }
+        ]
+    },
+    "solveComplex": {
+        "name": "solveComplex",
+        "pos": [
+            272,
+            289
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    277,
+                    282
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload"
+                    ],
+                    [
+                        "2",
+                        "#4"
+                    ],
+                    [
+                        "3",
+                        "new"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/analysis/polynomials/PolynomialFunction"
+                    ],
+                    [
+                        "6",
+                        "dup"
+                    ],
+                    [
+                        "7",
+                        "aload_1"
+                    ],
+                    [
+                        "8",
+                        "invokespecial"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/analysis/polynomials/PolynomialFunction.<init>:([D)V"
+                    ],
+                    [
+                        "11",
+                        "ldc2_w"
+                    ],
+                    [
+                        "12",
+                        "-inf"
+                    ],
+                    [
+                        "14",
+                        "ldc2_w"
+                    ],
+                    [
+                        "15",
+                        "inf"
+                    ],
+                    [
+                        "17",
+                        "dload_2"
+                    ],
+                    [
+                        "18",
+                        "invokevirtual"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver.setup:(ILorg/apache/commons/math3/analysis/polynomials/PolynomialFunction;DDD)V"
+                    ],
+                    [
+                        "21",
+                        "aload_0"
+                    ],
+                    [
+                        "22",
+                        "getfield"
+                    ],
+                    [
+                        "23",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver.complexSolver:Lorg/apache/commons/math3/analysis/solvers/LaguerreSolver$ComplexSolver;"
+                    ],
+                    [
+                        "25",
+                        "aload_1"
+                    ],
+                    [
+                        "26",
+                        "invokestatic"
+                    ],
+                    [
+                        "27",
+                        "org/apache/commons/math3/complex/ComplexUtils.convertToComplex:([D)[Lorg/apache/commons/math3/complex/Complex;"
+                    ],
+                    [
+                        "29",
+                        "new"
+                    ],
+                    [
+                        "30",
+                        "org/apache/commons/math3/complex/Complex"
+                    ],
+                    [
+                        "32",
+                        "dup"
+                    ],
+                    [
+                        "33",
+                        "dload_2"
+                    ],
+                    [
+                        "34",
+                        "dconst_0"
+                    ],
+                    [
+                        "35",
+                        "invokespecial"
+                    ],
+                    [
+                        "36",
+                        "org/apache/commons/math3/complex/Complex.<init>:(DD)V"
+                    ],
+                    [
+                        "38",
+                        "invokevirtual"
+                    ],
+                    [
+                        "39",
+                        "org/apache/commons/math3/analysis/solvers/LaguerreSolver$ComplexSolver.solve:([Lorg/apache/commons/math3/complex/Complex;Lorg/apache/commons/math3/complex/Complex;)Lorg/apache/commons/math3/complex/Complex;"
+                    ],
+                    [
+                        "41",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    282,
+                    284
+                ],
+                "children": []
+            }
+        ]
+    }
+}

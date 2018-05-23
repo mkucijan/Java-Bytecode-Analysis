@@ -1,0 +1,532 @@
+{
+    "computeObjectiveValue": {
+        "name": "computeObjectiveValue",
+        "pos": [
+            61,
+            83
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    62,
+                    63
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/BaseMultivariateOptimizer.incrementEvaluationCount:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.model:Lorg/apache/commons/math3/analysis/MultivariateVectorFunction;"
+                    ],
+                    [
+                        "8",
+                        "aload_1"
+                    ],
+                    [
+                        "9",
+                        "invokeinterface"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/analysis/MultivariateVectorFunction.optimize:([Lorg/apache/commons/math3/optim/OptimizationData;)Ljava/lang/Object;"
+                    ],
+                    [
+                        "12",
+                        "0"
+                    ],
+                    [
+                        "14",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    63,
+                    64
+                ],
+                "children": []
+            }
+        ]
+    },
+    "optimize": {
+        "name": "optimize",
+        "pos": [
+            83,
+            96
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    88,
+                    89
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokespecial"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/optim/BaseMultivariateOptimizer.optimize:([Lorg/apache/commons/math3/optim/OptimizationData;)Ljava/lang/Object;"
+                    ],
+                    [
+                        "5",
+                        "checkcast"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/optim/PointVectorValuePair"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getWeight": {
+        "name": "getWeight",
+        "pos": [
+            96,
+            105
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    97,
+                    98
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.weightMatrix:Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/linear/RealMatrix.target:[D"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getTarget": {
+        "name": "getTarget",
+        "pos": [
+            105,
+            114
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    106,
+                    107
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.target:[D"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "[D.clone:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "checkcast"
+                    ],
+                    [
+                        "8",
+                        "[D"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getTargetSize": {
+        "name": "getTargetSize",
+        "pos": [
+            114,
+            129
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    115,
+                    116
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/nonlinear/vector/MultivariateVectorOptimizer.target:[D"
+                    ],
+                    [
+                        "4",
+                        "arraylength"
+                    ],
+                    [
+                        "5",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "parseOptimizationData": {
+        "name": "parseOptimizationData",
+        "pos": [
+            129,
+            161
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    132,
+                    136
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokespecial"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/optim/BaseMultivariateOptimizer.parseOptimizationData:([Lorg/apache/commons/math3/optim/OptimizationData;)V"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "astore_2"
+                    ],
+                    [
+                        "7",
+                        "aload_2"
+                    ],
+                    [
+                        "8",
+                        "arraylength"
+                    ],
+                    [
+                        "9",
+                        "istore_3"
+                    ],
+                    [
+                        "10",
+                        "iconst_0"
+                    ],
+                    [
+                        "11",
+                        "istore"
+                    ],
+                    [
+                        "12",
+                        "#4"
+                    ],
+                    [
+                        "13",
+                        "iload"
+                    ],
+                    [
+                        "14",
+                        "#4"
+                    ],
+                    [
+                        "15",
+                        "iload_3"
+                    ],
+                    [
+                        "16",
+                        "if_icmpge"
+                    ],
+                    [
+                        "17",
+                        "84"
+                    ],
+                    [
+                        "19",
+                        "aload_2"
+                    ],
+                    [
+                        "20",
+                        "iload"
+                    ],
+                    [
+                        "21",
+                        "#4"
+                    ],
+                    [
+                        "22",
+                        "aaload"
+                    ],
+                    [
+                        "23",
+                        "astore"
+                    ],
+                    [
+                        "24",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    136,
+                    152
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            136,
+                            152
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    137,
+                                    141
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            137,
+                                            141
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    138,
+                                                    139
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "ContinueStatement",
+                                                "pos": [
+                                                    139,
+                                                    140
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    141,
+                                    145
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            141,
+                                            145
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    142,
+                                                    143
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "ContinueStatement",
+                                                "pos": [
+                                                    143,
+                                                    144
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    145,
+                                    149
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            145,
+                                            149
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    146,
+                                                    147
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "ContinueStatement",
+                                                "pos": [
+                                                    147,
+                                                    148
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    152,
+                    153
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "checkParameters": {
+        "name": "checkParameters",
+        "pos": [
+            161,
+            167
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    162,
+                    166
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            162,
+                            166
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    163,
+                                    165
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

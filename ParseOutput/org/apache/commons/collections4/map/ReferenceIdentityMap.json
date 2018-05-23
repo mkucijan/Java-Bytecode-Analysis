@@ -1,0 +1,392 @@
+{
+    "hash": {
+        "name": "hash",
+        "pos": [
+            173,
+            187
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    175,
+                    176
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "java/lang/System.identityHashCode:(Ljava/lang/Object;)I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "hashEntry": {
+        "name": "hashEntry",
+        "pos": [
+            187,
+            203
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    189,
+                    191
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "java/lang/System.identityHashCode:(Ljava/lang/Object;)I"
+                    ],
+                    [
+                        "4",
+                        "aload_2"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "java/lang/System.identityHashCode:(Ljava/lang/Object;)I"
+                    ],
+                    [
+                        "8",
+                        "ixor"
+                    ],
+                    [
+                        "9",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isEqualKey": {
+        "name": "isEqualKey",
+        "pos": [
+            203,
+            218
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    205,
+                    206
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getstatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength.HARD:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/map/ReferenceIdentityMap.isKeyType:(Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;)Z"
+                    ],
+                    [
+                        "7",
+                        "ifeq"
+                    ],
+                    [
+                        "8",
+                        "7"
+                    ],
+                    [
+                        "10",
+                        "aload_2"
+                    ],
+                    [
+                        "11",
+                        "goto"
+                    ],
+                    [
+                        "12",
+                        "10"
+                    ],
+                    [
+                        "14",
+                        "aload_2"
+                    ],
+                    [
+                        "15",
+                        "checkcast"
+                    ],
+                    [
+                        "16",
+                        "java/lang/ref/Reference"
+                    ],
+                    [
+                        "18",
+                        "invokevirtual"
+                    ],
+                    [
+                        "19",
+                        "java/lang/ref/Reference.get:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "21",
+                        "astore_2"
+                    ],
+                    [
+                        "22",
+                        "aload_1"
+                    ],
+                    [
+                        "23",
+                        "aload_2"
+                    ],
+                    [
+                        "24",
+                        "if_acmpne"
+                    ],
+                    [
+                        "25",
+                        "7"
+                    ],
+                    [
+                        "27",
+                        "iconst_1"
+                    ],
+                    [
+                        "28",
+                        "goto"
+                    ],
+                    [
+                        "29",
+                        "4"
+                    ],
+                    [
+                        "31",
+                        "iconst_0"
+                    ],
+                    [
+                        "32",
+                        "ireturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    206,
+                    207
+                ],
+                "children": []
+            }
+        ]
+    },
+    "isEqualValue": {
+        "name": "isEqualValue",
+        "pos": [
+            218,
+            227
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    220,
+                    221
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "aload_2"
+                    ],
+                    [
+                        "2",
+                        "if_acmpne"
+                    ],
+                    [
+                        "3",
+                        "7"
+                    ],
+                    [
+                        "5",
+                        "iconst_1"
+                    ],
+                    [
+                        "6",
+                        "goto"
+                    ],
+                    [
+                        "7",
+                        "4"
+                    ],
+                    [
+                        "9",
+                        "iconst_0"
+                    ],
+                    [
+                        "10",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "writeObject": {
+        "name": "writeObject",
+        "pos": [
+            227,
+            235
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    228,
+                    229
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectOutputStream.defaultWriteObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/map/ReferenceIdentityMap.doWriteObject:(Ljava/io/ObjectOutputStream;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    229,
+                    230
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "readObject": {
+        "name": "readObject",
+        "pos": [
+            235,
+            240
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    236,
+                    237
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/io/ObjectInputStream.defaultReadObject:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/map/ReferenceIdentityMap.doReadObject:(Ljava/io/ObjectInputStream;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    237,
+                    238
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

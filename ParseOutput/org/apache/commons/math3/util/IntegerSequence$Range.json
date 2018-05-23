@@ -1,0 +1,168 @@
+{
+    "size": {
+        "name": "size",
+        "pos": [
+            106,
+            111
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    107,
+                    108
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/IntegerSequence$Range.size:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "iterator": {
+        "name": "iterator",
+        "pos": [
+            111,
+            117
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    112,
+                    116
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "invokestatic"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/util/IntegerSequence$Incrementor.create:()Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "3",
+                        "aload_0"
+                    ],
+                    [
+                        "4",
+                        "getfield"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/util/IntegerSequence$Range.start:I"
+                    ],
+                    [
+                        "7",
+                        "invokevirtual"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/util/IntegerSequence$Incrementor.withStart:(I)Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "getfield"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/util/IntegerSequence$Range.max:I"
+                    ],
+                    [
+                        "14",
+                        "aload_0"
+                    ],
+                    [
+                        "15",
+                        "getfield"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/util/IntegerSequence$Range.step:I"
+                    ],
+                    [
+                        "18",
+                        "ifle"
+                    ],
+                    [
+                        "19",
+                        "7"
+                    ],
+                    [
+                        "21",
+                        "iconst_1"
+                    ],
+                    [
+                        "22",
+                        "goto"
+                    ],
+                    [
+                        "23",
+                        "4"
+                    ],
+                    [
+                        "25",
+                        "iconst_m1"
+                    ],
+                    [
+                        "26",
+                        "iadd"
+                    ],
+                    [
+                        "27",
+                        "invokevirtual"
+                    ],
+                    [
+                        "28",
+                        "org/apache/commons/math3/util/IntegerSequence$Incrementor.withMaximalCount:(I)Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "30",
+                        "aload_0"
+                    ],
+                    [
+                        "31",
+                        "getfield"
+                    ],
+                    [
+                        "32",
+                        "org/apache/commons/math3/util/IntegerSequence$Range.step:I"
+                    ],
+                    [
+                        "34",
+                        "invokevirtual"
+                    ],
+                    [
+                        "35",
+                        "org/apache/commons/math3/util/IntegerSequence$Incrementor.withIncrement:(I)Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "37",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

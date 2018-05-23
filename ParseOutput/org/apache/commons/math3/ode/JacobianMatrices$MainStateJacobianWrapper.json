@@ -1,0 +1,309 @@
+{
+    "getDimension": {
+        "name": "getDimension",
+        "pos": [
+            445,
+            450
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    446,
+                    447
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/JacobianMatrices$MainStateJacobianWrapper.ode:Lorg/apache/commons/math3/ode/FirstOrderDifferentialEquations;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/ode/FirstOrderDifferentialEquations.org/apache/commons/math3/exception/DimensionMismatchException"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "computeDerivatives": {
+        "name": "computeDerivatives",
+        "pos": [
+            450,
+            456
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    452,
+                    453
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/JacobianMatrices$MainStateJacobianWrapper.ode:Lorg/apache/commons/math3/ode/FirstOrderDifferentialEquations;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "aload_3"
+                    ],
+                    [
+                        "6",
+                        "aload"
+                    ],
+                    [
+                        "7",
+                        "#4"
+                    ],
+                    [
+                        "8",
+                        "invokeinterface"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/ode/FirstOrderDifferentialEquations.org/apache/commons/math3/ode/JacobianMatrices"
+                    ],
+                    [
+                        "11",
+                        "0"
+                    ],
+                    [
+                        "13",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "computeMainStateJacobian": {
+        "name": "computeMainStateJacobian",
+        "pos": [
+            456,
+            473
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    459,
+                    460
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/JacobianMatrices$MainStateJacobianWrapper.ode:Lorg/apache/commons/math3/ode/FirstOrderDifferentialEquations;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/ode/FirstOrderDifferentialEquations.org/apache/commons/math3/exception/DimensionMismatchException"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "istore"
+                    ],
+                    [
+                        "10",
+                        "#6"
+                    ],
+                    [
+                        "11",
+                        "iload"
+                    ],
+                    [
+                        "12",
+                        "#6"
+                    ],
+                    [
+                        "13",
+                        "newarray"
+                    ],
+                    [
+                        "14",
+                        "7"
+                    ],
+                    [
+                        "15",
+                        "astore"
+                    ],
+                    [
+                        "16",
+                        "#7"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    460,
+                    462
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "17",
+                        "iconst_0"
+                    ],
+                    [
+                        "18",
+                        "istore"
+                    ],
+                    [
+                        "19",
+                        "#8"
+                    ],
+                    [
+                        "20",
+                        "iload"
+                    ],
+                    [
+                        "21",
+                        "#8"
+                    ],
+                    [
+                        "22",
+                        "iload"
+                    ],
+                    [
+                        "23",
+                        "#6"
+                    ],
+                    [
+                        "24",
+                        "if_icmpge"
+                    ],
+                    [
+                        "25",
+                        "91"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    462,
+                    471
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            462,
+                            471
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    463,
+                                    464
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    464,
+                                    465
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    465,
+                                    466
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    466,
+                                    469
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            466,
+                                            469
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    467,
+                                                    468
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    469,
+                                    470
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

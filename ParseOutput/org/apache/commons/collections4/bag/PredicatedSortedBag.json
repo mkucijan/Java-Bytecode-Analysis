@@ -1,0 +1,237 @@
+{
+    "predicatedSortedBag": {
+        "name": "predicatedSortedBag",
+        "pos": [
+            61,
+            77
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    63,
+                    64
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/bag/PredicatedSortedBag"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokespecial"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/bag/PredicatedSortedBag.<init>:(Lorg/apache/commons/collections4/SortedBag;Lorg/apache/commons/collections4/Predicate;)V"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "decorated": {
+        "name": "decorated",
+        "pos": [
+            86,
+            93
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    88,
+                    89
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/bag/PredicatedBag.decorated:()Lorg/apache/commons/collections4/Bag;"
+                    ],
+                    [
+                        "4",
+                        "checkcast"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/SortedBag"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "first": {
+        "name": "first",
+        "pos": [
+            93,
+            98
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    95,
+                    96
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/bag/PredicatedSortedBag.decorated:()Lorg/apache/commons/collections4/SortedBag;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/SortedBag.last:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "last": {
+        "name": "last",
+        "pos": [
+            98,
+            103
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    100,
+                    101
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/bag/PredicatedSortedBag.decorated:()Lorg/apache/commons/collections4/SortedBag;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/SortedBag.comparator:()Ljava/util/Comparator;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "comparator": {
+        "name": "comparator",
+        "pos": [
+            103,
+            108
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    105,
+                    106
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/bag/PredicatedSortedBag.decorated:()Lorg/apache/commons/collections4/SortedBag;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/SortedBag.org/apache/commons/collections4/bag/PredicatedBag"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

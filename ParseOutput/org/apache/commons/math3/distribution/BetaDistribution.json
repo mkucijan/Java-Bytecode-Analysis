@@ -1,0 +1,989 @@
+{
+    "getAlpha": {
+        "name": "getAlpha",
+        "pos": [
+            131,
+            140
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    132,
+                    133
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/BetaDistribution.alpha:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getBeta": {
+        "name": "getBeta",
+        "pos": [
+            140,
+            145
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    141,
+                    142
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/BetaDistribution.beta:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "recomputeZ": {
+        "name": "recomputeZ",
+        "pos": [
+            145,
+            152
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    146,
+                    149
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            146,
+                            149
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    147,
+                                    148
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "density": {
+        "name": "density",
+        "pos": [
+            152,
+            158
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    153,
+                    154
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "dload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/distribution/BetaDistribution.logDensity:(D)D"
+                    ],
+                    [
+                        "5",
+                        "dstore_3"
+                    ],
+                    [
+                        "6",
+                        "dload_3"
+                    ],
+                    [
+                        "7",
+                        "ldc2_w"
+                    ],
+                    [
+                        "8",
+                        "-inf"
+                    ],
+                    [
+                        "10",
+                        "dcmpl"
+                    ],
+                    [
+                        "11",
+                        "ifne"
+                    ],
+                    [
+                        "12",
+                        "7"
+                    ],
+                    [
+                        "14",
+                        "dconst_0"
+                    ],
+                    [
+                        "15",
+                        "goto"
+                    ],
+                    [
+                        "16",
+                        "7"
+                    ],
+                    [
+                        "18",
+                        "dload_3"
+                    ],
+                    [
+                        "19",
+                        "invokestatic"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/util/FastMath.exp:(D)D"
+                    ],
+                    [
+                        "22",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    154,
+                    155
+                ],
+                "children": []
+            }
+        ]
+    },
+    "logDensity": {
+        "name": "logDensity",
+        "pos": [
+            158,
+            181
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    160,
+                    161
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/BetaDistribution.recomputeZ:()V"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "dconst_0"
+                    ],
+                    [
+                        "6",
+                        "dcmpg"
+                    ],
+                    [
+                        "7",
+                        "iflt"
+                    ],
+                    [
+                        "8",
+                        "9"
+                    ],
+                    [
+                        "10",
+                        "dload_1"
+                    ],
+                    [
+                        "11",
+                        "dconst_1"
+                    ],
+                    [
+                        "12",
+                        "dcmpl"
+                    ],
+                    [
+                        "13",
+                        "ifle"
+                    ],
+                    [
+                        "14",
+                        "7"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    161,
+                    178
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            161,
+                            163
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    162,
+                                    163
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "IfStatement",
+                        "pos": [
+                            163,
+                            178
+                        ],
+                        "children": [
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    163,
+                                    168
+                                ],
+                                "children": [
+                                    {
+                                        "name": "IfStatement",
+                                        "pos": [
+                                            164,
+                                            167
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "BlockStatement",
+                                                "pos": [
+                                                    164,
+                                                    167
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "ThrowStatement",
+                                                        "pos": [
+                                                            165,
+                                                            166
+                                                        ],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "ReturnStatement",
+                                        "pos": [
+                                            167,
+                                            168
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    168,
+                                    178
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            168,
+                                            173
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    169,
+                                                    172
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            169,
+                                                            172
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "ThrowStatement",
+                                                                "pos": [
+                                                                    170,
+                                                                    171
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    172,
+                                                    173
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            173,
+                                            178
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    174,
+                                                    175
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    175,
+                                                    176
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    176,
+                                                    177
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "cumulativeProbability": {
+        "name": "cumulativeProbability",
+        "pos": [
+            181,
+            198
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    182,
+                    189
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            182,
+                            184
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    183,
+                                    184
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "IfStatement",
+                        "pos": [
+                            184,
+                            189
+                        ],
+                        "children": [
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    184,
+                                    186
+                                ],
+                                "children": [
+                                    {
+                                        "name": "ReturnStatement",
+                                        "pos": [
+                                            185,
+                                            186
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "BlockStatement",
+                                "pos": [
+                                    186,
+                                    189
+                                ],
+                                "children": [
+                                    {
+                                        "name": "ReturnStatement",
+                                        "pos": [
+                                            187,
+                                            188
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "getSolverAbsoluteAccuracy": {
+        "name": "getSolverAbsoluteAccuracy",
+        "pos": [
+            198,
+            209
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    200,
+                    201
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/BetaDistribution.solverAbsoluteAccuracy:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNumericalMean": {
+        "name": "getNumericalMean",
+        "pos": [
+            209,
+            221
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    210,
+                    211
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/BetaDistribution.getAlpha:()D"
+                    ],
+                    [
+                        "4",
+                        "dstore_1"
+                    ],
+                    [
+                        "5",
+                        "dload_1"
+                    ],
+                    [
+                        "6",
+                        "dload_1"
+                    ],
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/distribution/BetaDistribution.getBeta:()D"
+                    ],
+                    [
+                        "11",
+                        "dadd"
+                    ],
+                    [
+                        "12",
+                        "ddiv"
+                    ],
+                    [
+                        "13",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    211,
+                    212
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getNumericalVariance": {
+        "name": "getNumericalVariance",
+        "pos": [
+            221,
+            235
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    222,
+                    223
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/BetaDistribution.getAlpha:()D"
+                    ],
+                    [
+                        "4",
+                        "dstore_1"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/distribution/BetaDistribution.getBeta:()D"
+                    ],
+                    [
+                        "9",
+                        "dstore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    223,
+                    224
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "dload_1"
+                    ],
+                    [
+                        "11",
+                        "dload_3"
+                    ],
+                    [
+                        "12",
+                        "dadd"
+                    ],
+                    [
+                        "13",
+                        "dstore"
+                    ],
+                    [
+                        "14",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    224,
+                    225
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "15",
+                        "dload_1"
+                    ],
+                    [
+                        "16",
+                        "dload_3"
+                    ],
+                    [
+                        "17",
+                        "dmul"
+                    ],
+                    [
+                        "18",
+                        "dload"
+                    ],
+                    [
+                        "19",
+                        "#5"
+                    ],
+                    [
+                        "20",
+                        "dload"
+                    ],
+                    [
+                        "21",
+                        "#5"
+                    ],
+                    [
+                        "22",
+                        "dmul"
+                    ],
+                    [
+                        "23",
+                        "dload"
+                    ],
+                    [
+                        "24",
+                        "#5"
+                    ],
+                    [
+                        "25",
+                        "dconst_1"
+                    ],
+                    [
+                        "26",
+                        "dadd"
+                    ],
+                    [
+                        "27",
+                        "dmul"
+                    ],
+                    [
+                        "28",
+                        "ddiv"
+                    ],
+                    [
+                        "29",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    225,
+                    226
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getSupportLowerBound": {
+        "name": "getSupportLowerBound",
+        "pos": [
+            235,
+            246
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    236,
+                    237
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dconst_0"
+                    ],
+                    [
+                        "1",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSupportUpperBound": {
+        "name": "getSupportUpperBound",
+        "pos": [
+            246,
+            251
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    247,
+                    248
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dconst_1"
+                    ],
+                    [
+                        "1",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportLowerBoundInclusive": {
+        "name": "isSupportLowerBoundInclusive",
+        "pos": [
+            251,
+            256
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    252,
+                    253
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_0"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportUpperBoundInclusive": {
+        "name": "isSupportUpperBoundInclusive",
+        "pos": [
+            256,
+            267
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    257,
+                    258
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_0"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportConnected": {
+        "name": "isSupportConnected",
+        "pos": [
+            267,
+            281
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    268,
+                    269
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_1"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "sample": {
+        "name": "sample",
+        "pos": [
+            281,
+            293
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    283,
+                    284
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/BetaDistribution.random:Lorg/apache/commons/math3/random/RandomGenerator;"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/distribution/BetaDistribution.alpha:D"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "getfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/distribution/BetaDistribution.beta:D"
+                    ],
+                    [
+                        "12",
+                        "invokestatic"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/distribution/BetaDistribution$ChengBetaSampler.sample:(Lorg/apache/commons/math3/random/RandomGenerator;DD)D"
+                    ],
+                    [
+                        "15",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

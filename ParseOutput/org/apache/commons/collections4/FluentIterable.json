@@ -1,0 +1,1351 @@
+{
+    "empty": {
+        "name": "empty",
+        "pos": [
+            80,
+            94
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    82,
+                    83
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "getstatic"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/IterableUtils.EMPTY_ITERABLE:Lorg/apache/commons/collections4/FluentIterable;"
+                    ],
+                    [
+                        "3",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "of": {
+        "name": "of",
+        "pos": [
+            124,
+            139
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    125,
+                    126
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/IterableUtils.checkNotNull:(Ljava/lang/Iterable;)V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "instanceof"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/FluentIterable"
+                    ],
+                    [
+                        "8",
+                        "ifeq"
+                    ],
+                    [
+                        "9",
+                        "8"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    126,
+                    131
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            126,
+                            128
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    127,
+                                    128
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            128,
+                            131
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    129,
+                                    130
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "append": {
+        "name": "append",
+        "pos": [
+            175,
+            197
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    176,
+                    177
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/IterableUtils.chainedIterable:(Ljava/lang/Iterable;Ljava/lang/Iterable;)Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "8",
+                        "invokestatic"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/collections4/FluentIterable.of:(Ljava/lang/Iterable;)Lorg/apache/commons/collections4/FluentIterable;"
+                    ],
+                    [
+                        "11",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "collate": {
+        "name": "collate",
+        "pos": [
+            222,
+            240
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    224,
+                    225
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_2"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokestatic"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/IterableUtils.collatedIterable:(Ljava/util/Comparator;Ljava/lang/Iterable;Ljava/lang/Iterable;)Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "9",
+                        "invokestatic"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/collections4/FluentIterable.of:(Ljava/lang/Iterable;)Lorg/apache/commons/collections4/FluentIterable;"
+                    ],
+                    [
+                        "12",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "eval": {
+        "name": "eval",
+        "pos": [
+            240,
+            252
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    241,
+                    242
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.toList:()Ljava/util/List;"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/FluentIterable.of:(Ljava/lang/Iterable;)Lorg/apache/commons/collections4/FluentIterable;"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "filter": {
+        "name": "filter",
+        "pos": [
+            252,
+            264
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    253,
+                    254
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/IterableUtils.filteredIterable:(Ljava/lang/Iterable;Lorg/apache/commons/collections4/Predicate;)Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "8",
+                        "invokestatic"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/collections4/FluentIterable.of:(Ljava/lang/Iterable;)Lorg/apache/commons/collections4/FluentIterable;"
+                    ],
+                    [
+                        "11",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "limit": {
+        "name": "limit",
+        "pos": [
+            264,
+            274
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    265,
+                    266
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "lload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/IterableUtils.boundedIterable:(Ljava/lang/Iterable;J)Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "8",
+                        "invokestatic"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/collections4/FluentIterable.of:(Ljava/lang/Iterable;)Lorg/apache/commons/collections4/FluentIterable;"
+                    ],
+                    [
+                        "11",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "loop": {
+        "name": "loop",
+        "pos": [
+            274,
+            284
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    275,
+                    276
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/IterableUtils.loopingIterable:(Ljava/lang/Iterable;)Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "7",
+                        "invokestatic"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/collections4/FluentIterable.of:(Ljava/lang/Iterable;)Lorg/apache/commons/collections4/FluentIterable;"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "reverse": {
+        "name": "reverse",
+        "pos": [
+            284,
+            297
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    285,
+                    286
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/IterableUtils.reversedIterable:(Ljava/lang/Iterable;)Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "7",
+                        "invokestatic"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/collections4/FluentIterable.of:(Ljava/lang/Iterable;)Lorg/apache/commons/collections4/FluentIterable;"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "skip": {
+        "name": "skip",
+        "pos": [
+            297,
+            310
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    298,
+                    299
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "lload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/IterableUtils.skippingIterable:(Ljava/lang/Iterable;J)Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "8",
+                        "invokestatic"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/collections4/FluentIterable.of:(Ljava/lang/Iterable;)Lorg/apache/commons/collections4/FluentIterable;"
+                    ],
+                    [
+                        "11",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "transform": {
+        "name": "transform",
+        "pos": [
+            310,
+            320
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    311,
+                    312
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/IterableUtils.transformedIterable:(Ljava/lang/Iterable;Lorg/apache/commons/collections4/Transformer;)Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "8",
+                        "invokestatic"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/collections4/FluentIterable.of:(Ljava/lang/Iterable;)Lorg/apache/commons/collections4/FluentIterable;"
+                    ],
+                    [
+                        "11",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "unique": {
+        "name": "unique",
+        "pos": [
+            320,
+            330
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    321,
+                    322
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/IterableUtils.uniqueIterable:(Ljava/lang/Iterable;)Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "7",
+                        "invokestatic"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/collections4/FluentIterable.of:(Ljava/lang/Iterable;)Lorg/apache/commons/collections4/FluentIterable;"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "unmodifiable": {
+        "name": "unmodifiable",
+        "pos": [
+            330,
+            343
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    331,
+                    332
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/IterableUtils.unmodifiableIterable:(Ljava/lang/Iterable;)Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "7",
+                        "invokestatic"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/collections4/FluentIterable.of:(Ljava/lang/Iterable;)Lorg/apache/commons/collections4/FluentIterable;"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "zip": {
+        "name": "zip",
+        "pos": [
+            356,
+            364
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    357,
+                    358
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/IterableUtils.zippingIterable:(Ljava/lang/Iterable;[Ljava/lang/Iterable;)Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "8",
+                        "invokestatic"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/collections4/FluentIterable.of:(Ljava/lang/Iterable;)Lorg/apache/commons/collections4/FluentIterable;"
+                    ],
+                    [
+                        "11",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "iterator": {
+        "name": "iterator",
+        "pos": [
+            364,
+            375
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    366,
+                    367
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/lang/Iterable.asEnumeration:(Ljava/util/Iterator;)Ljava/util/Enumeration;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "asEnumeration": {
+        "name": "asEnumeration",
+        "pos": [
+            375,
+            390
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    376,
+                    377
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/IteratorUtils.asEnumeration:(Ljava/util/Iterator;)Ljava/util/Enumeration;"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "allMatch": {
+        "name": "allMatch",
+        "pos": [
+            390,
+            404
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    391,
+                    392
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/IterableUtils.matchesAll:(Ljava/lang/Iterable;Lorg/apache/commons/collections4/Predicate;)Z"
+                    ],
+                    [
+                        "8",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "anyMatch": {
+        "name": "anyMatch",
+        "pos": [
+            404,
+            413
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    405,
+                    406
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/IterableUtils.matchesAny:(Ljava/lang/Iterable;Lorg/apache/commons/collections4/Predicate;)Z"
+                    ],
+                    [
+                        "8",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isEmpty": {
+        "name": "isEmpty",
+        "pos": [
+            413,
+            423
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    414,
+                    415
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/IterableUtils.isEmpty:(Ljava/lang/Iterable;)Z"
+                    ],
+                    [
+                        "7",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "contains": {
+        "name": "contains",
+        "pos": [
+            423,
+            433
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    424,
+                    425
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/IterableUtils.contains:(Ljava/lang/Iterable;Ljava/lang/Object;)Z"
+                    ],
+                    [
+                        "8",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "forEach": {
+        "name": "forEach",
+        "pos": [
+            433,
+            447
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    434,
+                    435
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/IterableUtils.forEach:(Ljava/lang/Iterable;Lorg/apache/commons/collections4/Closure;)V"
+                    ],
+                    [
+                        "8",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "get": {
+        "name": "get",
+        "pos": [
+            447,
+            457
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    448,
+                    449
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "iload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/IterableUtils.get:(Ljava/lang/Iterable;I)Ljava/lang/Object;"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "size": {
+        "name": "size",
+        "pos": [
+            457,
+            468
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    458,
+                    459
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/IterableUtils.size:(Ljava/lang/Iterable;)I"
+                    ],
+                    [
+                        "7",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "copyInto": {
+        "name": "copyInto",
+        "pos": [
+            468,
+            483
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    469,
+                    472
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            469,
+                            472
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    470,
+                                    471
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    472,
+                    473
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "toArray": {
+        "name": "toArray",
+        "pos": [
+            483,
+            495
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    484,
+                    485
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/IteratorUtils.toArray:(Ljava/util/Iterator;Ljava/lang/Class;)[Ljava/lang/Object;"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "toList": {
+        "name": "toList",
+        "pos": [
+            495,
+            500
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    496,
+                    497
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/IterableUtils.toList:(Ljava/lang/Iterable;)Ljava/util/List;"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "toString": {
+        "name": "toString",
+        "pos": [
+            500,
+            505
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    502,
+                    503
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/FluentIterable.iterable:Ljava/lang/Iterable;"
+                    ],
+                    [
+                        "4",
+                        "invokestatic"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/IterableUtils.toString:(Ljava/lang/Iterable;)Ljava/lang/String;"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

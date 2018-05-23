@@ -1,0 +1,1581 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "putfield",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.parent:Lorg/apache/commons/collections4/list/AbstractLinkedList;",
+      0,
+      0
+    ],
+    "9": [
+      "aload_0",
+      0,
+      0
+    ],
+    "10": [
+      "aload_1",
+      0,
+      0
+    ],
+    "11": [
+      "getfield",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/collections4/list/AbstractLinkedList.modCount:I",
+      0,
+      0
+    ],
+    "14": [
+      "putfield",
+      0,
+      0
+    ],
+    "15": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.expectedModCount:I",
+      0,
+      0
+    ],
+    "17": [
+      "aload_0",
+      0,
+      0
+    ],
+    "18": [
+      "aload_1",
+      0,
+      0
+    ],
+    "19": [
+      "iload_2",
+      0,
+      0
+    ],
+    "20": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "21": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "22": [
+      "org/apache/commons/collections4/list/AbstractLinkedList.getNode:(IZ)Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "24": [
+      "putfield",
+      0,
+      0
+    ],
+    "25": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "27": [
+      "aload_0",
+      0,
+      0
+    ],
+    "28": [
+      "iload_2",
+      0,
+      0
+    ],
+    "29": [
+      "putfield",
+      0,
+      0
+    ],
+    "30": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.nextIndex:I",
+      0,
+      0
+    ],
+    "32": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "checkModCount": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.parent:Lorg/apache/commons/collections4/list/AbstractLinkedList;",
+      1,
+      1
+    ],
+    "4": [
+      "getfield",
+      1,
+      1
+    ],
+    "5": [
+      "org/apache/commons/collections4/list/AbstractLinkedList.modCount:I",
+      1,
+      1
+    ],
+    "7": [
+      "aload_0",
+      1,
+      1
+    ],
+    "8": [
+      "getfield",
+      1,
+      1
+    ],
+    "9": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.expectedModCount:I",
+      1,
+      1
+    ],
+    "11": [
+      "if_icmpeq",
+      1,
+      1
+    ],
+    "12": [
+      "11",
+      1,
+      1
+    ],
+    "14": [
+      "new",
+      1,
+      0
+    ],
+    "15": [
+      "java/util/ConcurrentModificationException",
+      1,
+      0
+    ],
+    "17": [
+      "dup",
+      1,
+      0
+    ],
+    "18": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "19": [
+      "java/util/ConcurrentModificationException.<init>:()V",
+      1,
+      0
+    ],
+    "21": [
+      "athrow",
+      1,
+      0
+    ],
+    "22": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getLastNodeReturned": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.current:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      1,
+      1
+    ],
+    "4": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "5": [
+      "11",
+      1,
+      1
+    ],
+    "7": [
+      "new",
+      1,
+      0
+    ],
+    "8": [
+      "java/lang/IllegalStateException",
+      1,
+      0
+    ],
+    "10": [
+      "dup",
+      1,
+      0
+    ],
+    "11": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "12": [
+      "java/lang/IllegalStateException.<init>:()V",
+      1,
+      0
+    ],
+    "14": [
+      "athrow",
+      1,
+      0
+    ],
+    "15": [
+      "aload_0",
+      0,
+      0
+    ],
+    "16": [
+      "getfield",
+      0,
+      0
+    ],
+    "17": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.current:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "19": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "hasNext": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "getfield",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.parent:Lorg/apache/commons/collections4/list/AbstractLinkedList;",
+      0,
+      0
+    ],
+    "8": [
+      "getfield",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/list/AbstractLinkedList.header:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "11": [
+      "if_acmpeq",
+      0,
+      0
+    ],
+    "12": [
+      "7",
+      0,
+      0
+    ],
+    "14": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "15": [
+      "goto",
+      0,
+      0
+    ],
+    "16": [
+      "4",
+      0,
+      0
+    ],
+    "18": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "19": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "next": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.checkModCount:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      1,
+      1
+    ],
+    "5": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "6": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.hasNext:()Z",
+      1,
+      1
+    ],
+    "8": [
+      "ifne",
+      1,
+      1
+    ],
+    "9": [
+      "38",
+      1,
+      1
+    ],
+    "11": [
+      "new",
+      1,
+      0
+    ],
+    "12": [
+      "java/util/NoSuchElementException",
+      1,
+      0
+    ],
+    "14": [
+      "dup",
+      1,
+      0
+    ],
+    "15": [
+      "new",
+      1,
+      0
+    ],
+    "16": [
+      "java/lang/StringBuilder",
+      1,
+      0
+    ],
+    "18": [
+      "dup",
+      1,
+      0
+    ],
+    "19": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "20": [
+      "java/lang/StringBuilder.<init>:()V",
+      1,
+      0
+    ],
+    "22": [
+      "ldc",
+      1,
+      0
+    ],
+    "23": [
+      "No element at index ",
+      1,
+      0
+    ],
+    "24": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "25": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      1,
+      0
+    ],
+    "27": [
+      "aload_0",
+      1,
+      0
+    ],
+    "28": [
+      "getfield",
+      1,
+      0
+    ],
+    "29": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.nextIndex:I",
+      1,
+      0
+    ],
+    "31": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "32": [
+      "java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;",
+      1,
+      0
+    ],
+    "34": [
+      "ldc",
+      1,
+      0
+    ],
+    "35": [
+      ".",
+      1,
+      0
+    ],
+    "36": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "37": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      1,
+      0
+    ],
+    "39": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "40": [
+      "java/lang/StringBuilder.toString:()Ljava/lang/String;",
+      1,
+      0
+    ],
+    "42": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "43": [
+      "java/util/NoSuchElementException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "45": [
+      "athrow",
+      1,
+      0
+    ],
+    "46": [
+      "aload_0",
+      0,
+      0
+    ],
+    "47": [
+      "getfield",
+      0,
+      0
+    ],
+    "48": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "50": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "51": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$Node.getValue:()Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "53": [
+      "astore_1",
+      0,
+      0
+    ],
+    "54": [
+      "aload_0",
+      0,
+      0
+    ],
+    "55": [
+      "aload_0",
+      0,
+      0
+    ],
+    "56": [
+      "getfield",
+      0,
+      0
+    ],
+    "57": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "59": [
+      "putfield",
+      0,
+      0
+    ],
+    "60": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.current:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "62": [
+      "aload_0",
+      0,
+      0
+    ],
+    "63": [
+      "aload_0",
+      0,
+      0
+    ],
+    "64": [
+      "getfield",
+      0,
+      0
+    ],
+    "65": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "67": [
+      "getfield",
+      0,
+      0
+    ],
+    "68": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$Node.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "70": [
+      "putfield",
+      0,
+      0
+    ],
+    "71": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "73": [
+      "aload_0",
+      0,
+      0
+    ],
+    "74": [
+      "dup",
+      0,
+      0
+    ],
+    "75": [
+      "getfield",
+      0,
+      0
+    ],
+    "76": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.nextIndex:I",
+      0,
+      0
+    ],
+    "78": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "79": [
+      "iadd",
+      0,
+      0
+    ],
+    "80": [
+      "putfield",
+      0,
+      0
+    ],
+    "81": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.nextIndex:I",
+      0,
+      0
+    ],
+    "83": [
+      "aload_1",
+      0,
+      0
+    ],
+    "84": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "hasPrevious": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "4": [
+      "getfield",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$Node.previous:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "getfield",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.parent:Lorg/apache/commons/collections4/list/AbstractLinkedList;",
+      0,
+      0
+    ],
+    "11": [
+      "getfield",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/collections4/list/AbstractLinkedList.header:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "14": [
+      "if_acmpeq",
+      0,
+      0
+    ],
+    "15": [
+      "7",
+      0,
+      0
+    ],
+    "17": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "18": [
+      "goto",
+      0,
+      0
+    ],
+    "19": [
+      "4",
+      0,
+      0
+    ],
+    "21": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "22": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "previous": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.checkModCount:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      1,
+      1
+    ],
+    "5": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "6": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.hasPrevious:()Z",
+      1,
+      1
+    ],
+    "8": [
+      "ifne",
+      1,
+      1
+    ],
+    "9": [
+      "13",
+      1,
+      1
+    ],
+    "11": [
+      "new",
+      1,
+      0
+    ],
+    "12": [
+      "java/util/NoSuchElementException",
+      1,
+      0
+    ],
+    "14": [
+      "dup",
+      1,
+      0
+    ],
+    "15": [
+      "ldc",
+      1,
+      0
+    ],
+    "16": [
+      "Already at start of list.",
+      1,
+      0
+    ],
+    "17": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "18": [
+      "java/util/NoSuchElementException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "20": [
+      "athrow",
+      1,
+      0
+    ],
+    "21": [
+      "aload_0",
+      0,
+      0
+    ],
+    "22": [
+      "aload_0",
+      0,
+      0
+    ],
+    "23": [
+      "getfield",
+      0,
+      0
+    ],
+    "24": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "26": [
+      "getfield",
+      0,
+      0
+    ],
+    "27": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$Node.previous:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "29": [
+      "putfield",
+      0,
+      0
+    ],
+    "30": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "32": [
+      "aload_0",
+      0,
+      0
+    ],
+    "33": [
+      "getfield",
+      0,
+      0
+    ],
+    "34": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "36": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "37": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$Node.getValue:()Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "39": [
+      "astore_1",
+      0,
+      0
+    ],
+    "40": [
+      "aload_0",
+      0,
+      0
+    ],
+    "41": [
+      "aload_0",
+      0,
+      0
+    ],
+    "42": [
+      "getfield",
+      0,
+      0
+    ],
+    "43": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "45": [
+      "putfield",
+      0,
+      0
+    ],
+    "46": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.current:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "48": [
+      "aload_0",
+      0,
+      0
+    ],
+    "49": [
+      "dup",
+      0,
+      0
+    ],
+    "50": [
+      "getfield",
+      0,
+      0
+    ],
+    "51": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.nextIndex:I",
+      0,
+      0
+    ],
+    "53": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "54": [
+      "isub",
+      0,
+      0
+    ],
+    "55": [
+      "putfield",
+      0,
+      0
+    ],
+    "56": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.nextIndex:I",
+      0,
+      0
+    ],
+    "58": [
+      "aload_1",
+      0,
+      0
+    ],
+    "59": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "nextIndex": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.nextIndex:I",
+      0,
+      0
+    ],
+    "4": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "previousIndex": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.nextIndex:()I",
+      0,
+      0
+    ],
+    "4": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "5": [
+      "isub",
+      0,
+      0
+    ],
+    "6": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "remove": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.checkModCount:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      1,
+      1
+    ],
+    "5": [
+      "getfield",
+      1,
+      1
+    ],
+    "6": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.current:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      1,
+      1
+    ],
+    "8": [
+      "aload_0",
+      1,
+      1
+    ],
+    "9": [
+      "getfield",
+      1,
+      1
+    ],
+    "10": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      1,
+      1
+    ],
+    "12": [
+      "if_acmpne",
+      1,
+      1
+    ],
+    "13": [
+      "28",
+      1,
+      1
+    ],
+    "15": [
+      "aload_0",
+      1,
+      0
+    ],
+    "16": [
+      "aload_0",
+      1,
+      0
+    ],
+    "17": [
+      "getfield",
+      1,
+      0
+    ],
+    "18": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      1,
+      0
+    ],
+    "20": [
+      "getfield",
+      1,
+      0
+    ],
+    "21": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$Node.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      1,
+      0
+    ],
+    "23": [
+      "putfield",
+      1,
+      0
+    ],
+    "24": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      1,
+      0
+    ],
+    "26": [
+      "aload_0",
+      1,
+      0
+    ],
+    "27": [
+      "getfield",
+      1,
+      0
+    ],
+    "28": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.parent:Lorg/apache/commons/collections4/list/AbstractLinkedList;",
+      1,
+      0
+    ],
+    "30": [
+      "aload_0",
+      1,
+      0
+    ],
+    "31": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "32": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.getLastNodeReturned:()Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      1,
+      0
+    ],
+    "34": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "35": [
+      "org/apache/commons/collections4/list/AbstractLinkedList.removeNode:(Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;)V",
+      1,
+      0
+    ],
+    "37": [
+      "goto",
+      1,
+      0
+    ],
+    "38": [
+      "24",
+      1,
+      0
+    ],
+    "40": [
+      "aload_0",
+      2,
+      0
+    ],
+    "41": [
+      "getfield",
+      2,
+      0
+    ],
+    "42": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.parent:Lorg/apache/commons/collections4/list/AbstractLinkedList;",
+      2,
+      0
+    ],
+    "44": [
+      "aload_0",
+      2,
+      0
+    ],
+    "45": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "46": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.getLastNodeReturned:()Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      2,
+      0
+    ],
+    "48": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "49": [
+      "org/apache/commons/collections4/list/AbstractLinkedList.removeNode:(Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;)V",
+      2,
+      0
+    ],
+    "51": [
+      "aload_0",
+      2,
+      0
+    ],
+    "52": [
+      "dup",
+      2,
+      0
+    ],
+    "53": [
+      "getfield",
+      2,
+      0
+    ],
+    "54": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.nextIndex:I",
+      2,
+      0
+    ],
+    "56": [
+      "iconst_1",
+      2,
+      0
+    ],
+    "57": [
+      "isub",
+      2,
+      0
+    ],
+    "58": [
+      "putfield",
+      2,
+      0
+    ],
+    "59": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.nextIndex:I",
+      2,
+      0
+    ],
+    "61": [
+      "aload_0",
+      0,
+      0
+    ],
+    "62": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "63": [
+      "putfield",
+      0,
+      0
+    ],
+    "64": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.current:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "66": [
+      "aload_0",
+      0,
+      0
+    ],
+    "67": [
+      "dup",
+      0,
+      0
+    ],
+    "68": [
+      "getfield",
+      0,
+      0
+    ],
+    "69": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.expectedModCount:I",
+      0,
+      0
+    ],
+    "71": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "72": [
+      "iadd",
+      0,
+      0
+    ],
+    "73": [
+      "putfield",
+      0,
+      0
+    ],
+    "74": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.expectedModCount:I",
+      0,
+      0
+    ],
+    "76": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "set": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.checkModCount:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.getLastNodeReturned:()Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "8": [
+      "aload_1",
+      0,
+      0
+    ],
+    "9": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "10": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$Node.setValue:(Ljava/lang/Object;)V",
+      0,
+      0
+    ],
+    "12": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "add": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.checkModCount:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "getfield",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.parent:Lorg/apache/commons/collections4/list/AbstractLinkedList;",
+      0,
+      0
+    ],
+    "8": [
+      "aload_0",
+      0,
+      0
+    ],
+    "9": [
+      "getfield",
+      0,
+      0
+    ],
+    "10": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.next:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "12": [
+      "aload_1",
+      0,
+      0
+    ],
+    "13": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "14": [
+      "org/apache/commons/collections4/list/AbstractLinkedList.addNodeBefore:(Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;Ljava/lang/Object;)V",
+      0,
+      0
+    ],
+    "16": [
+      "aload_0",
+      0,
+      0
+    ],
+    "17": [
+      "aconst_null",
+      0,
+      0
+    ],
+    "18": [
+      "putfield",
+      0,
+      0
+    ],
+    "19": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.current:Lorg/apache/commons/collections4/list/AbstractLinkedList$Node;",
+      0,
+      0
+    ],
+    "21": [
+      "aload_0",
+      0,
+      0
+    ],
+    "22": [
+      "dup",
+      0,
+      0
+    ],
+    "23": [
+      "getfield",
+      0,
+      0
+    ],
+    "24": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.nextIndex:I",
+      0,
+      0
+    ],
+    "26": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "27": [
+      "iadd",
+      0,
+      0
+    ],
+    "28": [
+      "putfield",
+      0,
+      0
+    ],
+    "29": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.nextIndex:I",
+      0,
+      0
+    ],
+    "31": [
+      "aload_0",
+      0,
+      0
+    ],
+    "32": [
+      "dup",
+      0,
+      0
+    ],
+    "33": [
+      "getfield",
+      0,
+      0
+    ],
+    "34": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.expectedModCount:I",
+      0,
+      0
+    ],
+    "36": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "37": [
+      "iadd",
+      0,
+      0
+    ],
+    "38": [
+      "putfield",
+      0,
+      0
+    ],
+    "39": [
+      "org/apache/commons/collections4/list/AbstractLinkedList$LinkedListIterator.expectedModCount:I",
+      0,
+      0
+    ],
+    "41": [
+      "return",
+      0,
+      0
+    ]
+  }
+}

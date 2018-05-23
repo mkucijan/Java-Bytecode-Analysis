@@ -1,0 +1,508 @@
+{
+    "getProbabilityOfSuccess": {
+        "name": "getProbabilityOfSuccess",
+        "pos": [
+            84,
+            89
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    85,
+                    86
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/GeometricDistribution.probabilityOfSuccess:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "probability": {
+        "name": "probability",
+        "pos": [
+            89,
+            98
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    90,
+                    95
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            90,
+                            92
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    91,
+                                    92
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            92,
+                            95
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    93,
+                                    94
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "logProbability": {
+        "name": "logProbability",
+        "pos": [
+            98,
+            108
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    100,
+                    105
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            100,
+                            102
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    101,
+                                    102
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            102,
+                            105
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    103,
+                                    104
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "cumulativeProbability": {
+        "name": "cumulativeProbability",
+        "pos": [
+            108,
+            121
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    109,
+                    114
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            109,
+                            111
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    110,
+                                    111
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            111,
+                            114
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    112,
+                                    113
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "getNumericalMean": {
+        "name": "getNumericalMean",
+        "pos": [
+            121,
+            131
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    122,
+                    123
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dconst_1"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/distribution/GeometricDistribution.probabilityOfSuccess:D"
+                    ],
+                    [
+                        "5",
+                        "dsub"
+                    ],
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "getfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/distribution/GeometricDistribution.probabilityOfSuccess:D"
+                    ],
+                    [
+                        "10",
+                        "ddiv"
+                    ],
+                    [
+                        "11",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNumericalVariance": {
+        "name": "getNumericalVariance",
+        "pos": [
+            131,
+            142
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    132,
+                    133
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dconst_1"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/distribution/GeometricDistribution.probabilityOfSuccess:D"
+                    ],
+                    [
+                        "5",
+                        "dsub"
+                    ],
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "getfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/distribution/GeometricDistribution.probabilityOfSuccess:D"
+                    ],
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "getfield"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/distribution/GeometricDistribution.probabilityOfSuccess:D"
+                    ],
+                    [
+                        "14",
+                        "dmul"
+                    ],
+                    [
+                        "15",
+                        "ddiv"
+                    ],
+                    [
+                        "16",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSupportLowerBound": {
+        "name": "getSupportLowerBound",
+        "pos": [
+            142,
+            154
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    143,
+                    144
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_0"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSupportUpperBound": {
+        "name": "getSupportUpperBound",
+        "pos": [
+            154,
+            165
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    155,
+                    156
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "ldc"
+                    ],
+                    [
+                        "1",
+                        "2147483647"
+                    ],
+                    [
+                        "2",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportConnected": {
+        "name": "isSupportConnected",
+        "pos": [
+            165,
+            172
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    166,
+                    167
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_1"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "inverseCumulativeProbability": {
+        "name": "inverseCumulativeProbability",
+        "pos": [
+            172,
+            185
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    174,
+                    177
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            174,
+                            177
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    175,
+                                    176
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    177,
+                    180
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            177,
+                            180
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    178,
+                                    179
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    180,
+                    183
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            180,
+                            183
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    181,
+                                    182
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    183,
+                    184
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

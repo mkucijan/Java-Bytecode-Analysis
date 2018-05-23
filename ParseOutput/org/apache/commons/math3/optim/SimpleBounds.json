@@ -1,0 +1,265 @@
+{
+    "getLower": {
+        "name": "getLower",
+        "pos": [
+            51,
+            59
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    52,
+                    53
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/SimpleBounds.lower:[D"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "[D.clone:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "checkcast"
+                    ],
+                    [
+                        "8",
+                        "[D"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getUpper": {
+        "name": "getUpper",
+        "pos": [
+            59,
+            71
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    60,
+                    61
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/SimpleBounds.upper:[D"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "[D.clone:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "checkcast"
+                    ],
+                    [
+                        "8",
+                        "[D"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "unbounded": {
+        "name": "unbounded",
+        "pos": [
+            71,
+            79
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    72,
+                    73
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_0"
+                    ],
+                    [
+                        "1",
+                        "newarray"
+                    ],
+                    [
+                        "2",
+                        "7"
+                    ],
+                    [
+                        "3",
+                        "astore_1"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "ldc2_w"
+                    ],
+                    [
+                        "6",
+                        "-inf"
+                    ],
+                    [
+                        "8",
+                        "invokestatic"
+                    ],
+                    [
+                        "9",
+                        "java/util/Arrays.fill:([DD)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    73,
+                    74
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "11",
+                        "iload_0"
+                    ],
+                    [
+                        "12",
+                        "newarray"
+                    ],
+                    [
+                        "13",
+                        "7"
+                    ],
+                    [
+                        "14",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    74,
+                    75
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "15",
+                        "aload_2"
+                    ],
+                    [
+                        "16",
+                        "ldc2_w"
+                    ],
+                    [
+                        "17",
+                        "inf"
+                    ],
+                    [
+                        "19",
+                        "invokestatic"
+                    ],
+                    [
+                        "20",
+                        "java/util/Arrays.fill:([DD)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    75,
+                    77
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "22",
+                        "new"
+                    ],
+                    [
+                        "23",
+                        "org/apache/commons/math3/optim/SimpleBounds"
+                    ],
+                    [
+                        "25",
+                        "dup"
+                    ],
+                    [
+                        "26",
+                        "aload_1"
+                    ],
+                    [
+                        "27",
+                        "aload_2"
+                    ],
+                    [
+                        "28",
+                        "invokespecial"
+                    ],
+                    [
+                        "29",
+                        "org/apache/commons/math3/optim/SimpleBounds.<init>:([D[D)V"
+                    ],
+                    [
+                        "31",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    77,
+                    78
+                ],
+                "children": []
+            }
+        ]
+    }
+}

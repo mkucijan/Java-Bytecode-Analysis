@@ -1,0 +1,440 @@
+{
+    "addIterationListener": {
+        "name": "addIterationListener",
+        "pos": [
+            91,
+            101
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    92,
+                    93
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/IterationManager.listeners:Ljava/util/Collection;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/Collection.iterator:()Ljava/util/Iterator;"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "pop"
+                    ],
+                    [
+                        "11",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "fireInitializationEvent": {
+        "name": "fireInitializationEvent",
+        "pos": [
+            101,
+            113
+        ],
+        "children": [
+            {
+                "name": "ForStatement",
+                "pos": [
+                    102,
+                    105
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            102,
+                            105
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    103,
+                                    104
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "fireIterationPerformedEvent": {
+        "name": "fireIterationPerformedEvent",
+        "pos": [
+            113,
+            125
+        ],
+        "children": [
+            {
+                "name": "ForStatement",
+                "pos": [
+                    114,
+                    117
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            114,
+                            117
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    115,
+                                    116
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "fireIterationStartedEvent": {
+        "name": "fireIterationStartedEvent",
+        "pos": [
+            125,
+            137
+        ],
+        "children": [
+            {
+                "name": "ForStatement",
+                "pos": [
+                    126,
+                    129
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            126,
+                            129
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    127,
+                                    128
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "fireTerminationEvent": {
+        "name": "fireTerminationEvent",
+        "pos": [
+            137,
+            149
+        ],
+        "children": [
+            {
+                "name": "ForStatement",
+                "pos": [
+                    138,
+                    141
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            138,
+                            141
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    139,
+                                    140
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "getIterations": {
+        "name": "getIterations",
+        "pos": [
+            149,
+            158
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    150,
+                    151
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/IterationManager.iterations:Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/util/IntegerSequence$Incrementor.getCount:()I"
+                    ],
+                    [
+                        "7",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getMaxIterations": {
+        "name": "getMaxIterations",
+        "pos": [
+            158,
+            170
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    159,
+                    160
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/IterationManager.iterations:Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/util/IntegerSequence$Incrementor.getMaximalCount:()I"
+                    ],
+                    [
+                        "7",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "incrementIterationCount": {
+        "name": "incrementIterationCount",
+        "pos": [
+            170,
+            183
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    172,
+                    173
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/IterationManager.iterations:Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/util/IntegerSequence$Incrementor.increment:()V"
+                    ],
+                    [
+                        "7",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "removeIterationListener": {
+        "name": "removeIterationListener",
+        "pos": [
+            183,
+            191
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    184,
+                    185
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/IterationManager.listeners:Ljava/util/Collection;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/Collection.withStart:(I)Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "pop"
+                    ],
+                    [
+                        "11",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "resetIterationCount": {
+        "name": "resetIterationCount",
+        "pos": [
+            191,
+            194
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    192,
+                    193
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/util/IterationManager.iterations:Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "5",
+                        "iconst_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/util/IntegerSequence$Incrementor.withStart:(I)Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "9",
+                        "putfield"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/util/IterationManager.iterations:Lorg/apache/commons/math3/util/IntegerSequence$Incrementor;"
+                    ],
+                    [
+                        "12",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

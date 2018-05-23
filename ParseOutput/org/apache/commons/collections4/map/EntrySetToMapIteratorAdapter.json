@@ -1,0 +1,457 @@
+{
+    "getKey": {
+        "name": "getKey",
+        "pos": [
+            55,
+            62
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    56,
+                    57
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/EntrySetToMapIteratorAdapter.current:()Ljava/util/Map$Entry;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Map$Entry.getValue:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getValue": {
+        "name": "getValue",
+        "pos": [
+            62,
+            69
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    63,
+                    64
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/EntrySetToMapIteratorAdapter.current:()Ljava/util/Map$Entry;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Map$Entry.setValue:(Ljava/lang/Object;)Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setValue": {
+        "name": "setValue",
+        "pos": [
+            69,
+            76
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    70,
+                    71
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/EntrySetToMapIteratorAdapter.current:()Ljava/util/Map$Entry;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/Map$Entry.iterator:Ljava/util/Iterator;"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "hasNext": {
+        "name": "hasNext",
+        "pos": [
+            76,
+            83
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    77,
+                    78
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/EntrySetToMapIteratorAdapter.iterator:Ljava/util/Iterator;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Iterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "next": {
+        "name": "next",
+        "pos": [
+            83,
+            91
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    84,
+                    85
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/map/EntrySetToMapIteratorAdapter.iterator:Ljava/util/Iterator;"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/Iterator.java/util/Map"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "checkcast"
+                    ],
+                    [
+                        "11",
+                        "java/util/Map$Entry"
+                    ],
+                    [
+                        "13",
+                        "putfield"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/collections4/map/EntrySetToMapIteratorAdapter.entry:Ljava/util/Map$Entry;"
+                    ],
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "invokevirtual"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/collections4/map/EntrySetToMapIteratorAdapter.getKey:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "20",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    85,
+                    86
+                ],
+                "children": []
+            }
+        ]
+    },
+    "reset": {
+        "name": "reset",
+        "pos": [
+            91,
+            98
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    92,
+                    93
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/map/EntrySetToMapIteratorAdapter.entrySet:Ljava/util/Set;"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "java/util/Set.remove:()V"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "putfield"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/collections4/map/EntrySetToMapIteratorAdapter.iterator:Ljava/util/Iterator;"
+                    ],
+                    [
+                        "13",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "remove": {
+        "name": "remove",
+        "pos": [
+            98,
+            107
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    99,
+                    100
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/EntrySetToMapIteratorAdapter.iterator:Ljava/util/Iterator;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "java/util/Iterator.java/lang/IllegalStateException"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "aconst_null"
+                    ],
+                    [
+                        "11",
+                        "putfield"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/collections4/map/EntrySetToMapIteratorAdapter.entry:Ljava/util/Map$Entry;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    100,
+                    101
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "14",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "current": {
+        "name": "current",
+        "pos": [
+            107,
+            113
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    108,
+                    111
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            108,
+                            111
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    109,
+                                    110
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    111,
+                    112
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    }
+}

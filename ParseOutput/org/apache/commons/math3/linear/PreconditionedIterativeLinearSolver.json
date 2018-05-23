@@ -1,0 +1,248 @@
+{
+    "solve": {
+        "name": "solve",
+        "pos": [
+            173,
+            201
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    176,
+                    177
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokestatic"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/util/MathUtils.checkNotNull:(Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "4",
+                        "new"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/linear/ArrayRealVector"
+                    ],
+                    [
+                        "7",
+                        "dup"
+                    ],
+                    [
+                        "8",
+                        "aload_1"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/linear/RealLinearOperator.getColumnDimension:()I"
+                    ],
+                    [
+                        "12",
+                        "invokespecial"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/linear/ArrayRealVector.<init>:(I)V"
+                    ],
+                    [
+                        "15",
+                        "astore"
+                    ],
+                    [
+                        "16",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    177,
+                    178
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "17",
+                        "aload_0"
+                    ],
+                    [
+                        "18",
+                        "aload_1"
+                    ],
+                    [
+                        "19",
+                        "aload_2"
+                    ],
+                    [
+                        "20",
+                        "aload_3"
+                    ],
+                    [
+                        "21",
+                        "aload"
+                    ],
+                    [
+                        "22",
+                        "#4"
+                    ],
+                    [
+                        "23",
+                        "invokevirtual"
+                    ],
+                    [
+                        "24",
+                        "org/apache/commons/math3/linear/PreconditionedIterativeLinearSolver.solveInPlace:(Lorg/apache/commons/math3/linear/RealLinearOperator;Lorg/apache/commons/math3/linear/RealLinearOperator;Lorg/apache/commons/math3/linear/RealVector;Lorg/apache/commons/math3/linear/RealVector;)Lorg/apache/commons/math3/linear/RealVector;"
+                    ],
+                    [
+                        "26",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    178,
+                    179
+                ],
+                "children": []
+            }
+        ]
+    },
+    "checkParameters": {
+        "name": "checkParameters",
+        "pos": [
+            138,
+            173
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    142,
+                    143
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_2"
+                    ],
+                    [
+                        "2",
+                        "aload_3"
+                    ],
+                    [
+                        "3",
+                        "invokestatic"
+                    ],
+                    [
+                        "4",
+                        "org/apache/commons/math3/linear/PreconditionedIterativeLinearSolver.checkParameters:(Lorg/apache/commons/math3/linear/RealLinearOperator;Lorg/apache/commons/math3/linear/RealVector;Lorg/apache/commons/math3/linear/RealVector;)V"
+                    ],
+                    [
+                        "6",
+                        "aload_1"
+                    ],
+                    [
+                        "7",
+                        "ifnull"
+                    ],
+                    [
+                        "8",
+                        "57"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    143,
+                    153
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            143,
+                            153
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    144,
+                                    148
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            144,
+                                            148
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ThrowStatement",
+                                                "pos": [
+                                                    145,
+                                                    147
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    148,
+                                    152
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            148,
+                                            152
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ThrowStatement",
+                                                "pos": [
+                                                    149,
+                                                    151
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,454 @@
+{
+    "getDegreesOfFreedom": {
+        "name": "getDegreesOfFreedom",
+        "pos": [
+            108,
+            113
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    109,
+                    110
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/ChiSquaredDistribution.gamma:Lorg/apache/commons/math3/distribution/GammaDistribution;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/distribution/GammaDistribution.getShape:()D"
+                    ],
+                    [
+                        "7",
+                        "ldc2_w"
+                    ],
+                    [
+                        "8",
+                        "2.0"
+                    ],
+                    [
+                        "10",
+                        "dmul"
+                    ],
+                    [
+                        "11",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "density": {
+        "name": "density",
+        "pos": [
+            113,
+            118
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    114,
+                    115
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/ChiSquaredDistribution.gamma:Lorg/apache/commons/math3/distribution/GammaDistribution;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/distribution/GammaDistribution.density:(D)D"
+                    ],
+                    [
+                        "8",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "logDensity": {
+        "name": "logDensity",
+        "pos": [
+            118,
+            124
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    120,
+                    121
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/ChiSquaredDistribution.gamma:Lorg/apache/commons/math3/distribution/GammaDistribution;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/distribution/GammaDistribution.logDensity:(D)D"
+                    ],
+                    [
+                        "8",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "cumulativeProbability": {
+        "name": "cumulativeProbability",
+        "pos": [
+            124,
+            129
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    125,
+                    126
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/ChiSquaredDistribution.gamma:Lorg/apache/commons/math3/distribution/GammaDistribution;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/distribution/GammaDistribution.cumulativeProbability:(D)D"
+                    ],
+                    [
+                        "8",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSolverAbsoluteAccuracy": {
+        "name": "getSolverAbsoluteAccuracy",
+        "pos": [
+            129,
+            139
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    131,
+                    132
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/ChiSquaredDistribution.solverAbsoluteAccuracy:D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNumericalMean": {
+        "name": "getNumericalMean",
+        "pos": [
+            139,
+            148
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    140,
+                    141
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/distribution/ChiSquaredDistribution.getDegreesOfFreedom:()D"
+                    ],
+                    [
+                        "4",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getNumericalVariance": {
+        "name": "getNumericalVariance",
+        "pos": [
+            148,
+            160
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    149,
+                    150
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "ldc2_w"
+                    ],
+                    [
+                        "1",
+                        "2.0"
+                    ],
+                    [
+                        "3",
+                        "aload_0"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/distribution/ChiSquaredDistribution.getDegreesOfFreedom:()D"
+                    ],
+                    [
+                        "7",
+                        "dmul"
+                    ],
+                    [
+                        "8",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSupportLowerBound": {
+        "name": "getSupportLowerBound",
+        "pos": [
+            160,
+            172
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    161,
+                    162
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "dconst_0"
+                    ],
+                    [
+                        "1",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getSupportUpperBound": {
+        "name": "getSupportUpperBound",
+        "pos": [
+            172,
+            177
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    173,
+                    174
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "ldc2_w"
+                    ],
+                    [
+                        "1",
+                        "inf"
+                    ],
+                    [
+                        "3",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportLowerBoundInclusive": {
+        "name": "isSupportLowerBoundInclusive",
+        "pos": [
+            177,
+            182
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    178,
+                    179
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_1"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportUpperBoundInclusive": {
+        "name": "isSupportUpperBoundInclusive",
+        "pos": [
+            182,
+            193
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    183,
+                    184
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_0"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isSupportConnected": {
+        "name": "isSupportConnected",
+        "pos": [
+            193,
+            196
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    194,
+                    195
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_1"
+                    ],
+                    [
+                        "1",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

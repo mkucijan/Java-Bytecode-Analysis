@@ -1,0 +1,128 @@
+{
+    "fit": {
+        "name": "fit",
+        "pos": [
+            61,
+            75
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    63,
+                    64
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/fitting/AbstractCurveFitter.getOptimizer:()Lorg/apache/commons/math3/fitting/leastsquares/LeastSquaresOptimizer;"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/fitting/AbstractCurveFitter.getProblem:(Ljava/util/Collection;)Lorg/apache/commons/math3/fitting/leastsquares/LeastSquaresProblem;"
+                    ],
+                    [
+                        "9",
+                        "invokeinterface"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresOptimizer.org/apache/commons/math3/fitting/leastsquares/LeastSquaresOptimizer$Optimum"
+                    ],
+                    [
+                        "12",
+                        "0"
+                    ],
+                    [
+                        "14",
+                        "invokeinterface"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/fitting/leastsquares/LeastSquaresOptimizer$Optimum.org/apache/commons/math3/linear/RealVector"
+                    ],
+                    [
+                        "17",
+                        "0"
+                    ],
+                    [
+                        "19",
+                        "invokevirtual"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/linear/RealVector.toArray:()[D"
+                    ],
+                    [
+                        "22",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getOptimizer": {
+        "name": "getOptimizer",
+        "pos": [
+            75,
+            86
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    76,
+                    77
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/fitting/leastsquares/LevenbergMarquardtOptimizer"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "invokespecial"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/fitting/leastsquares/LevenbergMarquardtOptimizer.<init>:()V"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

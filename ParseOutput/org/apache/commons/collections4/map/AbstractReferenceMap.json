@@ -1,0 +1,2360 @@
+{
+    "init": {
+        "name": "init",
+        "pos": [
+            176,
+            187
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    178,
+                    179
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "new"
+                    ],
+                    [
+                        "2",
+                        "java/lang/ref/ReferenceQueue"
+                    ],
+                    [
+                        "4",
+                        "dup"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "java/lang/ref/ReferenceQueue.<init>:()V"
+                    ],
+                    [
+                        "8",
+                        "putfield"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.queue:Ljava/lang/ref/ReferenceQueue;"
+                    ],
+                    [
+                        "11",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "size": {
+        "name": "size",
+        "pos": [
+            187,
+            198
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    189,
+                    190
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.purgeBeforeRead:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/map/AbstractHashedMap.size:()I"
+                    ],
+                    [
+                        "8",
+                        "ireturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    190,
+                    191
+                ],
+                "children": []
+            }
+        ]
+    },
+    "isEmpty": {
+        "name": "isEmpty",
+        "pos": [
+            198,
+            210
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    200,
+                    201
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.purgeBeforeRead:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/map/AbstractHashedMap.isEmpty:()Z"
+                    ],
+                    [
+                        "8",
+                        "ireturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    201,
+                    202
+                ],
+                "children": []
+            }
+        ]
+    },
+    "containsKey": {
+        "name": "containsKey",
+        "pos": [
+            210,
+            226
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    212,
+                    213
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.purgeBeforeRead:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.getEntry:(Ljava/lang/Object;)Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;"
+                    ],
+                    [
+                        "9",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    213,
+                    214
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "aload_2"
+                    ],
+                    [
+                        "11",
+                        "ifnonnull"
+                    ],
+                    [
+                        "12",
+                        "5"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    214,
+                    217
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            214,
+                            217
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    215,
+                                    216
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    217,
+                    218
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "containsValue": {
+        "name": "containsValue",
+        "pos": [
+            226,
+            241
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    228,
+                    229
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.purgeBeforeRead:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "ifnonnull"
+                    ],
+                    [
+                        "6",
+                        "5"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    229,
+                    232
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            229,
+                            232
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    230,
+                                    231
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    232,
+                    233
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "get": {
+        "name": "get",
+        "pos": [
+            241,
+            261
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    243,
+                    244
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.purgeBeforeRead:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.getEntry:(Ljava/lang/Object;)Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;"
+                    ],
+                    [
+                        "9",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    244,
+                    245
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "aload_2"
+                    ],
+                    [
+                        "11",
+                        "ifnonnull"
+                    ],
+                    [
+                        "12",
+                        "5"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    245,
+                    248
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            245,
+                            248
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    246,
+                                    247
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    248,
+                    249
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "put": {
+        "name": "put",
+        "pos": [
+            261,
+            280
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    263,
+                    266
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            263,
+                            266
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    264,
+                                    265
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    266,
+                    270
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            266,
+                            270
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    267,
+                                    268
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    270,
+                    271
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    271,
+                    272
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "remove": {
+        "name": "remove",
+        "pos": [
+            280,
+            292
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    282,
+                    285
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            282,
+                            285
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    283,
+                                    284
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    285,
+                    286
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    286,
+                    287
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "clear": {
+        "name": "clear",
+        "pos": [
+            292,
+            305
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    294,
+                    295
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/AbstractHashedMap.clear:()V"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.queue:Ljava/lang/ref/ReferenceQueue;"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "java/lang/ref/ReferenceQueue.poll:()Ljava/lang/ref/Reference;"
+                    ],
+                    [
+                        "11",
+                        "ifnull"
+                    ],
+                    [
+                        "12",
+                        "6"
+                    ],
+                    [
+                        "14",
+                        "goto"
+                    ],
+                    [
+                        "15",
+                        "-10"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    295,
+                    296
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            295,
+                            296
+                        ],
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "mapIterator": {
+        "name": "mapIterator",
+        "pos": [
+            305,
+            317
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    307,
+                    308
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceMapIterator"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceMapIterator.<init>:(Lorg/apache/commons/collections4/map/AbstractReferenceMap;)V"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "entrySet": {
+        "name": "entrySet",
+        "pos": [
+            317,
+            330
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    319,
+                    322
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            319,
+                            322
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    320,
+                                    321
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    322,
+                    323
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "keySet": {
+        "name": "keySet",
+        "pos": [
+            330,
+            343
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    332,
+                    335
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            332,
+                            335
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    333,
+                                    334
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    335,
+                    336
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "values": {
+        "name": "values",
+        "pos": [
+            343,
+            357
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    345,
+                    348
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            345,
+                            348
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    346,
+                                    347
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    348,
+                    349
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "purgeBeforeRead": {
+        "name": "purgeBeforeRead",
+        "pos": [
+            357,
+            366
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    358,
+                    359
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.purge:()V"
+                    ],
+                    [
+                        "4",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "purgeBeforeWrite": {
+        "name": "purgeBeforeWrite",
+        "pos": [
+            366,
+            378
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    367,
+                    368
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.purge:()V"
+                    ],
+                    [
+                        "4",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "purge": {
+        "name": "purge",
+        "pos": [
+            391,
+            422
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    395,
+                    396
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "java/lang/Object.hashCode:()I"
+                    ],
+                    [
+                        "4",
+                        "istore_2"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "iload_2"
+                    ],
+                    [
+                        "7",
+                        "aload_0"
+                    ],
+                    [
+                        "8",
+                        "getfield"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.data:[Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;"
+                    ],
+                    [
+                        "11",
+                        "arraylength"
+                    ],
+                    [
+                        "12",
+                        "invokevirtual"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.hashIndex:(II)I"
+                    ],
+                    [
+                        "15",
+                        "istore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    396,
+                    397
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "16",
+                        "aconst_null"
+                    ],
+                    [
+                        "17",
+                        "astore"
+                    ],
+                    [
+                        "18",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    397,
+                    398
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "19",
+                        "aload_0"
+                    ],
+                    [
+                        "20",
+                        "getfield"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.data:[Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;"
+                    ],
+                    [
+                        "23",
+                        "iload_3"
+                    ],
+                    [
+                        "24",
+                        "aaload"
+                    ],
+                    [
+                        "25",
+                        "astore"
+                    ],
+                    [
+                        "26",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    398,
+                    399
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "27",
+                        "aload"
+                    ],
+                    [
+                        "28",
+                        "#5"
+                    ],
+                    [
+                        "29",
+                        "ifnull"
+                    ],
+                    [
+                        "30",
+                        "69"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    399,
+                    413
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            399,
+                            413
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    400,
+                                    409
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            400,
+                                            409
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    401,
+                                                    406
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            401,
+                                                            403
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    402,
+                                                                    403
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            403,
+                                                            406
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    404,
+                                                                    405
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    406,
+                                                    407
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    407,
+                                                    408
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    409,
+                                    410
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    410,
+                                    411
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "getEntry": {
+        "name": "getEntry",
+        "pos": [
+            422,
+            438
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    424,
+                    427
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            424,
+                            427
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    425,
+                                    426
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    427,
+                    428
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "hashEntry": {
+        "name": "hashEntry",
+        "pos": [
+            438,
+            453
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    439,
+                    441
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "ifnonnull"
+                    ],
+                    [
+                        "2",
+                        "7"
+                    ],
+                    [
+                        "4",
+                        "iconst_0"
+                    ],
+                    [
+                        "5",
+                        "goto"
+                    ],
+                    [
+                        "6",
+                        "7"
+                    ],
+                    [
+                        "8",
+                        "aload_1"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "java/lang/Object.hashCode:()I"
+                    ],
+                    [
+                        "12",
+                        "aload_2"
+                    ],
+                    [
+                        "13",
+                        "ifnonnull"
+                    ],
+                    [
+                        "14",
+                        "7"
+                    ],
+                    [
+                        "16",
+                        "iconst_0"
+                    ],
+                    [
+                        "17",
+                        "goto"
+                    ],
+                    [
+                        "18",
+                        "7"
+                    ],
+                    [
+                        "20",
+                        "aload_2"
+                    ],
+                    [
+                        "21",
+                        "invokevirtual"
+                    ],
+                    [
+                        "22",
+                        "java/lang/Object.hashCode:()I"
+                    ],
+                    [
+                        "24",
+                        "ixor"
+                    ],
+                    [
+                        "25",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "isEqualKey": {
+        "name": "isEqualKey",
+        "pos": [
+            453,
+            469
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    456,
+                    457
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.keyType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;"
+                    ],
+                    [
+                        "4",
+                        "getstatic"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength.HARD:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;"
+                    ],
+                    [
+                        "7",
+                        "if_acmpne"
+                    ],
+                    [
+                        "8",
+                        "7"
+                    ],
+                    [
+                        "10",
+                        "aload_2"
+                    ],
+                    [
+                        "11",
+                        "goto"
+                    ],
+                    [
+                        "12",
+                        "10"
+                    ],
+                    [
+                        "14",
+                        "aload_2"
+                    ],
+                    [
+                        "15",
+                        "checkcast"
+                    ],
+                    [
+                        "16",
+                        "java/lang/ref/Reference"
+                    ],
+                    [
+                        "18",
+                        "invokevirtual"
+                    ],
+                    [
+                        "19",
+                        "java/lang/ref/Reference.get:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "21",
+                        "astore_2"
+                    ],
+                    [
+                        "22",
+                        "aload_1"
+                    ],
+                    [
+                        "23",
+                        "aload_2"
+                    ],
+                    [
+                        "24",
+                        "if_acmpeq"
+                    ],
+                    [
+                        "25",
+                        "11"
+                    ],
+                    [
+                        "27",
+                        "aload_1"
+                    ],
+                    [
+                        "28",
+                        "aload_2"
+                    ],
+                    [
+                        "29",
+                        "invokevirtual"
+                    ],
+                    [
+                        "30",
+                        "java/lang/Object.equals:(Ljava/lang/Object;)Z"
+                    ],
+                    [
+                        "32",
+                        "ifeq"
+                    ],
+                    [
+                        "33",
+                        "7"
+                    ],
+                    [
+                        "35",
+                        "iconst_1"
+                    ],
+                    [
+                        "36",
+                        "goto"
+                    ],
+                    [
+                        "37",
+                        "4"
+                    ],
+                    [
+                        "39",
+                        "iconst_0"
+                    ],
+                    [
+                        "40",
+                        "ireturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    457,
+                    458
+                ],
+                "children": []
+            }
+        ]
+    },
+    "createEntry": {
+        "name": "createEntry",
+        "pos": [
+            469,
+            480
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    472,
+                    473
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceEntry"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "iload_2"
+                    ],
+                    [
+                        "7",
+                        "aload_3"
+                    ],
+                    [
+                        "8",
+                        "aload"
+                    ],
+                    [
+                        "9",
+                        "#4"
+                    ],
+                    [
+                        "10",
+                        "invokespecial"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceEntry.<init>:(Lorg/apache/commons/collections4/map/AbstractReferenceMap;Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;ILjava/lang/Object;Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "13",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "createEntrySetIterator": {
+        "name": "createEntrySetIterator",
+        "pos": [
+            480,
+            490
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    482,
+                    483
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceEntrySetIterator"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceEntrySetIterator.<init>:(Lorg/apache/commons/collections4/map/AbstractReferenceMap;)V"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "createKeySetIterator": {
+        "name": "createKeySetIterator",
+        "pos": [
+            490,
+            500
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    492,
+                    493
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceKeySetIterator"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceKeySetIterator.<init>:(Lorg/apache/commons/collections4/map/AbstractReferenceMap;)V"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "createValuesIterator": {
+        "name": "createValuesIterator",
+        "pos": [
+            500,
+            509
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    502,
+                    503
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceValuesIterator"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceValuesIterator.<init>:(Lorg/apache/commons/collections4/map/AbstractReferenceMap;)V"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "doWriteObject": {
+        "name": "doWriteObject",
+        "pos": [
+            994,
+            1028
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    996,
+                    997
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.keyType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength.value:I"
+                    ],
+                    [
+                        "8",
+                        "invokevirtual"
+                    ],
+                    [
+                        "9",
+                        "java/io/ObjectOutputStream.writeInt:(I)V"
+                    ],
+                    [
+                        "11",
+                        "aload_1"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "getfield"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.valueType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;"
+                    ],
+                    [
+                        "16",
+                        "getfield"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength.value:I"
+                    ],
+                    [
+                        "19",
+                        "invokevirtual"
+                    ],
+                    [
+                        "20",
+                        "java/io/ObjectOutputStream.writeInt:(I)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    997,
+                    998
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "22",
+                        "aload_1"
+                    ],
+                    [
+                        "23",
+                        "aload_0"
+                    ],
+                    [
+                        "24",
+                        "getfield"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.purgeValues:Z"
+                    ],
+                    [
+                        "27",
+                        "invokevirtual"
+                    ],
+                    [
+                        "28",
+                        "java/io/ObjectOutputStream.writeBoolean:(Z)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    998,
+                    999
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "30",
+                        "aload_1"
+                    ],
+                    [
+                        "31",
+                        "aload_0"
+                    ],
+                    [
+                        "32",
+                        "getfield"
+                    ],
+                    [
+                        "33",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.loadFactor:F"
+                    ],
+                    [
+                        "35",
+                        "invokevirtual"
+                    ],
+                    [
+                        "36",
+                        "java/io/ObjectOutputStream.writeFloat:(F)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    999,
+                    1000
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "38",
+                        "aload_1"
+                    ],
+                    [
+                        "39",
+                        "aload_0"
+                    ],
+                    [
+                        "40",
+                        "getfield"
+                    ],
+                    [
+                        "41",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.data:[Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;"
+                    ],
+                    [
+                        "43",
+                        "arraylength"
+                    ],
+                    [
+                        "44",
+                        "invokevirtual"
+                    ],
+                    [
+                        "45",
+                        "java/io/ObjectOutputStream.writeInt:(I)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1000,
+                    1001
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "47",
+                        "aload_0"
+                    ],
+                    [
+                        "48",
+                        "invokevirtual"
+                    ],
+                    [
+                        "49",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.mapIterator:()Lorg/apache/commons/collections4/MapIterator;"
+                    ],
+                    [
+                        "51",
+                        "astore_2"
+                    ],
+                    [
+                        "52",
+                        "aload_2"
+                    ],
+                    [
+                        "53",
+                        "invokeinterface"
+                    ],
+                    [
+                        "54",
+                        "org/apache/commons/collections4/MapIterator.next:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "56",
+                        "0"
+                    ],
+                    [
+                        "58",
+                        "ifeq"
+                    ],
+                    [
+                        "59",
+                        "26"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    1001,
+                    1005
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1001,
+                            1005
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    1002,
+                                    1003
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    1003,
+                                    1004
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1005,
+                    1007
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "doReadObject": {
+        "name": "doReadObject",
+        "pos": [
+            1028,
+            1055
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1031,
+                    1032
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "java/io/ObjectInputStream.readInt:()I"
+                    ],
+                    [
+                        "5",
+                        "invokestatic"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength.resolve:(I)Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;"
+                    ],
+                    [
+                        "8",
+                        "putfield"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.keyType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;"
+                    ],
+                    [
+                        "11",
+                        "aload_0"
+                    ],
+                    [
+                        "12",
+                        "aload_1"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "java/io/ObjectInputStream.readInt:()I"
+                    ],
+                    [
+                        "16",
+                        "invokestatic"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength.resolve:(I)Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;"
+                    ],
+                    [
+                        "19",
+                        "putfield"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.valueType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1032,
+                    1033
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "22",
+                        "aload_0"
+                    ],
+                    [
+                        "23",
+                        "aload_1"
+                    ],
+                    [
+                        "24",
+                        "invokevirtual"
+                    ],
+                    [
+                        "25",
+                        "java/io/ObjectInputStream.readBoolean:()Z"
+                    ],
+                    [
+                        "27",
+                        "putfield"
+                    ],
+                    [
+                        "28",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.purgeValues:Z"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1033,
+                    1034
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "30",
+                        "aload_0"
+                    ],
+                    [
+                        "31",
+                        "aload_1"
+                    ],
+                    [
+                        "32",
+                        "invokevirtual"
+                    ],
+                    [
+                        "33",
+                        "java/io/ObjectInputStream.readFloat:()F"
+                    ],
+                    [
+                        "35",
+                        "putfield"
+                    ],
+                    [
+                        "36",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.loadFactor:F"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1034,
+                    1035
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "38",
+                        "aload_1"
+                    ],
+                    [
+                        "39",
+                        "invokevirtual"
+                    ],
+                    [
+                        "40",
+                        "java/io/ObjectInputStream.readInt:()I"
+                    ],
+                    [
+                        "42",
+                        "istore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    1035,
+                    1036
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "43",
+                        "aload_0"
+                    ],
+                    [
+                        "44",
+                        "invokevirtual"
+                    ],
+                    [
+                        "45",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.init:()V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1036,
+                    1037
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "47",
+                        "aload_0"
+                    ],
+                    [
+                        "48",
+                        "iload_2"
+                    ],
+                    [
+                        "49",
+                        "anewarray"
+                    ],
+                    [
+                        "50",
+                        "org/apache/commons/collections4/map/AbstractHashedMap$HashEntry"
+                    ],
+                    [
+                        "52",
+                        "putfield"
+                    ],
+                    [
+                        "53",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.data:[Lorg/apache/commons/collections4/map/AbstractHashedMap$HashEntry;"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1037,
+                    1038
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    1038,
+                    1046
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            1038,
+                            1046
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    1039,
+                                    1040
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    1040,
+                                    1043
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            1040,
+                                            1043
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "BreakStatement",
+                                                "pos": [
+                                                    1041,
+                                                    1042
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    1043,
+                                    1044
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    1044,
+                                    1045
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    1046,
+                    1048
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "isKeyType": {
+        "name": "isKeyType",
+        "pos": [
+            1055,
+            1058
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    1056,
+                    1057
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/map/AbstractReferenceMap.keyType:Lorg/apache/commons/collections4/map/AbstractReferenceMap$ReferenceStrength;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "if_acmpne"
+                    ],
+                    [
+                        "6",
+                        "7"
+                    ],
+                    [
+                        "8",
+                        "iconst_1"
+                    ],
+                    [
+                        "9",
+                        "goto"
+                    ],
+                    [
+                        "10",
+                        "4"
+                    ],
+                    [
+                        "12",
+                        "iconst_0"
+                    ],
+                    [
+                        "13",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

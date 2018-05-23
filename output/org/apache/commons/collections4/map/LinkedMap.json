@@ -1,0 +1,495 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/collections4/map/AbstractLinkedMap.<init>:(Ljava/util/Map;)V",
+      0,
+      0
+    ],
+    "5": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "clone": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/collections4/map/LinkedMap.clone:()Lorg/apache/commons/collections4/map/LinkedMap;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "writeObject": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "java/io/ObjectOutputStream.defaultWriteObject:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/collections4/map/LinkedMap.doWriteObject:(Ljava/io/ObjectOutputStream;)V",
+      0,
+      0
+    ],
+    "9": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "readObject": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "java/io/ObjectInputStream.defaultReadObject:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/collections4/map/LinkedMap.doReadObject:(Ljava/io/ObjectInputStream;)V",
+      0,
+      0
+    ],
+    "9": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "get": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "iload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/collections4/map/LinkedMap.getEntry:(I)Lorg/apache/commons/collections4/map/AbstractLinkedMap$LinkEntry;",
+      0,
+      0
+    ],
+    "5": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/AbstractLinkedMap$LinkEntry.getKey:()Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "8": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getValue": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "iload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/collections4/map/LinkedMap.getEntry:(I)Lorg/apache/commons/collections4/map/AbstractLinkedMap$LinkEntry;",
+      0,
+      0
+    ],
+    "5": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/AbstractLinkedMap$LinkEntry.getValue:()Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "8": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "indexOf": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/collections4/map/LinkedMap.convertKey:(Ljava/lang/Object;)Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "5": [
+      "astore_1",
+      0,
+      0
+    ],
+    "6": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "7": [
+      "istore_2",
+      0,
+      0
+    ],
+    "8": [
+      "aload_0",
+      1,
+      4
+    ],
+    "9": [
+      "getfield",
+      1,
+      4
+    ],
+    "10": [
+      "org/apache/commons/collections4/map/LinkedMap.header:Lorg/apache/commons/collections4/map/AbstractLinkedMap$LinkEntry;",
+      1,
+      4
+    ],
+    "12": [
+      "getfield",
+      1,
+      4
+    ],
+    "13": [
+      "org/apache/commons/collections4/map/AbstractLinkedMap$LinkEntry.after:Lorg/apache/commons/collections4/map/AbstractLinkedMap$LinkEntry;",
+      1,
+      4
+    ],
+    "15": [
+      "astore_3",
+      1,
+      4
+    ],
+    "16": [
+      "aload_3",
+      1,
+      4
+    ],
+    "17": [
+      "aload_0",
+      1,
+      4
+    ],
+    "18": [
+      "getfield",
+      1,
+      4
+    ],
+    "19": [
+      "org/apache/commons/collections4/map/LinkedMap.header:Lorg/apache/commons/collections4/map/AbstractLinkedMap$LinkEntry;",
+      1,
+      4
+    ],
+    "21": [
+      "if_acmpeq",
+      1,
+      4
+    ],
+    "22": [
+      "28",
+      1,
+      4
+    ],
+    "24": [
+      "aload_0",
+      2,
+      1
+    ],
+    "25": [
+      "aload_1",
+      2,
+      1
+    ],
+    "26": [
+      "aload_3",
+      2,
+      1
+    ],
+    "27": [
+      "getfield",
+      2,
+      1
+    ],
+    "28": [
+      "org/apache/commons/collections4/map/AbstractLinkedMap$LinkEntry.key:Ljava/lang/Object;",
+      2,
+      1
+    ],
+    "30": [
+      "invokevirtual",
+      2,
+      1
+    ],
+    "31": [
+      "org/apache/commons/collections4/map/LinkedMap.isEqualKey:(Ljava/lang/Object;Ljava/lang/Object;)Z",
+      2,
+      1
+    ],
+    "33": [
+      "ifeq",
+      2,
+      1
+    ],
+    "34": [
+      "5",
+      2,
+      1
+    ],
+    "36": [
+      "iload_2",
+      2,
+      0
+    ],
+    "37": [
+      "ireturn",
+      2,
+      0
+    ],
+    "38": [
+      "aload_3",
+      2,
+      0
+    ],
+    "39": [
+      "getfield",
+      2,
+      0
+    ],
+    "40": [
+      "org/apache/commons/collections4/map/AbstractLinkedMap$LinkEntry.after:Lorg/apache/commons/collections4/map/AbstractLinkedMap$LinkEntry;",
+      2,
+      0
+    ],
+    "42": [
+      "astore_3",
+      2,
+      0
+    ],
+    "43": [
+      "iinc",
+      2,
+      0
+    ],
+    "44": [
+      "#2",
+      2,
+      0
+    ],
+    "45": [
+      "-89",
+      2,
+      0
+    ],
+    "46": [
+      "goto",
+      2,
+      4
+    ],
+    "47": [
+      "-30",
+      2,
+      4
+    ],
+    "49": [
+      "iconst_m1",
+      1,
+      0
+    ],
+    "50": [
+      "ireturn",
+      1,
+      0
+    ]
+  },
+  "remove": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_0",
+      0,
+      0
+    ],
+    "2": [
+      "iload_1",
+      0,
+      0
+    ],
+    "3": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "4": [
+      "org/apache/commons/collections4/map/LinkedMap.get:(I)Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "6": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/collections4/map/LinkedMap.remove:(Ljava/lang/Object;)Ljava/lang/Object;",
+      0,
+      0
+    ],
+    "9": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "asList": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/collections4/map/LinkedMap$LinkedMapList",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/collections4/map/LinkedMap$LinkedMapList.<init>:(Lorg/apache/commons/collections4/map/LinkedMap;)V",
+      0,
+      0
+    ],
+    "8": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

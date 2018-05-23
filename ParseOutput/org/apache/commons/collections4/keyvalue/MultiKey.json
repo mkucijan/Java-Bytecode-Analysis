@@ -1,0 +1,566 @@
+{
+    "getKeys": {
+        "name": "getKeys",
+        "pos": [
+            180,
+            195
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    181,
+                    182
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/keyvalue/MultiKey.keys:[Ljava/lang/Object;"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "[Ljava/lang/Object;.clone:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "checkcast"
+                    ],
+                    [
+                        "8",
+                        "[Ljava/lang/Object;"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getKey": {
+        "name": "getKey",
+        "pos": [
+            195,
+            205
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    196,
+                    197
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/keyvalue/MultiKey.keys:[Ljava/lang/Object;"
+                    ],
+                    [
+                        "4",
+                        "iload_1"
+                    ],
+                    [
+                        "5",
+                        "aaload"
+                    ],
+                    [
+                        "6",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "size": {
+        "name": "size",
+        "pos": [
+            205,
+            219
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    206,
+                    207
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/keyvalue/MultiKey.keys:[Ljava/lang/Object;"
+                    ],
+                    [
+                        "4",
+                        "arraylength"
+                    ],
+                    [
+                        "5",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "equals": {
+        "name": "equals",
+        "pos": [
+            219,
+            241
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    221,
+                    224
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            221,
+                            224
+                        ],
+                        "children": [
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    222,
+                                    223
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    224,
+                    228
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            224,
+                            228
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    225,
+                                    226
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    226,
+                                    227
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    228,
+                    229
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "hashCode": {
+        "name": "hashCode",
+        "pos": [
+            241,
+            251
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    243,
+                    244
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/keyvalue/MultiKey.hashCode:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "toString": {
+        "name": "toString",
+        "pos": [
+            251,
+            260
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    253,
+                    254
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "java/lang/StringBuilder"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "invokespecial"
+                    ],
+                    [
+                        "5",
+                        "java/lang/StringBuilder.<init>:()V"
+                    ],
+                    [
+                        "7",
+                        "ldc"
+                    ],
+                    [
+                        "8",
+                        "MultiKey"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "getfield"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/collections4/keyvalue/MultiKey.keys:[Ljava/lang/Object;"
+                    ],
+                    [
+                        "16",
+                        "invokestatic"
+                    ],
+                    [
+                        "17",
+                        "java/util/Arrays.toString:([Ljava/lang/Object;)Ljava/lang/String;"
+                    ],
+                    [
+                        "19",
+                        "invokevirtual"
+                    ],
+                    [
+                        "20",
+                        "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                    ],
+                    [
+                        "22",
+                        "invokevirtual"
+                    ],
+                    [
+                        "23",
+                        "java/lang/StringBuilder.toString:()Ljava/lang/String;"
+                    ],
+                    [
+                        "25",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "calculateHashCode": {
+        "name": "calculateHashCode",
+        "pos": [
+            260,
+            277
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    262,
+                    263
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_0"
+                    ],
+                    [
+                        "1",
+                        "istore_2"
+                    ],
+                    [
+                        "2",
+                        "aload_1"
+                    ],
+                    [
+                        "3",
+                        "astore_3"
+                    ],
+                    [
+                        "4",
+                        "aload_3"
+                    ],
+                    [
+                        "5",
+                        "arraylength"
+                    ],
+                    [
+                        "6",
+                        "istore"
+                    ],
+                    [
+                        "7",
+                        "#4"
+                    ],
+                    [
+                        "8",
+                        "iconst_0"
+                    ],
+                    [
+                        "9",
+                        "istore"
+                    ],
+                    [
+                        "10",
+                        "#5"
+                    ],
+                    [
+                        "11",
+                        "iload"
+                    ],
+                    [
+                        "12",
+                        "#5"
+                    ],
+                    [
+                        "13",
+                        "iload"
+                    ],
+                    [
+                        "14",
+                        "#4"
+                    ],
+                    [
+                        "15",
+                        "if_icmpge"
+                    ],
+                    [
+                        "16",
+                        "28"
+                    ],
+                    [
+                        "18",
+                        "aload_3"
+                    ],
+                    [
+                        "19",
+                        "iload"
+                    ],
+                    [
+                        "20",
+                        "#5"
+                    ],
+                    [
+                        "21",
+                        "aaload"
+                    ],
+                    [
+                        "22",
+                        "astore"
+                    ],
+                    [
+                        "23",
+                        "#6"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    263,
+                    268
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            263,
+                            268
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    264,
+                                    267
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            264,
+                                            267
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    265,
+                                                    266
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    268,
+                    269
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "readResolve": {
+        "name": "readResolve",
+        "pos": [
+            277,
+            281
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    278,
+                    279
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/collections4/keyvalue/MultiKey.keys:[Ljava/lang/Object;"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/keyvalue/MultiKey.calculateHashCode:([Ljava/lang/Object;)V"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    279,
+                    280
+                ],
+                "children": []
+            }
+        ]
+    }
+}

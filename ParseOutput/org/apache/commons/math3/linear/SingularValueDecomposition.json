@@ -1,0 +1,940 @@
+{
+    "getU": {
+        "name": "getU",
+        "pos": [
+            492,
+            504
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    494,
+                    496
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.cachedU:Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getUT": {
+        "name": "getUT",
+        "pos": [
+            504,
+            518
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    505,
+                    509
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            505,
+                            509
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    506,
+                                    507
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    509,
+                    510
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getS": {
+        "name": "getS",
+        "pos": [
+            518,
+            532
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    519,
+                    523
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            519,
+                            523
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    521,
+                                    522
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    523,
+                    524
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getSingularValues": {
+        "name": "getSingularValues",
+        "pos": [
+            532,
+            542
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    533,
+                    534
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.singularValues:[D"
+                    ],
+                    [
+                        "4",
+                        "invokevirtual"
+                    ],
+                    [
+                        "5",
+                        "[D.clone:()Ljava/lang/Object;"
+                    ],
+                    [
+                        "7",
+                        "checkcast"
+                    ],
+                    [
+                        "8",
+                        "[D"
+                    ],
+                    [
+                        "10",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getV": {
+        "name": "getV",
+        "pos": [
+            542,
+            553
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    544,
+                    545
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.cachedV:Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getVT": {
+        "name": "getVT",
+        "pos": [
+            553,
+            572
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    554,
+                    558
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            554,
+                            558
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    555,
+                                    556
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    558,
+                    559
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getCovariance": {
+        "name": "getCovariance",
+        "pos": [
+            572,
+            607
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    574,
+                    575
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.singularValues:[D"
+                    ],
+                    [
+                        "4",
+                        "arraylength"
+                    ],
+                    [
+                        "5",
+                        "istore_3"
+                    ],
+                    [
+                        "6",
+                        "iconst_0"
+                    ],
+                    [
+                        "7",
+                        "istore"
+                    ],
+                    [
+                        "8",
+                        "#4"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    575,
+                    576
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "9",
+                        "iload"
+                    ],
+                    [
+                        "10",
+                        "#4"
+                    ],
+                    [
+                        "11",
+                        "iload_3"
+                    ],
+                    [
+                        "12",
+                        "if_icmpge"
+                    ],
+                    [
+                        "13",
+                        "21"
+                    ],
+                    [
+                        "15",
+                        "aload_0"
+                    ],
+                    [
+                        "16",
+                        "getfield"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.singularValues:[D"
+                    ],
+                    [
+                        "19",
+                        "iload"
+                    ],
+                    [
+                        "20",
+                        "#4"
+                    ],
+                    [
+                        "21",
+                        "daload"
+                    ],
+                    [
+                        "22",
+                        "dload_1"
+                    ],
+                    [
+                        "23",
+                        "dcmpl"
+                    ],
+                    [
+                        "24",
+                        "iflt"
+                    ],
+                    [
+                        "25",
+                        "9"
+                    ]
+                ]
+            },
+            {
+                "name": "WhileStatement",
+                "pos": [
+                    576,
+                    581
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            577,
+                            581
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    578,
+                                    579
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    581,
+                    586
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            581,
+                            586
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    582,
+                                    584
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    586,
+                    587
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    587,
+                    596
+                ],
+                "children": [
+                    {
+                        "name": "StatementExpression",
+                        "pos": [
+                            592,
+                            593
+                        ],
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    596,
+                    597
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    597,
+                    598
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getNorm": {
+        "name": "getNorm",
+        "pos": [
+            607,
+            615
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    608,
+                    609
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.singularValues:[D"
+                    ],
+                    [
+                        "4",
+                        "iconst_0"
+                    ],
+                    [
+                        "5",
+                        "daload"
+                    ],
+                    [
+                        "6",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getConditionNumber": {
+        "name": "getConditionNumber",
+        "pos": [
+            615,
+            626
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    616,
+                    617
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.singularValues:[D"
+                    ],
+                    [
+                        "4",
+                        "iconst_0"
+                    ],
+                    [
+                        "5",
+                        "daload"
+                    ],
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "getfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.singularValues:[D"
+                    ],
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "getfield"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.n:I"
+                    ],
+                    [
+                        "14",
+                        "iconst_1"
+                    ],
+                    [
+                        "15",
+                        "isub"
+                    ],
+                    [
+                        "16",
+                        "daload"
+                    ],
+                    [
+                        "17",
+                        "ddiv"
+                    ],
+                    [
+                        "18",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getInverseConditionNumber": {
+        "name": "getInverseConditionNumber",
+        "pos": [
+            626,
+            638
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    627,
+                    628
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.singularValues:[D"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.n:I"
+                    ],
+                    [
+                        "8",
+                        "iconst_1"
+                    ],
+                    [
+                        "9",
+                        "isub"
+                    ],
+                    [
+                        "10",
+                        "daload"
+                    ],
+                    [
+                        "11",
+                        "aload_0"
+                    ],
+                    [
+                        "12",
+                        "getfield"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.singularValues:[D"
+                    ],
+                    [
+                        "15",
+                        "iconst_0"
+                    ],
+                    [
+                        "16",
+                        "daload"
+                    ],
+                    [
+                        "17",
+                        "ddiv"
+                    ],
+                    [
+                        "18",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getRank": {
+        "name": "getRank",
+        "pos": [
+            638,
+            652
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    639,
+                    640
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iconst_0"
+                    ],
+                    [
+                        "1",
+                        "istore_1"
+                    ],
+                    [
+                        "2",
+                        "iconst_0"
+                    ],
+                    [
+                        "3",
+                        "istore_2"
+                    ],
+                    [
+                        "4",
+                        "iload_2"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "getfield"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.singularValues:[D"
+                    ],
+                    [
+                        "9",
+                        "arraylength"
+                    ],
+                    [
+                        "10",
+                        "if_icmpge"
+                    ],
+                    [
+                        "11",
+                        "26"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    640,
+                    645
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            640,
+                            645
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    641,
+                                    644
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            641,
+                                            644
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    642,
+                                                    643
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    645,
+                    646
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getSolver": {
+        "name": "getSolver",
+        "pos": [
+            652,
+            657
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    653,
+                    654
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition$Solver"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.singularValues:[D"
+                    ],
+                    [
+                        "8",
+                        "aload_0"
+                    ],
+                    [
+                        "9",
+                        "invokevirtual"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.getUT:()Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "12",
+                        "aload_0"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.getV:()Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "16",
+                        "aload_0"
+                    ],
+                    [
+                        "17",
+                        "invokevirtual"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.getRank:()I"
+                    ],
+                    [
+                        "20",
+                        "aload_0"
+                    ],
+                    [
+                        "21",
+                        "getfield"
+                    ],
+                    [
+                        "22",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.m:I"
+                    ],
+                    [
+                        "24",
+                        "if_icmpne"
+                    ],
+                    [
+                        "25",
+                        "7"
+                    ],
+                    [
+                        "27",
+                        "iconst_1"
+                    ],
+                    [
+                        "28",
+                        "goto"
+                    ],
+                    [
+                        "29",
+                        "4"
+                    ],
+                    [
+                        "31",
+                        "iconst_0"
+                    ],
+                    [
+                        "32",
+                        "aload_0"
+                    ],
+                    [
+                        "33",
+                        "getfield"
+                    ],
+                    [
+                        "34",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition.tol:D"
+                    ],
+                    [
+                        "36",
+                        "aconst_null"
+                    ],
+                    [
+                        "37",
+                        "invokespecial"
+                    ],
+                    [
+                        "38",
+                        "org/apache/commons/math3/linear/SingularValueDecomposition$Solver.<init>:([DLorg/apache/commons/math3/linear/RealMatrix;Lorg/apache/commons/math3/linear/RealMatrix;ZDLorg/apache/commons/math3/linear/SingularValueDecomposition$1;)V"
+                    ],
+                    [
+                        "40",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

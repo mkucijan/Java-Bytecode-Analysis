@@ -1,0 +1,1583 @@
+{
+    "copy": {
+        "name": "copy",
+        "pos": [
+            86,
+            97
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    88,
+                    89
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.<init>:(Lorg/apache/commons/math3/linear/OpenMapRealMatrix;)V"
+                    ],
+                    [
+                        "8",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "createMatrix": {
+        "name": "createMatrix",
+        "pos": [
+            97,
+            104
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    100,
+                    101
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "iload_1"
+                    ],
+                    [
+                        "5",
+                        "iload_2"
+                    ],
+                    [
+                        "6",
+                        "invokespecial"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.<init>:(II)V"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getColumnDimension": {
+        "name": "getColumnDimension",
+        "pos": [
+            104,
+            117
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    106,
+                    107
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.columns:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "add": {
+        "name": "add",
+        "pos": [
+            117,
+            135
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    120,
+                    122
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/MatrixUtils.checkAdditionCompatible:(Lorg/apache/commons/math3/linear/AnyMatrix;Lorg/apache/commons/math3/linear/AnyMatrix;)V"
+                    ],
+                    [
+                        "5",
+                        "new"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix"
+                    ],
+                    [
+                        "8",
+                        "dup"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "invokespecial"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.<init>:(Lorg/apache/commons/math3/linear/OpenMapRealMatrix;)V"
+                    ],
+                    [
+                        "13",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    122,
+                    123
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "14",
+                        "aload_1"
+                    ],
+                    [
+                        "15",
+                        "getfield"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.entries:Lorg/apache/commons/math3/util/OpenIntToDoubleHashMap;"
+                    ],
+                    [
+                        "18",
+                        "invokevirtual"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.iterator:()Lorg/apache/commons/math3/util/OpenIntToDoubleHashMap$Iterator;"
+                    ],
+                    [
+                        "21",
+                        "astore_3"
+                    ],
+                    [
+                        "22",
+                        "aload_3"
+                    ],
+                    [
+                        "23",
+                        "invokevirtual"
+                    ],
+                    [
+                        "24",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap$Iterator.hasNext:()Z"
+                    ],
+                    [
+                        "26",
+                        "ifeq"
+                    ],
+                    [
+                        "27",
+                        "56"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    123,
+                    130
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            123,
+                            130
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    124,
+                                    125
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    125,
+                                    126
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    126,
+                                    127
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    127,
+                                    128
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    130,
+                    132
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "subtract": {
+        "name": "subtract",
+        "pos": [
+            153,
+            175
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    155,
+                    157
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/MatrixUtils.checkAdditionCompatible:(Lorg/apache/commons/math3/linear/AnyMatrix;Lorg/apache/commons/math3/linear/AnyMatrix;)V"
+                    ],
+                    [
+                        "5",
+                        "new"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix"
+                    ],
+                    [
+                        "8",
+                        "dup"
+                    ],
+                    [
+                        "9",
+                        "aload_0"
+                    ],
+                    [
+                        "10",
+                        "invokespecial"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.<init>:(Lorg/apache/commons/math3/linear/OpenMapRealMatrix;)V"
+                    ],
+                    [
+                        "13",
+                        "astore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    157,
+                    158
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "14",
+                        "aload_1"
+                    ],
+                    [
+                        "15",
+                        "getfield"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.entries:Lorg/apache/commons/math3/util/OpenIntToDoubleHashMap;"
+                    ],
+                    [
+                        "18",
+                        "invokevirtual"
+                    ],
+                    [
+                        "19",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.iterator:()Lorg/apache/commons/math3/util/OpenIntToDoubleHashMap$Iterator;"
+                    ],
+                    [
+                        "21",
+                        "astore_3"
+                    ],
+                    [
+                        "22",
+                        "aload_3"
+                    ],
+                    [
+                        "23",
+                        "invokevirtual"
+                    ],
+                    [
+                        "24",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap$Iterator.hasNext:()Z"
+                    ],
+                    [
+                        "26",
+                        "ifeq"
+                    ],
+                    [
+                        "27",
+                        "56"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    158,
+                    165
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            158,
+                            165
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    159,
+                                    160
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    160,
+                                    161
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    161,
+                                    162
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    162,
+                                    163
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    165,
+                    166
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "multiply": {
+        "name": "multiply",
+        "pos": [
+            211,
+            243
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    214,
+                    216
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/MatrixUtils.checkMultiplicationCompatible:(Lorg/apache/commons/math3/linear/AnyMatrix;Lorg/apache/commons/math3/linear/AnyMatrix;)V"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.getColumnDimension:()I"
+                    ],
+                    [
+                        "9",
+                        "istore_2"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    216,
+                    217
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "new"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix"
+                    ],
+                    [
+                        "13",
+                        "dup"
+                    ],
+                    [
+                        "14",
+                        "aload_0"
+                    ],
+                    [
+                        "15",
+                        "getfield"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.rows:I"
+                    ],
+                    [
+                        "18",
+                        "iload_2"
+                    ],
+                    [
+                        "19",
+                        "invokespecial"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.<init>:(II)V"
+                    ],
+                    [
+                        "22",
+                        "astore_3"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    217,
+                    218
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "23",
+                        "aload_0"
+                    ],
+                    [
+                        "24",
+                        "getfield"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.entries:Lorg/apache/commons/math3/util/OpenIntToDoubleHashMap;"
+                    ],
+                    [
+                        "27",
+                        "invokevirtual"
+                    ],
+                    [
+                        "28",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.iterator:()Lorg/apache/commons/math3/util/OpenIntToDoubleHashMap$Iterator;"
+                    ],
+                    [
+                        "30",
+                        "astore"
+                    ],
+                    [
+                        "31",
+                        "#4"
+                    ],
+                    [
+                        "32",
+                        "aload"
+                    ],
+                    [
+                        "33",
+                        "#4"
+                    ],
+                    [
+                        "34",
+                        "invokevirtual"
+                    ],
+                    [
+                        "35",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap$Iterator.hasNext:()Z"
+                    ],
+                    [
+                        "37",
+                        "ifeq"
+                    ],
+                    [
+                        "38",
+                        "146"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    218,
+                    239
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            218,
+                            239
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    219,
+                                    220
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    220,
+                                    221
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    221,
+                                    222
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    222,
+                                    223
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    223,
+                                    224
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    224,
+                                    237
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            224,
+                                            237
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    225,
+                                                    226
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    226,
+                                                    236
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            226,
+                                                            236
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "LocalVariableDeclaration",
+                                                                "pos": [
+                                                                    227,
+                                                                    228
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "LocalVariableDeclaration",
+                                                                "pos": [
+                                                                    228,
+                                                                    230
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "IfStatement",
+                                                                "pos": [
+                                                                    230,
+                                                                    235
+                                                                ],
+                                                                "children": [
+                                                                    {
+                                                                        "name": "BlockStatement",
+                                                                        "pos": [
+                                                                            230,
+                                                                            232
+                                                                        ],
+                                                                        "children": [
+                                                                            {
+                                                                                "name": "StatementExpression",
+                                                                                "pos": [
+                                                                                    231,
+                                                                                    232
+                                                                                ],
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "name": "BlockStatement",
+                                                                        "pos": [
+                                                                            232,
+                                                                            235
+                                                                        ],
+                                                                        "children": [
+                                                                            {
+                                                                                "name": "StatementExpression",
+                                                                                "pos": [
+                                                                                    233,
+                                                                                    234
+                                                                                ],
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    239,
+                    240
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "getEntry": {
+        "name": "getEntry",
+        "pos": [
+            243,
+            251
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    245,
+                    246
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/MatrixUtils.checkRowIndex:(Lorg/apache/commons/math3/linear/AnyMatrix;I)V"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "iload_2"
+                    ],
+                    [
+                        "7",
+                        "invokestatic"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/linear/MatrixUtils.checkColumnIndex:(Lorg/apache/commons/math3/linear/AnyMatrix;I)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    246,
+                    247
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "getfield"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.entries:Lorg/apache/commons/math3/util/OpenIntToDoubleHashMap;"
+                    ],
+                    [
+                        "14",
+                        "aload_0"
+                    ],
+                    [
+                        "15",
+                        "iload_1"
+                    ],
+                    [
+                        "16",
+                        "iload_2"
+                    ],
+                    [
+                        "17",
+                        "invokespecial"
+                    ],
+                    [
+                        "18",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.computeKey:(II)I"
+                    ],
+                    [
+                        "20",
+                        "invokevirtual"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.get:(I)D"
+                    ],
+                    [
+                        "23",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    247,
+                    248
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getRowDimension": {
+        "name": "getRowDimension",
+        "pos": [
+            251,
+            257
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    253,
+                    254
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.rows:I"
+                    ],
+                    [
+                        "4",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setEntry": {
+        "name": "setEntry",
+        "pos": [
+            257,
+            270
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    260,
+                    261
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/MatrixUtils.checkRowIndex:(Lorg/apache/commons/math3/linear/AnyMatrix;I)V"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "iload_2"
+                    ],
+                    [
+                        "7",
+                        "invokestatic"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/linear/MatrixUtils.checkColumnIndex:(Lorg/apache/commons/math3/linear/AnyMatrix;I)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    261,
+                    262
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "dload_3"
+                    ],
+                    [
+                        "11",
+                        "dconst_0"
+                    ],
+                    [
+                        "12",
+                        "dcmpl"
+                    ],
+                    [
+                        "13",
+                        "ifne"
+                    ],
+                    [
+                        "14",
+                        "20"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    262,
+                    267
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            262,
+                            264
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    263,
+                                    264
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            264,
+                            267
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    265,
+                                    266
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "addToEntry": {
+        "name": "addToEntry",
+        "pos": [
+            270,
+            285
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    273,
+                    274
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/MatrixUtils.checkRowIndex:(Lorg/apache/commons/math3/linear/AnyMatrix;I)V"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "iload_2"
+                    ],
+                    [
+                        "7",
+                        "invokestatic"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/linear/MatrixUtils.checkColumnIndex:(Lorg/apache/commons/math3/linear/AnyMatrix;I)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    274,
+                    275
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "iload_1"
+                    ],
+                    [
+                        "12",
+                        "iload_2"
+                    ],
+                    [
+                        "13",
+                        "invokespecial"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.computeKey:(II)I"
+                    ],
+                    [
+                        "16",
+                        "istore"
+                    ],
+                    [
+                        "17",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    275,
+                    276
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "18",
+                        "aload_0"
+                    ],
+                    [
+                        "19",
+                        "getfield"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.entries:Lorg/apache/commons/math3/util/OpenIntToDoubleHashMap;"
+                    ],
+                    [
+                        "22",
+                        "iload"
+                    ],
+                    [
+                        "23",
+                        "#5"
+                    ],
+                    [
+                        "24",
+                        "invokevirtual"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.get:(I)D"
+                    ],
+                    [
+                        "27",
+                        "dload_3"
+                    ],
+                    [
+                        "28",
+                        "dadd"
+                    ],
+                    [
+                        "29",
+                        "dstore"
+                    ],
+                    [
+                        "30",
+                        "#6"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    276,
+                    277
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "31",
+                        "dload"
+                    ],
+                    [
+                        "32",
+                        "#6"
+                    ],
+                    [
+                        "33",
+                        "dconst_0"
+                    ],
+                    [
+                        "34",
+                        "dcmpl"
+                    ],
+                    [
+                        "35",
+                        "ifne"
+                    ],
+                    [
+                        "36",
+                        "16"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    277,
+                    282
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            277,
+                            279
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    278,
+                                    279
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            279,
+                            282
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    280,
+                                    281
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "multiplyEntry": {
+        "name": "multiplyEntry",
+        "pos": [
+            285,
+            305
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    288,
+                    289
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "iload_1"
+                    ],
+                    [
+                        "2",
+                        "invokestatic"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/MatrixUtils.checkRowIndex:(Lorg/apache/commons/math3/linear/AnyMatrix;I)V"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "iload_2"
+                    ],
+                    [
+                        "7",
+                        "invokestatic"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/linear/MatrixUtils.checkColumnIndex:(Lorg/apache/commons/math3/linear/AnyMatrix;I)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    289,
+                    290
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "iload_1"
+                    ],
+                    [
+                        "12",
+                        "iload_2"
+                    ],
+                    [
+                        "13",
+                        "invokespecial"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.computeKey:(II)I"
+                    ],
+                    [
+                        "16",
+                        "istore"
+                    ],
+                    [
+                        "17",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    290,
+                    291
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "18",
+                        "aload_0"
+                    ],
+                    [
+                        "19",
+                        "getfield"
+                    ],
+                    [
+                        "20",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.entries:Lorg/apache/commons/math3/util/OpenIntToDoubleHashMap;"
+                    ],
+                    [
+                        "22",
+                        "iload"
+                    ],
+                    [
+                        "23",
+                        "#5"
+                    ],
+                    [
+                        "24",
+                        "invokevirtual"
+                    ],
+                    [
+                        "25",
+                        "org/apache/commons/math3/util/OpenIntToDoubleHashMap.get:(I)D"
+                    ],
+                    [
+                        "27",
+                        "dload_3"
+                    ],
+                    [
+                        "28",
+                        "dmul"
+                    ],
+                    [
+                        "29",
+                        "dstore"
+                    ],
+                    [
+                        "30",
+                        "#6"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    291,
+                    292
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "31",
+                        "dload"
+                    ],
+                    [
+                        "32",
+                        "#6"
+                    ],
+                    [
+                        "33",
+                        "dconst_0"
+                    ],
+                    [
+                        "34",
+                        "dcmpl"
+                    ],
+                    [
+                        "35",
+                        "ifne"
+                    ],
+                    [
+                        "36",
+                        "16"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    292,
+                    297
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            292,
+                            294
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    293,
+                                    294
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            294,
+                            297
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    295,
+                                    296
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "computeKey": {
+        "name": "computeKey",
+        "pos": [
+            305,
+            310
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    306,
+                    307
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "iload_1"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "getfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/linear/OpenMapRealMatrix.columns:I"
+                    ],
+                    [
+                        "5",
+                        "imul"
+                    ],
+                    [
+                        "6",
+                        "iload_2"
+                    ],
+                    [
+                        "7",
+                        "iadd"
+                    ],
+                    [
+                        "8",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

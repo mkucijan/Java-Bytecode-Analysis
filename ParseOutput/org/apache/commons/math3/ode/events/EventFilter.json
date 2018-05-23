@@ -1,0 +1,839 @@
+{
+    "init": {
+        "name": "init",
+        "pos": [
+            90,
+            104
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    93,
+                    96
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/events/EventFilter.rawHandler:Lorg/apache/commons/math3/ode/events/EventHandler;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "aload_3"
+                    ],
+                    [
+                        "6",
+                        "dload"
+                    ],
+                    [
+                        "7",
+                        "#4"
+                    ],
+                    [
+                        "8",
+                        "invokeinterface"
+                    ],
+                    [
+                        "9",
+                        "org/apache/commons/math3/ode/events/EventHandler.forward:Z"
+                    ],
+                    [
+                        "11",
+                        "0"
+                    ],
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "dload"
+                    ],
+                    [
+                        "15",
+                        "#4"
+                    ],
+                    [
+                        "16",
+                        "dload_1"
+                    ],
+                    [
+                        "17",
+                        "dcmpl"
+                    ],
+                    [
+                        "18",
+                        "iflt"
+                    ],
+                    [
+                        "19",
+                        "7"
+                    ],
+                    [
+                        "21",
+                        "iconst_1"
+                    ],
+                    [
+                        "22",
+                        "goto"
+                    ],
+                    [
+                        "23",
+                        "4"
+                    ],
+                    [
+                        "25",
+                        "iconst_0"
+                    ],
+                    [
+                        "26",
+                        "putfield"
+                    ],
+                    [
+                        "27",
+                        "org/apache/commons/math3/ode/events/EventFilter.forward:Z"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    96,
+                    97
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "29",
+                        "aload_0"
+                    ],
+                    [
+                        "30",
+                        "aload_0"
+                    ],
+                    [
+                        "31",
+                        "getfield"
+                    ],
+                    [
+                        "32",
+                        "org/apache/commons/math3/ode/events/EventFilter.forward:Z"
+                    ],
+                    [
+                        "34",
+                        "ifeq"
+                    ],
+                    [
+                        "35",
+                        "9"
+                    ],
+                    [
+                        "37",
+                        "ldc2_w"
+                    ],
+                    [
+                        "38",
+                        "-inf"
+                    ],
+                    [
+                        "40",
+                        "goto"
+                    ],
+                    [
+                        "41",
+                        "6"
+                    ],
+                    [
+                        "43",
+                        "ldc2_w"
+                    ],
+                    [
+                        "44",
+                        "inf"
+                    ],
+                    [
+                        "46",
+                        "putfield"
+                    ],
+                    [
+                        "47",
+                        "org/apache/commons/math3/ode/events/EventFilter.extremeT:D"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    97,
+                    98
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "49",
+                        "aload_0"
+                    ],
+                    [
+                        "50",
+                        "getfield"
+                    ],
+                    [
+                        "51",
+                        "org/apache/commons/math3/ode/events/EventFilter.transformers:[Lorg/apache/commons/math3/ode/events/Transformer;"
+                    ],
+                    [
+                        "53",
+                        "getstatic"
+                    ],
+                    [
+                        "54",
+                        "org/apache/commons/math3/ode/events/Transformer.UNINITIALIZED:Lorg/apache/commons/math3/ode/events/Transformer;"
+                    ],
+                    [
+                        "56",
+                        "invokestatic"
+                    ],
+                    [
+                        "57",
+                        "java/util/Arrays.fill:([Ljava/lang/Object;Ljava/lang/Object;)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    98,
+                    99
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "59",
+                        "aload_0"
+                    ],
+                    [
+                        "60",
+                        "getfield"
+                    ],
+                    [
+                        "61",
+                        "org/apache/commons/math3/ode/events/EventFilter.updates:[D"
+                    ],
+                    [
+                        "63",
+                        "aload_0"
+                    ],
+                    [
+                        "64",
+                        "getfield"
+                    ],
+                    [
+                        "65",
+                        "org/apache/commons/math3/ode/events/EventFilter.extremeT:D"
+                    ],
+                    [
+                        "67",
+                        "invokestatic"
+                    ],
+                    [
+                        "68",
+                        "java/util/Arrays.fill:([DD)V"
+                    ]
+                ]
+            },
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    99,
+                    101
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "70",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "g": {
+        "name": "g",
+        "pos": [
+            104,
+            193
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    106,
+                    109
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/events/EventFilter.rawHandler:Lorg/apache/commons/math3/ode/events/EventHandler;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "aload_3"
+                    ],
+                    [
+                        "6",
+                        "invokeinterface"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/ode/events/EventHandler.org/apache/commons/math3/ode/events/FilterType"
+                    ],
+                    [
+                        "9",
+                        "0"
+                    ],
+                    [
+                        "11",
+                        "dstore"
+                    ],
+                    [
+                        "12",
+                        "#4"
+                    ],
+                    [
+                        "13",
+                        "aload_0"
+                    ],
+                    [
+                        "14",
+                        "getfield"
+                    ],
+                    [
+                        "15",
+                        "org/apache/commons/math3/ode/events/EventFilter.forward:Z"
+                    ],
+                    [
+                        "17",
+                        "ifeq"
+                    ],
+                    [
+                        "18",
+                        "169"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    109,
+                    190
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            109,
+                            149
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    110,
+                                    111
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    111,
+                                    149
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            111,
+                                            135
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    115,
+                                                    116
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    116,
+                                                    117
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    117,
+                                                    130
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            117,
+                                                            130
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    124,
+                                                                    125
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    125,
+                                                                    126
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    126,
+                                                                    127
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    127,
+                                                                    128
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    130,
+                                                    133
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    133,
+                                                    135
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            135,
+                                            149
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ForStatement",
+                                                "pos": [
+                                                    139,
+                                                    146
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            139,
+                                                            146
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "IfStatement",
+                                                                "pos": [
+                                                                    140,
+                                                                    144
+                                                                ],
+                                                                "children": [
+                                                                    {
+                                                                        "name": "BlockStatement",
+                                                                        "pos": [
+                                                                            140,
+                                                                            144
+                                                                        ],
+                                                                        "children": [
+                                                                            {
+                                                                                "name": "ReturnStatement",
+                                                                                "pos": [
+                                                                                    142,
+                                                                                    143
+                                                                                ],
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    146,
+                                                    148
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            149,
+                            190
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    150,
+                                    188
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            150,
+                                            174
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    154,
+                                                    155
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "LocalVariableDeclaration",
+                                                "pos": [
+                                                    155,
+                                                    156
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "IfStatement",
+                                                "pos": [
+                                                    156,
+                                                    169
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            156,
+                                                            169
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    163,
+                                                                    164
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    164,
+                                                                    165
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    165,
+                                                                    166
+                                                                ],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "name": "StatementExpression",
+                                                                "pos": [
+                                                                    166,
+                                                                    167
+                                                                ],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    169,
+                                                    172
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    172,
+                                                    174
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            174,
+                                            188
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "ForStatement",
+                                                "pos": [
+                                                    178,
+                                                    185
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "name": "BlockStatement",
+                                                        "pos": [
+                                                            178,
+                                                            185
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "name": "IfStatement",
+                                                                "pos": [
+                                                                    179,
+                                                                    183
+                                                                ],
+                                                                "children": [
+                                                                    {
+                                                                        "name": "BlockStatement",
+                                                                        "pos": [
+                                                                            179,
+                                                                            183
+                                                                        ],
+                                                                        "children": [
+                                                                            {
+                                                                                "name": "ReturnStatement",
+                                                                                "pos": [
+                                                                                    181,
+                                                                                    182
+                                                                                ],
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "ReturnStatement",
+                                                "pos": [
+                                                    185,
+                                                    187
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "eventOccurred": {
+        "name": "eventOccurred",
+        "pos": [
+            193,
+            199
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    195,
+                    196
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/events/EventFilter.rawHandler:Lorg/apache/commons/math3/ode/events/EventHandler;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "aload_3"
+                    ],
+                    [
+                        "6",
+                        "aload_0"
+                    ],
+                    [
+                        "7",
+                        "getfield"
+                    ],
+                    [
+                        "8",
+                        "org/apache/commons/math3/ode/events/EventFilter.filter:Lorg/apache/commons/math3/ode/events/FilterType;"
+                    ],
+                    [
+                        "10",
+                        "invokevirtual"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/ode/events/FilterType.getTriggeredIncreasing:()Z"
+                    ],
+                    [
+                        "13",
+                        "invokeinterface"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/ode/events/EventHandler.resetState:(D[D)V"
+                    ],
+                    [
+                        "16",
+                        "0"
+                    ],
+                    [
+                        "18",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "resetState": {
+        "name": "resetState",
+        "pos": [
+            199,
+            204
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    201,
+                    202
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/ode/events/EventFilter.rawHandler:Lorg/apache/commons/math3/ode/events/EventHandler;"
+                    ],
+                    [
+                        "4",
+                        "dload_1"
+                    ],
+                    [
+                        "5",
+                        "aload_3"
+                    ],
+                    [
+                        "6",
+                        "invokeinterface"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/ode/events/EventHandler.java/lang/Object"
+                    ],
+                    [
+                        "9",
+                        "0"
+                    ],
+                    [
+                        "11",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    }
+}

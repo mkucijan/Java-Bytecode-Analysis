@@ -15,6 +15,19 @@ from JavaClassParser.Parser import Parser
 
 
 '''
+
+'''
+
+RELEVANT_NODES = [
+    javalang.tree.LocalVariableDeclaration,
+    javalang.tree.Statement 
+]
+
+NODE_NAMES = [
+    'LocalVariableDeclaration'
+]
+
+'''
 Method used on javalang parser nodes for extracting
 source code position of the node from the children nodes.
 '''
@@ -38,6 +51,62 @@ def get_position(node):
 
     return pos
 
+def get_method_statements(node, past_reduced_tree=None,last_pos=None):
+    method_statements={'name':None, 'pos':None, 'children':[]}
+    
+    
+    pos = getattr(node, 'position')
+    #method_statements['node'] = node 
+    method_statements['name'] = node.__class__.__name__
+
+
+    if pos and pos.start:
+        pos = (pos.start[0], pos.end[0])
+        method_statements['pos'] = pos
+        last_pos = pos
+    else:
+        pos = last_pos
+    
+    next_tree = past_reduced_tree
+    if any([isinstance(node, tp) for tp in RELEVANT_NODES]):
+        reduced_tree={'name':None, 'pos':None, 'children':[]}
+        reduced_tree['name'] = method_statements['name']
+        reduced_tree['pos'] = last_pos
+        if past_reduced_tree is None:
+            past_reduced_tree = reduced_tree
+        else:
+            past_reduced_tree['children'].append(reduced_tree)
+        next_tree = reduced_tree
+    
+    for attr_name in node.attrs:
+        attr = getattr(node, attr_name)
+        if isinstance(attr, javalang.ast.Node):
+            sub_tree, reduced_sub_tree, last_pos = get_method_statements(attr, next_tree, last_pos)
+            method_statements['children'].append(sub_tree)
+                
+        elif isinstance(attr, list):
+            children_list = []
+            for inner_node in attr:
+                if isinstance(inner_node, javalang.ast.Node):
+                    sub_tree, reduced_sub_tree, last_pos = get_method_statements(inner_node, next_tree, last_pos)
+                    children_list.append(sub_tree)
+            if children_list:
+                method_statements['children'].append(children_list)
+    
+    return method_statements, past_reduced_tree, last_pos
+
+def walk_tree_name_pos(tree):
+    yield tree['name'], tree['pos']
+    for child in tree['children']:
+        walk_tree_name_pos(child)
+
+def walk_tree_end_node(tree):
+    for child in tree['children']:
+        if child['children']:
+            walk_tree_end_node(child)
+        else:
+            yield child
+
 '''
 Naive method for binding conditional expresions with with its bytecode.
 It finds the keywords in the source and includes all bytecode generated on that line
@@ -55,10 +124,10 @@ def bind_code(class_file, source):
     tree = javalang.parse.parse(source)
 
     bin_methods = [method for method in parser.methods
-                  if (method.name != '<init>')
-                  and (method.name!='<clinit>')
+                  if (method.name!='<clinit>')
                   and (not '$' in method.name)
                   and (getattr(method, 'code',None)!=None)]
+                  #(method.name != '<init>')
     if not bin_methods:
         return code_by_lines
     source_methods = None
@@ -95,7 +164,7 @@ def bind_code(class_file, source):
                     if not node[1].body is None:
                         methods = [b[1] for b in node[1].filter(javalang.tree.MethodDeclaration)]
                     count = 0
-                    positions = [get_position(m)[0] for m in methods]
+                    positions = [get_position(m).start[0] for m in methods]
                     diff_sum = 0
                     for i, m in enumerate(methods):
                         flag = 0
@@ -122,11 +191,33 @@ def bind_code(class_file, source):
                             nodes = node
                 #nodes = nodes[2*(int(inner_class_name)-1)+1][1]
         source_methods = []
-        for nodeList in nodes.children:
-            if isinstance(nodeList, list):
-                for node in nodeList:
-                    if isinstance(node, javalang.tree.MethodDeclaration):
-                        source_methods.append(node)
+        
+        try:
+            for nodeList in nodes.children:
+                if isinstance(nodeList, list):
+                    for node in nodeList:
+                        if isinstance(node, javalang.tree.MethodDeclaration):
+                            source_methods.append(node)
+        except AttributeError as e:
+            potentials = [n[1] for n in list(tree.filter(javalang.tree.MethodDeclaration))]
+            bin_method_pos = [binMet.code.lineNumberTable.code2Line[0] for binMet in bin_methods]
+            pom_bin_method = bin_methods
+            bin_methods = []
+            for bin_method, start_bin_pos in zip(pom_bin_method, bin_method_pos):
+                min_diff = 100
+                chosen = None
+                for potential in potentials:
+                    method_start = potential.position.start[0]
+                    method_end = potential.position.end[0]
+                    if (method_start<=start_bin_pos) and (method_end>=start_bin_pos):
+                        diff = start_bin_pos - method_start
+                        if diff<min_diff:
+                            min_diff = diff
+                            chosen = potential
+                if chosen:
+                    source_methods.append(chosen)
+                    bin_methods.append(bin_method)
+                    
     else:
         source_methods = getattr(tree, "types")[0].methods
 
@@ -163,17 +254,23 @@ def bind_code(class_file, source):
         positions = []
         if srcMethod.body is None:
             continue
-        for statement in srcMethod.body:
-            # TODO Need to handle this situation
-            pos = get_position(statement)
-            if pos:
-                statementName.append(type(statement).__name__)
-                positions.append(pos[0])
-        byteindexes = [instruction.startIndex for instruction in instructions]
-        currentStatementIndex = -1
-        positions.append(max(lineNumberTable.values()) + 1)
-        if len(statementName) == 0:
-                continue
+        #for statement in srcMethod.body:
+        #    # TODO Need to handle this situation
+        #    statements, reduced, _ = get_method_statements(statement)
+        #    pos = get_position(statement)
+        #    if pos:
+        #        statementName.append(type(statement).__name__)
+        #        positions.append(pos[0])
+        
+        
+        #byteindexes = [instruction.startIndex for instruction in instructions]
+        #currentStatementIndex = -1
+        #positions.append(max(lineNumberTable.values()) + 1)
+        #if len(statementName) == 0:
+        #        continue
+
+        '''
+        OLD
         for instruction in instructions:
             byteIndex = instruction.startIndex
             if byteIndex in lineNumberTable:
@@ -184,33 +281,56 @@ def bind_code(class_file, source):
                 # TODO Something weird, apperntly not all final nodes hold position javalang problem
                 if currentStatementIndex == -1:
                     break
+        '''
 
+        method_tree, reduced, _ = get_method_statements(srcMethod,
+        {'name':srcMethod.name, 'pos':(srcMethod.position.start[0],
+                                       srcMethod.position.end[0]), 'children':[]})
 
-            bytecode = instruction.mnemonic
-            statementInstructions[statementName[currentStatementIndex]].append(
-                (str(byteIndex), str(bytecode)))
+        instructionIndex = 0
+        for statement in walk_tree_end_node(reduced):
+            start_pos = statement['pos'][0]
+            end_pos = statement['pos'][1]
+            if instructionIndex >= len(instructions):
+                break
+            statement['instructions'] = []
+            while(instructionIndex < len(instructions)):
+                instruction = instructions[instructionIndex]
+                byteIndex = instruction.startIndex
+                if byteIndex in lineNumberTable:
+                    lineNumber = lineNumberTable[byteIndex]
+                    if (lineNumber<start_pos) or (lineNumber>end_pos):
+                        break
 
-            offset = 1
-            if 'wide' in instruction.mnemonic:
-                statementInstructions[statementName[currentStatementIndex]].append(
-                    (str(byteIndex+offset),instruction.opcode.getMnemonic()) )
-                offset += 1
-            if instruction.args:
-                for arg, fromPool, frm, size in zip(instruction.argValues,instruction.constArg,
+                '''
+                Format and add instruction and operand to statement 
+                '''
+                bytecode = instruction.mnemonic
+                statement['instructions'].append((str(byteIndex), str(bytecode)))
+
+                offset = 1
+                if 'wide' in instruction.mnemonic:
+                    statement['instructions'].append(
+                        (str(byteIndex+offset),instruction.opcode.getMnemonic()) )
+                    offset += 1
+                if instruction.args:
+                    for arg, fromPool, frm, size in zip(instruction.argValues,instruction.constArg,
                                     instruction.argsFormat.split(','),instruction.argsCount):
 
-                    if fromPool:
-                        arg = str(parser.constValue[arg-1])
-                    else:
-                        if 'switch' in instruction.mnemonic:
-                            arg = frm.format(*arg)
+                        if fromPool:
+                            arg = str(parser.constValue[arg-1])
                         else:
-                            arg = frm.format(arg)
-                    statementInstructions[statementName[currentStatementIndex]].append(
-                        (str(byteIndex+offset),arg))
-                    offset += size
+                            if 'switch' in instruction.mnemonic:
+                                arg = frm.format(*arg)
+                            else:
+                                arg = frm.format(arg)
+                        statement['instructions'].append(
+                            (str(byteIndex+offset),arg))
+                        offset += size
+
+                instructionIndex += 1
         
-        code_by_lines[binMethod.name] = statementInstructions
+        code_by_lines[binMethod.name] = reduced
     
     file.close()
     return code_by_lines
@@ -232,7 +352,7 @@ def main():
                         help="Directory for compiled class files, use -r to auto remove. "+
                         "By default its generated in .class_files under current directory.")
     parser.add_argument("-r", "--remove", action="store_true")
-    parser.add_argument("-o", "--output", nargs='?', default=sys.path[0]+'/output', 
+    parser.add_argument("-o", "--output", nargs='?', default=sys.path[0]+'/TestOutput', 
                         help="Path to output directory. By default in output in current directory of the script.")
     args = parser.parse_args()
 
@@ -305,7 +425,7 @@ def main():
 
 
             f=open(filename,'w')
-            json.dump(code_by_lines, f, indent=2)
+            json.dump(code_by_lines, f, indent=4)
             f.close()
 
     #links = re.search('LineNumberTable(.*)LocalVariableTable',output,re.DOTALL).group(1)

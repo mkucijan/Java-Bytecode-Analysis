@@ -1,0 +1,493 @@
+{
+    "decorated": {
+        "name": "decorated",
+        "pos": [
+            60,
+            65
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    62,
+                    63
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokespecial"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/collection/AbstractCollectionDecorator.decorated:()Ljava/util/Collection;"
+                    ],
+                    [
+                        "4",
+                        "checkcast"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/MultiSet"
+                    ],
+                    [
+                        "7",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "equals": {
+        "name": "equals",
+        "pos": [
+            65,
+            70
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    67,
+                    68
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "aload_0"
+                    ],
+                    [
+                        "2",
+                        "if_acmpeq"
+                    ],
+                    [
+                        "3",
+                        "16"
+                    ],
+                    [
+                        "5",
+                        "aload_0"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/multiset/AbstractMultiSetDecorator.decorated:()Lorg/apache/commons/collections4/MultiSet;"
+                    ],
+                    [
+                        "9",
+                        "aload_1"
+                    ],
+                    [
+                        "10",
+                        "invokeinterface"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/collections4/MultiSet.hashCode:()I"
+                    ],
+                    [
+                        "13",
+                        "0"
+                    ],
+                    [
+                        "15",
+                        "ifeq"
+                    ],
+                    [
+                        "16",
+                        "7"
+                    ],
+                    [
+                        "18",
+                        "iconst_1"
+                    ],
+                    [
+                        "19",
+                        "goto"
+                    ],
+                    [
+                        "20",
+                        "4"
+                    ],
+                    [
+                        "22",
+                        "iconst_0"
+                    ],
+                    [
+                        "23",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "hashCode": {
+        "name": "hashCode",
+        "pos": [
+            70,
+            77
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    72,
+                    73
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/multiset/AbstractMultiSetDecorator.decorated:()Lorg/apache/commons/collections4/MultiSet;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/MultiSet.getCount:(Ljava/lang/Object;)I"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getCount": {
+        "name": "getCount",
+        "pos": [
+            77,
+            82
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    79,
+                    80
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/multiset/AbstractMultiSetDecorator.decorated:()Lorg/apache/commons/collections4/MultiSet;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokeinterface"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/collections4/MultiSet.setCount:(Ljava/lang/Object;I)I"
+                    ],
+                    [
+                        "8",
+                        "0"
+                    ],
+                    [
+                        "10",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setCount": {
+        "name": "setCount",
+        "pos": [
+            82,
+            87
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    84,
+                    85
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/multiset/AbstractMultiSetDecorator.decorated:()Lorg/apache/commons/collections4/MultiSet;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "iload_2"
+                    ],
+                    [
+                        "6",
+                        "invokeinterface"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/MultiSet.add:(Ljava/lang/Object;I)I"
+                    ],
+                    [
+                        "9",
+                        "0"
+                    ],
+                    [
+                        "11",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "add": {
+        "name": "add",
+        "pos": [
+            87,
+            92
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    89,
+                    90
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/multiset/AbstractMultiSetDecorator.decorated:()Lorg/apache/commons/collections4/MultiSet;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "iload_2"
+                    ],
+                    [
+                        "6",
+                        "invokeinterface"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/MultiSet.remove:(Ljava/lang/Object;I)I"
+                    ],
+                    [
+                        "9",
+                        "0"
+                    ],
+                    [
+                        "11",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "remove": {
+        "name": "remove",
+        "pos": [
+            92,
+            97
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    94,
+                    95
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/multiset/AbstractMultiSetDecorator.decorated:()Lorg/apache/commons/collections4/MultiSet;"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "iload_2"
+                    ],
+                    [
+                        "6",
+                        "invokeinterface"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/collections4/MultiSet.uniqueSet:()Ljava/util/Set;"
+                    ],
+                    [
+                        "9",
+                        "0"
+                    ],
+                    [
+                        "11",
+                        "ireturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "uniqueSet": {
+        "name": "uniqueSet",
+        "pos": [
+            97,
+            102
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    99,
+                    100
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/multiset/AbstractMultiSetDecorator.decorated:()Lorg/apache/commons/collections4/MultiSet;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/MultiSet.entrySet:()Ljava/util/Set;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "entrySet": {
+        "name": "entrySet",
+        "pos": [
+            102,
+            107
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    104,
+                    105
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/collections4/multiset/AbstractMultiSetDecorator.decorated:()Lorg/apache/commons/collections4/MultiSet;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/collections4/MultiSet.org/apache/commons/collections4/multiset/AbstractMultiSetDecorator"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    }
+}

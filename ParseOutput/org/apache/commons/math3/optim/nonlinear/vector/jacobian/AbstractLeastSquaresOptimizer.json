@@ -1,0 +1,1194 @@
+{
+    "computeWeightedJacobian": {
+        "name": "computeWeightedJacobian",
+        "pos": [
+            68,
+            79
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    69,
+                    70
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.weightMatrixSqrt:Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "invokevirtual"
+                    ],
+                    [
+                        "7",
+                        "org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.computeJacobian:([D)[[D"
+                    ],
+                    [
+                        "9",
+                        "invokestatic"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/linear/MatrixUtils.createRealMatrix:([[D)Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "12",
+                        "invokeinterface"
+                    ],
+                    [
+                        "13",
+                        "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/linear/ArrayRealVector"
+                    ],
+                    [
+                        "15",
+                        "0"
+                    ],
+                    [
+                        "17",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "computeCost": {
+        "name": "computeCost",
+        "pos": [
+            79,
+            95
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    80,
+                    81
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "new"
+                    ],
+                    [
+                        "1",
+                        "org/apache/commons/math3/linear/ArrayRealVector"
+                    ],
+                    [
+                        "3",
+                        "dup"
+                    ],
+                    [
+                        "4",
+                        "aload_1"
+                    ],
+                    [
+                        "5",
+                        "invokespecial"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/linear/ArrayRealVector.<init>:([D)V"
+                    ],
+                    [
+                        "8",
+                        "astore_2"
+                    ],
+                    [
+                        "9",
+                        "aload_2"
+                    ],
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "invokevirtual"
+                    ],
+                    [
+                        "12",
+                        "org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.getWeight:()Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "14",
+                        "aload_2"
+                    ],
+                    [
+                        "15",
+                        "invokeinterface"
+                    ],
+                    [
+                        "16",
+                        "org/apache/commons/math3/linear/RealMatrix.dotProduct:(Lorg/apache/commons/math3/linear/RealVector;)D"
+                    ],
+                    [
+                        "18",
+                        "0"
+                    ],
+                    [
+                        "20",
+                        "invokevirtual"
+                    ],
+                    [
+                        "21",
+                        "org/apache/commons/math3/linear/ArrayRealVector.dotProduct:(Lorg/apache/commons/math3/linear/RealVector;)D"
+                    ],
+                    [
+                        "23",
+                        "invokestatic"
+                    ],
+                    [
+                        "24",
+                        "org/apache/commons/math3/util/FastMath.sqrt:(D)D"
+                    ],
+                    [
+                        "26",
+                        "dreturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    81,
+                    82
+                ],
+                "children": []
+            }
+        ]
+    },
+    "getRMS": {
+        "name": "getRMS",
+        "pos": [
+            95,
+            105
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    96,
+                    97
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.getChiSquare:()D"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "invokevirtual"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.getTargetSize:()I"
+                    ],
+                    [
+                        "8",
+                        "i2d"
+                    ],
+                    [
+                        "9",
+                        "ddiv"
+                    ],
+                    [
+                        "10",
+                        "invokestatic"
+                    ],
+                    [
+                        "11",
+                        "org/apache/commons/math3/util/FastMath.sqrt:(D)D"
+                    ],
+                    [
+                        "13",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getChiSquare": {
+        "name": "getChiSquare",
+        "pos": [
+            105,
+            114
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    106,
+                    107
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.cost:D"
+                    ],
+                    [
+                        "4",
+                        "aload_0"
+                    ],
+                    [
+                        "5",
+                        "getfield"
+                    ],
+                    [
+                        "6",
+                        "org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.cost:D"
+                    ],
+                    [
+                        "8",
+                        "dmul"
+                    ],
+                    [
+                        "9",
+                        "dreturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "getWeightSquareRoot": {
+        "name": "getWeightSquareRoot",
+        "pos": [
+            114,
+            123
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    115,
+                    116
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "getfield"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.weightMatrixSqrt:Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "4",
+                        "invokeinterface"
+                    ],
+                    [
+                        "5",
+                        "org/apache/commons/math3/linear/RealMatrix.computeWeightedJacobian:([D)Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "7",
+                        "0"
+                    ],
+                    [
+                        "9",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "setCost": {
+        "name": "setCost",
+        "pos": [
+            123,
+            143
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    124,
+                    125
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "dload_1"
+                    ],
+                    [
+                        "2",
+                        "putfield"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.cost:D"
+                    ],
+                    [
+                        "5",
+                        "return"
+                    ]
+                ]
+            }
+        ]
+    },
+    "computeCovariances": {
+        "name": "computeCovariances",
+        "pos": [
+            143,
+            171
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    146,
+                    149
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokevirtual"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.computeWeightedJacobian:([D)Lorg/apache/commons/math3/linear/RealMatrix;"
+                    ],
+                    [
+                        "5",
+                        "astore"
+                    ],
+                    [
+                        "6",
+                        "#4"
+                    ],
+                    [
+                        "7",
+                        "aload"
+                    ],
+                    [
+                        "8",
+                        "#4"
+                    ],
+                    [
+                        "9",
+                        "invokeinterface"
+                    ],
+                    [
+                        "10",
+                        "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/linear/QRDecomposition"
+                    ],
+                    [
+                        "12",
+                        "0"
+                    ],
+                    [
+                        "14",
+                        "aload"
+                    ],
+                    [
+                        "15",
+                        "#4"
+                    ],
+                    [
+                        "16",
+                        "invokeinterface"
+                    ],
+                    [
+                        "17",
+                        "org/apache/commons/math3/linear/RealMatrix.org/apache/commons/math3/linear/ArrayRealVector"
+                    ],
+                    [
+                        "19",
+                        "0"
+                    ],
+                    [
+                        "21",
+                        "astore"
+                    ],
+                    [
+                        "22",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    149,
+                    152
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "23",
+                        "new"
+                    ],
+                    [
+                        "24",
+                        "org/apache/commons/math3/linear/QRDecomposition"
+                    ],
+                    [
+                        "26",
+                        "dup"
+                    ],
+                    [
+                        "27",
+                        "aload"
+                    ],
+                    [
+                        "28",
+                        "#5"
+                    ],
+                    [
+                        "29",
+                        "dload_2"
+                    ],
+                    [
+                        "30",
+                        "invokespecial"
+                    ],
+                    [
+                        "31",
+                        "org/apache/commons/math3/linear/QRDecomposition.<init>:(Lorg/apache/commons/math3/linear/RealMatrix;D)V"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    152,
+                    154
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "33",
+                        "invokevirtual"
+                    ],
+                    [
+                        "34",
+                        "org/apache/commons/math3/linear/QRDecomposition.getSolver:()Lorg/apache/commons/math3/linear/DecompositionSolver;"
+                    ],
+                    [
+                        "36",
+                        "astore"
+                    ],
+                    [
+                        "37",
+                        "#6"
+                    ],
+                    [
+                        "38",
+                        "aload"
+                    ],
+                    [
+                        "39",
+                        "#6"
+                    ],
+                    [
+                        "40",
+                        "invokeinterface"
+                    ],
+                    [
+                        "41",
+                        "org/apache/commons/math3/linear/DecompositionSolver.getData:()[[D"
+                    ],
+                    [
+                        "43",
+                        "0"
+                    ],
+                    [
+                        "45",
+                        "invokeinterface"
+                    ],
+                    [
+                        "46",
+                        "org/apache/commons/math3/linear/RealMatrix.computeCovariances:([DD)[[D"
+                    ],
+                    [
+                        "48",
+                        "0"
+                    ],
+                    [
+                        "50",
+                        "areturn"
+                    ]
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    154,
+                    155
+                ],
+                "children": []
+            }
+        ]
+    },
+    "computeSigma": {
+        "name": "computeSigma",
+        "pos": [
+            171,
+            197
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    173,
+                    174
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_1"
+                    ],
+                    [
+                        "1",
+                        "arraylength"
+                    ],
+                    [
+                        "2",
+                        "istore"
+                    ],
+                    [
+                        "3",
+                        "#4"
+                    ],
+                    [
+                        "4",
+                        "iload"
+                    ],
+                    [
+                        "5",
+                        "#4"
+                    ],
+                    [
+                        "6",
+                        "newarray"
+                    ],
+                    [
+                        "7",
+                        "7"
+                    ],
+                    [
+                        "8",
+                        "astore"
+                    ],
+                    [
+                        "9",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    174,
+                    175
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "10",
+                        "aload_0"
+                    ],
+                    [
+                        "11",
+                        "aload_1"
+                    ],
+                    [
+                        "12",
+                        "dload_2"
+                    ],
+                    [
+                        "13",
+                        "invokevirtual"
+                    ],
+                    [
+                        "14",
+                        "org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.computeCovariances:([DD)[[D"
+                    ],
+                    [
+                        "16",
+                        "astore"
+                    ],
+                    [
+                        "17",
+                        "#6"
+                    ]
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    175,
+                    176
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "18",
+                        "iconst_0"
+                    ],
+                    [
+                        "19",
+                        "istore"
+                    ],
+                    [
+                        "20",
+                        "#7"
+                    ],
+                    [
+                        "21",
+                        "iload"
+                    ],
+                    [
+                        "22",
+                        "#7"
+                    ],
+                    [
+                        "23",
+                        "iload"
+                    ],
+                    [
+                        "24",
+                        "#4"
+                    ],
+                    [
+                        "25",
+                        "if_icmpge"
+                    ],
+                    [
+                        "26",
+                        "25"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    176,
+                    179
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            176,
+                            179
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    177,
+                                    178
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    179,
+                    180
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "optimize": {
+        "name": "optimize",
+        "pos": [
+            197,
+            219
+        ],
+        "children": [
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    201,
+                    202
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokespecial"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/optim/nonlinear/vector/JacobianMultivariateVectorOptimizer.optimize:([Lorg/apache/commons/math3/optim/OptimizationData;)Lorg/apache/commons/math3/optim/PointVectorValuePair;"
+                    ],
+                    [
+                        "5",
+                        "areturn"
+                    ]
+                ]
+            }
+        ]
+    },
+    "computeResiduals": {
+        "name": "computeResiduals",
+        "pos": [
+            219,
+            245
+        ],
+        "children": [
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    220,
+                    221
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "invokevirtual"
+                    ],
+                    [
+                        "2",
+                        "org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.getTarget:()[D"
+                    ],
+                    [
+                        "4",
+                        "astore_2"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "arraylength"
+                    ],
+                    [
+                        "7",
+                        "aload_2"
+                    ],
+                    [
+                        "8",
+                        "arraylength"
+                    ],
+                    [
+                        "9",
+                        "if_icmpeq"
+                    ],
+                    [
+                        "10",
+                        "15"
+                    ]
+                ]
+            },
+            {
+                "name": "IfStatement",
+                "pos": [
+                    221,
+                    226
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            221,
+                            226
+                        ],
+                        "children": [
+                            {
+                                "name": "ThrowStatement",
+                                "pos": [
+                                    222,
+                                    224
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LocalVariableDeclaration",
+                "pos": [
+                    226,
+                    227
+                ],
+                "children": [],
+                "instructions": []
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    227,
+                    231
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            227,
+                            231
+                        ],
+                        "children": [
+                            {
+                                "name": "StatementExpression",
+                                "pos": [
+                                    228,
+                                    229
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ReturnStatement",
+                "pos": [
+                    231,
+                    232
+                ],
+                "children": [],
+                "instructions": []
+            }
+        ]
+    },
+    "parseOptimizationData": {
+        "name": "parseOptimizationData",
+        "pos": [
+            245,
+            268
+        ],
+        "children": [
+            {
+                "name": "StatementExpression",
+                "pos": [
+                    248,
+                    252
+                ],
+                "children": [],
+                "instructions": [
+                    [
+                        "0",
+                        "aload_0"
+                    ],
+                    [
+                        "1",
+                        "aload_1"
+                    ],
+                    [
+                        "2",
+                        "invokespecial"
+                    ],
+                    [
+                        "3",
+                        "org/apache/commons/math3/optim/nonlinear/vector/JacobianMultivariateVectorOptimizer.parseOptimizationData:([Lorg/apache/commons/math3/optim/OptimizationData;)V"
+                    ],
+                    [
+                        "5",
+                        "aload_1"
+                    ],
+                    [
+                        "6",
+                        "astore_2"
+                    ],
+                    [
+                        "7",
+                        "aload_2"
+                    ],
+                    [
+                        "8",
+                        "arraylength"
+                    ],
+                    [
+                        "9",
+                        "istore_3"
+                    ],
+                    [
+                        "10",
+                        "iconst_0"
+                    ],
+                    [
+                        "11",
+                        "istore"
+                    ],
+                    [
+                        "12",
+                        "#4"
+                    ],
+                    [
+                        "13",
+                        "iload"
+                    ],
+                    [
+                        "14",
+                        "#4"
+                    ],
+                    [
+                        "15",
+                        "iload_3"
+                    ],
+                    [
+                        "16",
+                        "if_icmpge"
+                    ],
+                    [
+                        "17",
+                        "42"
+                    ],
+                    [
+                        "19",
+                        "aload_2"
+                    ],
+                    [
+                        "20",
+                        "iload"
+                    ],
+                    [
+                        "21",
+                        "#4"
+                    ],
+                    [
+                        "22",
+                        "aaload"
+                    ],
+                    [
+                        "23",
+                        "astore"
+                    ],
+                    [
+                        "24",
+                        "#5"
+                    ]
+                ]
+            },
+            {
+                "name": "ForStatement",
+                "pos": [
+                    252,
+                    260
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            252,
+                            260
+                        ],
+                        "children": [
+                            {
+                                "name": "IfStatement",
+                                "pos": [
+                                    253,
+                                    259
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            253,
+                                            259
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    254,
+                                                    257
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "name": "BreakStatement",
+                                                "pos": [
+                                                    257,
+                                                    258
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "squareRoot": {
+        "name": "squareRoot",
+        "pos": [
+            268,
+            281
+        ],
+        "children": [
+            {
+                "name": "IfStatement",
+                "pos": [
+                    269,
+                    280
+                ],
+                "children": [
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            269,
+                            276
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    270,
+                                    271
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    271,
+                                    272
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ForStatement",
+                                "pos": [
+                                    272,
+                                    275
+                                ],
+                                "children": [
+                                    {
+                                        "name": "BlockStatement",
+                                        "pos": [
+                                            272,
+                                            275
+                                        ],
+                                        "children": [
+                                            {
+                                                "name": "StatementExpression",
+                                                "pos": [
+                                                    273,
+                                                    274
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    275,
+                                    276
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "BlockStatement",
+                        "pos": [
+                            276,
+                            280
+                        ],
+                        "children": [
+                            {
+                                "name": "LocalVariableDeclaration",
+                                "pos": [
+                                    277,
+                                    278
+                                ],
+                                "children": []
+                            },
+                            {
+                                "name": "ReturnStatement",
+                                "pos": [
+                                    278,
+                                    279
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
