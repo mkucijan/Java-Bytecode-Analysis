@@ -2,9 +2,9 @@ import time
 from datetime import timedelta
 
 import tensorflow as tf
-from RnnModel import logger
-from RnnModel.rnn import RNN, Parameters, ExitCriteria, Validation, Directories
-from RnnModel.data import Data
+from Model import logger
+from Model.rnn import RNN, Parameters, ExitCriteria, Validation, Directories
+from Model.data import Data
 
 
 def get_data_set_info(args):

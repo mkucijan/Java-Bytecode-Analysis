@@ -13,7 +13,7 @@ import math
 
 import numpy as np
 
-from RnnModel import logger
+from Model import logger
 
 
 DIR_PATH = os.path.split(os.getcwd())[0]

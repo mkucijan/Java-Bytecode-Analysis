@@ -3,9 +3,9 @@ import json
 import logging
 import os
 
-from RnnModel import __version__, logger
-from RnnModel.command import train_model, test_model, get_data_set_info
-from RnnModel.data import Data, DIR_PATH
+from Model import __version__, logger
+from Model.command import train_model, test_model, get_data_set_info
+from Model.data import Data, DIR_PATH
 
 
 def main():
@@ -16,14 +16,14 @@ def main():
 
 
 def create_argument_parser():
-    parser = argparse.ArgumentParser(description="RnnModel version %s" % __version__, fromfile_prefix_chars='@')
+    parser = argparse.ArgumentParser(description="Model version %s" % __version__, fromfile_prefix_chars='@')
     parser.add_argument('--version', action='version', version="%(prog)s " + __version__)
     parser.add_argument("--log", default="INFO", help="logging level")
     parser.set_defaults(func=usage(parser))
 
     subparsers = parser.add_subparsers(title="TensorFlow RNN Language Model")
 
-    train = subparsers.add_parser("train", description="Train an RNN language model.", help="train a language model")
+    train = subparsers.add_parser("RNN-train", description="Train an RNN language model.", help="train a language model")
     train.add_argument("data_set", type=Data.deserialize, help="data set")
     train.add_argument("--training_partition", type=real_zero_to_one, default=0.9, help="partition containing training data")
     train.add_argument("--validation-partition", type=real_zero_to_one, default=0.1, help="partition containing validation data")
@@ -47,7 +47,7 @@ def create_argument_parser():
     #train.add_argument("--init", type=positive_real, default=0.05, help="random initial absolute value range")
     train.set_defaults(func=train_model)
 
-    test = subparsers.add_parser("test", description="Use an RNN model.",
+    test = subparsers.add_parser("RNN-test", description="Use an RNN model.",
                                  help="Use a previously-trained model to get perplexity on a test set")
     test.add_argument("model_directory", help="directory from which to read the model")
     test.add_argument("data_set", type=Data.deserialize, default=Data.deserialize(os.path.join(DIR_PATH, 'output')), help="data set")

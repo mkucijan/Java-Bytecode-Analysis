@@ -3,7 +3,7 @@ import os.path
 
 import numpy as np
 import tensorflow as tf
-from RnnModel import logger
+from Model import logger
 
 
 class RNN(object):
