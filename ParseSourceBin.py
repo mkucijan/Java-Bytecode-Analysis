@@ -89,24 +89,58 @@ def get_method_statements(node, past_reduced_tree=None,last_pos=None):
             for inner_node in attr:
                 if isinstance(inner_node, javalang.ast.Node):
                     sub_tree, reduced_sub_tree, last_pos = get_method_statements(inner_node, next_tree, last_pos)
-                    children_list.append(sub_tree)
-            if children_list:
-                method_statements['children'].append(children_list)
+                    #children_list.append(sub_tree)
+                    method_statements['children'].append(sub_tree)
+            #if children_list:
+            #    method_statements['children'].append(children_list)
     
     return method_statements, past_reduced_tree, last_pos
 
-def walk_tree_name_pos(tree):
-    yield tree['name'], tree['pos']
+def walk_tree_name_pos_node(tree):
+    yield tree['name'], tree['pos'], tree
     for child in tree['children']:
-        walk_tree_name_pos(child)
+        for grandchildren in walk_tree_name_pos_node(child):
+            yield grandchildren
 
 def walk_tree_end_node(tree):
     for child in tree['children']:
         if child['children']:
-            walk_tree_end_node(child)
+            for grandchildren in walk_tree_end_node(child):
+                yield grandchildren
         else:
             yield child
 
+def get_listed_nodes(tree):
+    current_pos = tree['pos'][0]
+
+    listed_nodes = []
+    for _, pos, node in walk_tree_name_pos_node(tree):
+        if pos:
+            if pos[0] > current_pos:
+                listed_nodes.append(node)
+                current_pos = pos[0]
+    
+    return listed_nodes
+
+def remove_non_instr_nodes(tree):
+    if (not tree['children']) and (not 'instructions' in tree):
+        return tree
+    new_children = []
+    for i, child in enumerate(tree['children']):
+        new_child = remove_non_instr_nodes(child)
+        if (not new_child['children']) and (not 'instructions' in new_child):
+            #del tree['children'][i]
+            continue
+        else:
+            new_children.append(new_child)
+    
+    tree['children'] = new_children
+    return tree
+    
+    
+
+    
+    
 '''
 Naive method for binding conditional expresions with with its bytecode.
 It finds the keywords in the source and includes all bytecode generated on that line
@@ -287,10 +321,16 @@ def bind_code(class_file, source):
         {'name':srcMethod.name, 'pos':(srcMethod.position.start[0],
                                        srcMethod.position.end[0]), 'children':[]})
 
+    
         instructionIndex = 0
-        for statement in walk_tree_end_node(reduced):
+        listed_nodes = get_listed_nodes(method_tree)
+        for i,statement in enumerate(listed_nodes):
             start_pos = statement['pos'][0]
             end_pos = statement['pos'][1]
+            if i+1 < len(listed_nodes):
+                next_pos = listed_nodes[i+1]['pos'][0]
+            else:
+                next_pos = end_pos
             if instructionIndex >= len(instructions):
                 break
             statement['instructions'] = []
@@ -299,7 +339,7 @@ def bind_code(class_file, source):
                 byteIndex = instruction.startIndex
                 if byteIndex in lineNumberTable:
                     lineNumber = lineNumberTable[byteIndex]
-                    if (lineNumber<start_pos) or (lineNumber>end_pos):
+                    if (lineNumber<start_pos) or (lineNumber>=next_pos):
                         break
 
                 '''
@@ -330,7 +370,8 @@ def bind_code(class_file, source):
 
                 instructionIndex += 1
         
-        code_by_lines[binMethod.name] = reduced
+        method_tree = remove_non_instr_nodes(method_tree)
+        code_by_lines[binMethod.name] = method_tree
     
     file.close()
     return code_by_lines

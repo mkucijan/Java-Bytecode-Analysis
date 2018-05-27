@@ -75,13 +75,13 @@ class RNN(object):
             with tf.name_scope("RNN_Bidirectional"):
                 cells_fw = [
                     tf.nn.rnn_cell.DropoutWrapper(
-                    tf.contrib.rnn.BasicLSTMCell(hidden_size,activation=tf.nn.tanh),
+                    tf.contrib.rnn.BasicLSTMCell(hidden_units,activation=tf.nn.tanh),
                     output_keep_prob = self.keep_probability)
                     for _ in range(layers)]
     
                 cells_bw = [
                     tf.nn.rnn_cell.DropoutWrapper(
-                    tf.contrib.rnn.BasicLSTMCell(hidden_size,activation=tf.nn.tanh),
+                    tf.contrib.rnn.BasicLSTMCell(hidden_units,activation=tf.nn.tanh),
                     output_keep_prob = self.keep_probability)
                     for _ in range(layers)]
                 
@@ -203,7 +203,6 @@ class RNN(object):
                             self.labels: labels,
                             self.seq_len: seq_len,
                             self.mask: mask,
-                            self.state: state,
                             self.learning_rate: parameters.learning_rate,
                             self.keep_probability: parameters.keep_probability
                         })
@@ -268,7 +267,7 @@ class RNN(object):
                                           self.labels: labels,
                                           self.seq_len: seq_len,
                                           self.mask: mask,
-                                          self.state: state,
+                                          #self.state: state,
                                           self.keep_probability: 1
                                       })
             epoch_cost += cost

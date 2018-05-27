@@ -36,7 +36,7 @@ def create_argument_parser():
     train.add_argument("--batch-size", type=positive_integer, default=20, help="training size batch")
     train.add_argument("--hidden-units", type=positive_integer, default=500, help="number of hidden units in the RNN")
     train.add_argument("--layers", type=positive_integer, default=1, help="number of RNN layers")
-    train.add_argument("--keep-probability", type=real_zero_to_one, default=0.5,
+    train.add_argument("--keep-probability", type=real_zero_to_one, default=0.9,
                        help="probability to keep a cell in a dropout layer")
     train.add_argument("--max-gradient", type=positive_real, default=5, help="value to clip gradients to")
     train.add_argument("--max-iterations", type=positive_integer, help="number of training iterations to run")
