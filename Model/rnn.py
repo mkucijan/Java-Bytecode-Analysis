@@ -6,6 +6,12 @@ import tensorflow as tf
 from Model import logger
 
 
+class Additional_Parameters():
+    def __init__(self, args_dim = None, bidirectional=True, nonlinear=True):
+        self.args_dim = args_dim
+        self.bidirectional = bidirectional
+        self.nonlinear = nonlinear
+
 class RNN(object):
     """Recursive Neural Network"""
 
@@ -44,11 +50,11 @@ class RNN(object):
                  hidden_units,
                  output_size,
                  layers,
-                 bidirectional=True,
-                 nonlinear=True):
+                 additional_parameters = Additional_Parameters()):
         
         self.max_gradient = max_gradient
         self.layers = layers
+        self.additional_parameters = additional_parameters
         
         # Add vocabulary slots of out of vocabulary (index 1) and padding (index 0).
         # vocabulary_size += 2
@@ -65,13 +71,22 @@ class RNN(object):
             self.seq_len = tf.placeholder(tf.int32, [batch_size,])
         
         with tf.name_scope("Embedding"):
-            self.embedding = tf.get_variable("embedding", (vocabulary_size, hidden_units), 
+            embedding_size = hidden_units
+            if self.additional_parameters.args_dim:
+                embedding_size = hidden_units - self.additional_parameters.args_dim
+            self.embedding = tf.get_variable("embedding", (vocabulary_size, embedding_size), 
                                             initializer = tf.contrib.layers.xavier_initializer(),
                                             dtype=tf.float32) 
             #self.embedding = initializer((vocabulary_size, hidden_units))
             self.embedded_input = tf.nn.embedding_lookup(self.embedding, self.input, name="embedded_input")
 
-        if bidirectional:
+        self.input_rnn = self.embedded_input
+        if self.additional_parameters.args_dim:
+            with tf.name_scope("Argument_encoding"):
+                self.input_args = tf.placeholder(tf.float32, shape=(batch_size, time_steps, self.additional_parameters.args_dim))
+                self.input_rnn = tf.concat([self.embedded_input, self.input_args],2)
+        
+        if self.additional_parameters.bidirectional:
             with tf.name_scope("RNN_Bidirectional"):
                 cells_fw = [
                     tf.nn.rnn_cell.DropoutWrapper(
@@ -94,7 +109,7 @@ class RNN(object):
                                                 initial_states_bw = self.state[1],
                                                 sequence_length = self.seq_len,
                                                 dtype = tf.float32,
-                                                inputs = self.embedded_input)
+                                                inputs = self.input_rnn)
                 
                 self.next_state = (states_fw, states_bw)
                 self.outputs_rnn = tf.concat(outputs, 2)
@@ -105,11 +120,11 @@ class RNN(object):
                 cell = tf.nn.rnn_cell.DropoutWrapper(cell, output_keep_prob=self.keep_probability)
                 rnn_layers = tf.nn.rnn_cell.MultiRNNCell([cell] * layers)
                 self.state = rnn_layers.zero_state(batch_size, dtype=tf.float32)
-                self.outputs_rnn, self.next_state = tf.nn.dynamic_rnn(rnn_layers, self.embedded_input,
+                self.outputs_rnn, self.next_state = tf.nn.dynamic_rnn(rnn_layers, self.input_rnn,
                                                                 sequence_length=self.seq_len,
                                                                 initial_state=self.state)
                 hidden_layer_size = hidden_units
-        if nonlinear:
+        if self.additional_parameters.nonlinear:
             with tf.name_scope("Nonlinear_output"):
                 self.w_nl = tf.get_variable("w_nl", (1, hidden_layer_size, hidden_layer_size),
                                             initializer = tf.contrib.layers.xavier_initializer(),
@@ -134,7 +149,7 @@ class RNN(object):
             self.predicted = tf.matmul(self.flattened_outputs, self.w) + self.b
             self.predicted = tf.multiply(self.predicted, self.flattened_mask)
             # Compare predictions to labels.
-            self.loss = tf.nn.softmax_cross_entropy_with_logits(labels=self.flattened_labels, logits=self.predicted, name="loss")
+            self.loss = tf.nn.softmax_cross_entropy_with_logits_v2(labels=self.flattened_labels, logits=self.predicted, name="loss")
             self.cost = tf.div(tf.reduce_sum(self.loss), batch_size, name="cost")
             batch_num = tf.div(tf.reduce_sum(self.mask), output_size) 
             padding_num = batch_size*time_steps - batch_num
@@ -183,6 +198,7 @@ class RNN(object):
         iteration = 0
         state = None
         summary = self.summary_writer(directories.summary, session)
+        ret_validation_perplexity, ret_acc = None, None
 
         iop = tf.global_variables_initializer()
         loc = tf.local_variables_initializer()
@@ -193,21 +209,29 @@ class RNN(object):
             while True:
                 epoch_cost = epoch_iteration = accuracy = num_batches = 0
                 # Enumerate over a single epoch of the training set.
-                for start_document, context, labels, seq_len, mask, complete in training_set.epoch(self.time_steps, self.batch_size):
+                for start_document, context, labels, seq_len, mask, complete in training_set.epoch(self.time_steps, self.batch_size,
+                                                                                                args_dim=self.additional_parameters.args_dim):
+                    feed_dict={
+                        self.input: context,
+                        self.labels: labels,
+                        self.seq_len: seq_len,
+                        self.mask: mask,
+                        self.learning_rate: parameters.learning_rate,
+                        self.keep_probability: parameters.keep_probability
+                    }
                     if start_document:
                         state = session.run(self.state)
+                    else:
+                        feed_dict[self.state] = parameters.state
+                    if self.additional_parameters.args_dim:
+                        feed_dict[self.inputs] = context[0]
+                        feed_dict[self.input_args] = context[1]
                     _, cost, state, iteration, acc = session.run(
-                        [self.train_step, self.cost, self.next_state, self.iteration, self.accuracy],
-                        feed_dict={
-                            self.input: context,
-                            self.labels: labels,
-                            self.seq_len: seq_len,
-                            self.mask: mask,
-                            self.learning_rate: parameters.learning_rate,
-                            self.keep_probability: parameters.keep_probability
-                        })
+                    [self.train_step, self.cost, self.next_state, self.iteration, self.accuracy],
+                        feed_dict=feed_dict)
+                    
                     epoch_cost += cost
-                    epoch_iteration += sum(seq_len)
+                    epoch_iteration += self.batch_size
                     accuracy += acc
                     num_batches += 1
                     if self._interval(iteration, logging_interval):
@@ -221,6 +245,7 @@ class RNN(object):
                         logger.info("Epoch %d, Iteration %d: validation perplexity %0.4f, acc: %0.4f" %
                                     (epoch, iteration, validation_perplexity, acc))
                     if exit_criteria.max_iterations is not None and iteration > exit_criteria.max_iterations:
+                        ret_validation_perplexity, ret_acc = self.test(session, validation.validation_set, train=True)
                         raise StopTrainingException()
 
                 self.store_training_epoch_perplexity(session, summary, iteration,
@@ -237,6 +262,8 @@ class RNN(object):
             tf.train.Saver().save(session, model_filename)
             self._write_model_parameters(directories.model)
             logger.info("Saved model in %s " % directories.model)
+        
+        return ret_validation_perplexity, ret_acc
 
     def _write_model_parameters(self, model_directory):
         parameters = {
@@ -251,25 +278,35 @@ class RNN(object):
         with open(self._parameters_file(model_directory), "w") as f:
             json.dump(parameters, f, indent=4)
 
-    def test(self, session, test_set):
+    def test(self, session, test_set, train = False):
         state = None
         iop = tf.global_variables_initializer()
         loc = tf.local_variables_initializer()
         session.run(iop)
         session.run(loc)       
         epoch_cost = epoch_iteration = accuracy = num_batches = 0
-        for start_document, context, labels, seq_len, mask, _ in test_set.epoch(self.time_steps, self.batch_size):
+        for start_document, context, labels, seq_len, mask, _ in test_set.epoch(self.time_steps, self.batch_size,
+                                                                                args_dim=self.additional_parameters.args_dim):
+            feed_dict={
+                self.input: context,
+                self.labels: labels,
+                self.seq_len: seq_len,
+                self.mask: mask,
+                self.keep_probability: 1
+            }
             if start_document:
                 state = session.run(self.state)
-            cost, state, acc = session.run([self.cost, self.next_state, self.accuracy],
-                                      feed_dict={
-                                          self.input: context,
-                                          self.labels: labels,
-                                          self.seq_len: seq_len,
-                                          self.mask: mask,
-                                          #self.state: state,
-                                          self.keep_probability: 1
-                                      })
+            else:
+                feed_dict[self.state] = parameters.state
+            if self.additional_parameters.args_dim:
+                feed_dict[self.inputs] = context[0]
+                feed_dict[self.input_args] = context[1]
+            if train:
+                _ ,cost, state, acc = session.run([self.train_step, self.cost, self.next_state, self.accuracy],
+                                            feed_dict=feed_dict)
+            else:
+                cost, state, acc = session.run([self.cost, self.next_state, self.accuracy],
+                                            feed_dict=feed_dict)
             epoch_cost += cost
             accuracy += acc
             num_batches += 1

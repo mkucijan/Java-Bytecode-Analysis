@@ -33,18 +33,21 @@ def create_argument_parser():
     train.add_argument("--summary-directory", type=new_directory,
                        help="directory to which to write a training summary")
     train.add_argument("--time-steps", type=positive_integer, default=100, help="training unrolled time steps")
-    train.add_argument("--batch-size", type=positive_integer, default=20, help="training size batch")
+    train.add_argument("--batch-size", type=positive_integer, default=32, help="training size batch")
     train.add_argument("--hidden-units", type=positive_integer, default=500, help="number of hidden units in the RNN")
     train.add_argument("--layers", type=positive_integer, default=1, help="number of RNN layers")
     train.add_argument("--keep-probability", type=real_zero_to_one, default=0.9,
                        help="probability to keep a cell in a dropout layer")
-    train.add_argument("--max-gradient", type=positive_real, default=5, help="value to clip gradients to")
+    train.add_argument("--max-gradient", type=positive_real, default=10, help="value to clip gradients to")
     train.add_argument("--max-iterations", type=positive_integer, help="number of training iterations to run")
     train.add_argument("--logging-interval", type=positive_integer, default=100,
                        help="log and write summary after this many iterations")
     train.add_argument("--max-epochs", type=positive_integer, default=30, help="number of training epochs to run")
-    train.add_argument("--learning-rate", type=positive_real, default=1.0, help="training learning rate")
+    train.add_argument("--learning-rate", type=positive_real, default=0.1, help="training learning rate")
     #train.add_argument("--init", type=positive_real, default=0.05, help="random initial absolute value range")
+    train.add_argument("--args-dim", type=positive_integer, default=None, help="dimension of special arg encoding")
+    train.add_argument("--bidirectional", action="store_true", help="Use bidirectional model")
+    train.add_argument("--nonlinear", action="store_true", help="Add nonlinear transofrmation on rnn output.")
     train.set_defaults(func=train_model)
 
     test = subparsers.add_parser("RNN-test", description="Use an RNN model.",

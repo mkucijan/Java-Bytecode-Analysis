@@ -22,6 +22,29 @@ sys.path.append(DIR_PATH)
 
 from JavaClassParser import ByteCode
 
+
+class Encode(object):
+    
+    def __init__(self, num_bits = 16, encode_type='bin'):
+        self.num_bits = num_bits
+        self.zero_value = 2**(num_bits-1)
+        
+        if encode_type is 'bin':
+            self.encode = self.bin_code
+        elif encode_type is 'gray':
+            self.encode = self.gray_code
+
+    def gray_code(self, n):
+        n -= 1
+        return format(n^(n >> 1), '0'+str(self.num_bits)+'b')
+
+    def bin_code(self, n):
+        return format(n, '0'+str(self.num_bits)+'b')
+
+    def encode_arg(self, value):
+        n=self.zero_value+value
+        return np.array(list(map(lambda x: float(x), list(self.encode(n)))))
+
 class Data(object):
 
     """
@@ -37,7 +60,7 @@ class Data(object):
         self.X = X
         self.Y = Y
         self.indices = None
-        if not X is None:
+        if X:
             self.indices = list([i for i in range(self.length)])
         self.partition_indices = self.indices
         self.startIndex = 0
@@ -138,6 +161,27 @@ class Data(object):
             self.Y = new_Y
 
         return self.X, new_Y
+    
+    def relabel_by_embedding(self, overwrite=False):
+        
+        new_Y = []
+        for y_seq in self.Y:
+            embed_dict = {}
+            new_y_seq = []
+            for y in y_seq:
+                if y[0] in embed_dict:
+                    new_type = embed_dict[y[0]]
+                else:
+                    embed_dict[y[0]] = y[1]
+                    new_type = y[1]
+                new_y_seq.append((y[0],new_type))
+            new_Y.append(new_y_seq)
+
+        if overwrite:
+            self.Y = new_Y
+        
+        return new_Y
+                    
 
     @property
     def baseline(self):
@@ -211,8 +255,7 @@ class Data(object):
         return len(self.vocabulary) 
     
     def shuffle(self):
-        indices = shuffle(list(range(self.length)))
-        self.indices = indices
+        shuffle(self.indices)
     
     def __getitem__(self, partition):
         try:
@@ -287,6 +330,16 @@ class DataPartition(object):
         self.Y = Y
         self.output_size = output_size
         self.getVocabulary()
+    
+    @property
+    def baseline(self):
+        sum_zero = num = 0
+        for y_seq in self.Y:
+            for y in y_seq:
+                sum_zero += 1 if y[1]==0 else 0
+                num += 1
+        
+        return sum_zero/num
 
     def getVocabulary(self):
         vocabulary = {'padding':0, 'UKN': 1}
@@ -300,10 +353,70 @@ class DataPartition(object):
         self.vocabulary = vocabulary
         return vocabulary
     
-    def epoch(self, time_steps, batch_size, flatten=True):
+    def seperate_args(self):
+        X = []
+        Y = []
+        X_args = []
+        for x_seq, y_seq in zip(self.X, self.Y):
+            new_x = []
+            new_x_arg = []
+            new_y = []
+            last_instr = False
+            i=0
+            while(i<len(x_seq)):
+                if last_instr:
+                    if not x_seq[i] in ByteCode.mnemonicMap:    
+                        new_x_arg.append(x_seq[i])
+                        i += 1
+                    else:
+                        new_x_arg.append("")
+                    last_instr = False
+                    continue
+                if x_seq[i] in ByteCode.mnemonicMap:
+                    new_x.append(x_seq[i])
+                    new_y.append(y_seq[i])
+                    last_instr = True
+                    i += 1
+            if last_instr:
+                new_x_arg.append('')
+            assert len(new_x) == len(new_x_arg)
+            
+            X.append(new_x)
+            X_args.append(new_x_arg)
+            Y.append(new_y)
+
+        self.X = X
+        self.X_args = X_args
+        self.Y = Y
+
+        return X, X_args, Y
+    
+    def push_long_seq(self, time_steps):
+        
+        X = []
+        Y = []
+        X_long = []
+        Y_long = []
+        for x,y in zip(self.X, self.Y):
+            if len(x)>time_steps:
+                X_long.append(x)
+                Y_long.append(y)
+            else:
+                X.append(x)
+                Y.append(y)
+        
+        self.X = X + X_long
+        self.Y = Y + Y_long
+
+    
+    def epoch(self, time_steps, batch_size, flatten=True, args_dim = None):
 
         if flatten:
             self.X, self.Y = Data.flattenData(self.X, self.Y, time_steps)
+        
+        if args_dim:
+            self.seperate_args()
+            encode_fun = Encode(args_dim, 'bin').encode_arg
         
         X = np.array(self.X)
         Y = np.array(self.Y)
@@ -331,17 +444,26 @@ class DataPartition(object):
             batch_Y = np.zeros((batch_size, time_steps, self.output_size))
             seq_len = np.zeros((batch_size))
             mask = np.zeros((batch_size, time_steps, self.output_size))
+
+            if args_dim:
+                batch_X_args = np.zeros((batch_size, time_steps, args_dim))
+
             for i in range(batch_size):
                 if data_index<len(X):
-                    for j in range(len(X[data_index])):
+                    num_iter = min(len(X[data_index]), time_steps)
+                    for j in range(num_iter):
                         batch_X[i,j] = self.vocabulary.get(X[data_index][j], 1)
                         batch_Y[i,j,int( Y[data_index][j][1] )] = 1
                         mask[i,j] = 1
+                        if args_dim:
+                            batch_X_args[i,j] = encode_fun(self.X_args[data_index][j])
                     seq_len[i] = len(X[data_index])
                     data_index += 1
+            if args_dim:
+                yield True, (batch_X, batch_X_args), batch_Y, seq_len, mask, k/n_steps    
             yield True, batch_X, batch_Y, seq_len, mask, k/n_steps
 
 
     @property
     def vocabulary_size(self):
-        return len(self.vocabulary) 
+        return len(self.vocabulary)

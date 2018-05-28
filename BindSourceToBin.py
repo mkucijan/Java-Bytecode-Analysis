@@ -109,11 +109,13 @@ def bindCode(class_file, source):
             
             methodLines[byteIndex] = (bytecode, len(embendingLayer)-1, currentType)
             offset = 1
-            if 'wide' in instruction.mnemonic:
-                methodLines[byteIndex+offset] = (instruction.opcode.getMnemonic(), len(embendingLayer)-1, currentType)
-                offset += 1
+            #if 'wide' in instruction.mnemonic:
+            #    methodLines[byteIndex+offset] = (instruction.opcode.getMnemonic(), len(embendingLayer)-1, currentType)
+            #    offset += 1
 
             if instruction.args:
+                methodLines[byteIndex+offset] =  (instruction.bytecode[2:],len(embendingLayer)-1, currentType) 
+                '''
                 for arg, fromPool, frm, size in zip(instruction.argValues,instruction.constArg,
                                     instruction.argsFormat.split(','),instruction.argsCount):
 
@@ -126,6 +128,7 @@ def bindCode(class_file, source):
                             arg = frm.format(arg)
                     methodLines[byteIndex+offset] =  (arg,len(embendingLayer)-1, currentType) 
                     offset += size
+                '''
             if temp_Type:
                 currentType = temp_Type
             #print(methodLines[str(byteIndex) + " " + bytecode])
@@ -152,7 +155,7 @@ def main():
                         help="Directory for compiled class files, use -r to auto remove. "+
                         "By default its generated in .class_files under current directory.")
     parser.add_argument("-r", "--remove", action="store_true")
-    parser.add_argument("-o", "--output", nargs='?', default=sys.path[0]+'/output', 
+    parser.add_argument("-o", "--output", nargs='?', default=sys.path[0]+'/TestOutput', 
                         help="Path to output directory. By default in output in current directory of the script.")
     parser.add_argument("-c", "--compile", action="store_false")
     args = parser.parse_args()
