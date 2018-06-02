@@ -11,6 +11,7 @@ import re
 import sys
 import math
 
+import binascii
 import numpy as np
 
 from Model import logger
@@ -44,6 +45,9 @@ class Encode(object):
     def encode_arg(self, value):
         n=self.zero_value+value
         return np.array(list(map(lambda x: float(x), list(self.encode(n)))))
+    
+    def from_hex(self, value_hex):
+        return self.encode_arg(int(value_hex, 16))      
 
 class Data(object):
 
@@ -218,7 +222,7 @@ class Data(object):
 
         return new_X, self.Y
 
-    def filterNoJumps(self, overwrite = True):
+    def filter_no_jumps(self, overwrite = True):
         """
         Filter methods without jumps which are mandatory for containing if or while statements
         """
@@ -255,6 +259,7 @@ class Data(object):
         return len(self.vocabulary) 
     
     def shuffle(self):
+        self.indices = list(range(self.length))
         shuffle(self.indices)
     
     def __getitem__(self, partition):
@@ -409,14 +414,17 @@ class DataPartition(object):
         self.Y = Y + Y_long
 
     
-    def epoch(self, time_steps, batch_size, flatten=True, args_dim = None):
+    def epoch(self, time_steps, batch_size, flatten=True, args_dim = None, encode_int=True):
 
         if flatten:
             self.X, self.Y = Data.flattenData(self.X, self.Y, time_steps)
         
         if args_dim:
             self.seperate_args()
-            encode_fun = Encode(args_dim, 'bin').encode_arg
+            encode_fun = Encode(args_dim, 'bin').from_hex
+        
+        if encode_int:
+            encode_fun_int = Encode(32, 'bin').encode_arg
         
         X = np.array(self.X)
         Y = np.array(self.Y)
@@ -445,23 +453,42 @@ class DataPartition(object):
             seq_len = np.zeros((batch_size))
             mask = np.zeros((batch_size, time_steps, self.output_size))
 
+            if encode_int:
+                batch_encoded_int = np.zeros((batch_size, time_steps, 32))
+                num_ints = 0
+
             if args_dim:
                 batch_X_args = np.zeros((batch_size, time_steps, args_dim))
 
             for i in range(batch_size):
                 if data_index<len(X):
                     num_iter = min(len(X[data_index]), time_steps)
+                    instr_index = 0
                     for j in range(num_iter):
-                        batch_X[i,j] = self.vocabulary.get(X[data_index][j], 1)
-                        batch_Y[i,j,int( Y[data_index][j][1] )] = 1
-                        mask[i,j] = 1
+                        if encode_int:
+                            try:
+                                value = int(X[data_index][j])
+                                num_ints += 1
+                                batch_encoded_int[i, instr_index] = encode_fun_int(value)
+                                continue
+                            except Exception as e:
+                                pass
+                        batch_X[i,instr_index] = self.vocabulary.get(X[data_index][j], 1)
+                        batch_Y[i, instr_index,int( Y[data_index][j][1] )] = 1
+                        mask[i,instr_index] = 1
                         if args_dim:
-                            batch_X_args[i,j] = encode_fun(self.X_args[data_index][j])
+                            batch_X_args[i, instr_index] = encode_fun(self.X_args[data_index][j])
+                        instr_index += 1
+                    
                     seq_len[i] = len(X[data_index])
                     data_index += 1
+            
             if args_dim:
-                yield True, (batch_X, batch_X_args), batch_Y, seq_len, mask, k/n_steps    
-            yield True, batch_X, batch_Y, seq_len, mask, k/n_steps
+                yield True, (batch_X, batch_X_args), batch_Y, seq_len, mask, k/n_steps
+            elif encode_int:
+                yield True, (batch_X, batch_encoded_int), batch_Y, seq_len, mask, k/n_steps   
+            else:
+                yield True, batch_X, batch_Y, seq_len, mask, k/n_steps
 
 
     @property

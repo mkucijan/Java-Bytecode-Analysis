@@ -1,0 +1,1011 @@
+{
+  "encodeText": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "5",
+      1,
+      1
+    ],
+    "4": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "5": [
+      "areturn",
+      1,
+      0
+    ],
+    "6": [
+      "aload_0",
+      0,
+      0
+    ],
+    "7": [
+      "aload_1",
+      0,
+      0
+    ],
+    "8": [
+      "aload_2",
+      0,
+      0
+    ],
+    "9": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "10": [
+      "java/nio/charset/Charset.forName:(Ljava/lang/String;)Ljava/nio/charset/Charset;",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/codec/net/RFC1522Codec.encodeText:(Ljava/lang/String;Ljava/nio/charset/Charset;)Ljava/lang/String;",
+      0,
+      0
+    ],
+    "15": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "decodeText": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "5",
+      1,
+      1
+    ],
+    "4": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "5": [
+      "areturn",
+      1,
+      0
+    ],
+    "6": [
+      "aload_1",
+      1,
+      1
+    ],
+    "7": [
+      "ldc",
+      1,
+      1
+    ],
+    "8": [
+      "=?",
+      1,
+      1
+    ],
+    "9": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "10": [
+      "java/lang/String.startsWith:(Ljava/lang/String;)Z",
+      1,
+      1
+    ],
+    "12": [
+      "ifeq",
+      1,
+      1
+    ],
+    "13": [
+      "12",
+      1,
+      1
+    ],
+    "15": [
+      "aload_1",
+      1,
+      1
+    ],
+    "16": [
+      "ldc",
+      1,
+      1
+    ],
+    "17": [
+      "?=",
+      1,
+      1
+    ],
+    "18": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "19": [
+      "java/lang/String.endsWith:(Ljava/lang/String;)Z",
+      1,
+      1
+    ],
+    "21": [
+      "ifne",
+      1,
+      1
+    ],
+    "22": [
+      "13",
+      1,
+      1
+    ],
+    "24": [
+      "new",
+      1,
+      0
+    ],
+    "25": [
+      "org/apache/commons/codec/DecoderException",
+      1,
+      0
+    ],
+    "27": [
+      "dup",
+      1,
+      0
+    ],
+    "28": [
+      "ldc",
+      1,
+      0
+    ],
+    "29": [
+      "RFC 1522 violation: malformed encoded content",
+      1,
+      0
+    ],
+    "30": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "31": [
+      "org/apache/commons/codec/DecoderException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "33": [
+      "athrow",
+      1,
+      0
+    ],
+    "34": [
+      "aload_1",
+      0,
+      0
+    ],
+    "35": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "36": [
+      "java/lang/String.length:()I",
+      0,
+      0
+    ],
+    "38": [
+      "iconst_2",
+      0,
+      0
+    ],
+    "39": [
+      "isub",
+      0,
+      0
+    ],
+    "40": [
+      "istore_2",
+      0,
+      0
+    ],
+    "41": [
+      "iconst_2",
+      0,
+      0
+    ],
+    "42": [
+      "istore_3",
+      0,
+      0
+    ],
+    "43": [
+      "aload_1",
+      0,
+      0
+    ],
+    "44": [
+      "bipush",
+      0,
+      0
+    ],
+    "45": [
+      "63",
+      0,
+      0
+    ],
+    "46": [
+      "iload_3",
+      0,
+      0
+    ],
+    "47": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "48": [
+      "java/lang/String.indexOf:(II)I",
+      0,
+      0
+    ],
+    "50": [
+      "istore",
+      0,
+      0
+    ],
+    "51": [
+      "#4",
+      0,
+      0
+    ],
+    "52": [
+      "iload",
+      1,
+      1
+    ],
+    "53": [
+      "#4",
+      1,
+      1
+    ],
+    "54": [
+      "iload_2",
+      1,
+      1
+    ],
+    "55": [
+      "if_icmpne",
+      1,
+      1
+    ],
+    "56": [
+      "13",
+      1,
+      1
+    ],
+    "58": [
+      "new",
+      1,
+      0
+    ],
+    "59": [
+      "org/apache/commons/codec/DecoderException",
+      1,
+      0
+    ],
+    "61": [
+      "dup",
+      1,
+      0
+    ],
+    "62": [
+      "ldc",
+      1,
+      0
+    ],
+    "63": [
+      "RFC 1522 violation: charset token not found",
+      1,
+      0
+    ],
+    "64": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "65": [
+      "org/apache/commons/codec/DecoderException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "67": [
+      "athrow",
+      1,
+      0
+    ],
+    "68": [
+      "aload_1",
+      0,
+      0
+    ],
+    "69": [
+      "iload_3",
+      0,
+      0
+    ],
+    "70": [
+      "iload",
+      0,
+      0
+    ],
+    "71": [
+      "#4",
+      0,
+      0
+    ],
+    "72": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "73": [
+      "java/lang/String.substring:(II)Ljava/lang/String;",
+      0,
+      0
+    ],
+    "75": [
+      "astore",
+      0,
+      0
+    ],
+    "76": [
+      "#5",
+      0,
+      0
+    ],
+    "77": [
+      "aload",
+      1,
+      1
+    ],
+    "78": [
+      "#5",
+      1,
+      1
+    ],
+    "79": [
+      "ldc",
+      1,
+      1
+    ],
+    "80": [
+      "",
+      1,
+      1
+    ],
+    "81": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "82": [
+      "java/lang/String.equals:(Ljava/lang/Object;)Z",
+      1,
+      1
+    ],
+    "84": [
+      "ifeq",
+      1,
+      1
+    ],
+    "85": [
+      "13",
+      1,
+      1
+    ],
+    "87": [
+      "new",
+      1,
+      0
+    ],
+    "88": [
+      "org/apache/commons/codec/DecoderException",
+      1,
+      0
+    ],
+    "90": [
+      "dup",
+      1,
+      0
+    ],
+    "91": [
+      "ldc",
+      1,
+      0
+    ],
+    "92": [
+      "RFC 1522 violation: charset not specified",
+      1,
+      0
+    ],
+    "93": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "94": [
+      "org/apache/commons/codec/DecoderException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "96": [
+      "athrow",
+      1,
+      0
+    ],
+    "97": [
+      "iload",
+      0,
+      0
+    ],
+    "98": [
+      "#4",
+      0,
+      0
+    ],
+    "99": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "100": [
+      "iadd",
+      0,
+      0
+    ],
+    "101": [
+      "istore_3",
+      0,
+      0
+    ],
+    "102": [
+      "aload_1",
+      0,
+      0
+    ],
+    "103": [
+      "bipush",
+      0,
+      0
+    ],
+    "104": [
+      "63",
+      0,
+      0
+    ],
+    "105": [
+      "iload_3",
+      0,
+      0
+    ],
+    "106": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "107": [
+      "java/lang/String.indexOf:(II)I",
+      0,
+      0
+    ],
+    "109": [
+      "istore",
+      0,
+      0
+    ],
+    "110": [
+      "#4",
+      0,
+      0
+    ],
+    "111": [
+      "iload",
+      1,
+      1
+    ],
+    "112": [
+      "#4",
+      1,
+      1
+    ],
+    "113": [
+      "iload_2",
+      1,
+      1
+    ],
+    "114": [
+      "if_icmpne",
+      1,
+      1
+    ],
+    "115": [
+      "13",
+      1,
+      1
+    ],
+    "117": [
+      "new",
+      1,
+      0
+    ],
+    "118": [
+      "org/apache/commons/codec/DecoderException",
+      1,
+      0
+    ],
+    "120": [
+      "dup",
+      1,
+      0
+    ],
+    "121": [
+      "ldc",
+      1,
+      0
+    ],
+    "122": [
+      "RFC 1522 violation: encoding token not found",
+      1,
+      0
+    ],
+    "123": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "124": [
+      "org/apache/commons/codec/DecoderException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "126": [
+      "athrow",
+      1,
+      0
+    ],
+    "127": [
+      "aload_1",
+      0,
+      0
+    ],
+    "128": [
+      "iload_3",
+      0,
+      0
+    ],
+    "129": [
+      "iload",
+      0,
+      0
+    ],
+    "130": [
+      "#4",
+      0,
+      0
+    ],
+    "131": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "132": [
+      "java/lang/String.substring:(II)Ljava/lang/String;",
+      0,
+      0
+    ],
+    "134": [
+      "astore",
+      0,
+      0
+    ],
+    "135": [
+      "#6",
+      0,
+      0
+    ],
+    "136": [
+      "aload_0",
+      1,
+      1
+    ],
+    "137": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "138": [
+      "org/apache/commons/codec/net/RFC1522Codec.getEncoding:()Ljava/lang/String;",
+      1,
+      1
+    ],
+    "140": [
+      "aload",
+      1,
+      1
+    ],
+    "141": [
+      "#6",
+      1,
+      1
+    ],
+    "142": [
+      "invokevirtual",
+      1,
+      1
+    ],
+    "143": [
+      "java/lang/String.equalsIgnoreCase:(Ljava/lang/String;)Z",
+      1,
+      1
+    ],
+    "145": [
+      "ifne",
+      1,
+      1
+    ],
+    "146": [
+      "36",
+      1,
+      1
+    ],
+    "148": [
+      "new",
+      1,
+      0
+    ],
+    "149": [
+      "org/apache/commons/codec/DecoderException",
+      1,
+      0
+    ],
+    "151": [
+      "dup",
+      1,
+      0
+    ],
+    "152": [
+      "new",
+      1,
+      0
+    ],
+    "153": [
+      "java/lang/StringBuilder",
+      1,
+      0
+    ],
+    "155": [
+      "dup",
+      1,
+      0
+    ],
+    "156": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "157": [
+      "java/lang/StringBuilder.<init>:()V",
+      1,
+      0
+    ],
+    "159": [
+      "ldc",
+      1,
+      0
+    ],
+    "160": [
+      "This codec cannot decode ",
+      1,
+      0
+    ],
+    "161": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "162": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      1,
+      0
+    ],
+    "164": [
+      "aload",
+      1,
+      0
+    ],
+    "165": [
+      "#6",
+      1,
+      0
+    ],
+    "166": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "167": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      1,
+      0
+    ],
+    "169": [
+      "ldc",
+      1,
+      0
+    ],
+    "170": [
+      " encoded content",
+      1,
+      0
+    ],
+    "171": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "172": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      1,
+      0
+    ],
+    "174": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "175": [
+      "java/lang/StringBuilder.toString:()Ljava/lang/String;",
+      1,
+      0
+    ],
+    "177": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "178": [
+      "org/apache/commons/codec/DecoderException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "180": [
+      "athrow",
+      1,
+      0
+    ],
+    "181": [
+      "iload",
+      0,
+      0
+    ],
+    "182": [
+      "#4",
+      0,
+      0
+    ],
+    "183": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "184": [
+      "iadd",
+      0,
+      0
+    ],
+    "185": [
+      "istore_3",
+      0,
+      0
+    ],
+    "186": [
+      "aload_1",
+      0,
+      0
+    ],
+    "187": [
+      "bipush",
+      0,
+      0
+    ],
+    "188": [
+      "63",
+      0,
+      0
+    ],
+    "189": [
+      "iload_3",
+      0,
+      0
+    ],
+    "190": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "191": [
+      "java/lang/String.indexOf:(II)I",
+      0,
+      0
+    ],
+    "193": [
+      "istore",
+      0,
+      0
+    ],
+    "194": [
+      "#4",
+      0,
+      0
+    ],
+    "195": [
+      "aload_1",
+      0,
+      0
+    ],
+    "196": [
+      "iload_3",
+      0,
+      0
+    ],
+    "197": [
+      "iload",
+      0,
+      0
+    ],
+    "198": [
+      "#4",
+      0,
+      0
+    ],
+    "199": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "200": [
+      "java/lang/String.substring:(II)Ljava/lang/String;",
+      0,
+      0
+    ],
+    "202": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "203": [
+      "org/apache/commons/codec/binary/StringUtils.getBytesUsAscii:(Ljava/lang/String;)[B",
+      0,
+      0
+    ],
+    "205": [
+      "astore",
+      0,
+      0
+    ],
+    "206": [
+      "#7",
+      0,
+      0
+    ],
+    "207": [
+      "aload_0",
+      0,
+      0
+    ],
+    "208": [
+      "aload",
+      0,
+      0
+    ],
+    "209": [
+      "#7",
+      0,
+      0
+    ],
+    "210": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "211": [
+      "org/apache/commons/codec/net/RFC1522Codec.doDecoding:([B)[B",
+      0,
+      0
+    ],
+    "213": [
+      "astore",
+      0,
+      0
+    ],
+    "214": [
+      "#7",
+      0,
+      0
+    ],
+    "215": [
+      "new",
+      0,
+      0
+    ],
+    "216": [
+      "java/lang/String",
+      0,
+      0
+    ],
+    "218": [
+      "dup",
+      0,
+      0
+    ],
+    "219": [
+      "aload",
+      0,
+      0
+    ],
+    "220": [
+      "#7",
+      0,
+      0
+    ],
+    "221": [
+      "aload",
+      0,
+      0
+    ],
+    "222": [
+      "#5",
+      0,
+      0
+    ],
+    "223": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "224": [
+      "java/lang/String.<init>:([BLjava/lang/String;)V",
+      0,
+      0
+    ],
+    "226": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

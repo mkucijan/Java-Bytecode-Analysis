@@ -1,0 +1,1354 @@
+{
+  "isAvailable": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.getName:()Ljava/lang/String;",
+      0,
+      0
+    ],
+    "4": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "5": [
+      "javax/crypto/Mac.getInstance:(Ljava/lang/String;)Ljavax/crypto/Mac;",
+      0,
+      0
+    ],
+    "7": [
+      "pop",
+      0,
+      0
+    ],
+    "8": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "9": [
+      "ireturn",
+      0,
+      0
+    ],
+    "10": [
+      "astore_1",
+      0,
+      0
+    ],
+    "11": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "12": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "getHmacMd5": {
+    "0": [
+      "getstatic",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.HMAC_MD5:Lorg/apache/commons/codec/digest/HmacAlgorithms;",
+      0,
+      0
+    ],
+    "3": [
+      "aload_0",
+      0,
+      0
+    ],
+    "4": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/codec/digest/HmacUtils.getInitializedMac:(Lorg/apache/commons/codec/digest/HmacAlgorithms;[B)Ljavax/crypto/Mac;",
+      0,
+      0
+    ],
+    "7": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getHmacSha1": {
+    "0": [
+      "getstatic",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.HMAC_SHA_1:Lorg/apache/commons/codec/digest/HmacAlgorithms;",
+      0,
+      0
+    ],
+    "3": [
+      "aload_0",
+      0,
+      0
+    ],
+    "4": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/codec/digest/HmacUtils.getInitializedMac:(Lorg/apache/commons/codec/digest/HmacAlgorithms;[B)Ljavax/crypto/Mac;",
+      0,
+      0
+    ],
+    "7": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getHmacSha256": {
+    "0": [
+      "getstatic",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.HMAC_SHA_256:Lorg/apache/commons/codec/digest/HmacAlgorithms;",
+      0,
+      0
+    ],
+    "3": [
+      "aload_0",
+      0,
+      0
+    ],
+    "4": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/codec/digest/HmacUtils.getInitializedMac:(Lorg/apache/commons/codec/digest/HmacAlgorithms;[B)Ljavax/crypto/Mac;",
+      0,
+      0
+    ],
+    "7": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getHmacSha384": {
+    "0": [
+      "getstatic",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.HMAC_SHA_384:Lorg/apache/commons/codec/digest/HmacAlgorithms;",
+      0,
+      0
+    ],
+    "3": [
+      "aload_0",
+      0,
+      0
+    ],
+    "4": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/codec/digest/HmacUtils.getInitializedMac:(Lorg/apache/commons/codec/digest/HmacAlgorithms;[B)Ljavax/crypto/Mac;",
+      0,
+      0
+    ],
+    "7": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getHmacSha512": {
+    "0": [
+      "getstatic",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.HMAC_SHA_512:Lorg/apache/commons/codec/digest/HmacAlgorithms;",
+      0,
+      0
+    ],
+    "3": [
+      "aload_0",
+      0,
+      0
+    ],
+    "4": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/codec/digest/HmacUtils.getInitializedMac:(Lorg/apache/commons/codec/digest/HmacAlgorithms;[B)Ljavax/crypto/Mac;",
+      0,
+      0
+    ],
+    "7": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getInitializedMac": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "13",
+      1,
+      1
+    ],
+    "4": [
+      "new",
+      1,
+      0
+    ],
+    "5": [
+      "java/lang/IllegalArgumentException",
+      1,
+      0
+    ],
+    "7": [
+      "dup",
+      1,
+      0
+    ],
+    "8": [
+      "ldc",
+      1,
+      0
+    ],
+    "9": [
+      "Null key",
+      1,
+      0
+    ],
+    "10": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "11": [
+      "java/lang/IllegalArgumentException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "13": [
+      "athrow",
+      1,
+      0
+    ],
+    "14": [
+      "new",
+      0,
+      0
+    ],
+    "15": [
+      "javax/crypto/spec/SecretKeySpec",
+      0,
+      0
+    ],
+    "17": [
+      "dup",
+      0,
+      0
+    ],
+    "18": [
+      "aload_1",
+      0,
+      0
+    ],
+    "19": [
+      "aload_0",
+      0,
+      0
+    ],
+    "20": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "21": [
+      "javax/crypto/spec/SecretKeySpec.<init>:([BLjava/lang/String;)V",
+      0,
+      0
+    ],
+    "23": [
+      "astore_2",
+      0,
+      0
+    ],
+    "24": [
+      "aload_0",
+      0,
+      0
+    ],
+    "25": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "26": [
+      "javax/crypto/Mac.getInstance:(Ljava/lang/String;)Ljavax/crypto/Mac;",
+      0,
+      0
+    ],
+    "28": [
+      "astore_3",
+      0,
+      0
+    ],
+    "29": [
+      "aload_3",
+      0,
+      0
+    ],
+    "30": [
+      "aload_2",
+      0,
+      0
+    ],
+    "31": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "32": [
+      "javax/crypto/Mac.init:(Ljava/security/Key;)V",
+      0,
+      0
+    ],
+    "34": [
+      "aload_3",
+      0,
+      0
+    ],
+    "35": [
+      "areturn",
+      0,
+      0
+    ],
+    "36": [
+      "astore_2",
+      0,
+      0
+    ],
+    "37": [
+      "new",
+      0,
+      0
+    ],
+    "38": [
+      "java/lang/IllegalArgumentException",
+      0,
+      0
+    ],
+    "40": [
+      "dup",
+      0,
+      0
+    ],
+    "41": [
+      "aload_2",
+      0,
+      0
+    ],
+    "42": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "43": [
+      "java/lang/IllegalArgumentException.<init>:(Ljava/lang/Throwable;)V",
+      0,
+      0
+    ],
+    "45": [
+      "athrow",
+      0,
+      0
+    ],
+    "46": [
+      "astore_2",
+      0,
+      0
+    ],
+    "47": [
+      "new",
+      0,
+      0
+    ],
+    "48": [
+      "java/lang/IllegalArgumentException",
+      0,
+      0
+    ],
+    "50": [
+      "dup",
+      0,
+      0
+    ],
+    "51": [
+      "aload_2",
+      0,
+      0
+    ],
+    "52": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "53": [
+      "java/lang/IllegalArgumentException.<init>:(Ljava/lang/Throwable;)V",
+      0,
+      0
+    ],
+    "55": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "hmacMd5": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/codec/digest/HmacUtils",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "getstatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.HMAC_MD5:Lorg/apache/commons/codec/digest/HmacAlgorithms;",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/codec/digest/HmacUtils.<init>:(Lorg/apache/commons/codec/digest/HmacAlgorithms;Ljava/lang/String;)V",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/codec/digest/HmacUtils.hmac:(Ljava/lang/String;)[B",
+      0,
+      0
+    ],
+    "15": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "hmacMd5Hex": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/codec/digest/HmacUtils",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "getstatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.HMAC_MD5:Lorg/apache/commons/codec/digest/HmacAlgorithms;",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/codec/digest/HmacUtils.<init>:(Lorg/apache/commons/codec/digest/HmacAlgorithms;Ljava/lang/String;)V",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/codec/digest/HmacUtils.hmacHex:(Ljava/lang/String;)Ljava/lang/String;",
+      0,
+      0
+    ],
+    "15": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "hmacSha1": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/codec/digest/HmacUtils",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "getstatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.HMAC_SHA_1:Lorg/apache/commons/codec/digest/HmacAlgorithms;",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/codec/digest/HmacUtils.<init>:(Lorg/apache/commons/codec/digest/HmacAlgorithms;Ljava/lang/String;)V",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/codec/digest/HmacUtils.hmac:(Ljava/lang/String;)[B",
+      0,
+      0
+    ],
+    "15": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "hmacSha1Hex": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/codec/digest/HmacUtils",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "getstatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.HMAC_SHA_1:Lorg/apache/commons/codec/digest/HmacAlgorithms;",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/codec/digest/HmacUtils.<init>:(Lorg/apache/commons/codec/digest/HmacAlgorithms;Ljava/lang/String;)V",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/codec/digest/HmacUtils.hmacHex:(Ljava/lang/String;)Ljava/lang/String;",
+      0,
+      0
+    ],
+    "15": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "hmacSha256": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/codec/digest/HmacUtils",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "getstatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.HMAC_SHA_256:Lorg/apache/commons/codec/digest/HmacAlgorithms;",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/codec/digest/HmacUtils.<init>:(Lorg/apache/commons/codec/digest/HmacAlgorithms;Ljava/lang/String;)V",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/codec/digest/HmacUtils.hmac:(Ljava/lang/String;)[B",
+      0,
+      0
+    ],
+    "15": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "hmacSha256Hex": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/codec/digest/HmacUtils",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "getstatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.HMAC_SHA_256:Lorg/apache/commons/codec/digest/HmacAlgorithms;",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/codec/digest/HmacUtils.<init>:(Lorg/apache/commons/codec/digest/HmacAlgorithms;Ljava/lang/String;)V",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/codec/digest/HmacUtils.hmacHex:(Ljava/lang/String;)Ljava/lang/String;",
+      0,
+      0
+    ],
+    "15": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "hmacSha384": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/codec/digest/HmacUtils",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "getstatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.HMAC_SHA_384:Lorg/apache/commons/codec/digest/HmacAlgorithms;",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/codec/digest/HmacUtils.<init>:(Lorg/apache/commons/codec/digest/HmacAlgorithms;Ljava/lang/String;)V",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/codec/digest/HmacUtils.hmac:(Ljava/lang/String;)[B",
+      0,
+      0
+    ],
+    "15": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "hmacSha384Hex": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/codec/digest/HmacUtils",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "getstatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.HMAC_SHA_384:Lorg/apache/commons/codec/digest/HmacAlgorithms;",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/codec/digest/HmacUtils.<init>:(Lorg/apache/commons/codec/digest/HmacAlgorithms;Ljava/lang/String;)V",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/codec/digest/HmacUtils.hmacHex:(Ljava/lang/String;)Ljava/lang/String;",
+      0,
+      0
+    ],
+    "15": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "hmacSha512": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/codec/digest/HmacUtils",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "getstatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.HMAC_SHA_512:Lorg/apache/commons/codec/digest/HmacAlgorithms;",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/codec/digest/HmacUtils.<init>:(Lorg/apache/commons/codec/digest/HmacAlgorithms;Ljava/lang/String;)V",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/codec/digest/HmacUtils.hmac:(Ljava/lang/String;)[B",
+      0,
+      0
+    ],
+    "15": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "hmacSha512Hex": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "org/apache/commons/codec/digest/HmacUtils",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "getstatic",
+      0,
+      0
+    ],
+    "5": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.HMAC_SHA_512:Lorg/apache/commons/codec/digest/HmacAlgorithms;",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/codec/digest/HmacUtils.<init>:(Lorg/apache/commons/codec/digest/HmacAlgorithms;Ljava/lang/String;)V",
+      0,
+      0
+    ],
+    "11": [
+      "aload_1",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/codec/digest/HmacUtils.hmacHex:(Ljava/lang/String;)Ljava/lang/String;",
+      0,
+      0
+    ],
+    "15": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "updateHmac": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "2": [
+      "javax/crypto/Mac.reset:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "aload_1",
+      0,
+      0
+    ],
+    "6": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/codec/binary/StringUtils.getBytesUtf8:(Ljava/lang/String;)[B",
+      0,
+      0
+    ],
+    "9": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "10": [
+      "javax/crypto/Mac.update:([B)V",
+      0,
+      0
+    ],
+    "12": [
+      "aload_0",
+      0,
+      0
+    ],
+    "13": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/codec/digest/HmacAlgorithms.getName:()Ljava/lang/String;",
+      0,
+      0
+    ],
+    "5": [
+      "aload_2",
+      0,
+      0
+    ],
+    "6": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/codec/digest/HmacUtils.<init>:(Ljava/lang/String;[B)V",
+      0,
+      0
+    ],
+    "9": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "hmac": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "java/io/BufferedInputStream",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "new",
+      0,
+      0
+    ],
+    "5": [
+      "java/io/FileInputStream",
+      0,
+      0
+    ],
+    "7": [
+      "dup",
+      0,
+      0
+    ],
+    "8": [
+      "aload_1",
+      0,
+      0
+    ],
+    "9": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "10": [
+      "java/io/FileInputStream.<init>:(Ljava/io/File;)V",
+      0,
+      0
+    ],
+    "12": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "13": [
+      "java/io/BufferedInputStream.<init>:(Ljava/io/InputStream;)V",
+      0,
+      0
+    ],
+    "15": [
+      "astore_2",
+      0,
+      0
+    ],
+    "16": [
+      "aload_0",
+      0,
+      0
+    ],
+    "17": [
+      "aload_2",
+      0,
+      0
+    ],
+    "18": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "19": [
+      "org/apache/commons/codec/digest/HmacUtils.hmac:(Ljava/io/InputStream;)[B",
+      0,
+      0
+    ],
+    "21": [
+      "astore_3",
+      0,
+      0
+    ],
+    "22": [
+      "aload_2",
+      0,
+      0
+    ],
+    "23": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "24": [
+      "java/io/BufferedInputStream.close:()V",
+      0,
+      0
+    ],
+    "26": [
+      "aload_3",
+      0,
+      0
+    ],
+    "27": [
+      "areturn",
+      0,
+      0
+    ],
+    "28": [
+      "astore",
+      0,
+      0
+    ],
+    "29": [
+      "#4",
+      0,
+      0
+    ],
+    "30": [
+      "aload_2",
+      0,
+      0
+    ],
+    "31": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "32": [
+      "java/io/BufferedInputStream.close:()V",
+      0,
+      0
+    ],
+    "34": [
+      "aload",
+      0,
+      0
+    ],
+    "35": [
+      "#4",
+      0,
+      0
+    ],
+    "36": [
+      "athrow",
+      0,
+      0
+    ]
+  },
+  "hmacHex": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "3": [
+      "org/apache/commons/codec/digest/HmacUtils.hmac:(Ljava/io/File;)[B",
+      0,
+      0
+    ],
+    "5": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/codec/binary/Hex.encodeHexString:([B)Ljava/lang/String;",
+      0,
+      0
+    ],
+    "8": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

@@ -4,7 +4,7 @@ import logging
 import os
 
 from Model import __version__, logger
-from Model.command import train_model, test_model, get_data_set_info
+from Model.command import train_model, search_params, test_model, get_data_set_info
 from Model.data import Data, DIR_PATH
 
 
@@ -50,6 +50,35 @@ def create_argument_parser():
     train.add_argument("--nonlinear", action="store_true", help="Add nonlinear transofrmation on rnn output.")
     train.set_defaults(func=train_model)
 
+    search = subparsers.add_parser("RNN-search", description="Search best fiting params.",
+                                  help="Train model multiple times on range of parameters and validate the best.")
+    search.add_argument("data_set", type=Data.deserialize, help="data set")
+    search.add_argument("--training_partition", type=real_zero_to_one, default=0.9, help="partition containing training data")
+    search.add_argument("--validation-partition", type=real_zero_to_one, default=0.1, help="partition containing validation data")
+    search.add_argument("--validation-interval", type=positive_integer, default=1000,
+                       help="how often to run the validation set")
+    search.add_argument("--model-directory", type=new_directory, help="directory to which to write the model")
+    search.add_argument("--summary-directory", type=new_directory,
+                       help="directory to which to write a training summary")
+    search.add_argument("--time-steps", type=positive_integer, default=100, help="training unrolled time steps")
+    search.add_argument("--batch-size", type=positive_integer, default=32, help="training size batch")
+    search.add_argument("--hidden-units", type=positive_integer, default=500, help="number of hidden units in the RNN")
+    search.add_argument("--layers", type=positive_integer, default=1, help="number of RNN layers")
+    search.add_argument("--keep-probability", type=real_zero_to_one, default=0.9,
+                       help="probability to keep a cell in a dropout layer")
+    search.add_argument("--max-gradient", type=positive_real, default=10, help="value to clip gradients to")
+    search.add_argument("--max-iterations", type=positive_integer, help="number of training iterations to run")
+    search.add_argument("--logging-interval", type=positive_integer, default=100,
+                       help="log and write summary after this many iterations")
+    search.add_argument("--max-epochs", type=positive_integer, default=30, help="number of training epochs to run")
+    search.add_argument("--learning-rate", type=positive_real, default=0.1, help="training learning rate")
+    #search.add_argument("--init", type=positive_real, default=0.05, help="random initial absolute value range")
+    search.add_argument("--args-dim", type=positive_integer, default=None, help="dimension of special arg encoding")
+    search.add_argument("--bidirectional", action="store_true", help="Use bidirectional model")
+    search.add_argument("--nonlinear", action="store_true", help="Add nonlinear transofrmation on rnn output.")
+    search.set_defaults(func=search_params)
+    
+    
     test = subparsers.add_parser("RNN-test", description="Use an RNN model.",
                                  help="Use a previously-trained model to get perplexity on a test set")
     test.add_argument("model_directory", help="directory from which to read the model")

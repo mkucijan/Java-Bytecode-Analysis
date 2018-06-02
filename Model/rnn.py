@@ -7,10 +7,11 @@ from Model import logger
 
 
 class Additional_Parameters():
-    def __init__(self, args_dim = None, bidirectional=True, nonlinear=True):
+    def __init__(self, args_dim = None, bidirectional=True, nonlinear=True, encode_int = True):
         self.args_dim = args_dim
         self.bidirectional = bidirectional
         self.nonlinear = nonlinear
+        self.encode_int = encode_int
 
 class RNN(object):
     """Recursive Neural Network"""
@@ -59,6 +60,7 @@ class RNN(object):
         # Add vocabulary slots of out of vocabulary (index 1) and padding (index 0).
         # vocabulary_size += 2
 
+        self.cost = 0
         initializer = tf.contrib.layers.xavier_initializer(dtype=tf.float32)
         with tf.name_scope("Parameters"):
             self.learning_rate = tf.placeholder(tf.float32, name="learning_rate")
@@ -81,22 +83,28 @@ class RNN(object):
             self.embedded_input = tf.nn.embedding_lookup(self.embedding, self.input, name="embedded_input")
 
         self.input_rnn = self.embedded_input
+
         if self.additional_parameters.args_dim:
             with tf.name_scope("Argument_encoding"):
                 self.input_args = tf.placeholder(tf.float32, shape=(batch_size, time_steps, self.additional_parameters.args_dim))
                 self.input_rnn = tf.concat([self.embedded_input, self.input_args],2)
         
+        if self.additional_parameters.encode_int:
+            with tf.name_scope("Encoded_numeric_args"):
+                self.encoded_int_args = tf.placeholder(tf.float32, shape=(batch_size, time_steps, 32), name="encoded_int")
+                self.input_rnn = tf.concat([self.embedded_input, self.encoded_int_args], 2)
+
         if self.additional_parameters.bidirectional:
             with tf.name_scope("RNN_Bidirectional"):
                 cells_fw = [
                     tf.nn.rnn_cell.DropoutWrapper(
-                    tf.contrib.rnn.BasicLSTMCell(hidden_units,activation=tf.nn.tanh),
+                    tf.contrib.rnn.LSTMCell(hidden_units, use_peepholes=True),
                     output_keep_prob = self.keep_probability)
                     for _ in range(layers)]
     
                 cells_bw = [
                     tf.nn.rnn_cell.DropoutWrapper(
-                    tf.contrib.rnn.BasicLSTMCell(hidden_units,activation=tf.nn.tanh),
+                    tf.contrib.rnn.LSTMCell(hidden_units, use_peepholes=True),
                     output_keep_prob = self.keep_probability)
                     for _ in range(layers)]
                 
@@ -112,8 +120,51 @@ class RNN(object):
                                                 inputs = self.input_rnn)
                 
                 self.next_state = (states_fw, states_bw)
-                self.outputs_rnn = tf.concat(outputs, 2)
+                #self.outputs_rnn = tf.concat(outputs, 2)
+                self.outputs_rnn = outputs
                 hidden_layer_size = hidden_units*2
+    
+            '''
+            with tf.name_scope("RNN_attention"):
+                attention_mechanism = tf.contrib.seq2seq.LuongAttention(128, self.outputs_rnn_1)
+                cells_fw_2 = [
+                    tf.nn.rnn_cell.DropoutWrapper(
+                        tf.contrib.seq2seq.AttentionWrapper(
+                            tf.contrib.rnn.LSTMCell(hidden_units, use_peepholes=True),
+                            attention_mechanism,
+                            attention_layer_size=64
+                        ),
+                    output_keep_prob = self.keep_probability)
+                    for _ in range(layers)]
+    
+                cells_bw_2 = [
+                    tf.nn.rnn_cell.DropoutWrapper(
+                        tf.contrib.seq2seq.AttentionWrapper(
+                            tf.contrib.rnn.LSTMCell(hidden_units, use_peepholes=True),
+                            attention_mechanism,
+                            attention_layer_size=64
+                        ),
+                    output_keep_prob = self.keep_probability)
+                    for _ in range(layers)]
+                
+                self.state_att = ([cell.zero_state(batch_size, dtype=tf.float32) for cell in cells_fw_2],
+                              [cell.zero_state(batch_size, dtype=tf.float32) for cell in cells_bw_2])
+                
+                outputs_2, states_fw_2, states_bw_2 = tf.contrib.rnn.stack_bidirectional_rnn(
+                                                cells_fw = cells_fw_2,
+                                                cells_bw = cells_bw_2,
+                                                initial_states_fw = self.state_att[0],
+                                                initial_states_bw = self.state_att[1],
+                                                sequence_length = self.seq_len,
+                                                dtype = tf.float32,
+                                                inputs = tf.unstack(self.input_rnn,axis=1))
+                
+                self.next_state_att = (states_fw_2, states_bw_2)
+                self.outputs_rnn_att = outputs_2
+            
+            hidden_layer_size = hidden_units
+            self.outputs_rnn = outputs_2
+            '''
         else:
             with tf.name_scope("RNN"):
                 cell = tf.nn.rnn_cell.LSTMCell(hidden_units)
@@ -124,6 +175,7 @@ class RNN(object):
                                                                 sequence_length=self.seq_len,
                                                                 initial_state=self.state)
                 hidden_layer_size = hidden_units
+        
         if self.additional_parameters.nonlinear:
             with tf.name_scope("Nonlinear_output"):
                 self.w_nl = tf.get_variable("w_nl", (1, hidden_layer_size, hidden_layer_size),
@@ -131,6 +183,7 @@ class RNN(object):
                                             dtype=tf.float32)
                 self.b_nl = tf.get_variable("b_nl", hidden_layer_size, initializer = tf.contrib.layers.xavier_initializer(), dtype=tf.float32)
                 self.outputs = tf.nn.relu(tf.matmul(self.outputs_rnn, tf.tile(self.w_nl, [tf.shape(self.outputs_rnn)[0],1,1])) + self.b_nl)
+                self.cost += 0.01*tf.nn.l2_loss(self.w_nl)
         else:
             self.outputs = self.outputs_rnn
         with tf.name_scope("Cost"):
@@ -150,7 +203,7 @@ class RNN(object):
             self.predicted = tf.multiply(self.predicted, self.flattened_mask)
             # Compare predictions to labels.
             self.loss = tf.nn.softmax_cross_entropy_with_logits_v2(labels=self.flattened_labels, logits=self.predicted, name="loss")
-            self.cost = tf.div(tf.reduce_sum(self.loss), batch_size, name="cost")
+            self.cost += tf.div(tf.reduce_sum(self.loss), batch_size, name="cost")
             batch_num = tf.div(tf.reduce_sum(self.mask), output_size) 
             padding_num = batch_size*time_steps - batch_num
             correct_num = tf.reduce_sum( tf.cast(tf.equal(tf.argmax(self.flattened_labels, axis=1), tf.argmax(self.predicted, axis=1)), tf.float32) ) - padding_num
@@ -209,8 +262,10 @@ class RNN(object):
             while True:
                 epoch_cost = epoch_iteration = accuracy = num_batches = 0
                 # Enumerate over a single epoch of the training set.
-                for start_document, context, labels, seq_len, mask, complete in training_set.epoch(self.time_steps, self.batch_size,
-                                                                                                args_dim=self.additional_parameters.args_dim):
+                for start_document, context, labels, seq_len, mask, complete in training_set.epoch(
+                                                                                self.time_steps, self.batch_size,
+                                                                                args_dim=self.additional_parameters.args_dim,
+                                                                                encode_int=self.additional_parameters.encode_int):
                     feed_dict={
                         self.input: context,
                         self.labels: labels,
@@ -224,14 +279,18 @@ class RNN(object):
                     else:
                         feed_dict[self.state] = parameters.state
                     if self.additional_parameters.args_dim:
-                        feed_dict[self.inputs] = context[0]
+                        feed_dict[self.input] = context[0]
                         feed_dict[self.input_args] = context[1]
+                    if self.additional_parameters.encode_int:
+                        feed_dict[self.input] = context[0]
+                        feed_dict[self.encoded_int_args] = context[1]
+
                     _, cost, state, iteration, acc = session.run(
                     [self.train_step, self.cost, self.next_state, self.iteration, self.accuracy],
                         feed_dict=feed_dict)
                     
                     epoch_cost += cost
-                    epoch_iteration += self.batch_size
+                    epoch_iteration += np.sum(seq_len)
                     accuracy += acc
                     num_batches += 1
                     if self._interval(iteration, logging_interval):
@@ -246,6 +305,8 @@ class RNN(object):
                                     (epoch, iteration, validation_perplexity, acc))
                     if exit_criteria.max_iterations is not None and iteration > exit_criteria.max_iterations:
                         ret_validation_perplexity, ret_acc = self.test(session, validation.validation_set, train=True)
+                        logger.info("Epoch %d, Iteration %d: validation perplexity %0.4f, acc: %0.4f" %
+                                    (epoch, iteration, ret_validation_perplexity, ret_acc))
                         raise StopTrainingException()
 
                 self.store_training_epoch_perplexity(session, summary, iteration,
@@ -273,20 +334,21 @@ class RNN(object):
             "vocabulary_size": self.vocabulary_size,
             "hidden_units": self.hidden_units,
             "output_size": self.output_size,
-            "layers": self.layers
+            "layers": self.layers,
+            "args_dim": self.additional_parameters.args_dim,
+            "bidirectional": self.additional_parameters.bidirectional,
+            "nonlinear": self.additional_parameters.nonlinear
         }
         with open(self._parameters_file(model_directory), "w") as f:
             json.dump(parameters, f, indent=4)
 
     def test(self, session, test_set, train = False):
-        state = None
-        iop = tf.global_variables_initializer()
-        loc = tf.local_variables_initializer()
-        session.run(iop)
-        session.run(loc)       
+        state = None       
         epoch_cost = epoch_iteration = accuracy = num_batches = 0
-        for start_document, context, labels, seq_len, mask, _ in test_set.epoch(self.time_steps, self.batch_size,
-                                                                                args_dim=self.additional_parameters.args_dim):
+        for start_document, context, labels, seq_len, mask, _ in test_set.epoch(
+                                                                 self.time_steps, self.batch_size,
+                                                                 args_dim=self.additional_parameters.args_dim,
+                                                                 encode_int=self.additional_parameters.encode_int):
             feed_dict={
                 self.input: context,
                 self.labels: labels,
@@ -299,18 +361,22 @@ class RNN(object):
             else:
                 feed_dict[self.state] = parameters.state
             if self.additional_parameters.args_dim:
-                feed_dict[self.inputs] = context[0]
+                feed_dict[self.input] = context[0]
                 feed_dict[self.input_args] = context[1]
+            if self.additional_parameters.encode_int:
+                feed_dict[self.input] = context[0]
+                feed_dict[self.encoded_int_args] = context[1]
+            
             if train:
-                _ ,cost, state, acc = session.run([self.train_step, self.cost, self.next_state, self.accuracy],
+                _ , _, cost, state, acc = session.run([self.train_step, self.iteration, self.cost, self.next_state, self.accuracy],
                                             feed_dict=feed_dict)
             else:
-                cost, state, acc = session.run([self.cost, self.next_state, self.accuracy],
+                _, cost, state, acc = session.run([self.cost, self.iteration, self.next_state, self.accuracy],
                                             feed_dict=feed_dict)
             epoch_cost += cost
             accuracy += acc
             num_batches += 1
-            epoch_iteration += self.time_steps
+            epoch_iteration += np.sum(seq_len)
         return self.perplexity(epoch_cost, epoch_iteration), accuracy/num_batches
 
 

@@ -114,8 +114,8 @@ def bindCode(class_file, source):
             #    offset += 1
 
             if instruction.args:
-                methodLines[byteIndex+offset] =  (instruction.bytecode[2:],len(embendingLayer)-1, currentType) 
-                '''
+                #methodLines[byteIndex+offset] =  (instruction.bytecode[2:],len(embendingLayer)-1, currentType) 
+                
                 for arg, fromPool, frm, size in zip(instruction.argValues,instruction.constArg,
                                     instruction.argsFormat.split(','),instruction.argsCount):
 
@@ -128,7 +128,7 @@ def bindCode(class_file, source):
                             arg = frm.format(arg)
                     methodLines[byteIndex+offset] =  (arg,len(embendingLayer)-1, currentType) 
                     offset += size
-                '''
+                
             if temp_Type:
                 currentType = temp_Type
             #print(methodLines[str(byteIndex) + " " + bytecode])

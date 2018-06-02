@@ -1,0 +1,658 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "3": [
+      "java/nio/charset/Charset.forName:(Ljava/lang/String;)Ljava/nio/charset/Charset;",
+      0,
+      0
+    ],
+    "5": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "6": [
+      "org/apache/commons/codec/net/BCodec.<init>:(Ljava/nio/charset/Charset;)V",
+      0,
+      0
+    ],
+    "8": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getEncoding": {
+    "0": [
+      "ldc",
+      0,
+      0
+    ],
+    "1": [
+      "B",
+      0,
+      0
+    ],
+    "2": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "doEncoding": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "5",
+      1,
+      1
+    ],
+    "4": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "5": [
+      "areturn",
+      1,
+      0
+    ],
+    "6": [
+      "aload_1",
+      0,
+      0
+    ],
+    "7": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/codec/binary/Base64.encodeBase64:([B)[B",
+      0,
+      0
+    ],
+    "10": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "doDecoding": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "5",
+      1,
+      1
+    ],
+    "4": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "5": [
+      "areturn",
+      1,
+      0
+    ],
+    "6": [
+      "aload_1",
+      0,
+      0
+    ],
+    "7": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/codec/binary/Base64.decodeBase64:([B)[B",
+      0,
+      0
+    ],
+    "10": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "encode": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "5",
+      1,
+      1
+    ],
+    "4": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "5": [
+      "areturn",
+      1,
+      0
+    ],
+    "6": [
+      "aload_1",
+      1,
+      0
+    ],
+    "7": [
+      "instanceof",
+      1,
+      0
+    ],
+    "8": [
+      "java/lang/String",
+      1,
+      0
+    ],
+    "10": [
+      "ifeq",
+      1,
+      0
+    ],
+    "11": [
+      "12",
+      1,
+      0
+    ],
+    "13": [
+      "aload_0",
+      1,
+      0
+    ],
+    "14": [
+      "aload_1",
+      1,
+      0
+    ],
+    "15": [
+      "checkcast",
+      1,
+      0
+    ],
+    "16": [
+      "java/lang/String",
+      1,
+      0
+    ],
+    "18": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "19": [
+      "org/apache/commons/codec/net/BCodec.encode:(Ljava/lang/String;)Ljava/lang/String;",
+      1,
+      0
+    ],
+    "21": [
+      "areturn",
+      1,
+      0
+    ],
+    "22": [
+      "new",
+      2,
+      0
+    ],
+    "23": [
+      "org/apache/commons/codec/EncoderException",
+      2,
+      0
+    ],
+    "25": [
+      "dup",
+      2,
+      0
+    ],
+    "26": [
+      "new",
+      2,
+      0
+    ],
+    "27": [
+      "java/lang/StringBuilder",
+      2,
+      0
+    ],
+    "29": [
+      "dup",
+      2,
+      0
+    ],
+    "30": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "31": [
+      "java/lang/StringBuilder.<init>:()V",
+      2,
+      0
+    ],
+    "33": [
+      "ldc",
+      2,
+      0
+    ],
+    "34": [
+      "Objects of type ",
+      2,
+      0
+    ],
+    "35": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "36": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      2,
+      0
+    ],
+    "38": [
+      "aload_1",
+      2,
+      0
+    ],
+    "39": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "40": [
+      "java/lang/Object.getClass:()Ljava/lang/Class;",
+      2,
+      0
+    ],
+    "42": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "43": [
+      "java/lang/Class.getName:()Ljava/lang/String;",
+      2,
+      0
+    ],
+    "45": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "46": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      2,
+      0
+    ],
+    "48": [
+      "ldc",
+      2,
+      0
+    ],
+    "49": [
+      " cannot be encoded using BCodec",
+      2,
+      0
+    ],
+    "50": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "51": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      2,
+      0
+    ],
+    "53": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "54": [
+      "java/lang/StringBuilder.toString:()Ljava/lang/String;",
+      2,
+      0
+    ],
+    "56": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "57": [
+      "org/apache/commons/codec/EncoderException.<init>:(Ljava/lang/String;)V",
+      2,
+      0
+    ],
+    "59": [
+      "athrow",
+      2,
+      0
+    ]
+  },
+  "decode": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "5",
+      1,
+      1
+    ],
+    "4": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "5": [
+      "areturn",
+      1,
+      0
+    ],
+    "6": [
+      "aload_1",
+      1,
+      0
+    ],
+    "7": [
+      "instanceof",
+      1,
+      0
+    ],
+    "8": [
+      "java/lang/String",
+      1,
+      0
+    ],
+    "10": [
+      "ifeq",
+      1,
+      0
+    ],
+    "11": [
+      "12",
+      1,
+      0
+    ],
+    "13": [
+      "aload_0",
+      1,
+      0
+    ],
+    "14": [
+      "aload_1",
+      1,
+      0
+    ],
+    "15": [
+      "checkcast",
+      1,
+      0
+    ],
+    "16": [
+      "java/lang/String",
+      1,
+      0
+    ],
+    "18": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "19": [
+      "org/apache/commons/codec/net/BCodec.decode:(Ljava/lang/String;)Ljava/lang/String;",
+      1,
+      0
+    ],
+    "21": [
+      "areturn",
+      1,
+      0
+    ],
+    "22": [
+      "new",
+      2,
+      0
+    ],
+    "23": [
+      "org/apache/commons/codec/DecoderException",
+      2,
+      0
+    ],
+    "25": [
+      "dup",
+      2,
+      0
+    ],
+    "26": [
+      "new",
+      2,
+      0
+    ],
+    "27": [
+      "java/lang/StringBuilder",
+      2,
+      0
+    ],
+    "29": [
+      "dup",
+      2,
+      0
+    ],
+    "30": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "31": [
+      "java/lang/StringBuilder.<init>:()V",
+      2,
+      0
+    ],
+    "33": [
+      "ldc",
+      2,
+      0
+    ],
+    "34": [
+      "Objects of type ",
+      2,
+      0
+    ],
+    "35": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "36": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      2,
+      0
+    ],
+    "38": [
+      "aload_1",
+      2,
+      0
+    ],
+    "39": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "40": [
+      "java/lang/Object.getClass:()Ljava/lang/Class;",
+      2,
+      0
+    ],
+    "42": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "43": [
+      "java/lang/Class.getName:()Ljava/lang/String;",
+      2,
+      0
+    ],
+    "45": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "46": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      2,
+      0
+    ],
+    "48": [
+      "ldc",
+      2,
+      0
+    ],
+    "49": [
+      " cannot be decoded using BCodec",
+      2,
+      0
+    ],
+    "50": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "51": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      2,
+      0
+    ],
+    "53": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "54": [
+      "java/lang/StringBuilder.toString:()Ljava/lang/String;",
+      2,
+      0
+    ],
+    "56": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "57": [
+      "org/apache/commons/codec/DecoderException.<init>:(Ljava/lang/String;)V",
+      2,
+      0
+    ],
+    "59": [
+      "athrow",
+      2,
+      0
+    ]
+  },
+  "getCharset": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/codec/net/BCodec.charset:Ljava/nio/charset/Charset;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getDefaultCharset": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/codec/net/BCodec.charset:Ljava/nio/charset/Charset;",
+      0,
+      0
+    ],
+    "4": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "5": [
+      "java/nio/charset/Charset.name:()Ljava/lang/String;",
+      0,
+      0
+    ],
+    "7": [
+      "areturn",
+      0,
+      0
+    ]
+  }
+}

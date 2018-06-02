@@ -1,0 +1,2938 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "java/lang/Object.<init>:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "6": [
+      "newarray",
+      0,
+      0
+    ],
+    "7": [
+      "8",
+      0,
+      0
+    ],
+    "8": [
+      "putfield",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/codec/digest/XXHash32.oneByte:[B",
+      0,
+      0
+    ],
+    "11": [
+      "aload_0",
+      0,
+      0
+    ],
+    "12": [
+      "iconst_4",
+      0,
+      0
+    ],
+    "13": [
+      "newarray",
+      0,
+      0
+    ],
+    "14": [
+      "10",
+      0,
+      0
+    ],
+    "15": [
+      "putfield",
+      0,
+      0
+    ],
+    "16": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      0,
+      0
+    ],
+    "18": [
+      "aload_0",
+      0,
+      0
+    ],
+    "19": [
+      "bipush",
+      0,
+      0
+    ],
+    "20": [
+      "16",
+      0,
+      0
+    ],
+    "21": [
+      "newarray",
+      0,
+      0
+    ],
+    "22": [
+      "8",
+      0,
+      0
+    ],
+    "23": [
+      "putfield",
+      0,
+      0
+    ],
+    "24": [
+      "org/apache/commons/codec/digest/XXHash32.buffer:[B",
+      0,
+      0
+    ],
+    "26": [
+      "aload_0",
+      0,
+      0
+    ],
+    "27": [
+      "iload_1",
+      0,
+      0
+    ],
+    "28": [
+      "putfield",
+      0,
+      0
+    ],
+    "29": [
+      "org/apache/commons/codec/digest/XXHash32.seed:I",
+      0,
+      0
+    ],
+    "31": [
+      "aload_0",
+      0,
+      0
+    ],
+    "32": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "33": [
+      "org/apache/commons/codec/digest/XXHash32.initializeState:()V",
+      0,
+      0
+    ],
+    "35": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "reset": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/codec/digest/XXHash32.initializeState:()V",
+      0,
+      0
+    ],
+    "4": [
+      "aload_0",
+      0,
+      0
+    ],
+    "5": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "6": [
+      "putfield",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/codec/digest/XXHash32.totalLen:I",
+      0,
+      0
+    ],
+    "9": [
+      "aload_0",
+      0,
+      0
+    ],
+    "10": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "11": [
+      "putfield",
+      0,
+      0
+    ],
+    "12": [
+      "org/apache/commons/codec/digest/XXHash32.pos:I",
+      0,
+      0
+    ],
+    "14": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "update": {
+    "0": [
+      "iload_3",
+      1,
+      1
+    ],
+    "1": [
+      "ifgt",
+      1,
+      1
+    ],
+    "2": [
+      "4",
+      1,
+      1
+    ],
+    "4": [
+      "return",
+      1,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "dup",
+      0,
+      0
+    ],
+    "7": [
+      "getfield",
+      0,
+      0
+    ],
+    "8": [
+      "org/apache/commons/codec/digest/XXHash32.totalLen:I",
+      0,
+      0
+    ],
+    "10": [
+      "iload_3",
+      0,
+      0
+    ],
+    "11": [
+      "iadd",
+      0,
+      0
+    ],
+    "12": [
+      "putfield",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/codec/digest/XXHash32.totalLen:I",
+      0,
+      0
+    ],
+    "15": [
+      "iload_2",
+      0,
+      0
+    ],
+    "16": [
+      "iload_3",
+      0,
+      0
+    ],
+    "17": [
+      "iadd",
+      0,
+      0
+    ],
+    "18": [
+      "istore",
+      0,
+      0
+    ],
+    "19": [
+      "#4",
+      0,
+      0
+    ],
+    "20": [
+      "aload_0",
+      1,
+      1
+    ],
+    "21": [
+      "getfield",
+      1,
+      1
+    ],
+    "22": [
+      "org/apache/commons/codec/digest/XXHash32.pos:I",
+      1,
+      1
+    ],
+    "24": [
+      "iload_3",
+      1,
+      1
+    ],
+    "25": [
+      "iadd",
+      1,
+      1
+    ],
+    "26": [
+      "bipush",
+      1,
+      1
+    ],
+    "27": [
+      "16",
+      1,
+      1
+    ],
+    "28": [
+      "if_icmpge",
+      1,
+      1
+    ],
+    "29": [
+      "28",
+      1,
+      1
+    ],
+    "31": [
+      "aload_1",
+      1,
+      0
+    ],
+    "32": [
+      "iload_2",
+      1,
+      0
+    ],
+    "33": [
+      "aload_0",
+      1,
+      0
+    ],
+    "34": [
+      "getfield",
+      1,
+      0
+    ],
+    "35": [
+      "org/apache/commons/codec/digest/XXHash32.buffer:[B",
+      1,
+      0
+    ],
+    "37": [
+      "aload_0",
+      1,
+      0
+    ],
+    "38": [
+      "getfield",
+      1,
+      0
+    ],
+    "39": [
+      "org/apache/commons/codec/digest/XXHash32.pos:I",
+      1,
+      0
+    ],
+    "41": [
+      "iload_3",
+      1,
+      0
+    ],
+    "42": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "43": [
+      "java/lang/System.arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V",
+      1,
+      0
+    ],
+    "45": [
+      "aload_0",
+      1,
+      0
+    ],
+    "46": [
+      "dup",
+      1,
+      0
+    ],
+    "47": [
+      "getfield",
+      1,
+      0
+    ],
+    "48": [
+      "org/apache/commons/codec/digest/XXHash32.pos:I",
+      1,
+      0
+    ],
+    "50": [
+      "iload_3",
+      1,
+      0
+    ],
+    "51": [
+      "iadd",
+      1,
+      0
+    ],
+    "52": [
+      "putfield",
+      1,
+      0
+    ],
+    "53": [
+      "org/apache/commons/codec/digest/XXHash32.pos:I",
+      1,
+      0
+    ],
+    "55": [
+      "return",
+      1,
+      0
+    ],
+    "56": [
+      "aload_0",
+      1,
+      1
+    ],
+    "57": [
+      "getfield",
+      1,
+      1
+    ],
+    "58": [
+      "org/apache/commons/codec/digest/XXHash32.pos:I",
+      1,
+      1
+    ],
+    "60": [
+      "ifle",
+      1,
+      1
+    ],
+    "61": [
+      "41",
+      1,
+      1
+    ],
+    "63": [
+      "bipush",
+      1,
+      0
+    ],
+    "64": [
+      "16",
+      1,
+      0
+    ],
+    "65": [
+      "aload_0",
+      1,
+      0
+    ],
+    "66": [
+      "getfield",
+      1,
+      0
+    ],
+    "67": [
+      "org/apache/commons/codec/digest/XXHash32.pos:I",
+      1,
+      0
+    ],
+    "69": [
+      "isub",
+      1,
+      0
+    ],
+    "70": [
+      "istore",
+      1,
+      0
+    ],
+    "71": [
+      "#5",
+      1,
+      0
+    ],
+    "72": [
+      "aload_1",
+      1,
+      0
+    ],
+    "73": [
+      "iload_2",
+      1,
+      0
+    ],
+    "74": [
+      "aload_0",
+      1,
+      0
+    ],
+    "75": [
+      "getfield",
+      1,
+      0
+    ],
+    "76": [
+      "org/apache/commons/codec/digest/XXHash32.buffer:[B",
+      1,
+      0
+    ],
+    "78": [
+      "aload_0",
+      1,
+      0
+    ],
+    "79": [
+      "getfield",
+      1,
+      0
+    ],
+    "80": [
+      "org/apache/commons/codec/digest/XXHash32.pos:I",
+      1,
+      0
+    ],
+    "82": [
+      "iload",
+      1,
+      0
+    ],
+    "83": [
+      "#5",
+      1,
+      0
+    ],
+    "84": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "85": [
+      "java/lang/System.arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V",
+      1,
+      0
+    ],
+    "87": [
+      "aload_0",
+      1,
+      0
+    ],
+    "88": [
+      "aload_0",
+      1,
+      0
+    ],
+    "89": [
+      "getfield",
+      1,
+      0
+    ],
+    "90": [
+      "org/apache/commons/codec/digest/XXHash32.buffer:[B",
+      1,
+      0
+    ],
+    "92": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "93": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "94": [
+      "org/apache/commons/codec/digest/XXHash32.process:([BI)V",
+      1,
+      0
+    ],
+    "96": [
+      "iload_2",
+      1,
+      0
+    ],
+    "97": [
+      "iload",
+      1,
+      0
+    ],
+    "98": [
+      "#5",
+      1,
+      0
+    ],
+    "99": [
+      "iadd",
+      1,
+      0
+    ],
+    "100": [
+      "istore_2",
+      1,
+      0
+    ],
+    "101": [
+      "iload",
+      0,
+      0
+    ],
+    "102": [
+      "#4",
+      0,
+      0
+    ],
+    "103": [
+      "bipush",
+      0,
+      0
+    ],
+    "104": [
+      "16",
+      0,
+      0
+    ],
+    "105": [
+      "isub",
+      0,
+      0
+    ],
+    "106": [
+      "istore",
+      0,
+      0
+    ],
+    "107": [
+      "#5",
+      0,
+      0
+    ],
+    "108": [
+      "iload_2",
+      1,
+      3
+    ],
+    "109": [
+      "iload",
+      1,
+      3
+    ],
+    "110": [
+      "#5",
+      1,
+      3
+    ],
+    "111": [
+      "if_icmpgt",
+      1,
+      3
+    ],
+    "112": [
+      "15",
+      1,
+      3
+    ],
+    "114": [
+      "aload_0",
+      1,
+      0
+    ],
+    "115": [
+      "aload_1",
+      1,
+      0
+    ],
+    "116": [
+      "iload_2",
+      1,
+      0
+    ],
+    "117": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "118": [
+      "org/apache/commons/codec/digest/XXHash32.process:([BI)V",
+      1,
+      0
+    ],
+    "120": [
+      "iinc",
+      1,
+      0
+    ],
+    "121": [
+      "#2",
+      1,
+      0
+    ],
+    "122": [
+      "-89",
+      1,
+      0
+    ],
+    "123": [
+      "goto",
+      1,
+      3
+    ],
+    "124": [
+      "-15",
+      1,
+      3
+    ],
+    "126": [
+      "iload_2",
+      1,
+      1
+    ],
+    "127": [
+      "iload",
+      1,
+      1
+    ],
+    "128": [
+      "#4",
+      1,
+      1
+    ],
+    "129": [
+      "if_icmpge",
+      1,
+      1
+    ],
+    "130": [
+      "25",
+      1,
+      1
+    ],
+    "132": [
+      "aload_0",
+      1,
+      0
+    ],
+    "133": [
+      "iload",
+      1,
+      0
+    ],
+    "134": [
+      "#4",
+      1,
+      0
+    ],
+    "135": [
+      "iload_2",
+      1,
+      0
+    ],
+    "136": [
+      "isub",
+      1,
+      0
+    ],
+    "137": [
+      "putfield",
+      1,
+      0
+    ],
+    "138": [
+      "org/apache/commons/codec/digest/XXHash32.pos:I",
+      1,
+      0
+    ],
+    "140": [
+      "aload_1",
+      1,
+      0
+    ],
+    "141": [
+      "iload_2",
+      1,
+      0
+    ],
+    "142": [
+      "aload_0",
+      1,
+      0
+    ],
+    "143": [
+      "getfield",
+      1,
+      0
+    ],
+    "144": [
+      "org/apache/commons/codec/digest/XXHash32.buffer:[B",
+      1,
+      0
+    ],
+    "146": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "147": [
+      "aload_0",
+      1,
+      0
+    ],
+    "148": [
+      "getfield",
+      1,
+      0
+    ],
+    "149": [
+      "org/apache/commons/codec/digest/XXHash32.pos:I",
+      1,
+      0
+    ],
+    "151": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "152": [
+      "java/lang/System.arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V",
+      1,
+      0
+    ],
+    "154": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "getValue": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "getfield",
+      1,
+      1
+    ],
+    "2": [
+      "org/apache/commons/codec/digest/XXHash32.totalLen:I",
+      1,
+      1
+    ],
+    "4": [
+      "bipush",
+      1,
+      1
+    ],
+    "5": [
+      "16",
+      1,
+      1
+    ],
+    "6": [
+      "if_icmple",
+      1,
+      1
+    ],
+    "7": [
+      "53",
+      1,
+      1
+    ],
+    "9": [
+      "aload_0",
+      1,
+      0
+    ],
+    "10": [
+      "getfield",
+      1,
+      0
+    ],
+    "11": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      1,
+      0
+    ],
+    "13": [
+      "iconst_0",
+      1,
+      0
+    ],
+    "14": [
+      "iaload",
+      1,
+      0
+    ],
+    "15": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "16": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "17": [
+      "java/lang/Integer.rotateLeft:(II)I",
+      1,
+      0
+    ],
+    "19": [
+      "aload_0",
+      1,
+      0
+    ],
+    "20": [
+      "getfield",
+      1,
+      0
+    ],
+    "21": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      1,
+      0
+    ],
+    "23": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "24": [
+      "iaload",
+      1,
+      0
+    ],
+    "25": [
+      "bipush",
+      1,
+      0
+    ],
+    "26": [
+      "7",
+      1,
+      0
+    ],
+    "27": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "28": [
+      "java/lang/Integer.rotateLeft:(II)I",
+      1,
+      0
+    ],
+    "30": [
+      "iadd",
+      1,
+      0
+    ],
+    "31": [
+      "aload_0",
+      1,
+      0
+    ],
+    "32": [
+      "getfield",
+      1,
+      0
+    ],
+    "33": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      1,
+      0
+    ],
+    "35": [
+      "iconst_2",
+      1,
+      0
+    ],
+    "36": [
+      "iaload",
+      1,
+      0
+    ],
+    "37": [
+      "bipush",
+      1,
+      0
+    ],
+    "38": [
+      "12",
+      1,
+      0
+    ],
+    "39": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "40": [
+      "java/lang/Integer.rotateLeft:(II)I",
+      1,
+      0
+    ],
+    "42": [
+      "iadd",
+      1,
+      0
+    ],
+    "43": [
+      "aload_0",
+      1,
+      0
+    ],
+    "44": [
+      "getfield",
+      1,
+      0
+    ],
+    "45": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      1,
+      0
+    ],
+    "47": [
+      "iconst_3",
+      1,
+      0
+    ],
+    "48": [
+      "iaload",
+      1,
+      0
+    ],
+    "49": [
+      "bipush",
+      1,
+      0
+    ],
+    "50": [
+      "18",
+      1,
+      0
+    ],
+    "51": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "52": [
+      "java/lang/Integer.rotateLeft:(II)I",
+      1,
+      0
+    ],
+    "54": [
+      "iadd",
+      1,
+      0
+    ],
+    "55": [
+      "istore_1",
+      1,
+      0
+    ],
+    "56": [
+      "goto",
+      1,
+      0
+    ],
+    "57": [
+      "13",
+      1,
+      0
+    ],
+    "59": [
+      "aload_0",
+      2,
+      0
+    ],
+    "60": [
+      "getfield",
+      2,
+      0
+    ],
+    "61": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      2,
+      0
+    ],
+    "63": [
+      "iconst_2",
+      2,
+      0
+    ],
+    "64": [
+      "iaload",
+      2,
+      0
+    ],
+    "65": [
+      "ldc",
+      2,
+      0
+    ],
+    "66": [
+      "374761393",
+      2,
+      0
+    ],
+    "67": [
+      "iadd",
+      2,
+      0
+    ],
+    "68": [
+      "istore_1",
+      2,
+      0
+    ],
+    "69": [
+      "iload_1",
+      0,
+      0
+    ],
+    "70": [
+      "aload_0",
+      0,
+      0
+    ],
+    "71": [
+      "getfield",
+      0,
+      0
+    ],
+    "72": [
+      "org/apache/commons/codec/digest/XXHash32.totalLen:I",
+      0,
+      0
+    ],
+    "74": [
+      "iadd",
+      0,
+      0
+    ],
+    "75": [
+      "istore_1",
+      0,
+      0
+    ],
+    "76": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "77": [
+      "istore_2",
+      0,
+      0
+    ],
+    "78": [
+      "aload_0",
+      0,
+      0
+    ],
+    "79": [
+      "getfield",
+      0,
+      0
+    ],
+    "80": [
+      "org/apache/commons/codec/digest/XXHash32.pos:I",
+      0,
+      0
+    ],
+    "82": [
+      "iconst_4",
+      0,
+      0
+    ],
+    "83": [
+      "isub",
+      0,
+      0
+    ],
+    "84": [
+      "istore_3",
+      0,
+      0
+    ],
+    "85": [
+      "iload_2",
+      1,
+      4
+    ],
+    "86": [
+      "iload_3",
+      1,
+      4
+    ],
+    "87": [
+      "if_icmpgt",
+      1,
+      4
+    ],
+    "88": [
+      "31",
+      1,
+      4
+    ],
+    "90": [
+      "iload_1",
+      1,
+      0
+    ],
+    "91": [
+      "aload_0",
+      1,
+      0
+    ],
+    "92": [
+      "getfield",
+      1,
+      0
+    ],
+    "93": [
+      "org/apache/commons/codec/digest/XXHash32.buffer:[B",
+      1,
+      0
+    ],
+    "95": [
+      "iload_2",
+      1,
+      0
+    ],
+    "96": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "97": [
+      "org/apache/commons/codec/digest/XXHash32.getInt:([BI)I",
+      1,
+      0
+    ],
+    "99": [
+      "ldc",
+      1,
+      0
+    ],
+    "100": [
+      "3266489917",
+      1,
+      0
+    ],
+    "101": [
+      "imul",
+      1,
+      0
+    ],
+    "102": [
+      "iadd",
+      1,
+      0
+    ],
+    "103": [
+      "bipush",
+      1,
+      0
+    ],
+    "104": [
+      "17",
+      1,
+      0
+    ],
+    "105": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "106": [
+      "java/lang/Integer.rotateLeft:(II)I",
+      1,
+      0
+    ],
+    "108": [
+      "ldc",
+      1,
+      0
+    ],
+    "109": [
+      "668265263",
+      1,
+      0
+    ],
+    "110": [
+      "imul",
+      1,
+      0
+    ],
+    "111": [
+      "istore_1",
+      1,
+      0
+    ],
+    "112": [
+      "iinc",
+      1,
+      0
+    ],
+    "113": [
+      "#2",
+      1,
+      0
+    ],
+    "114": [
+      "-89",
+      1,
+      0
+    ],
+    "115": [
+      "goto",
+      1,
+      4
+    ],
+    "116": [
+      "-30",
+      1,
+      4
+    ],
+    "118": [
+      "iload_2",
+      1,
+      3
+    ],
+    "119": [
+      "aload_0",
+      1,
+      3
+    ],
+    "120": [
+      "getfield",
+      1,
+      3
+    ],
+    "121": [
+      "org/apache/commons/codec/digest/XXHash32.pos:I",
+      1,
+      3
+    ],
+    "123": [
+      "if_icmpge",
+      1,
+      3
+    ],
+    "124": [
+      "33",
+      1,
+      3
+    ],
+    "126": [
+      "iload_1",
+      1,
+      0
+    ],
+    "127": [
+      "aload_0",
+      1,
+      0
+    ],
+    "128": [
+      "getfield",
+      1,
+      0
+    ],
+    "129": [
+      "org/apache/commons/codec/digest/XXHash32.buffer:[B",
+      1,
+      0
+    ],
+    "131": [
+      "iload_2",
+      1,
+      0
+    ],
+    "132": [
+      "iinc",
+      1,
+      0
+    ],
+    "133": [
+      "#2",
+      1,
+      0
+    ],
+    "134": [
+      "51",
+      1,
+      0
+    ],
+    "135": [
+      "baload",
+      1,
+      0
+    ],
+    "136": [
+      "sipush",
+      1,
+      0
+    ],
+    "137": [
+      "255",
+      1,
+      0
+    ],
+    "139": [
+      "iand",
+      1,
+      0
+    ],
+    "140": [
+      "ldc",
+      1,
+      0
+    ],
+    "141": [
+      "374761393",
+      1,
+      0
+    ],
+    "142": [
+      "imul",
+      1,
+      0
+    ],
+    "143": [
+      "iadd",
+      1,
+      0
+    ],
+    "144": [
+      "bipush",
+      1,
+      0
+    ],
+    "145": [
+      "11",
+      1,
+      0
+    ],
+    "146": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "147": [
+      "java/lang/Integer.rotateLeft:(II)I",
+      1,
+      0
+    ],
+    "149": [
+      "ldc",
+      1,
+      0
+    ],
+    "150": [
+      "2654435761",
+      1,
+      0
+    ],
+    "151": [
+      "imul",
+      1,
+      0
+    ],
+    "152": [
+      "istore_1",
+      1,
+      0
+    ],
+    "153": [
+      "goto",
+      1,
+      3
+    ],
+    "154": [
+      "-35",
+      1,
+      3
+    ],
+    "156": [
+      "iload_1",
+      0,
+      0
+    ],
+    "157": [
+      "iload_1",
+      0,
+      0
+    ],
+    "158": [
+      "bipush",
+      0,
+      0
+    ],
+    "159": [
+      "15",
+      0,
+      0
+    ],
+    "160": [
+      "iushr",
+      0,
+      0
+    ],
+    "161": [
+      "ixor",
+      0,
+      0
+    ],
+    "162": [
+      "istore_1",
+      0,
+      0
+    ],
+    "163": [
+      "iload_1",
+      0,
+      0
+    ],
+    "164": [
+      "ldc",
+      0,
+      0
+    ],
+    "165": [
+      "2246822519",
+      0,
+      0
+    ],
+    "166": [
+      "imul",
+      0,
+      0
+    ],
+    "167": [
+      "istore_1",
+      0,
+      0
+    ],
+    "168": [
+      "iload_1",
+      0,
+      0
+    ],
+    "169": [
+      "iload_1",
+      0,
+      0
+    ],
+    "170": [
+      "bipush",
+      0,
+      0
+    ],
+    "171": [
+      "13",
+      0,
+      0
+    ],
+    "172": [
+      "iushr",
+      0,
+      0
+    ],
+    "173": [
+      "ixor",
+      0,
+      0
+    ],
+    "174": [
+      "istore_1",
+      0,
+      0
+    ],
+    "175": [
+      "iload_1",
+      0,
+      0
+    ],
+    "176": [
+      "ldc",
+      0,
+      0
+    ],
+    "177": [
+      "3266489917",
+      0,
+      0
+    ],
+    "178": [
+      "imul",
+      0,
+      0
+    ],
+    "179": [
+      "istore_1",
+      0,
+      0
+    ],
+    "180": [
+      "iload_1",
+      0,
+      0
+    ],
+    "181": [
+      "iload_1",
+      0,
+      0
+    ],
+    "182": [
+      "bipush",
+      0,
+      0
+    ],
+    "183": [
+      "16",
+      0,
+      0
+    ],
+    "184": [
+      "iushr",
+      0,
+      0
+    ],
+    "185": [
+      "ixor",
+      0,
+      0
+    ],
+    "186": [
+      "istore_1",
+      0,
+      0
+    ],
+    "187": [
+      "iload_1",
+      0,
+      0
+    ],
+    "188": [
+      "i2l",
+      0,
+      0
+    ],
+    "189": [
+      "ldc2_w",
+      0,
+      0
+    ],
+    "190": [
+      "4294967295",
+      0,
+      0
+    ],
+    "192": [
+      "land",
+      0,
+      0
+    ],
+    "193": [
+      "lreturn",
+      0,
+      0
+    ]
+  },
+  "getInt": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "iload_1",
+      0,
+      0
+    ],
+    "2": [
+      "iconst_4",
+      0,
+      0
+    ],
+    "3": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "4": [
+      "org/apache/commons/codec/digest/XXHash32.fromLittleEndian:([BII)J",
+      0,
+      0
+    ],
+    "6": [
+      "ldc2_w",
+      0,
+      0
+    ],
+    "7": [
+      "4294967295",
+      0,
+      0
+    ],
+    "9": [
+      "land",
+      0,
+      0
+    ],
+    "10": [
+      "l2i",
+      0,
+      0
+    ],
+    "11": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "initializeState": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      0,
+      0
+    ],
+    "4": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "5": [
+      "aload_0",
+      0,
+      0
+    ],
+    "6": [
+      "getfield",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/codec/digest/XXHash32.seed:I",
+      0,
+      0
+    ],
+    "9": [
+      "ldc",
+      0,
+      0
+    ],
+    "10": [
+      "2654435761",
+      0,
+      0
+    ],
+    "11": [
+      "iadd",
+      0,
+      0
+    ],
+    "12": [
+      "ldc",
+      0,
+      0
+    ],
+    "13": [
+      "2246822519",
+      0,
+      0
+    ],
+    "14": [
+      "iadd",
+      0,
+      0
+    ],
+    "15": [
+      "iastore",
+      0,
+      0
+    ],
+    "16": [
+      "aload_0",
+      0,
+      0
+    ],
+    "17": [
+      "getfield",
+      0,
+      0
+    ],
+    "18": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      0,
+      0
+    ],
+    "20": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "21": [
+      "aload_0",
+      0,
+      0
+    ],
+    "22": [
+      "getfield",
+      0,
+      0
+    ],
+    "23": [
+      "org/apache/commons/codec/digest/XXHash32.seed:I",
+      0,
+      0
+    ],
+    "25": [
+      "ldc",
+      0,
+      0
+    ],
+    "26": [
+      "2246822519",
+      0,
+      0
+    ],
+    "27": [
+      "iadd",
+      0,
+      0
+    ],
+    "28": [
+      "iastore",
+      0,
+      0
+    ],
+    "29": [
+      "aload_0",
+      0,
+      0
+    ],
+    "30": [
+      "getfield",
+      0,
+      0
+    ],
+    "31": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      0,
+      0
+    ],
+    "33": [
+      "iconst_2",
+      0,
+      0
+    ],
+    "34": [
+      "aload_0",
+      0,
+      0
+    ],
+    "35": [
+      "getfield",
+      0,
+      0
+    ],
+    "36": [
+      "org/apache/commons/codec/digest/XXHash32.seed:I",
+      0,
+      0
+    ],
+    "38": [
+      "iastore",
+      0,
+      0
+    ],
+    "39": [
+      "aload_0",
+      0,
+      0
+    ],
+    "40": [
+      "getfield",
+      0,
+      0
+    ],
+    "41": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      0,
+      0
+    ],
+    "43": [
+      "iconst_3",
+      0,
+      0
+    ],
+    "44": [
+      "aload_0",
+      0,
+      0
+    ],
+    "45": [
+      "getfield",
+      0,
+      0
+    ],
+    "46": [
+      "org/apache/commons/codec/digest/XXHash32.seed:I",
+      0,
+      0
+    ],
+    "48": [
+      "ldc",
+      0,
+      0
+    ],
+    "49": [
+      "2654435761",
+      0,
+      0
+    ],
+    "50": [
+      "isub",
+      0,
+      0
+    ],
+    "51": [
+      "iastore",
+      0,
+      0
+    ],
+    "52": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "process": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      0,
+      0
+    ],
+    "4": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "5": [
+      "iaload",
+      0,
+      0
+    ],
+    "6": [
+      "istore_3",
+      0,
+      0
+    ],
+    "7": [
+      "aload_0",
+      0,
+      0
+    ],
+    "8": [
+      "getfield",
+      0,
+      0
+    ],
+    "9": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      0,
+      0
+    ],
+    "11": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "12": [
+      "iaload",
+      0,
+      0
+    ],
+    "13": [
+      "istore",
+      0,
+      0
+    ],
+    "14": [
+      "#4",
+      0,
+      0
+    ],
+    "15": [
+      "aload_0",
+      0,
+      0
+    ],
+    "16": [
+      "getfield",
+      0,
+      0
+    ],
+    "17": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      0,
+      0
+    ],
+    "19": [
+      "iconst_2",
+      0,
+      0
+    ],
+    "20": [
+      "iaload",
+      0,
+      0
+    ],
+    "21": [
+      "istore",
+      0,
+      0
+    ],
+    "22": [
+      "#5",
+      0,
+      0
+    ],
+    "23": [
+      "aload_0",
+      0,
+      0
+    ],
+    "24": [
+      "getfield",
+      0,
+      0
+    ],
+    "25": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      0,
+      0
+    ],
+    "27": [
+      "iconst_3",
+      0,
+      0
+    ],
+    "28": [
+      "iaload",
+      0,
+      0
+    ],
+    "29": [
+      "istore",
+      0,
+      0
+    ],
+    "30": [
+      "#6",
+      0,
+      0
+    ],
+    "31": [
+      "iload_3",
+      0,
+      0
+    ],
+    "32": [
+      "aload_1",
+      0,
+      0
+    ],
+    "33": [
+      "iload_2",
+      0,
+      0
+    ],
+    "34": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "35": [
+      "org/apache/commons/codec/digest/XXHash32.getInt:([BI)I",
+      0,
+      0
+    ],
+    "37": [
+      "ldc",
+      0,
+      0
+    ],
+    "38": [
+      "2246822519",
+      0,
+      0
+    ],
+    "39": [
+      "imul",
+      0,
+      0
+    ],
+    "40": [
+      "iadd",
+      0,
+      0
+    ],
+    "41": [
+      "bipush",
+      0,
+      0
+    ],
+    "42": [
+      "13",
+      0,
+      0
+    ],
+    "43": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "44": [
+      "java/lang/Integer.rotateLeft:(II)I",
+      0,
+      0
+    ],
+    "46": [
+      "ldc",
+      0,
+      0
+    ],
+    "47": [
+      "2654435761",
+      0,
+      0
+    ],
+    "48": [
+      "imul",
+      0,
+      0
+    ],
+    "49": [
+      "istore_3",
+      0,
+      0
+    ],
+    "50": [
+      "iload",
+      0,
+      0
+    ],
+    "51": [
+      "#4",
+      0,
+      0
+    ],
+    "52": [
+      "aload_1",
+      0,
+      0
+    ],
+    "53": [
+      "iload_2",
+      0,
+      0
+    ],
+    "54": [
+      "iconst_4",
+      0,
+      0
+    ],
+    "55": [
+      "iadd",
+      0,
+      0
+    ],
+    "56": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "57": [
+      "org/apache/commons/codec/digest/XXHash32.getInt:([BI)I",
+      0,
+      0
+    ],
+    "59": [
+      "ldc",
+      0,
+      0
+    ],
+    "60": [
+      "2246822519",
+      0,
+      0
+    ],
+    "61": [
+      "imul",
+      0,
+      0
+    ],
+    "62": [
+      "iadd",
+      0,
+      0
+    ],
+    "63": [
+      "bipush",
+      0,
+      0
+    ],
+    "64": [
+      "13",
+      0,
+      0
+    ],
+    "65": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "66": [
+      "java/lang/Integer.rotateLeft:(II)I",
+      0,
+      0
+    ],
+    "68": [
+      "ldc",
+      0,
+      0
+    ],
+    "69": [
+      "2654435761",
+      0,
+      0
+    ],
+    "70": [
+      "imul",
+      0,
+      0
+    ],
+    "71": [
+      "istore",
+      0,
+      0
+    ],
+    "72": [
+      "#4",
+      0,
+      0
+    ],
+    "73": [
+      "iload",
+      0,
+      0
+    ],
+    "74": [
+      "#5",
+      0,
+      0
+    ],
+    "75": [
+      "aload_1",
+      0,
+      0
+    ],
+    "76": [
+      "iload_2",
+      0,
+      0
+    ],
+    "77": [
+      "bipush",
+      0,
+      0
+    ],
+    "78": [
+      "8",
+      0,
+      0
+    ],
+    "79": [
+      "iadd",
+      0,
+      0
+    ],
+    "80": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "81": [
+      "org/apache/commons/codec/digest/XXHash32.getInt:([BI)I",
+      0,
+      0
+    ],
+    "83": [
+      "ldc",
+      0,
+      0
+    ],
+    "84": [
+      "2246822519",
+      0,
+      0
+    ],
+    "85": [
+      "imul",
+      0,
+      0
+    ],
+    "86": [
+      "iadd",
+      0,
+      0
+    ],
+    "87": [
+      "bipush",
+      0,
+      0
+    ],
+    "88": [
+      "13",
+      0,
+      0
+    ],
+    "89": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "90": [
+      "java/lang/Integer.rotateLeft:(II)I",
+      0,
+      0
+    ],
+    "92": [
+      "ldc",
+      0,
+      0
+    ],
+    "93": [
+      "2654435761",
+      0,
+      0
+    ],
+    "94": [
+      "imul",
+      0,
+      0
+    ],
+    "95": [
+      "istore",
+      0,
+      0
+    ],
+    "96": [
+      "#5",
+      0,
+      0
+    ],
+    "97": [
+      "iload",
+      0,
+      0
+    ],
+    "98": [
+      "#6",
+      0,
+      0
+    ],
+    "99": [
+      "aload_1",
+      0,
+      0
+    ],
+    "100": [
+      "iload_2",
+      0,
+      0
+    ],
+    "101": [
+      "bipush",
+      0,
+      0
+    ],
+    "102": [
+      "12",
+      0,
+      0
+    ],
+    "103": [
+      "iadd",
+      0,
+      0
+    ],
+    "104": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "105": [
+      "org/apache/commons/codec/digest/XXHash32.getInt:([BI)I",
+      0,
+      0
+    ],
+    "107": [
+      "ldc",
+      0,
+      0
+    ],
+    "108": [
+      "2246822519",
+      0,
+      0
+    ],
+    "109": [
+      "imul",
+      0,
+      0
+    ],
+    "110": [
+      "iadd",
+      0,
+      0
+    ],
+    "111": [
+      "bipush",
+      0,
+      0
+    ],
+    "112": [
+      "13",
+      0,
+      0
+    ],
+    "113": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "114": [
+      "java/lang/Integer.rotateLeft:(II)I",
+      0,
+      0
+    ],
+    "116": [
+      "ldc",
+      0,
+      0
+    ],
+    "117": [
+      "2654435761",
+      0,
+      0
+    ],
+    "118": [
+      "imul",
+      0,
+      0
+    ],
+    "119": [
+      "istore",
+      0,
+      0
+    ],
+    "120": [
+      "#6",
+      0,
+      0
+    ],
+    "121": [
+      "aload_0",
+      0,
+      0
+    ],
+    "122": [
+      "getfield",
+      0,
+      0
+    ],
+    "123": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      0,
+      0
+    ],
+    "125": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "126": [
+      "iload_3",
+      0,
+      0
+    ],
+    "127": [
+      "iastore",
+      0,
+      0
+    ],
+    "128": [
+      "aload_0",
+      0,
+      0
+    ],
+    "129": [
+      "getfield",
+      0,
+      0
+    ],
+    "130": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      0,
+      0
+    ],
+    "132": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "133": [
+      "iload",
+      0,
+      0
+    ],
+    "134": [
+      "#4",
+      0,
+      0
+    ],
+    "135": [
+      "iastore",
+      0,
+      0
+    ],
+    "136": [
+      "aload_0",
+      0,
+      0
+    ],
+    "137": [
+      "getfield",
+      0,
+      0
+    ],
+    "138": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      0,
+      0
+    ],
+    "140": [
+      "iconst_2",
+      0,
+      0
+    ],
+    "141": [
+      "iload",
+      0,
+      0
+    ],
+    "142": [
+      "#5",
+      0,
+      0
+    ],
+    "143": [
+      "iastore",
+      0,
+      0
+    ],
+    "144": [
+      "aload_0",
+      0,
+      0
+    ],
+    "145": [
+      "getfield",
+      0,
+      0
+    ],
+    "146": [
+      "org/apache/commons/codec/digest/XXHash32.state:[I",
+      0,
+      0
+    ],
+    "148": [
+      "iconst_3",
+      0,
+      0
+    ],
+    "149": [
+      "iload",
+      0,
+      0
+    ],
+    "150": [
+      "#6",
+      0,
+      0
+    ],
+    "151": [
+      "iastore",
+      0,
+      0
+    ],
+    "152": [
+      "aload_0",
+      0,
+      0
+    ],
+    "153": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "154": [
+      "putfield",
+      0,
+      0
+    ],
+    "155": [
+      "org/apache/commons/codec/digest/XXHash32.pos:I",
+      0,
+      0
+    ],
+    "157": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "fromLittleEndian": {
+    "0": [
+      "iload_2",
+      1,
+      1
+    ],
+    "1": [
+      "bipush",
+      1,
+      1
+    ],
+    "2": [
+      "8",
+      1,
+      1
+    ],
+    "3": [
+      "if_icmple",
+      1,
+      1
+    ],
+    "4": [
+      "13",
+      1,
+      1
+    ],
+    "6": [
+      "new",
+      1,
+      0
+    ],
+    "7": [
+      "java/lang/IllegalArgumentException",
+      1,
+      0
+    ],
+    "9": [
+      "dup",
+      1,
+      0
+    ],
+    "10": [
+      "ldc",
+      1,
+      0
+    ],
+    "11": [
+      "can't read more than eight bytes into a long value",
+      1,
+      0
+    ],
+    "12": [
+      "invokespecial",
+      1,
+      0
+    ],
+    "13": [
+      "java/lang/IllegalArgumentException.<init>:(Ljava/lang/String;)V",
+      1,
+      0
+    ],
+    "15": [
+      "athrow",
+      1,
+      0
+    ],
+    "16": [
+      "lconst_0",
+      0,
+      0
+    ],
+    "17": [
+      "lstore_3",
+      0,
+      0
+    ],
+    "18": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "19": [
+      "istore",
+      1,
+      4
+    ],
+    "20": [
+      "#5",
+      1,
+      4
+    ],
+    "21": [
+      "iload",
+      1,
+      4
+    ],
+    "22": [
+      "#5",
+      1,
+      4
+    ],
+    "23": [
+      "iload_2",
+      1,
+      4
+    ],
+    "24": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "25": [
+      "29",
+      1,
+      4
+    ],
+    "27": [
+      "lload_3",
+      1,
+      0
+    ],
+    "28": [
+      "aload_0",
+      1,
+      0
+    ],
+    "29": [
+      "iload_1",
+      1,
+      0
+    ],
+    "30": [
+      "iload",
+      1,
+      0
+    ],
+    "31": [
+      "#5",
+      1,
+      0
+    ],
+    "32": [
+      "iadd",
+      1,
+      0
+    ],
+    "33": [
+      "baload",
+      1,
+      0
+    ],
+    "34": [
+      "i2l",
+      1,
+      0
+    ],
+    "35": [
+      "ldc2_w",
+      1,
+      0
+    ],
+    "36": [
+      "255",
+      1,
+      0
+    ],
+    "38": [
+      "land",
+      1,
+      0
+    ],
+    "39": [
+      "bipush",
+      1,
+      0
+    ],
+    "40": [
+      "8",
+      1,
+      0
+    ],
+    "41": [
+      "iload",
+      1,
+      0
+    ],
+    "42": [
+      "#5",
+      1,
+      0
+    ],
+    "43": [
+      "imul",
+      1,
+      0
+    ],
+    "44": [
+      "lshl",
+      1,
+      0
+    ],
+    "45": [
+      "lor",
+      1,
+      0
+    ],
+    "46": [
+      "lstore_3",
+      1,
+      0
+    ],
+    "47": [
+      "iinc",
+      1,
+      0
+    ],
+    "48": [
+      "#5",
+      1,
+      0
+    ],
+    "49": [
+      "-89",
+      1,
+      0
+    ],
+    "50": [
+      "goto",
+      1,
+      4
+    ],
+    "51": [
+      "-29",
+      1,
+      4
+    ],
+    "53": [
+      "lload_3",
+      0,
+      0
+    ],
+    "54": [
+      "lreturn",
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,3069 @@
+{
+  "<init>": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "aload_1",
+      0,
+      0
+    ],
+    "2": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "3": [
+      "java/nio/charset/Charset.forName:(Ljava/lang/String;)Ljava/nio/charset/Charset;",
+      0,
+      0
+    ],
+    "5": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "6": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "7": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.<init>:(Ljava/nio/charset/Charset;Z)V",
+      0,
+      0
+    ],
+    "9": [
+      "return",
+      0,
+      0
+    ]
+  },
+  "encodeQuotedPrintable": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "5",
+      1,
+      1
+    ],
+    "4": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "5": [
+      "areturn",
+      1,
+      0
+    ],
+    "6": [
+      "aload_0",
+      1,
+      1
+    ],
+    "7": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "8": [
+      "7",
+      1,
+      1
+    ],
+    "10": [
+      "getstatic",
+      1,
+      0
+    ],
+    "11": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.PRINTABLE_CHARS:Ljava/util/BitSet;",
+      1,
+      0
+    ],
+    "13": [
+      "astore_0",
+      1,
+      0
+    ],
+    "14": [
+      "new",
+      0,
+      0
+    ],
+    "15": [
+      "java/io/ByteArrayOutputStream",
+      0,
+      0
+    ],
+    "17": [
+      "dup",
+      0,
+      0
+    ],
+    "18": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "19": [
+      "java/io/ByteArrayOutputStream.<init>:()V",
+      0,
+      0
+    ],
+    "21": [
+      "astore_3",
+      0,
+      0
+    ],
+    "22": [
+      "iload_2",
+      1,
+      1
+    ],
+    "23": [
+      "ifeq",
+      1,
+      1
+    ],
+    "24": [
+      "268",
+      1,
+      1
+    ],
+    "26": [
+      "iconst_1",
+      1,
+      0
+    ],
+    "27": [
+      "istore",
+      1,
+      0
+    ],
+    "28": [
+      "#4",
+      1,
+      0
+    ],
+    "29": [
+      "iconst_0",
+      2,
+      4
+    ],
+    "30": [
+      "istore",
+      2,
+      4
+    ],
+    "31": [
+      "#5",
+      2,
+      4
+    ],
+    "32": [
+      "iload",
+      2,
+      4
+    ],
+    "33": [
+      "#5",
+      2,
+      4
+    ],
+    "34": [
+      "aload_1",
+      2,
+      4
+    ],
+    "35": [
+      "arraylength",
+      2,
+      4
+    ],
+    "36": [
+      "iconst_3",
+      2,
+      4
+    ],
+    "37": [
+      "isub",
+      2,
+      4
+    ],
+    "38": [
+      "if_icmpge",
+      2,
+      4
+    ],
+    "39": [
+      "102",
+      2,
+      4
+    ],
+    "41": [
+      "iload",
+      2,
+      0
+    ],
+    "42": [
+      "#5",
+      2,
+      0
+    ],
+    "43": [
+      "aload_1",
+      2,
+      0
+    ],
+    "44": [
+      "invokestatic",
+      2,
+      0
+    ],
+    "45": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.getUnsignedOctet:(I[B)I",
+      2,
+      0
+    ],
+    "47": [
+      "istore",
+      2,
+      0
+    ],
+    "48": [
+      "#6",
+      2,
+      0
+    ],
+    "49": [
+      "iload",
+      3,
+      1
+    ],
+    "50": [
+      "#4",
+      3,
+      1
+    ],
+    "51": [
+      "bipush",
+      3,
+      1
+    ],
+    "52": [
+      "73",
+      3,
+      1
+    ],
+    "53": [
+      "if_icmpge",
+      3,
+      1
+    ],
+    "54": [
+      "31",
+      3,
+      1
+    ],
+    "56": [
+      "iload",
+      3,
+      0
+    ],
+    "57": [
+      "#4",
+      3,
+      0
+    ],
+    "58": [
+      "iload",
+      3,
+      0
+    ],
+    "59": [
+      "#6",
+      3,
+      0
+    ],
+    "60": [
+      "aload_0",
+      3,
+      0
+    ],
+    "61": [
+      "iload",
+      3,
+      0
+    ],
+    "62": [
+      "#6",
+      3,
+      0
+    ],
+    "63": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "64": [
+      "java/util/BitSet.get:(I)Z",
+      3,
+      0
+    ],
+    "66": [
+      "ifne",
+      3,
+      0
+    ],
+    "67": [
+      "7",
+      3,
+      0
+    ],
+    "69": [
+      "iconst_1",
+      3,
+      0
+    ],
+    "70": [
+      "goto",
+      3,
+      0
+    ],
+    "71": [
+      "4",
+      3,
+      0
+    ],
+    "73": [
+      "iconst_0",
+      3,
+      0
+    ],
+    "74": [
+      "aload_3",
+      3,
+      0
+    ],
+    "75": [
+      "invokestatic",
+      3,
+      0
+    ],
+    "76": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.encodeByte:(IZLjava/io/ByteArrayOutputStream;)I",
+      3,
+      0
+    ],
+    "78": [
+      "iadd",
+      3,
+      0
+    ],
+    "79": [
+      "istore",
+      3,
+      0
+    ],
+    "80": [
+      "#4",
+      3,
+      0
+    ],
+    "81": [
+      "goto",
+      3,
+      0
+    ],
+    "82": [
+      "53",
+      3,
+      0
+    ],
+    "84": [
+      "iload",
+      4,
+      0
+    ],
+    "85": [
+      "#6",
+      4,
+      0
+    ],
+    "86": [
+      "aload_0",
+      4,
+      0
+    ],
+    "87": [
+      "iload",
+      4,
+      0
+    ],
+    "88": [
+      "#6",
+      4,
+      0
+    ],
+    "89": [
+      "invokevirtual",
+      4,
+      0
+    ],
+    "90": [
+      "java/util/BitSet.get:(I)Z",
+      4,
+      0
+    ],
+    "92": [
+      "ifeq",
+      4,
+      0
+    ],
+    "93": [
+      "11",
+      4,
+      0
+    ],
+    "95": [
+      "iload",
+      4,
+      0
+    ],
+    "96": [
+      "#6",
+      4,
+      0
+    ],
+    "97": [
+      "invokestatic",
+      4,
+      0
+    ],
+    "98": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.isWhitespace:(I)Z",
+      4,
+      0
+    ],
+    "100": [
+      "ifeq",
+      4,
+      0
+    ],
+    "101": [
+      "7",
+      4,
+      0
+    ],
+    "103": [
+      "iconst_1",
+      4,
+      0
+    ],
+    "104": [
+      "goto",
+      4,
+      0
+    ],
+    "105": [
+      "4",
+      4,
+      0
+    ],
+    "107": [
+      "iconst_0",
+      4,
+      0
+    ],
+    "108": [
+      "aload_3",
+      4,
+      0
+    ],
+    "109": [
+      "invokestatic",
+      4,
+      0
+    ],
+    "110": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.encodeByte:(IZLjava/io/ByteArrayOutputStream;)I",
+      4,
+      0
+    ],
+    "112": [
+      "pop",
+      4,
+      0
+    ],
+    "113": [
+      "aload_3",
+      4,
+      0
+    ],
+    "114": [
+      "bipush",
+      4,
+      0
+    ],
+    "115": [
+      "61",
+      4,
+      0
+    ],
+    "116": [
+      "invokevirtual",
+      4,
+      0
+    ],
+    "117": [
+      "java/io/ByteArrayOutputStream.write:(I)V",
+      4,
+      0
+    ],
+    "119": [
+      "aload_3",
+      4,
+      0
+    ],
+    "120": [
+      "bipush",
+      4,
+      0
+    ],
+    "121": [
+      "13",
+      4,
+      0
+    ],
+    "122": [
+      "invokevirtual",
+      4,
+      0
+    ],
+    "123": [
+      "java/io/ByteArrayOutputStream.write:(I)V",
+      4,
+      0
+    ],
+    "125": [
+      "aload_3",
+      4,
+      0
+    ],
+    "126": [
+      "bipush",
+      4,
+      0
+    ],
+    "127": [
+      "10",
+      4,
+      0
+    ],
+    "128": [
+      "invokevirtual",
+      4,
+      0
+    ],
+    "129": [
+      "java/io/ByteArrayOutputStream.write:(I)V",
+      4,
+      0
+    ],
+    "131": [
+      "iconst_1",
+      4,
+      0
+    ],
+    "132": [
+      "istore",
+      4,
+      0
+    ],
+    "133": [
+      "#4",
+      4,
+      0
+    ],
+    "134": [
+      "iinc",
+      4,
+      0
+    ],
+    "135": [
+      "#5",
+      4,
+      0
+    ],
+    "136": [
+      "-89",
+      4,
+      0
+    ],
+    "137": [
+      "goto",
+      4,
+      4
+    ],
+    "138": [
+      "-105",
+      4,
+      4
+    ],
+    "140": [
+      "aload_1",
+      2,
+      0
+    ],
+    "141": [
+      "arraylength",
+      2,
+      0
+    ],
+    "142": [
+      "iconst_3",
+      2,
+      0
+    ],
+    "143": [
+      "isub",
+      2,
+      0
+    ],
+    "144": [
+      "aload_1",
+      2,
+      0
+    ],
+    "145": [
+      "invokestatic",
+      2,
+      0
+    ],
+    "146": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.getUnsignedOctet:(I[B)I",
+      2,
+      0
+    ],
+    "148": [
+      "istore",
+      2,
+      0
+    ],
+    "149": [
+      "#5",
+      2,
+      0
+    ],
+    "150": [
+      "aload_0",
+      2,
+      0
+    ],
+    "151": [
+      "iload",
+      2,
+      0
+    ],
+    "152": [
+      "#5",
+      2,
+      0
+    ],
+    "153": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "154": [
+      "java/util/BitSet.get:(I)Z",
+      2,
+      0
+    ],
+    "156": [
+      "ifeq",
+      2,
+      0
+    ],
+    "157": [
+      "18",
+      2,
+      0
+    ],
+    "159": [
+      "iload",
+      2,
+      0
+    ],
+    "160": [
+      "#5",
+      2,
+      0
+    ],
+    "161": [
+      "invokestatic",
+      2,
+      0
+    ],
+    "162": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.isWhitespace:(I)Z",
+      2,
+      0
+    ],
+    "164": [
+      "ifeq",
+      2,
+      0
+    ],
+    "165": [
+      "14",
+      2,
+      0
+    ],
+    "167": [
+      "iload",
+      2,
+      0
+    ],
+    "168": [
+      "#4",
+      2,
+      0
+    ],
+    "169": [
+      "bipush",
+      2,
+      0
+    ],
+    "170": [
+      "68",
+      2,
+      0
+    ],
+    "171": [
+      "if_icmple",
+      2,
+      0
+    ],
+    "172": [
+      "7",
+      2,
+      0
+    ],
+    "174": [
+      "iconst_1",
+      2,
+      0
+    ],
+    "175": [
+      "goto",
+      2,
+      0
+    ],
+    "176": [
+      "4",
+      2,
+      0
+    ],
+    "178": [
+      "iconst_0",
+      2,
+      0
+    ],
+    "179": [
+      "istore",
+      2,
+      0
+    ],
+    "180": [
+      "#6",
+      2,
+      0
+    ],
+    "181": [
+      "iload",
+      2,
+      0
+    ],
+    "182": [
+      "#4",
+      2,
+      0
+    ],
+    "183": [
+      "iload",
+      2,
+      0
+    ],
+    "184": [
+      "#5",
+      2,
+      0
+    ],
+    "185": [
+      "iload",
+      2,
+      0
+    ],
+    "186": [
+      "#6",
+      2,
+      0
+    ],
+    "187": [
+      "aload_3",
+      2,
+      0
+    ],
+    "188": [
+      "invokestatic",
+      2,
+      0
+    ],
+    "189": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.encodeByte:(IZLjava/io/ByteArrayOutputStream;)I",
+      2,
+      0
+    ],
+    "191": [
+      "iadd",
+      2,
+      0
+    ],
+    "192": [
+      "istore",
+      2,
+      0
+    ],
+    "193": [
+      "#4",
+      2,
+      0
+    ],
+    "194": [
+      "iload",
+      3,
+      1
+    ],
+    "195": [
+      "#4",
+      3,
+      1
+    ],
+    "196": [
+      "bipush",
+      3,
+      1
+    ],
+    "197": [
+      "71",
+      3,
+      1
+    ],
+    "198": [
+      "if_icmple",
+      3,
+      1
+    ],
+    "199": [
+      "21",
+      3,
+      1
+    ],
+    "201": [
+      "aload_3",
+      3,
+      0
+    ],
+    "202": [
+      "bipush",
+      3,
+      0
+    ],
+    "203": [
+      "61",
+      3,
+      0
+    ],
+    "204": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "205": [
+      "java/io/ByteArrayOutputStream.write:(I)V",
+      3,
+      0
+    ],
+    "207": [
+      "aload_3",
+      3,
+      0
+    ],
+    "208": [
+      "bipush",
+      3,
+      0
+    ],
+    "209": [
+      "13",
+      3,
+      0
+    ],
+    "210": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "211": [
+      "java/io/ByteArrayOutputStream.write:(I)V",
+      3,
+      0
+    ],
+    "213": [
+      "aload_3",
+      3,
+      0
+    ],
+    "214": [
+      "bipush",
+      3,
+      0
+    ],
+    "215": [
+      "10",
+      3,
+      0
+    ],
+    "216": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "217": [
+      "java/io/ByteArrayOutputStream.write:(I)V",
+      3,
+      0
+    ],
+    "219": [
+      "aload_1",
+      3,
+      4
+    ],
+    "220": [
+      "arraylength",
+      3,
+      4
+    ],
+    "221": [
+      "iconst_2",
+      3,
+      4
+    ],
+    "222": [
+      "isub",
+      3,
+      4
+    ],
+    "223": [
+      "istore",
+      3,
+      4
+    ],
+    "224": [
+      "#7",
+      3,
+      4
+    ],
+    "225": [
+      "iload",
+      3,
+      4
+    ],
+    "226": [
+      "#7",
+      3,
+      4
+    ],
+    "227": [
+      "aload_1",
+      3,
+      4
+    ],
+    "228": [
+      "arraylength",
+      3,
+      4
+    ],
+    "229": [
+      "if_icmpge",
+      3,
+      4
+    ],
+    "230": [
+      "59",
+      3,
+      4
+    ],
+    "232": [
+      "iload",
+      3,
+      0
+    ],
+    "233": [
+      "#7",
+      3,
+      0
+    ],
+    "234": [
+      "aload_1",
+      3,
+      0
+    ],
+    "235": [
+      "invokestatic",
+      3,
+      0
+    ],
+    "236": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.getUnsignedOctet:(I[B)I",
+      3,
+      0
+    ],
+    "238": [
+      "istore",
+      3,
+      0
+    ],
+    "239": [
+      "#5",
+      3,
+      0
+    ],
+    "240": [
+      "aload_0",
+      3,
+      0
+    ],
+    "241": [
+      "iload",
+      3,
+      0
+    ],
+    "242": [
+      "#5",
+      3,
+      0
+    ],
+    "243": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "244": [
+      "java/util/BitSet.get:(I)Z",
+      3,
+      0
+    ],
+    "246": [
+      "ifeq",
+      3,
+      0
+    ],
+    "247": [
+      "20",
+      3,
+      0
+    ],
+    "249": [
+      "iload",
+      3,
+      0
+    ],
+    "250": [
+      "#7",
+      3,
+      0
+    ],
+    "251": [
+      "aload_1",
+      3,
+      0
+    ],
+    "252": [
+      "arraylength",
+      3,
+      0
+    ],
+    "253": [
+      "iconst_2",
+      3,
+      0
+    ],
+    "254": [
+      "isub",
+      3,
+      0
+    ],
+    "255": [
+      "if_icmple",
+      3,
+      0
+    ],
+    "256": [
+      "15",
+      3,
+      0
+    ],
+    "258": [
+      "iload",
+      3,
+      0
+    ],
+    "259": [
+      "#5",
+      3,
+      0
+    ],
+    "260": [
+      "invokestatic",
+      3,
+      0
+    ],
+    "261": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.isWhitespace:(I)Z",
+      3,
+      0
+    ],
+    "263": [
+      "ifeq",
+      3,
+      0
+    ],
+    "264": [
+      "7",
+      3,
+      0
+    ],
+    "266": [
+      "iconst_1",
+      3,
+      0
+    ],
+    "267": [
+      "goto",
+      3,
+      0
+    ],
+    "268": [
+      "4",
+      3,
+      0
+    ],
+    "270": [
+      "iconst_0",
+      3,
+      0
+    ],
+    "271": [
+      "istore",
+      3,
+      0
+    ],
+    "272": [
+      "#6",
+      3,
+      0
+    ],
+    "273": [
+      "iload",
+      3,
+      0
+    ],
+    "274": [
+      "#5",
+      3,
+      0
+    ],
+    "275": [
+      "iload",
+      3,
+      0
+    ],
+    "276": [
+      "#6",
+      3,
+      0
+    ],
+    "277": [
+      "aload_3",
+      3,
+      0
+    ],
+    "278": [
+      "invokestatic",
+      3,
+      0
+    ],
+    "279": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.encodeByte:(IZLjava/io/ByteArrayOutputStream;)I",
+      3,
+      0
+    ],
+    "281": [
+      "pop",
+      3,
+      0
+    ],
+    "282": [
+      "iinc",
+      3,
+      0
+    ],
+    "283": [
+      "#7",
+      3,
+      0
+    ],
+    "284": [
+      "-89",
+      3,
+      0
+    ],
+    "285": [
+      "goto",
+      3,
+      4
+    ],
+    "286": [
+      "-60",
+      3,
+      4
+    ],
+    "288": [
+      "goto",
+      3,
+      2
+    ],
+    "289": [
+      "76",
+      3,
+      2
+    ],
+    "291": [
+      "aload_1",
+      4,
+      4
+    ],
+    "292": [
+      "astore",
+      4,
+      4
+    ],
+    "293": [
+      "#4",
+      4,
+      4
+    ],
+    "294": [
+      "aload",
+      4,
+      4
+    ],
+    "295": [
+      "#4",
+      4,
+      4
+    ],
+    "296": [
+      "arraylength",
+      4,
+      4
+    ],
+    "297": [
+      "istore",
+      4,
+      4
+    ],
+    "298": [
+      "#5",
+      4,
+      4
+    ],
+    "299": [
+      "iconst_0",
+      4,
+      4
+    ],
+    "300": [
+      "istore",
+      4,
+      4
+    ],
+    "301": [
+      "#6",
+      4,
+      4
+    ],
+    "302": [
+      "iload",
+      4,
+      4
+    ],
+    "303": [
+      "#6",
+      4,
+      4
+    ],
+    "304": [
+      "iload",
+      4,
+      4
+    ],
+    "305": [
+      "#5",
+      4,
+      4
+    ],
+    "306": [
+      "if_icmpge",
+      4,
+      4
+    ],
+    "307": [
+      "58",
+      4,
+      4
+    ],
+    "309": [
+      "aload",
+      4,
+      4
+    ],
+    "310": [
+      "#4",
+      4,
+      4
+    ],
+    "311": [
+      "iload",
+      4,
+      4
+    ],
+    "312": [
+      "#6",
+      4,
+      4
+    ],
+    "313": [
+      "baload",
+      4,
+      4
+    ],
+    "314": [
+      "istore",
+      4,
+      4
+    ],
+    "315": [
+      "#7",
+      4,
+      4
+    ],
+    "316": [
+      "iload",
+      4,
+      0
+    ],
+    "317": [
+      "#7",
+      4,
+      0
+    ],
+    "318": [
+      "istore",
+      4,
+      0
+    ],
+    "319": [
+      "#8",
+      4,
+      0
+    ],
+    "320": [
+      "iload",
+      5,
+      1
+    ],
+    "321": [
+      "#8",
+      5,
+      1
+    ],
+    "322": [
+      "ifge",
+      5,
+      1
+    ],
+    "323": [
+      "11",
+      5,
+      1
+    ],
+    "325": [
+      "sipush",
+      5,
+      0
+    ],
+    "326": [
+      "256",
+      5,
+      0
+    ],
+    "328": [
+      "iload",
+      5,
+      0
+    ],
+    "329": [
+      "#8",
+      5,
+      0
+    ],
+    "330": [
+      "iadd",
+      5,
+      0
+    ],
+    "331": [
+      "istore",
+      5,
+      0
+    ],
+    "332": [
+      "#8",
+      5,
+      0
+    ],
+    "333": [
+      "aload_0",
+      5,
+      1
+    ],
+    "334": [
+      "iload",
+      5,
+      1
+    ],
+    "335": [
+      "#8",
+      5,
+      1
+    ],
+    "336": [
+      "invokevirtual",
+      5,
+      1
+    ],
+    "337": [
+      "java/util/BitSet.get:(I)Z",
+      5,
+      1
+    ],
+    "339": [
+      "ifeq",
+      5,
+      1
+    ],
+    "340": [
+      "12",
+      5,
+      1
+    ],
+    "342": [
+      "aload_3",
+      5,
+      0
+    ],
+    "343": [
+      "iload",
+      5,
+      0
+    ],
+    "344": [
+      "#8",
+      5,
+      0
+    ],
+    "345": [
+      "invokevirtual",
+      5,
+      0
+    ],
+    "346": [
+      "java/io/ByteArrayOutputStream.write:(I)V",
+      5,
+      0
+    ],
+    "348": [
+      "goto",
+      5,
+      0
+    ],
+    "349": [
+      "10",
+      5,
+      0
+    ],
+    "351": [
+      "iload",
+      6,
+      0
+    ],
+    "352": [
+      "#8",
+      6,
+      0
+    ],
+    "353": [
+      "aload_3",
+      6,
+      0
+    ],
+    "354": [
+      "invokestatic",
+      6,
+      0
+    ],
+    "355": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.encodeQuotedPrintable:(ILjava/io/ByteArrayOutputStream;)I",
+      6,
+      0
+    ],
+    "357": [
+      "pop",
+      6,
+      0
+    ],
+    "358": [
+      "iinc",
+      6,
+      0
+    ],
+    "359": [
+      "#6",
+      6,
+      0
+    ],
+    "360": [
+      "-89",
+      6,
+      0
+    ],
+    "361": [
+      "goto",
+      6,
+      4
+    ],
+    "362": [
+      "-59",
+      6,
+      4
+    ],
+    "364": [
+      "aload_3",
+      3,
+      0
+    ],
+    "365": [
+      "invokevirtual",
+      3,
+      0
+    ],
+    "366": [
+      "java/io/ByteArrayOutputStream.toByteArray:()[B",
+      3,
+      0
+    ],
+    "368": [
+      "areturn",
+      3,
+      0
+    ]
+  },
+  "getUnsignedOctet": {
+    "0": [
+      "aload_1",
+      0,
+      0
+    ],
+    "1": [
+      "iload_0",
+      0,
+      0
+    ],
+    "2": [
+      "baload",
+      0,
+      0
+    ],
+    "3": [
+      "istore_2",
+      0,
+      0
+    ],
+    "4": [
+      "iload_2",
+      1,
+      1
+    ],
+    "5": [
+      "ifge",
+      1,
+      1
+    ],
+    "6": [
+      "9",
+      1,
+      1
+    ],
+    "8": [
+      "sipush",
+      1,
+      0
+    ],
+    "9": [
+      "256",
+      1,
+      0
+    ],
+    "11": [
+      "iload_2",
+      1,
+      0
+    ],
+    "12": [
+      "iadd",
+      1,
+      0
+    ],
+    "13": [
+      "istore_2",
+      1,
+      0
+    ],
+    "14": [
+      "iload_2",
+      0,
+      0
+    ],
+    "15": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "encodeByte": {
+    "0": [
+      "iload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifeq",
+      1,
+      1
+    ],
+    "2": [
+      "9",
+      1,
+      1
+    ],
+    "4": [
+      "iload_0",
+      1,
+      0
+    ],
+    "5": [
+      "aload_2",
+      1,
+      0
+    ],
+    "6": [
+      "invokestatic",
+      1,
+      0
+    ],
+    "7": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.encodeQuotedPrintable:(ILjava/io/ByteArrayOutputStream;)I",
+      1,
+      0
+    ],
+    "9": [
+      "ireturn",
+      1,
+      0
+    ],
+    "10": [
+      "aload_2",
+      0,
+      0
+    ],
+    "11": [
+      "iload_0",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "java/io/ByteArrayOutputStream.write:(I)V",
+      0,
+      0
+    ],
+    "15": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "16": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "isWhitespace": {
+    "0": [
+      "iload_0",
+      0,
+      0
+    ],
+    "1": [
+      "bipush",
+      0,
+      0
+    ],
+    "2": [
+      "32",
+      0,
+      0
+    ],
+    "3": [
+      "if_icmpeq",
+      0,
+      0
+    ],
+    "4": [
+      "9",
+      0,
+      0
+    ],
+    "6": [
+      "iload_0",
+      0,
+      0
+    ],
+    "7": [
+      "bipush",
+      0,
+      0
+    ],
+    "8": [
+      "9",
+      0,
+      0
+    ],
+    "9": [
+      "if_icmpne",
+      0,
+      0
+    ],
+    "10": [
+      "7",
+      0,
+      0
+    ],
+    "12": [
+      "iconst_1",
+      0,
+      0
+    ],
+    "13": [
+      "goto",
+      0,
+      0
+    ],
+    "14": [
+      "4",
+      0,
+      0
+    ],
+    "16": [
+      "iconst_0",
+      0,
+      0
+    ],
+    "17": [
+      "ireturn",
+      0,
+      0
+    ]
+  },
+  "decodeQuotedPrintable": {
+    "0": [
+      "aload_0",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "5",
+      1,
+      1
+    ],
+    "4": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "5": [
+      "areturn",
+      1,
+      0
+    ],
+    "6": [
+      "new",
+      0,
+      0
+    ],
+    "7": [
+      "java/io/ByteArrayOutputStream",
+      0,
+      0
+    ],
+    "9": [
+      "dup",
+      0,
+      0
+    ],
+    "10": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "11": [
+      "java/io/ByteArrayOutputStream.<init>:()V",
+      0,
+      0
+    ],
+    "13": [
+      "astore_1",
+      0,
+      0
+    ],
+    "14": [
+      "iconst_0",
+      1,
+      4
+    ],
+    "15": [
+      "istore_2",
+      1,
+      4
+    ],
+    "16": [
+      "iload_2",
+      1,
+      4
+    ],
+    "17": [
+      "aload_0",
+      1,
+      4
+    ],
+    "18": [
+      "arraylength",
+      1,
+      4
+    ],
+    "19": [
+      "if_icmpge",
+      1,
+      4
+    ],
+    "20": [
+      "98",
+      1,
+      4
+    ],
+    "22": [
+      "aload_0",
+      1,
+      0
+    ],
+    "23": [
+      "iload_2",
+      1,
+      0
+    ],
+    "24": [
+      "baload",
+      1,
+      0
+    ],
+    "25": [
+      "istore_3",
+      1,
+      0
+    ],
+    "26": [
+      "iload_3",
+      2,
+      1
+    ],
+    "27": [
+      "bipush",
+      2,
+      1
+    ],
+    "28": [
+      "61",
+      2,
+      1
+    ],
+    "29": [
+      "if_icmpne",
+      2,
+      1
+    ],
+    "30": [
+      "65",
+      2,
+      1
+    ],
+    "32": [
+      "aload_0",
+      3,
+      1
+    ],
+    "33": [
+      "iinc",
+      3,
+      1
+    ],
+    "34": [
+      "#2",
+      3,
+      1
+    ],
+    "35": [
+      "28",
+      3,
+      1
+    ],
+    "36": [
+      "iload_2",
+      3,
+      1
+    ],
+    "37": [
+      "baload",
+      3,
+      1
+    ],
+    "38": [
+      "bipush",
+      3,
+      1
+    ],
+    "39": [
+      "13",
+      3,
+      1
+    ],
+    "40": [
+      "if_icmpne",
+      3,
+      1
+    ],
+    "41": [
+      "6",
+      3,
+      1
+    ],
+    "43": [
+      "goto",
+      3,
+      0
+    ],
+    "44": [
+      "68",
+      3,
+      0
+    ],
+    "46": [
+      "aload_0",
+      2,
+      0
+    ],
+    "47": [
+      "iload_2",
+      2,
+      0
+    ],
+    "48": [
+      "baload",
+      2,
+      0
+    ],
+    "49": [
+      "invokestatic",
+      2,
+      0
+    ],
+    "50": [
+      "org/apache/commons/codec/net/Utils.digit16:(B)I",
+      2,
+      0
+    ],
+    "52": [
+      "istore",
+      2,
+      0
+    ],
+    "53": [
+      "#4",
+      2,
+      0
+    ],
+    "54": [
+      "aload_0",
+      2,
+      0
+    ],
+    "55": [
+      "iinc",
+      2,
+      0
+    ],
+    "56": [
+      "#2",
+      2,
+      0
+    ],
+    "57": [
+      "28",
+      2,
+      0
+    ],
+    "58": [
+      "iload_2",
+      2,
+      0
+    ],
+    "59": [
+      "baload",
+      2,
+      0
+    ],
+    "60": [
+      "invokestatic",
+      2,
+      0
+    ],
+    "61": [
+      "org/apache/commons/codec/net/Utils.digit16:(B)I",
+      2,
+      0
+    ],
+    "63": [
+      "istore",
+      2,
+      0
+    ],
+    "64": [
+      "#5",
+      2,
+      0
+    ],
+    "65": [
+      "aload_1",
+      2,
+      0
+    ],
+    "66": [
+      "iload",
+      2,
+      0
+    ],
+    "67": [
+      "#4",
+      2,
+      0
+    ],
+    "68": [
+      "iconst_4",
+      2,
+      0
+    ],
+    "69": [
+      "ishl",
+      2,
+      0
+    ],
+    "70": [
+      "iload",
+      2,
+      0
+    ],
+    "71": [
+      "#5",
+      2,
+      0
+    ],
+    "72": [
+      "iadd",
+      2,
+      0
+    ],
+    "73": [
+      "i2c",
+      2,
+      0
+    ],
+    "74": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "75": [
+      "java/io/ByteArrayOutputStream.write:(I)V",
+      2,
+      0
+    ],
+    "77": [
+      "goto",
+      2,
+      0
+    ],
+    "78": [
+      "34",
+      2,
+      0
+    ],
+    "80": [
+      "astore",
+      2,
+      0
+    ],
+    "81": [
+      "#4",
+      2,
+      0
+    ],
+    "82": [
+      "new",
+      2,
+      0
+    ],
+    "83": [
+      "org/apache/commons/codec/DecoderException",
+      2,
+      0
+    ],
+    "85": [
+      "dup",
+      2,
+      0
+    ],
+    "86": [
+      "ldc",
+      2,
+      0
+    ],
+    "87": [
+      "Invalid quoted-printable encoding",
+      2,
+      0
+    ],
+    "88": [
+      "aload",
+      2,
+      0
+    ],
+    "89": [
+      "#4",
+      2,
+      0
+    ],
+    "90": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "91": [
+      "org/apache/commons/codec/DecoderException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;)V",
+      2,
+      0
+    ],
+    "93": [
+      "athrow",
+      2,
+      0
+    ],
+    "94": [
+      "iload_3",
+      1,
+      0
+    ],
+    "95": [
+      "bipush",
+      1,
+      0
+    ],
+    "96": [
+      "13",
+      1,
+      0
+    ],
+    "97": [
+      "if_icmpeq",
+      1,
+      0
+    ],
+    "98": [
+      "14",
+      1,
+      0
+    ],
+    "100": [
+      "iload_3",
+      1,
+      0
+    ],
+    "101": [
+      "bipush",
+      1,
+      0
+    ],
+    "102": [
+      "10",
+      1,
+      0
+    ],
+    "103": [
+      "if_icmpeq",
+      1,
+      0
+    ],
+    "104": [
+      "8",
+      1,
+      0
+    ],
+    "106": [
+      "aload_1",
+      1,
+      0
+    ],
+    "107": [
+      "iload_3",
+      1,
+      0
+    ],
+    "108": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "109": [
+      "java/io/ByteArrayOutputStream.write:(I)V",
+      1,
+      0
+    ],
+    "111": [
+      "iinc",
+      1,
+      0
+    ],
+    "112": [
+      "#2",
+      1,
+      0
+    ],
+    "113": [
+      "-89",
+      1,
+      0
+    ],
+    "114": [
+      "goto",
+      1,
+      4
+    ],
+    "115": [
+      "-98",
+      1,
+      4
+    ],
+    "117": [
+      "aload_1",
+      0,
+      0
+    ],
+    "118": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "119": [
+      "java/io/ByteArrayOutputStream.toByteArray:()[B",
+      0,
+      0
+    ],
+    "121": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "encode": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "5",
+      1,
+      1
+    ],
+    "4": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "5": [
+      "areturn",
+      1,
+      0
+    ],
+    "6": [
+      "aload_0",
+      0,
+      0
+    ],
+    "7": [
+      "aload_1",
+      0,
+      0
+    ],
+    "8": [
+      "aload_2",
+      0,
+      0
+    ],
+    "9": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "10": [
+      "java/lang/String.getBytes:(Ljava/lang/String;)[B",
+      0,
+      0
+    ],
+    "12": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "13": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.encode:([B)[B",
+      0,
+      0
+    ],
+    "15": [
+      "invokestatic",
+      0,
+      0
+    ],
+    "16": [
+      "org/apache/commons/codec/binary/StringUtils.newStringUsAscii:([B)Ljava/lang/String;",
+      0,
+      0
+    ],
+    "18": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "decode": {
+    "0": [
+      "aload_1",
+      1,
+      1
+    ],
+    "1": [
+      "ifnonnull",
+      1,
+      1
+    ],
+    "2": [
+      "5",
+      1,
+      1
+    ],
+    "4": [
+      "aconst_null",
+      1,
+      0
+    ],
+    "5": [
+      "areturn",
+      1,
+      0
+    ],
+    "6": [
+      "aload_1",
+      1,
+      0
+    ],
+    "7": [
+      "instanceof",
+      1,
+      0
+    ],
+    "8": [
+      "[B",
+      1,
+      0
+    ],
+    "10": [
+      "ifeq",
+      1,
+      0
+    ],
+    "11": [
+      "15",
+      1,
+      0
+    ],
+    "13": [
+      "aload_0",
+      1,
+      0
+    ],
+    "14": [
+      "aload_1",
+      1,
+      0
+    ],
+    "15": [
+      "checkcast",
+      1,
+      0
+    ],
+    "16": [
+      "[B",
+      1,
+      0
+    ],
+    "18": [
+      "checkcast",
+      1,
+      0
+    ],
+    "19": [
+      "[B",
+      1,
+      0
+    ],
+    "21": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "22": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.decode:([B)[B",
+      1,
+      0
+    ],
+    "24": [
+      "areturn",
+      1,
+      0
+    ],
+    "25": [
+      "aload_1",
+      1,
+      0
+    ],
+    "26": [
+      "instanceof",
+      1,
+      0
+    ],
+    "27": [
+      "java/lang/String",
+      1,
+      0
+    ],
+    "29": [
+      "ifeq",
+      1,
+      0
+    ],
+    "30": [
+      "12",
+      1,
+      0
+    ],
+    "32": [
+      "aload_0",
+      1,
+      0
+    ],
+    "33": [
+      "aload_1",
+      1,
+      0
+    ],
+    "34": [
+      "checkcast",
+      1,
+      0
+    ],
+    "35": [
+      "java/lang/String",
+      1,
+      0
+    ],
+    "37": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "38": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.decode:(Ljava/lang/String;)Ljava/lang/String;",
+      1,
+      0
+    ],
+    "40": [
+      "areturn",
+      1,
+      0
+    ],
+    "41": [
+      "new",
+      2,
+      0
+    ],
+    "42": [
+      "org/apache/commons/codec/DecoderException",
+      2,
+      0
+    ],
+    "44": [
+      "dup",
+      2,
+      0
+    ],
+    "45": [
+      "new",
+      2,
+      0
+    ],
+    "46": [
+      "java/lang/StringBuilder",
+      2,
+      0
+    ],
+    "48": [
+      "dup",
+      2,
+      0
+    ],
+    "49": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "50": [
+      "java/lang/StringBuilder.<init>:()V",
+      2,
+      0
+    ],
+    "52": [
+      "ldc",
+      2,
+      0
+    ],
+    "53": [
+      "Objects of type ",
+      2,
+      0
+    ],
+    "54": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "55": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      2,
+      0
+    ],
+    "57": [
+      "aload_1",
+      2,
+      0
+    ],
+    "58": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "59": [
+      "java/lang/Object.getClass:()Ljava/lang/Class;",
+      2,
+      0
+    ],
+    "61": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "62": [
+      "java/lang/Class.getName:()Ljava/lang/String;",
+      2,
+      0
+    ],
+    "64": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "65": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      2,
+      0
+    ],
+    "67": [
+      "ldc",
+      2,
+      0
+    ],
+    "68": [
+      " cannot be quoted-printable decoded",
+      2,
+      0
+    ],
+    "69": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "70": [
+      "java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;",
+      2,
+      0
+    ],
+    "72": [
+      "invokevirtual",
+      2,
+      0
+    ],
+    "73": [
+      "java/lang/StringBuilder.toString:()Ljava/lang/String;",
+      2,
+      0
+    ],
+    "75": [
+      "invokespecial",
+      2,
+      0
+    ],
+    "76": [
+      "org/apache/commons/codec/DecoderException.<init>:(Ljava/lang/String;)V",
+      2,
+      0
+    ],
+    "78": [
+      "athrow",
+      2,
+      0
+    ]
+  },
+  "getCharset": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.charset:Ljava/nio/charset/Charset;",
+      0,
+      0
+    ],
+    "4": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "getDefaultCharset": {
+    "0": [
+      "aload_0",
+      0,
+      0
+    ],
+    "1": [
+      "getfield",
+      0,
+      0
+    ],
+    "2": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.charset:Ljava/nio/charset/Charset;",
+      0,
+      0
+    ],
+    "4": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "5": [
+      "java/nio/charset/Charset.name:()Ljava/lang/String;",
+      0,
+      0
+    ],
+    "7": [
+      "areturn",
+      0,
+      0
+    ]
+  },
+  "<clinit>": {
+    "0": [
+      "new",
+      0,
+      0
+    ],
+    "1": [
+      "java/util/BitSet",
+      0,
+      0
+    ],
+    "3": [
+      "dup",
+      0,
+      0
+    ],
+    "4": [
+      "sipush",
+      0,
+      0
+    ],
+    "5": [
+      "256",
+      0,
+      0
+    ],
+    "7": [
+      "invokespecial",
+      0,
+      0
+    ],
+    "8": [
+      "java/util/BitSet.<init>:(I)V",
+      0,
+      0
+    ],
+    "10": [
+      "putstatic",
+      0,
+      0
+    ],
+    "11": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.PRINTABLE_CHARS:Ljava/util/BitSet;",
+      0,
+      0
+    ],
+    "13": [
+      "bipush",
+      1,
+      4
+    ],
+    "14": [
+      "33",
+      1,
+      4
+    ],
+    "15": [
+      "istore_0",
+      1,
+      4
+    ],
+    "16": [
+      "iload_0",
+      1,
+      4
+    ],
+    "17": [
+      "bipush",
+      1,
+      4
+    ],
+    "18": [
+      "60",
+      1,
+      4
+    ],
+    "19": [
+      "if_icmpgt",
+      1,
+      4
+    ],
+    "20": [
+      "16",
+      1,
+      4
+    ],
+    "22": [
+      "getstatic",
+      1,
+      0
+    ],
+    "23": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.PRINTABLE_CHARS:Ljava/util/BitSet;",
+      1,
+      0
+    ],
+    "25": [
+      "iload_0",
+      1,
+      0
+    ],
+    "26": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "27": [
+      "java/util/BitSet.set:(I)V",
+      1,
+      0
+    ],
+    "29": [
+      "iinc",
+      1,
+      0
+    ],
+    "30": [
+      "#0",
+      1,
+      0
+    ],
+    "31": [
+      "-89",
+      1,
+      0
+    ],
+    "32": [
+      "goto",
+      1,
+      4
+    ],
+    "33": [
+      "-16",
+      1,
+      4
+    ],
+    "35": [
+      "bipush",
+      1,
+      4
+    ],
+    "36": [
+      "62",
+      1,
+      4
+    ],
+    "37": [
+      "istore_0",
+      1,
+      4
+    ],
+    "38": [
+      "iload_0",
+      1,
+      4
+    ],
+    "39": [
+      "bipush",
+      1,
+      4
+    ],
+    "40": [
+      "126",
+      1,
+      4
+    ],
+    "41": [
+      "if_icmpgt",
+      1,
+      4
+    ],
+    "42": [
+      "16",
+      1,
+      4
+    ],
+    "44": [
+      "getstatic",
+      1,
+      0
+    ],
+    "45": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.PRINTABLE_CHARS:Ljava/util/BitSet;",
+      1,
+      0
+    ],
+    "47": [
+      "iload_0",
+      1,
+      0
+    ],
+    "48": [
+      "invokevirtual",
+      1,
+      0
+    ],
+    "49": [
+      "java/util/BitSet.set:(I)V",
+      1,
+      0
+    ],
+    "51": [
+      "iinc",
+      1,
+      0
+    ],
+    "52": [
+      "#0",
+      1,
+      0
+    ],
+    "53": [
+      "-89",
+      1,
+      0
+    ],
+    "54": [
+      "goto",
+      1,
+      4
+    ],
+    "55": [
+      "-16",
+      1,
+      4
+    ],
+    "57": [
+      "getstatic",
+      0,
+      0
+    ],
+    "58": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.PRINTABLE_CHARS:Ljava/util/BitSet;",
+      0,
+      0
+    ],
+    "60": [
+      "bipush",
+      0,
+      0
+    ],
+    "61": [
+      "9",
+      0,
+      0
+    ],
+    "62": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "63": [
+      "java/util/BitSet.set:(I)V",
+      0,
+      0
+    ],
+    "65": [
+      "getstatic",
+      0,
+      0
+    ],
+    "66": [
+      "org/apache/commons/codec/net/QuotedPrintableCodec.PRINTABLE_CHARS:Ljava/util/BitSet;",
+      0,
+      0
+    ],
+    "68": [
+      "bipush",
+      0,
+      0
+    ],
+    "69": [
+      "32",
+      0,
+      0
+    ],
+    "70": [
+      "invokevirtual",
+      0,
+      0
+    ],
+    "71": [
+      "java/util/BitSet.set:(I)V",
+      0,
+      0
+    ],
+    "73": [
+      "return",
+      0,
+      0
+    ]
+  }
+}

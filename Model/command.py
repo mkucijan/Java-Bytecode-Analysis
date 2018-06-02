@@ -2,6 +2,7 @@ import time
 from datetime import timedelta
 import itertools
 import numpy as np
+import os
 
 import tensorflow as tf
 from Model import logger
@@ -27,11 +28,16 @@ def train_model(args):
     additional_parameters = Additional_Parameters(
         args_dim = args.args_dim,
         bidirectional= args.bidirectional,
-        nonlinear= args.nonlinear
+        nonlinear= args.nonlinear,
+        encode_int=False
     )
-    
-    args.data_set.shuffle()
+
+    args.data_set.filter_no_jumps()
+    #args.data_set.simplifySignature(overwrite=True)
+    #args.data_set.filterOperands()
     args.data_set.relabelData(overwrite=True)
+    #args.data_set.shuffle()
+    logger.info("DATALEN:"+str(args.data_set.length))
     
     logger.info("Baseline acc: %0.4f" % args.data_set.baseline)
     train_data = args.data_set.getPartition(args.training_partition)
@@ -54,6 +60,8 @@ def train_model(args):
         config = tf.ConfigProto(allow_soft_placement = True)
         with tf.device('/gpu:0'):
             with tf.Session(config = config) as session:
+                #logger.warn(session.run(tf.shape(model.outputs_rnn_att)))
+                
                 model.train(session,
                             train_data,
                             Parameters(args.learning_rate, args.keep_probability),
@@ -61,6 +69,7 @@ def train_model(args):
                             validation,
                             args.logging_interval,
                             Directories(args.model_directory, args.summary_directory))
+                
     logger.info("Total training time %s" % timedelta(seconds=(time.time() - start_time)))
 
 def search_params(args):
@@ -70,14 +79,17 @@ def search_params(args):
     additional_parameters = Additional_Parameters(
         args_dim = args.args_dim,
         bidirectional= args.bidirectional,
-        nonlinear= args.nonlinear
+        nonlinear= args.nonlinear,
+        encode_int=False
     )
     
-    # check this settings
-    args.data_set.shuffle()
+    args.data_set.filter_no_jumps()
+    #args.data_set.simplifySignature(overwrite=True)
+    #args.data_set.filterOperands()
     args.data_set.relabelData(overwrite=True)
-    ###
-
+    #args.data_set.shuffle()
+    logger.info("DATALEN:"+str(args.data_set.length))
+    
     logger.info("Baseline acc: %0.4f" % args.data_set.baseline)
     train_data = args.data_set.getPartition(args.training_partition)
     logger.info("Train baseline acc: %0.4f" % train_data.baseline)
@@ -88,30 +100,41 @@ def search_params(args):
         logger.info("Validation baseline acc: %0.4f" % validation_data.baseline)
     else:
         validation = None
+
+    default_dir = args.model_directory
     
-    
+    args.learning_rate = 0.1
+
     ms = [0.1, 0.01]
     bs = [16, 32]
     ts = [20, 50 ,100]
     hu = [128, 256, 512, 650]
     ly = [1, 2, 3, 4]
-    ad = [None, 16, 32, 64]
+    #ad = [None, 16, 32, 64]
     bi = [True, False]
     nl = [True, False]
 
     perplexity_values = []
     accuracy_values = []
 
-    for params in itertools.product(*[ms, bs, ts, hu, ly, ad, bi, nl]):
+    iter_num = 0
+
+    for params in itertools.product(*[ms, bs, ts, hu, ly, bi, nl]):
         args.max_gradient,                    \
         args.batch_size,                      \
         args.time_steps,                      \
         args.hidden_units,                    \
         args.layers,                          \
-        additional_parameters.args_dim,       \
         additional_parameters.bidirectional,  \
         additional_parameters.nonlinear       \
         = params
+
+        if args.model_directory:
+            args.model_directory = default_dir +'/iter-'+str(iter_num)
+            try:
+                os.makedirs(args.model_directory)
+            except FileExistsError:
+                pass
     
         start_time = time.time()
         with tf.Graph().as_default():
@@ -134,6 +157,8 @@ def search_params(args):
     
         perplexity_values.append(val)
         accuracy_values.append(acc)
+
+        iter_num += 1
     
     logger.info("Perplexity: " + str(perplexity_values))
     logger.info("Accuracy: " + str(accuracy_values))
