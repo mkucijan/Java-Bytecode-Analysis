@@ -335,6 +335,7 @@ class DataPartition(object):
         self.Y = Y
         self.output_size = output_size
         self.getVocabulary()
+        self.flattened = False
     
     @property
     def baseline(self):
@@ -414,11 +415,16 @@ class DataPartition(object):
         self.Y = Y + Y_long
 
     
-    def epoch(self, time_steps, batch_size, flatten=True, args_dim = None, encode_int=True):
+    def epoch(self, time_steps, batch_size, vocabulary=None, flatten=True, args_dim = None, encode_int=True):
 
-        if flatten:
+        if flatten and not self.flattened:
             self.X, self.Y = Data.flattenData(self.X, self.Y, time_steps)
-        
+            self.flattened = True
+            # TODO change this, and fix state feeding
+
+        if vocabulary is None:
+            vocabulary = self.vocabulary
+
         if args_dim:
             self.seperate_args()
             encode_fun = Encode(args_dim, 'bin').from_hex
@@ -453,6 +459,7 @@ class DataPartition(object):
             seq_len = np.zeros((batch_size))
             mask = np.zeros((batch_size, time_steps, self.output_size))
 
+            instruction_values = []
             if encode_int:
                 batch_encoded_int = np.zeros((batch_size, time_steps, 32))
                 num_ints = 0
@@ -464,6 +471,7 @@ class DataPartition(object):
                 if data_index<len(X):
                     num_iter = min(len(X[data_index]), time_steps)
                     instr_index = 0
+                    instruction_values_seq = []
                     for j in range(num_iter):
                         if encode_int:
                             try:
@@ -473,24 +481,33 @@ class DataPartition(object):
                                 continue
                             except Exception as e:
                                 pass
-                        batch_X[i,instr_index] = self.vocabulary.get(X[data_index][j], 1)
+                        batch_X[i,instr_index] = vocabulary.get(X[data_index][j], 1)
+                        instruction_values_seq.append(X[data_index][j])
                         batch_Y[i, instr_index,int( Y[data_index][j][1] )] = 1
                         mask[i,instr_index] = 1
                         if args_dim:
                             batch_X_args[i, instr_index] = encode_fun(self.X_args[data_index][j])
                         instr_index += 1
-                    
+                    instruction_values.append(instruction_values_seq)
                     seq_len[i] = len(X[data_index])
                     data_index += 1
             
             if args_dim:
-                yield True, (batch_X, batch_X_args), batch_Y, seq_len, mask, k/n_steps
+                yield True, (batch_X, batch_X_args), batch_Y, seq_len, mask, k/n_steps, instruction_values
             elif encode_int:
-                yield True, (batch_X, batch_encoded_int), batch_Y, seq_len, mask, k/n_steps   
+                yield True, (batch_X, batch_encoded_int), batch_Y, seq_len, mask, k/n_steps, instruction_values  
             else:
-                yield True, batch_X, batch_Y, seq_len, mask, k/n_steps
+                yield True, batch_X, batch_Y, seq_len, mask, k/n_steps, instruction_values
+
+    def encode(self, x_seq):
+        ret = []
+        for x in x_seq:
+            ret.append(self.vocabulary.get(x,1))
+        return ret
 
 
     @property
     def vocabulary_size(self):
         return len(self.vocabulary)
+
+

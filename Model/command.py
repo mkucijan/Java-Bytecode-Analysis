@@ -32,10 +32,10 @@ def train_model(args):
         encode_int=False
     )
 
-    args.data_set.filter_no_jumps()
-    #args.data_set.simplifySignature(overwrite=True)
+    #args.data_set.filter_no_jumps()
+    args.data_set.simplifySignature(overwrite=True)
+    #args.data_set.relabelData(overwrite=True)
     #args.data_set.filterOperands()
-    args.data_set.relabelData(overwrite=True)
     #args.data_set.shuffle()
     logger.info("DATALEN:"+str(args.data_set.length))
     
@@ -105,10 +105,10 @@ def search_params(args):
     
     args.learning_rate = 0.1
 
-    ms = [0.1, 0.01]
+    ms = [0.1]
     bs = [16, 32]
-    ts = [20, 50 ,100]
-    hu = [128, 256, 512, 650]
+    ts = [50, 100]
+    hu = [8, 16, 32, 64]
     ly = [1, 2, 3, 4]
     #ad = [None, 16, 32, 64]
     bi = [True, False]
@@ -119,9 +119,8 @@ def search_params(args):
 
     iter_num = 0
 
-    for params in itertools.product(*[ms, bs, ts, hu, ly, bi, nl]):
+    for params in itertools.product(*[ms, ts, hu, ly, bi, nl]):
         args.max_gradient,                    \
-        args.batch_size,                      \
         args.time_steps,                      \
         args.hidden_units,                    \
         args.layers,                          \
@@ -183,7 +182,9 @@ def search_params(args):
 
 
 def test_model(args):
-    test_set = args.data_set[args.test_partition]
+    # To take last partition
+    args.data_set.getPartition(1-args.test_partition)
+    test_set = args.data_set.getPartition(args.test_partition)
     logger.info("Test set: %s" % test_set)
     with tf.Graph().as_default():
         with tf.Session() as session:

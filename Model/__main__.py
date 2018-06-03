@@ -70,7 +70,7 @@ def create_argument_parser():
     search.add_argument("--max-iterations", type=positive_integer, help="number of training iterations to run")
     search.add_argument("--logging-interval", type=positive_integer, default=100,
                        help="log and write summary after this many iterations")
-    search.add_argument("--max-epochs", type=positive_integer, default=30, help="number of training epochs to run")
+    search.add_argument("--max-epochs", type=positive_integer, default=5, help="number of training epochs to run")
     search.add_argument("--learning-rate", type=positive_real, default=0.1, help="training learning rate")
     #search.add_argument("--init", type=positive_real, default=0.05, help="random initial absolute value range")
     search.add_argument("--args-dim", type=positive_integer, default=None, help="dimension of special arg encoding")
