@@ -1,0 +1,608 @@
+~~
+~~ Licensed to the Apache Software Foundation (ASF) under one or more
+~~ contributor license agreements.  See the NOTICE file distributed with
+~~ this work for additional information regarding copyright ownership.
+~~ The ASF licenses this file to You under the Apache License, Version 2.0
+~~ (the "License"); you may not use this file except in compliance with
+~~ the License.  You may obtain a copy of the License at
+~~
+~~      http://www.apache.org/licenses/LICENSE-2.0
+~~
+~~ Unless required by applicable law or agreed to in writing, software
+~~ distributed under the License is distributed on an "AS IS" BASIS,
+~~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~~ See the License for the specific language governing permissions and
+~~ limitations under the License.
+~~
+
+  -----------------------------
+  The Apache Commons RNG User Guide
+  -----------------------------
+
+1. Purpose
+
+  <<<Commons RNG>>> provides generators of "pseudo-randomness", i.e. the
+  generators produce deterministic sequences of bytes, currently in chunks
+  of 32 (a.k.a. <<<int>>>) or 64 bits (a.k.a. <<<long>>>), depending on the
+  implementation.
+
+  The goal was to provide an API that is simple and unencumbered with old
+  design decisions.
+
+  The design is clean and its rationale is explained in the code and Javadoc
+  (as well as in the extensive discussions on the "Apache Commons" project's
+  mailing list).
+
+  The code evolved during several months in order to accommodate the
+  requirements gathered from the design issues identified in the
+  <<<org.apache.commons.math3.random>>> package and the explicit design
+  goal of {{{./why_not_java_random.html}severing ties}} to <<<java.util.Random>>>.
+
+  The library is divided into modules:
+
+  * {{{../commons-rng-client-api/apidocs/org/apache/commons/rng/package-summary.html}Client API}}
+
+  * {{{../commons-rng-core/apidocs/org/apache/commons/rng/core/package-summary.html}Core}}
+
+  * {{{../commons-rng-simple/apidocs/org/apache/commons/rng/simple/package-summary.html}Simple}}
+
+  * {{{../commons-rng-sampling/apidocs/org/apache/commons/rng/sampling/package-summary.html}Sampling}}
+
+  * {{{../commons-rng-jmh/apidocs/org/apache/commons/rng/jmh/package-summary.html}Benchmark}}
+
+  * {{{../commons-rng-examples/apidocs/org/apache/commons/rng/examples/package-summary.html}Examples}}
+
+  []
+
+
+2. Usage overview
+
+  Please refer to the generated documentation (of the appropriate module)
+  for details on the API illustrated by the following examples.
+
+
+  * Random number generator objects are instantiated through factory
+    methods defined in <<<RandomSource>>>, an <<<enum>>> that declares
+    {{{../commons-rng-simple/apidocs/org/apache/commons/rng/simple/RandomSource.html#enum.constant.detail}all the available implementations}}.
+
++--------------------------+
+import org.apache.commons.rng.UniformRandomProvider;
+import org.apache.commons.rng.simple.RandomSource;
+
+UniformRandomProvider rng = RandomSource.create(RandomSource.MT);
++--------------------------+
+
+
+  * A generator will return a randomly selected element from a range
+    of possible values of some Java (primitive) type.
+
++--------------------------+
+boolean isOn = rng.nextBoolean(); // "true" or "false".
++--------------------------+
++--------------------------+
+int n = rng.nextInt(); // Integer.MIN_VALUE <= n <= Integer.MAX_VALUE.
+int m = rng.nextInt(max); // 0 <= m < max.
++--------------------------+
++--------------------------+
+long n = rng.nextLong(); // Long.MIN_VALUE <= n <= Long.MAX_VALUE.
+long m = rng.nextLong(max); // 0 <= m < max.
++--------------------------+
++--------------------------+
+float x = rng.nextFloat(); // 0 <= x < 1.
++--------------------------+
++--------------------------+
+double x = rng.nextDouble(); // 0 <= x < 1.
++--------------------------+
+
+
+  * A generator will fill a given <<<byte>>> array with random values.
+
++--------------------------+
+bytes[] a = new bytes[47];
+// The elements of "a" are replaced with random values from the interval [-128, 127].
+rng.nextBytes(a);
++--------------------------+
++--------------------------+
+bytes[] a = new bytes[47];
+// Replace 3 elements of the array (at indices 15, 16 and 17) with random values.
+rng.nextBytes(a, 15, 3);
++--------------------------+
+
+
+  * In order to generate reproducible sequences, generators must be instantiated with a user-defined seed.
+
++--------------------------+
+UniformRandomProvider rng = RandomSource.create(RandomSource.SPLIT_MIX_64, 5776);
++--------------------------+
+
+    If no seed is passed, a random seed is generated implicitly.
+
+    Convenience methods are provided for explicitly generating random seeds of the various types.
+
++--------------------------+
+int seed = RandomSource.createInt();
++--------------------------+
++--------------------------+
+long seed = RandomSource.createLong();
++--------------------------+
++--------------------------+
+int[] seed = RandomSource.createIntArray(128); // Length of returned array is 128.
++--------------------------+
++--------------------------+
+long[] seed = RandomSource.createLongArray(128); // Length of returned array is 128.
++--------------------------+
+
+
+  * Any of the following types can be passed to the <<<create>>> method as the "seed" argument:
+
+    ** <<<int>>> or <<<Integer>>>
+
+    ** <<<long>>> or <<<Long>>>
+
+    ** <<<int[]>>>
+
+    ** <<<long[]>>>
+
+    ** <<<byte[]>>>
+
+    []
+
++--------------------------+
+UniformRandomProvider rng = RandomSource.create(RandomSource.ISAAC, 5776);
++--------------------------+
++--------------------------+
+UniformRandomProvider rng = RandomSource.create(RandomSource.ISAAC, new int[] { 6, 7, 7, 5, 6, 1, 0, 2 });
++--------------------------+
++--------------------------+
+UniformRandomProvider rng = RandomSource.create(RandomSource.ISAAC, new long[] { 0x638a3fd83bc0e851L, 0x9730fd12c75ae247L });
++--------------------------+
+
+    Note however that, upon initialization, the underlying generation algorithm
+
+    ** may not use all the information contents of the seed,
+
+    ** may use a procedure (using the given seed as input) for further filling its internal state
+       (in order to avoid a too uniform initial state).
+
+    []
+
+    In both cases, the behaviour is not standard but should not change between releases of the library
+    (bugs notwithstanding).
+
+    Each RNG implementation has a single "native" seed; when the seed argument passed
+    to the <<<create>>> method is not of the native type, it is automatically converted.
+    The conversion preserves the information contents but is otherwise not specified (i.e.
+    different releases of the library may use different conversion procedures).
+
+    Hence, if reproducibility of the generated sequences across successive releases of the
+    library is necessary, users should ensure that they use native seeds.
+
++--------------------------+
+long seed = 9246234616L;
+if (!RandomSource.TWO_CMRES.isNativeSeed(seed)) {
+    throw new IllegalArgumentException("Seed is not native");
+}
++--------------------------+
+
+    For each available implementation, the native seed type is specified in the
+    {{{../commons-rng-simple/apidocs/org/apache/commons/rng/simple/RandomSource.html#enum.constant.detail}Javadoc}}.
+
+
+  * Whenever a random source implementation is parameterized, the custom arguments
+    are passed after the seed.
+
++--------------------------+
+int seed = 96912062;
+int first = 7; // Subcycle identifier.
+int second = 4; // Subcycle identifier.
+UniformRandomProvider rng = RandomSource.create(RandomSource.TWO_CMRES_SELECT, seed, first, second);
++--------------------------+
+
+    In the above example, valid "subcycle identifiers" are in the interval [0, 13].
+
+
+  * The current state of a generator can be
+    {{{../commons-rng-client-api/apidocs/org/apache/commons/rng/RestorableUniformRandomProvider.html#saveState--}saved}}
+    and
+    {{{../commons-rng-client-api/apidocs/org/apache/commons/rng/RestorableUniformRandomProvider.html#restoreState-org.apache.commons.rng.RandomProviderState-}restored}}
+    later on.
+
++--------------------------+
+import org.apache.commons.rng.RestorableUniformRandomProvider;
+import org.apache.commons.rng.RandomProviderState;
+
+RestorableUniformRandomProvider rng = RandomSource.create(RandomSource.WELL_512_A);
+RandomProviderState state = rng.saveState();
+double x = rng.nextDouble();
+rng.restoreState(state);
+double y = rng.nextDouble(); // x == y.
++--------------------------+
+
+
+  * The <<<UniformRandomProvider>>> objects returned from the <<<create>>> methods do not
+    implement the <<<java.io.Serializable>>> interface.
+
+    However, users can easily set up a custom serialization scheme if the random source
+    is known at both ends of the communication channel.
+    This would be useful namely to save the state to persistent storage, and restore it
+    such that the sequence will continue from where it left off.
+
++--------------------------+
+import org.apache.commons.rng.RestorableUniformRandomProvider;
+import org.apache.commons.rng.simple.RandomSource;
+import org.apache.commons.rng.core.RandomProviderDefaultState;
+
+RandomSource source = RandomSource.MT_64; // Known source identifier.
+
+RestorableUniformRandomProvider rngOrig = RandomSource.create(source); // Original RNG instance.
+
+// Save and serialize state.
+RandomProviderState stateOrig = rngOrig.saveState(rngOrig);
+ByteArrayOutputStream bos = new ByteArrayOutputStream();
+ObjectOutputStream oos = new ObjectOutputStream(bos);
+oos.writeObject(((RandomProviderDefaultState) stateOrig).getState());
+
+// Deserialize state.
+ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
+ObjectInputStream ois = new ObjectInputStream(bis);
+RandomProviderState stateNew = new RandomProviderDefaultState((byte[]) ois.readObject());
+
+RestorableUniformRandomProvider rngNew = RandomSource.create(source); // New RNG instance from the same "source".
+
+// Restore original state on the new instance.
+rngNew.restoreState(stateNew);
++--------------------------+
+
+
+  * Generation of random deviates for various
+    {{{../commons-rng-sampling/apidocs/org/apache/commons/rng/sampling/distribution/package-summary.html}distributions}}.
+
++--------------------------+
+import org.apache.commons.rng.sampling.distribution.ContinuousSampler;
+import org.apache.commons.rng.sampling.distribution.BoxMullerGaussianSampler;
+
+ContinuousSampler sampler = new BoxMullerGaussianSampler(RandomSource.create(RandomSource.MT_64),
+                                                         45.6, 2.3);
+double random = sampler.sample();
++--------------------------+
+
++--------------------------+
+import org.apache.commons.rng.sampling.distribution.DiscreteSampler;
+import org.apache.commons.rng.sampling.distribution.RejectionInversionZipfSampler;
+
+DiscreteSampler sampler = new RejectionInversionZipfSampler(RandomSource.create(RandomSource.ISAAC),
+                                                            5, 1.2);
+int random = sampler.sample();
++--------------------------+
+
+  * {{{../commons-rng-sampling/apidocs/org/apache/commons/rng/sampling/PermutationSampler.html}Permutation}},
+    {{{../commons-rng-sampling/apidocs/org/apache/commons/rng/sampling/CollectionSampler.html}sampling from a <<<Collection>>>}}
+    and shuffling utilities.
+
++--------------------------+
+import org.apache.commons.rng.sampling.PermutationSampler;
+
+PermutationSampler sampler = new PermutationSampler(RandomSource.create(RandomSource.KISS),
+                                                    6, 3);
+
+// 3 elements from a shuffling of the (0, 1, 2, 3, 4, 5) tuplet.
+int[] random = sampler.sample();
++--------------------------+
+
++--------------------------+
+import java.util.ArrayList;
+import org.apache.commons.rng.sampling.CollectionSampler;
+
+ArrayList<String> list = new ArrayList<String>();
+list.add("Apache");
+list.add("Commons");
+list.add("RNG");
+
+CollectionSampler<String> sampler = new CollectionSampler<String>(RandomSource.create(RandomSource.MWC_256),
+                                                                  list, 1);
+String word = sampler.sample().get(0);
++--------------------------+
+
+  []
+
+
+3. Library layout
+
+  The API for client code consists of classes and interfaces defined in package
+  {{{../commons-rng-client-api/apidocs/org/apache/commons/rng/package-summary.html}org.apache.commons.rng}}.
+
+  * Interface <<<UniformRandomProvider>>> provides access to a sequence of
+    random values uniformly distributed within some range.
+
+  * Interfaces <<<RestorableUniformRandomProvider>>> and <<<RandomProviderState>>>
+    provide the "save/restore" API.
+
+  []
+
+
+  The API for instantiating generators is defined in package
+  {{{../commons-rng-simple/apidocs/org/apache/commons/rng/simple/package-summary.html}org.apache.commons.rng.simple}}.
+
+  * Enum <<<RandomSource>>> determines which algorithm to use for generating the
+    sequence of random values.
+
+  []
+
+  The <<<org.apache.commons.rng.simple.internal>>> package contain classes
+  for supporting initialization (a.k.a. "seeding") of the generators.
+  They must not be used directly in applications, as all the necessary utilities
+  are accessible through methods defined in <<<RandomSource>>>.
+
+  * <<<ProviderBuilder>>>: contains methods for instantiating the concrete
+    RNG implementations based on the source identifier; it also takes care
+    of calling the appropriate classes for seed type conversion.
+
+  * <<<SeedFactory>>>: contains factory methods for generating random seeds.
+
+  * <<<SeedConverter>>>: interface for classes that transform between
+    supported seed types.
+
+  * Various classes that implement <<<SeedConverter>>> in order to transform
+    from caller's seed to "native" seed.
+
+  []
+
+
+  The {{{../commons-rng-core/apidocs/org/apache/commons/rng/core/package-summary.html}org.apache.commons.rng.core}}.
+  package contain the implementation of the algorithms for the generation of
+  pseudo-random sequences.
+  Applications should not directly import or use classes defined in this package:
+  all generators can be instantiated through the <<<RandomSource>>> factory.
+
+  * Class <<<RandomProviderDefaultState>>> implements the <<<RandomProviderState>>>
+    interface to enable "save/restore" for all <<<RestorableUniformRandomProvider>>>
+    instances created through the <<<RandomSource>>> factory methods.
+
+  * <<<BaseProvider>>>: base class for all concrete RNG implementations;
+    it contains higher-level algorithms <<<nextInt(int n)>>> and <<<nextLong(long n)>>>
+    common to all implementations.
+
+  * <<<org.apache.commons.rng.core.util>>>
+
+    ** <<<NumberFactory>>>: contains utilities for interpreting and combining
+       the output (<<<int>>> or <<<long>>>) of the underlying source of
+       randomness into the requested output, i.e. one of the Java primitive
+       types supported by <<<UniformRandomProvider>>>.
+
+    []
+
+  * <<<org.apache.commons.rng.core.source32>>>
+
+    ** <<<RandomIntSource>>>: describes an algorithm that generates randomness in
+       32-bits chunks (a.k.a Java <<<int>>>).
+
+    ** <<<IntProvider>>>: base class for concrete classes that implement <<<RandomIntSource>>>.
+
+    ** Concrete RNG algorithms that are subclasses of <<<IntProvider>>>.
+
+    []
+
+  * <<<org.apache.commons.rng.core.source64>>>
+
+    ** <<<RandomLongSource>>>: describes an algorithm that generates randomness in
+       64-bits chunks (a.k.a Java <<<long>>>).
+
+    ** <<<LongProvider>>>: base class for concrete classes that implement <<<RandomLongSource>>>.
+
+    ** Concrete RNG algorithms that are subclasses of <<<LongProvider>>>.
+
+    []
+
+  []
+
+
+4. Performance
+
+  This section reports
+  {{{../commons-rng-jmh/apidocs/org/apache/commons/rng/jmh/package-summary.html}performance benchmarks}}
+  of the RNG implementations.
+
+  All runs were performed on a platform with the following characteristics:
+
+  * CPU: Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz
+
+  * Java runtime: 1.7.0_95-b00
+
+  * JVM: OpenJDK 64-Bit Server VM 24.95-b01
+
+  []
+
+  The following tables indicate the performance (as measured by
+  {{{http://openjdk.java.net/projects/code-tools/jmh/}JMH}}) for generating
+
+  * a sequence of 32-bits integers (a.k.a. Java type <<<int>>>)
+
+  * a sequence of 64-bits integers (a.k.a. Java type <<<long>>>)
+
+  * a sequence of 64-bits floating point numbers (a.k.a. Java type <<<double>>>)
+
+  []
+
+
+  The first column is the RNG identifier (see {{{../commons-rng-simple/apidocs/org/apache/commons/rng/simple/RandomSource.html}RandomSource}});
+  the performance value is the ratio of the (JMH) score with respect to the score of <<<RandomSource.JDK>>>.
+
+  In these tables, <lower> is <better>.
+
+
+  ** Generating <<<int>>> values
+
+*--------------------------*----------------+
+|| RNG identifier          ||   Score ratio |
+*--------------------------*----------------+
+| MWC_256                  |        0.42168 |
+*--------------------------*----------------+
+| SPLIT_MIX_64             |        0.42845 |
+*--------------------------*----------------+
+| TWO_CMRES                |        0.46360 |
+*--------------------------*----------------+
+| XOR_SHIFT_1024_S         |        0.48818 |
+*--------------------------*----------------+
+| ISAAC                    |        0.56263 |
+*--------------------------*----------------+
+| KISS                     |        0.56340 |
+*--------------------------*----------------+
+| MT_64                    |        0.62591 |
+*--------------------------*----------------+
+| MT                       |        0.65198 |
+*--------------------------*----------------+
+| WELL_512_A               |        0.83364 |
+*--------------------------*----------------+
+| WELL_1024_A              |        0.88204 |
+*--------------------------*----------------+
+| WELL_44497_A             |        0.99618 |
+*--------------------------*----------------+
+| JDK                      |        1.00000 |
+*--------------------------*----------------+
+| WELL_44497_B             |        1.00641 |
+*--------------------------*----------------+
+| WELL_19937_A             |        1.09770 |
+*--------------------------*----------------+
+| WELL_19937_C             |        1.13420 |
+*--------------------------*----------------+
+
+
+  ** Generating <<<long>>> values
+
+*--------------------------*----------------+
+|| RNG identifier          ||   Score ratio |
+*--------------------------*----------------+
+| SPLIT_MIX_64             |        0.23505 |
+*--------------------------*----------------+
+| XOR_SHIFT_1024_S         |        0.26918 |
+*--------------------------*----------------+
+| TWO_CMRES                |        0.28069 |
+*--------------------------*----------------+
+| MT_64                    |        0.34193 |
+*--------------------------*----------------+
+| MWC_256                  |        0.40359 |
+*--------------------------*----------------+
+| KISS                     |        0.55043 |
+*--------------------------*----------------+
+| MT                       |        0.63092 |
+*--------------------------*----------------+
+| ISAAC                    |        0.63944 |
+*--------------------------*----------------+
+| WELL_512_A               |        0.65085 |
+*--------------------------*----------------+
+| WELL_1024_A              |        0.71561 |
+*--------------------------*----------------+
+| JDK                      |        1.00000 |
+*--------------------------*----------------+
+| WELL_19937_A             |        1.03761 |
+*--------------------------*----------------+
+| WELL_44497_A             |        1.06495 |
+*--------------------------*----------------+
+| WELL_44497_B             |        1.14565 |
+*--------------------------*----------------+
+| WELL_19937_C             |        1.23338 |
+*--------------------------*----------------+
+
+
+  ** Generating <<<double>>> values
+
+*--------------------------*----------------+
+|| RNG identifier          ||   Score ratio |
+*--------------------------*----------------+
+| SPLIT_MIX_64             |        0.28609 |
+*--------------------------*----------------+
+| XOR_SHIFT_1024_S         |        0.32866 |
+*--------------------------*----------------+
+| TWO_CMRES                |        0.34069 |
+*--------------------------*----------------+
+| MWC_256                  |        0.39083 |
+*--------------------------*----------------+
+| MT_64                    |        0.39368 |
+*--------------------------*----------------+
+| KISS                     |        0.60581 |
+*--------------------------*----------------+
+| ISAAC                    |        0.64429 |
+*--------------------------*----------------+
+| MT                       |        0.67086 |
+*--------------------------*----------------+
+| WELL_1024_A              |        0.73629 |
+*--------------------------*----------------+
+| WELL_512_A               |        0.78037 |
+*--------------------------*----------------+
+| JDK                      |        1.00000 |
+*--------------------------*----------------+
+| WELL_19937_A             |        1.11497 |
+*--------------------------*----------------+
+| WELL_44497_A             |        1.13362 |
+*--------------------------*----------------+
+| WELL_19937_C             |        1.15334 |
+*--------------------------*----------------+
+| WELL_44497_B             |        1.22613 |
+*--------------------------*----------------+
+
+
+
+5. Quality
+
+  This section reports results of
+  {{{../commons-rng-examples/apidocs/org/apache/commons/rng/examples/stress/package-summary.html}performing "stress tests"}}
+  that aim at detecting failures of an implementation to produce sequences of numbers
+  that follow a uniform distribution.
+
+  Two different test suites were used:
+
+  * {{{http://www.phy.duke.edu/~rgb/General/dieharder.php}Dieharder}}
+
+  * {{{http://simul.iro.umontreal.ca/testu01/tu01.html}TestU01}}
+
+  []
+
+  The first column is the RNG identifier (see {{{../commons-rng-simple/apidocs/org/apache/commons/rng/simple/RandomSource.html}RandomSource}}).
+  The second and third columns contain the number of tests which <Dieharder> and <TestU01>
+  respectively reported as below the accepted threshold for considering the sequence as
+  uniformly random; hence, in this table, <lower> is <better>.
+
+  For each the two test suites, three runs were performed (using random seeds): Click on one
+  of the numbers of the comma-separated list in order to see the text report of the
+  corresponding run.
+  Note: For <Dieharder>, a failure on the "Diehard Sums Test" can be {{{http://www.phy.duke.edu/~rgb/General/dieharder.php}ignored}}.
+
+
+*---------------------------------*----------------*---------------------*
+|| RNG identifier             || Dieharder     || TestU01 (BigCrush) |
+*----------------*----------------*----------------*---------------------*
+| JDK         | {{{../txt/userguide/stress/dh/run_1/dh_1}14}}, {{{../txt/userguide/stress/dh/run_2/dh_1}16}}, {{{../txt/userguide/stress/dh/run_3/dh_1}15}} | {{{../txt/userguide/stress/tu/run_1/tu_1}78}}, {{{../txt/userguide/stress/tu/run_2/tu_1}75}}, {{{../txt/userguide/stress/tu/run_3/tu_1}76}} |
+*---------------------------------*----------------*----------------*
+| MT   | {{{../txt/userguide/stress/dh/run_1/dh_2}0}}, {{{../txt/userguide/stress/dh/run_2/dh_2}0}}, {{{../txt/userguide/stress/dh/run_3/dh_2}0}} | {{{../txt/userguide/stress/tu/run_1/tu_2}2}}, {{{../txt/userguide/stress/tu/run_2/tu_2}2}}, {{{../txt/userguide/stress/tu/run_3/tu_2}2}} |
+*---------------------------------*----------------*----------------*
+| WELL_512_A          | {{{../txt/userguide/stress/dh/run_1/dh_3}0}}, {{{../txt/userguide/stress/dh/run_2/dh_3}0}}, {{{../txt/userguide/stress/dh/run_3/dh_3}0}} | {{{../txt/userguide/stress/tu/run_1/tu_3}6}}, {{{../txt/userguide/stress/tu/run_2/tu_3}6}}, {{{../txt/userguide/stress/tu/run_3/tu_3}6}} |
+*---------------------------------*----------------*----------------*
+| WELL_1024_A         | {{{../txt/userguide/stress/dh/run_1/dh_4}0}}, {{{../txt/userguide/stress/dh/run_2/dh_4}0}}, {{{../txt/userguide/stress/dh/run_3/dh_4}1}}| {{{../txt/userguide/stress/tu/run_1/tu_4}4}}, {{{../txt/userguide/stress/tu/run_2/tu_4}6}}, {{{../txt/userguide/stress/tu/run_3/tu_4}5}} |
+*---------------------------------*----------------*----------------*
+| WELL_19937_A        | {{{../txt/userguide/stress/dh/run_1/dh_5}0}}, {{{../txt/userguide/stress/dh/run_2/dh_5}0}}, {{{../txt/userguide/stress/dh/run_3/dh_5}0}} | {{{../txt/userguide/stress/tu/run_1/tu_5}2}}, {{{../txt/userguide/stress/tu/run_2/tu_5}3}}, {{{../txt/userguide/stress/tu/run_3/tu_5}4}} |
+*---------------------------------*----------------*----------------*
+| WELL_19937_C        | {{{../txt/userguide/stress/dh/run_1/dh_6}0}}, {{{../txt/userguide/stress/dh/run_2/dh_6}0}}, {{{../txt/userguide/stress/dh/run_3/dh_6}0}} | {{{../txt/userguide/stress/tu/run_1/tu_6}2}}, {{{../txt/userguide/stress/tu/run_2/tu_6}2}}, {{{../txt/userguide/stress/tu/run_3/tu_6}2}} |
+*---------------------------------*----------------*----------------*
+| WELL_44497_A        | {{{../txt/userguide/stress/dh/run_1/dh_7}0}}, {{{../txt/userguide/stress/dh/run_2/dh_7}0}}, {{{../txt/userguide/stress/dh/run_3/dh_7}0}} | {{{../txt/userguide/stress/tu/run_1/tu_7}3}}, {{{../txt/userguide/stress/tu/run_2/tu_7}3}}, {{{../txt/userguide/stress/tu/run_3/tu_7}2}} |
+*---------------------------------*----------------*----------------*
+| WELL_44497_B        | {{{../txt/userguide/stress/dh/run_1/dh_8}0}}, {{{../txt/userguide/stress/dh/run_2/dh_8}1}}, {{{../txt/userguide/stress/dh/run_3/dh_8}0}} | {{{../txt/userguide/stress/tu/run_1/tu_8}2}}, {{{../txt/userguide/stress/tu/run_2/tu_8}2}}, {{{../txt/userguide/stress/tu/run_3/tu_8}3}} |
+*---------------------------------*----------------*----------------*
+| ISAAC       | {{{../txt/userguide/stress/dh/run_1/dh_9}0}}, {{{../txt/userguide/stress/dh/run_2/dh_9}0}}, {{{../txt/userguide/stress/dh/run_3/dh_9}0}} | {{{../txt/userguide/stress/tu/run_1/tu_9}1}}, {{{../txt/userguide/stress/tu/run_2/tu_9}0}}, {{{../txt/userguide/stress/tu/run_3/tu_9}0}} |
+*---------------------------------*----------------*----------------*
+| MT_64 | {{{../txt/userguide/stress/dh/run_1/dh_10}0}}, {{{../txt/userguide/stress/dh/run_2/dh_10}0}}, {{{../txt/userguide/stress/dh/run_3/dh_10}0}} | {{{../txt/userguide/stress/tu/run_1/tu_10}2}}, {{{../txt/userguide/stress/tu/run_2/tu_10}2}}, {{{../txt/userguide/stress/tu/run_3/tu_10}3}} |
+*---------------------------------*----------------*----------------*
+| SPLIT_MIX_64        | {{{../txt/userguide/stress/dh/run_1/dh_11}0}}, {{{../txt/userguide/stress/dh/run_2/dh_11}0}}, {{{../txt/userguide/stress/dh/run_3/dh_11}0}} | {{{../txt/userguide/stress/tu/run_1/tu_11}0}}, {{{../txt/userguide/stress/tu/run_2/tu_11}0}}, {{{../txt/userguide/stress/tu/run_3/tu_11}0}} |
+*---------------------------------*----------------*----------------*
+| XOR_SHIFT_1024_S  | {{{../txt/userguide/stress/dh/run_1/dh_12}0}}, {{{../txt/userguide/stress/dh/run_2/dh_12}0}}, {{{../txt/userguide/stress/dh/run_3/dh_12}0}} | {{{../txt/userguide/stress/tu/run_1/tu_12}0}}, {{{../txt/userguide/stress/tu/run_2/tu_12}0}}, {{{../txt/userguide/stress/tu/run_3/tu_12}0}} |
+*---------------------------------*----------------*----------------*
+| TWO_CMRES          | {{{../txt/userguide/stress/dh/run_1/dh_13}0}}, {{{../txt/userguide/stress/dh/run_2/dh_13}1}}, {{{../txt/userguide/stress/dh/run_3/dh_13}0}} | {{{../txt/userguide/stress/tu/run_1/tu_13}0}}, {{{../txt/userguide/stress/tu/run_2/tu_13}0}}, {{{../txt/userguide/stress/tu/run_3/tu_13}0}} |
+*---------------------------------*----------------*----------------*
+| MWC_256          | {{{../txt/userguide/stress/dh/run_1/dh_14}0}}, {{{../txt/userguide/stress/dh/run_2/dh_14}0}}, {{{../txt/userguide/stress/dh/run_3/dh_14}0}} | {{{../txt/userguide/stress/tu/run_1/tu_14}0}}, {{{../txt/userguide/stress/tu/run_2/tu_14}0}}, {{{../txt/userguide/stress/tu/run_3/tu_14}0}} |
+*---------------------------------*----------------*----------------*
+| KISS          | {{{../txt/userguide/stress/dh/run_1/dh_15}0}}, {{{../txt/userguide/stress/dh/run_2/dh_15}0}}, {{{../txt/userguide/stress/dh/run_3/dh_15}0}} | {{{../txt/userguide/stress/tu/run_1/tu_15}0}}, {{{../txt/userguide/stress/tu/run_2/tu_15}1}}, {{{../txt/userguide/stress/tu/run_3/tu_15}0}} |
+*---------------------------------*----------------*----------------*
+
+
+6. Dependencies
+
+  Apache Commons RNG requires JDK 1.6+ and has no runtime dependencies.

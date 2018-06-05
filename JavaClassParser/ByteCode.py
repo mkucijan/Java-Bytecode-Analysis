@@ -140,7 +140,7 @@ class LookupSwitchBytecode(ByteCode):
         self.argsFormat = self.argsFormat[:-1]
 
         result += "\t\t\tdefault: %d\n\t\t}\n" % (default_offset)
-        self.opCodeCount = int((byteIndex-startByteIndex)/2 - 1)
+        self.opCodeCount = int((byteIndex-startByteIndex)/2)
         self.parsedString = result
 
         return result 
@@ -189,7 +189,7 @@ class TableSwitchBytecode(ByteCode):
         self.argsFormat = self.argsFormat[:-1]
 
         result += "\t\t\tdefault: %d\n\t\t}\n" % (default_offset)
-        self.opCodeCount = int((byteIndex-startByteIndex)/2 - 1)
+        self.opCodeCount = int((byteIndex-startByteIndex)/2)
         self.parsedString = result
         return result 
     
@@ -209,21 +209,21 @@ class WideByteCode(ByteCode):
   
         result += '%s ' % (self.opcode.getMnemonic())
 
-        index = ByteCode.getBigEndianInt(code[byteIndex:byteIndex+step])
-        byteIndex += 2
+        index = ByteCode.getBigEndianInt(code[byteIndex:byteIndex+4])
+        byteIndex += 4
 
         result += '#%d ' % (index)
 
 
-        self.args='#2'
+        self.args='2'
         self.argsCount=[2]
         self.argsFormat='{:d}'
         self.argValues=[index]
         self.constArg=[False]
 
-        if opcode is 'iinc':
-            count = ByteCode.getBigEndianInt(code[byteIndex:byteIndex+step])
-            byteIndex += 2
+        if self.opcode.getMnemonic() == 'iinc':
+            count = ByteCode.getBigEndianInt(code[byteIndex:byteIndex+4])
+            byteIndex += 4
             result += ',%d' % (count)
             self.args += ',2'
             self.argsCount.append(2)
@@ -231,8 +231,8 @@ class WideByteCode(ByteCode):
             self.argValues.append(count)
             self.constArg.append(False)
 
-        result += '\n'        
-        self.opCodeCount = int((byteIndex-startByteIndex)/2 - 1)
+        result += '\n'
+        self.opCodeCount = int((byteIndex-startByteIndex)/2)
         self.parsedString = result
         return result
 

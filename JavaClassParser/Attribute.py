@@ -342,7 +342,6 @@ class CodeAttribute(Attribute):
             if byteCode:
                 self.instructions.append(byteCode(self.code,byteIndex))
                 byteIndex += byteCode.getOpCodeCount() * 2
-
             byteIndex += 2
 
     def __str__(self):

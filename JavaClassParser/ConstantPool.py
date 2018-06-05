@@ -75,7 +75,10 @@ class ConstantUTF8Info(ConstantInfo):
     def __init__(self, length, utf8):
         super(ConstantUTF8Info, self).__init__(CONSTANT_UTF8_INFO)
         self.length = length
-        self.utf8 = str(utf8, "utf-8")
+        try:
+            self.utf8 = str(utf8, "utf-8")
+        except UnicodeDecodeError as e:
+            self.utf8 = ''
 
     def getTypeName(self):
         return TYPE_UTF8

@@ -324,6 +324,7 @@ def bind_code(class_file, source):
     
         instructionIndex = 0
         listed_nodes = get_listed_nodes(method_tree)
+
         for i,statement in enumerate(listed_nodes):
             start_pos = statement['pos'][0]
             end_pos = statement['pos'][1]
@@ -369,8 +370,10 @@ def bind_code(class_file, source):
                         offset += size
 
                 instructionIndex += 1
+            
         
         method_tree = remove_non_instr_nodes(method_tree)
+
         code_by_lines[binMethod.name] = method_tree
     
     file.close()
@@ -393,8 +396,9 @@ def main():
                         help="Directory for compiled class files, use -r to auto remove. "+
                         "By default its generated in .class_files under current directory.")
     parser.add_argument("-r", "--remove", action="store_true")
-    parser.add_argument("-o", "--output", nargs='?', default=sys.path[0]+'/TestOutput', 
+    parser.add_argument("-o", "--output", nargs='?', default=sys.path[0]+'/TestParseOutput', 
                         help="Path to output directory. By default in output in current directory of the script.")
+    parser.add_argument("-c", "--compile", action="store_false")
     args = parser.parse_args()
 
     class_path = args.classpath
@@ -418,14 +422,14 @@ def main():
     if not java_files:
         java_files = glob(class_path+'/**/*.java',recursive=True)
 
-
-    compileCommand = "javac -cp " + class_path + " -d "+ save_class_directory + " -g " + \
-                     ' '.join(java_files) 
-    process = subprocess.Popen(compileCommand.split(), stdout=subprocess.PIPE)
-    output, error = process.communicate()
-    if process.returncode != 0: 
-        print("javac failed %d %s %s" % (process.returncode, output, error))
-    output = output.decode('utf-8')
+    if args.compile:
+        compileCommand = "javac -cp " + class_path + " -d "+ save_class_directory + " -g " + \
+                        ' '.join(java_files) 
+        process = subprocess.Popen(compileCommand.split(), stdout=subprocess.PIPE)
+        output, error = process.communicate()
+        if process.returncode != 0: 
+            print("javac failed %d %s %s" % (process.returncode, output, error))
+        output = output.decode('utf-8')
 
     class_files=glob(save_class_directory+"/**",recursive=True)
     for class_file in class_files:

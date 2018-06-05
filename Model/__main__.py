@@ -48,6 +48,7 @@ def create_argument_parser():
     train.add_argument("--args-dim", type=positive_integer, default=None, help="dimension of special arg encoding")
     train.add_argument("--bidirectional", action="store_true", help="Use bidirectional model")
     train.add_argument("--nonlinear", action="store_true", help="Add nonlinear transofrmation on rnn output.")
+    train.add_argument("--encint", action="store_true", help="Add seperate encoding for integer values.")
     train.set_defaults(func=train_model)
 
     search = subparsers.add_parser("RNN-search", description="Search best fiting params.",
@@ -76,6 +77,7 @@ def create_argument_parser():
     search.add_argument("--args-dim", type=positive_integer, default=None, help="dimension of special arg encoding")
     search.add_argument("--bidirectional", action="store_true", help="Use bidirectional model")
     search.add_argument("--nonlinear", action="store_true", help="Add nonlinear transofrmation on rnn output.")
+    search.add_argument("--encint", action="store_true", help="Add seperate encoding for integer values.")
     search.set_defaults(func=search_params)
     
     

@@ -210,7 +210,10 @@ class Data(object):
         for x_seq in self.X:
             new_seq = []
             for x in x_seq:
-                m = regex.match(x)
+                try:
+                    m = regex.match(x)
+                except Exception as e:
+                    m = None
                 if m:
                     new_seq.append(m.group('method_name'))
                 else:

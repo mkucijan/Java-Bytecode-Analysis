@@ -120,7 +120,10 @@ def bindCode(class_file, source):
                                     instruction.argsFormat.split(','),instruction.argsCount):
 
                     if fromPool:
-                        arg = str(parser.constValue[arg-1])
+                        try:
+                            arg = str(parser.constValue[arg-1])
+                        except Exception as e:
+                            pass
                     else:
                         if 'switch' in instruction.mnemonic:
                             arg = frm.format(*arg)

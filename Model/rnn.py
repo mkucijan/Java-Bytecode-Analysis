@@ -46,6 +46,7 @@ class RNN(object):
     def _model_file(model_directory):
         return os.path.join(model_directory, "model")
     
+    @staticmethod
     def _vocabulary_file(model_directory):
         return os.path.join(model_directory, "vocabulary.dict")
 

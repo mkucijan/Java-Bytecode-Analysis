@@ -29,13 +29,13 @@ def train_model(args):
         args_dim = args.args_dim,
         bidirectional= args.bidirectional,
         nonlinear= args.nonlinear,
-        encode_int=False
+        encode_int=args.encint
     )
 
     #args.data_set.filter_no_jumps()
     args.data_set.simplifySignature(overwrite=True)
     #args.data_set.relabelData(overwrite=True)
-    #args.data_set.filterOperands()
+    args.data_set.filterOperands()
     #args.data_set.shuffle()
     logger.info("DATALEN:"+str(args.data_set.length))
     
@@ -80,13 +80,13 @@ def search_params(args):
         args_dim = args.args_dim,
         bidirectional= args.bidirectional,
         nonlinear= args.nonlinear,
-        encode_int=False
+        encode_int=args.encint
     )
     
     args.data_set.filter_no_jumps()
-    #args.data_set.simplifySignature(overwrite=True)
+    args.data_set.simplifySignature(overwrite=True)
     #args.data_set.filterOperands()
-    args.data_set.relabelData(overwrite=True)
+    #args.data_set.relabelData(overwrite=True)
     #args.data_set.shuffle()
     logger.info("DATALEN:"+str(args.data_set.length))
     
@@ -106,26 +106,29 @@ def search_params(args):
     args.learning_rate = 0.1
 
     ms = [0.1]
-    bs = [16, 32]
+    bs = [32]
     ts = [50, 100]
     hu = [8, 16, 32, 64]
     ly = [1, 2, 3, 4]
-    #ad = [None, 16, 32, 64]
+    ad = [None]
     bi = [True, False]
     nl = [True, False]
+    ei = [True, False]
 
     perplexity_values = []
     accuracy_values = []
 
     iter_num = 0
 
-    for params in itertools.product(*[ms, ts, hu, ly, bi, nl]):
+    for params in itertools.product(*[ms, ts, hu, ly, ad, bi, nl, ei]):
         args.max_gradient,                    \
         args.time_steps,                      \
         args.hidden_units,                    \
         args.layers,                          \
+        additional_parameters.args_dim,       \
         additional_parameters.bidirectional,  \
-        additional_parameters.nonlinear       \
+        additional_parameters.nonlinear,      \
+        additional_parameters.encode_int      \
         = params
 
         if args.model_directory:
