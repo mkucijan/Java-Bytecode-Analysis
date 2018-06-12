@@ -73,6 +73,7 @@ def train_model(args):
     logger.info("Total training time %s" % timedelta(seconds=(time.time() - start_time)))
 
 def search_params(args):
+    RESTORE = False
     if args.model_directory is None:
         logger.warn("Not saving a model.")
         
@@ -102,13 +103,15 @@ def search_params(args):
         validation = None
 
     default_dir = args.model_directory
+    default_dir_sum = args.summary_directory
     
     args.learning_rate = 0.1
+    args.max_epochs = 10
 
     ms = [0.1]
     bs = [32]
     ts = [50, 100]
-    hu = [8, 16, 32, 64]
+    hu = [128, 256, 512]
     ly = [1, 2, 3, 4]
     ad = [None]
     bi = [True, False]
@@ -130,37 +133,56 @@ def search_params(args):
         additional_parameters.nonlinear,      \
         additional_parameters.encode_int      \
         = params
-
+        
+        if iter_num < 25:
+            iter_num += 1
+            continue
+        
         if args.model_directory:
             args.model_directory = default_dir +'/iter-'+str(iter_num)
             try:
                 os.makedirs(args.model_directory)
             except FileExistsError:
                 pass
+        
+        if args.summary_directory:
+            args.summary_directory = default_dir_sum +'/iter-'+str(iter_num)
+            try:
+                os.makedirs(args.summary_directory)
+            except FileExistsError:
+                pass
     
         start_time = time.time()
         with tf.Graph().as_default():
-            model = RNN(args.max_gradient,
-                        args.batch_size, args.time_steps, train_data.vocabulary_size,
-                            args.hidden_units,args.data_set.output_size, args.layers,
-                            additional_parameters)
+            if RESTORE:
+                model = RNN.restore(session, args.model_directory)
+                config = tf.ConfigProto(allow_soft_placement = True)
+                with tf.device('/gpu:0'):
+                    with tf.Session(config = config) as session:
+                        val, acc, _, _ = model.test(session, validation_data)
+            else:
+                model = RNN(args.max_gradient,
+                            args.batch_size, args.time_steps, train_data.vocabulary_size,
+                                args.hidden_units,args.data_set.output_size, args.layers,
+                                additional_parameters)
 
-            config = tf.ConfigProto(allow_soft_placement = True)
-            with tf.device('/gpu:0'):
-                with tf.Session(config = config) as session:
-                    val, acc = model.train(session,
-                                           train_data,
-                                           Parameters(args.learning_rate, args.keep_probability),
-                                           ExitCriteria(args.max_iterations, args.max_epochs),
-                                           validation,
-                                           args.logging_interval,
-                                           Directories(args.model_directory, args.summary_directory))
+                config = tf.ConfigProto(allow_soft_placement = True)
+                with tf.device('/gpu:0'):
+                    with tf.Session(config = config) as session:
+                        val, acc = model.train(session,
+                                            train_data,
+                                            Parameters(args.learning_rate, args.keep_probability),
+                                            ExitCriteria(args.max_iterations, args.max_epochs),
+                                            validation,
+                                            args.logging_interval,
+                                            Directories(args.model_directory, args.summary_directory))
         logger.info("Total training time %s" % timedelta(seconds=(time.time() - start_time)))
     
         perplexity_values.append(val)
         accuracy_values.append(acc)
 
         iter_num += 1
+
     
     logger.info("Perplexity: " + str(perplexity_values))
     logger.info("Accuracy: " + str(accuracy_values))

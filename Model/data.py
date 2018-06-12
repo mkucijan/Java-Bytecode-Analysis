@@ -233,9 +233,12 @@ class Data(object):
         new_Y = []
         keys = ['if', 'goto']
         for x_seq, y_seq in zip(self.X, self.Y):
-            if any([key in instr for key in keys for instr in x_seq]):
-                new_X.append(x_seq)
-                new_Y.append(y_seq)
+            try:
+                if any([key in str(instr) for key in keys for instr in x_seq]):
+                    new_X.append(x_seq)
+                    new_Y.append(y_seq)
+            except Exception:
+                raise ValueError
 
         if overwrite:
             self.X = new_X
@@ -488,11 +491,11 @@ class DataPartition(object):
                         instruction_values_seq.append(X[data_index][j])
                         batch_Y[i, instr_index,int( Y[data_index][j][1] )] = 1
                         mask[i,instr_index] = 1
+                        seq_len[i] += 1
                         if args_dim:
                             batch_X_args[i, instr_index] = encode_fun(self.X_args[data_index][j])
                         instr_index += 1
                     instruction_values.append(instruction_values_seq)
-                    seq_len[i] = len(X[data_index])
                     data_index += 1
             
             if args_dim:
