@@ -34,8 +34,9 @@ def train_model(args):
 
     #args.data_set.filter_no_jumps()
     args.data_set.simplifySignature(overwrite=True)
+    #args.data_set.relabel_by_embedding(overwrite=True)
     #args.data_set.relabelData(overwrite=True)
-    args.data_set.filterOperands()
+    #args.data_set.filterOperands()
     #args.data_set.shuffle()
     logger.info("DATALEN:"+str(args.data_set.length))
     
@@ -51,6 +52,7 @@ def train_model(args):
         validation = None
     # Run training.
     
+    print("NUMBER OF CLASSES:",args.data_set.output_size)
     start_time = time.time()
     with tf.Graph().as_default():
         model = RNN(args.max_gradient,
@@ -92,11 +94,11 @@ def search_params(args):
     logger.info("DATALEN:"+str(args.data_set.length))
     
     logger.info("Baseline acc: %0.4f" % args.data_set.baseline)
-    train_data = args.data_set.getPartition(args.training_partition)
+    train_data = args.data_set.getPartition(0.8)
     logger.info("Train baseline acc: %0.4f" % train_data.baseline)
 
     if args.validation_partition:
-        validation_data = args.data_set.getPartition(args.validation_partition)
+        validation_data = args.data_set.getPartition(0.1)
         validation = Validation(args.validation_interval, validation_data)
         logger.info("Validation baseline acc: %0.4f" % validation_data.baseline)
     else:
@@ -106,16 +108,16 @@ def search_params(args):
     default_dir_sum = args.summary_directory
     
     args.learning_rate = 0.1
-    args.max_epochs = 10
+    args.max_epochs = 30
 
     ms = [0.1]
     bs = [32]
-    ts = [50, 100]
-    hu = [128, 256, 512]
-    ly = [1, 2, 3, 4]
+    ts = [100]
+    hu = [128, 256]
+    ly = [1, 2]
     ad = [None]
-    bi = [True, False]
-    nl = [True, False]
+    bi = [True]
+    nl = [False]
     ei = [True, False]
 
     perplexity_values = []
@@ -133,8 +135,9 @@ def search_params(args):
         additional_parameters.nonlinear,      \
         additional_parameters.encode_int      \
         = params
-        
-        if iter_num < 25:
+
+        print(params)
+        if iter_num < 4:
             iter_num += 1
             continue
         
@@ -155,10 +158,10 @@ def search_params(args):
         start_time = time.time()
         with tf.Graph().as_default():
             if RESTORE:
-                model = RNN.restore(session, args.model_directory)
-                config = tf.ConfigProto(allow_soft_placement = True)
                 with tf.device('/gpu:0'):
+                    config = tf.ConfigProto(allow_soft_placement = True)
                     with tf.Session(config = config) as session:
+                        model = RNN.restore(session, args.model_directory)
                         val, acc, _, _ = model.test(session, validation_data)
             else:
                 model = RNN(args.max_gradient,
@@ -208,11 +211,14 @@ def search_params(args):
 
 def test_model(args):
     # To take last partition
-    args.data_set.getPartition(1-args.test_partition)
+    #args.data_set.getPartition(1-args.test_partition)
     test_set = args.data_set.getPartition(args.test_partition)
     logger.info("Test set: %s" % test_set)
     with tf.Graph().as_default():
         with tf.Session() as session:
             model = RNN.restore(session, args.model_directory)
-            perplexity = model.test(session, test_set)
+            perplexity, acc, lab, pred = model.test(session, test_set)
             print("Perplexity %0.4f" % perplexity)
+            print(acc)
+            print(lab)
+            print(pred)

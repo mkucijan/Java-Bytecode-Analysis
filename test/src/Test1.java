@@ -1,4 +1,4 @@
-public class Test {
+public class Test1 {
 
 	private static int parametar;
 
@@ -11,8 +11,6 @@ public class Test {
         System.out.println("" + mylocal);
 		if(mylocal>1) {
 			mylocal = mylocal + 1;
-		} else {
-			mylocal = 0;
 		}
 		while(mylocal<10) {
 			System.out.println(".." + mylocal);

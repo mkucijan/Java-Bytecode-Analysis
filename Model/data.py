@@ -149,15 +149,22 @@ class Data(object):
 
         return new_X, new_Y
 
-    def relabelData(self, matchLabel = 1, matched = 1, unmatched = 0,   
+    def relabelData(self, matchLabel = [1], matched = 1, unmatched = None,   
                     overwrite = False):
+
+        def relabel(y):
+            if y[1] in matchLabel:
+                return (y[0], matched)
+            else:
+                if unmatched:
+                    return (y[0], unmatched)
+                else:
+                    return y
 
         new_Y = []
         for y_seq in self.Y:
             y_seq = np.array(y_seq)
-            y_seq = list(map(
-                    lambda y: (y[0], matched) if (y[1]==matchLabel) else (y[0], unmatched),
-                    y_seq))
+            y_seq = list(map(relabel, y_seq))
             
             new_Y.append(y_seq)
 

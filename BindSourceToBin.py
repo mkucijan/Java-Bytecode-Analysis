@@ -13,8 +13,7 @@ from JavaClassParser.Parser import Parser
 
 
 KEYWORDS = [
-    'if ',
-    'else ',
+    'if',
     'while',
     'for'
 #    'switch'

@@ -85,7 +85,7 @@ def create_argument_parser():
                                  help="Use a previously-trained model to get perplexity on a test set")
     test.add_argument("model_directory", help="directory from which to read the model")
     test.add_argument("data_set", type=Data.deserialize, default=Data.deserialize(os.path.join(DIR_PATH, 'output')), help="data set")
-    test.add_argument("--test-partition",type=real_zero_to_one, default=0.2, help="test partition")
+    test.add_argument("--test-partition",type=real_zero_to_one, default=1.0, help="test partition")
     test.set_defaults(func=test_model)
 
     sample = subparsers.add_parser("sample", description="Sample text from a RNN model.",

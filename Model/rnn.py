@@ -2,7 +2,7 @@ import json
 import os.path
 
 import numpy as np
-from sklearn.metrics import recall_score, precision_score, f1_score
+from sklearn.metrics import recall_score, precision_score, f1_score, accuracy_score
 import tensorflow as tf
 from Model import logger
 from Model.utils import *
@@ -23,13 +23,21 @@ class RNN(object):
         """
         with open(cls._parameters_file(model_directory)) as f:
             parameters = json.load(f)
+        
+        additonal_param = Additional_Parameters(
+            args_dim = parameters["args_dim"], 
+            bidirectional=parameters["bidirectional"],
+            nonlinear=parameters["nonlinear"],
+            encode_int = parameters.get("encode_int", True))
         model = cls(parameters["max_gradient"],
                     parameters["batch_size"], parameters["time_steps"], parameters["vocabulary_size"],
-                    parameters["hidden_units"], parameters["output_size"], parameters["layers"])
+                    parameters["hidden_units"], parameters["output_size"], parameters["layers"],
+                    additional_parameters=additonal_param)
         model.acc = parameters["best_valid_acc"]
+
         tf.train.Saver().restore(session, cls._model_file(model_directory))
         with open(cls._vocabulary_file(model_directory)) as f:
-            self.vocabulary = json.load(f)
+            model.vocabulary = json.load(f)
         return model
 
     @staticmethod
@@ -78,7 +86,7 @@ class RNN(object):
             embedding_size = hidden_units
             if self.additional_parameters.args_dim:
                 embedding_size = hidden_units - self.additional_parameters.args_dim
-            self.embedding = tf.get_variable("embedding", (vocabulary_size, embedding_size), 
+            self.embedding = tf.get_variable("embedding_1", (vocabulary_size, embedding_size), 
                                             initializer = tf.contrib.layers.xavier_initializer(),
                                             dtype=tf.float64) 
             #self.embedding = initializer((vocabulary_size, hidden_units))
@@ -229,6 +237,13 @@ class RNN(object):
                                                          name="training_epoch_perplexity")
             tf.summary.scalar(self.training_epoch_perplexity.op.name, self.training_epoch_perplexity)
             
+
+            self.validation_accuracy = tf.Variable(dtype=tf.float64, initial_value=float("0"), trainable=False,
+                                                     name="validation_accuracy")
+            tf.summary.scalar(self.validation_accuracy.op.name, self.validation_accuracy)
+            self.training_epoch_accuracy = tf.Variable(dtype=tf.float64, initial_value=float("0"), trainable=False,
+                                                         name="training_epoch_accuracy")
+            tf.summary.scalar(self.training_epoch_accuracy.op.name, self.training_epoch_accuracy)
             
             self.validation_recall = tf.Variable(dtype=tf.float64, initial_value=float("0"), trainable=False,
                                                      name="validation_recall")
@@ -389,13 +404,13 @@ class RNN(object):
                         feed_dict[self.input] = context[0]
                         feed_dict[self.encoded_int_args] = context[1]
                     
-                    _, cost, state, iteration_1, acc, predicted = session.run(
+                    _, cost, state, iteration, acc, predicted = session.run(
                     [self.train_step, self.cost, self.next_state, self.iteration, self.accuracy, self.predicted],
                         feed_dict=feed_dict)
 
-                    iteration += 1                    
+                    #iteration = self.iteration                
                     epoch_cost += cost
-                    epoch_iteration += self.time_steps
+                    epoch_iteration += self.batch_size
                     accuracy += acc*np.sum(seq_len)
                     num_units += np.sum(seq_len)
                     predict = np.reshape(predicted,(self.batch_size, self.time_steps, self.output_size))
@@ -423,6 +438,7 @@ class RNN(object):
                     if validation is not None and self._interval(iteration, validation.interval):
                         validation_perplexity, acc, val_lab, val_pred = self.test(session, validation.validation_set, valid_acc)
                         self.store_validation_perplexity(session, summary, iteration, validation_perplexity)
+                        self.store_validation_accuracy(session, summary, iteration, self.accuracy_score(val_lab, val_pred))
                         self.store_validation_recall(session, summary, iteration, self.recall(val_lab, val_pred))
                         self.store_validation_precision(session, summary, iteration, self.precision(val_lab, val_pred))
                         self.store_validation_f1_score(session, summary, iteration, self.f1_score(val_lab, val_pred))
@@ -445,6 +461,7 @@ class RNN(object):
                         raise StopTrainingException()
 
                 self.store_training_epoch_perplexity(session, summary, iteration, self.perplexity(epoch_cost, epoch_iteration))
+                self.store_training_epoch_accuracy(session, summary, iteration, self.accuracy_score(epoch_labels, epoch_pred))
                 self.store_training_epoch_recall(session, summary, iteration, self.recall(epoch_labels, epoch_pred))
                 self.store_training_epoch_precision(session, summary, iteration, self.precision(epoch_labels, epoch_pred))
                 self.store_training_epoch_precision(session, summary, iteration, self.f1_score(epoch_labels, epoch_pred))
@@ -477,6 +494,7 @@ class RNN(object):
             "args_dim": self.additional_parameters.args_dim,
             "bidirectional": self.additional_parameters.bidirectional,
             "nonlinear": self.additional_parameters.nonlinear,
+            "encode_int": self.additional_parameters.encode_int,
             "best_valid_acc": self.acc
         }
         with open(self._parameters_file(model_directory), "w") as f:
@@ -489,7 +507,7 @@ class RNN(object):
         
     def test(self, session, test_set, acc_obj=Accuracy(), train = False):
         state = None       
-        epoch_cost = epoch_iteration = accuracy = num_units = 0
+        epoch_cost_val = epoch_iteration_val = accuracy = num_units = 0
         valid_labels = np.array([])
         valid_pred = np.array([])
         for start_document, context, labels, seq_len, mask, _, instruction_values in test_set.epoch(
@@ -518,13 +536,13 @@ class RNN(object):
                 _ , _, cost, state, acc, pred = session.run([self.train_step, self.iteration, self.cost, self.next_state, self.accuracy, self.predicted],
                                             feed_dict=feed_dict)
             else:
-                _, cost, state, acc, pred = session.run([self.cost, self.iteration, self.next_state, self.accuracy, self.predicted],
+                _, cost, state, acc, pred = session.run([self.iteration, self.cost, self.next_state, self.accuracy, self.predicted],
                                             feed_dict=feed_dict)
             
-            epoch_cost += cost
+            epoch_cost_val += cost
             accuracy += acc*np.sum(seq_len)
             num_units += np.sum(seq_len)
-            epoch_iteration += self.time_steps
+            epoch_iteration_val += self.batch_size
             predict = np.reshape(pred,(self.batch_size, self.time_steps, self.output_size))
             acc_obj.evaluate(logits=predict,
                     labels=labels, seq_len=seq_len)
@@ -534,7 +552,7 @@ class RNN(object):
                 valid_labels = np.append(valid_labels, np.argmax(label_seq[:sl],axis=1))
                 valid_pred = np.append(valid_pred, np.argmax(pred_seq[:sl], axis=1))
 
-        return self.perplexity(epoch_cost, epoch_iteration), accuracy/num_units, valid_labels, valid_pred
+        return self.perplexity(epoch_cost_val, epoch_iteration_val), accuracy/num_units, valid_labels, valid_pred
 
     @staticmethod
     def _interval(iteration, interval):
@@ -545,20 +563,28 @@ class RNN(object):
         return np.exp(cost / iterations)
     
     @staticmethod
+    def accuracy_score(labels, predictions):
+        return accuracy_score(labels, predictions)
+    
+    @staticmethod
     def recall(labels, predictions):
-        return recall_score(labels, predictions, average='micro')
+        return recall_score(labels, predictions, average='macro')
     
     @staticmethod
     def precision(labels, predictions):
-        return precision_score(labels, predictions, average='micro')
+        return precision_score(labels, predictions, average='macro')
 
     @staticmethod
     def f1_score(labels, predictions):
-        return f1_score(labels, predictions, average='micro')
+        return f1_score(labels, predictions, average='macro')
         
 
     def store_validation_perplexity(self, session, summary, iteration, validation_perplexity):
         session.run(self.validation_perplexity.assign(validation_perplexity))
+        summary.add_summary(session.run(self.summary), global_step=iteration)
+
+    def store_validation_accuracy(self, session, summary, iteration, accuracy):
+        session.run(self.validation_accuracy.assign(accuracy))
         summary.add_summary(session.run(self.summary), global_step=iteration)
 
     def store_validation_recall(self, session, summary, iteration, recall):
@@ -576,7 +602,11 @@ class RNN(object):
     def store_training_epoch_perplexity(self, session, summary, iteration, training_perplexity):
         session.run(self.training_epoch_perplexity.assign(training_perplexity))
         summary.add_summary(session.run(self.summary), global_step=iteration)
-    
+
+    def store_training_epoch_accuracy(self, session, summary, iteration, accuracy):
+        session.run(self.training_epoch_accuracy.assign(accuracy))
+        summary.add_summary(session.run(self.summary), global_step=iteration)
+
     def store_training_epoch_recall(self, session, summary, iteration, recall):
         session.run(self.training_epoch_recall.assign(recall))
         summary.add_summary(session.run(self.summary), global_step=iteration)

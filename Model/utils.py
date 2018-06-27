@@ -2,7 +2,7 @@
 import numpy as np
 
 class Additional_Parameters():
-    def __init__(self, args_dim = None, bidirectional=True, nonlinear=True, encode_int = True):
+    def __init__(self, args_dim = None, bidirectional=True, nonlinear=False, encode_int = True):
         self.args_dim = args_dim
         self.bidirectional = bidirectional
         self.nonlinear = nonlinear
